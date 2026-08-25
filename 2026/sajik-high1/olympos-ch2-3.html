@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 2강 QN 23~24 3번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>사직고 1학년 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">2강 QN 23~24 주제·제목 / 3번</div>
+    <h1 class="title">The Necessity of Intellectual Property Protection<br><span>for Knowledge-Based Markets</span></h1>
+    <p class="header-lead">
+      지식 기반 사회와 지식재산권(IP)의 독점적 보호 — 원문 정독부터 실전 킬러 변형 4문항까지 연결하는 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      With the rise of the networked communications environment and the continuing progress of scientific advances, knowledge has become an increasingly key factor in fostering innovation, growth and health care technology and in sustaining cultural creativity. In addition, the ability of people to acquire, access and control knowledge is strictly related to questions pertaining to the ownership of knowledge. At present, intellectual property rules are the principal tool for controlling the creation, diffusion and use of knowledge and related goods and services. In order to have a market in knowledge, intellectual property protection is considered a fundamental instrument for creators of knowledge securing and maintaining exclusive access rights to knowledge-based products. For example, in the pharmaceutical and biotechnology industry, where development of new products requires substantial investments with long incubation periods, it is generally acknowledged that companies need exclusive right in order to recover research and development costs.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 지식 기반 경제에서 창작자의 연구개발 비용 회수와 정상적인 지식 시장 형성을 위해서는 <b>지식재산권 제도를 통한 독점적 접근 권한(Exclusive Access Rights) 보장</b>이 필수적이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. With the rise of the <mark>networked communications environment</mark> and the continuing progress of scientific advances, knowledge has become an increasingly key factor in fostering innovation, growth and health care technology and in sustaining cultural creativity.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 네트워크 통신 환경의 등장과 지속적인 과학 발전으로 인해, 지식은 혁신, 성장, 의료 기술을 촉진하고 문화적 창의성을 유지하는 데 점점 더 핵심적인 요소가 되었다.<br>
+            <b>[핵심 어휘]</b> networked communications environment (네트워크 통신 환경), foster (촉진하다, 육성하다), sustain (유지하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. In addition, the ability of people to acquire, access and control knowledge is strictly related to questions <mark>pertaining to</mark> the <mark>ownership</mark> of knowledge.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 게다가, 사람들이 지식을 습득하고 접근하며 통제하는 능력은 지식의 소유권에 관련된 질문들과 직결되어 있다.<br>
+            <b>[핵심 어휘]</b> pertaining to (~에 관련된 / 자동사구), ownership (소유권), acquire (습득하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. At present, <mark>intellectual property rules</mark> are the principal tool for controlling the creation, <mark>diffusion</mark> and use of knowledge and related goods and services.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 현재, 지식재산권 규범은 지식 및 관련 상품과 서비스의 창작, 확산, 이용을 통제하는 주된 도구이다.<br>
+            <b>[핵심 어휘]</b> intellectual property rules (지식재산권 규범), diffusion (확산, 보급), principal (주요한)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. In order to have a market in knowledge, intellectual property protection is considered a fundamental instrument for creators of knowledge securing and maintaining <mark>exclusive access rights</mark> to knowledge-based products.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 지식 시장을 형성하기 위해, 지식재산권 보호는 지식 창작자가 지식 기반 제품에 대한 배타적 접근 권한을 확보하고 유지하기 위한 근본적인 수단으로 여겨진다.<br>
+            <b>[핵심 어휘]</b> fundamental instrument (근본적인 수단), exclusive access rights (독점적/배타적 접근 권한)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. For example, in the pharmaceutical and biotechnology industry, where development of new products requires <mark>substantial investments</mark> with <mark>long incubation periods</mark>, it is generally acknowledged that companies need exclusive right in order to <mark>recover research and development costs</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어, 신제품 개발에 장기간의 숙성 기간과 막대한 투자가 요구되는 제약 및 생명공학 산업에서는 기업이 연구개발 비용을 회수하기 위해 독점적 권리가 필요하다는 점이 일반적으로 인정된다.<br>
+            <b>[핵심 어휘]</b> substantial investments (상당한/막대한 투자), incubation period (숙성/개발 기간), recover (회수하다)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상 ➔ 핵심 원리 ➔ 실증 사례)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[배경·현상] Context</span>
+        <h4>지식 가치 급증과 소유권 대두</h4>
+        <p>통신망과 과학 발전으로 지식이 핵심 자산화 ➔ 지식의 접근·통제 문제는 결국 <b>소유권(Ownership)</b>의 쟁점으로 직결됨.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[주장·원리] Core Principle</span>
+        <h4>지식 시장의 전제 = 독점권 보장</h4>
+        <p>지식 시장이 성립하려면 창작자에게 <b>배타적 독점 권리(Exclusive Rights)</b>를 주어야 하며, 지식재산권이 핵심 기제로 작동함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[사례·근거] Case Study</span>
+        <h4>제약·바이오의 R&D 회수 모델</h4>
+        <p>개발 기간이 길고 막대한 자본이 소요되는 산업은 독점권 없이는 <b>투자금(R&D Costs) 회수가 불가능</b>함을 실증 근거로 제시.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. ...questions [pertaining / pertained] to the ownership of knowledge.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! pertain to는 자동사구로 수동 분사(pertained)가 불가능하며 능동 현재분사(pertaining)로 앞의 questions를 수식합니다.">pertaining</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! pertain to는 자동사 표현으로 수동 형태(p.p.)로 명사를 수식할 수 없습니다.">pertained</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...in the pharmaceutical and biotechnology industry, [which / where] development of new products requires substantial investments...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒤에 주어, 동사, 목적어가 모두 갖추어진 완전한 절이 이어지므로 관계대명사 which는 올 수 없습니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 뒤에 필수 성분을 모두 갖춘 완전한 절이 이어지므로 장소 개념의 선행사를 받는 관계부사 where(in which)가 적절합니다.">where</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        With the rise of the networked communications environment and the continuing progress of scientific advances, knowledge has become an increasingly key factor in fostering innovation, growth and health care technology and in sustaining cultural creativity. In addition, the ability of people to acquire, access and control knowledge is strictly related to questions pertaining to the ① <u>ownership</u> of knowledge. At present, intellectual property rules are the principal tool for controlling the creation, ② <u>diffusion</u> and use of knowledge and related goods and services. In order to have a market in knowledge, intellectual property protection is considered a fundamental instrument for creators of knowledge securing and maintaining ③ <u>exclusive</u> access rights to knowledge-based products. For example, in the pharmaceutical and biotechnology industry, where development of new products requires ④ <u>negligible</u> investments with long incubation periods, it is generally acknowledged that companies need exclusive right in order to ⑤ <u>recover</u> research and development costs.
+      </div>
+      <div class="exam-choices">
+        ① ownership<br>
+        ② diffusion<br>
+        ③ exclusive<br>
+        ④ negligible<br>
+        ⑤ recover
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (negligible ➔ substantial 또는 massive)</b><br>
+          <b>해설:</b> 신약 개발 등의 제약 및 생명공학 산업은 개발 기간이 길고 '상당한/막대한(substantial)' 투자가 요구되는 분야이므로, '하찮은, 무시해도 될 정도의'를 뜻하는 negligible은 문맥상 정반대 의미로 적절하지 않습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        In order to have a market in knowledge, intellectual property protection is considered a fundamental instrument for creators of knowledge _________________________________ to knowledge-based products. For example, in the pharmaceutical and biotechnology industry, where development of new products requires substantial investments with long incubation periods, it is generally acknowledged that companies need exclusive right in order to recover research and development costs.
+      </div>
+      <div class="exam-choices">
+        ① distributing their innovative findings freely without commercial gain<br>
+        ② securing and maintaining exclusive access rights<br>
+        ③ sharing underlying research data openly with competing enterprises<br>
+        ④ minimizing the institutional barriers imposed on technological diffusion<br>
+        ⑤ transferring proprietary ownership entirely to public governmental sectors
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 지식 시장이 형성되는 핵심 조건은 지식재산권을 통해 창작자가 지식 기반 제품에 대한 '독점적/배타적 접근 권한(exclusive access rights)'을 확보하는 것입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[문항 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> In order to have a market in knowledge, intellectual property protection is considered a fundamental instrument for creators of knowledge securing and maintaining exclusive access rights to knowledge-based products.<br><br>
+        With the rise of the networked communications environment and the continuing progress of scientific advances, knowledge has become an increasingly key factor in fostering innovation. ( ① ) In addition, the ability of people to acquire, access and control knowledge is strictly related to questions pertaining to the ownership of knowledge. ( ② ) At present, intellectual property rules are the principal tool for controlling the creation, diffusion and use of knowledge and related goods and services. ( ③ ) For example, in the pharmaceutical and biotechnology industry, where development of new products requires substantial investments with long incubation periods, companies need exclusive right. ( ④ ) It is generally acknowledged that such legal rights are essential in order to recover research and development costs. ( ⑤ )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 문장은 지식재산권 보호가 지식 시장의 형성을 가능하게 하는 핵심 도구라는 명제입니다. 지식재산권의 일반적 정의(② 다음)와 제약 산업의 구체적 사례(For example, ③ 다음)를 연결하는 ③번 자리가 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 요약문의 빈칸 (A), (B)에 들어갈 말을 [조건]에 맞게 작성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[요약문]</b> In a knowledge-based economy, granting <b>(A) [        ]</b> rights through intellectual property rules is essential for companies to <b>(B) [        ]</b> their substantial investments in long-term research and development.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 윗글 본문에 등장하는 단어를 그대로 찾아 쓸 것.<br>
+        2. (A)는 1단어(형용사), (B)는 1단어(동사원형)로 작성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: (A) exclusive / (B) recover</b><br>
+          <b>해설:</b> 지식재산권 규범을 통해 '독점적인(exclusive)' 권리를 부여함으로써 막대한 장기 R&D 투자 비용을 '회수하다(recover)'라는 논리적 결론을 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
