@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 2강 QN 23~24 5번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>사직고 1학년 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">2강 QN 23~24 주제·제목 / 5번</div>
+    <h1 class="title">The Dynamic and Situational Nature<br><span>of Motivation</span></h1>
+    <p class="header-lead">
+      동기의 역동적·상황적 가변성 — 원문 정독부터 실전 킬러 변형 4문항까지 연결하는 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      Motivation is what helps us change ourselves, our situation, or our environment[cite: 1]. All animals have motivation; it’s what stimulates them to find food, a safe place to sleep, and a mate[cite: 1]. Contrary to popular belief, motivation isn’t a static thing that you either do or don’t have[cite: 1]. It comes and goes[cite: 1]. All animals appear to be motivated to secure food, safety, and companionship, but basically no one wants these things all the time[cite: 1]. As humans, we’re motivated by far more than basic survival needs, but even still, we don’t pursue social acceptance, fast cars, or fancy jewelry all the time[cite: 1]. Motivation is in part a specific drive to do a specific action at a specific time, and it’s highly influenced by what’s going on right now[cite: 1]. For example, people love eating, but when we’ve just loaded up at the buffet, we’re less motivated to seek out food than if we haven’t eaten in a while[cite: 1].
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 동기는 항상 고정되어 있는 정적인 것(static thing)이 아니라, <b>특정한 시간과 현재 상황의 영향을 받아 수시로 변하는(comes and goes) 역동적 충동</b>이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. Motivation is <mark>what helps us change</mark> ourselves, our situation, or our environment.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 동기는 우리 자신, 우리의 상황, 혹은 우리의 환경을 변화시키는 데 도움을 주는 것이다.<br>
+            <b>[핵심 어휘]</b> motivation (동기), situation (상황), environment (환경)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. All animals have motivation; it’s <mark>what stimulates them</mark> to find food, a safe place to sleep, and a mate.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 모든 동물은 동기를 가지고 있으며, 그것은 그들이 먹이, 잠잘 안전한 장소, 짝을 찾도록 자극하는 것이다.<br>
+            <b>[핵심 어휘]</b> stimulate (자극하다, 격려하다), mate (짝, 배우자)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. <mark>Contrary to popular belief</mark>, motivation isn’t a <mark>static thing</mark> that you either do or don’t have. It <mark>comes and goes</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 대중적인 통념과 달리, 동기는 당신이 갖거나 갖지 못하는 정적인 것이 아니다. 그것은 생겼다 사라진다.<br>
+            <b>[핵심 어휘]</b> contrary to (~와 반대로), popular belief (통념), static (정적인, 고정된), come and go (왔다 갔다 하다, 생겼다 사라지다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. All animals <mark>appear to be motivated</mark> to secure food, safety, and companionship, but basically <mark>no one wants these things all the time</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 모든 동물은 음식, 안전, 동료를 확보하도록 동기부여되는 것처럼 보이지만, 기본적으로 아무도 이러한 것들을 항상 원하지는 않는다.<br>
+            <b>[핵심 어휘]</b> secure (확보하다), companionship (동료애, 교제), appear to-v (~인 것처럼 보이다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. As humans, we’re motivated by far more than basic survival needs, but even still, we don’t <mark>pursue</mark> social acceptance, fast cars, or fancy jewelry <mark>all the time</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 인간으로서 우리는 기본적인 생존 욕구보다 훨씬 더 많은 것에 의해 동기부여를 받지만, 그럼에도 불구하고 사회적 인정, 빠른 자동차, 화려한 보석을 항상 추구하지는 않는다.<br>
+            <b>[핵심 어휘]</b> survival needs (생존 욕구), pursue (추구하다), social acceptance (사회적 인정)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. Motivation is in part a <mark>specific drive</mark> to do a specific action at a <mark>specific time</mark>, and it’s <mark>highly influenced</mark> by what’s going on right now.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 동기는 부분적으로 특정한 시간에 특정한 행동을 하려는 구체적인 충동이며, 지금 당장 일어나고 있는 일에 의해 크게 영향을 받는다.<br>
+            <b>[핵심 어휘]</b> specific (특정한, 구체적인), drive (충동, 욕구), be influenced by (~에 의해 영향을 받다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          7. For example, people love eating, but when we’ve just <mark>loaded up</mark> at the buffet, we’re <mark>less motivated</mark> to seek out food than if we haven’t eaten in a while.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어, 사람들은 먹는 것을 좋아하지만, 뷔페에서 방금 배를 채웠을 때 우리는 한동안 먹지 않았을 때보다 음식을 찾으려는 동기가 덜 부여된다.<br>
+            <b>[핵심 어휘]</b> load up (가득 채우다, 포식하다), seek out (~을 찾아내다), in a while (한동안)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (통념 반박 ➔ 본질 규명 ➔ 상황적 실증)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[통념 반박] Myth vs. Fact</span>
+        <h4>고정된 실체가 아닌 가변적 동기</h4>
+        <p>동기는 있다/없다로 나뉘는 <b>정적 특성(static thing)</b>이 아니며, 필요에 따라 <b>생겼다 사라지는(comes and goes)</b> 성질을 지님.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[본질 정의] Core Definition</span>
+        <h4>특정 시점 & 현재 상황의 산물</h4>
+        <p>동물과 인간 모두 지속적으로 욕구를 추구하지 않음. 동기는 <b>특정 시점의 구체적 충동(specific drive)</b>이자 <b>현재 상태의 반영</b>임.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[실증 사례] Buffet Analogy</span>
+        <h4>뷔페 포식 후의 식욕 감퇴</h4>
+        <p>식욕이 있는 사람도 뷔페에서 배를 채운 직후에는 음식을 찾을 동기가 줄어들듯, 동기는 <b>현재 처한 조건에 전적으로 좌우</b>됨.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Contrary to popular belief, motivation isn’t a static thing [that / what] you either do or don’t have.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞의 선행사 'a static thing'을 수식하며, 뒤에 have의 목적어가 비어있는 불완전한 절을 이끄는 목적격 관계대명사 that이 적절합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! what은 자체에 선행사를 포함하므로, 앞에 수식받는 명사(a static thing)가 있을 때는 쓸 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...we’re motivated by [far / very] more than basic survival needs...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 비교급(more)을 강조하여 '훨씬'의 의미를 나타낼 때는 far(still, even, much, a lot)를 사용합니다.">far</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! very는 원급 형용사나 부사를 수식하며, 비교급을 직접 수식할 수 없습니다.">very</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        Motivation is what helps us change ourselves, our situation, or our environment. All animals have motivation; it’s what stimulates them to find food, a safe place to sleep, and a mate. Contrary to popular belief, motivation isn’t a ① <u>static</u> thing that you either do or don’t have. It comes and goes. All animals appear to be motivated to secure food, safety, and companionship, but basically no one wants these things ② <u>constantly</u>. As humans, we’re motivated by far more than basic survival needs, but even still, we don’t pursue social acceptance, fast cars, or fancy jewelry all the time. Motivation is in part a specific drive to do a specific action at a specific time, and it’s highly ③ <u>independent of</u> what’s going on right now. For example, people love eating, but when we’ve just loaded up at the buffet, we’re ④ <u>less</u> motivated to seek out food than if we haven’t eaten in a ⑤ <u>while</u>.
+      </div>
+      <div class="exam-choices">
+        ① static<br>
+        ② constantly<br>
+        ③ independent of<br>
+        ④ less<br>
+        ⑤ while
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (independent of ➔ influenced by / dependent on)</b><br>
+          <b>해설:</b> 동기는 지금 당장 일어나는 상황(현재 상태)에 의해 크게 영향을 받는다는 것이 지문의 핵심 논리입니다. 따라서 현재 일어나고 있는 일과 무관하다는 뜻의 independent of는 문맥상 어색하며, influenced by 또는 dependent on으로 고쳐야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        All animals appear to be motivated to secure food, safety, and companionship, but basically no one wants these things all the time. As humans, we’re motivated by far more than basic survival needs, but even still, we don’t pursue social acceptance, fast cars, or fancy jewelry all the time. In other words, motivation is not an unchangeable disposition; rather, it is ____________________________________________. For example, people love eating, but when we’ve just loaded up at the buffet, we’re less motivated to seek out food than if we haven’t eaten in a while.
+      </div>
+      <div class="exam-choices">
+        ① a permanent character trait determining long-term success<br>
+        ② an instinctive desire strictly limited to basic physical survival<br>
+        ③ a situational drive heavily shaped by immediate circumstances<br>
+        ④ a universal principle operating consistently across all species<br>
+        ⑤ an innate force remaining entirely unaffected by external events
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 동기는 지속적이고 고정된 것이 아니라, '특정 시점에 현재 일어나고 있는 일에 크게 영향을 받는 구체적인 충동'이라는 맥락이므로 ③번 '당면한 상황에 의해 크게 형성되는 상황적 충동(a situational drive heavily shaped by immediate circumstances)'이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 문장 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Motivation is what helps us change ourselves, our situation, or our environment. All animals have motivation; it’s what stimulates them to find food, a safe place to sleep, and a mate.
+      </div>
+      <div class="exam-choices">
+        (A) Motivation is in part a specific drive to do a specific action at a specific time, and it’s highly influenced by what’s going on right now. For example, people love eating, but when we’ve just loaded up at the buffet, we’re less motivated to seek out food.<br><br>
+        (B) Contrary to popular belief, motivation isn’t a static thing that you either do or don’t have. It comes and goes. All animals appear to be motivated to secure food, safety, and companionship, but basically no one wants these things all the time.<br><br>
+        (C) As humans, we’re motivated by far more than basic survival needs, but even still, we don’t pursue social acceptance, fast cars, or fancy jewelry all the time.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (B) - (C) - (A)</b><br>
+          <b>해설:</b> 주어진 글에서 동물들의 일반적인 동기를 언급한 뒤, (B)에서 동기가 고정된 것이 아니라 왔다 갔다 한다는 통념 반박을 제시합니다. 이어 (C)에서 인간의 고차원적 동기 역시 항상 추구되지 않음을 확장 설명하고, (A)에서 동기의 본질(특정 시점/현재 상황의 영향)을 규정하며 뷔페 예시로 마무리하는 흐름이 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 글의 요약문 빈칸 (A), (B)에 들어갈 말을 [조건]에 맞게 본문에서 찾아 쓰시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[요약문]</b> Motivation is not a <b>(A) [          ]</b> possession that exists constantly, but a dynamic drive that is significantly <b>(B) [          ]</b> by immediate circumstances and specific timings.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 윗글 본문에 등장하는 단어만을 사용하여 어형 변화 없이 쓸 것.<br>
+        2. (A)와 (B) 모두 각각 한 단어로 작성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: (A) static / (B) influenced</b><br>
+          <b>해설:</b> 동기는 항상 존재하는 '고정된(static)' 소유물이 아니며, 당면한 상황과 특정 시점에 의해 크게 '영향을 받는(influenced)' 역동적인 충동이라는 본문의 핵심 어휘를 추출하여 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
