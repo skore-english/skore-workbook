@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 3강 QN 29 기출 1번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">3강 QN 29 어법 / 기출 1번</div>
+    <h1 class="title">Cross-Cultural Transition:<br><span>The Journey of Self-Reinvention</span></h1>
+    <p class="header-lead">
+      타문화를 횡단하는 경험이 주는 고통과 성장의 양면성, 그리고 자신의 문화적 불변항(Cultural Invariants)을 재발견하는 심층적 자기 변혁의 과정을 다룬 완벽 대비 5단계 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      The process of crossing cultures challenges the very basis of who we are as cultural beings. It offers opportunities for new learning and growth. Being “uprooted” from our home brings us understanding not only of the people and their culture in our new environment, but of ourselves and our home culture. Although the difficulties that can arise from crossing cultures are often shocking, success stories are everywhere. Despite, or rather because of, the suffering and ambivalence we undergo when we cross cultures, we gradually find ourselves uniquely privileged to define ourselves and others anew with clarity and insight that we could not have cultivated without leaving home. Adapting to a new and unfamiliar culture, then, is more than survival. It is a life-changing journey. It is a process of “becoming” ─ personal reinvention, transformation, growth, reaching out beyond the boundaries of our own existence. The process does not require that we abandon our former personalities and the cultures into which we were born. Rather, it compels us to find ourselves as if for the first time, particularly those “cultural invariants” within us ─ aspects that we hold dear and refuse to compromise.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 타문화 적응은 기존의 정체성을 버리는 것이 아니라, 고통과 혼란을 통해 <b>새로운 통찰력으로 자신과 타인을 재정의</b>하고, 결코 타협할 수 없는 <b>내면의 ‘문화적 불변항(Cultural Invariants)’을 확립해 나가는 자기 재창조(Becoming)의 여정</b>이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. The process of crossing cultures <mark>challenges</mark> the very basis of who we are as cultural beings. It offers opportunities for new learning and growth.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 문화를 건너가는 과정은 문화적 존재로서의 우리 자신의 근본적인 바탕에 도전장을 던진다. 그것은 새로운 학습과 성장의 기회를 제공한다.<br>
+            <b>[핵심 어휘]</b> challenge (도전하다, 이의를 제기하다), cultural beings (문화적 존재), the very basis (바로 그 기초/근간)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. Being <mark>“uprooted”</mark> from our home brings us understanding <mark>not only</mark> of the people and their culture in our new environment, <mark>but of</mark> ourselves and our home culture.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 고향에서 ‘뿌리 뽑히는’ 것은 우리에게 새로운 환경의 사람들과 그들의 문화뿐만 아니라, 우리 자신과 모국 문화에 대한 이해를 가져다준다.<br>
+            <b>[구문 공식]</b> not only A but also B (A뿐만 아니라 B도 / 병렬 구조: of ~ but of ~)<br>
+            <b>[핵심 어휘]</b> uprooted (뿌리 뽑힌, 삶의 터전에서 떠난), home culture (모국 문화)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. Although the difficulties that can arise from crossing cultures are often shocking, success stories are everywhere.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 문화를 건너는 과정에서 발생할 수 있는 어려움들이 흔히 충격적일지라도, 성공적인 이야기들은 도처에 존재한다.<br>
+            <b>[핵심 어휘]</b> arise from (~로부터 발생하다, 생기다), shocking (충격적인)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Despite, or rather because of, the suffering and <mark>ambivalence</mark> we undergo when we cross cultures, we gradually find ourselves <mark>uniquely privileged</mark> to define ourselves and others anew with clarity and insight that we <mark>could not have cultivated</mark> without leaving home.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리가 문화를 넘나들 때 겪는 고통과 상반된 감정에도 불구하고, 아니 오히려 그것 때문에, 우리는 고향을 떠나지 않고서는 결코 기를 수 없었을 명확성과 통찰력을 가지고 자신과 타인을 새롭게 정의할 수 있는 특별한 특권을 누리고 있음을 점차 발견하게 된다.<br>
+            <b>[구문 공식]</b> could not have p.p. (~했을 리가 없다 / ~할 수 없었을 것이다)<br>
+            <b>[핵심 어휘]</b> ambivalence (양가감정, 상반된 감정), undergo (겪다, 경험하다), privileged (특권을 가진), anew (새롭게, 다시), cultivate (함양하다, 기르다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. Adapting to a new and unfamiliar culture, then, is more than survival. It is a life-changing journey. It is a process of <mark>“becoming”</mark> ─ personal <mark>reinvention</mark>, transformation, growth, reaching out beyond the boundaries of our own existence.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그렇다면 새롭고 낯선 문화에 적응하는 것은 생존 그 이상이다. 그것은 인생을 바꾸는 여정이다. 그것은 ‘생성(새로운 존재가 되어감)’의 과정, 즉 개인의 재창조, 변형, 성장, 그리고 우리 자신의 존재의 경계를 넘어 손을 뻗는 과정이다.<br>
+            <b>[핵심 어휘]</b> reinvention (재창조, 재발명), transformation (변형, 탈바꿈), boundary (경계, 한계)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. The process does not require that we <mark>abandon</mark> our former personalities and the cultures into which we were born. Rather, it <mark>compels</mark> us to find ourselves as if for the first time, particularly those <mark>“cultural invariants”</mark> within us ─ aspects that we hold dear and refuse to compromise.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 과정은 우리가 이전의 인격과 우리가 태어난 문화를 포기할 것을 요구하지 않는다. 오히려 그것은 우리로 하여금 마치 처음인 것처럼 우리 자신, 특히 우리가 소중히 여기고 타협하기를 거부하는 측면들인 우리 내면의 ‘문화적 불변항’을 발견하도록 강제한다.<br>
+            <b>[구문 공식]</b> require that + S + (should) 동사원형 / compel + O + to-v (목적어에게 ~하도록 강제하다)<br>
+            <b>[핵심 어휘]</b> abandon (버리다, 포기하다), compel (강제하다, 억지로 시키다), cultural invariants (문화적 불변항, 불변의 가치), hold dear (소중히 여기다), compromise (타협하다)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (도전과 기회 ➔ 심화 통찰 ➔ 본질 규명)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입: 충격과 확장] Shock & Expansion</span>
+        <h4>뿌리 뽑힘(Uprooted)이 주는 선물</h4>
+        <p>문화적 전이는 정체성에 도전이자 혼란을 주지만, <b>새로운 환경뿐 아니라 모국과 자신을 깊이 이해</b>하는 양방향 성장의 기회가 됨.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개: 고통 속 특권] Ambivalence & Insight</span>
+        <h4>고통을 통한 새로운 통찰력의 획득</h4>
+        <p>문화적 갈등과 고통 속에서, 고향을 떠나지 않고서는 얻을 수 없었던 <b>명확성과 새로운 통찰력(Clarity & Insight)</b>으로 자아를 재정의함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론: 본질의 보존] Becoming & Invariants</span>
+        <h4>‘생성’의 과정과 문화적 불변항 발견</h4>
+        <p>이전 문화를 버리는 것이 아니라, 결코 타협할 수 없이 소중한 <b>내면의 ‘문화적 불변항(Cultural Invariants)’</b>을 확립하는 자기 재창조의 여정.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. [Despite / Although] the difficulties that can arise from crossing cultures are often shocking, success stories are everywhere.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! Despite는 전치사이므로 뒤에 절(주어+동사)이 올 수 없습니다.">Despite</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 뒤에 주어(the difficulties ~)와 동사(are)를 갖춘 완전한 부사절이 이어지므로 접속사 Although가 적절합니다.">Although</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. The process does not require that we [abandon / abandoned] our former personalities and the cultures [which / into which] we were born.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! '요구' 동사 require 뒤의 that절에는 당위성을 나타내는 [should + 동사원형]이 쓰여야 하므로 abandon이 맞고, 뒷문장은 we were born into the cultures 구조이므로 전치사가 결합된 into which가 완전한 절을 이끕니다.">abandon / into which</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! require의 목적어절에서 당위성을 나타내므로 시제 일치를 따르지 않고 동사원형(abandon)을 써야 하며, we were born 뒤에 전치사 into가 없으므로 단순 관계대명사 which는 불완전합니다.">abandoned / which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제 — 어법 제외 엄선)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        The process of crossing cultures challenges the very basis of who we are as cultural beings. It offers opportunities for new learning and growth. Being “uprooted” from our home brings us understanding not only of the people and their culture in our new environment, but of ourselves and our home culture. Although the difficulties that can arise from crossing cultures are often shocking, success stories are everywhere. Despite, or rather because of, the suffering and ambivalence we undergo when we cross cultures, we gradually find ourselves uniquely ① <u>privileged</u> to define ourselves and others anew with clarity and insight that we could not have cultivated without leaving home. Adapting to a new and unfamiliar culture, then, is more than survival. It is a life-changing journey. It is a process of “becoming” ─ personal reinvention, transformation, growth, reaching out ② <u>beyond</u> the boundaries of our own existence. The process does not require that we ③ <u>preserve</u> our former personalities and the cultures into which we were born. Rather, it ④ <u>compels</u> us to find ourselves as if for the first time, particularly those “cultural invariants” within us ─ aspects that we hold dear and refuse to ⑤ <u>compromise</u>.
+      </div>
+      <div class="exam-choices">
+        ① privileged<br>
+        ② beyond<br>
+        ③ preserve<br>
+        ④ compels<br>
+        ⑤ compromise
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (preserve ➔ abandon 또는 discard)</b><br>
+          <b>해설:</b> 문맥상 새로운 문화에 적응하는 과정이 기존의 성격이나 자신이 태어난 문화를 '버릴 것'을 요구하지는 않는다는 내용이 와야 뒤따르는 Rather(오히려 내면의 불변항을 재발견하게 한다) 문장과 자연스럽게 이어집니다. 따라서 preserve(보존하다)는 abandon(버리다)으로 바뀌어야 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        The process of crossing cultures challenges the very basis of who we are as cultural beings. Adapting to a new and unfamiliar culture is more than survival; it is a life-changing journey of personal reinvention and transformation. Interestingly, this process does not demand the complete eradication of our past. Rather, by pushing us through suffering and ambivalence, crossing cultures ultimately leads us to ______________________________________________________, defining our essence with newfound clarity.
+      </div>
+      <div class="exam-choices">
+        ① assimilate entirely into the host culture by suppressing personal traits<br>
+        ② discover and solidify the core values within us that we refuse to compromise<br>
+        ③ establish a rigid psychological defense mechanism against unfamiliar values<br>
+        ④ judge foreign cultural practices exclusively through our native perspective<br>
+        ⑤ detach ourselves emotionally from both our homeland and the host society
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 글의 결말부에서 타문화 적응은 이전의 문화를 버리는 것이 아니라, 오히려 타협할 수 없는 내면의 '문화적 불변항(cultural invariants)'을 명확하게 발견하는 과정이라고 설명하고 있습니다. 따라서 이를 가장 잘 패러프레이징한 ②번 "discover and solidify the core values within us that we refuse to compromise(우리가 타협하기를 거부하는 우리 내면의 핵심 가치들을 발견하고 확고히 하는 것)"가 정답입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        The process of crossing cultures challenges the very basis of who we are as cultural beings. It offers opportunities for new learning and growth. Being “uprooted” from our home brings us understanding not only of the people and their culture in our new environment, but of ourselves and our home culture.
+      </div>
+      <div class="exam-choices">
+        (A) Adapting to a new and unfamiliar culture, then, is more than survival. It is a life-changing journey. It is a process of “becoming” ─ personal reinvention, transformation, growth, reaching out beyond the boundaries of our own existence.<br><br>
+        (B) The process does not require that we abandon our former personalities and the cultures into which we were born. Rather, it compels us to find ourselves as if for the first time, particularly those “cultural invariants” within us ─ aspects that we hold dear and refuse to compromise.<br><br>
+        (C) Although the difficulties that can arise from crossing cultures are often shocking, success stories are everywhere. Despite, or rather because of, the suffering and ambivalence we undergo when we cross cultures, we gradually find ourselves uniquely privileged to define ourselves and others anew with clarity and insight that we could not have cultivated without leaving home.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ ((C) - (A) - (B))</b><br>
+          <b>해설:</b> 주어진 글에서 모국을 떠나 얻는 긍정적 기회를 언급한 후, (C)에서 문화 횡단의 고통과 충격에도 불구하고 그것이 주는 통찰력과 특권을 제시합니다. 이어서 (A)에서 then(그렇다면)을 매개로 이러한 적응이 단순 생존이 아닌 '새로운 존재가 되어가는 여정(becoming)'임을 규정하고, 마지막으로 (B)에서 그 과정의 구체적 의미(이전 문화를 버리는 것이 아닌 내면의 불변항 발견)를 설명하며 매듭짓는 순서가 논리적으로 가장 완벽합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 글의 밑줄 친 우리말 의미와 같도록 [조건]에 맞추어 영작하시오. (서술형)</h4>
+      <div class="exam-passage">
+        Despite the suffering we undergo when we cross cultures, we gradually find ourselves uniquely privileged to define ourselves and others anew. <u>그것은 우리로 하여금 우리가 소중히 여기고 타협하기를 거부하는 측면들인 우리 내면의 “문화적 불변항”을 발견하도록 강제한다.</u>
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 아래 제시된 단어를 반드시 모두 한 번씩 사용할 것.<br>
+        [ us / compel / to / within / invariants / refuse / find / hold / dear / those / aspects / that / cultural / compromise / and / we / “cultural invariants” ]<br>
+        2. 'compel + 목적어 + to-v' 구문을 사용할 것.<br>
+        3. 'aspects'를 수식하는 관계대명사절 내에서 'hold ~ and refuse ~' 병렬 구조를 완성할 것.<br>
+        4. 문두는 "Rather, it ~"으로 시작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: Rather, it compels us to find particularly those “cultural invariants” within us ─ aspects that we hold dear and refuse to compromise.</b><br>
+          (또는 Rather, it compels us to find ourselves, particularly those “cultural invariants” within us ─ aspects that we hold dear and refuse to compromise.)<br>
+          <b>해설:</b> 주어 it에 이어 5형식 동사 compels + 목적어 us + 목적격 보어 to find의 어순을 구성하고, 동격 구문 내에서 관계대명사 that 뒤에 'hold dear'와 'refuse to compromise'가 등위접속사 and로 병렬 연결되는 점을 정확히 구현해야 합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
