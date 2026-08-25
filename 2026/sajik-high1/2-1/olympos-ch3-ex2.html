@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 3강 QN 29 기출 2번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">3강 QN 29 어법 / 기출 2번</div>
+    <h1 class="title">The Wizard of Oz:<br><span>A Psychological Study of Motivation</span></h1>
+    <p class="header-lead">
+      외적 보상에 대한 기대가 이끄는 동기부여와 그 여정 속에서 이미 발휘되고 있던 내적 잠재력의 자각 — 오즈의 마법사를 심리학적 관점으로 분석하는 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      Consider The Wizard of Oz as a psychological study of motivation. Dorothy and her three friends work hard to get to the Emerald City, overcoming barriers, persisting against all adversaries. They do so because they expect the Wizard to give them what they are missing. Instead, the wonderful (and wise) Wizard makes them aware that they, not he, always had the power to fulfill their wishes. For Dorothy, home is not a place but a feeling of security, of comfort with people she loves; it is wherever her heart is. The courage the Lion wants, the intelligence the Scarecrow longs for, and the emotions the Tin Man dreams of are attributes they already possess. They need to think about these attributes not as internal conditions but as positive ways in which they are already relating to others. After all, didn’t they demonstrate those qualities on the journey to Oz, a journey motivated by little more than an expectation, an idea about the future likelihood of getting something they wanted?
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 주인공들이 갈망하던 특성들(용기, 지혜, 사랑, 안식처)은 마법사가 부여하는 외적 결과물이 아니라, <b>미래에 대한 단순한 기대감으로 떠난 여정 속에서 타인과 관계를 맺으며 이미 스스로 증명하고 소유하고 있던 내적 역량</b>이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. Consider The Wizard of Oz as a <mark>psychological study</mark> of <mark>motivation</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> ‘오즈의 마법사’를 동기부여에 관한 심리학적 연구로 생각해보라.<br>
+            <b>[핵심 어휘]</b> psychological study (심리학적 연구), motivation (동기부여, 동기유발)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. Dorothy and her three friends work hard to get to the Emerald City, <mark>overcoming</mark> barriers, <mark>persisting</mark> against all <mark>adversaries</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 도로시와 세 명의 친구들은 모든 적수들에 맞서 끈기 있게 버티고 장애물을 극복하면서 에메랄드 시티에 도착하기 위해 열심히 노력한다.<br>
+            <b>[구문 공식]</b> 분사구문 병렬: overcoming ~, persisting ~ (동시동작)<br>
+            <b>[핵심 어휘]</b> barrier (장애물, 장벽), persist (끈질기게 계속하다, 버티다), adversary (적수, 상대)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. They do so because they <mark>expect</mark> the Wizard to give them <mark>what</mark> they are missing.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그들은 마법사가 자신들에게 결여된 것을 줄 것이라고 기대하기 때문에 그렇게 행동한다.<br>
+            <b>[구문 공식]</b> expect + 목적어 + to-v / what (선행사를 포함한 관계대명사절: ~하는 것)<br>
+            <b>[핵심 어휘]</b> miss (놓치다, 결여되어 있다), do so (대동사구: 앞 문장의 행동들을 지칭)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Instead, the wonderful (and wise) Wizard <mark>makes</mark> them <mark>aware</mark> that they, not he, always had the power to <mark>fulfill</mark> their wishes.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 대신에, 훌륭하고 (지혜로운) 마법사는 그가 아니라 바로 그들이 자신들의 소망을 실현할 힘을 항상 가지고 있었다는 점을 그들에게 깨닫게 해 준다.<br>
+            <b>[구문 공식]</b> 사역동사 make + 목적어 + 목적격보어(형용사 aware) + 명사절 접속사 that<br>
+            <b>[핵심 어휘]</b> aware (알고 있는, 자각하는), fulfill (성취하다, 실현하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. For Dorothy, home is not a place but a feeling of security, of comfort with people she loves; it is <mark>wherever</mark> her heart is.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 도로시에게 집은 물리적 장소가 아니라 안정감, 즉 자신이 사랑하는 사람들과 함께 있을 때 느끼는 편안함이다; 그것은 바로 그녀의 마음이 있는 어느 곳이든 상관없다.<br>
+            <b>[구문 공식]</b> not A but B (A가 아니라 B) / wherever (복합관계부사: ~하는 곳은 어디든지)<br>
+            <b>[핵심 어휘]</b> security (안정감, 보안), comfort (위로, 편안함)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. The courage the Lion wants, the intelligence the Scarecrow longs for, and the emotions the Tin Man dreams of are <mark>attributes</mark> they already <mark>possess</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 사자가 원하는 용기, 허수아비가 갈망하는 지혜, 양철나무꾼이 꿈꾸는 감정은 그들이 이미 소유하고 있는 속성들이다.<br>
+            <b>[구문 공식]</b> 세 개의 목적격 관계대명사 절이 병렬되어 복수 주어를 형성 ➔ 복수 동사 are<br>
+            <b>[핵심 어휘]</b> long for (~을 갈망하다), attribute (속성, 자질), possess (소유하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          7. They need to think about these attributes not as internal conditions but as positive ways <mark>in which</mark> they are already <mark>relating to</mark> others.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그들은 이러한 자질들을 내적인 상태가 아니라, 그들이 이미 타인과 관계를 맺고 있는 긍정적인 방식으로 생각할 필요가 있다.<br>
+            <b>[구문 공식]</b> think of/about A not as B but as C (A를 B가 아니라 C로 생각하다) / in which (완전한 절 수식)<br>
+            <b>[핵심 어휘]</b> internal condition (내적 조건/상태), relate to (~와 관계를 맺다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          8. After all, didn’t they <mark>demonstrate</mark> those qualities on the journey to Oz, a journey motivated by <mark>little more than</mark> an expectation, an idea about the future <mark>likelihood</mark> of getting something they wanted?
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 결국, 그들은 오즈로 가는 여정에서 그러한 자질들을 직접 보여주지 않았던가? 그 여정은 자신들이 원하는 것을 얻을 수 있다는 미래의 가능성에 대한 생각, 즉 단순한 기대감에 불과한 것에 의해 동기부여된 것이 아니었는가?<br>
+            <b>[핵심 어휘]</b> demonstrate (증명하다, 보여주다), little more than (~에 불과한, 고작 ~인), likelihood (가능성, 가망)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (도입 ➔ 반전과 자각 ➔ 심리학적 일반화)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입: 외적 동기] External Expectation</span>
+        <h4>오즈를 향한 여정과 결핍</h4>
+        <p>마법사가 자신들의 결핍된 능력(집, 용기, 지능, 마음)을 채워줄 것이라는 <b>외적 보상에 대한 기대감(Expectation)</b>으로 고난 극복.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개: 반전과 깨달음] Reversal & Realization</span>
+        <h4>마법사의 역할: 수여자가 아닌 각성자</h4>
+        <p>마법사는 능력을 준 것이 아니라, <b>이미 스스로 그 소망을 이룰 힘을 지니고 있었음</b>을 자각(makes them aware)하게 해 줌.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론: 관계적 역량] Inherent Potential</span>
+        <h4>이미 증명된 자질과 관계적 발현</h4>
+        <p>추구하던 자질은 내적인 고립 상태가 아니라 여정 중 <b>타인과 관계를 맺으며(relating to others) 이미 입증된 역량</b>이었음.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Instead, the wonderful Wizard makes them [aware / awarely] that they always had the power to fulfill their wishes.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 5형식 사역동사 make의 목적격 보어 자리에는 부사가 올 수 없으며 상태를 서술하는 형용사(aware)가 와야 합니다.">aware</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 문맥상 목적어(them)의 상태를 설명하는 목적격 보어 자리이므로 부사 형태는 올 수 없습니다.">awarely</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...not as internal conditions but as positive ways [which / in which] they are already relating to others.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 관계사 뒤에 주어(they), 동사(are relating to), 목적어(others)가 온전한 1/3형식 완전한 절 구조이므로 불완전한 문장을 이끄는 관계대명사 which는 틀립니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사 ways 뒤에 완전한 문장이 이어지므로 [전치사 + 관계대명사]인 in which 또는 관계부사 that(how 대체) 형태가 와야 합니다.">in which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제 — 어법 제외 엄선)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        Consider The Wizard of Oz as a psychological study of motivation. Dorothy and her three friends work hard to get to the Emerald City, overcoming barriers, persisting against all adversaries. They do so because they expect the Wizard to give them what they are missing. Instead, the wonderful (and wise) Wizard makes them aware that they, not he, always had the power to fulfill their wishes. For Dorothy, home is not a place but a feeling of security, of comfort with people she loves; it is wherever her heart is. The courage the Lion wants, the intelligence the Scarecrow longs for, and the emotions the Tin Man dreams of are attributes they ① <u>already</u> possess. They need to think about these attributes not as ② <u>internal</u> conditions but as positive ways in which they are already relating to others. After all, didn’t they ③ <u>conceal</u> those qualities on the journey to Oz, a journey motivated by ④ <u>little more than</u> an expectation, an idea about the future ⑤ <u>likelihood</u> of getting something they wanted?
+      </div>
+      <div class="exam-choices">
+        ① already<br>
+        ② internal<br>
+        ③ conceal<br>
+        ④ little more than<br>
+        ⑤ likelihood
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (conceal ➔ demonstrate 또는 display)</b><br>
+          <b>해설:</b> 도로시 일행은 오즈로 향하는 고난의 여정 속에서 용기, 지혜, 사랑의 자질들을 행동으로 이미 '보여주었고 입증(demonstrate)'했으므로, '숨기다, 감추다'를 뜻하는 conceal은 문맥상 정반대 의미로 잘못되었습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Consider The Wizard of Oz as a psychological study of motivation. Dorothy and her three friends work hard to get to the Emerald City because they expect the Wizard to grant their missing wishes. However, the wise Wizard leads them to a profound psychological revelation: the qualities they desperately seek are not external gifts to be acquired, but rather ______________________________________________________. Throughout their arduous journey motivated by future expectations, they had already been actively demonstrating those very virtues through their interactions with one another.
+      </div>
+      <div class="exam-choices">
+        ① temporary illusions constructed to evade their actual emotional distress<br>
+        ② inherent attributes that they already possess and express in relation to others<br>
+        ③ moral duties enforced upon them by the authority of the magical society<br>
+        ④ unexpected rewards granted exclusively to those who blindly obey the Wizard<br>
+        ⑤ competitive traits designed to defeat adversaries in hostile environments
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 지문의 핵심은 주인공들이 원하던 자질(용기, 지혜, 감정 등)이 외부에서 주어지는 것이 아니라, 이미 스스로 내면에 소유하고 있으며 타인과의 관계를 통해 발휘하고 있던 고유한 속성이라는 점입니다. 따라서 ②번 "inherent attributes that they already possess and express in relation to others(그들이 이미 소유하고 있으며 타인과의 관계에서 표현하고 있는 내재적 속성들)"가 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[문항 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Instead, the wonderful (and wise) Wizard makes them aware that they, not he, always had the power to fulfill their wishes.<br><br>
+        Consider The Wizard of Oz as a psychological study of motivation. ( ① ) Dorothy and her three friends work hard to get to the Emerald City, overcoming barriers, persisting against all adversaries. ( ② ) They do so because they expect the Wizard to give them what they are missing. ( ③ ) For Dorothy, home is not a place but a feeling of security, of comfort with people she loves; it is wherever her heart is. ( ④ ) The courage the Lion wants, the intelligence the Scarecrow longs for, and the emotions the Tin Man dreams of are attributes they already possess. ( ⑤ ) They need to think about these attributes not as internal conditions but as positive ways in which they are already relating to others.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> ②번 뒷문장에서 등장인물들이 '마법사가 결핍된 것을 줄 것이라 기대했다'는 외적 동기가 제시되고, 주어진 문장의 'Instead(대신에)'를 통해 마법사가 아닌 그들 자신이 이미 힘을 지니고 있음을 깨닫게 해 주었다는 내용으로 전환된 후, ③번 뒤부터 각 인물들이 이미 소유한 자질에 대한 구체적 부연 설명(도로시, 사자, 허수아비, 양철나무꾼)이 이어지므로 ③번 자리가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 요약문 완성 (서술형/단답형) -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 요약문의 빈칸 (A), (B)에 들어갈 말을 [조건]에 맞추어 본문에서 찾아 쓰시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[요약문]</b> Although the characters in The Wizard of Oz were initially motivated by the <b>(A) [        ]</b> that an external wizard would resolve their deficiencies, they realized that the virtues they sought were actually <b>(B) [        ]</b> they had already been demonstrating along the journey.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 윗글 본문에 등장하는 단어를 변형 없이 그대로 찾아 쓸 것.<br>
+        2. (A)와 (B) 모두 각각 본문에 등장하는 1단어로 작성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: (A) expectation / (B) attributes (또는 qualities)</b><br>
+          <b>해설:</b> 등장인물들은 외부의 마법사가 결핍을 해결해 줄 것이라는 '기대감(expectation)'에 의해 처음 동기부여를 받았으나, 추구하던 미덕들은 실은 그들이 여정 속에서 이미 입증해 온 '속성/자질들(attributes 또는 qualities)'이었음을 깨달았다는 논리 요약 구조입니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
