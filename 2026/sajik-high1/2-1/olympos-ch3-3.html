@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 3강 QN 29 3번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">3강 QN 29 어법 / 3번</div>
+    <h1 class="title">Embodied Metaphors:<br><span>Physical Actions Enhancing Creative Thinking</span></h1>
+    <p class="header-lead">
+      신체적 움직임과 비유적 행동(acting out metaphors)이 창의적 사고 상태를 활성화하는 신체화된 인지(Embodied Cognition)의 메커니즘을 규명하는 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      By moving our bodies, we activate a deeply ingrained and mostly unconscious metaphor connecting dynamic motion with dynamic thinking. Call to mind the words we use when we can’t seem to come up with an original idea ─ we’re “stuck,” “in a rut” ─ and those we reach for when we feel visited by the muse. Then we’re “on a roll,” our thoughts are “flowing.” Research has demonstrated that people can be placed in a creative state of mind by physically acting out creativity-related figures of speech ─ like “thinking outside the box.” Psychologist Evan Polman of the University of Wisconsin ─ Madison designed an experiment in which participants were asked to complete a creative thinking task. Some students carried out the assignment while sitting inside a five-foot-square cardboard box; others completed the task while sitting next to the box. The participants who did their thinking literally “outside the box” came up with a list of creative solutions that was, on average, 20 percent longer than the list produced by those who brainstormed inside the box.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 우리의 신체적 움직임은 사고와 연결된 내면의 은유를 활성화하며, <b>'상자 밖에서 생각하기(thinking outside the box)'와 같은 창의성과 연관된 비유적 표현을 물리적으로 직접 행동에 옮기는 것(acting out)</b>을 통해 창의적 사고력을 크게 증진시킬 수 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. By moving our bodies, we <mark>activate</mark> a deeply <mark>ingrained</mark> and mostly unconscious <mark>metaphor</mark> connecting dynamic motion with dynamic thinking.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 몸을 움직임으로써, 우리는 역동적인 움직임과 역동적인 사고를 연결하는 깊이 뿌리박히고 대개 무의식적인 은유를 활성화한다.<br>
+            <b>[핵심 어휘]</b> activate (활성화하다), ingrained (깊이 배어든, 뿌리박힌), metaphor (은유, 비유), dynamic (역동적인)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. <mark>Call to mind</mark> the words we use when we can’t seem to come up with an original idea ─ we’re <mark>“stuck,”</mark> <mark>“in a rut”</mark> ─ and those we reach for when we feel visited by the muse.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 독창적인 아이디어를 떠올리지 못하는 것처럼 보일 때 우리가 사용하는 말들(‘막혀 있다’, ‘틀에 박혀 있다’)과 예술적 영감의 방문을 받았다고 느낄 때 우리가 찾는 말들을 떠올려 보라.<br>
+            <b>[구문 공식]</b> Call to mind A (the words...) and B (those...) [A와 B를 상기하라]<br>
+            <b>[핵심 어휘]</b> call to mind (상기하다, 떠올리다), stuck (갇힌, 막힌), in a rut (판에 박힌 틀에 갇힌), muse (뮤즈, 예술적 영감)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. Then we’re <mark>“on a roll,”</mark> our thoughts are <mark>“flowing.”</mark>
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그럴 때 우리는 ‘순조롭게 잘 나가고’, 우리의 생각은 ‘흘러간다’.<br>
+            <b>[핵심 어휘]</b> on a roll (잘 굴러가는, 승승장구하는), flow (물 흐르듯 흘러가다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Research has demonstrated that people can be placed in a creative state of mind by physically <mark>acting out</mark> creativity-related <mark>figures of speech</mark> ─ like <mark>“thinking outside the box.”</mark>
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 연구는 사람들이 ‘상자 밖에서 생각하기’와 같이 창의성과 관련된 비유적 표현을 물리적으로 직접 행동으로 옮김으로써 창의적인 정신 상태에 놓일 수 있다는 것을 입증했다.<br>
+            <b>[핵심 어휘]</b> act out (행동으로 옮기다, 실연하다), figures of speech (비유적 표현, 수사어구), outside the box (틀에서 벗어난, 독창적인)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. Psychologist Evan Polman of the University of Wisconsin ─ Madison designed an experiment <mark>in which</mark> participants were asked to complete a creative thinking task.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 위스콘신 매디슨 대학교의 심리학자 Evan Polman은 참가자들이 창의적 사고 과제를 완료하도록 요구받는 실험을 설계했다.<br>
+            <b>[구문 공식]</b> experiment + in which(where) + 완전한 수동태 절(participants were asked...)<br>
+            <b>[핵심 어휘]</b> participant (참가자), task (과제, 임무)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. Some students carried out the assignment while sitting inside a five-foot-square cardboard box; others completed the task while sitting next to the box.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 어떤 학생들은 5피트 사방의 골판지 상자 안에 앉아 있는 동안 과제를 수행했고, 다른 학생들은 상자 옆에 앉아 있는 동안 과제를 완료했다.<br>
+            <b>[핵심 어휘]</b> carry out (수행하다, 실행하다), assignment (과제), cardboard box (골판지 상자)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          7. The participants who did their thinking literally “outside the box” came up with a list of creative solutions that was, on average, <mark>20 percent longer</mark> than the list <mark>produced</mark> by those who brainstormed inside the box.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 글자 그대로 ‘상자 밖에서’ 사고를 진행한 참가자들은 상자 안에서 브레인스토밍을 했던 참가자들에 의해 도출된 목록보다 평균 20퍼센트 더 긴 창의적 해결책 목록을 제시했다.<br>
+            <b>[핵심 어휘]</b> literally (글자 그대로, 실제로), come up with (~을 떠올리다, 제시하다), brainstorm (브레인스토밍하다, 아이디어를 내다)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (개념 도입 ➔ 비유적 언어 증거 ➔ 실험적 검증)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[개념 도입] Embodied Metaphor</span>
+        <h4>신체 움직임과 사고의 연계</h4>
+        <p>신체적 움직임은 <b>역동적 동작과 역동적 사고를 연결</b>하는 무의식적인 내면의 은유(Metaphor)를 활성화시킴.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[언어적 증거] Everyday Expressions</span>
+        <h4>사고 상태를 묘사하는 물리적 표현</h4>
+        <p>창의적 정체 시 “stuck”, “in a rut” 등 물리적 멈춤을 쓰고, 아이디어가 샘솟을 때는 “on a roll”, “flowing” 등 <b>유동적 움직임 표현</b>을 사용함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[실험 및 결론] Empirical Verification</span>
+        <h4>‘상자 밖’ 행동화의 창의성 증진</h4>
+        <p>실제 상자 밖(outside the box)에 앉아 과제를 수행한 그룹이 상자 안 그룹보다 <b>20% 더 많은 창의적 해결책</b>을 생성함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. ...designed an experiment [which / in which] participants were asked to complete a creative thinking task.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 관계사 뒤에 주어(participants), 수동태 동사(were asked), to부정사 보어(to complete...)가 온전한 완전한 절이므로 관계대명사 which는 올 수 없습니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사 experiment를 수식하며 뒤에 완전한 문장이 이어지므로 [전치사 + 관계대명사]인 in which 또는 관계부사 where가 올바릅니다.">in which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...came up with a list of creative solutions [that / what] was, on average, 20 percent longer than the list...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞선 선행사(a list of creative solutions)가 존재하고, 뒤에 주어가 빠진 불완전한 문장을 이끌어 수식하므로 주격 관계대명사 that(또는 which)이 맞습니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 관계대명사 what은 선행사를 자체적으로 포함하므로, 앞에 수식할 명사(a list...)가 있는 자리에는 올 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        By moving our bodies, we activate a deeply ingrained and mostly unconscious metaphor connecting ① <u>dynamic</u> motion with dynamic thinking. Call to mind the words we use when we can’t seem to come up with an original idea ─ we’re “stuck,” “in a rut” ─ and those we reach for when we feel visited by the muse. Then we’re “on a roll,” our thoughts are “flowing.” Research has demonstrated that people can be placed in a creative state of mind by physically ② <u>acting out</u> creativity-related figures of speech ─ like “thinking outside the box.” Psychologist Evan Polman designed an experiment in which participants were asked to complete a creative thinking task. Some students carried out the assignment while sitting ③ <u>inside</u> a five-foot-square cardboard box; others completed the task while sitting next to the box. The participants who did their thinking literally “outside the box” came up with a list of creative solutions that was, on average, 20 percent ④ <u>shorter</u> than the list ⑤ <u>produced</u> by those who brainstormed inside the box.
+      </div>
+      <div class="exam-choices">
+        ① dynamic<br>
+        ② acting out<br>
+        ③ inside<br>
+        ④ shorter<br>
+        ⑤ produced
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (shorter ➔ longer)</b><br>
+          <b>해설:</b> 글자 그대로 상자 밖에서 사고를 진행한 참가자들은 비유적 표현을 신체화하여 더 높은 창의성을 발휘했으므로, 도출해 낸 창의적 해결책의 목록은 상자 안 참가자들보다 20% 더 '길었다(longer)'고 해야 문맥상 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        By moving our bodies, we activate a deeply ingrained metaphor connecting dynamic motion with dynamic thinking. Expressions like being “in a rut” when uncreative versus “flowing” when inspired reflect this link. Remarkable psychological experiments show that physical embodiment directly affects cognitive processing. When individuals ______________________________________________________, they actually enter a heightened state of creative thinking, generating significantly more innovative solutions.
+      </div>
+      <div class="exam-choices">
+        ① isolate themselves completely from external sensory stimulations<br>
+        ② physically embody linguistic metaphors associated with creativity<br>
+        ③ strictly follow standardized formulas for structured problem solving<br>
+        ④ suppress unconscious thoughts to focus purely on logical reasoning<br>
+        ⑤ cooperate competitively with rivals in a restricted physical environment
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 본문에서 "physically acting out creativity-related figures of speech"라고 밝힌 핵심 내용을 가장 정확하게 패러프레이징한 선택지는 ②번 "physically embody linguistic metaphors associated with creativity(창의성과 연관된 언어적 은유를 신체적으로 구현할 때)"입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        By moving our bodies, we activate a deeply ingrained and mostly unconscious metaphor connecting dynamic motion with dynamic thinking.
+      </div>
+      <div class="exam-choices">
+        (A) Psychologist Evan Polman designed an experiment in which participants were asked to complete a creative thinking task. Some students carried out the assignment while sitting inside a cardboard box; others completed the task while sitting next to the box.<br><br>
+        (B) Call to mind the words we use when we can’t seem to come up with an original idea ─ we’re “stuck,” “in a rut” ─ and those we reach for when we feel visited by the muse. Then we’re “on a roll,” our thoughts are “flowing.”<br><br>
+        (C) Research has demonstrated that people can be placed in a creative state of mind by physically acting out creativity-related figures of speech ─ like “thinking outside the box.” The participants who did their thinking literally “outside the box” came up with a far longer list of creative solutions.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ② ((B) - (A) - (C))</b><br>
+          <b>해설:</b> 주어진 글의 신체 움직임과 사고의 연결 개념에 이어, (B)에서 일상 언어 표현(stuck vs flowing)을 통해 이를 상기시킵니다. 이어 (A)에서 이를 실증하기 위한 구체적인 상자 안팎 실험 설계를 제시하고, 마지막으로 (C)에서 실험 결과와 함께 비유적 표현의 물리적 실연이 창의성에 미치는 영향을 정리하는 (B)-(A)-(C) 구조가 가장 논리적입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 글의 밑줄 친 우리말 의미와 같도록 [조건]에 맞추어 영작하시오. (서술형)</h4>
+      <div class="exam-passage">
+        Dynamic motion activates dynamic thinking. <u>연구는 사람들이 창의성과 관련된 비유적 표현을 물리적으로 직접 행동에 옮김으로써 창의적인 정신 상태에 놓일 수 있다는 것을 입증했다.</u>
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 아래 제시된 단어를 반드시 모두 한 번씩 사용할 것.<br>
+        [ people / research / speech / in / act / can / figures / of / demonstrate / place / mind / that / a / out / creative / state / by / physically / of / have ]<br>
+        2. 'Research has demonstrated that ~'로 시작할 것.<br>
+        3. 수동태 'can be placed' 및 전치사구 'by physically acting out' 어형을 정확히 완성할 것.<br>
+        4. "creativity-related figures of speech" 어구를 활용할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: Research has demonstrated that people can be placed in a creative state of mind by physically acting out creativity-related figures of speech.</b><br>
+          <b>해설:</b> 주절의 현재완료 시제(has demonstrated) 뒤에 명사절 that을 연결하고, 'people can be placed in a creative state of mind'라는 수동태 구조와 'by + 동명사(acting out)'의 전치사구를 문법적으로 결합하여 완성하는 영작입니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
