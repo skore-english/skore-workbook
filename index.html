@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 디지털 워크북 포털</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 40px 0 30px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sec-title::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  background: var(--blue);
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.hub-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+.hub-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.hub-card:active { background: #F1F5F9; }
+
+.card-top { margin-bottom: 12px; }
+.badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.badge.sajik { background: #EFF6FF; color: var(--blue); }
+
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.card-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.card-bottom {
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> Learning Portal</span>
+      <span>로드맵 & 지문 아카이브</span>
+    </div>
+    <h1 class="title">Academic Logic <span>Workbook Hub</span></h1>
+    <p class="header-lead">
+      스코어학원 학교별 내신 및 수능 대비 모바일 최적화 워크북 허브입니다.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- 2026학년도 섹션 -->
+  <section>
+    <h2 class="sec-title">[2026학년도] 사직고 1학년 — 올림포스 9대변별유형</h2>
+    <div class="grid-cards">
+      
+      <!-- 2강 3번 카드 (연도 경로 반영) -->
+      <a href="2026/sajik-high1/olympos-ch2-3.html" class="hub-card">
+        <div class="card-top">
+          <span class="badge sajik">2강 QN 23~24 / 3번</span>
+          <div class="card-title">지식재산권과 독점적 보호의 필요성</div>
+          <p class="card-desc">The Necessity of Intellectual Property Protection for Knowledge-Based Markets</p>
+        </div>
+        <div class="card-bottom">
+          <span>5-STEP WORKBOOK</span>
+          <span>학습 시작 ➔</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · Learning Navigation System
+  </div>
+</footer>
+
+</body>
+</html>
