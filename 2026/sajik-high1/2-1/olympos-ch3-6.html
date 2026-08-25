@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 3강 QN 29 6번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">3강 QN 29 어법 / 6번</div>
+    <h1 class="title">The Myth of a Static Universe:<br><span>Einstein and the Cosmological Constant</span></h1>
+    <p class="header-lead">
+      우주는 불변한다는 고대부터 이어진 뿌리 깊은 통념과, 자신의 상대성이론이 도출한 동적 우주(팽창/수축)를 인위적으로 정지시키려 했던 아인슈타인의 우주상수 일화를 분석하는 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      To the ancients, looking out at the night sky, the Universe seemed eternal and unchanging. Right up until the 1920s, what we now know to be the Milky Way galaxy, an island of a few hundred billion stars, was thought to be the entire Universe, in which individual stars might be born, live and die but the overall appearance always remained the same, like a forest in which individual trees live and die without changing the overall appearance. The idea of an unchanging Universe was so deeply rooted that even Albert Einstein, usually willing to entertain new ideas, accepted it without question. When he applied the equations of his general theory of relativity to describe the behaviour of the entire Universe (all of space and time), he found that the mathematics said that the Universe could not be static, but must be either expanding or contracting. This seemed so improbable to him that he added an extra factor to the equations, called the cosmological constant, to hold everything still.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 우주가 영원하고 정적(Static)이라는 관념은 너무나 확고하여, 새로운 생각에 열려 있던 <b>아인슈타인조차 일반상대성이론 방정식이 우주의 팽창이나 수축을 가리키자 이를 받아들이지 못하고 우주를 정지시키기 위해 '우주상수(Cosmological Constant)'를 임의로 추가</b>했다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. To the ancients, <mark>looking out</mark> at the night sky, the Universe seemed <mark>eternal</mark> and <mark>unchanging</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 밤하늘을 바라보았던 고대인들에게, 우주는 영원하고 변하지 않는 것처럼 보였다.<br>
+            <b>[핵심 어휘]</b> ancient (고대인), eternal (영원한), unchanging (불변의, 변함없는)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. Right up until the 1920s, <mark>what we now know to be the Milky Way galaxy</mark>, an island of a few hundred billion stars, was thought to be the entire Universe, <mark>in which</mark> individual stars might be born, live and die but the <mark>overall appearance</mark> always remained the same, like a forest in which individual trees live and die without changing the overall appearance.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 1920년대에 이르기까지 바로 그때까지도, 수천억 개의 별들로 이루어진 섬이자 우리가 현재 은하계라고 알고 있는 것이 우주 전체로 여겨졌는데, 그 안에서 개별 별들은 태어나고 살다가 죽을지라도 전체적인 모습은 항상 동일하게 유지되었으며, 이는 개별 나무들이 전체적인 모습을 바꾸지 않은 채 살고 죽어가는 숲과 같았다.<br>
+            <b>[구문 공식]</b> what절 주어(what we now know...) + 단수 수동태 본동사(was thought) / in which + 완전한 절<br>
+            <b>[핵심 어휘]</b> Milky Way galaxy (은하계, 은하수), overall appearance (전체적인 모습/외관), remain (여전히 ~이다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. The idea of an unchanging Universe was <mark>so deeply rooted that</mark> even Albert Einstein, usually willing to <mark>entertain</mark> new ideas, accepted it <mark>without question</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 변하지 않는 우주라는 생각은 너무나 깊이 뿌리박혀 있어서, 평소 새로운 아이디어를 기꺼이 수용하던 알베르트 아인슈타인조차도 그것을 의심 없이 받아들였다.<br>
+            <b>[구문 공식]</b> so + 형용사/부사 + that + S + V (너무 ~해서 …하다) / be willing to-v (기꺼이 ~하다)<br>
+            <b>[핵심 어휘]</b> deeply rooted (깊이 뿌리박힌), entertain ((생각·감정 등을) 품다, 고려하다, 수용하다), without question (의심 없이, 당연하게)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. When he applied the equations of his <mark>general theory of relativity</mark> to describe the behaviour of the entire Universe (all of space and time), he found that the mathematics said that the Universe <mark>could not be static</mark>, but must be <mark>either expanding or contracting</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그가 우주 전체(모든 시공간)의 움직임을 기술하기 위해 자신의 일반상대성이론 방정식을 적용했을 때, 그는 수학적 계산이 우주가 정적일 수 없으며 반드시 팽창하거나 수축하고 있어야만 한다는 것을 말해준다는 사실을 발견했다.<br>
+            <b>[구문 공식]</b> not A but B (A가 아니라 B) / either A or B (A 또는 B)<br>
+            <b>[핵심 어휘]</b> general theory of relativity (일반상대성이론), equation (방정식), static (정적인, 고정된), expand (팽창하다), contract (수축하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. This seemed <mark>so improbable</mark> to him that he added an <mark>extra factor</mark> to the equations, called the <mark>cosmological constant</mark>, to <mark>hold everything still</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것이 그에게는 너무나 일어날 법하지 않게 여겨져서 그는 모든 것을 가만히 멈춰 있게 만들기 위해 ‘우주상수’라고 불리는 추가적인 요소를 그 방정식에 덧붙였다.<br>
+            <b>[구문 공식]</b> so + improbable(형용사) + that + S + V / hold + 목적어 + still(형용사 보어: 고요한, 정지한)<br>
+            <b>[핵심 어휘]</b> improbable (있을 법하지 않은, 사실 같지 않은), factor (요인, 요소), cosmological constant (우주상수), still (가만히 있는, 정지한)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (역사적 통념 ➔ 수학적 진실의 발견 ➔ 인위적 수정)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[배경·통념] Historical Belief</span>
+        <h4>불변하는 정적 우주관의 지배</h4>
+        <p>고대부터 1920년대까지 우주는 숲처럼 개별 별의 탄생·소멸에도 불구하고 <b>전체 외관이 항상 동일한 불변의 상태(Unchanging)</b>로 여겨짐.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[균열·발견] Mathematical Fact</span>
+        <h4>상대성이론의 예측: 팽창 또는 수축</h4>
+        <p>아인슈타인이 일반상대성이론 방정식을 우주에 적용하자, 우주는 정적일 수 없으며 <b>반드시 팽창하거나 수축(expanding or contracting)</b>해야 함이 드러남.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[반응·행동] Artificial Correction</span>
+        <h4>우주상수(Cosmological Constant) 도입</h4>
+        <p>동적 우주를 비현실적(improbable)이라 여긴 아인슈타인은 우주를 억지로 정지(hold everything still)시키기 위해 <b>우주상수를 추가</b>함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Right up until the 1920s, [that / what] we now know to be the Milky Way galaxy, an island of a few hundred billion stars, was thought to be the entire Universe...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! know의 목적어 자리가 비어 있는 불완전한 절이며 앞에 선행사가 없으므로 접속사 that은 올 수 없습니다.">that</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사를 포함하여 '~하는 것'이라는 명사절 주어를 이끌고 뒷문장이 불완전하므로 관계대명사 what이 올바릅니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. This seemed so [improbable / improbably] to him that he added an extra factor to the equations...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! seem은 2형식 감각/연결 동사이므로 주격 보어로 부사가 아닌 형용사 improbable이 와야 합니다. (so ~ that 결과 구문)">improbable</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! seem의 보어 역할을 해야 하므로 부사 improbably는 어법상 틀립니다.">improbably</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        To the ancients, looking out at the night sky, the Universe seemed eternal and unchanging. Right up until the 1920s, what we now know to be the Milky Way galaxy was thought to be the entire Universe, in which individual stars might be born, live and die but the overall appearance always remained the ① <u>same</u>. The idea of an unchanging Universe was so deeply rooted that even Albert Einstein, usually willing to entertain new ideas, accepted it ② <u>without question</u>. When he applied the equations of his general theory of relativity to describe the behaviour of the entire Universe, he found that the mathematics said that the Universe could not be ③ <u>static</u>, but must be either expanding or contracting. This seemed so ④ <u>plausible</u> to him that he added an extra factor to the equations, called the cosmological constant, to hold everything ⑤ <u>still</u>.
+      </div>
+      <div class="exam-choices">
+        ① same<br>
+        ② without question<br>
+        ③ static<br>
+        ④ plausible<br>
+        ⑤ still
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (plausible ➔ improbable 또는 unlikely)</b><br>
+          <b>해설:</b> 아인슈타인은 우주가 팽창하거나 수축한다는 수학적 계산 결과를 믿지 못하고 '있을 법하지 않은(improbable)' 것으로 여겼기 때문에 우주를 정지시키기 위한 우주상수를 추가했습니다. 따라서 '그럴듯한, 타당한'을 뜻하는 plausible은 문맥상 정반대 단어로 부적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        For centuries, human understanding of the cosmos was firmly anchored in the belief that the Universe was an eternally immutable entity. This conviction was so powerful that when Albert Einstein’s own general theory of relativity mathematically indicated a dynamic cosmos that was either expanding or contracting, he refused to embrace the outcome. Instead, driven by the deeply entrenched dogma of a motionless cosmos, Einstein chose to ______________________________________________________.
+      </div>
+      <div class="exam-choices">
+        ① abandon the general theory of relativity completely in favor of ancient cosmology<br>
+        ② introduce an arbitrary mathematical parameter to preserve the model of a static Universe<br>
+        ③ prove through telescopic observation that the Milky Way was expanding rapidly<br>
+        ④ modify his equations to demonstrate the continuous creation of new stars and galaxies<br>
+        ⑤ accept the concept of an expanding Universe without conducting further mathematical tests
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 아인슈타인은 우주가 정적이라는 신념을 지키기 위해 자신의 방정식에 '우주상수'라는 추가 요소를 인위적으로 덧붙여 우주를 멈추어 있게 만들었습니다. 이를 가장 정확하게 패러프레이징한 선택지는 ②번 "introduce an arbitrary mathematical parameter to preserve the model of a static Universe(정적 우주 모델을 유지하기 위해 임의의 수학적 매개변수를 도입하는 것)"입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        To the ancients, looking out at the night sky, the Universe seemed eternal and unchanging. Right up until the 1920s, what we now know to be the Milky Way galaxy was thought to be the entire Universe.
+      </div>
+      <div class="exam-choices">
+        (A) When he applied the equations of his general theory of relativity to describe the behaviour of the entire Universe, he found that the mathematics said that the Universe could not be static, but must be either expanding or contracting.<br><br>
+        (B) This seemed so improbable to him that he added an extra factor to the equations, called the cosmological constant, to hold everything still.<br><br>
+        (C) In this view, individual stars might be born, live and die but the overall appearance always remained the same. The idea of an unchanging Universe was so deeply rooted that even Albert Einstein accepted it without question.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ ((C) - (A) - (B))</b><br>
+          <b>해설:</b> 주어진 글의 은하계-우주 동일시 관점에 이어, (C)에서 개별 별의 변화에도 전체 외관이 유지된다는 불변의 우주관과 아인슈타인의 무비판적 수용을 제시합니다. 이어 (A)에서 아인슈타인이 상대성이론을 적용해 동적 우주(팽창/수축)라는 수학적 결과를 마주한 사건이 오고, 마지막으로 (B)에서 이를 믿지 못하고 우주상수를 추가했다는 결과(This seemed so improbable...)로 마무리하는 (C)-(A)-(B) 흐름이 가장 완벽합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 글의 밑줄 친 우리말 의미와 같도록 [조건]에 맞추어 영작하시오. (서술형)</h4>
+      <div class="exam-passage">
+        Einstein applied his general theory of relativity to describe the cosmos. <u>그는 수학적 계산이 우주가 정적일 수 없으며 반드시 팽창하거나 수축하고 있어야만 한다는 것을 말해준다는 사실을 발견했다.</u>
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 아래 제시된 단어를 반드시 모두 한 번씩 사용할 것.<br>
+        [ contracting / that / found / the / either / static / mathematics / must / could / be / said / he / or / that / Universe / not / be / expanding ]<br>
+        2. 'he found that ~' 구문 내에 목적어 접속사 'that'을 두 번 활용할 것.<br>
+        3. 'not A but B' 및 'either A or B' 구조를 반영할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: He found that the mathematics said that the Universe could not be static, but must be either expanding or contracting.</b><br>
+          <b>해설:</b> 주절 주어-동사 'He found' 뒤에 명사절 접속사 that이 이중으로 중첩되는 구조(found that the mathematics said that ...)를 구성하고, 'could not be static'과 'must be either expanding or contracting'이 'not A, but B'로 연결되는 논리적 어순을 정확하게 영작해야 합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
