@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 2강 QN 23~24 6번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>사직고 1학년 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">2강 QN 23~24 주제·제목 / 6번</div>
+    <h1 class="title">The Power of Strategic Short Breaks<br><span>to Prevent Habituation</span></h1>
+    <p class="header-lead">
+      습관화(Habituation) 방지와 생산성 유지를 위한 짧고 잦은 휴식의 가치 — 원문 정독부터 실전 킬러 변형 4문항까지 연결하는 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      If we stick with a task too long, we lose sight of the goal we’re trying to achieve, and this process is known as “habituation.”[cite: 1]Short breaks from a task can prevent habituation, help us maintain focus, and reactivate our commitment to a goal.[cite: 1]And frequent short breaks are more effective than occasional ones.[cite: 1]DeskTime, a company that makes productivity-tracking software, says that “what the most productive 10% of our users have in common is their ability to take effective breaks.”[cite: 1]Specifically, after analyzing its own data, DeskTime claims to have discovered a golden ratio of work and rest.[cite: 1]High performers, its research concludes, work for fifty-two minutes and then break for seventeen minutes.[cite: 1]DeskTime never published the data in a peer-reviewed journal, so your mileage may vary.[cite: 1]But the evidence is overwhelming that short breaks are effective ─ and deliver considerable effect for their limited cost.[cite: 1]Even “micro-breaks” can be helpful.[cite: 1]
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 한 가지 과업에 과도하게 몰두하여 목표를 잃어버리는 <b>‘습관화(habituation)’를 방지</b>하고 집중력을 유지하기 위해서는 <b>자주 취하는 짧은 휴식(frequent short breaks)</b>이 필수적이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. If we <mark>stick with</mark> a task too long, we <mark>lose sight of</mark> the goal we’re trying to achieve, and this process is known as <mark>“habituation.”</mark>
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 우리가 어떤 과업에 너무 오래 붙어있으면, 우리는 달성하고자 하는 목표를 놓치게 되며, 이 과정은 '습관화(둔감화)'로 알려져 있다.<br>
+            <b>[핵심 어휘]</b> stick with (~을 계속하다, 고수하다), lose sight of (~을 시야에서 놓치다/잊다), habituation (습관화, 둔감화)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. <mark>Short breaks</mark> from a task can <mark>prevent habituation</mark>, help us <mark>maintain focus</mark>, and <mark>reactivate</mark> our commitment to a goal.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 과업으로부터의 짧은 휴식은 습관화를 예방하고, 우리가 집중력을 유지하도록 도우며, 목표에 대한 우리의 전념을 재활성화할 수 있다.<br>
+            <b>[핵심 어휘]</b> prevent (예방하다, 막다), maintain (유지하다), reactivate (재활성화하다), commitment (전념, 헌신)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. And <mark>frequent short breaks</mark> are <mark>more effective than occasional ones</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그리고 자주 갖는 짧은 휴식은 어쩌다 한 번 갖는 휴식보다 더 효과적이다.<br>
+            <b>[핵심 어휘]</b> frequent (빈번한, 잦은), occasional (가끔의, 때때로의), ones (= breaks)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. DeskTime, a company that makes productivity-tracking software, says that “what the most productive 10% of our users <mark>have in common</mark> is their <mark>ability to take effective breaks</mark>.”
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 생산성 추적 소프트웨어를 만드는 기업인 DeskTime은 "가장 생산적인 상위 10%의 사용자가 공통으로 가진 것은 효과적인 휴식을 취하는 능력이다"라고 말한다.<br>
+            <b>[핵심 어휘]</b> productivity (생산성), have ~ in common (~을 공통으로 갖다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. Specifically, after analyzing its own data, DeskTime claims to have discovered a <mark>golden ratio</mark> of work and rest.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 구체적으로, 자체 데이터를 분석한 후 DeskTime은 일과 휴식의 황금비율을 발견했다고 주장한다.<br>
+            <b>[핵심 어휘]</b> specifically (구체적으로), analyze (분석하다), golden ratio (황금비율)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. <mark>High performers</mark>, its research concludes, work for fifty-two minutes and then break for seventeen minutes.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 높은 성과를 내는 사람들은 52분 동안 일하고 나서 17분 동안 휴식을 취한다고 그 연구는 결론짓는다.<br>
+            <b>[핵심 어휘]</b> high performer (성과가 높은 사람), conclude (결론을 내리다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          7. DeskTime never published the data in a <mark>peer-reviewed journal</mark>, so <mark>your mileage may vary</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> DeskTime은 그 데이터를 동료 심사를 거치는 학술지에 발표한 적은 없으므로 사람마다 결과가 다를 수 있다.<br>
+            <b>[핵심 어휘]</b> peer-reviewed journal (동료 심사 학술지), your mileage may vary (개인마다 차이가 있을 수 있다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          8. But the evidence is <mark>overwhelming</mark> that short breaks are effective ─ and deliver <mark>considerable effect</mark> for their <mark>limited cost</mark>. Even <mark>“micro-breaks”</mark> can be helpful.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 짧은 휴식이 효과적이며 제한된 비용(적은 시간 투자) 대비 상당한 효과를 낸다는 증거는 압도적이다. 심지어 '아주 짧은 휴식(초미세 휴식)'도 도움이 될 수 있다.<br>
+            <b>[핵심 어휘]</b> overwhelming (압도적인), considerable (상당한, 많은), micro-break (초미세 휴식, 아주 짧은 휴식)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (문제 제기 ➔ 데이터 실증 ➔ 효과 및 결론)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[문제 & 해결책] Problem & Solution</span>
+        <h4>습관화(Habituation)와 잦은 휴식</h4>
+        <p>과업에 오래 매달리면 목표 상실(습관화 발생) ➔ <b>짧고 잦은 휴식(frequent short breaks)</b>이 집중력을 복원하고 목표 전념을 재활성화함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[데이터 실증] DeskTime Case</span>
+        <h4>생산성 상위 10%의 52/17 법칙</h4>
+        <p>생산성 추적 소프트웨어 기업의 데이터 ➔ 최고 성과자들의 공통점은 <b>52분 작업 후 17분 휴식</b>이라는 일과 휴식의 황금비율 실천.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론 & 가치] High ROI & Micro-breaks</span>
+        <h4>적은 비용 대비 압도적인 효과</h4>
+        <p>학술적 정밀성 차이를 감안하더라도 짧은 휴식의 효용은 압도적이며, 심지어 <b>초미세 휴식(micro-breaks)</b> 역시 확실한 이점을 제공함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Short breaks from a task can prevent habituation, help us [maintain / maintaining] focus, and reactivate our commitment to a goal.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! help는 목적격 보어로 원형부정사(maintain) 또는 to부정사(to maintain)를 취합니다. -ing 형태는 불가능합니다.">maintain</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 준사역동사 help의 목적격 보어 자리에는 현재분사/동명사(maintaining)가 올 수 없습니다.">maintaining</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. But the evidence is overwhelming that short breaks are effective ─ and [deliver / delivers] considerable effect for their limited cost.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 접속사 that절 내부의 복수 주어인 'short breaks'에 병렬로 연결되는 동사이므로 복수 동사 deliver가 맞습니다. (are effective and deliver...)">deliver</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 문장의 본주어(the evidence)가 아니라 that절 내부의 주어(short breaks)와 병렬 구조를 이루므로 단수 동사 delivers는 잘못되었습니다.">delivers</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        If we stick with a task too long, we lose sight of the goal we’re trying to achieve, and this process is known as “habituation.” Short breaks from a task can ① <u>prevent</u> habituation, help us maintain focus, and reactivate our commitment to a goal. And ② <u>frequent</u> short breaks are more effective than occasional ones. DeskTime, a company that makes productivity-tracking software, says that “what the most productive 10% of our users have in common is their ability to take ③ <u>effective</u> breaks.” Specifically, after analyzing its own data, DeskTime claims to have discovered a golden ratio of work and rest. High performers, its research concludes, work for fifty-two minutes and then break for seventeen minutes. DeskTime never published the data in a peer-reviewed journal, so your mileage may vary. But the evidence is overwhelming that short breaks are effective ─ and deliver ④ <u>negligible</u> effect for their ⑤ <u>limited</u> cost. Even “micro-breaks” can be helpful.
+      </div>
+      <div class="exam-choices">
+        ① prevent<br>
+        ② frequent<br>
+        ③ effective<br>
+        ④ negligible<br>
+        ⑤ limited
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (negligible ➔ considerable 또는 substantial)</b><br>
+          <b>해설:</b> 짧은 휴식은 적은 시간과 비용을 들이면서도 '상당한(considerable)' 긍정적 효과를 가져다준다는 것이 글의 핵심입니다. 따라서 '무시할 만한, 하찮은'을 의미하는 negligible은 문맥상 어색합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        If we stick with a task too long, we lose sight of the goal we’re trying to achieve, and this process is known as “habituation.” In order to counter this psychological trap, research suggests that taking ________________________________________ plays a critical role in sustaining productivity. DeskTime, a productivity-tracking software company, revealed that the top 10% of high performers work for 52 minutes and rest for 17 minutes. Although individuals may experience slight differences, the evidence remains clear that stepping away briefly from work delivers significant benefits relative to its minimal time investment.
+      </div>
+      <div class="exam-choices">
+        ① long, uninterrupted working sessions without distraction<br>
+        ② occasional but extensive vacations to recharge completely<br>
+        ③ frequent, well-timed short intervals of rest from tasks<br>
+        ④ rigid working hours strictly monitored by peer evaluations<br>
+        ⑤ collective team tasks rather than individual assignments
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 한 업무에 지속적으로 매달려 발생하는 습관화를 막고 집중력을 회복하기 위해서는 '자주 취하는 적절한 타이밍의 짧은 휴식(frequent, well-timed short intervals of rest from tasks)'이 필수적이라는 내용이 들어가야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[문항 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Specifically, after analyzing its own data, DeskTime claims to have discovered a golden ratio of work and rest.<br><br>
+        If we stick with a task too long, we lose sight of the goal we’re trying to achieve, and this process is known as “habituation.” ( ① ) Short breaks from a task can prevent habituation, help us maintain focus, and reactivate our commitment to a goal. ( ② ) And frequent short breaks are more effective than occasional ones. ( ③ ) DeskTime, a company that makes productivity-tracking software, says that “what the most productive 10% of our users have in common is their ability to take effective breaks.” ( ④ ) High performers, its research concludes, work for fifty-two minutes and then break for seventeen minutes. ( ⑤ ) DeskTime never published the data in a peer-reviewed journal, so your mileage may vary. But the evidence is overwhelming that short breaks are effective.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 주어진 문장은 DeskTime이 일과 휴식의 황금비율을 발견했다는 구체적 진술입니다. 생산성 상위 10% 사용자의 공통 능력을 언급한 DeskTime 소개(③ 다음 문장) 뒤에 이어지고, 구체적인 52분 작업/17분 휴식 수치(④ 다음 문장) 바로 앞에 위치하는 ④번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 요약문의 빈칸 (A), (B)에 들어갈 말을 [조건]에 맞게 작성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[요약문]</b> Taking frequent short breaks is an efficient strategy to prevent <b>(A) [          ]</b> caused by working continuously, thereby helping workers <b>(B) [          ]</b> their focus and dedication toward their objectives.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 윗글 본문에 등장하는 단어만을 사용하여 어형 변화 없이 쓸 것.<br>
+        2. (A)와 (B) 모두 각각 한 단어로 작성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: (A) habituation / (B) maintain (또는 reactivate)</b><br>
+          <b>해설:</b> 지속적인 작업으로 인해 목표를 놓치는 '습관화(habituation)'를 방지하고, 목표를 향한 집중력을 '유지(maintain)'하거나 '재활성화(reactivate)'하는 데 도움을 준다는 본문의 핵심 어휘를 활용합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
