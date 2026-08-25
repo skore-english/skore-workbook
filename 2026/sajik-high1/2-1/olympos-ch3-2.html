@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 3강 QN 29 2번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">3강 QN 29 어법 / 2번</div>
+    <h1 class="title">Integrity as Moral Strength:<br><span>The Enduring Example of Lincoln</span></h1>
+    <p class="header-lead">
+      도덕적·윤리적 원칙에 대한 확고한 고수와 진실성 — 에이브러햄 링컨의 노예제 폐지 신념을 통해 진정한 진실성(Integrity)의 본질을 분석하는 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      Integrity is a virtue that illuminates the strength of one’s character. It’s about adhering to moral and ethical principles, and this characteristic is beautifully embodied in the lives of certain individuals. Their commitment to honesty and their unwavering moral compass serve as an inspiration for us all. Let’s explore some examples of such inspiring figures whose lives demonstrate a high level of integrity. Abraham Lincoln, the 16th President of the United States, remains an enduring symbol of honesty and integrity. His dedication to truthfulness was so profound that he earned the nickname “Honest Abe”. Lincoln demonstrated integrity in his personal and political life, remaining steadfast in his commitment to the abolition of slavery, despite the intense opposition and challenges he faced. His insistence on doing what was right, regardless of personal or political cost, embodies the essence of integrity.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 진실성(Integrity)은 도덕적·윤리적 원칙을 확고히 지키는 미덕으로, <b>극심한 반대와 개인적·정치적 대가에도 불구하고 노예제 폐지와 옳은 일을 꿋꿋이 추진했던 에이브러햄 링컨의 삶</b>을 통해 그 본질이 명확히 구현된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. <mark>Integrity</mark> is a virtue that <mark>illuminates</mark> the strength of one’s character.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 진실성(온전함/고결함)은 한 사람의 인격의 강인함을 밝혀 주는 미덕이다.<br>
+            <b>[핵심 어휘]</b> integrity (진실성, 고결함, 성실), illuminate (밝히다, 조명하다, 분명히 하다), virtue (미덕)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. It’s about <mark>adhering to</mark> moral and ethical principles, and this characteristic is beautifully <mark>embodied</mark> in the lives of certain individuals.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것은 도덕적이고 윤리적인 원칙을 고수하는 것에 관한 것이며, 이러한 특징은 특정한 인물들의 삶 속에 아름답게 구현되어 있다.<br>
+            <b>[핵심 어휘]</b> adhere to (~을 고수하다, 충실히 지키다), embody (구현하다, 구체화하다), principle (원칙, 신조)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. Their commitment to honesty and their <mark>unwavering</mark> moral compass serve as an inspiration for us all.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 정직에 대한 그들의 헌신과 그들의 흔들리지 않는 도덕적 나침반은 우리 모두에게 영감으로 작용한다.<br>
+            <b>[핵심 어휘]</b> commitment (헌신, 전념), unwavering (확고한, 흔들리지 않는), moral compass (도덕적 나침반/도덕적 잣대)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Let’s explore some examples of such inspiring figures <mark>whose</mark> lives demonstrate a high level of integrity.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그들의 삶이 높은 수준의 진실성을 보여주는 그러한 영감을 주는 인물들의 몇 가지 사례를 살펴보자.<br>
+            <b>[구문 공식]</b> 선행사(inspiring figures)의 소유격을 받는 소유격 관계대명사 whose + 무관사 명사(lives)<br>
+            <b>[핵심 어휘]</b> inspiring figure (영감을 주는 인물), demonstrate (보여주다, 입증하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. Abraham Lincoln, the 16th President of the United States, remains an <mark>enduring</mark> symbol of honesty and integrity.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 미국의 제16대 대통령인 에이브러햄 링컨은 정직과 진실성의 영원한(지속적인) 상징으로 남아 있다.<br>
+            <b>[핵심 어휘]</b> enduring (오래 지속되는, 불후의), symbol (상징)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. His dedication to truthfulness was <mark>so</mark> profound <mark>that</mark> he earned the nickname “Honest Abe”.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 진실성에 대한 그의 헌신은 매우 깊어서 그는 '정직한 에이브'라는 별명을 얻었다.<br>
+            <b>[구문 공식]</b> so + 형용사/부사 + that + S + V (너무 ~해서 …하다)<br>
+            <b>[핵심 어휘]</b> dedication (헌신), truthfulness (정직함, 진실성), profound (깊은, 심오한)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          7. Lincoln demonstrated integrity in his personal and political life, <mark>remaining steadfast</mark> in his commitment to the <mark>abolition</mark> of slavery, <mark>despite</mark> the intense opposition and challenges he faced.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 링컨은 그가 직면했던 극심한 반대와 도전에도 불구하고 노예제 폐지에 대한 자신의 헌신에 확고함을 유지하면서, 자신의 개인적 삶과 정치적 삶에서 진실성을 입증했다.<br>
+            <b>[구문 공식]</b> 분사구문 remaining steadfast ~ / despite + 명사구(the intense opposition...)<br>
+            <b>[핵심 어휘]</b> steadfast (확고한, 변함없는), abolition (폐지), intense opposition (극심한 반대)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          8. His <mark>insistence</mark> on doing what was right, <mark>regardless of</mark> personal or political cost, embodies the essence of integrity.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 개인적이거나 정치적인 대가와 상관없이 옳은 일을 하겠다는 그의 고집(주장)은 진실성의 정수를 구현한다.<br>
+            <b>[핵심 어휘]</b> insistence (주장, 고집), regardless of (~와 상관없이), cost (대가, 희생, 비용), essence (본질, 정수)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (개념 정의 ➔ 인물 제시 ➔ 행적과 본질)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[개념 정의] Definition of Integrity</span>
+        <h4>도덕적 강인함과 원칙의 고수</h4>
+        <p>진실성(Integrity)은 한 사람의 인격을 밝히며, 흔들리지 않는 도덕적 나침반을 바탕으로 윤리적 원칙을 충실히 지키는 미덕임.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[사례 도입] Exemplary Figure</span>
+        <h4>에이브러햄 링컨: ‘Honest Abe’</h4>
+        <p>미국의 16대 대통령 에이브러햄 링컨은 타의 추종을 불허하는 깊은 진실성으로 ‘정직한 에이브’라 불리며 정직의 상징이 됨.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[실증·본질] Moral Steadfastness</span>
+        <h4>대가에 굴하지 않는 노예제 폐지</h4>
+        <p>극심한 정치적 반대와 대가(Cost)에도 불구하고 옳은 일(노예제 폐지)을 꿋꿋이 고수하며 진실성의 본질(Essence)을 입증함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Let’s explore some examples of such inspiring figures [who / whose] lives demonstrate a high level of integrity.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒤에 무관사 명사 lives가 이어지며 figures의 소유 관계(inspiring figures' lives)를 나타내므로 주격/목적격 관계대명사 who는 틀립니다.">who</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사 inspiring figures를 수식하며 '그 인물들의 삶'이라는 소유 관계를 연결하므로 소유격 관계대명사 whose가 올바릅니다.">whose</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. Lincoln demonstrated integrity, [remaining / remained] steadfast in his commitment to the abolition of slavery...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 문장의 주어 Lincoln이 스스로 확고한 상태를 '유지하면서'라는 능동의 연속/동시 동작을 나타내는 분사구문이므로 현재분사 remaining이 올바릅니다.">remaining</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 앞선 주절(Lincoln demonstrated ~) 뒤에 접속사 없이 과거동사 remained를 병렬할 수 없으며, 능동 분사구문 자리입니다.">remained</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제 — 어법 제외 엄선)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        Integrity is a virtue that illuminates the strength of one’s character. It’s about adhering to moral and ethical principles, and this characteristic is beautifully embodied in the lives of certain individuals. Their commitment to honesty and their ① <u>unwavering</u> moral compass serve as an inspiration for us all. Abraham Lincoln, the 16th President of the United States, remains an enduring symbol of honesty and integrity. His dedication to truthfulness was so profound that he earned the nickname “Honest Abe”. Lincoln demonstrated integrity in his personal and political life, remaining ② <u>steadfast</u> in his commitment to the ③ <u>preservation</u> of slavery, despite the intense opposition and challenges he faced. His insistence on doing what was right, ④ <u>regardless of</u> personal or political cost, embodies the ⑤ <u>essence</u> of integrity.
+      </div>
+      <div class="exam-choices">
+        ① unwavering<br>
+        ② steadfast<br>
+        ③ preservation<br>
+        ④ regardless of<br>
+        ⑤ essence
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (preservation ➔ abolition 또는 elimination)</b><br>
+          <b>해설:</b> 에이브러햄 링컨은 노예제를 유지·보존하려 한 것이 아니라, 극심한 반대 속에서도 노예제를 '폐지(abolition)'하기 위한 헌신을 지속했으므로 preservation(보존, 유지)은 문맥상 정반대 단어로 부적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Integrity is a virtue that illuminates the strength of one’s character through adherence to ethical principles. This quality was clearly demonstrated by Abraham Lincoln throughout his presidency. Even when confronting fierce resistance and severe obstacles regarding the abolition of slavery, he never compromised his ethical convictions. Ultimately, Lincoln’s historic legacy proves that the true essence of integrity lies in ______________________________________________________.
+      </div>
+      <div class="exam-choices">
+        ① compromising ethical values to achieve immediate political stability<br>
+        ② adhering strictly to popular opinions regardless of moral validity<br>
+        ③ pursuing righteous actions despite severe personal or political costs<br>
+        ④ avoiding conflicting social controversies to protect one’s reputation<br>
+        ⑤ adjusting fundamental principles according to changing circumstances
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 지문의 마지막 문장인 "His insistence on doing what was right, regardless of personal or political cost, embodies the essence of integrity"를 패러프레이징한 선택지를 골라야 합니다. 따라서 ③번 "pursuing righteous actions despite severe personal or political costs(심각한 개인적·정치적 대가에도 불구하고 옳은 행동을 추구하는 것)"가 정답입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Integrity is a virtue that illuminates the strength of one’s character. It’s about adhering to moral and ethical principles, and this characteristic is beautifully embodied in the lives of certain individuals.
+      </div>
+      <div class="exam-choices">
+        (A) Abraham Lincoln, the 16th President of the United States, remains an enduring symbol of honesty and integrity. His dedication to truthfulness was so profound that he earned the nickname “Honest Abe”.<br><br>
+        (B) Their commitment to honesty and their unwavering moral compass serve as an inspiration for us all. Let’s explore some examples of such inspiring figures whose lives demonstrate a high level of integrity.<br><br>
+        (C) Lincoln demonstrated integrity in his personal and political life, remaining steadfast in his commitment to the abolition of slavery, despite the intense opposition and challenges he faced. His insistence on doing what was right embodies the essence of integrity.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ② ((B) - (A) - (C))</b><br>
+          <b>해설:</b> 주어진 글에서 진실성의 일반적 개념을 제시한 후, (B)에서 이러한 진실성을 갖춘 영감 있는 인물들의 사례를 탐색해보자는 연결 문장이 오고, (A)에서 그 대표 인물로 에이브러햄 링컨을 도입한 뒤, (C)에서 노예제 폐지를 관철한 링컨의 구체적 행적과 진실성의 본질로 마무리하는 (B)-(A)-(C) 흐름이 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 글의 밑줄 친 우리말 의미와 같도록 [조건]에 맞추어 영작하시오. (서술형)</h4>
+      <div class="exam-passage">
+        Lincoln remains an enduring symbol of integrity. <u>진실성에 대한 그의 헌신은 매우 깊어서 그는 “Honest Abe”라는 별명을 얻었다.</u>
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 아래 제시된 단어를 반드시 모두 한 번씩 사용할 것.<br>
+        [ dedication / that / profound / earn / nickname / his / was / so / he / “Honest Abe” / the / to / truthfulness ]<br>
+        2. 'so + 형용사 + that + S + V' 구문을 활용할 것.<br>
+        3. earn의 시제를 문맥에 맞게 변형하여 영작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: His dedication to truthfulness was so profound that he earned the nickname “Honest Abe”.</b><br>
+          <b>해설:</b> 주어구 'His dedication to truthfulness' 뒤에 be동사 과거형 was와 'so profound that ~'의 결과 부사절 구문을 연결하고, that절 내부의 동사 earn을 과거형 earned로 시제 일치시키는 영작 능력을 평가합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
