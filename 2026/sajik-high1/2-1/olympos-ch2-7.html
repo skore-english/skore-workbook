@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 2강 주제·제목 / 7번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>사직고 1학년 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">2강 QN23~24 주제·제목 / 7번</div>
+    <h1 class="title">The Imperative of Sustainability<br><span>in Modern Event Management</span></h1>
+    <p class="header-lead">
+      현대 이벤트 기획에서 지속가능성이 갖는 윤리적·법적 책임과 생존 전략 — 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      The twenty-first-century event manager has a responsibility to their clients and stakeholders that requires the delivery of an event which minimises negative impacts and can endure without the overconsumption of resources. Sustainable events will have a positive impact on people, the planet and profit margins and thus help to meet the economic, sociocultural and environmental needs of event stakeholders. Furthermore, professional event planners have an increasing ethical and legal duty to plan and deliver events that are environmentally, socially and culturally responsible. Responsible events are sensitive to the economic, sociocultural and environmental needs within a local host community, and are organised in order to create the best output for all involved or affected by the event, and in reality, for many event professionals, sustainability is now equated with survival. This means that placing sustainability at the core of event management practices is not just important, but it has become an essential part of the role, and event organisers must adopt increasingly responsible practices in order to stay competitive.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 현대 이벤트 기획자에게 <b>지속가능성(Sustainability)</b>을 핵심에 두는 것은 단순한 선택 사항이 아니라, 고객·이해관계자·지역사회의 요구를 충족하고 업계에서 살아남아 <b>경쟁력을 유지하기 위한 필수 조건(Survival & Competitiveness)</b>이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. The twenty-first-century event manager has a <mark>responsibility</mark> to their clients and <mark>stakeholders</mark> that requires the delivery of an event which <mark>minimises negative impacts</mark> and can <mark>endure</mark> without the <mark>overconsumption of resources</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 21세기 이벤트 기획자는 / 고객과 이해관계자들에 대한 책임을 가지고 있다 / 부정적인 영향을 최소화하고 / 자원의 과도한 소비 없이 지속될 수 있는 / 이벤트를 제공할 것을 요구하는.<br>
+            <b>[핵심 어휘]</b> stakeholder (이해관계자), endure (지속되다, 견디다), overconsumption (과소비), minimise (최소화하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. <mark>Sustainable events</mark> will have a positive impact on people, the planet and <mark>profit margins</mark> and thus help to meet the economic, sociocultural and environmental needs of event stakeholders.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 지속가능한 이벤트는 / 사람, 지구(환경), 수익 마진에 긍정적인 영향을 미칠 것이며 / 따라서 이벤트 이해관계자들의 경제적, 사회문화적, 환경적 요구를 충족하는 데 도움을 줄 것이다.<br>
+            <b>[핵심 어휘]</b> sustainable (지속가능한), profit margin (수익 마진, 이윤율), sociocultural (사회문화적인), meet needs (요구를 충족시키다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. Furthermore, professional event planners have an increasing <mark>ethical and legal duty</mark> to plan and deliver events that are environmentally, socially and culturally <mark>responsible</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 게다가, 전문 이벤트 기획자들은 / 환경적, 사회적, 문화적으로 책임 있는 이벤트를 계획하고 실행해야 하는 / 점점 더 커지는 윤리적 및 법적 의무를 지니고 있다.<br>
+            <b>[핵심 어휘]</b> ethical (윤리적인), legal duty (법적 의무), responsible (책임 있는)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Responsible events are <mark>sensitive to</mark> the economic, sociocultural and environmental needs within a local host community, and are organised in order to create the best output for all <mark>involved or affected by</mark> the event, and in reality, for many event professionals, sustainability is now <mark>equated with survival</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 책임 있는 이벤트는 / 지역 개최 공동체 내의 경제적, 사회문화적, 환경적 요구에 민감하며, / 이벤트에 관여되거나 영향을 받는 모든 사람을 위해 최상의 결과물을 만들어 내도록 조직되고, / 실제로 많은 이벤트 전문가들에게 지속가능성은 이제 생존과 동일시된다.<br>
+            <b>[핵심 어휘]</b> be sensitive to (~에 민감하다/신경 쓰다), host community (개최지 지역사회), equate A with B (A를 B와 동일시하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. This means that placing sustainability at the core of event management practices is not just important, but it has become an <mark>essential part</mark> of the role, and event organisers must adopt increasingly responsible practices in order to <mark>stay competitive</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것은 의미한다 / 이벤트 관리 실무의 중심에 지속가능성을 두는 것이 단지 중요할 뿐만 아니라 / 그 역할의 필수적인 부분이 되었으며, / 이벤트 주최자들은 경쟁력을 유지하기 위해 점점 더 책임 있는 관행을 도입해야만 한다는 것을.<br>
+            <b>[핵심 어휘]</b> at the core of (~의 핵심에), essential (필수적인), adopt (도입하다, 채택하다), stay competitive (경쟁력을 유지하다)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (책임 대두 ➔ 다면적 가치 ➔ 생존·경쟁력 필수)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] Context & Duty</span>
+        <h4>21세기 이벤트 기획자의 책임</h4>
+        <p>부정적 영향 및 자원 과소비 최소화 ➔ 이해관계자에 대한 윤리적·법적 책임 확대.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] Triple Bottom Line</span>
+        <h4>사람·지구·수익의 동시 충족</h4>
+        <p>지속가능한 이벤트는 환경뿐만 아니라 경제적·사회문화적 요구와 지역사회의 최선 결과를 창출함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] Core Conclusion</span>
+        <h4>지속가능성 = 생존과 경쟁력</h4>
+        <p>지속가능성은 단순 권고가 아닌 <b>생존(Survival)</b>과 직결되며, 시장에서 <b>경쟁력(Stay competitive)</b>을 유지하기 위한 핵심 필수 요소임.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. ...in order to create the best output for all [involving / involved] or affected by the event...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒤에 목적어가 없으며, 이벤트에 '관련/연루된' 수동의 의미이므로 과거분사가 와야 합니다.">involving</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! all 뒤에서 수동 의미로 병렬 연결(involved or affected by)되어 수식하는 과거분사가 맞습니다.">involved</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. This means that [place / placing] sustainability at the core of event management practices is not just important...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! that절 내부의 주어 역할을 해야 하므로 동명사(placing)가 와야 단수 동사 is와 올바르게 연결됩니다.">placing</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 동사원형 place는 that절의 주어 자리에 올 수 없습니다.">place</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        The twenty-first-century event manager has a responsibility to their clients and stakeholders that requires the delivery of an event which ① <u>minimises</u> negative impacts and can endure without the overconsumption of resources. Sustainable events will have a positive impact on people, the planet and profit margins and thus help to meet the economic, sociocultural and environmental needs of event stakeholders. Furthermore, professional event planners have an increasing ethical and legal duty to plan and deliver events that are environmentally, socially and culturally ② <u>responsible</u>. Responsible events are ③ <u>indifferent</u> to the economic, sociocultural and environmental needs within a local host community, and are organised in order to create the best output for all involved or affected by the event, and in reality, for many event professionals, sustainability is now ④ <u>equated</u> with survival. This means that placing sustainability at the core of event management practices is not just important, but it has become an ⑤ <u>essential</u> part of the role.
+      </div>
+      <div class="exam-choices">
+        ① minimises<br>
+        ② responsible<br>
+        ③ indifferent<br>
+        ④ equated<br>
+        ⑤ essential
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (indifferent ➔ sensitive)</b><br>
+          <b>해설:</b> 책임 있는 이벤트는 개최지 지역사회의 경제적, 사회문화적, 환경적 요구에 '민감하게 반응(sensitive)'해야 하므로, '무관심한'을 뜻하는 indifferent는 문맥상 어긋납니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Responsible events are sensitive to the economic, sociocultural and environmental needs within a local host community, and are organised in order to create the best output for all involved or affected by the event, and in reality, for many event professionals, ___________________________________. This means that placing sustainability at the core of event management practices is not just important, but it has become an essential part of the role, and event organisers must adopt increasingly responsible practices in order to stay competitive.
+      </div>
+      <div class="exam-choices">
+        ① financial profitability takes precedence over environmental ethics<br>
+        ② legal compliance is considered sufficient to satisfy the clients<br>
+        ③ sustainability is now equated with survival<br>
+        ④ hosting large-scale events guarantees long-term public interest<br>
+        ⑤ reducing operating costs is the sole indicator of market success
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 빈칸 뒤에서 지속가능성이 단순한 중요성을 넘어 필수적인 역할이자 경쟁력 유지의 핵심 조건이라고 강조하고 있으므로, 지속가능성이 곧 '생존과 동일시된다(sustainability is now equated with survival)'는 내용이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[문항 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Furthermore, professional event planners have an increasing ethical and legal duty to plan and deliver events that are environmentally, socially and culturally responsible.<br><br>
+        The twenty-first-century event manager has a responsibility to their clients and stakeholders that requires the delivery of an event which minimises negative impacts and can endure without the overconsumption of resources. ( ① ) Sustainable events will have a positive impact on people, the planet and profit margins and thus help to meet the economic, sociocultural and environmental needs of event stakeholders. ( ② ) Responsible events are sensitive to the economic, sociocultural and environmental needs within a local host community, and are organised in order to create the best output for all involved or affected by the event. ( ③ ) In reality, for many event professionals, sustainability is now equated with survival. ( ④ ) This means that placing sustainability at the core of event management practices is not just important, but it has become an essential part of the role. ( ⑤ ) Event organisers must adopt increasingly responsible practices in order to stay competitive.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 주어진 문장은 지속가능한 이벤트 기획이 '윤리적·법적 의무'로 확장된다는 내용입니다. 지속가능한 이벤트의 긍정적 영향(① 뒤)에 이어 의무를 심화 설명하고, 그 다음 문장에서 'Responsible events'로 개념을 받아 서술하고 있으므로 ②번 위치가 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 요약문의 빈칸 (A), (B)에 들어갈 말을 [조건]에 맞게 본문에서 찾아 쓰시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[요약문]</b> In modern event management, integrating <b>(A) [                 ]</b> into planning is no longer optional but an essential duty directly linked to the industry's <b>(B) [                 ]</b> and competitiveness.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 본문에 등장하는 단어를 어형 변화 없이 그대로 찾아 쓸 것.<br>
+        2. (A)와 (B) 모두 각각 단일 명사(1단어)로 작성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: (A) sustainability / (B) survival</b><br>
+          <b>해설:</b> 이벤트 관리의 핵심으로 '지속가능성(sustainability)'을 통합하는 것은 업계에서의 '생존(survival)' 및 경쟁력과 직결된다는 글의 전체 요지를 요약한 문장입니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
