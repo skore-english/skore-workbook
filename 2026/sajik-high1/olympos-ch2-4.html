@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 2강 QN 23~24 4번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>사직고 1학년 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">2강 QN 23~24 주제·제목 / 4번</div>
+    <h1 class="title">How Technology Has Revolutionized the Entire Music Ecosystem<br><span>기술이 변화시킨 음악 생태계 전반의 혁신</span></h1>
+    <p class="header-lead">
+      작곡·제작·유통부터 소비 방식까지 — 디지털 기술과 모바일 혁신이 음악 산업 전반에 가져온 패러다임 전환 분석 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      In recent years, technology has revolutionized the way we compose, play, record, buy, listen to and discover music. It’s now possible for someone to write, produce, promote and sell music from home. You don’t need expensive equipment, either. You could do everything with a computer, a few basic instruments and an internet connection. And that’s just for starters. Mobile technology has made it possible to record and produce music on the move. Modern performance technology allows musicians to create exciting live shows with minimal equipment. Websites and software applications can help us write music, collaborate with others across the world and alter the sound of everyday instruments. Also, the way we listen to music is changing. Physical formats, from records to CDs, are being replaced by digital ones, such as streaming and MP3 downloads.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 현대 기술의 발전(컴퓨터, 인터넷, 모바일, 소프트웨어)은 음악의 <b>창작·연주·제작·유통부터 소비(감상) 방식</b>에 이르기까지 음악 산업의 전 과정을 혁신적으로 탈바꿈시켰다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. In recent years, technology <mark>has revolutionized</mark> the way we compose, play, record, buy, listen to and discover music.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 최근 몇 년 동안, 기술은 우리가 음악을 작곡하고, 연주하고, 녹음하고, 구매하고, 듣고, 발견하는 방식을 대변혁해 왔다.<br>
+            <b>[구문 해설]</b> the way 뒤에 관계부사 that(또는 in which)이 생략되어 6개의 병렬 동사구를 수식함. (the way how는 불가)<br>
+            <b>[핵심 어휘]</b> revolutionize (대변혁을 일으키다), compose (작곡하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. It’s now possible for someone to write, produce, promote and sell music <mark>from home</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이제 누군가가 집에서 음악을 쓰고, 프로듀싱하고, 홍보하고, 판매하는 것이 가능하다.<br>
+            <b>[구문 해설]</b> It(가주어) — for someone(의미상 주어) — to write...(진주어) 구문.<br>
+            <b>[핵심 어휘]</b> produce (제작/프로듀싱하다), promote (홍보하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. You don’t need <mark>expensive equipment</mark>, either.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 당신은 값비싼 장비 또한 필요하지 않다.<br>
+            <b>[구문 해설]</b> 부정문 뒤에서 '~도 역시'의 의미로 either 사용 (too 불가). equipment는 셀 수 없는 명사.<br>
+            <b>[핵심 어휘]</b> expensive (값비싼), equipment (장비, 설비)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. You could do everything with a computer, a few basic instruments and an internet connection.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 컴퓨터 한 대, 몇 가지 기본 악기, 그리고 인터넷 연결만으로 모든 것을 할 수 있다.<br>
+            <b>[핵심 어휘]</b> instrument (악기, 기구), internet connection (인터넷 연결)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. And that’s <mark>just for starters</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그리고 그것은 단지 시작에 불과하다.<br>
+            <b>[핵심 어휘]</b> for starters (우선, 시작으로)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. Mobile technology has made it possible <mark>to record and produce</mark> music <mark>on the move</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 모바일 기술은 이동 중에도 음악을 녹음하고 제작하는 것을 가능하게 만들었다.<br>
+            <b>[구문 해설]</b> made(5형식 동사) + it(가목적어) + possible(목적격보어 형용사) + to record...(진목적어).<br>
+            <b>[핵심 어휘]</b> on the move (이동 중에)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          7. Modern performance technology <mark>allows musicians to create</mark> exciting live shows with minimal equipment.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 현대 공연 기술은 음악가들이 최소한의 장비로 흥미진진한 라이브 쇼를 연출할 수 있게 해 준다.<br>
+            <b>[구문 해설]</b> allow + 목적어(musicians) + to부정사(to create).<br>
+            <b>[핵심 어휘]</b> minimal (최소한의), performance (공연, 연주)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          8. Websites and software applications can help us write music, <mark>collaborate</mark> with others across the world and <mark>alter</mark> the sound of everyday instruments.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 웹사이트와 소프트웨어 응용 프로그램은 우리가 음악을 쓰고, 전 세계의 다른 사람들과 협업하며, 일상 악기의 소리를 변형할 수 있도록 도와준다.<br>
+            <b>[구문 해설]</b> help + 목적어(us) + 목적격보어 동사원형 병렬 [write / collaborate / alter].<br>
+            <b>[핵심 어휘]</b> collaborate (협업하다), alter (변형하다, 바꾸다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          9. Also, the way we listen to music is changing; physical formats, from records to CDs, <mark>are being replaced by</mark> digital ones, such as streaming and MP3 downloads.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 또한, 우리가 음악을 듣는 방식도 변화하고 있다. 레코드판에서 CD에 이르기까지 실물 형태는 스트리밍 및 MP3 다운로드와 같은 디지털 형태로 대체되고 있다.<br>
+            <b>[구문 해설]</b> are being replaced by (현재진행 수동태: ~에 의해 대체되고 있는 중이다). digital ones의 ones는 formats를 대신하는 부정대명사.<br>
+            <b>[핵심 어휘]</b> physical format (물리적/실물 포맷), replace (대체하다)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (도입 ➔ 다변화 발전 ➔ 소비 전환)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[총론·창작] General & Creation</span>
+        <h4>홈 레코딩과 진입장벽의 붕괴</h4>
+        <p>기술 혁신으로 고가 장비 없이 PC·인터넷만으로 집에서 작곡·제작·유통까지 전 과정 수행 가능.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[확장·공연] Expansion & Performance</span>
+        <h4>모바일화와 글로벌 디지털 협업</h4>
+        <p>모바일 기기로 이동 중 제작 가능, 최소 장비로 라이브 연출, 소프트웨어를 통한 전 세계 아티스트와의 실시간 협업.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[소비·유통] Consumption Paradigm</span>
+        <h4>실물 음반에서 디지털 스트리밍으로</h4>
+        <p>LP·CD 등 실물 포맷의 쇠퇴 ➔ 스트리밍, 음원 다운로드 등 디지털 중심 소비 생태계로 완전 재편.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Mobile technology has made it [possible / possibly] to record and produce music on the move.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! make + it(가목적어) + 목적격보어 + to-v(진목적어) 구문입니다. 목적격 보어 자리에는 형용사 possible이 와야 하며 부사 possibly는 불가합니다.">possible</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 가목적어 it을 설명하는 목적격 보어(O.C.) 자리이므로 부사가 아닌 형용사 possible이 와야 합니다.">possibly</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. Physical formats, from records to CDs, [are replaced / are being replaced] by digital ones, such as streaming and MP3 downloads.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 문맥상 현재 실물 매체에서 디지털 매체로의 전환이 활발히 '진행 중'임을 나타내므로 현재진행 수동태가 문맥상 더욱 정확합니다.">are replaced</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞 문장의 'the way we listen to music is changing'과 호응하여 '현재 활발히 대체되고 있는 중이다'를 뜻하는 현재진행 수동태(are being replaced)가 가장 적절합니다.">are being replaced</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        In recent years, technology has revolutionized the way we compose, play, record, buy, listen to and discover music. It’s now possible for someone to write, produce, promote and sell music from home. You don’t need ① <u>expensive</u> equipment, either. You could do everything with a computer, a few basic instruments and an internet connection. Mobile technology has made it possible to record and produce music on the move. Modern performance technology allows musicians to create exciting live shows with ② <u>minimal</u> equipment. Websites and software applications can help us write music, ③ <u>collaborate</u> with others across the world and ④ <u>maintain</u> the sound of everyday instruments into something new. Also, the way we listen to music is changing. Physical formats, from records to CDs, are being ⑤ <u>replaced</u> by digital ones.
+      </div>
+      <div class="exam-choices">
+        ① expensive<br>
+        ② minimal<br>
+        ③ collaborate<br>
+        ④ maintain<br>
+        ⑤ replaced
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (maintain ➔ alter 또는 change)</b><br>
+          <b>해설:</b> 소프트웨어 프로그램을 통해 일상 악기의 소리를 '변형하거나 바꾸어(alter)' 새로운 소리를 만들어낸다는 문맥이 되어야 하므로, 상태를 그대로 '유지하다'를 뜻하는 maintain은 문맥상 어긋납니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        In recent years, advances in digital devices, software, and network infrastructure have fundamentally reshaped the music industry. An artist no longer relies on heavy institutional studio support; instead, one can write, produce, collaborate, and distribute songs with just a personal computer or a mobile device. Furthermore, the consumer side has undergone an identical shift, where physical album sales have yielded to digital streaming platforms. In short, modern technological development has _________________________________.
+      </div>
+      <div class="exam-choices">
+        ① lowered the artistic value of traditional instrumental performances<br>
+        ② forced independent musicians to invest heavily in professional recording gear<br>
+        ③ transformed the entire cycle of music from production to consumption<br>
+        ④ restored the dominance of physical formats like records and vinyls<br>
+        ⑤ isolated individual musicians from participating in global co-work
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 글 전체가 창작/녹음/유통(production)부터 스트리밍 감상(consumption)까지 음악의 전 과정이 기술로 인해 혁신되었다는 내용을 다루고 있으므로, '음악의 제작부터 소비에 이르는 전 주기를 탈바꿈시켰다'는 ③번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        In recent years, technology has revolutionized the way we compose, play, record, buy, listen to and discover music. It’s now possible for someone to write, produce, promote and sell music from home.
+      </div>
+      <div class="exam-choices">
+        (A) Also, the way we listen to music is changing. Physical formats, from records to CDs, are being replaced by digital ones, such as streaming and MP3 downloads.<br><br>
+        (B) You don’t need expensive equipment, either. You could do everything with a computer, a few basic instruments and an internet connection. And that’s just for starters.<br><br>
+        (C) Mobile technology has made it possible to record and produce music on the move. Modern performance technology allows musicians to create exciting live shows with minimal equipment, while software applications help us collaborate globally.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (B) - (C) - (A)</b><br>
+          <b>해설:</b> 주어진 글(집에서 음악 제작 가능) 다음에 고가 장비가 불필요함을 부연하는 (B)가 이어지고, '그것은 시작에 불과하다(that’s just for starters)'를 받아 이동 중 제작과 글로벌 협업을 상술하는 (C)로 연결된 후, '또한 감상 방식도 변하고 있다(Also, the way we listen...)'로 소비 영역을 다루는 (A)로 맺는 것이 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 우리말 해석에 맞도록 [보기]의 단어들을 바르게 배열하여 영작하시오. (가목적어-진목적어 구문 활용)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 모바일 기술은 이동 중에도 음악을 녹음하고 제작하는 것을 가능하게 만들었다.
+      </div>
+      <div class="exam-choices">
+        <b>[보기]</b><br>
+        technology / possible / made / to record and produce / has / it / mobile / music / on the move<br><br>
+        <b>[조건]</b><br>
+        1. 가목적어-진목적어(make + it + 형용사 + to-v) 구문을 반드시 활용할 것.<br>
+        2. [보기]에 주어진 단어만을 모두 사용할 것 (단어 추가 및 어형 변화 없음).
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: Mobile technology has made it possible to record and produce music on the move.</b><br>
+          <b>해설:</b> 주어(Mobile technology) + 현재완료 동사(has made) + 가목적어(it) + 목적격보어(possible) + 진목적어(to record and produce music) + 부사구(on the move) 구조를 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
