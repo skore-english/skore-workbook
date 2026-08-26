@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 6강 8번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1</span>
+    </div>
+    <div class="meta-badge">올림포스 9대변별유형 / 6강 8번</div>
+    <h1 class="title">The Hazards of <span>Workplace Friendships</span></h1>
+    <p class="header-lead">관리자와 직원 간 사적 친분이 초래하는 직무 딜레마 분석</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      As a manager, if you create friendships with your people, if you try to motivate them through the personal ties you’ve created or allowed, you’re likely to find yourself having to choose between maintaining the ties or obtaining the best results possible. If you maintain the ties, you will compromise results or make unethical choices that harm others not for a greater good but for the good of a friend. If you choose work and the work group over the wishes of a friend, as eventually and inevitably you must, the friend will feel betrayed. Sooner or later you must decide against, disappoint, criticize, discipline, demote, or even fire someone who works for you. To someone who thought you were friends, those actions will feel like a personal betrayal and will damage or destroy that person’s commitment to the work.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 관리자가 직원과 사적인 친분(Personal Ties)을 맺으면 <b>업무적 성과와 사적 유대 사이의 불가피한 딜레마</b>에 직면하게 되며, 객관적 관리 조치가 배신감과 직무 몰입 파괴로 귀결된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. As a manager, if you <mark>create friendships</mark> with your people, if you try to motivate them through the <mark>personal ties</mark> you’ve created or allowed, you’re likely to find yourself having to choose between <mark>maintaining the ties</mark> or <mark>obtaining the best results possible</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 관리자로서, 당신이 직원들과 친구 관계를 형성하거나 형성하거나 허용한 사적 유대를 통해 그들에게 동기를 부여하려 한다면, 유대 관계를 유지하는 것과 최선의 결과를 얻는 것 사이에서 선택해야만 하는 자신을 발견할 가능성이 높다.<br>
+            <b>[핵심 어휘]</b> personal tie (사적 유대 관계), motivate (동기를 부여하다), maintain (유지하다), obtain (얻다, 획득하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. If you maintain the ties, you will <mark>compromise results</mark> or make <mark>unethical choices</mark> that harm others not for a greater good but for the good of a friend.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 당신이 그 유대 관계를 유지한다면, 더 큰 공익을 위해서가 아니라 친구의 이익을 위해 성과를 타협(절충/손상)하거나 다른 사람들에게 피해를 주는 비윤리적인 선택을 하게 될 것이다.<br>
+            <b>[핵심 어휘]</b> compromise (타협하다, 손상시키다), unethical (비윤리적인), for a greater good (더 큰 공익을 위해)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. If you choose work and the work group over the wishes of a friend, as eventually and inevitably you must, the friend will <mark>feel betrayed</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 결국 그리고 불가피하게 그렇게 해야만 하듯, 친구의 바람보다 업무와 업무 집단을 선택한다면, 그 친구는 배신감을 느낄 것이다.<br>
+            <b>[핵심 어휘]</b> inevitably (불가피하게), betray (배신하다), feel betrayed (배신감을 느끼다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Sooner or later you must <mark>decide against</mark>, disappoint, criticize, <mark>discipline, demote</mark>, or even fire someone who works for you.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 조만간 당신은 당신을 위해 일하는 누군가에게 불리한 결정을 내리거나, 실망시키거나, 비판하거나, 징계하거나, 강등시키거나, 심지어 해고까지 해야만 한다.<br>
+            <b>[핵심 어휘]</b> decide against (~에게 불리한 결정을 내리다), discipline (징계하다, 훈육하다), demote (강등시키다), fire (해고하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. To someone who thought you were friends, those actions will feel like a <mark>personal betrayal</mark> and will damage or destroy that person’s <mark>commitment to the work</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 당신과 친구라고 생각했던 사람에게는 그러한 조치들이 개인적인 배신처럼 느껴질 것이며, 그 사람의 업무에 대한 헌신과 몰입을 손상시키거나 파괴할 것이다.<br>
+            <b>[핵심 어휘]</b> personal betrayal (개인적 배신), commitment (헌신, 전념, 몰입)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (딜레마 제기 ➔ 양자택일 모순 ➔ 필연적 파국)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[딜레마 제기] Dilemma</span>
+        <h4>성과 vs 사적 친분</h4>
+        <p>관리자가 직원과 사적 유대(Personal ties)를 맺는 순간 <b>성과 창출과 관계 유지 사이의 선택</b>이라는 덫에 걸림.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[양자택일의 모순] False Choice</span>
+        <h4>비윤리적 타협 or 배신감</h4>
+        <p>친분을 택하면 <b>비윤리적 결정/성과 손상</b> 발생 ➔ 업무를 택하면 직원이 <b>배신감(Feel betrayed)</b>을 느끼게 됨.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[필연적 결과] Final Consequence</span>
+        <h4>관리 조치와 직무 몰입 파괴</h4>
+        <p>징계·강등·해고 등 불가피한 관리 조치가 '개인적 배신'으로 인식되어 <b>직무 헌신도(Commitment)가 완전히 파괴</b>됨.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. ...you're likely to find yourself having to choose between maintaining the ties or [obtain / obtaining] the best results possible.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! between A and/or B 구문에서 전치사 between의 목적어로 앞의 동명사 maintaining과 병렬 구조를 이루어야 합니다.">obtain</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 전치사 between의 목적어 역할을 하는 동명사 maintaining과 등위접속사 or로 병렬 연결되는 동명사 obtaining이 맞습니다.">obtaining</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...as eventually and inevitably you [must / are]...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞 절의 일반동사구 'choose work and the work group...'를 대신 받는 조동사 대동사 must(= must choose)가 올바릅니다.">must</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 앞 절의 본동사가 일반동사 choose이므로 be동사 are는 대동사로 올 수 없습니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        As a manager, if you create friendships with your people, if you try to motivate them through the personal ties you’ve created or allowed, you’re likely to find yourself having to choose between maintaining the ties or obtaining the best results possible. If you maintain the ties, you will ① <u>compromise</u> results or make unethical choices that harm others not for a greater good but for the good of a friend. If you choose work and the work group over the wishes of a friend, as eventually and inevitably you must, the friend will feel ② <u>betrayed</u>. Sooner or later you must decide against, disappoint, criticize, discipline, demote, or even fire someone who works for you. To someone who thought you were friends, those actions will feel like a personal ③ <u>loyalty</u> and will ④ <u>damage</u> or destroy that person’s ⑤ <u>commitment</u> to the work.
+      </div>
+      <div class="exam-choices">
+        ① compromise<br>
+        ② betrayed<br>
+        ③ loyalty<br>
+        ④ damage<br>
+        ⑤ commitment
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (loyalty ➔ betrayal)</b><br>
+          <b>해설:</b> 관리자가 친구라고 생각했던 직원을 비판하거나 강등, 해고하는 객관적 조치는 그 직원에게 충성심(loyalty)이 아니라 '개인적인 배신(betrayal)'으로 느껴지게 됩니다. 따라서 loyalty는 문맥상 정반대 단어입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        If you choose work and the work group over the wishes of a friend, as eventually and inevitably you must, the friend will feel betrayed. Sooner or later you must decide against, disappoint, criticize, discipline, demote, or even fire someone who works for you. To someone who thought you were friends, those necessary professional managerial actions will inevitably ________________________________________.
+      </div>
+      <div class="exam-choices">
+        ① strengthen the interpersonal bonding between team members<br>
+        ② be perceived as a personal betrayal and ruin work dedication<br>
+        ③ encourage other subordinates to follow managerial instructions<br>
+        ④ resolve ethical conflicts between personal gain and public interest<br>
+        ⑤ increase organizational productivity without emotional friction
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 관리자로서 내리는 객관적 조치는 친분을 맺었던 직원에게 개인적 배신으로 다가가며 그 사람의 직무 헌신도를 파괴합니다. 이를 '개인적 배신으로 인식되어 업무 헌신을 망치다(be perceived as a personal betrayal and ruin work dedication)'로 패러프레이징한 ②번이 정답입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        As a manager, if you create friendships with your people, if you try to motivate them through the personal ties you’ve created or allowed, you’re likely to find yourself having to choose between maintaining the ties or obtaining the best results possible.
+      </div>
+      <div class="exam-choices">
+        (A) To someone who thought you were friends, those actions will feel like a personal betrayal and will damage or destroy that person’s commitment to the work.<br><br>
+        (B) If you choose work and the work group over the wishes of a friend, as eventually and inevitably you must, the friend will feel betrayed. Sooner or later you must decide against, disappoint, criticize, discipline, demote, or even fire someone who works for you.<br><br>
+        (C) If you maintain the ties, you will compromise results or make unethical choices that harm others not for a greater good but for the good of a friend.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (C) - (A) - (B)<br>
+        ④ (C) - (B) - (A)<br>
+        ⑤ (B) - (C) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ ((C) - (B) - (A))</b><br>
+          <b>해설:</b> 주어진 글에서 친분과 성과 사이의 선택 딜레마를 제기한 뒤, (C)에서 먼저 친분을 유지할 때의 부정적 결과(성과 타협 및 비윤리적 선택)를 서술합니다. 이어지는 (B)에서 반대로 업무를 선택할 때 불가피하게 내려야 하는 징계적 조치들을 나열하고, (A)에서 'those actions'를 받아 그러한 조치가 배신감과 직무 몰입 파괴로 이어진다는 결론을 맺는 흐름이 논리적입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 우리말 해석에 맞도록 [조건]을 활용하여 빈칸을 완성하시오. (서술형 영작)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 만약 당신이 그 유대 관계를 유지한다면, 당신은 더 큰 공익을 위해서가 아니라 친구의 이익을 위해 타인에게 해를 끼치는 비윤리적인 선택을 할 것이다.<br><br>
+        <b>[영작문]</b> If you maintain the ties, you will _____________________________________________________________________.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 보기의 어휘를 반드시 모두 활용할 것 (필요 시 어형 변화 가능, 단어 추가 가능):<br>
+           [ of / harm / good / make / unethical / good / not / a / for / friend / but / that / the / a / others / choices / for / greater ]<br>
+        2. 관계대명사 절과 'not A but B' 상관접속사 구문을 결합하여 16단어로 영작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: make unethical choices that harm others not for a greater good but for the good of a friend</b><br>
+          <b>해설:</b> 목적어구 'make unethical choices' 뒤에 주격 관계대명사절 'that harm others'를 연결하고, 이유를 나타내는 상관접속사구 'not for a greater good but for the good of a friend'를 배치하여 문장을 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
