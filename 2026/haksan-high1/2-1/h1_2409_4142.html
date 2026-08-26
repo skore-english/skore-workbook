@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 학산여고 1학년 2-1 — 2024년 9월 41~42번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 학산여고 1학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 9월 / 41~42번</div>
+    <h1 class="title">The Assessment Dilemma in Mass Higher Education</h1>
+    <p class="header-lead">고등교육의 대중화와 평가 방식의 구조적 모순 분석</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      Higher education has grown from an elite to a mass system across the world. In Europe and the USA, increased rates of participation occurred in the decades after the Second World War. Between 2000 and 2014, rates of participation in higher education almost doubled from 19% to 34% across the world among the members of the population in the school-leaving age category (typically 18-23). The dramatic expansion of higher education has been marked by a wider range of institutions of higher learning and a more diverse demographic of students.
+      Changes from an elite system to a mass higher education system are associated with political needs to build a specialised workforce for the economy. In theory, the expansion of higher education to develop a highly skilled workforce should diminish the role of examinations in the selection and control of students, initiating approaches to assessment which enable lifelong learning: assessment for learning and a focus on feedback for development. In reality, socio-political changes to expand higher education have set up a ‘field of contradictions’ for assessment in higher education. Mass higher education requires efficient approaches to assessment, such as examinations and multiple-choice quizzes, with minimalist, impersonal, or standardised feedback, often causing students to focus more on grades than feedback. In contrast, the relatively small numbers of students in elite systems in the past allowed for closer relationships between students and their teachers, with formative feedback shaping the minds, academic skills, and even the characters of students.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 고등교육이 엘리트 중심에서 대중적 시스템으로 확장되면서 이론적으로는 발전적 피드백과 평생학습을 지향했으나, 실제로는 대규모 인원 처리의 효율성 요구로 인해 <b>표준화된 시험과 최소한의 피드백이라는 모순적 평가 체제(Field of Contradictions)</b>를 낳았다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. Higher education has grown from an <mark>elite</mark> to a <mark>mass system</mark> across the world.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 고등교육은 전 세계적으로 엘리트 시스템에서 대중 시스템으로 성장해 왔다.<br>
+            <b>[핵심 어휘]</b> higher education (고등교육), mass system (대중적 체제/시스템)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. In Europe and the USA, increased <mark>rates of participation</mark> occurred in the decades after the Second World War.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 유럽과 미국에서는 제2차 세계대전 이후 수십 년 동안 진학률(참여율)의 증가가 일어났다.<br>
+            <b>[핵심 어휘]</b> rate of participation (참여율, 진학률), occur (일어나다, 발생하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. Between 2000 and 2014, rates of participation in higher education almost doubled from 19% to 34% across the world among the members of the population in the <mark>school-leaving age category</mark> (typically 18-23).
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 2000년과 2014년 사이에 전 세계적으로 학교를 떠나는 연령 범주(일반적으로 18~23세)에 속하는 인구 집단 사이에서 고등교육 참여율이 19%에서 34%로 거의 두 배 증가했다.<br>
+            <b>[핵심 어휘]</b> double (두 배가 되다), school-leaving age category (학령 만기/고교 졸업 연령 범주)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. The dramatic expansion of higher education has been marked by a wider range of <mark>institutions of higher learning</mark> and a more <mark>diverse demographic</mark> of students.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 고등교육의 극적인 확장은 더 폭넓은 고등교육 기관들과 학생들의 더욱 다양한 인구통계학적 구성으로 특징지어져 왔다.<br>
+            <b>[핵심 어휘]</b> dramatic expansion (극적인 확장), institution of higher learning (고등교육 기관), diverse demographic (다양한 인구통계 집단)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. Changes from an elite system to a mass higher education system are associated with political needs to build a <mark>specialised workforce</mark> for the economy.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 엘리트 체제에서 대중 고등교육 체제로의 변화는 경제를 위한 전문화된 인력을 양성하려는 정치적 요구와 연관되어 있다.<br>
+            <b>[핵심 어휘]</b> be associated with (~와 관련되다), specialised workforce (전문화된 노동력/인력)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. In theory, the expansion of higher education to develop a highly skilled workforce should <mark>diminish the role of examinations</mark> in the selection and control of students, <mark>initiating</mark> approaches to assessment which enable lifelong learning: assessment for learning and a focus on <mark>feedback for development</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이론적으로, 고도로 숙련된 인력을 양성하기 위한 고등교육의 확장은 학생 선발과 통제에 있어서 시험의 역할을 축소시키고 평생 학습을 가능하게 하는 평가 방식(학습을 위한 평가와 발전을 위한 피드백에 초점을 맞추는 것)을 시작해야 한다.<br>
+            <b>[핵심 어휘]</b> in theory (이론상으로는), diminish (줄이다, 감소시키다), initiate (시작하다, 착수하다), lifelong learning (평생 학습)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          7. In reality, socio-political changes to expand higher education have set up a <mark>‘field of contradictions’</mark> for assessment in higher education.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 현실에서는 고등교육을 확장하려는 사회정치적 변화들이 고등교육 평가에 있어서 '모순의 장'을 조성해 왔다.<br>
+            <b>[핵심 어휘]</b> in reality (실제로는), socio-political (사회정치적인), field of contradictions (모순의 장/영역)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          8. Mass higher education requires <mark>efficient approaches to assessment</mark>, such as examinations and multiple-choice quizzes, with <mark>minimalist, impersonal, or standardised feedback</mark>, often causing students to focus more on grades than feedback.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 대중 고등교육은 최소한이고 비인격적이거나 표준화된 피드백을 수반하는 시험과 선다형 퀴즈와 같은 효율적인 평가 방식을 요구하며, 이는 흔히 학생들이 피드백보다는 성적에 더 집중하도록 유발한다.<br>
+            <b>[핵심 어휘]</b> multiple-choice quiz (선다형 퀴즈), minimalist (최소한의), impersonal (인정미 없는, 비인격적인), standardised (표준화된)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          9. In contrast, the relatively small numbers of students in elite systems in the past allowed for closer relationships between students and their teachers, with <mark>formative feedback</mark> shaping the minds, academic skills, and even the characters of students.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 대조적으로, 과거 엘리트 체제의 상대적으로 적은 수의 학생들은 학생과 교수자 간의 더 긴밀한 관계를 가능하게 했으며, 형성 평가적 피드백이 학생들의 사고, 학업 기술, 심지어 인격까지 형성해 주었다.<br>
+            <b>[핵심 어휘]</b> allow for (~을 가능하게 하다), formative feedback (형성적 피드백 / 발전을 돕는 피드백), shape (형성하다)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상적 팽창 ➔ 이론적 이상 ➔ 현실의 모순 및 대조)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[배경·현상] Expansion of Higher Ed</span>
+        <h4>고등교육의 양적 팽창</h4>
+        <p>전후 전 세계적 진학률 급증(19%➔34%) ➔ 경제 발전을 위한 <b>전문화된 인력 양성 요구</b>로 엘리트에서 대중 체제로 전환됨.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[이상 vs 현실] Theoretical Ideal vs Reality</span>
+        <h4>이론적 기대와 모순의 발생</h4>
+        <p>이론상으로는 <b>시험 축소 및 발전적 피드백</b>을 기대했으나, 실제로는 대규모 학생 수용으로 인해 <b>평가의 모순(Field of Contradictions)</b> 발생.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[체제 대조] Mass System vs Elite System</span>
+        <h4>대중 체제와 엘리트 체제의 대조</h4>
+        <p>대중 체제는 <b>효율적 객관식 시험·최소 피드백</b>으로 성적에만 집착하게 만들며, 과거 소수 엘리트 체제의 <b>인격적·형성적 피드백</b>과 극명히 대비됨.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. ...initiating approaches to assessment which [enables / enable] lifelong learning...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 관계대명사 which의 선행사는 단수 명사 assessment가 아니라 복수 명사인 approaches(approaches to assessment)입니다.">enables</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사가 전치사구의 수식을 받는 복수명사 'approaches'이므로 복수 동사 enable이 올바릅니다.">enable</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...with formative feedback [shaping / shaped] the minds, academic skills, and even the characters of students.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 'with + 목적어 + 분사' 구문에서 목적어인 'formative feedback'이 뒤의 목적어(the minds~)를 능동적으로 형성하는 주체이므로 현재분사 shaping이 올바릅니다.">shaping</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 피드백이 뒤에 이어지는 목적어들(the minds, skills, characters)을 형성하는 능동 관계이므로 수동태인 shaped는 불가능합니다.">shaped</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제 — 원문 장문 배제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        Changes from an elite system to a mass higher education system are associated with political needs to build a specialised workforce for the economy. In theory, the expansion of higher education to develop a highly skilled workforce should ① <u>diminish</u> the role of examinations in the selection and control of students, initiating approaches to assessment which enable lifelong learning: assessment for learning and a focus on feedback for development. In reality, socio-political changes to expand higher education have set up a ‘field of ② <u>contradictions</u>’ for assessment in higher education. Mass higher education requires ③ <u>efficient</u> approaches to assessment, such as examinations and multiple-choice quizzes, with ④ <u>personalised</u> feedback, often causing students to focus more on grades than feedback. In contrast, the relatively small numbers of students in elite systems in the past allowed for ⑤ <u>closer</u> relationships between students and their teachers, with formative feedback shaping the minds, academic skills, and even the characters of students.
+      </div>
+      <div class="exam-choices">
+        ① diminish<br>
+        ② contradictions<br>
+        ③ efficient<br>
+        ④ personalised<br>
+        ⑤ closer
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (personalised ➔ impersonal 또는 standardised / minimalist)</b><br>
+          <b>해설:</b> 대중 고등교육 체제에서는 대규모 인원을 효율적으로 평가해야 하므로 개인 맞춤형 피드백이 아니라 최소한이고 비인격적이며 표준화된 피드백(minimalist, impersonal, or standardised feedback)이 제공됩니다. 따라서 '개인화된'을 뜻하는 personalised는 문맥상 어긋납니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Changes from an elite system to a mass higher education system are associated with political needs to build a specialised workforce for the economy. In theory, the expansion of higher education should diminish the role of examinations, initiating approaches to assessment focused on developmental feedback. In reality, however, socio-political changes to expand higher education have ________________________________________. Mass higher education demands quick and standardized testing methods with impersonal feedback, which paradoxically leads students to prioritize numerical grades over constructive educational feedback.
+      </div>
+      <div class="exam-choices">
+        ① abolished the competitive hierarchy among various academic institutions<br>
+        ② established an ideal environment for personalized formative evaluations<br>
+        ③ created a paradoxical situation regarding educational assessment<br>
+        ④ shifted administrative emphasis entirely from workforce supply to research<br>
+        ⑤ strengthened reciprocal interactions between students and instructors
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 이론적으로는 발전적 피드백과 평생학습을 지향했으나 실제로는 효율적인 객관식 시험과 기계적 평가로 귀결되어 모순을 낳았다는 원문의 'set up a field of contradictions for assessment'를 '교육 평가에 관한 역설적/모순적 상황을 만들어냈다(created a paradoxical situation regarding educational assessment)'로 패러프레이징한 ③번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Higher education has grown from an elite to a mass system across the world. The dramatic expansion of higher education has been marked by a wider range of institutions of higher learning and a more diverse demographic of students.<br><br>
+        (A) In contrast, the relatively small numbers of students in elite systems in the past allowed for closer relationships between students and their teachers, with formative feedback shaping the minds, academic skills, and even the characters of students.<br><br>
+        (B) In reality, socio-political changes to expand higher education have set up a ‘field of contradictions’ for assessment in higher education. Mass higher education requires efficient approaches to assessment, with standardised feedback causing students to focus more on grades than feedback.<br><br>
+        (C) Changes from an elite system to a mass higher education system are associated with political needs to build a specialised workforce. In theory, this expansion should diminish the role of examinations, initiating approaches focused on feedback for development.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ⑤ ((C) - (B) - (A))</b><br>
+          <b>해설:</b> 고등교육의 대중화라는 배경이 제시된 후, (C)에서 경제적 요구와 이에 따른 이론적 기대(In theory: 시험 축소 및 발전적 피드백)를 언급합니다. 이어 (B)에서 In reality를 통해 대중 교육 체제가 낳은 평가의 모순과 표준화된 시험 중심 현실을 비판하고, (A)에서 In contrast를 통해 과거 소수 엘리트 체제의 긴밀한 사제 관계 및 형성적 피드백의 가치를 대비하는 (C)-(B)-(A) 순서가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 요약문의 빈칸 (A), (B)에 들어갈 말을 [조건]에 맞게 작성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[요약문]</b> Although the quantitative expansion of higher education theoretically aimed to promote developmental feedback, the demand for <b>(A) [          ]</b> in mass education has resulted in <b>(B) [          ]</b> evaluations that drive students to focus merely on grades.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. (A)는 본문에 등장하는 형용사 efficient를 명사형으로 변형하여 작성할 것 (1단어).<br>
+        2. (B)는 본문에 등장하는 단어 중 하나를 변형 없이 그대로 작성할 것 (1단어).
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: (A) efficiency / (B) standardised (또는 impersonal / minimalist)</b><br>
+          <b>해설:</b> 대중 교육에서 요구되는 '효율성(efficiency)'으로 인해, 학생들을 오직 성적에만 집착하게 만드는 '표준화된(standardised)' 평가 방식이 초래되었다는 글의 전체 요지를 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
