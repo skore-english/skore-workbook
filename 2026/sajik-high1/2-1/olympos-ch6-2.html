@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 6강 2번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1</span>
+    </div>
+    <div class="meta-badge">올림포스 9대변별유형 / 6강 2번</div>
+    <h1 class="title">Widespread Accessibility of <span>Moving Images</span></h1>
+    <p class="header-lead">영상 매체의 광범위한 접근성과 시각적 소통의 보편성 분석</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      Communication through language requires that the sender and receiver share literacy in a single natural language. Communication with representational images and sounds conveys a special characteristic for the moving image media, what Noel Carroll calls “widespread accessibility.” If you know what a tiger looks like, you will be able to recognize one in a moving photograph or scene ─ whether it is depicted from various angles and camera distances, in black and white or in color, in a long take or in a montage of brief shots. Object recognition in photographs is automatic and requires no special learning. Thus, screen stories have the capacity to appeal to “untutored audiences.” Action films, for example, employ relatively little dialogue because they are meant to transcend the bounds of literacy and language through an emphasis on realist images depicting visual action.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 언어적 소통은 공통의 문해력을 요구하지만, 영상 매체는 별도의 학습 없이도 작동하는 <b>시각적 대상 인식의 자동성 덕분에 교육받지 않은 관객에게도 통하는 '광범위한 접근성(Widespread Accessibility)'</b>을 지닌다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. Communication through language requires that the sender and receiver <mark>share literacy</mark> in a single natural language.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 언어를 통한 의사소통은 발신자와 수신자가 단일한 자연어에 대한 문해력을 공유할 것을 요구한다.<br>
+            <b>[핵심 어휘]</b> literacy (문해력, 읽고 쓰는 능력), natural language (자연어), receiver (수신자)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. Communication with <mark>representational images</mark> and sounds conveys a special characteristic for the moving image media, what Noel Carroll calls <mark>“widespread accessibility.”</mark>
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 구상적인 이미지와 소리를 통한 의사소통은 영상 매체의 특별한 특징, 즉 Noel Carroll이 '광범위한 접근성'이라 부르는 것을 전달한다.<br>
+            <b>[핵심 어휘]</b> representational (구상적인, 나타내는), convey (전달하다), widespread accessibility (광범위한 접근성)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. If you know what a tiger looks like, you will be able to recognize one in a moving photograph or scene ─ whether it is <mark>depicted</mark> from various angles and camera distances, in black and white or in color, in a long take or in a <mark>montage of brief shots</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 당신이 호랑이가 어떻게 생겼는지 안다면, 다양한 각도와 카메라 거리에서, 흑백이든 컬러든, 롱 테이크든 짧은 샷들의 몽타주든 상관없이 움직이는 사진이나 장면 속에서 호랑이를 알아볼 수 있을 것이다.<br>
+            <b>[핵심 어휘]</b> recognize (알아보다, 인식하다), depict (묘사하다), montage (몽타주, 편집 화면)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Object recognition in photographs is <mark>automatic</mark> and requires <mark>no special learning</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 사진 속의 대상 인식은 자동적이며 특별한 학습을 전혀 필요로 하지 않는다.<br>
+            <b>[핵심 어휘]</b> object recognition (대상 인식), automatic (자동적인)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. Thus, screen stories have the capacity to appeal to <mark>“untutored audiences.”</mark>
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 따라서 스크린 속 이야기들은 '교육받지 않은 관객들'에게 호소할 수 있는 능력을 지닌다.<br>
+            <b>[핵심 어휘]</b> capacity (능력, 역량), appeal to (~에 호소하다, 매력적이다), untutored (정규 교육을 받지 않은, 훈련받지 않은)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. Action films, for example, employ relatively little dialogue because they are meant to <mark>transcend the bounds</mark> of literacy and language through an emphasis on <mark>realist images</mark> depicting visual action.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어 액션 영화는 시각적 액션을 묘사하는 사실주의적 이미지를 강조함으로써 문해력과 언어의 경계를 초월하도록 의도되었기 때문에 상대적으로 적은 대화를 사용한다.<br>
+            <b>[핵심 어휘]</b> dialogue (대화), transcend (초월하다), bound (경계, 한계), realist image (사실주의적 이미지)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (대조 전제 ➔ 메커니즘 ➔ 실증 사례)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[대조적 전제] Contrast</span>
+        <h4>언어 매체 vs 영상 매체</h4>
+        <p>언어는 공유된 문해력(Literacy)이 필수적이지만, 영상 매체는 누구나 수용할 수 있는 <b>광범위한 접근성(Widespread Accessibility)</b>을 지님.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[인지 원리] Mechanism</span>
+        <h4>시각적 대상 인식의 자동성</h4>
+        <p>사진·영상의 대상 인식은 <b>자동적(Automatic)</b>이며 특별한 학습을 요구하지 않으므로 <b>비교육층 관객(Untutored Audiences)</b>에게도 직접 호소 가능.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[구체적 사례] Case Study</span>
+        <h4>액션 영화의 언어 초월성</h4>
+        <p>대사를 최소화하고 <b>시각적 행동 묘사</b>를 극대화함으로써 국경과 언어 및 문해력의 한계를 초월(Transcend the bounds)함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Communication through language requires that the sender and receiver [share / shares] literacy in a single natural language.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 요구를 나타내는 동사 requires 뒤의 that절에는 당위성을 뜻하는 (should) 동사원형 'share'가 옵니다.">share</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 주어(the sender and receiver)가 복수일 뿐만 아니라, 요구/제안 동사 뒤 that절에는 (should)+동사원형이 적용됩니다.">shares</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...through an emphasis on realist images [depicting / depicted] visual action.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 뒤에 목적어(visual action)를 취하며 앞의 realist images를 능동적으로 수식하는 현재분사 depicting이 맞습니다.">depicting</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒤에 목적어(visual action)가 존재하므로 수동형 과거분사(depicted)는 적절하지 않습니다.">depicted</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        Communication through language requires that the sender and receiver share literacy in a single natural language. Communication with representational images and sounds conveys a special characteristic for the moving image media, what Noel Carroll calls “widespread ① <u>accessibility</u>.” If you know what a tiger looks like, you will be able to recognize one in a moving photograph or scene ─ whether it is depicted from various angles and camera distances, in black and white or in color. Object recognition in photographs is ② <u>automatic</u> and requires ③ <u>intensive</u> learning. Thus, screen stories have the capacity to appeal to “untutored audiences.” Action films, for example, employ relatively ④ <u>little</u> dialogue because they are meant to ⑤ <u>transcend</u> the bounds of literacy and language through an emphasis on realist images depicting visual action.
+      </div>
+      <div class="exam-choices">
+        ① accessibility<br>
+        ② automatic<br>
+        ③ intensive<br>
+        ④ little<br>
+        ⑤ transcend
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (intensive ➔ no special)</b><br>
+          <b>해설:</b> 사진이나 영상 속 대상을 인식하는 것은 자동적으로 이루어지므로 별도의 특별한 학습을 '요구하지 않는다'는 맥락입니다. 따라서 '집중적인, 심화된(intensive)' 학습을 요구한다는 표현은 정반대입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Communication through language requires that the sender and receiver share literacy in a single natural language. Communication with representational images and sounds conveys a special characteristic for the moving image media, what Noel Carroll calls “widespread accessibility.” If you know what a tiger looks like, you will be able to recognize one in a moving photograph or scene. Object recognition in photographs is automatic and requires no special learning. Thus, screen stories have the capacity to ________________________________________. Action films, for example, employ relatively little dialogue because they are meant to transcend the bounds of literacy and language.
+      </div>
+      <div class="exam-choices">
+        ① require highly sophisticated educational background from viewers<br>
+        ② resonate effectively even with audiences without formal instruction<br>
+        ③ depend entirely on intricate spoken narratives for comprehension<br>
+        ④ restrict their storytelling scope to specific native language speakers<br>
+        ⑤ compel viewers to master complex cinematographic conventions
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 영상 매체는 특별한 훈련이나 학습 없이도 대상을 자동 인식할 수 있으므로 '정규 교육을 받지 않은 관객(untutored audiences)'에게도 쉽게 다가갈 수 있습니다. 이를 '공식 교육을 받지 않은 관객들에게도 효과적으로 울림을 주다(resonate effectively even with audiences without formal instruction)'로 패러프레이징한 ②번이 정답입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Communication through language requires that the sender and receiver share literacy in a single natural language. Communication with representational images and sounds conveys a special characteristic for the moving image media, what Noel Carroll calls “widespread accessibility.”
+      </div>
+      <div class="exam-choices">
+        (A) Action films, for example, employ relatively little dialogue because they are meant to transcend the bounds of literacy and language through an emphasis on realist images depicting visual action.<br><br>
+        (B) If you know what a tiger looks like, you will be able to recognize one in a moving photograph or scene ─ whether it is depicted from various angles and camera distances, in black and white or in color, in a long take or in a montage of brief shots.<br><br>
+        (C) Object recognition in photographs is automatic and requires no special learning. Thus, screen stories have the capacity to appeal to “untutored audiences.”<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ ((B) - (C) - (A))</b><br>
+          <b>해설:</b> 주어진 글에서 영상 매체의 '광범위한 접근성'을 제시한 후, (B)에서 호랑이 예시를 통해 시각적 인식의 직관성을 구체화합니다. 이어지는 (C)에서 이를 '사진의 대상 인식은 자동적이며 교육받지 않은 관객에게 호소한다'는 원리로 정리하고, (A)에서 'Action films, for example'로 대사가 적은 장르적 실증 사례를 제시하며 마무리하는 흐름이 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 고난도 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 우리말 해석에 맞도록 [조건]을 활용하여 빈칸을 완성하시오. (서술형 영작)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 액션 영화는 시각적 행동을 묘사하는 사실주의적 이미지를 강조함으로써 문해력과 언어의 경계를 초월하도록 의도된다.<br><br>
+        <b>[영작문]</b> Action films _____________________________________________________________________.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 보기의 어휘를 반드시 모두 활용할 것 (필요 시 어형 변화 가능, 단어 추가 가능):<br>
+           [ bound / mean / depict / visual / an / literacy / on / through / transcend / action / realist / emphasis / and / image / language / the / of ]<br>
+        2. 'be meant to-v' 구문과 현재분사 수식 구조를 적용하여 17단어로 영작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: are meant to transcend the bounds of literacy and language through an emphasis on realist images depicting visual action</b><br>
+          <b>해설:</b> 주어 Action films에 수일치된 'are meant to transcend ~' 구조 뒤에 수단 전치사구 'through an emphasis on realist images'를 연결하고, images를 수식하는 능동 분사구 'depicting visual action'을 결합합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
