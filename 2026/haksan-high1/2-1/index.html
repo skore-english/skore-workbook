@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 학산여고 1학년 2-1 워크북 허브 | SKORE ACADEMY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --blue-light: #3B82F6;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 40px 0 32px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.18);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 4.5vw, 32px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+h1.title span { color: var(--amber); }
+.header-lead {
+  font-size: 14px;
+  color: #CBD5E1;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 24px 0 0;
+}
+.stat-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+.stat-val {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+}
+.stat-lbl {
+  font-size: 10.5px;
+  color: #8FA0B8;
+}
+
+main { padding: 36px 0 60px; }
+.section-group { margin-bottom: 40px; }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: 0.08em;
+}
+.sec-count {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--blue);
+  opacity: 0.8;
+}
+.card:active, .card:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue-light);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.card-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  background: #EFF6FF;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.card-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--amber);
+  background: rgba(184, 121, 26, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.card-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.45;
+  color: var(--navy);
+  margin-bottom: 6px;
+  word-break: keep-all;
+}
+.card-desc {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+.card-steps {
+  font-family: var(--mono);
+  color: var(--cyan);
+  font-weight: 600;
+}
+.card-action {
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.empty-box {
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 28px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> High Logic Series</span>
+      <span>2026 Academic Season</span>
+    </div>
+    <div class="meta-badge">2026 학산여고 1학년 2-1 중간고사 대비</div>
+    <h1 class="title">학력평가 부교재 오답률 TOP 6<br><span>모바일 인터랙티브 워크북</span></h1>
+    <p class="header-lead">
+      학력평가 고난도 킬러 문항에 대한 5단계 논리 분해 학습 시스템(원문 정독 ➔ 디코딩 ➔ 논리 구조도 ➔ 어법 드릴 ➔ 4대 실전 변형 문제) 허브입니다.
+    </p>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-val">2024 · 2025</span>
+        <span class="stat-lbl">출처 학력평가</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">TOP 6</span>
+        <span class="stat-lbl">변별력 킬러</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">5 STEPS</span>
+        <span class="stat-lbl">완전 학습 체계</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- [섹션 1] 2024년 9월 학력평가 -->
+    <section class="section-group">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 01 · 2024년 9월 학력평가 TOP 6</span>
+        <span class="sec-count">6개 문항 완제</span>
+      </div>
+
+      <div class="grid">
+        <!-- 29번 -->
+        <a href="h1_2409_29.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2024 9월 · 29번</span>
+              <span class="card-tag">어법</span>
+            </div>
+            <h2 class="card-title">조직 구조와 부서 문화가 갈등 관리에 미치는 영향</h2>
+            <p class="card-desc">Organizational Structure and Culture on Conflict Management</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 31번 -->
+        <a href="h1_2409_31.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2024 9월 · 31번</span>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">위대한 작곡가를 구분 짓는 진정한 독창성의 가치</h2>
+            <p class="card-desc">Originality Defines Great Composers</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 33번 -->
+        <a href="h1_2409_33.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2024 9월 · 33번</span>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">개념의 본질주의적 오류와 과학적 탐구의 함정</h2>
+            <p class="card-desc">The Peril of Essentialism in Scientific Thought</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 34번 -->
+        <a href="h1_2409_34.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2024 9월 · 34번</span>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">소셜 미디어 시대의 평범한 유명세와 명성의 재구성</h2>
+            <p class="card-desc">Ordinary Celebrity Reconstructs Fame</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 39번 -->
+        <a href="h1_2409_39.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2024 9월 · 39번</span>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">지구 온난화에 따른 해양 용존산소 감소와 생태계 위기</h2>
+            <p class="card-desc">Ocean Deoxygenation Threatens Marine Life</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 41~42번 -->
+        <a href="h1_2409_4142.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2024 9월 · 41~42번</span>
+              <span class="card-tag">장문 복합</span>
+            </div>
+            <h2 class="card-title">고등교육의 대중화와 평가 방식의 구조적 모순</h2>
+            <p class="card-desc">The Assessment Dilemma in Mass Higher Education</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- [섹션 2] 2025년 9월 학력평가 -->
+    <section class="section-group">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 02 · 2025년 9월 학력평가 TOP 6</span>
+        <span class="sec-count">업로드 준비 중</span>
+      </div>
+      <div class="empty-box">
+        2025년 9월 학력평가 지문 워크북 작업 후 카드가 추가될 예정입니다.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    SKORE ACADEMY Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+</body>
+</html>
