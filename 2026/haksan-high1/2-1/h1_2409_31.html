@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 학산여고 1학년 2-1 — 학력고사 오답률 TOP6 31번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 학산여고 1학년 2-1</span>
+    </div>
+    <div class="meta-badge">학력고사 오답률 TOP6 / 31번</div>
+    <h1 class="title">Originality Defines Great Composers</h1>
+    <p class="header-lead">위대한 작곡가를 구분 짓는 진정한 독창성의 가치 분석 워크북입니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      You hear again and again that some of the greatest composers were misunderstood in their own day. Not everyone could understand the compositions of Beethoven, Brahms, or Stravinsky in their day. The reason for this initial lack of acceptance is unfamiliarity. The musical forms, or ideas expressed within them, were completely new. And yet, this is exactly one of the things that makes them so great. Effective composers have their own ideas. Have you ever seen the classic movie Amadeus? The composer Antonio Salieri is the “host” of this movie; he’s depicted as one of the most famous non-great composers - he lived at the time of Mozart and was completely overshadowed by him. Now, Salieri wasn’t a bad composer; in fact, he was a very good one. But he wasn’t one of the world’s great composers because his work wasn’t original. What he wrote sounded just like what everyone else was composing at the time.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 위대한 작곡가들은 당대에 낯섦으로 인해 오해를 받기도 했으나 그들의 진정한 위대함은 <b>자신만의 독창성(Originality)</b>에 있으며, 살리에리가 위대한 작곡가가 되지 못한 이유 역시 시대의 전형을 답습했을 뿐 독창적이지 못했기 때문이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. You hear again and again that some of the greatest composers were <mark>misunderstood</mark> in their own day.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 당신은 가장 위대한 작곡가들 중 일부가 그들이 살던 당대에 오해를 받았다는 말을 반복해서 듣는다.<br>
+            <b>[핵심 어휘]</b> misunderstand (오해하다), in one's own day (당대에, 그 시절에)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. Not everyone could understand the compositions of Beethoven, Brahms, or Stravinsky in their day.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 당대에 모든 사람이 베토벤, 브람스, 또는 스트라빈스키의 작품들을 이해할 수 있었던 것은 아니다.<br>
+            <b>[핵심 어휘]</b> partial negation (부분부정: Not everyone ~), composition (작곡 작품, 악곡)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. The reason for this initial <mark>lack of acceptance</mark> is <mark>unfamiliarity</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 초기의 수용 부족에 대한 이유는 낯섦(생소함) 때문이다.<br>
+            <b>[핵심 어휘]</b> initial (초기의), lack of acceptance (수용의 부족 / 인정받지 못함), unfamiliarity (낯섦, 생소함)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. The musical forms, or ideas expressed within them, were completely new.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 음악적 형식, 혹은 그 안에서 표현된 아이디어들이 완전히 새로웠다.<br>
+            <b>[핵심 어휘]</b> musical form (음악적 형식), express (표현하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. And yet, this is exactly one of the things that <mark>makes them so great</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 하지만, 이것이 바로 그들을 그토록 위대하게 만드는 요소들 중 하나이다.<br>
+            <b>[핵심 어휘]</b> and yet (그럼에도 불구하고, 하지만), exactly (정확히, 바로)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. Effective composers have their own ideas.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 유능한 작곡가들은 자신만의 독자적인 아이디어를 가지고 있다.<br>
+            <b>[핵심 어휘]</b> effective (유능한, 효과적인), one's own (자신만의)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          7. Have you ever seen the classic movie Amadeus? The composer Antonio Salieri is the “host” of this movie; he’s <mark>depicted</mark> as one of the most famous non-great composers - he lived at the time of Mozart and was completely <mark>overshadowed</mark> by him.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 고전 영화 '아마데우스'를 본 적이 있는가? 작곡가 안토니오 살리에리는 이 영화의 '안내자'이다. 그는 가장 유명한 '위대하지 않은 작곡가' 중 한 명으로 묘사된다. 즉, 그는 모차르트 시대에 살았고 그에 의해 완전히 가려졌다.<br>
+            <b>[핵심 어휘]</b> depict (묘사하다, 그리다), overshadow (가리다, 빛을 잃게 만들다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          8. Now, Salieri wasn’t a bad composer; in fact, he was a very good one. But he wasn’t one of the world’s great composers because his work <mark>wasn’t original</mark>. What he wrote sounded just like what everyone else was composing at the time.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 살리에리는 실력 없는 작곡가가 아니었다. 사실, 그는 매우 훌륭한 작곡가였다. 하지만 그의 작품이 독창적이지 않았기 때문에 그는 세계의 위대한 작곡가 중 한 명이 되지 못했다. 그가 쓴 음악은 당시에 다른 모든 사람들이 작곡하고 있던 것과 똑같이 들렸다.<br>
+            <b>[핵심 어휘]</b> original (독창적인, 창의적인), at the time (당시에, 그 시절에)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (통념/원인 ➔ 핵심 명제 ➔ 대조 사례)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[현상 및 원인] Initial Rejection</span>
+        <h4>당대의 오해와 낯섦</h4>
+        <p>베토벤, 스트라빈스키 등 위대한 작곡가들은 당대에 수용되지 못함 ➔ 그 원인은 형식과 아이디어의 <b>완전한 새로움(Unfamiliarity)</b> 때문이었음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[핵심 주장] Core Criterion</span>
+        <h4>위대함을 결정짓는 독창성</h4>
+        <p>당대의 낯섦이야말로 역설적으로 그들을 위대하게 만든 핵심 요소임 ➔ 유능한 거장들은 <b>자신만의 독창적 아이디어(Originality)</b>를 지님.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[대조 사례] Counter Example</span>
+        <h4>살리에리의 한계</h4>
+        <p>살리에리는 훌륭한 실력을 가졌으나 모차르트에게 가려짐 ➔ 당대 다른 사람들의 음악을 그대로 답습하여 <b>독창성이 결여</b>되었기 때문임.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. And yet, this is exactly one of the things that [makes / make] them so great.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="정답! 관계대명사 that의 선행사는 'the things'가 아닌 앞선 문장의 사실 전체를 의미하는 'one'으로 수일치하여 단수동사 makes가 사용됩니다 (원문 기준: that makes them so great).">makes</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 원문 구조상 관계대명사 절의 술어로 단수동사 makes가 쓰여 전체 맥락의 단수 선행사를 수식합니다.">make</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. What he wrote sounded just like [that / what] everyone else was composing at the time.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 전치사 like 뒤에서 was composing의 목적어가 빠진 불완전한 절을 이끌어야 하므로 접속사/지시대명사 that은 적절하지 않습니다.">that</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 전치사 like의 목적어 역할을 하는 명사절을 이끌며 composing의 목적어가 비어있는 불완전한 절을 연결하므로 관계대명사 what이 올바릅니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        You hear again and again that some of the greatest composers were misunderstood in their own day. Not everyone could understand the compositions of Beethoven, Brahms, or Stravinsky in their day. The reason for this initial lack of acceptance is ① <u>unfamiliarity</u>. The musical forms, or ideas expressed within them, were completely new. And yet, this is exactly one of the things that makes them so ② <u>great</u>. Effective composers have their own ideas. Have you ever seen the classic movie Amadeus? The composer Antonio Salieri is the “host” of this movie; he’s depicted as one of the most famous non-great composers - he lived at the time of Mozart and was completely ③ <u>overshadowed</u> by him. Now, Salieri wasn’t a bad composer; in fact, he was a very good one. But he wasn’t one of the world’s great composers because his work was ④ <u>innovative</u>. What he wrote sounded just ⑤ <u>like</u> what everyone else was composing at the time.
+      </div>
+      <div class="exam-choices">
+        ① unfamiliarity<br>
+        ② great<br>
+        ③ overshadowed<br>
+        ④ innovative<br>
+        ⑤ like
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (innovative ➔ unoriginal 또는 conventional)</b><br>
+          <b>해설:</b> 살리에리가 뛰어난 실력에도 불구하고 위대한 작곡가가 되지 못한 이유는 그의 작품이 당시 다른 사람들이 작곡하던 것과 유사하여 '독창적이지 않았기(wasn't original)' 때문입니다. 따라서 '혁신적인'을 뜻하는 innovative는 문맥상 정반대 의미입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        You hear again and again that some of the greatest composers were misunderstood in their own day. Not everyone could understand the compositions of Beethoven, Brahms, or Stravinsky in their day.<br><br>
+        (A) Have you ever seen the classic movie Amadeus? The composer Antonio Salieri is the “host” of this movie; he’s depicted as one of the most famous non-great composers - he lived at the time of Mozart and was completely overshadowed by him.<br><br>
+        (B) Now, Salieri wasn’t a bad composer; in fact, he was a very good one. But he wasn’t one of the world’s great composers because his work wasn’t original. What he wrote sounded just like what everyone else was composing at the time.<br><br>
+        (C) The reason for this initial lack of acceptance is unfamiliarity. The musical forms, or ideas expressed within them, were completely new. And yet, this is exactly one of the things that makes them so great. Effective composers have their own ideas.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ ((C) - (A) - (B))</b><br>
+          <b>해설:</b> 주어진 글에서 위대한 작곡가들이 당대에 이해받지 못했다는 도입부에 이어, (C)에서 그 이유가 생소함(unfamiliarity) 때문이며 이것이 그들을 위대하게 만든 독창적 아이디어라는 일반 원리를 제시합니다. 그다음 (A)에서 독창성이 부족했던 구체적 예시로 영화 '아마데우스'의 살리에리를 도입하고, (B)에서 살리에리가 훌륭했으나 독창성이 없어 모차르트에게 가려졌음을 상술하며 글을 맺는 것이 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[문항 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> And yet, this is exactly one of the things that makes them so great.<br><br>
+        You hear again and again that some of the greatest composers were misunderstood in their own day. ( ① ) Not everyone could understand the compositions of Beethoven, Brahms, or Stravinsky in their day. ( ② ) The reason for this initial lack of acceptance is unfamiliarity. ( ③ ) The musical forms, or ideas expressed within them, were completely new. ( ④ ) Effective composers have their own ideas. ( ⑤ ) Have you ever seen the classic movie Amadeus? The composer Antonio Salieri is depicted as one of the most famous non-great composers because he was completely overshadowed by Mozart.
+      </div>
+      <div class="exam-choices">
+        ① ①<br>
+        ② ②<br>
+        ③ ③<br>
+        ④ ④<br>
+        ⑤ ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 주어진 문장의 'And yet(하지만 그럼에도)'과 'this(이것)'는 앞선 문장에서 언급된 '음악 형식과 아이디어가 완전히 새로워 대중에게 생소했다는 점'을 가리킵니다. 이러한 생소함과 새로움이 역설적으로 그들을 위대하게 만든 요인임을 전환하는 지점인 ④에 들어가는 것이 가장 알맞습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 요약문 완성 및 조건부 서술형 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 가장 적절한 단어를 본문에서 찾아 쓰시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[요약문]</b> Although groundbreaking musical works often face initial rejection due to their <b>(A) [          ]</b>, true musical greatness is defined by having <b>(B) [          ]</b> ideas rather than merely conforming to contemporary conventions.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 윗글 본문에 사용된 단어를 변형 없이 그대로 찾아 작성할 것.<br>
+        2. (A)와 (B) 모두 1단어로 작성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: (A) unfamiliarity / (B) original</b><br>
+          <b>해설:</b> 혁신적인 음악 작품들은 처음에 그 '생소함/낯섦(unfamiliarity)' 때문에 배척받지만, 진정한 음악적 위대함은 당대의 관습을 따르는 대신 '독창적인(original)' 아이디어를 갖는 것에 의해 규정된다는 핵심 논리를 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
