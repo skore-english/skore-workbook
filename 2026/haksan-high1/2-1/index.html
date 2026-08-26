@@ -13,8 +13,10 @@
   --navy: #0B1220;
   --paper: #F8FAFC;
   --white: #FFFFFF;
-  --blue: #1D4ED8;
-  --blue-light: #3B82F6;
+  --brand-red: #cb1d06;
+  --brand-red-light: #ea2e15;
+  --brand-red-tag: rgba(203, 29, 6, 0.08);
+  --brand-red-border: rgba(203, 29, 6, 0.25);
   --cyan: #0E8F9E;
   --amber: #B8791A;
   --text-main: #0F172A;
@@ -39,7 +41,7 @@ header {
   background: var(--navy);
   color: var(--white);
   padding: 40px 0 32px;
-  border-bottom: 3px solid var(--blue);
+  border-bottom: 3px solid var(--brand-red);
 }
 .masthead {
   display: flex;
@@ -60,8 +62,8 @@ header {
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 600;
-  color: var(--cyan);
-  background: rgba(14, 143, 158, 0.18);
+  color: var(--brand-red-light);
+  background: rgba(203, 29, 6, 0.18);
   padding: 4px 10px;
   border-radius: 4px;
   margin-bottom: 12px;
@@ -73,7 +75,7 @@ h1.title {
   line-height: 1.35;
   margin-bottom: 10px;
 }
-h1.title span { color: var(--amber); }
+h1.title span { color: var(--brand-red-light); }
 .header-lead {
   font-size: 14px;
   color: #CBD5E1;
@@ -120,7 +122,7 @@ main { padding: 36px 0 60px; }
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--brand-red);
   letter-spacing: 0.08em;
 }
 .sec-count {
@@ -155,13 +157,13 @@ main { padding: 36px 0 60px; }
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--blue);
-  opacity: 0.8;
+  background: var(--brand-red);
+  opacity: 0.9;
 }
 .card:active, .card:hover {
   transform: translateY(-2px);
-  border-color: var(--blue-light);
-  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+  border-color: var(--brand-red);
+  box-shadow: 0 8px 16px rgba(203, 29, 6, 0.08);
 }
 .card-header {
   display: flex;
@@ -173,8 +175,9 @@ main { padding: 36px 0 60px; }
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 700;
-  color: var(--blue);
-  background: #EFF6FF;
+  color: var(--brand-red);
+  background: var(--brand-red-tag);
+  border: 1px solid var(--brand-red-border);
   padding: 3px 8px;
   border-radius: 4px;
 }
@@ -182,8 +185,9 @@ main { padding: 36px 0 60px; }
   font-family: var(--mono);
   font-size: 11px;
   font-weight: 600;
-  color: var(--amber);
-  background: rgba(184, 121, 26, 0.12);
+  color: var(--text-muted);
+  background: var(--paper);
+  border: 1px solid var(--border);
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -215,12 +219,12 @@ main { padding: 36px 0 60px; }
 }
 .card-steps {
   font-family: var(--mono);
-  color: var(--cyan);
+  color: var(--text-muted);
   font-weight: 600;
 }
 .card-action {
   font-weight: 700;
-  color: var(--blue);
+  color: var(--brand-red);
 }
 
 .empty-box {
