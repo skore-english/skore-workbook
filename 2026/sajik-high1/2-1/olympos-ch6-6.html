@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 6강 6번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1</span>
+    </div>
+    <div class="meta-badge">올림포스 9대변별유형 / 6강 6번</div>
+    <h1 class="title">Contextual Understanding in <span>Language Acquisition</span></h1>
+    <p class="header-lead">사전적 의미를 넘어선 맥락과 문화적 이해의 필수성</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      Learning a language opens the door to learning about the way humans express themselves, interact with each other, and experience the social, cultural, and material world. Understanding what is said in a language requires far more than merely learning the meaning of words and memorizing the dictionary. To understand a joke or recognize an allusion, one needs to be attentive to the way words are used and the context that is assumed. Such a broader ability to use a language opens up the literature of a people, their culture, and their world. Language may also be used ironically, to evoke something else, or to lie, to mislead about intentions, or to hide one’s ideas. Discerning what people convey depends on understanding language as it was used at a particular time and place.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 언어를 진정으로 이해하는 것은 단순한 단어 암기가 아니라, <b>특정 시공간과 맥락(Context) 속에서 사용되는 용법과 의도(반어, 암시, 기만 등)를 파악</b>하는 광범위한 문화적 이해 능력에 달려 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. Learning a language <mark>opens the door to</mark> learning about the way humans express themselves, interact with each other, and experience the social, cultural, and material world.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 언어를 배우는 것은 인간이 자신을 표현하고, 서로 상호작용하며, 사회적·문화적·물질적 세계를 경험하는 방식에 대해 배우는 문을 열어준다.<br>
+            <b>[핵심 어휘]</b> open the door to (~로의 문을 열다/길을 터주다), express oneself (자신을 표현하다), interact with (~와 상호작용하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. Understanding what is said in a language <mark>requires far more than</mark> merely learning the meaning of words and memorizing the dictionary.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 어떤 언어로 표현된 말을 이해하는 것은 단순히 단어의 뜻을 배우고 사전을 암기하는 것보다 훨씬 더 많은 것을 요구한다.<br>
+            <b>[핵심 어휘]</b> merely (단지, 그저), memorize (암기하다), far more than (~보다 훨씬 더 많은)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. To understand a joke or <mark>recognize an allusion</mark>, one needs to <mark>be attentive to</mark> the way words are used and the context that is assumed.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 농담을 이해하거나 암시를 알아차리기 위해서는 단어가 사용되는 방식과 전제된 맥락에 주의를 기울일 필요가 있다.<br>
+            <b>[핵심 어휘]</b> allusion (암시, 넌지시 말함), be attentive to (~에 주의를 기울이다), assume (전제하다, 추정하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Such a broader ability to use a language <mark>opens up the literature of a people</mark>, their culture, and their world.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러한 더 넓은 언어 사용 능력은 한 민족의 문학, 그들의 문화, 그리고 그들의 세계를 열어준다.<br>
+            <b>[핵심 어휘]</b> open up (~을 열다, 펼치다), literature (문학), a people (한 민족, 국민)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. Language may also be used ironically, to <mark>evoke something else</mark>, or to lie, to <mark>mislead about intentions</mark>, or to hide one’s ideas.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 언어는 또한 반어적으로 사용되거나, 다른 무언가를 떠올리게 하거나, 거짓말을 하거나, 의도에 대해 오도하거나, 자신의 생각을 숨기기 위해 사용될 수도 있다.<br>
+            <b>[핵심 어휘]</b> ironically (반어적으로), evoke (떠올려주다, 환기하다), mislead (오도하다, 잘못 인도하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. <mark>Discerning what people convey</mark> depends on understanding language as it was used at a particular time and place.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 사람들이 전달하는 바를 파악하는 것은 특정 시간과 장소에서 언어가 사용된 방식 그대로를 이해하는 것에 달려 있다.<br>
+            <b>[핵심 어휘]</b> discern (식별하다, 분별하다), convey (전달하다), particular (특정한)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (통념 비판 ➔ 핵심 조건 ➔ 맥락적 귀결)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[단순 암기의 한계] Limitation</span>
+        <h4>사전적 학습을 넘어서는 언어</h4>
+        <p>언어는 인간 표현과 세계 경험의 통로이며, <b>단순 단어 의미와 사전 암기</b>만으로는 진정한 이해가 불가능함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[맥락과 뉘앙스] Core Demand</span>
+        <h4>용법과 전제된 맥락 주의</h4>
+        <p>농담, 암시(Allusion), 반어(Irony), 의도 왜곡 등을 파악하기 위해서는 <b>단어의 실제 쓰임과 전제된 맥락</b>에 집중해야 함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[최종 결론] Conclusion</span>
+        <h4>시공간적 맥락의 파악</h4>
+        <p>화자가 전달하는 본질을 식별(Discern)하는 것은 결국 <b>특정 시공간에서 사용된 실제 언어 맥락</b>의 총체적 이해에 귀결됨.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Understanding what is said in a language [requires / require] far more than merely learning the meaning of words...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 문장의 주어가 동명사구(Understanding ~)이므로 단수 동사 requires가 올바릅니다.">requires</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! what절 전체를 목적어로 취하는 동명사구(Understanding)가 주어이므로 단수 취급해야 합니다.">require</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. [Discern / Discerning] what people convey depends on understanding language as it was used...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 본동사 depends가 문장에 존재하므로 주어 자리에 동사원형(명령문 형태)은 올 수 없습니다.">Discern</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 본동사 depends의 주어 역할을 수행하는 동명사(Discerning)가 적절합니다.">Discerning</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        Learning a language opens the door to learning about the way humans express themselves, interact with each other, and experience the social, cultural, and material world. Understanding what is said in a language requires far more than ① <u>merely</u> learning the meaning of words and memorizing the dictionary. To understand a joke or recognize an allusion, one needs to be ② <u>attentive</u> to the way words are used and the context that is assumed. Such a broader ability to use a language opens up the literature of a people, their culture, and their world. Language may also be used ironically, to evoke something else, or to lie, to ③ <u>mislead</u> about intentions, or to hide one’s ideas. Discerning what people convey ④ <u>depends</u> on understanding language as it was used in ⑤ <u>isolation</u> from any particular time and place.
+      </div>
+      <div class="exam-choices">
+        ① merely<br>
+        ② attentive<br>
+        ③ mislead<br>
+        ④ depends<br>
+        ⑤ isolation
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ⑤ (isolation ➔ context 또는 conjunction)</b><br>
+          <b>해설:</b> 글 전체에서 화자의 의도를 파악하기 위해서는 특정 시간과 장소의 '맥락' 속에서 언어를 이해해야 한다고 강조하고 있습니다. 따라서 시간과 장소로부터 '분리/고립(isolation)'되어 이해한다는 표현은 글의 핵심 주장과 정반대입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Understanding what is said in a language requires far more than merely learning the meaning of words and memorizing the dictionary. To understand a joke or recognize an allusion, one needs to be attentive to the way words are used and the context that is assumed. Such a broader ability to use a language opens up the literature of a people, their culture, and their world. Language may also be used ironically, to evoke something else, or to lie, to mislead about intentions, or to hide one’s ideas. Ultimately, discerning what people convey depends on ________________________________________.
+      </div>
+      <div class="exam-choices">
+        ① mechanically memorizing the grammatical rules and lexical definitions<br>
+        ② isolating words strictly from their surrounding sociocultural circumstances<br>
+        ③ understanding how language functions within its specific situational context<br>
+        ④ translating foreign idioms into one's own mother tongue without alteration<br>
+        ⑤ focusing solely on the literal meanings intended by the primary speaker
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 언어로 표현된 바를 정확히 파악하는 것은 단순 사전 암기가 아니라 특정 시공간과 맥락 속에서의 사용 방식을 이해하는 데 달려 있습니다. 이를 '특정한 상황적 맥락 내에서 언어가 기능하는 방식을 이해하는 것(understanding how language functions within its specific situational context)'으로 패러프레이징한 ③번이 정답입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Learning a language opens the door to learning about the way humans express themselves, interact with each other, and experience the social, cultural, and material world.
+      </div>
+      <div class="exam-choices">
+        (A) Language may also be used ironically, to evoke something else, or to lie, to mislead about intentions, or to hide one’s ideas. Discerning what people convey depends on understanding language as it was used at a particular time and place.<br><br>
+        (B) Understanding what is said in a language requires far more than merely learning the meaning of words and memorizing the dictionary. To understand a joke or recognize an allusion, one needs to be attentive to the way words are used and the context that is assumed.<br><br>
+        (C) Such a broader ability to use a language opens up the literature of a people, their culture, and their world.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ ((B) - (C) - (A))</b><br>
+          <b>해설:</b> 주어진 글에서 언어 습득의 포괄적 의미를 제시한 뒤, (B)에서 단순 사전 암기를 넘어 용법과 전제된 맥락에 주목해야 함을 설명합니다. (C)에서 'Such a broader ability'로 (B)의 내용을 받아 문학과 문화로의 확장을 진술한 후, (A)에서 언어의 반어적·기만적 특성을 밝히며 시공간적 맥락 파악의 중요성으로 귀결되는 순서가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 우리말 해석에 맞도록 [조건]을 활용하여 빈칸을 완성하시오. (서술형 영작)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 농담을 이해하거나 암시를 알아차리기 위해서는 단어가 사용되는 방식과 전제되는 맥락에 주의를 기울일 필요가 있다.<br><br>
+        <b>[영작문]</b> To understand a joke or recognize an allusion, _____________________________________________________________________.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 보기의 어휘를 반드시 모두 활용할 것 (필요 시 어형 변화 가능, 단어 추가 가능):<br>
+           [ use / is / the / words / attentive / to / context / one / assume / that / need / way / be / the / and ]<br>
+        2. 수동태 관계사절 구조 2개를 포함하여 17단어로 영작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: one needs to be attentive to the way words are used and the context that is assumed</b><br>
+          <b>해설:</b> 'one needs to be attentive to ~' 구조 뒤에 전치사 to의 목적어로 병렬된 'the way (that) words are used'와 'the context that is assumed'를 정확히 수동태 형태로 결합합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
