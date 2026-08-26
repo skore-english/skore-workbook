@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 6강 1번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1</span>
+    </div>
+    <div class="meta-badge">올림포스 9대변별유형 / 6강 1번</div>
+    <h1 class="title">Early Photosynthesis and <span>Snowball Earth</span></h1>
+    <p class="header-lead">초기 산소 발생 광합성이 기후와 생물권에 미친 파괴적 영향 분석</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      High concentrations of oxygen are required for complex organisms such as humans to live. However, when oxygen-producing photosynthesis evolved some 2.7 billion years ago, its impact on the climate and biosphere would have been profound. It would not only have been a lethal gas to almost all early life, but as the young Earth’s atmosphere had a much stronger greenhouse effect than today, the increasing amount of oxygen would have caused havoc in the biosphere. Part of the reason for this was the much higher concentrations of methane, which is a powerful greenhouse gas, in the atmosphere. Oxygen reacts quickly with methane, so as photosynthesis increased, and oxygen levels rose, the amount of methane in the atmosphere would have decreased. As it did, global temperatures would have dropped sharply, perhaps leading to Snowball Earth events.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 오늘날 생명 유지에 필수적인 산소는 초기 지구 발생 당시 초기 생명체에 치명적인 독소였을 뿐만 아니라, 강력한 온실가스인 메탄을 급감시켜 급격한 기온 하강과 <b>눈덩이 지구(Snowball Earth)</b>라는 대재앙을 초래했다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. <mark>High concentrations of oxygen</mark> are required for <mark>complex organisms</mark> such as humans to live.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 인간과 같은 복잡한 유기체(복합 생물)가 살아가기 위해서는 고농도의 산소가 필요하다.<br>
+            <b>[핵심 어휘]</b> concentration (농도), complex organism (복잡한 유기체/복합 생물), require (요구하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. However, when <mark>oxygen-producing photosynthesis</mark> evolved some 2.7 billion years ago, its impact on the climate and biosphere <mark>would have been profound</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 약 27억 년 전 산소를 생성하는 광합성이 진화했을 때, 그것이 기후와 생물권에 미친 영향은 엄청났을 것이다.<br>
+            <b>[핵심 어휘]</b> photosynthesis (광합성), evolve (진화하다), biosphere (생물권), profound (엄청난, 심대한)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. It would not only have been a <mark>lethal gas</mark> to almost all early life, but as the young Earth’s atmosphere had a much stronger greenhouse effect than today, the increasing amount of oxygen <mark>would have caused havoc</mark> in the biosphere.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것은 거의 모든 초기 생명체에게 치명적인 가스였을 뿐만 아니라, 초기 지구의 대기가 오늘날보다 훨씬 강한 온실 효과를 지니고 있었기 때문에 증가하는 산소량은 생물권에 대혼란(파괴)을 일으켰을 것이다.<br>
+            <b>[핵심 어휘]</b> lethal (치명적인), greenhouse effect (온실 효과), cause havoc (대혼란/파괴를 초래하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Part of the reason for this was the much higher concentrations of <mark>methane</mark>, which is a powerful greenhouse gas, in the atmosphere.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것의 이유 중 일부는 대기 중 강력한 온실가스인 메탄의 농도가 훨씬 더 높았기 때문이었다.<br>
+            <b>[핵심 어휘]</b> methane (메탄), atmosphere (대기)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. Oxygen <mark>reacts quickly with</mark> methane, so as photosynthesis increased, and oxygen levels rose, the amount of methane in the atmosphere <mark>would have decreased</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 산소는 메탄과 빠르게 반응하므로, 광합성이 증가하고 산소 수치가 상승함에 따라 대기 중 메탄의 양은 감소했을 것이다.<br>
+            <b>[핵심 어휘]</b> react with (~와 반응하다), decrease (감소하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. As it did, global temperatures <mark>would have dropped sharply</mark>, perhaps leading to <mark>Snowball Earth events</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그렇게 됨에 따라 지구 기온은 급격히 떨어졌을 것이고, 아마도 '눈덩이 지구' 현상으로 이어졌을 것이다.<br>
+            <b>[핵심 어휘]</b> drop sharply (급격히 떨어지다), lead to (~로 이어지다), Snowball Earth (눈덩이 지구)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (통념 반박 ➔ 파괴적 영향 ➔ 인과 메커니즘)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[전제 및 통념 반박] Background</span>
+        <h4>산소의 역설적 기원</h4>
+        <p>현대 생명체에게 산소는 필수적이나, 27억 년 전 광합성으로 등장한 초기 산소는 초기 생명체에 <b>치명적 독소(Lethal Gas)</b>였음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[기후 파괴 메커니즘] Mechanism</span>
+        <h4>메탄 파괴와 온실효과 상실</h4>
+        <p>초기 대기를 덥히던 강력한 온실가스인 <b>메탄(Methane)</b>이 급증한 산소와 반응하여 급격히 파괴·감소됨.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[최종 귀결] Ultimate Consequence</span>
+        <h4>급격한 빙하기와 눈덩이 지구</h4>
+        <p>온실효과 상실로 인해 전 지구적 기온이 급락하여 행성 전체가 얼어붙는 <b>눈덩이 지구(Snowball Earth)</b> 사태 초래.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. ...as the young Earth’s atmosphere had a [very / much] stronger greenhouse effect than today...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! very는 원급 형용사/부사를 수식하며, 비교급(stronger) 앞에서는 쓸 수 없습니다.">very</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 비교급 stronger를 강조하여 '훨씬 더'라는 의미를 나타내는 비교급 강조 부사 much(still, far, even, a lot)가 옳습니다.">much</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. As it did, global temperatures would have dropped sharply, perhaps [led / leading] to Snowball Earth events.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 앞 절에 주어(global temperatures)와 본동사(would have dropped)가 완벽히 존재하므로, 접속사 없는 과거형 동사나 수동형 p.p.는 올 수 없습니다.">led</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞 절의 상황에 이어 연속 동작 또는 결과적 상황을 나타내는 능동 분사구문 leading(= and perhaps led)이 적절합니다.">leading</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        High concentrations of oxygen are required for complex organisms such as humans to live. However, when oxygen-producing photosynthesis evolved some 2.7 billion years ago, its impact on the climate and biosphere would have been ① <u>profound</u>. It would not only have been a ② <u>lethal</u> gas to almost all early life, but as the young Earth’s atmosphere had a much stronger greenhouse effect than today, the increasing amount of oxygen would have caused havoc in the biosphere. Part of the reason for this was the much higher concentrations of methane, which is a powerful greenhouse gas, in the atmosphere. Oxygen reacts ③ <u>quickly</u> with methane, so as photosynthesis increased, and oxygen levels rose, the amount of methane in the atmosphere would have ④ <u>accumulated</u>. As it did, global temperatures would have dropped ⑤ <u>sharply</u>, perhaps leading to Snowball Earth events.
+      </div>
+      <div class="exam-choices">
+        ① profound<br>
+        ② lethal<br>
+        ③ quickly<br>
+        ④ accumulated<br>
+        ⑤ sharply
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (accumulated ➔ decreased 또는 declined)</b><br>
+          <b>해설:</b> 산소는 메탄과 빠르게 반응하여 메탄을 없애므로, 광합성으로 산소량이 늘어남에 따라 대기 중 메탄의 양은 축적된(accumulated) 것이 아니라 '감소했을(decreased)' 것입니다. 따라서 ④번이 문맥상 부적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Part of the reason for this was the much higher concentrations of methane, which is a powerful greenhouse gas, in the atmosphere. Oxygen reacts quickly with methane, so as photosynthesis increased, and oxygen levels rose, the amount of methane in the atmosphere would have decreased. As it did, ____________________________________, perhaps leading to Snowball Earth events.
+      </div>
+      <div class="exam-choices">
+        ① complex biological organisms began to multiply dramatically<br>
+        ② the planet's atmospheric density was significantly reinforced<br>
+        ③ the greenhouse capacity diminished and global temperatures plummeted<br>
+        ④ excessive solar radiation was efficiently absorbed by early oceans<br>
+        ⑤ methane levels were continuously restored by photosynthetic bacteria
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 메탄이 감소함에 따라 발생한 직접적 결과는 대기의 온실 효과 상실과 전 지구적인 급격한 기온 급락(global temperatures dropped sharply)이므로, 이를 '온실 능력이 줄어들고 지구 기온이 폭락했다(the greenhouse capacity diminished and global temperatures plummeted)'로 패러프레이징한 ③번이 정답입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        High concentrations of oxygen are required for complex organisms such as humans to live. However, when oxygen-producing photosynthesis evolved some 2.7 billion years ago, its impact on the climate and biosphere would have been profound.
+      </div>
+      <div class="exam-choices">
+        (A) Oxygen reacts quickly with methane, so as photosynthesis increased, and oxygen levels rose, the amount of methane in the atmosphere would have decreased. As it did, global temperatures would have dropped sharply, perhaps leading to Snowball Earth events.<br><br>
+        (B) It would not only have been a lethal gas to almost all early life, but as the young Earth’s atmosphere had a much stronger greenhouse effect than today, the increasing amount of oxygen would have caused havoc in the biosphere.<br><br>
+        (C) Part of the reason for this was the much higher concentrations of methane, which is a powerful greenhouse gas, in the atmosphere.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ ((B) - (C) - (A))</b><br>
+          <b>해설:</b> 주어진 글에서 초기 산소 발생의 심대한 충격을 언급한 후, (B)에서 초기 생명체에 치명적이었으며 생물권에 혼란을 초래했다는 점(caused havoc)을 서술합니다. (C)에서 그 혼란의 원인(Part of the reason for this)으로 대기 중 메탄을 제시하고, (A)에서 산소와 메탄의 화학 반응으로 인한 메탄 감소 및 기온 급락(눈덩이 지구)으로 결말을 맺는 흐름이 가장 완벽합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 고난도 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 우리말 해석에 맞도록 [조건]을 활용하여 빈칸을 완성하시오. (서술형 영작)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 그것은 거의 모든 초기 생명체에게 치명적인 가스였을 뿐만 아니라, 생물권에 대혼란을 초래했을 것이다.<br><br>
+        <b>[영작문]</b> It would not only _____________________________________________________________________.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 보기의 어휘를 모두 활용할 것 (필요 시 어형 변화 가능, 단어 추가 가능):<br>
+           [ to / have / a / in / gas / life / lethal / almost / early / cause / all / havoc / biosphere / the ]<br>
+        2. '과거 사실에 대한 추측(have p.p.)'과 상관접속사 구문을 고려하여 18단어로 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: have been a lethal gas to almost all early life, but would have caused havoc in the biosphere</b><br>
+          <b>해설:</b> 'not only A but (also) B' 구조에 과거의 강한 추측을 나타내는 'would have p.p.'를 병렬로 연결하여 완성합니다. (원문: not only have been a lethal gas to almost all early life, but ... would have caused havoc in the biosphere)
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
