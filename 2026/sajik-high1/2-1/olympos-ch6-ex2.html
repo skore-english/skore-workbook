@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 6강 기출 2번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1</span>
+    </div>
+    <div class="meta-badge">올림포스 9대변별유형 / 6강 기출 2번</div>
+    <h1 class="title">Translingual Approach <span>in Global English</span></h1>
+    <p class="header-lead">
+      다양한 영어 표현을 소통의 가능성으로 수용하는 초언어적 접근법 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      No doubt students collaborating with other speakers of English might encounter language variances, which may interfere with intentionality. To address such disparities, Horner, Lu, Royster, and Trimbur call for a “translingual approach” in which language varieties are not perceived as barriers, but as avenues for meaning making. Similarly, Galloway and Rose study of Global Englishes found that exposure to other Englishes helps normalize language differences. Educators have to work with students to examine phrases, expressions, and other ranges of English language use for their rhetorical and communicative possibilities and not their perceived errors or inferior status. After all, students are constantly reading texts and listening to speakers whose Englishes do not necessarily conform to what is considered standard in their own communities.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 글로벌 환경에서 나타나는 다양한 영어를 오류나 열등한 것으로 규정하지 않고, <b>의미 구성과 소통의 가능성을 여는 통로(Avenues for Meaning Making)로 수용하는 초언어적 접근법</b>이 필요하다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. No doubt students <mark>collaborating with</mark> other speakers of English might encounter <mark>language variances</mark>, which may <mark>interfere with</mark> intentionality.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 의심할 여지 없이 다른 영어 사용자들과 협력하는 학생들은 언어적 차이에 직면할 수 있으며, 이는 의도한 바를 전달하는 것을 방해할 수 있다.<br>
+            <b>[핵심 어휘]</b> collaborate with (~와 협력하다), encounter (마주치다, 직면하다), variance (차이, 변화), interfere with (~을 방해하다), intentionality (의도성)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. To address such disparities, Horner, Lu, Royster, and Trimbur call for a <mark>“translingual approach”</mark> in which language varieties are not perceived as <mark>barriers</mark>, but as <mark>avenues for meaning making</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 차이를 해결하기 위해, Horner, Lu, Royster, Trimbur는 언어적 변이형들을 장벽이 아니라 의미 구성을 위한 통로로 인식하는 '초언어적 접근법'을 요구한다.<br>
+            <b>[핵심 어휘]</b> address (다루다, 해결하다), disparity (차이, 불일치), translingual approach (초언어적 접근법), barrier (장벽), avenue (방안, 길, 통로)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. Similarly, Galloway and Rose study of Global Englishes found that exposure to other Englishes helps <mark>normalize</mark> language differences.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 마찬가지로, Galloway와 Rose의 세계 영어 연구는 다른 영어들에 대한 노출이 언어 차이를 정상적인 것으로 받아들이는 데 도움이 된다는 점을 밝혀냈다.<br>
+            <b>[핵심 어휘]</b> exposure (노출), normalize (정상화하다, 자연스럽게 받아들이다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Educators have to work with students to examine phrases, expressions, and other ranges of English language use for their <mark>rhetorical and communicative possibilities</mark> and not their perceived errors or <mark>inferior status</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 교육자들은 학생들이 어구나 표현, 그리고 영어가 사용되는 다른 범위들을 인식된 오류나 열등한 지위가 아니라 수사적 및 의사소통적 가능성의 관점에서 검토하도록 함께 노력해야 한다.<br>
+            <b>[핵심 어휘]</b> examine (검토하다, 조사하다), rhetorical (수사적인), communicative (의사소통의), inferior (열등한)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. After all, students are constantly reading texts and listening to speakers whose Englishes do not necessarily <mark>conform to</mark> what is considered <mark>standard</mark> in their own communities.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 결국, 학생들은 자신이 속한 공동체에서 표준으로 여겨지는 것에 반드시 순응하지만은 않는 영어를 사용하는 화자들의 말을 듣고 글을 끊임없이 읽고 있기 때문이다.<br>
+            <b>[핵심 어휘]</b> conform to (~에 일치하다, 따르다), standard (표준의, 규범), constantly (끊임없이)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (문제 제기 ➔ 해결 대안 ➔ 교육적 제언)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[문제 제기] Problem</span>
+        <h4>협력 상황에서의 언어적 이견</h4>
+        <p>글로벌 소통 상황에서 화자 간 언어 차이(Variances)가 발생하여 의도 전달에 장애가 생김.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[해결 대안] Solution</span>
+        <h4>초언어적 접근법 (Translingual)</h4>
+        <p>언어적 차이를 '장벽'이 아닌 <b>'의미 창출의 통로(Avenues for Meaning)'</b>이자 자연스러운 현상으로 재정의.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[교육적 제언] Pedagogical View</span>
+        <h4>소통 가능성 중심의 교육</h4>
+        <p>다양한 영어를 '오류/열등성'으로 보지 않고 <b>'수사적·의사소통적 가능성'</b>의 관점에서 탐구하도록 지도 필요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. ...call for a "translingual approach" [which / in which] language varieties are not perceived as barriers...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒤에 수동태 완전한 절(language varieties are not perceived...)이 이어지므로 관계대명사 which는 올 수 없습니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사 approach를 수식하며 뒤에 필수 성분이 빠지지 않은 완전한 절을 연결하므로 전치사+관계대명사(in which)가 옳습니다.">in which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...listening to speakers [whose / who] Englishes do not necessarily conform to standard norms.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 뒤에 오는 명사 Englishes를 수식하여 '그 화자들의 영어가'라는 의미를 완성하는 소유격 관계대명사 whose 자리입니다.">whose</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! who 뒤에는 주어나 보어가 비어 있어야 하지만, 바로 뒤에 명사 Englishes와 완전한 동사구가 이어지므로 적절하지 않습니다.">who</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        No doubt students collaborating with other speakers of English might encounter language variances, which may ① <u>interfere</u> with intentionality. To address such disparities, Horner, Lu, Royster, and Trimbur call for a “translingual approach” in which language varieties are not perceived as ② <u>barriers</u>, but as avenues for meaning making. Similarly, Galloway and Rose study of Global Englishes found that exposure to other Englishes helps ③ <u>normalize</u> language differences. Educators have to work with students to examine phrases, expressions, and other ranges of English language use for their rhetorical and communicative possibilities and not their perceived ④ <u>correctness</u> or inferior status. After all, students are constantly reading texts and listening to speakers whose Englishes do not necessarily ⑤ <u>conform</u> to what is considered standard in their own communities.
+      </div>
+      <div class="exam-choices">
+        ① interfere<br>
+        ② barriers<br>
+        ③ normalize<br>
+        ④ correctness<br>
+        ⑤ conform
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (correctness ➔ errors)</b><br>
+          <b>해설:</b> 교육자들은 학생들이 다양한 영어 표현을 '인식된 오류(errors)'나 '열등한 지위(inferior status)'로 치부하지 않고 소통 가능성으로 검토하도록 이끌어야 한다는 문맥입니다. 따라서 '정확성(correctness)'은 inferior status와 대등하게 연결되기에 부적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        To address such disparities, Horner, Lu, Royster, and Trimbur call for a “translingual approach” in which language varieties are __________________________________. Similarly, Galloway and Rose study of Global Englishes found that exposure to other Englishes helps normalize language differences. Educators have to work with students to examine phrases, expressions, and other ranges of English language use for their rhetorical and communicative possibilities and not their perceived errors or inferior status.
+      </div>
+      <div class="exam-choices">
+        ① strictly corrected according to native speakers' grammatical conventions<br>
+        ② viewed not as obstacles but as productive channels for creating meaning<br>
+        ③ replaced entirely by unified international communication standards<br>
+        ④ eliminated through intensive memorization of standard idioms<br>
+        ⑤ recognized as inevitable proof of flawed linguistic proficiency
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 초언어적 접근법의 핵심은 언어적 다양성을 의사소통을 가로막는 장애물이 아니라 의미를 창출하는 통로로 바라보는 것입니다. 따라서 'not as obstacles but as productive channels for creating meaning'이 원문의 'not perceived as barriers, but as avenues for meaning making'을 정확하게 패러프레이징하고 있습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        No doubt students collaborating with other speakers of English might encounter language variances, which may interfere with intentionality.
+      </div>
+      <div class="exam-choices">
+        (A) Educators have to work with students to examine phrases, expressions, and other ranges of English language use for their rhetorical and communicative possibilities and not their perceived errors or inferior status.<br><br>
+        (B) After all, students are constantly reading texts and listening to speakers whose Englishes do not necessarily conform to what is considered standard in their own communities.<br><br>
+        (C) To address such disparities, Horner, Lu, Royster, and Trimbur call for a “translingual approach” in which language varieties are not perceived as barriers, but as avenues for meaning making. Similarly, Galloway and Rose study of Global Englishes found that exposure to other Englishes helps normalize language differences.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (C) - (A) - (B)<br>
+        ④ (C) - (B) - (A)<br>
+        ⑤ (B) - (C) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ ((C) - (A) - (B))</b><br>
+          <b>해설:</b> 주어진 글에서 언어 차이로 인한 의사 전달 방해(disparities)를 제시한 뒤, (C)에서 이를 해결하기 위한 '초언어적 접근법'과 관련 연구를 제안합니다. 이어서 (A)에서 교육자들이 취해야 할 실천 방안(가능성의 검토)을 명시하고, (B)에서 'After all'을 통해 학생들이 이미 비표준 영어를 빈번히 접하고 있다는 현실적 이유를 들며 글을 마무리하는 흐름이 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 고난도 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 우리말 해석에 맞도록 [조건]을 활용하여 빈칸을 완성하시오. (서술형 영작)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 학생들은 그들의 영어가 반드시 자신들이 속한 공동체에서 표준으로 여겨지는 것에 순응하지는 않는 화자들의 말을 끊임없이 듣고 있다.<br><br>
+        <b>[영작문]</b> Students are constantly listening to _____________________________________________________________________.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 보기의 어휘를 모두 활용하여 문맥에 맞게 배열할 것 (필요 시 어형 변화 가능, 단어 추가 가능):<br>
+           [ what / speakers / standard / consider / Englishes / conform / whose / to / in / own / their / not / necessarily ]<br>
+        2. 소유격 관계대명사와 선행사를 포함한 관계대명사를 활용하여 15단어로 영작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: speakers whose Englishes do not necessarily conform to what is considered standard in their own communities</b><br>
+          <b>해설:</b> 선행사 speakers 뒤에 소유격 관계대명사 whose를 배치하고, 전치사 to의 목적어로 선행사를 포함하는 관계대명사절 'what is considered standard...'를 올바르게 구성해야 합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
