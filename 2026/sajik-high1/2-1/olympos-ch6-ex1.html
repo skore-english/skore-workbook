@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>사직고 1학년 올림포스 9대변별유형 — 6강 기출 1번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+}
+.track-step:active { background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+.drill-btn:active { background: #E2E8F0; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1</span>
+    </div>
+    <div class="meta-badge">올림포스 9대변별유형 / 6강 기출 1번</div>
+    <h1 class="title">Automaticity Reduces Cognitive Load <span>for Experts</span></h1>
+    <p class="header-lead">
+      전문가의 숙달도와 인지 부하 감소 원리를 분석하는 5단계 완전 학습 워크북입니다.
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
+    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    
+    <div class="full-passage-box">
+      Interestingly, experts do not suffer as much as beginners when performing complex tasks or combining multiple tasks. Because experts have extensive practice within a limited domain, the key component skills in their domain tend to be highly practiced and more automated. Each of these highly practiced skills then demands relatively few cognitive resources, effectively lowering the total cognitive load that experts experience. Thus, experts can perform complex tasks and combine multiple tasks relatively easily. This is not because they necessarily have more cognitive resources than beginners; rather, because of the high level of fluency they have achieved in performing key skills, they can do more with what they have. Beginners, on the other hand, have not achieved the same degree of fluency and automaticity in each of the component skills, and thus they struggle to combine skills that experts combine with relative ease and efficiency.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 전문가는 인지 자원 자체가 많아서가 아니라, 반복 훈련을 통해 <b>핵심 구성 기술을 자동화(Automaticity)하여 인지 부하를 대폭 낮추었기 때문</b>에 복합적인 과업을 수월하게 수행한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. Interestingly, experts do not suffer as much as beginners when performing complex tasks or combining multiple tasks.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 흥미롭게도, 전문가들은 복잡한 과업을 수행하거나 여러 과업을 결합할 때 초보자만큼 어려움을 겪지 않는다.<br>
+            <b>[핵심 어휘]</b> suffer (고통받다, 어려움을 겪다), complex task (복잡한 과업), combine (결합하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. Because experts have extensive practice within a limited domain, the key component skills in their domain tend to be <mark>highly practiced</mark> and <mark>more automated</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 전문가들은 제한된 영역 내에서 광범위한 연습을 거쳤기 때문에, 그 영역의 핵심 구성 기술들은 고도로 숙달되고 더 자동화되는 경향이 있다.<br>
+            <b>[핵심 어휘]</b> extensive practice (광범위한 연습), domain (영역, 분야), component skill (구성 기술), automated (자동화된)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. Each of these highly practiced skills then demands relatively few <mark>cognitive resources</mark>, effectively <mark>lowering the total cognitive load</mark> that experts experience.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 고도로 숙달된 기술들 각각은 상대적으로 적은 인지 자원을 요구하며, 이는 전문가가 경험하는 전체 인지 부하를 효과적으로 낮춘다.<br>
+            <b>[핵심 어휘]</b> cognitive resources (인지 자원), cognitive load (인지 부하), demand (요구하다), effectively (효과적으로)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. Thus, experts can perform complex tasks and combine multiple tasks relatively easily.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 따라서 전문가들은 복잡한 과업을 수행하고 다수의 과업을 결합하는 것을 비교적 쉽게 할 수 있다.<br>
+            <b>[핵심 어휘]</b> relatively (상대적으로, 비교적), perform (수행하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. This is not because they necessarily have more cognitive resources than beginners; rather, because of the high level of <mark>fluency</mark> they have achieved in performing key skills, they can do more with what they have.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것은 그들이 초보자보다 반드시 더 많은 인지 자원을 가지고 있기 때문이 아니라, 오히려 핵심 기술 수행에서 달성한 높은 수준의 유창성 때문에 자신이 가진 것(인지 자원)으로 더 많은 것을 할 수 있는 것이다.<br>
+            <b>[핵심 어휘]</b> necessarily (반드시 ~인 것은 아닌), fluency (유창성, 능숙함), achieve (달성하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. Beginners, on the other hand, have not achieved the same degree of fluency and <mark>automaticity</mark> in each of the component skills, and thus they struggle to combine skills that experts combine with relative ease and efficiency.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 반면에 초보자들은 각각의 구성 기술에서 동일한 수준의 유창성과 자동성을 달성하지 못했기 때문에, 전문가들이 비교적 수월하고 효율적으로 결합하는 기술들을 결합하는 데 어려움을 겪는다.<br>
+            <b>[핵심 어휘]</b> automaticity (자동성), struggle (고군분투하다, 애먹다), efficiency (효율성)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상 ➔ 메커니즘 ➔ 대조 분석)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[현상 관찰] Observation</span>
+        <h4>전문가의 복합 과업 수행력</h4>
+        <p>전문가는 복잡한 과업이나 다중 과업을 처리할 때 초보자처럼 고통받거나 흔들리지 않고 수월하게 처리함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[핵심 원리] Mechanism</span>
+        <h4>기술의 자동화와 인지 부하 감소</h4>
+        <p>집중 연습으로 구성 기술이 <b>자동화(Automated)</b>됨 ➔ 기술당 소모되는 <b>인지 자원이 급감</b>하여 총 인지 부하가 대폭 낮아짐.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[대조 분석] Contrast</span>
+        <h4>자원의 총량이 아닌 '유창성'의 차이</h4>
+        <p>전문가는 타고난 자원이 많은 게 아니라 <b>유창성(Fluency)</b>으로 효율을 극대화한 반면, 초보자는 자동성 부족으로 과업 결합에 한계 봉착.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. Each of these highly practiced skills then demands relatively few cognitive resources, effectively [lowers / lowering] the total cognitive load...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 이미 앞 절에 본동사(demands)가 접속사 없이 존재하므로, 쉼표 뒤에는 접속사 역할을 겸하는 분사구문(lowering)이 와야 합니다.">lowers</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞 문장 전체 내용을 부연하며 결과를 나타내는 능동 분사구문(effectively lowering = and effectively lowers) 자리입니다.">lowering</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. ...rather, because of the high level of fluency they have achieved in performing key skills, they can do more with [that / what] they have.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 전치사 with 뒤에 오며 have의 목적어가 비어 있는 불완전한 절을 이끄는 관계대명사는 that이 아닌 what입니다.">that</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사를 포함하여 전치사 with의 목적어 역할을 하면서 have의 목적어가 없는 불완전한 절을 이끄는 관계대명사 what입니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+
+    <!-- 문항 1: 문맥상 부적절한 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        Interestingly, experts do not suffer as much as beginners when performing complex tasks or combining multiple tasks. Because experts have extensive practice within a limited domain, the key component skills in their domain tend to be highly practiced and more ① <u>automated</u>. Each of these highly practiced skills then demands relatively ② <u>few</u> cognitive resources, effectively ③ <u>elevating</u> the total cognitive load that experts experience. Thus, experts can perform complex tasks and combine multiple tasks relatively easily. This is not because they necessarily have more cognitive resources than beginners; rather, because of the high level of ④ <u>fluency</u> they have achieved in performing key skills, they can do more with what they have. Beginners, on the other hand, have not achieved the same degree of fluency and automaticity in each of the component skills, and thus they ⑤ <u>struggle</u> to combine skills that experts combine with relative ease and efficiency.
+      </div>
+      <div class="exam-choices">
+        ① automated<br>
+        ② few<br>
+        ③ elevating<br>
+        ④ fluency<br>
+        ⑤ struggle
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (elevating ➔ lowering 또는 reducing)</b><br>
+          <b>해설:</b> 고도로 숙달된 기술은 적은 양의 인지 자원만을 요구하므로, 전문가가 겪는 총 인지 부하를 '높이는(elevating)' 것이 아니라 '낮추는(lowering)' 결과를 가져옵니다. 따라서 elevating은 문맥상 정반대 단어입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Thus, experts can perform complex tasks and combine multiple tasks relatively easily. This is not because they necessarily have more cognitive resources than beginners; rather, because of __________________________________ in performing key skills, they can do more with what they have. Beginners, on the other hand, have not achieved the same degree of fluency and automaticity in each of the component skills, and thus they struggle to combine skills that experts combine with relative ease and efficiency.
+      </div>
+      <div class="exam-choices">
+        ① the broader range of innate intellectual capacities they possess<br>
+        ② their conscious effort to allocate more attention to basic tasks<br>
+        ③ the extensive theoretical knowledge learned without direct practice<br>
+        ④ the high level of fluency and automaticity they have achieved<br>
+        ⑤ the constant external assistance provided during task execution
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 전문가가 적은 인지 자원으로도 복합 과업을 수월하게 해내는 핵심 원인은 인지 자원 총량이 아니라 '핵심 기술에서 달성한 고도의 유창성과 자동성(high level of fluency and automaticity)' 때문입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Interestingly, experts do not suffer as much as beginners when performing complex tasks or combining multiple tasks.
+      </div>
+      <div class="exam-choices">
+        (A) This is not because they necessarily have more cognitive resources than beginners; rather, because of the high level of fluency they have achieved in performing key skills, they can do more with what they have.<br><br>
+        (B) Beginners, on the other hand, have not achieved the same degree of fluency and automaticity in each of the component skills, and thus they struggle to combine skills that experts combine with relative ease and efficiency.<br><br>
+        (C) Because experts have extensive practice within a limited domain, the key component skills in their domain tend to be highly practiced and more automated. Each of these highly practiced skills then demands relatively few cognitive resources, effectively lowering the total cognitive load that experts experience.<br><br>
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ ((C) - (A) - (B))</b><br>
+          <b>해설:</b> 주어진 글에서 전문가가 복합 과업에서 어려움을 겪지 않는다는 현상을 제시한 뒤, (C)에서 그 이유(연습을 통한 자동화와 인지 부하 감소)를 설명합니다. 이어지는 (A)에서 이것이 자원 총량이 아닌 '유창성' 덕분임을 명시(This is not because...)한 후, (B)에서 'Beginners, on the other hand'로 대조군인 초보자의 한계를 서술하는 순서가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 우리말 해석에 맞도록 [조건]을 활용하여 빈칸을 완성하시오. (서술형 영작)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 고도로 숙달된 기술들 각각은 상대적으로 적은 인지 자원을 요구하며, 이는 전문가들이 경험하는 총 인지 부하를 효과적으로 낮춘다.<br><br>
+        <b>[영작문]</b> Each of these highly practiced skills then demands relatively few cognitive resources, _____________________________________________________________________.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 보기의 어휘를 반드시 모두 사용할 것 (필요 시 어형 변화 가능, 단어 추가 가능):<br>
+           [ total / load / experience / expert / lower / the / that / cognitive / effectively ]<br>
+        2. 분사구문 형태를 활용하여 9단어로 영작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: effectively lowering the total cognitive load that experts experience</b><br>
+          <b>해설:</b> 앞 절의 결과적 상황을 수식하는 능동 분사구문으로 lower를 lowering으로 변형하고, 목적어 'the total cognitive load' 뒤에 목적격 관계대명사 절 'that experts experience'를 연결하여 어순을 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.2s;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
