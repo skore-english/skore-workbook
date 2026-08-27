@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -323,9 +363,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 공감과 분노의 상호 억제(Reciprocal Inhibition) 및 체화된 자기 진정(Embodied Self-Soothing)</li>
+        <li><b>[배경 맥락]:</b> 뇌의 신경생리학적 구조상 분노와 온정(공감)은 동시에 활성화될 수 없으므로, 신체 감각을 의도적으로 모니터링하여 공감 신경망을 가동하는 감정 조절 전략</li>
+        <li><b>[논리 요약]:</b> 공감을 통한 자기 진정의 원리 ➔ 심장 박동·미소 등 신체 감각 인식을 통한 뇌 공감 회로 활성화 ➔ 반복 훈련 및 비개인화(Non-personalization)를 통한 갈등 극복 실전 적용</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       One of the best ways to soothe ourselves is by extending empathy. It is impossible to be angry and compassionate at the same time. To activate empathy on command, we must know what we feel in our body when we are empathetic. We can watch for the beating of our heart, the smile on our face, the calm we feel. These bodily sensations activate the part of our brain that feels sympathy and closeness to others. They will happen when we are in harmony with our children and last only a few seconds at first, but over time, we can stretch these moments. With practice, we can find empathy even when we are upset with our young teenager or they are angry at us, if we remember not to take their behavior personally.
     </div>
