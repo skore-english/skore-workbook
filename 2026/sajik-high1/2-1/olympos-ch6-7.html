@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -323,9 +363,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 유비쿼터스 컴퓨팅(Ubiquitous Computing) 및 사물인터넷(IoT) 시대의 코드 지배(Empire of Code)</li>
+        <li><b>[배경 맥락]:</b> 과거 컴퓨터가 특정 기기 내부에 한정되던 시대를 지나, 모든 물리적 사물 자체가 네트워크와 처리 능력을 갖춘 컴퓨터가 되어 인간 생활을 둘러싸는 패러다임 전환</li>
+        <li><b>[논리 요약]:</b> 가상공간을 넘어 물리 세계로 편재화된 코드 ➔ '사물이 부착된 컴퓨터'로의 사물인터넷 확장 ➔ 사물에 내장된 알고리즘 규칙(Rules)에 대한 불가피한 종속</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       Code is now present in almost all the occupations, transactions and interactions that make up a meaningful life. It’s unavoidable. And the empire of code is no longer confined to the separate dimension of ‘cyberspace.’ We cannot escape by shutting a laptop or logging off. We are physically surrounded by technology, encountering hundreds or thousands of digital objects every day. As Bruce Schneier says, it used to be that things contained computers, but now ‘they are computers with things attached to them.’ Soon, tens of billions of once-dumb artefacts will be connected to the internet, equipped with sensors and endowed with processing power, enabling them to interact with us and each other. All these technologies will contain rules, and we will have to follow them.
     </div>
