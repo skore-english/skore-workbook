@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -325,9 +365,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 과학 기금의 구조적 한계(공공 기금의 보수성) 및 사적 자선 기부(Private Philanthropy)의 유연성</li>
+        <li><b>[배경 맥락]:</b> 정부 기관(NSF 등)은 주류 및 실용 연구에 치중하여 기초 이론 연구자의 지원을 꺼리는 경향이 있으나, 민간 기부금은 비주류 혁신 연구를 보호하는 안전판 역할을 수행함</li>
+        <li><b>[논리 요약]:</b> 유망 물리학자(발렌티니) 영입 추진 ➔ 개인 기부자의 관대한 후원으로 고용 성사 ➔ 공공 기금(NSF)의 보수적 제약과 대조하며 사적 기부의 결정적 가치 규명</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       I met Antony Valentini in London in 1999, when I was a visiting professor at Imperial College. And after discussions with Christopher Isham, head of the theory group there, we decided to offer him a postdoc and bring him back into science. We were able to do this because I had some unexpected and generous support from a donor who happened to care about the foundations of quantum mechanics. I felt that supporting one of the few people who had proved he could contribute new and important results to this field was putting that money to good use. Had I been supported only by funds from the National Science Foundation, I would not have been able to do this. Though the NSF has been generous to me for my work on quantum gravity, sharing the grant with a postdoc working on foundations of quantum theory could have hurt the chances for future funding.
     </div>
