@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -323,9 +363,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 대산화 사건(Great Oxidation Event) 및 눈덩이 지구(Snowball Earth) 가설</li>
+        <li><b>[배경 맥락]:</b> 약 27억 년 전 남세균의 광합성 진화로 생성된 산소는 혐기성 초기 생명체에 치명적 독성을 가했을 뿐 아니라 대기 화학 구조를 전면 재편함</li>
+        <li><b>[논리 요약]:</b> 산소 생성 광합성의 출현 ➔ 산소와 대기 중 메탄(강력한 온실가스)의 반응 및 메탄 급감 ➔ 온실효과 상실로 인한 전 지구적 기온 급락 및 눈덩이 지구 사태 초래</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       High concentrations of oxygen are required for complex organisms such as humans to live. However, when oxygen-producing photosynthesis evolved some 2.7 billion years ago, its impact on the climate and biosphere would have been profound. It would not only have been a lethal gas to almost all early life, but as the young Earth’s atmosphere had a much stronger greenhouse effect than today, the increasing amount of oxygen would have caused havoc in the biosphere. Part of the reason for this was the much higher concentrations of methane, which is a powerful greenhouse gas, in the atmosphere. Oxygen reacts quickly with methane, so as photosynthesis increased, and oxygen levels rose, the amount of methane in the atmosphere would have decreased. As it did, global temperatures would have dropped sharply, perhaps leading to Snowball Earth events.
     </div>
