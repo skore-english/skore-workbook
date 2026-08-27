@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -325,9 +365,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 초언어적 접근법(Translingual Approach) 및 세계 영어(Global Englishes) 이론</li>
+        <li><b>[배경 맥락]:</b> 영어가 특정 원어민 국가의 표준 문법에 종속된 규범이 아니라, 다양한 문화권의 화자들이 의미를 협상하고 창출하는 역동적 의사소통 매개체라는 현대 응용언어학적 관점</li>
+        <li><b>[논리 요약]:</b> 다국적 협업 시 발생하는 언어 차이(Variances) ➔ 언어 변이형을 오류가 아닌 의미 창출의 통로로 보는 초언어적 접근법 제시 ➔ 표준 영어 규범 일치 여부를 넘어선 소통 가능성 중심 교육 촉구</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       No doubt students collaborating with other speakers of English might encounter language variances, which may interfere with intentionality. To address such disparities, Horner, Lu, Royster, and Trimbur call for a “translingual approach” in which language varieties are not perceived as barriers, but as avenues for meaning making. Similarly, Galloway and Rose study of Global Englishes found that exposure to other Englishes helps normalize language differences. Educators have to work with students to examine phrases, expressions, and other ranges of English language use for their rhetorical and communicative possibilities and not their perceived errors or inferior status. After all, students are constantly reading texts and listening to speakers whose Englishes do not necessarily conform to what is considered standard in their own communities.
     </div>
