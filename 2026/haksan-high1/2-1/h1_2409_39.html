@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* BACKGROUND KNOWLEDGE CSS */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -284,7 +324,7 @@ footer {
 <header>
   <div class="wrap">
     <div class="masthead">
-      <span><b>Score Academy</b> High School Logic Series</span>
+      <span><b>SKORE ACADEMY</b> High School Logic Series</span>
       <span>2026 학산여고 1학년 2-1</span>
     </div>
     <div class="meta-badge">2024년 9월 / 39번</div>
@@ -323,9 +363,22 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <!-- 지문 맞춤형 핵심 배경지식 배너 -->
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 기체의 용해도와 수온의 반비례 법칙 (수온이 낮을수록 용존산소 포화도가 높아짐).</li>
+        <li><b>[배경 맥락]:</b> 지구 온난화로 인한 해수 온도 상승은 단순 수온 변화를 넘어 해양 내 산소 보유력을 급격히 떨어뜨리는 연쇄 작용을 유발함.</li>
+        <li><b>[논리 요약]:</b> 지난 반세기 동안 수온 상승 폭을 초과하는 산소 급감이 발생하여, 해양 생물의 질식 및 서식지 파괴를 낳는 무산소증(anoxic events)이 가속화됨.</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       Seawater contains an abundance of dissolved oxygen that all marine animals breathe to stay alive. It has long been established in physics that cold water holds more dissolved oxygen than warm water does - this is one reason that cold polar seas are full of life while tropical oceans are blue, clear, and relatively poorly populated with living creatures. Thus, as global warming raises the temperature of marine waters, it is self-evident that the amount of dissolved oxygen will decrease. This is a worrisome and potentially disastrous consequence if allowed to continue to an ecosystem-threatening level. Now scientists have analyzed data indicating that the amount of dissolved oxygen in the oceans has been declining for more than a half century. The data show that the ocean oxygen level has been falling more rapidly than the corresponding rise in water temperature. Falling oxygen levels in water have the potential to impact the habitat of marine organisms worldwide and in recent years this has led to more frequent anoxic events that killed or displaced populations of fish, crabs, and many other organisms.
     </div>
@@ -614,7 +667,7 @@ footer {
 </nav>
 <footer>
   <div class="wrap">
-    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+    SKORE ACADEMY Academic Intelligence · 5-Step Mobile-Optimized Learning System
   </div>
 </footer>
 
