@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>사직고 1학년 올림포스 9대변별유형 — 6강 8번</title>
+<title>사직고 1학년 올림포스 9대변별유형 — 6강 7번</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
@@ -123,6 +123,46 @@ h2.sec-title {
   font-size: 20px;
   font-weight: 900;
   margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
 }
 
 /* STEP 1: Full Passage */
@@ -287,9 +327,9 @@ footer {
       <span><b>Score Academy</b> High School Logic Series</span>
       <span>2026 사직고 1학년 2-1</span>
     </div>
-    <div class="meta-badge">올림포스 9대변별유형 / 6강 8번</div>
-    <h1 class="title">The Hazards of <span>Workplace Friendships</span></h1>
-    <p class="header-lead">관리자와 직원 간 사적 친분이 초래하는 직무 딜레마 분석</p>
+    <div class="meta-badge">올림포스 9대변별유형 / 6강 7번</div>
+    <h1 class="title">The Physical Empire <span>of Code</span></h1>
+    <p class="header-lead">일상 물리적 사물로 확장된 코드와 알고리즘 규칙의 지배</p>
   </div>
 </header>
 
@@ -323,9 +363,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 조직 내 사적 관계(Workplace Friendships)와 역할 갈등(Role Conflict) 딜레마</li>
+        <li><b>[배경 맥락]:</b> 관리자가 부하 직원과 사적 유대감을 형성할 경우, 업무적 객관성 확보 및 성과 평가와 인간적 관계 유지 사이에서 양립 불가능한 심리적·구조적 마찰이 발생함</li>
+        <li><b>[논리 요약]:</b> 사적 친분 형성에 따른 관리 딜레마 직면 ➔ 친분 유지 시의 성과 저하 및 비윤리적 타협 ➔ 객관적 직무 평가 시 직원이 느끼는 배신감과 직무 몰입 파괴</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       As a manager, if you create friendships with your people, if you try to motivate them through the personal ties you’ve created or allowed, you’re likely to find yourself having to choose between maintaining the ties or obtaining the best results possible. If you maintain the ties, you will compromise results or make unethical choices that harm others not for a greater good but for the good of a friend. If you choose work and the work group over the wishes of a friend, as eventually and inevitably you must, the friend will feel betrayed. Sooner or later you must decide against, disappoint, criticize, discipline, demote, or even fire someone who works for you. To someone who thought you were friends, those actions will feel like a personal betrayal and will damage or destroy that person’s commitment to the work.
     </div>
