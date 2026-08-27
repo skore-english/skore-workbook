@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -325,9 +365,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 인지 부하 이론(Cognitive Load Theory) 및 기술 자동화(Automaticity)</li>
+        <li><b>[배경 맥락]:</b> 인간의 작업 기억 용량은 제한적이지만, 특정 도메인 내 반복 훈련을 통해 기본 구성 기술을 자동화하면 소모되는 인지 자원을 최소화할 수 있음</li>
+        <li><b>[논리 요약]:</b> 전문가의 복합 과업 숙달 현상 ➔ 광범위한 연습을 통한 구성 기술 자동화 및 인지 부하 감소 ➔ 초보자와의 대조를 통한 유창성(Fluency)의 본질 규명</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       Interestingly, experts do not suffer as much as beginners when performing complex tasks or combining multiple tasks. Because experts have extensive practice within a limited domain, the key component skills in their domain tend to be highly practiced and more automated. Each of these highly practiced skills then demands relatively few cognitive resources, effectively lowering the total cognitive load that experts experience. Thus, experts can perform complex tasks and combine multiple tasks relatively easily. This is not because they necessarily have more cognitive resources than beginners; rather, because of the high level of fluency they have achieved in performing key skills, they can do more with what they have. Beginners, on the other hand, have not achieved the same degree of fluency and automaticity in each of the component skills, and thus they struggle to combine skills that experts combine with relative ease and efficiency.
     </div>
