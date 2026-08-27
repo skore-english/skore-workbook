@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -323,9 +363,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 사회적 태만(Social Loafing) 및 링겔만 효과(Ringelmann Effect)</li>
+        <li><b>[배경 맥락]:</b> 집단 활동 시 개인의 기여도가 개별적으로 식별되거나 평가되지 않으면 책임감이 분산되어 스스로 노력을 덜 들이게 되는 사회심리학적 현상</li>
+        <li><b>[논리 요약]:</b> 기여도 측정 불가가 태만을 유발한다는 전제 ➔ 수영 계영 및 환호 실험을 통한 신체적 태만 입증 ➔ 기부액 축소 및 투표 불참 등 인지·사회적 행동으로의 메커니즘 확장</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       Social loafing is especially likely to occur when our own contribution is not clear or measurable. Researchers at Purdue University, for example, found that college swimmers on a relay team swam faster when their individual time was announced than when only the total relay time was announced. Similarly, when asked to clap or cheer “as loud as they can,” people exert much less effort when they’re in a group ─ and their lack of effort is not apparent ─ than when they’re alone. This lack of effort isn’t limited to physical tasks: people who simply imagined being in a group setting later pledged less money to a charitable organization than those who imagined being with just one other person. Social loafing also explains why so few people turn out to vote, even if they have strong political views.
     </div>
