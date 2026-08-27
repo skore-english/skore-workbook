@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -323,9 +363,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 화용론적 언어 이해(Pragmatic Comprehension) 및 맥락 의존성(Contextual Dependency)</li>
+        <li><b>[배경 맥락]:</b> 언어는 기계적인 사전적 정의의 나열이 아니라, 문화적 배경과 상황적 전제(화자의 의도, 반어, 암시 등)에 의해 최종 의미가 결정되는 사회적 상호작용 도구임</li>
+        <li><b>[논리 요약]:</b> 단순 사전 암기를 넘어서는 언어 학습 ➔ 농담·암시·반어 등 맥락적 뉘앙스 파악의 중요성 ➔ 특정 시공간적 상황에 기반한 화자 의도 식별의 필수성</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       Learning a language opens the door to learning about the way humans express themselves, interact with each other, and experience the social, cultural, and material world. Understanding what is said in a language requires far more than merely learning the meaning of words and memorizing the dictionary. To understand a joke or recognize an allusion, one needs to be attentive to the way words are used and the context that is assumed. Such a broader ability to use a language opens up the literature of a people, their culture, and their world. Language may also be used ironically, to evoke something else, or to lie, to mislead about intentions, or to hide one’s ideas. Discerning what people convey depends on understanding language as it was used at a particular time and place.
     </div>
