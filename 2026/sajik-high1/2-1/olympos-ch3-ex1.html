@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>사직고 1학년 올림포스 9대변별유형 — 3강 QN 29 기출 1번</title>
+<title>사직고 1학년 올림포스 9대변별유형 — 3강 QN 29 8번</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
@@ -123,6 +123,46 @@ h2.sec-title {
   font-size: 20px;
   font-weight: 900;
   margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
 }
 
 /* STEP 1: Full Passage */
@@ -325,9 +365,21 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 문화 간 전이(Cross-Cultural Transition) 및 문화적 불변항(Cultural Invariants)을 통한 자아 재창조(Becoming)</li>
+        <li><b>[배경 맥락]:</b> 모국을 떠나 낯선 문화에 적응하는 것은 정체성의 위기를 부르지만, 이전 문화를 버리지 않으면서도 타협할 수 없는 핵심 가치를 발견하고 자아를 확장하는 기회로 작용함</li>
+        <li><b>[논리 요약]:</b> 문화 횡단의 도전과 양방향 이해 ➔ 고통과 양가감정을 통한 새로운 통찰력 획득 ➔ '생성(Becoming)'과 문화적 불변항(Cultural Invariants) 재발견</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       The process of crossing cultures challenges the very basis of who we are as cultural beings. It offers opportunities for new learning and growth. Being “uprooted” from our home brings us understanding not only of the people and their culture in our new environment, but of ourselves and our home culture. Although the difficulties that can arise from crossing cultures are often shocking, success stories are everywhere. Despite, or rather because of, the suffering and ambivalence we undergo when we cross cultures, we gradually find ourselves uniquely privileged to define ourselves and others anew with clarity and insight that we could not have cultivated without leaving home. Adapting to a new and unfamiliar culture, then, is more than survival. It is a life-changing journey. It is a process of “becoming” ─ personal reinvention, transformation, growth, reaching out beyond the boundaries of our own existence. The process does not require that we abandon our former personalities and the cultures into which we were born. Rather, it compels us to find ourselves as if for the first time, particularly those “cultural invariants” within us ─ aspects that we hold dear and refuse to compromise.
     </div>
