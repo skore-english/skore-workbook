@@ -125,6 +125,46 @@ h2.sec-title {
   margin-bottom: 16px;
 }
 
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
 /* STEP 1: Full Passage */
 .full-passage-box {
   background: var(--white);
@@ -328,6 +368,18 @@ footer {
     <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
     <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
     
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 상황 의존적 동기 이론(Situational Motivation) 및 가변적 욕구 충동</li>
+        <li><b>[배경 맥락]:</b> 동기를 개인에게 고정된 영구적 성향으로 보는 기존 통념(Myth)을 반박하고 행동심리학적 유동성을 설명</li>
+        <li><b>[논리 요약]:</b> 고정된 실체 부정(comes and goes) ➔ 특정 시점과 즉각적 환경의 영향(specific drive & time) ➔ 뷔페 포식 비유를 통한 실증</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       Motivation is what helps us change ourselves, our situation, or our environment. All animals have motivation; it’s what stimulates them to find food, a safe place to sleep, and a mate. Contrary to popular belief, motivation isn’t a static thing that you either do or don’t have. It comes and goes. All animals appear to be motivated to secure food, safety, and companionship, but basically no one wants these things all the time. As humans, we’re motivated by far more than basic survival needs, but even still, we don’t pursue social acceptance, fast cars, or fancy jewelry all the time. Motivation is in part a specific drive to do a specific action at a specific time, and it’s highly influenced by what’s going on right now. For example, people love eating, but when we’ve just loaded up at the buffet, we’re less motivated to seek out food than if we haven’t eaten in a while.
     </div>
