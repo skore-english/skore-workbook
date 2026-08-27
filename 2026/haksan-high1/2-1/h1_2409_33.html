@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>2026 학산여고 1학년 2-1 — 학력고사 오답률 TOP6 33번</title>
+<title>2026 학산여고 1학년 2-1 — 학력고사 오답률 TOP6 33번 | SKORE ACADEMY</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
@@ -123,6 +123,46 @@ h2.sec-title {
   font-size: 20px;
   font-weight: 900;
   margin-bottom: 16px;
+}
+
+/* BACKGROUND KNOWLEDGE CSS */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
 }
 
 /* STEP 1: Full Passage */
@@ -284,7 +324,7 @@ footer {
 <header>
   <div class="wrap">
     <div class="masthead">
-      <span><b>Score Academy</b> High School Logic Series</span>
+      <span><b>SKORE ACADEMY</b> High School Logic Series</span>
       <span>2026 학산여고 1학년 2-1</span>
     </div>
     <div class="meta-badge">학력고사 오답률 TOP6 / 33번</div>
@@ -323,9 +363,22 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <!-- 지문 맞춤형 핵심 배경지식 배너 -->
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 본질주의(Essentialism) — 범주나 개념 이면에 고정불변의 숨겨진 실체가 반드시 존재할 것이라 믿는 인지적 오류</li>
+        <li><b>[배경 맥락]:</b> 19세기 물리학자들은 빛의 파동성을 설명하기 위해 우주 공간을 채우고 있다는 가상의 매질인 '에테르(Ether)'를 정설로 믿고 탐구함</li>
+        <li><b>[논리 요약]:</b> 잘못 정의된 개념은 과학자들로 하여금 '어두운 방에서 존재하지도 않는 검은 고양이'를 쫓는 헛된 실험과 이론화에 매몰되게 만듦</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       Concepts are vital to human survival, but we must also be careful with them because concepts open the door to essentialism. They encourage us to see things that aren’t present. Stuart Firestein opens his book, Ignorance, with an old proverb, “It is very difficult to find a black cat in a dark room, especially when there is no cat.” This statement beautifully sums up the search for essences. History has many examples of scientists who searched fruitlessly for an essence because they used the wrong concept to guide their hypotheses. Firestein gives the example of luminiferous ether, a mysterious substance that was thought to fill the universe so that light would have a medium to move through. The ether was a black cat, writes Firestein, and physicists had been theorizing in a dark room, and then experimenting in it, looking for evidence of a cat that did not exist.
     </div>
@@ -612,7 +665,7 @@ footer {
 </nav>
 <footer>
   <div class="wrap">
-    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+    SKORE ACADEMY Academic Intelligence · 5-Step Mobile-Optimized Learning System
   </div>
 </footer>
 
