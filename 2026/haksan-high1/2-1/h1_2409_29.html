@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>2026 학산여고 1학년 2-1 — 학력고사 오답률 TOP6 29번</title>
+<title>2026 학산여고 1학년 2-1 — 학력고사 오답률 TOP6 29번 | SKORE ACADEMY</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
@@ -123,6 +123,46 @@ h2.sec-title {
   font-size: 20px;
   font-weight: 900;
   margin-bottom: 16px;
+}
+
+/* BACKGROUND KNOWLEDGE CSS */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
 }
 
 /* STEP 1: Full Passage */
@@ -284,7 +324,7 @@ footer {
 <header>
   <div class="wrap">
     <div class="masthead">
-      <span><b>Score Academy</b> High School Logic Series</span>
+      <span><b>SKORE ACADEMY</b> High School Logic Series</span>
       <span>2026 학산여고 1학년 2-1</span>
     </div>
     <div class="meta-badge">학력고사 오답률 TOP6 / 29번</div>
@@ -325,9 +365,22 @@ footer {
 <!-- STEP 1: Full Passage -->
 <section id="step1">
   <div class="wrap">
-    <span class="sec-tag">STEP 01 · FULL PASSAGE & CORE CLAIM</span>
-    <h2 class="sec-title">전체 지문 정독 및 핵심 명제</h2>
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
     
+    <!-- 지문 맞춤형 핵심 배경지식 배너 -->
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 조직 사회학의 터널 시야(Tunnel Vision) 및 기계적 조직(수직 위계·규칙) vs 유기적 조직(수평 분산·자율성) 이론</li>
+        <li><b>[배경 맥락]:</b> 현대 조직에서 부서 간 갈등은 단순 개인 성격 차이가 아니라, 기능 중심의 분업 구조와 상명하복 위계질서라는 '구조적 요인'에서 기인함</li>
+        <li><b>[논리 요약]:</b> 각 부서는 기능적 편향으로 타인의 관점을 보지 못하며, 중앙집권적 수직 구조보다 분산된 수평적 유기 구조가 갈등 완화에 더 효과적임</li>
+      </ul>
+    </div>
+
     <div class="full-passage-box">
       From an organizational viewpoint, one of the most fascinating examples of how any organization may contain many different types of culture is to recognize the functional operations of different departments within the organization. The varying departments and divisions within an organization will inevitably view any given situation from their own biased and prejudiced perspective. A department and its members will acquire “tunnel vision” which disallows them to see things as others see them. The very structure of organizations can create conflict. The choice of whether the structure is “mechanistic” or “organic” can have a profound influence on conflict management. A mechanistic structure has a vertical hierarchy with many rules, many procedures, and many levels of management involved in decision making. Organic structures are more horizontal in nature, where decision making is less centralized and spread across the plane of the organization.
     </div>
@@ -616,7 +669,7 @@ footer {
 </nav>
 <footer>
   <div class="wrap">
-    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+    SKORE ACADEMY Academic Intelligence · 5-Step Mobile-Optimized Learning System
   </div>
 </footer>
 
