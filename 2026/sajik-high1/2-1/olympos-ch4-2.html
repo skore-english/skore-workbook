@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 사직고 1학년 2학기 중간 올림포스 9대변별유형 — 4강 QN30 2번</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background & Full Passage */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms ease;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Bottom Navigation */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #233252; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 사직고 1학년 2-1 올림포스 9대변별유형</span>
+    </div>
+    <div class="meta-badge">4강 QN30 / 2번</div>
+    <h1 class="title">Innovation Dynamics & IP Protection</h1>
+    <p class="header-lead">
+      모방과 무제한적 혁신 대 지식재산권 보호의 경제적 대립 구조
+    </p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Background Knowledge & Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 창작적 노동에 대한 소유권(지식재산권) 보장과 개방적 모방을 통한 무제한적 혁신(Vibrant Competition & Unrestricted Innovation) 간의 상충 관계.</li>
+        <li><b>[배경 맥락]:</b> 패션, 요리, 스포츠 전술 등은 모방이 합법화되어 빠른 트렌드 순환과 경쟁을 유도하지만, 음반 산업 등은 강력한 법적 로비로 저작권을 보호하려다 대중적 반발에 직면함.</li>
+        <li><b>[논리 요약]:</b> 현대 경제의 여러 분야는 창작 독점권보다 자유로운 경쟁을 선택했으며, 강력한 소유권 보호 조치가 반드시 불법 복제를 막거나 긍정적 결과를 낳는 것은 아님.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      In fashion, designers build fortunes based on copying each other’s creations. The labor that goes into original dress designs is not protected. Knockoffs are not theft. They are perfectly legal. In many pockets of the modern economy ─ chefs’ recipes, coaches’ sports plays, stand-up comedians’ routines, and numerous other creative arenas ─ we have decided that vibrant competition and unrestricted innovation matter more than rewarding creative labor with ownership. In other words, the rule is often I reap what you sow. Every year fashion designers push Congress to change the rules, so they can reap what they “sew,” but they lose. The music recording industry, on the other hand, was more effective than the high-end fashion houses at lobbying Congress. It secured legislation so that digital music conforms to the industry’s ownership story. Based on that law, the industry has filed, settled, or threatened legal action against at least thirty thousand people. Unfortunately for the big music labels, all that activity hasn’t ended illegal downloading ─ but it did turn popular opinion against them.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 패션을 비롯한 여러 창의적 분야에서는 <b>자유로운 모방과 경쟁이 혁신의 동력</b>으로 허용되는 반면, 엄격한 <b>소유권 보호를 관철한 음반 산업은 불법 복제를 근절하지 못한 채 대중적 반발</b>만 샀다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">
+          1. In fashion, designers build fortunes based on <mark>copying each other’s creations</mark>. The labor that goes into original dress designs is not protected.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 패션계에서 디자이너들은 서로의 창작물을 모방하는 것에 기반하여 부를 쌓는다. 독창적인 드레스 디자인에 들어가는 노동은 보호받지 못한다.<br>
+            <b>[핵심 어휘]</b> build fortunes (부를 쌓다), creation (창작물), original (독창적인), protect (보호하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          2. <mark>Knockoffs</mark> are not theft. They are perfectly <mark>legal</mark>.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 모조품(카피 제품)은 절도가 아니다. 그것들은 완벽하게 합법적이다.<br>
+            <b>[핵심 어휘]</b> knockoff (모조품, 모방작), theft (절도, 도둑질), legal (합법적인)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          3. In many pockets of the modern economy ─ chefs’ recipes, coaches’ sports plays, stand-up comedians’ routines, and numerous other creative arenas ─ we have decided that <mark>vibrant competition</mark> and <mark>unrestricted innovation</mark> matter more than rewarding creative labor with ownership.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 현대 경제의 여러 영역(요리사의 레시피, 코치의 스포츠 전술, 스탠드업 코미디언의 레퍼토리, 그리고 수많은 다른 창의적 분야)에서, 우리는 창의적 노동에 소유권으로 보상하는 것보다 활발한 경쟁과 제한 없는 혁신이 더 중요하다고 결정해 왔다.<br>
+            <b>[핵심 어휘]</b> pockets (일부 구역/분야), routine (정해진 레퍼토리), vibrant (활발한, 역동적인), unrestricted (제한 없는), matter (중요하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          4. In other words, the rule is often <mark>I reap what you sow</mark>. Every year fashion designers push Congress to change the rules, so they can reap what they “sew,” but they lose.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 다시 말해, 그 규칙은 종종 ‘네가 뿌린(뿌린 씨앗) 것을 내가 거둔다’는 것이다. 매년 패션 디자이너들은 자신들이 ‘바느질한(sew)’ 것을 거둘 수 있도록 규정을 바꾸라고 의회를 압박하지만, 그들은 패배한다.<br>
+            <b>[핵심 어휘]</b> reap (거두다, 수확하다), sow (씨를 뿌리다), push (압박하다, 촉구하다), Congress (의회)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          5. The music recording industry, on the other hand, was more effective than the <mark>high-end fashion houses</mark> at <mark>lobbying Congress</mark>. It secured legislation so that digital music <mark>conforms to</mark> the industry’s ownership story.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 반면에 음반 산업은 의회에 로비하는 데 있어서 고급 패션 하우스들보다 더 효과적이었다. 음반 산업은 디지털 음악이 자신들의 소유권 논리에 부합하도록 법안을 확보했다.<br>
+            <b>[핵심 어휘]</b> high-end (고급의), lobbying (로비 활동), legislation (입법, 법안), conform to (~에 순응하다/따르다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">
+          6. Based on that law, the industry has filed, settled, or threatened legal action against at least thirty thousand people. Unfortunately for the big music labels, all that activity hasn’t ended illegal downloading ─ but it did <mark>turn popular opinion against</mark> them.
+        </div>
+        <details>
+          <summary>직독직해 및 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 법에 기반하여, 음반 산업은 최소 3만 명의 사람들에게 법적 조치를 제기하거나, 합의하거나, 위협해 왔다. 대형 음반사들에게는 안타깝게도, 그 모든 활동은 불법 다운로드를 끝내지 못했고 ─ 오히려 대중의 여론이 그들에게 등을 돌리게 만들었다.<br>
+            <b>[핵심 어휘]</b> legal action (법적 조치/소송), file (소를 제기하다), settle (합의하다), popular opinion (대중 여론), turn against (~에 반대하게 만들다/등돌리게 하다)
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (모방 허용 분야 ➔ 입법 대조 ➔ 역효과 귀결)</h2>
+
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[원리·현상] Unrestricted Innovation</span>
+        <h4>모방을 통한 혁신과 합법성</h4>
+        <p>패션, 요리, 스포츠 등에서는 창의적 노동의 독점보다 <b>활발한 경쟁(Vibrant Competition)</b>을 우선시하여 카피(Knockoffs)를 합법으로 인정함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[대조·입법] Industry Contrast</span>
+        <h4>패션계의 패배 vs 음반계의 승리</h4>
+        <p>패션계는 소유권 보호 법안 마련에 실패한 반면, 음반 산업은 <b>성공적인 의회 로비</b>를 통해 디지털 음악의 엄격한 저작권 법제화를 달성함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결과·역풍] Unintended Consequence</span>
+        <h4>법적 조치의 한계와 여론 악화</h4>
+        <p>수만 건의 소송전에도 불구하고 <b>불법 복제 근절 실패</b>는 물론, 대형 레이블에 대한 <b>대중적 반감과 여론 악화(Backlash)</b>만 초래함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+
+    <div class="drill-card">
+      <div class="drill-q">Q1. In many pockets of the modern economy, we have decided that competition and innovation matter more than [reward / rewarding] creative labor with ownership.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 비교 대상의 병렬 구조이자 전치사적 성격의 than 뒤에서 동명사구를 이루어야 하므로 동사원형 reward는 올 수 없습니다.">reward</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! '창의적 노동에 소유권으로 보상하는 것'이라는 동명사구 형태로 비교 구문(matter more than ~)의 대상이 되므로 rewarding이 적절합니다.">rewarding</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">Q2. Unfortunately for the big music labels, all that activity hasn’t ended illegal downloading ─ but it [did / was] turn popular opinion against them.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 일반동사(turn)를 강조하는 강조의 조동사이므로 과거시제에 맞추어 did가 적절합니다. (did turn = 정말로 돌아서게 만들었다)">did</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒤에 동사원형 turn이 이어지므로 be동사 was는 올 수 없습니다. (was turned 수동태 구조가 아님)">was</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문항 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[문항 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        In fashion, designers build fortunes based on copying each other’s creations. The labor that goes into original dress designs is not protected. Knockoffs are not theft. They are perfectly legal. In many pockets of the modern economy ─ chefs’ recipes, coaches’ sports plays, stand-up comedians’ routines, and numerous other creative arenas ─ we have decided that ___________________________________ matter more than rewarding creative labor with ownership. In other words, the rule is often I reap what you sow.
+      </div>
+      <div class="exam-choices">
+        ① establishing rigorous international patent standards<br>
+        ② vibrant competition and unrestricted innovation<br>
+        ③ protecting individual copyrights above all practical gains<br>
+        ④ securing exclusive proprietary profits for original creators<br>
+        ⑤ minimizing public access to preserve cultural uniqueness
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 패션, 요리, 스포츠 등 여러 창의적 영역에서는 창작 노동에 소유권을 부여하는 것보다 모방을 허용하여 얻는 '활발한 경쟁과 제한 없는 혁신(vibrant competition and unrestricted innovation)'을 더 중시한다는 것이 핵심 주장이므로 ②번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[문항 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        In fashion, designers build fortunes based on copying each other’s creations. The labor that goes into original dress designs is not protected. Knockoffs are not theft. They are perfectly legal.<br><br>
+        (A) The music recording industry, on the other hand, was more effective than the high-end fashion houses at lobbying Congress. It secured legislation so that digital music conforms to the industry’s ownership story.<br><br>
+        (B) In many pockets of the modern economy, we have decided that vibrant competition and unrestricted innovation matter more than rewarding creative labor with ownership. Every year fashion designers push Congress to change the rules, but they lose.<br><br>
+        (C) Based on that law, the industry has filed, settled, or threatened legal action against at least thirty thousand people. Unfortunately for the big music labels, all that activity hasn’t ended illegal downloading ─ but it did turn popular opinion against them.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 패션계의 모방 합법성과 패션 디자이너들의 입법 실패를 일반 원리로 상술하는 (B)가 먼저 오고, 'on the other hand'로 대조를 이루며 의회 로비에 성공한 음반 산업을 소개하는 (A)가 이어진 뒤, 그 법안(that law)에 기반한 소송의 역효과를 설명하는 (C)로 이어지는 흐름이 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[문항 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> The music recording industry, on the other hand, was more effective than the high-end fashion houses at lobbying Congress.<br><br>
+        In fashion, designers build fortunes based on copying each other’s creations. ( ① ) In many pockets of the modern economy, we have decided that vibrant competition and unrestricted innovation matter more than rewarding creative labor with ownership. ( ② ) Every year fashion designers push Congress to change the rules, so they can reap what they “sew,” but they lose. ( ③ ) It secured legislation so that digital music conforms to the industry’s ownership story. ( ④ ) Based on that law, the industry has filed, settled, or threatened legal action against at least thirty thousand people. ( ⑤ ) Unfortunately for the big music labels, all that activity hasn’t ended illegal downloading ─ but it did turn popular opinion against them.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 패션 디자이너들이 의회 규칙 개정에 번번이 실패한다는 내용(② 다음) 뒤에, 이와 대조적으로 의회 로비에 성공했다는 음반 산업의 사례(주어진 문장)가 위치해야 ③번 뒤의 대명사 'It(음반 산업)'이 자연스럽게 연결됩니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[문항 4] 다음 요약문의 빈칸 (A), (B)에 들어갈 알맞은 말을 본문 단어를 활용하여 [조건]에 맞게 작성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[요약문]</b> While fields like fashion prioritize open competition by leaving designs <b>(A) [          ]</b> by copyright, the recording industry enforced strict <b>(B) [          ]</b> rights, only to provoke negative public sentiment without stopping piracy.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 윗글 본문에 등장하는 단어를 찾아 문맥 및 어법에 맞게 작성할 것 (필요 시 어형 변형).<br>
+        2. (A)는 과거분사/형용사 1단어(본문의 protect 활용), (B)는 명사 1단어로 작성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: (A) unprotected / (B) ownership</b><br>
+          <b>해설:</b> 패션 분야는 디자인을 저작권에 의해 '보호받지 않는(unprotected)' 상태로 두어 경쟁을 우선시한 반면, 음반 산업은 엄격한 '소유권(ownership)'을 강제했으나 대중의 반발만 샀다는 내용이므로 알맞은 단어는 각각 unprotected와 ownership입니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
