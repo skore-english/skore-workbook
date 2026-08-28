@@ -13,12 +13,21 @@
   --navy: #0B1220;
   --paper: #F8FAFC;
   --white: #FFFFFF;
-  --brand-red: #cb1d06;
-  --brand-red-light: #ea2e15;
-  --brand-red-tag: rgba(203, 29, 6, 0.08);
-  --brand-red-border: rgba(203, 29, 6, 0.25);
-  --cyan: #0E8F9E;
-  --amber: #B8791A;
+  
+  /* Section 01 테마 (Brand Red) */
+  --sec1-accent: #cb1d06;
+  --sec1-accent-light: #ea2e15;
+  --sec1-tag-bg: rgba(203, 29, 6, 0.08);
+  --sec1-border: rgba(203, 29, 6, 0.25);
+  --sec1-shadow: rgba(203, 29, 6, 0.08);
+
+  /* Section 02 테마 (Deep Royal Blue) */
+  --sec2-accent: #1D4ED8;
+  --sec2-accent-light: #3B82F6;
+  --sec2-tag-bg: rgba(29, 78, 216, 0.08);
+  --sec2-border: rgba(29, 78, 216, 0.25);
+  --sec2-shadow: rgba(29, 78, 216, 0.08);
+
   --text-main: #0F172A;
   --text-muted: #64748B;
   --border: #E2E8F0;
@@ -41,7 +50,7 @@ header {
   background: var(--navy);
   color: var(--white);
   padding: 40px 0 32px;
-  border-bottom: 3px solid var(--brand-red);
+  border-bottom: 3px solid var(--sec1-accent);
 }
 .masthead {
   display: flex;
@@ -62,7 +71,7 @@ header {
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 600;
-  color: var(--brand-red-light);
+  color: var(--sec1-accent-light);
   background: rgba(203, 29, 6, 0.18);
   padding: 4px 10px;
   border-radius: 4px;
@@ -75,7 +84,7 @@ h1.title {
   line-height: 1.35;
   margin-bottom: 10px;
 }
-h1.title span { color: var(--brand-red-light); }
+h1.title span { color: var(--sec1-accent-light); }
 .header-lead {
   font-size: 14px;
   color: #CBD5E1;
@@ -109,7 +118,7 @@ h1.title span { color: var(--brand-red-light); }
 }
 
 main { padding: 36px 0 60px; }
-.section-group { margin-bottom: 40px; }
+.section-group { margin-bottom: 44px; }
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -122,9 +131,11 @@ main { padding: 36px 0 60px; }
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 700;
-  color: var(--brand-red);
   letter-spacing: 0.08em;
 }
+.sec-tag.red { color: var(--sec1-accent); }
+.sec-tag.blue { color: var(--sec2-accent); }
+
 .sec-count {
   font-family: var(--mono);
   font-size: 12px;
@@ -136,6 +147,8 @@ main { padding: 36px 0 60px; }
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 16px;
 }
+
+/* Base Card Style */
 .card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -157,13 +170,7 @@ main { padding: 36px 0 60px; }
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--brand-red);
   opacity: 0.9;
-}
-.card:active, .card:hover {
-  transform: translateY(-2px);
-  border-color: var(--brand-red);
-  box-shadow: 0 8px 16px rgba(203, 29, 6, 0.08);
 }
 .card-header {
   display: flex;
@@ -175,9 +182,6 @@ main { padding: 36px 0 60px; }
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 700;
-  color: var(--brand-red);
-  background: var(--brand-red-tag);
-  border: 1px solid var(--brand-red-border);
   padding: 3px 8px;
   border-radius: 4px;
 }
@@ -222,19 +226,34 @@ main { padding: 36px 0 60px; }
   color: var(--text-muted);
   font-weight: 600;
 }
-.card-action {
-  font-weight: 700;
-  color: var(--brand-red);
+.card-action { font-weight: 700; }
+
+/* === Section 01 (Red Theme) === */
+.card-red::before { background: var(--sec1-accent); }
+.card-red .card-num {
+  color: var(--sec1-accent);
+  background: var(--sec1-tag-bg);
+  border: 1px solid var(--sec1-border);
+}
+.card-red .card-action { color: var(--sec1-accent); }
+.card-red:active, .card-red:hover {
+  transform: translateY(-2px);
+  border-color: var(--sec1-accent);
+  box-shadow: 0 8px 16px var(--sec1-shadow);
 }
 
-.empty-box {
-  background: var(--white);
-  border: 1px dashed var(--border);
-  border-radius: 8px;
-  padding: 24px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--text-muted);
+/* === Section 02 (Blue Theme) === */
+.card-blue::before { background: var(--sec2-accent); }
+.card-blue .card-num {
+  color: var(--sec2-accent);
+  background: var(--sec2-tag-bg);
+  border: 1px solid var(--sec2-border);
+}
+.card-blue .card-action { color: var(--sec2-accent); }
+.card-blue:active, .card-blue:hover {
+  transform: translateY(-2px);
+  border-color: var(--sec2-accent);
+  box-shadow: 0 8px 16px var(--sec2-shadow);
 }
 
 footer {
@@ -281,16 +300,16 @@ footer {
 <main>
   <div class="wrap">
 
-    <!-- [섹션 1] 2024년 9월 학력평가 -->
+    <!-- [섹션 1] 2024년 9월 학력평가 (RED) -->
     <section class="section-group">
       <div class="section-header">
-        <span class="sec-tag">SECTION 01 · 2024년 9월 학력평가 TOP 6</span>
+        <span class="sec-tag red">SECTION 01 · 2024년 9월 학력평가 TOP 6</span>
         <span class="sec-count">6개 문항 완제</span>
       </div>
 
       <div class="grid">
         <!-- 29번 -->
-        <a href="h1_2409_29.html" class="card">
+        <a href="h1_2409_29.html" class="card card-red">
           <div>
             <div class="card-header">
               <span class="card-num">2024 9월 · 29번</span>
@@ -306,7 +325,7 @@ footer {
         </a>
 
         <!-- 31번 -->
-        <a href="h1_2409_31.html" class="card">
+        <a href="h1_2409_31.html" class="card card-red">
           <div>
             <div class="card-header">
               <span class="card-num">2024 9월 · 31번</span>
@@ -322,7 +341,7 @@ footer {
         </a>
 
         <!-- 33번 -->
-        <a href="h1_2409_33.html" class="card">
+        <a href="h1_2409_33.html" class="card card-red">
           <div>
             <div class="card-header">
               <span class="card-num">2024 9월 · 33번</span>
@@ -338,7 +357,7 @@ footer {
         </a>
 
         <!-- 34번 -->
-        <a href="h1_2409_34.html" class="card">
+        <a href="h1_2409_34.html" class="card card-red">
           <div>
             <div class="card-header">
               <span class="card-num">2024 9월 · 34번</span>
@@ -354,7 +373,7 @@ footer {
         </a>
 
         <!-- 39번 -->
-        <a href="h1_2409_39.html" class="card">
+        <a href="h1_2409_39.html" class="card card-red">
           <div>
             <div class="card-header">
               <span class="card-num">2024 9월 · 39번</span>
@@ -370,7 +389,7 @@ footer {
         </a>
 
         <!-- 41~42번 -->
-        <a href="h1_2409_4142.html" class="card">
+        <a href="h1_2409_4142.html" class="card card-red">
           <div>
             <div class="card-header">
               <span class="card-num">2024 9월 · 41~42번</span>
@@ -387,14 +406,109 @@ footer {
       </div>
     </section>
 
-    <!-- [섹션 2] 2025년 9월 학력평가 -->
+    <!-- [섹션 2] 2025년 9월 학력평가 (BLUE) -->
     <section class="section-group">
       <div class="section-header">
-        <span class="sec-tag">SECTION 02 · 2025년 9월 학력평가 TOP 6</span>
-        <span class="sec-count">업로드 준비 중</span>
+        <span class="sec-tag blue">SECTION 02 · 2025년 9월 학력평가 TOP 6</span>
+        <span class="sec-count">6개 문항 완제</span>
       </div>
-      <div class="empty-box">
-        2025년 9월 학력평가 지문 워크북 작업 후 카드가 추가될 예정입니다.
+
+      <div class="grid">
+        <!-- 29번 -->
+        <a href="h1_2509_29.html" class="card card-blue">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2025 9월 · 29번</span>
+              <span class="card-tag">어법</span>
+            </div>
+            <h2 class="card-title">초식동물의 위협 반응 유형과 가축화 가능성의 상관관계</h2>
+            <p class="card-desc">Flight Reaction & Mammalian Domestication</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 31번 -->
+        <a href="h1_2509_31.html" class="card card-blue">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2025 9월 · 31번</span>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">인간의 정서적 적응과 기준치 회귀 메커니즘</h2>
+            <p class="card-desc">Hedonic Adaptation & Baseline Well-Being</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 33번 -->
+        <a href="h1_2509_33.html" class="card card-blue">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2025 9월 · 33번</span>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">측정 불확실성의 상대성과 활용 목적에 따른 정밀도 기준</h2>
+            <p class="card-desc">Relativity of Scientific Uncertainty</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 34번 -->
+        <a href="h1_2509_34.html" class="card card-blue">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2025 9월 · 34번</span>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">재생에너지 인프라 구축 과정의 화석연료 의존 역설</h2>
+            <p class="card-desc">The Paradox of Renewable Transition</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 39번 -->
+        <a href="h1_2509_39.html" class="card card-blue">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2025 9월 · 39번</span>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">도덕적 인간 판단에 있어 의도와 실제 결과의 상호 결합 관계</h2>
+            <p class="card-desc">Ethics of Intentions and Outcomes</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 41~42번 -->
+        <a href="h1_2509_4142.html" class="card card-blue">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2025 9월 · 41~42번</span>
+              <span class="card-tag">장문 복합</span>
+            </div>
+            <h2 class="card-title">고객의 방어 심리를 해제하는 효과적인 매장 접근 및 응대 전략</h2>
+            <p class="card-desc">Customer Psychology & Retail Opening Questions</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
       </div>
     </section>
 
