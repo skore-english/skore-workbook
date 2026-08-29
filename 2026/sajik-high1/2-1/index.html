@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 사직고 1학년 2학기 중간고사 워크북 허브 | SKORE ACADEMY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+
+  /* 섹션별 테마 컬러 */
+  --sec1-color: #cb1d06; /* SKORE Red */
+  --sec1-bg: #fffbfb;
+  --sec1-border: #fecaca;
+
+  --sec2-color: #ea580c; /* Warm Orange */
+  --sec2-bg: #fffaf5;
+  --sec2-border: #fed7aa;
+
+  --sec3-color: #d97706; /* Amber Gold */
+  --sec3-bg: #fffdf5;
+  --sec3-border: #fde68a;
+
+  --sec4-color: #0284c7; /* Cobalt Blue */
+  --sec4-bg: #f5faff;
+  --sec4-border: #bae6fd;
+
+  --sec5-color: #7c3aed; /* Deep Purple */
+  --sec5-bg: #faf5ff;
+  --sec5-border: #ddd6fe;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+/* Hero Header */
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 40px 0 32px;
+  border-bottom: 3px solid var(--brand-red);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: #ea2e15;
+  background: rgba(203, 29, 6, 0.18);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 4.5vw, 32px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+h1.title span { color: #ea2e15; }
+.header-lead {
+  font-size: 14px;
+  color: #CBD5E1;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 24px 0 0;
+}
+.stat-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+.stat-val {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+}
+.stat-lbl {
+  font-size: 10.5px;
+  color: #8FA0B8;
+}
+
+/* Main Section */
+main { padding: 36px 0 60px; }
+.section-group { margin-bottom: 44px; }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.sec-count {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Grid & Base Card */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+.card {
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+}
+.card:active, .card:hover {
+  transform: translateY(-2px);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.card-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  border-width: 1px;
+  border-style: solid;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.card-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.card-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.45;
+  color: var(--navy);
+  margin-bottom: 6px;
+  word-break: keep-all;
+}
+.card-desc {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+.card-steps {
+  font-family: var(--mono);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.card-action {
+  font-weight: 700;
+}
+
+/* Section Specific Styling */
+.sec-1 .sec-tag { color: var(--sec1-color); }
+.sec-1 .card { background: var(--sec1-bg); border-color: var(--sec1-border); }
+.sec-1 .card::before { background: var(--sec1-color); }
+.sec-1 .card-num { color: var(--sec1-color); background: rgba(203, 29, 6, 0.08); border-color: rgba(203, 29, 6, 0.25); }
+.sec-1 .card-action { color: var(--sec1-color); }
+.sec-1 .card:hover { border-color: var(--sec1-color); box-shadow: 0 8px 16px rgba(203, 29, 6, 0.1); }
+
+.sec-2 .sec-tag { color: var(--sec2-color); }
+.sec-2 .card { background: var(--sec2-bg); border-color: var(--sec2-border); }
+.sec-2 .card::before { background: var(--sec2-color); }
+.sec-2 .card-num { color: var(--sec2-color); background: rgba(234, 88, 12, 0.08); border-color: rgba(234, 88, 12, 0.25); }
+.sec-2 .card-action { color: var(--sec2-color); }
+.sec-2 .card:hover { border-color: var(--sec2-color); box-shadow: 0 8px 16px rgba(234, 88, 12, 0.1); }
+
+.sec-3 .sec-tag { color: var(--sec3-color); }
+.sec-3 .card { background: var(--sec3-bg); border-color: var(--sec3-border); }
+.sec-3 .card::before { background: var(--sec3-color); }
+.sec-3 .card-num { color: var(--sec3-color); background: rgba(217, 119, 6, 0.08); border-color: rgba(217, 119, 6, 0.25); }
+.sec-3 .card-action { color: var(--sec3-color); }
+.sec-3 .card:hover { border-color: var(--sec3-color); box-shadow: 0 8px 16px rgba(217, 119, 6, 0.1); }
+
+.sec-4 .sec-tag { color: var(--sec4-color); }
+.sec-4 .card { background: var(--sec4-bg); border-color: var(--sec4-border); }
+.sec-4 .card::before { background: var(--sec4-color); }
+.sec-4 .card-num { color: var(--sec4-color); background: rgba(2, 132, 199, 0.08); border-color: rgba(2, 132, 199, 0.25); }
+.sec-4 .card-action { color: var(--sec4-color); }
+.sec-4 .card:hover { border-color: var(--sec4-color); box-shadow: 0 8px 16px rgba(2, 132, 199, 0.1); }
+
+.sec-5 .sec-tag { color: var(--sec5-color); }
+.sec-5 .card { background: var(--sec5-bg); border-color: var(--sec5-border); }
+.sec-5 .card::before { background: var(--sec5-color); }
+.sec-5 .card-num { color: var(--sec5-color); background: rgba(124, 58, 237, 0.08); border-color: rgba(124, 58, 237, 0.25); }
+.sec-5 .card-action { color: var(--sec5-color); }
+.sec-5 .card:hover { border-color: var(--sec5-color); box-shadow: 0 8px 16px rgba(124, 58, 237, 0.1); }
+
+.empty-box {
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 28px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> High Logic Series</span>
+      <span>2026 Academic Season</span>
+    </div>
+    <div class="meta-badge">2026 사직고 1학년 2학기 중간시험 대비</div>
+    <h1 class="title">올림포스 9대변별유형<br><span>5단계 인터랙티브 워크북</span></h1>
+    <p class="header-lead">
+      올림포스 9대변별유형 사직고1학년 2학기 중간시험 범위 (총 40문항)에 대한 5단계 논리 분해 학습 시스템(원문 정독 ➔ 디코딩 ➔ 논리 구조도 ➔ 어법 드릴 ➔ 4대 실전 변형 문제) 허브입니다.
+    </p>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-val">올림포스</span>
+        <span class="stat-lbl">9대변별유형</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">2학기 중간 시험 범위</span>
+        <span class="stat-lbl">40 PASSAGES</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">5 STEPS</span>
+        <span class="stat-lbl">단계별 학습 체계</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- [SECTION 01] 올림포스 2강 (Red Theme) -->
+    <section class="section-group sec-1">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 01 · 올림포스 2강 (QN23,24 주제,제목)</span>
+        <span class="sec-count">6개 문항 완제</span>
+      </div>
+
+      <div class="grid">
+        <a href="olympos-ch2-3.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2강 · 3번</span>
+              <span class="card-tag">주제 추론</span>
+            </div>
+            <h2 class="card-title">지식 기반 사회와 지식재산권(IP)의 독점적 보호</h2>
+            <p class="card-desc">The Necessity of Intellectual Property Protection for Knowledge-Based Markets</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch2-4.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2강 · 4번</span>
+              <span class="card-tag">제목 추론</span>
+            </div>
+            <h2 class="card-title">기술이 변화시킨 음악 생태계 전반의 혁신</h2>
+            <p class="card-desc">How Technology Has Revolutionized the Entire Music Ecosystem</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch2-5.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2강 · 5번</span>
+              <span class="card-tag">주제 추론</span>
+            </div>
+            <h2 class="card-title">동기의 역동적·상황적 가변성</h2>
+            <p class="card-desc">The Dynamic and Situational Nature of Motivation</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch2-6.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2강 · 6번</span>
+              <span class="card-tag">제목 추론</span>
+            </div>
+            <h2 class="card-title">습관화 방지를 위한 잦은 짧은 휴식</h2>
+            <p class="card-desc">The Power of Strategic Short Breaks to Prevent Habituation</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch2-7.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2강 · 7번</span>
+              <span class="card-tag">주제 추론</span>
+            </div>
+            <h2 class="card-title">현대 이벤트 기획의 지속가능성과 생존 전략</h2>
+            <p class="card-desc">The Imperative of Sustainability in Event Management</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch2-8.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">2강 · 8번</span>
+              <span class="card-tag">제목 추론</span>
+            </div>
+            <h2 class="card-title">심오하고 복잡한 과학적 발견의 본질과 단순 요약의 불가능성</h2>
+            <p class="card-desc">The Inherent Incompressibility of Deep Scientific Insights</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- [SECTION 02] 올림포스 3강 (Orange Theme) -->
+    <section class="section-group sec-2">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 02 · 올림포스 3강 (QN29 어법)</span>
+        <span class="sec-count">10개 문항 완제</span>
+      </div>
+
+      <div class="grid">
+        <a href="olympos-ch3-g1.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 기출 1번</span>
+              <span class="card-tag">어법 킬러</span>
+            </div>
+            <h2 class="card-title">타문화 적응과 자기 재창조</h2>
+            <p class="card-desc">Cultural Crossing and Personal Growth</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-g2.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 기출 2번</span>
+              <span class="card-tag">어법 킬러</span>
+            </div>
+            <h2 class="card-title">동기부여와 내적 잠재력</h2>
+            <p class="card-desc">Motivation in The Wizard of Oz</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-1.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 1번</span>
+              <span class="card-tag">어법 연습</span>
+            </div>
+            <h2 class="card-title">아동 발달을 이끄는 이야기의 힘</h2>
+            <p class="card-desc">Narrative Power in Child Development</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-2.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 2번</span>
+              <span class="card-tag">어법 연습</span>
+            </div>
+            <h2 class="card-title">링컨의 확고한 진실성과 도덕성</h2>
+            <p class="card-desc">Abraham Lincoln and Moral Integrity</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-3.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 3번</span>
+              <span class="card-tag">어법 연습</span>
+            </div>
+            <h2 class="card-title">신체 움직임과 창의적 사고의 연결</h2>
+            <p class="card-desc">Physical Movement and Creative Thinking</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-4.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 4번</span>
+              <span class="card-tag">어법 연습</span>
+            </div>
+            <h2 class="card-title">기초 과학 연구 지원의 중요성</h2>
+            <p class="card-desc">The Role of Private Research Grants</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-5.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 5번</span>
+              <span class="card-tag">어법 연습</span>
+            </div>
+            <h2 class="card-title">생태계 복잡성과 스트레스 저항력</h2>
+            <p class="card-desc">Ecosystem Complexity and Stress Resistance</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-6.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 6번</span>
+              <span class="card-tag">어법 연습</span>
+            </div>
+            <h2 class="card-title">정적 우주론의 허구와 아인슈타인</h2>
+            <p class="card-desc">Einstein and the Static Universe Myth</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-7.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 7번</span>
+              <span class="card-tag">어법 연습</span>
+            </div>
+            <h2 class="card-title">만성 스트레스 극복과 관여 윤리</h2>
+            <p class="card-desc">Overcoming Stress via Social Engagement</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="olympos-ch3-8.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">3강 · 8번</span>
+              <span class="card-tag">어법 연습</span>
+            </div>
+            <h2 class="card-title">환경 적응의 한계와 서식지 이동</h2>
+            <p class="card-desc">Limits of Adaptation and Habitat Migration</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- [SECTION 03] 올림포스 4강 (Amber Theme) -->
+    <section class="section-group sec-3">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 03 · 올림포스 4강</span>
+        <span class="sec-count">4개 문항 제작 예정</span>
+      </div>
+      <div class="empty-box">
+        올림포스 4강 지문(4개 문항) 워크북 제작 후 카드가 연동됩니다.
+      </div>
+    </section>
+
+    <!-- [SECTION 04] 올림포스 6강 (Cobalt Theme) -->
+    <section class="section-group sec-4">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 04 · 올림포스 6강 (QN33,34 빈칸)</span>
+        <span class="sec-count">10개 문항 완제</span>
+      </div>
+
+      <div class="grid">
+        <!-- 기출 1번 -->
+        <a href="olympos-ch6-ex1.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 기출 1번</span>
+              <span class="card-tag">빈칸 킬러</span>
+            </div>
+            <h2 class="card-title">기술 자동화와 전문가의 인지 부하 감소</h2>
+            <p class="card-desc">Automaticity Reduces Cognitive Load for Experts</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 기출 2번 -->
+        <a href="olympos-ch6-ex2.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 기출 2번</span>
+              <span class="card-tag">빈칸 킬러</span>
+            </div>
+            <h2 class="card-title">글로벌 영어 환경과 초언어적 접근법</h2>
+            <p class="card-desc">Translingual Approach in Global English</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 1번 -->
+        <a href="olympos-ch6-1.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 1번</span>
+              <span class="card-tag">빈칸 연습</span>
+            </div>
+            <h2 class="card-title">초기 광합성과 눈덩이 지구 사건</h2>
+            <p class="card-desc">Early Photosynthesis and Snowball Earth</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 2번 -->
+        <a href="olympos-ch6-2.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 2번</span>
+              <span class="card-tag">빈칸 연습</span>
+            </div>
+            <h2 class="card-title">영상 매체의 광범위한 접근성과 시각적 소통</h2>
+            <p class="card-desc">Widespread Accessibility of Moving Images</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 3번 -->
+        <a href="olympos-ch6-3.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 3번</span>
+              <span class="card-tag">빈칸 연습</span>
+            </div>
+            <h2 class="card-title">개인 기여도와 사회적 태만의 메커니즘</h2>
+            <p class="card-desc">Mechanisms of Social Loafing</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 4번 -->
+        <a href="olympos-ch6-4.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 4번</span>
+              <span class="card-tag">빈칸 연습</span>
+            </div>
+            <h2 class="card-title">신체 감각 인지를 통한 공감 활성화와 정서 안정</h2>
+            <p class="card-desc">Activating Empathy for Self-Soothing</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 5번 -->
+        <a href="olympos-ch6-5.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 5번</span>
+              <span class="card-tag">빈칸 연습</span>
+            </div>
+            <h2 class="card-title">진화적 적응에서의 무작위 돌연변이와 유전적 전달</h2>
+            <p class="card-desc">Random Mutation in Evolutionary Adaptations</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 6번 -->
+        <a href="olympos-ch6-6.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 6번</span>
+              <span class="card-tag">빈칸 연습</span>
+            </div>
+            <h2 class="card-title">언어 습득에서의 맥락적 이해와 문화적 통찰</h2>
+            <p class="card-desc">Contextual Understanding in Language Acquisition</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 7번 -->
+        <a href="olympos-ch6-7.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 7번</span>
+              <span class="card-tag">빈칸 연습</span>
+            </div>
+            <h2 class="card-title">일상 물리적 사물로 확장된 코드와 알고리즘 규칙</h2>
+            <p class="card-desc">The Physical Empire of Code</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <!-- 8번 -->
+        <a href="olympos-ch6-8.html" class="card">
+          <div>
+            <div class="card-header">
+              <span class="card-num">6강 · 8번</span>
+              <span class="card-tag">빈칸 연습</span>
+            </div>
+            <h2 class="card-title">조직 내 사적 관계와 역할 갈등의 딜레마</h2>
+            <p class="card-desc">The Hazards of Workplace Friendships</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- [SECTION 05] 올림포스 7강 (Purple Theme) -->
+    <section class="section-group sec-5">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 05 · 올림포스 7강</span>
+        <span class="sec-count">10개 문항 제작 예정</span>
+      </div>
+      <div class="empty-box">
+        올림포스 7강 지문(10개 문항) 워크북 제작 후 카드가 연동됩니다.
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    SKORE ACADEMY Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+</body>
+</html>
