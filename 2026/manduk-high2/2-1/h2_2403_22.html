@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 3월 고2 학평 22번 | 스코어학원 워크북</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 만덕고2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 3월 고2 학평 22번</div>
+    <h1 class="title">The Overlooked Power<br><span>of Familiar Technologies</span></h1>
+    <p class="header-lead">일상에 스며들어 간과된 구형 기술의 중대한 영향력</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 기술의 불가시성(Technological Invisibility) — 기술이 일상에 완전히 흡수되어 익숙해질수록 그 사회적 가치와 영향력이 과소평가되는 현상.</li>
+        <li><b>[배경 맥락]:</b> 현대 사회는 초고속 신기술에만 주목하지만, 젖병과 같은 구형 기술 역시 인간 삶의 기본적 경험과 시간 구조를 혁신적으로 바꾼 기술적 도구임.</li>
+        <li><b>[논리 요약]:</b> 신기술의 과대평가와 구형 기술의 간과 경향을 젖병의 시간 조절 및 절약 기능 사례를 통해 비판적으로 규명.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      We tend to overrate the impact of new technologies in part because older technologies have become absorbed into the furniture of our lives, so as to be almost invisible. Take the baby bottle. Here is a simple implement that has transformed a fundamental human experience for vast numbers of infants and mothers, yet it finds no place in our histories of technology. This technology might be thought of as a classic time-shifting device, as it enables mothers to exercise more control over the timing of feeding. It can also function to save time, as bottle feeding allows for someone else to substitute for the mother’s time. Potentially, therefore, it has huge implications for the management of time in everyday life, yet it is entirely overlooked in discussions of high-speed society.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 우리는 신기술의 영향력을 과대평가하는 경향이 있지만, 젖병처럼 일상에 스며들어 눈에 띄지 않는 구형 기술 역시 삶의 근본적 경험과 시간 관리를 혁신적으로 변화시킨 강력한 기술적 도구이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. We tend to <mark>overrate the impact of new technologies</mark> in part because older technologies have become <mark>absorbed into the furniture of our lives</mark>, <mark>so as to be almost invisible</mark>.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 신기술의 영향을 과대평가하는 경향이 있다 / 부분적으로는 구형 기술들이 우리 삶의 일부로 흡수되어 버렸기 때문에, / 거의 눈에 보이지 않을 정도로.<br>
+            <b>[구문 포인트]</b> <code>tend to-v</code>(~하는 경향이 있다); <code>in part because ~</code>(부분적으로 ~라는 이유로); <code>become absorbed into</code>(~에 흡수되다); <code>so as to-v</code>(결과/목적 표현: ~할 정도로, ~하기 위해).<br>
+            <b>[핵심 어휘]</b> overrate (과대평가하다), absorbed (흡수된), furniture of life (삶의 일부, 일상 생활용품), invisible (눈에 보이지 않는)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. <mark>Take</mark> the baby bottle.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 젖병을 예로 들어보자.<br>
+            <b>[구문 포인트]</b> 명령문 형태(<code>Take ~</code>)로 구체적인 예시를 도입하는 전형적인 표현(예: Consider ~, Take ~ for example).<br>
+            <b>[핵심 어휘]</b> baby bottle (젖병)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. Here is a simple implement <mark>that has transformed</mark> a fundamental human experience for vast numbers of infants and mothers, yet it <mark>finds no place</mark> in our histories of technology.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 여기에 단순한 도구가 있다 / [엄청난 수의 유아와 어머니들에게 근본적인 인간의 경험을 변화시켜 온], / 하지만 그것은 우리의 기술 역사에서 어떤 자리도 차지하지 못한다.<br>
+            <b>[구문 포인트]</b> <code>Here is + 단수주어</code>(유도부사 도치); <code>that has transformed</code>는 a simple implement를 수식하는 주격 관계대명사절; 등위접속사 <code>yet</code>(그러나)을 통한 대조.<br>
+            <b>[핵심 어휘]</b> implement (도구, 기구), transform (변형시키다), fundamental (근본적인), vast (엄청난, 방대한), find no place (자리를 차지하지 못하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. This technology <mark>might be thought of as</mark> a classic time-shifting device, as it <mark>enables mothers to exercise</mark> more control over the timing of feeding.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이 기술은 전형적인 시간 전환 장치로 여겨질 수도 있다, / 그것이 어머니들로 하여금 수유 시간에 대해 더 많은 통제력을 행사할 수 있게 해 주기 때문에.<br>
+            <b>[구문 포인트]</b> <code>be thought of as ~</code>(수동태: ~로 여겨지다, 원형 think of A as B); <code>enable + O + to-v</code>(5형식: 목적어가 ~할 수 있게 하다); <code>exercise control over</code>(~에 통제력을 행사하다).<br>
+            <b>[핵심 어휘]</b> classic (전형적인, 고전적인), time-shifting (시간 전환의), enable (가능하게 하다), exercise (행사하다, 발휘하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. It can also function to save time, as bottle feeding <mark>allows for someone else to substitute for</mark> the mother’s time.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것은 또한 시간을 절약하는 기능을 할 수 있다, / 젖병 수유가 다른 누군가가 어머니의 시간을 대체하는 것을 가능하게 해 주기 때문에.<br>
+            <b>[구문 포인트]</b> <code>function to-v</code>(~하는 기능을 하다); <code>allow for + 의미상 주어 + to-v</code> 혹은 <code>allow for</code>(~을 가능하게 하다); <code>substitute for</code>(~을 대신하다, 대체하다).<br>
+            <b>[핵심 어휘]</b> function (기능하다), substitute for (~을 대체하다, 대신하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. Potentially, therefore, it <mark>has huge implications for</mark> the management of time in everyday life, <mark>yet it is entirely overlooked</mark> in discussions of high-speed society.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 잠재적으로, 따라서, 그것은 일상생활의 시간 관리에 거대한 영향을 미친다, / 하지만 그것은 초고속 사회에 대한 논의에서 완전히 간과되고 있다.<br>
+            <b>[구문 포인트]</b> <code>have implications for</code>(~에 중대한 영향/시사점을 갖다); <code>is entirely overlooked</code>(완전히 간과되다, 수동태).<br>
+            <b>[핵심 어휘]</b> potentially (잠재적으로), implication (영향, 시사점), overlooked (간과된), high-speed society (초고속 사회)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Premise - Exemplification - Conclusion)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PREMISE] 전제 및 통념 비판</span>
+        <h4>신기술 과대평가와 구형 기술의 불가시화</h4>
+        <p>신기술은 지나치게 주목받는 반면, 이미 일상에 깊이 자리 잡아 투명해진 구형 기술의 가치는 쉽게 무시됨.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[CASE STUDY] 구체적 사례 제시</span>
+        <h4>젖병(Baby Bottle)의 혁신적 시간 기능</h4>
+        <p>수유 시간 조절(time-shifting)과 타인의 수유 대체(time-saving)를 통해 어머니와 유아의 근본적 경험을 혁신함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 모순 및 최종 시사점</span>
+        <h4>일상의 거대한 영향력과 사회적 간과</h4>
+        <p>일상 시간 관리에 막대한 변화를 주었음에도, 초고속 기술 사회의 담론에서는 역사적·기술적 의의를 인정받지 못함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">1. Here is a simple implement [ that / what ] has transformed a fundamental human experience for vast numbers of infants and mothers.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답 (that): 앞에 명사 선행사(a simple implement)가 존재하므로, 선행사를 포함하는 관계대명사 what은 쓸 수 없고 주격 관계대명사 that(또는 which)이 와야 합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: what은 자체에 선행사를 포함하는 관계대명사이므로, 앞에 선행사 a simple implement가 있을 때 사용할 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">2. This technology might be thought of as a classic time-shifting device, as it enables mothers [ exercise / to exercise ] more control over the timing of feeding.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: enable은 5형식 구문에서 목적격 보어로 반드시 to부정사(to exercise)를 취하는 동사입니다.">exercise</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답 (to exercise): enable + 목적어 + to부정사(목적격 보어) 구조이므로 to exercise가 올바른 형태입니다.">to exercise</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+    
+    <!-- Problem 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        We tend to overrate the impact of new technologies in part because older technologies have become absorbed into the furniture of our lives, so as to be almost invisible. Take the baby bottle. Here is a simple implement that has transformed a fundamental human experience for vast numbers of infants and mothers, yet it finds no place in our histories of technology. This technology might be thought of as a classic time-shifting device, as it enables mothers to exercise more control over the timing of feeding. It can also function to save time, as bottle feeding allows for someone else to substitute for the mother’s time. Potentially, therefore, it has huge implications for ____________________________________, yet it is entirely overlooked in discussions of high-speed society.
+      </div>
+      <div class="exam-choices">
+        ① the promotion of traditional parenting roles<br>
+        ② the acceleration of physical growth in infants<br>
+        ③ the management of time in everyday life<br>
+        ④ the commercial expansion of manufacturing industries<br>
+        ⑤ the technological competition between different generations
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 앞 문장에서 젖병이 수유 시간 조절(time-shifting device)과 타인의 대체에 의한 시간 절약(save time) 기능을 한다고 설명했으므로, 젖병이 일상생활의 '시간 관리(the management of time in everyday life)'에 막대한 영향을 미친다는 ③번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 2: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 2] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <p style="background:#fff; border-left:3px solid var(--amber); padding:6px 10px; margin-bottom:10px; font-weight:600;">
+          It can also function to save time, as bottle feeding allows for someone else to substitute for the mother’s time.
+        </p>
+        We tend to overrate the impact of new technologies in part because older technologies have become absorbed into the furniture of our lives, so as to be almost invisible. ( ① ) Take the baby bottle. ( ② ) Here is a simple implement that has transformed a fundamental human experience for vast numbers of infants and mothers, yet it finds no place in our histories of technology. ( ③ ) This technology might be thought of as a classic time-shifting device, as it enables mothers to exercise more control over the timing of feeding. ( ④ ) Potentially, therefore, it has huge implications for the management of time in everyday life, yet it is entirely overlooked in discussions of high-speed society. ( ⑤ )
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 주어진 문장의 'also function to save time(또한 시간을 절약하는 기능도 한다)'은 앞서 언급된 '시간 전환 장치(time-shifting device)'라는 첫 번째 기능에 이어 추가적인 기능을 제시하는 연결 고리입니다. 따라서 시간 전환 기능 설명 뒤이자, 이러한 시간 관련 영향력을 종합하는 'therefore(따라서)' 앞인 ④번 위치가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 3: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 3] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        We tend to ① <u>overrate</u> the impact of new technologies in part because older technologies have become absorbed into the furniture of our lives, so as to be almost invisible. Take the baby bottle. Here is a simple implement that has transformed a fundamental human experience for vast numbers of infants and mothers, yet it finds no place in our histories of technology. This technology might be thought of as a classic time-shifting device, as it ② <u>enables</u> mothers to exercise more control over the timing of feeding. It can also function to save time, as bottle feeding allows for someone else to ③ <u>substitute</u> for the mother’s time. Potentially, therefore, it has huge implications for the management of time in everyday life, yet it is entirely ④ <u>highlighted</u> in discussions of high-speed society.
+      </div>
+      <div class="exam-choices">
+        ① overrate &nbsp;&nbsp;&nbsp; ② enables &nbsp;&nbsp;&nbsp; ③ substitute &nbsp;&nbsp;&nbsp; ④ highlighted
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ④ highlighted &rarr; overlooked</b><br>
+          <b>해설:</b> 글의 전체 맥락은 구형 기술(젖병)이 삶에 미친 막대한 영향에도 불구하고 너무 익숙해진 탓에 주목받지 못한다는 내용입니다. 등위접속사 yet(그러나) 뒤에서 초고속 사회의 논의에서 '간과되고 있다(overlooked)'는 부정적 서술이 와야 문맥이 성립하므로, '강조된다/두드러진다'는 뜻의 highlighted는 잘못된 어휘입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건부 서술형 영작] 다음 우리말 뜻에 맞도록 &lt;보기&gt;의 단어를 모두 활용하여 조건에 맞게 영작하시오.</h4>
+      <div class="exam-passage">
+        <b>[우리말]:</b> "우리는 신기술의 영향을 과대평가하는 경향이 있는데, 부분적으로는 구형 기술들이 우리 삶의 일부로 흡수되어 거의 눈에 보이지 않게 되었기 때문이다."<br><br>
+        <b>&lt;보기&gt;</b><br>
+        [ invisible / of / the / in / technologies / absorb / part / furniture / to / overrate / tend / become / our / lives / so / as / because / older / impact / new / we / into / of ]<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. <code>tend to-v</code>, <code>have become p.p.</code>, <code>so as to be 형용사</code> 구문을 반드시 포함할 것.<br>
+        2. &lt;보기&gt;의 단어 중 absorb를 알맞은 어형으로 변화시킬 것 (단어 추가 및 삭제 금지).<br>
+        3. 완벽한 하나의 복문 문장으로 영작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: We tend to overrate the impact of new technologies in part because older technologies have become absorbed into the furniture of our lives, so as to be almost invisible.</b><br>
+          <b>해설:</b> 주절(We tend to overrate the impact of new technologies)과 이유의 부사절(in part because older technologies have become absorbed into the furniture of our lives) 및 결과 구문(so as to be almost invisible)을 어순과 시제(현재완료 수동태 have become absorbed)에 맞게 배열합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
