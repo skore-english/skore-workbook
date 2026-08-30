@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 6월 고2 학평 24번 - 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>2026 만덕고 2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 6월 고2 학평 24번</div>
+    <h1 class="title">Reframing Deadlines:<br><span>Prompt Action Trigger</span></h1>
+    <p class="header-lead">시간 프레임의 임박한 재구성을 통한 즉각적 실행 촉진</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 시간적 범주화 효과(Temporal Categorization Effect) — 인간이 시간 경계(새해, 다음 달 등)를 넘어서는 마감 기한을 심리적으로 훨씬 더 멀게 인식하여 착수를 미루는 심리적 현상.</li>
+        <li><b>[배경 맥락]:</b> 인도 농부와 북미 학생을 대상으로 한 심리학 연구에 따르면, 시간의 단절선(break) 너머에 마감이 있으면 행동 준비성이 현저히 저하됨.</li>
+        <li><b>[논리 요약]:</b> 마감 기한을 먼 미래(예: 내년)가 아닌 현재와 연결된 임박한 기간(예: 이번 겨울)으로 재구성(reframe)할 때 즉각 착수하여 제때 완료할 수 있다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      We tend to break up time into units, such as weeks, months, and seasons; in a series of studies among farmers in India and students in North America, psychologists found that if a deadline is on the other side of a “break”—such as in the New Year—we’re more likely to see it as remote, and, as a result, be less ready to jump into action. What you need to do in that situation is find another way to think about the timeframe. For example, if it’s November and the deadline is in January, it’s better to tell yourself you have to get it done “this winter” rather than “next year.” The best approach is to view deadlines as a challenge that you have to meet within a period that’s imminent. That way the stress is more manageable, and you have a better chance of starting—and therefore finishing—in good time.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 시간적 경계 너머의 마감 기한을 멀게 느끼지 않도록 시간 틀을 임박한 기간으로 재인식함으로써, 착수를 앞당기고 제때 일을 완수할 수 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. We tend to <mark>break up time into units</mark>, such as weeks, months, and seasons; in a series of studies among farmers in India and students in North America, psychologists found that if a deadline is on the other side of a “break”—such as in the New Year—we’re <mark>more likely to see it as remote</mark>, and, as a result, <mark>be less ready to jump into action</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 시간을 단위로 쪼개는 경향이 있다 / 주, 월, 그리고 계절과 같은 / ; 인도 농부들과 북미 학생들을 대상으로 한 일련의 연구에서 / 심리학자들은 발견했다 / 만약 마감 기한이 “단절선(경계)”의 반대편에 있다면 / —새해와 같은— / 우리가 그것을 멀리 있는 것으로 여길 가능성이 더 높고 / 그리고 그 결과 / 행동에 바로 뛰어들 준비가 덜 될 가능성이 높다는 것을.<br>
+            <b>[구문 포인트]</b> 'break up A into B'(A를 B로 쪼개다). found 뒤의 접속사 that절 내부에서 'be more likely to see ~'와 '(be) less ready to jump ~'가 병렬 구조를 이룸. 'see A as B'(A를 B로 여기다).<br>
+            <b>[핵심 어휘]</b> break up (쪼개다/분할하다), unit (단위), remote (먼, 동떨어진), jump into action (행동에 바로 착수하다), in a series of (일련의)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. What you need to do in that situation is <mark>find another way to think about the timeframe</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러한 상황에서 당신이 해야 할 일은 / 시간 틀에 대해 생각하는 또 다른 방법을 찾는 것이다.<br>
+            <b>[구문 포인트]</b> 관계대명사 What절이 주어(단수 취급)로 쓰임. 주어에 do 동사가 포함되어 있어 be동사 뒤의 보어 자리에서 to부정사의 'to'가 생략된 원형부정사(find)가 사용됨.<br>
+            <b>[핵심 어휘]</b> situation (상황), timeframe (시간 틀, 기간), another way (또 다른 방법)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. For example, if it’s November and the deadline is in January, it’s better to tell yourself you have to <mark>get it done</mark> “this winter” <mark>rather than “next year.”</mark></div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어 / 만약 지금이 11월이고 마감 기한이 1월이라면 / 스스로에게 말하는 것이 더 낫다 / 그것을 “이번 겨울”에 끝내야 한다고 / “내년”에 끝내야 한다기보다는.<br>
+            <b>[구문 포인트]</b> 가주어 it, 진주어 'to tell yourself ~'. tell 뒤에 간접목적어(yourself)와 직접목적어(접속사 that이 생략된 절). 'get + 목적어 + p.p.(done)' 목적격보어로 수동 완료를 나타내는 과거분사 사용.<br>
+            <b>[핵심 어휘]</b> get something done (~을 완수하다/끝마치다), rather than (~보다는), deadline (마감 기한)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. The best approach is to <mark>view deadlines as a challenge</mark> that you have to meet within a period that’s <mark>imminent</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 가장 좋은 접근법은 / 마감 기한을 과제로 보는 것이다 / 당신이 충족해야 하는 / 임박한 기간 내에.<br>
+            <b>[구문 포인트]</b> 'view A as B'(A를 B로 바라보다). 'meet'은 마감/요구를 '충족하다/맞추다'. 두 개의 목적격/주격 관계대명사 that절(that you have to meet / that's imminent)이 각각 선행사를 수식함.<br>
+            <b>[핵심 어휘]</b> approach (접근법), challenge (과제, 도전), meet (충족시키다, 맞추다), imminent (임박한, 목전의)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. That way the stress is <mark>more manageable</mark>, and you have a <mark>better chance of starting</mark>—and therefore finishing—<mark>in good time</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그렇게 함으로써 스트레스는 더 관리 가능해지고 / 당신은 시작할 —따라서 끝마칠— 더 좋은 가능성을 갖게 된다 / 알맞은 때에.<br>
+            <b>[구문 포인트]</b> 'That way'는 '그렇게 함으로써'를 뜻하는 접속사적 부사구. 전치사 of의 목적어로 두 동명사 starting과 finishing이 하이픈으로 병렬 연결됨.<br>
+            <b>[핵심 어휘]</b> manageable (관리 가능한, 감당할 수 있는), chance of (~할 가능성), in good time (알맞은 때에, 일찌감치)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상 분석 - 해결책 제시 - 최종 효과)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[현상 / 심리] 시간 경계와 착수 지연</span>
+        <h4>단절선(Break)의 인지적 함정</h4>
+        <p>새해 등 시간적 경계 너머에 마감이 있으면 멀게(remote) 느껴져 즉각적인 실행 착수를 미루게 됨.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[해결 / 전략] 시간 틀의 적극적 재구성</span>
+        <h4>임박한 기간(Imminent Period) 인식</h4>
+        <p>'내년' 대신 '이번 겨울'처럼 연속적인 현재의 범주로 프레임을 전환하여 임박한 과제로 인식해야 함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[귀결 / 효과] 스트레스 완화 및 제때 완료</span>
+        <h4>관리 용이성과 실행력 극대화</h4>
+        <p>스트레스가 관리 가능해지며 일찌감치 착수하게 되어 정해진 시간 내에 성공적으로 업무를 완수함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">Q1. Psychologists found that if a deadline is on the other side of a “break”, we’re more likely to see it as remote, and be [less / lesser] ready to jump into action.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: less · 형용사 ready를 수식하여 '준비가 덜 된'이라는 비교급 의미를 나타내는 부사 자리이므로 less가 올바릅니다. (lesser는 주로 한정적 형용사로 쓰임)">less</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · lesser는 명사 앞을 수식하는 한정 형용사로 주로 쓰이며 형용사 ready를 직접 수식하는 부사 역할을 할 수 없습니다. 부사 less가 정답입니다.">lesser</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">Q2. For example, if it’s November and the deadline is in January, it’s better to tell yourself you have to get it [done / doing] “this winter”.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: done · 사역 의미를 갖는 get의 목적어 it(일/과제)과 목적격보어의 관계가 '완료되는' 수동 관계이므로 과거분사 done이 올바릅니다.">done</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · doing은 능동의 진행 의미입니다. 일(it)은 스스로 하는 것이 아니라 사람에 의해 완료되는 대상이므로 과거분사 done이 정답입니다.">doing</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- Prob 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        We tend to break up time into units. When a deadline is on the other side of a “break”—such as in the New Year—we see it as remote and become less prepared to act immediately. To overcome this psychological delay, the most effective strategy is to ________________________. For instance, rather than telling yourself a January task is due “next year,” framing it as “this winter” turns the deadline into an imminent challenge. This makes the stress manageable and increases the probability of starting and finishing promptly.
+      </div>
+      <div class="exam-choices">
+        ① reframe the timeframe into an imminent period<br>
+        ② divide a large task into smaller daily checklists<br>
+        ③ extend the final deadline across multiple seasons<br>
+        ④ delegate urgent responsibilities to group members<br>
+        ⑤ eliminate natural temporal boundaries completely
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          <b>해설:</b> 시간적 경계로 인해 마감이 멀게 느껴져 착수를 미루는 문제를 극복하기 위해, 시간 틀을 '임박한 기간으로 재구성(reframe the timeframe into an imminent period)'해야 한다는 내용이 들어가야 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        We tend to break up time into units, such as weeks, months, and seasons; in a series of studies among farmers in India and students in North America, psychologists found that if a deadline is on the other side of a “break”—such as in the New Year—we’re more likely to see it as remote, and, as a result, be less ready to jump into action.
+      </div>
+      <div class="exam-choices">
+        (A) The best approach is to view deadlines as a challenge that you have to meet within a period that’s imminent. That way the stress is more manageable, and you have a better chance of starting—and therefore finishing—in good time.<br><br>
+        (B) For example, if it’s November and the deadline is in January, it’s better to tell yourself you have to get it done “this winter” rather than “next year.”<br><br>
+        (C) What you need to do in that situation is find another way to think about the timeframe.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (B) - (A) &nbsp;&nbsp;&nbsp; ⑤ (C) - (A) - (B)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 시간 경계 너머 마감을 멀게 느끼는 문제 상황 직후, 해결 원리(시간 틀에 대해 다른 방식으로 생각하기)를 제시한 (C)가 오고, 이에 대한 11월-1월 구체적 예시(For example)인 (B)가 이어지며, 최종적으로 임박한 기간 설정의 긍정적 효과를 정리하는 (A)로 연결되는 것이 가장 논리적입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> For example, if it’s November and the deadline is in January, it’s better to tell yourself you have to get it done “this winter” rather than “next year.”<br><br>
+        We tend to break up time into units, such as weeks, months, and seasons. ( ① ) In a series of studies, psychologists found that if a deadline is on the other side of a “break,” we’re more likely to see it as remote and be less ready to jump into action. ( ② ) What you need to do in that situation is find another way to think about the timeframe. ( ③ ) The best approach is to view deadlines as a challenge that you have to meet within a period that’s imminent. ( ④ ) That way the stress is more manageable. ( ⑤ ) You have a better chance of starting—and therefore finishing—in good time.
+      </div>
+      <div class="exam-choices">
+        선택: ① / ② / ③ / ④ / ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 문장은 '시간 틀을 다르게 생각하는 구체적 예시(For example)'이므로, 일반적 해결책인 'find another way to think about the timeframe'을 제시한 ②번 문장 바로 뒤인 ③번에 위치해야 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건]을 참고하여 다음 우리말을 알맞은 영어 문장으로 완성하시오. (조건부 서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 가장 좋은 접근법은 마감 기한을 임박한 기간 내에 당신이 완수해야 하는 하나의 과제로 바라보는 것이다.<br><br>
+        <b>[조건]</b><br>
+        1. 'approach', 'view A as B', 'meet', 'within a period', 'imminent' 어휘를 반드시 모두 사용할 것 (필요시 어형 변화 가능)<br>
+        2. 관계대명사절('that you have to meet' 및 'that's imminent')을 모두 활용할 것<br>
+        3. 주어는 'The best approach'로 시작할 것
+      </div>
+      <details>
+        <summary>모범 답안 및 구문 조건 확인</summary>
+        <div class="answer-content">
+          <b>모범 답안:</b><br>
+          The best approach is to view deadlines as a challenge that you have to meet within a period that’s imminent.<br><br>
+          <b>채점 포인트:</b><br>
+          - to view deadlines as a challenge 구문 구조의 정확성<br>
+          - 목적격 관계대명사절 that you have to meet의 수식 결합<br>
+          - 주격 관계대명사절 that’s imminent의 period 수식 완결성
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
