@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 3월 고2 학평 31번 - 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>2026 만덕고 2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 3월 고2 학평 31번</div>
+    <h1 class="title">Physical Laws in Dance:<br><span>Working Within Limits</span></h1>
+    <p class="header-lead">물리학적 법칙 이해를 통한 무용수의 효율적 동작 및 부상 방지</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 생체역학적 제약(Biomechanical Constraints) — 인간의 신체 구조와 자연의 물리 법칙에 의해 규정되는 한계.</li>
+        <li><b>[배경 맥락]:</b> 무용 동작(점프, 회전 등)은 단순한 의지나 근력뿐만 아니라 신체 비율 및 회전축 정렬과 같은 물리 역학적 법칙의 지배를 받음.</li>
+        <li><b>[논리 요약]:</b> 불가능한 동작을 무리하게 시도하기보다 물리 법칙과 신체적 한계를 이해하고 그 안에서 수련할 때 효율성과 부상 방지를 달성할 수 있다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Dancers often push themselves to the limits of their physical capabilities. But that push is misguided if it is directed toward accomplishing something physically impossible. For instance, a tall dancer with long feet may wish to perform repetitive vertical jumps to fast music, pointing his feet while in the air and lowering his heels to the floor between jumps. That may be impossible no matter how strong the dancer is. But a short-footed dancer may have no trouble! Another dancer may be struggling to complete a half-turn in the air. Understanding the connection between a rapid turn rate and the alignment of the body close to the rotation axis tells her how to accomplish her turn successfully. In both of these cases, understanding and working within the constraints imposed by nature and described by physical laws allows dancers to work efficiently, minimizing potential risk of injury.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 자연이 부여하고 물리 법칙으로 설명되는 한계를 이해하고 그 테두리 안에서 수련하는 것이 무용수의 효율적인 기량 발휘와 부상 방지를 가능하게 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. Dancers often <mark>push themselves to the limits</mark> of their physical capabilities.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 무용수들은 종종 자신들을 몰아붙인다 / 그들의 신체적 능력의 한계까지.<br>
+            <b>[구문 포인트]</b> 주어 'Dancers'와 목적어가 동일 대상이므로 재귀대명사 'themselves' 사용.<br>
+            <b>[핵심 어휘]</b> push to the limits (~을 한계까지 몰아붙이다), physical (신체적인), capability (능력, 역량)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. But that push is <mark>misguided</mark> if it is <mark>directed toward</mark> accomplishing something physically impossible.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 그러한 노력(몰아붙임)은 잘못된 것이다 / 만약 그것이 향해 있다면 / 물리적으로 불가능한 무언가를 성취하는 쪽으로.<br>
+            <b>[구문 포인트]</b> 'something'과 같은 -thing 계열 대명사는 형용사(physically impossible)가 뒤에서 수식(후치 수식). 전치사 toward 뒤 동명사 accomplishing 위치.<br>
+            <b>[핵심 어휘]</b> misguided (잘못된, 오도된), be directed toward (~을 향하다), accomplish (성취하다, 완수하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. For instance, a tall dancer with long feet may wish to perform <mark>repetitive vertical jumps</mark> to fast music, <mark>pointing</mark> his feet while in the air and <mark>lowering</mark> his heels to the floor between jumps.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어 / 발이 긴 키 큰 무용수는 / 반복적인 수직 점프를 수행하기를 원할 수 있다 / 빠른 음악에 맞춰 / 공중에 있는 동안 발끝을 뾰족하게 하고 / 점프 사이에 발뒤꿈치를 바닥으로 내리면서.<br>
+            <b>[구문 포인트]</b> 주절 뒤에 능동 분사구문 'pointing'과 'lowering'이 접속사 and를 통해 병렬 연결됨. 'while in the air'는 'while (he is) in the air'에서 주어+be동사가 생략된 구문.<br>
+            <b>[핵심 어휘]</b> repetitive (반복적인), vertical (수직의), point (발끝을 뻗다), heel (발뒤꿈치)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. That may be impossible <mark>no matter how strong</mark> the dancer is.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것은 불가능할지도 모른다 / 그 무용수가 아무리 강할지라도.<br>
+            <b>[구문 포인트]</b> 'no matter how + 형용사 + 주어 + 동사'는 양보 부사절(= however strong the dancer is)로 '아무리 ~할지라도'를 의미함.<br>
+            <b>[핵심 어휘]</b> no matter how (아무리 ~할지라도), impossible (불가능한)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. But a short-footed dancer may have <mark>no trouble</mark>!</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 발이 짧은 무용수는 / 아무런 문제가 없을 수도 있다!<br>
+            <b>[구문 포인트]</b> have no trouble (어려움/문제가 전혀 없다)의 간결한 관용 표현.<br>
+            <b>[핵심 어휘]</b> short-footed (발이 짧은), trouble (문제, 어려움)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. Another dancer may be <mark>struggling to complete</mark> a half-turn in the air.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 또 다른 무용수는 / 분투하고 있을지도 모른다 / 공중에서 반 바퀴 회전을 완료하기 위해.<br>
+            <b>[구문 포인트]</b> 'struggle + to부정사' 구문으로 '~하려고 애쓰다/분투하다'를 표현.<br>
+            <b>[핵심 어휘]</b> struggle to-v (~하려고 애쓰다), complete (완료하다, 끝마치다), half-turn (반 바퀴 회전)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 7 -->
+      <div class="chunk-item">
+        <div class="chunk-en">7. <mark>Understanding the connection</mark> between a rapid turn rate and the <mark>alignment of the body close to the rotation axis</mark> <mark>tells</mark> her how to accomplish her turn successfully.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 연관성을 이해하는 것은 / 빠른 회전 속도와 회전축에 가깝게 몸을 정렬하는 것 사이의 / 그녀에게 알려준다 / 그녀의 회전을 성공적으로 완수하는 방법을.<br>
+            <b>[구문 포인트]</b> 동명사구 주어 'Understanding ~'에 맞춰 단수 동사 'tells'가 사용됨. 목적어로 '의문사 + to부정사(how to accomplish ~)' 위치.<br>
+            <b>[핵심 어휘]</b> turn rate (회전 속도), alignment (정렬), rotation axis (회전축), accomplish (성취하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 8 -->
+      <div class="chunk-item">
+        <div class="chunk-en">8. In both of these cases, <mark>understanding and working</mark> within the <mark>constraints imposed by nature</mark> and <mark>described by physical laws</mark> <mark>allows</mark> dancers to work efficiently, <mark>minimizing</mark> potential risk of injury.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이 두 가지 경우 모두에서 / 자연에 의해 부과되고 물리 법칙에 의해 설명되는 한계 내에서 이해하고 훈련하는 것은 / 무용수들이 효율적으로 작업할 수 있게 해 준다 / 부상의 잠재적 위험을 최소화하면서.<br>
+            <b>[구문 포인트]</b> 'understanding and working within ~'을 단일한 일련의 행위 개념으로 보아 단수 동사 'allows'로 수일치. 'allow + 목적어 + to-v' 5형식 구조. 후반부 ', minimizing ~'은 능동 분사구문.<br>
+            <b>[핵심 어휘]</b> constraint (한계, 제약), impose (부과하다), physical law (물리 법칙), efficiently (효율적으로), minimize (최소화하다), potential (잠재적인)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (문제점 제기 - 구체적 사례 - 해결책 및 결론)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[전제 / 문제] 맹목적 한계 돌파의 오류</span>
+        <h4>물리적 불가능성에 대한 오판</h4>
+        <p>무용수들이 한계에 도전하지만, 물리적으로 불가능한 것을 달성하려는 노력은 잘못된 방향(misguided)임.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[사례 / 분석] 신체 구조와 회전 역학의 지배</span>
+        <h4>생체역학적 현실과 원리</h4>
+        <p>발 길이에 따른 점프 가능 여부 차이, 회전축과 신체 정렬 간의 물리적 원리가 동작 성공을 결정함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[귀결 / 대안] 물리 법칙 내에서의 효율적 수련</span>
+        <h4>자연적 한계 인정과 효율 극대화</h4>
+        <p>물리 법칙이 규정하는 한계(constraints)를 이해하고 그 안에서 수련할 때 효율 증대 및 부상 최소화 달성.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">Q1. Understanding the connection between a rapid turn rate and the alignment of the body close to the rotation axis [tells / telling] her how to accomplish her turn successfully.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: tells · 문장의 본동사 자리입니다. 동명사구 주어(Understanding ~ rotation axis)가 단수이므로 본동사 단수형인 tells가 올바릅니다.">tells</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · telling은 준동사(현재분사/동명사)로 문장에 본동사가 없어지게 만듭니다. 문장의 술어 동사 자리이므로 tells가 정답입니다.">telling</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">Q2. In both of these cases, understanding and working within the constraints [imposing / imposed] by nature and described by physical laws allows dancers to work efficiently.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: imposed · 명사 constraints(제약, 한계)는 자연에 의해 '부과되는' 수동 관계이므로 과거분사 imposed가 올바르며, 뒤의 described와 병렬을 이룹니다.">imposed</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · imposing은 능동의 의미로 뒤에 목적어가 와야 합니다. 여기서는 자연에 의해 부과된 제약이라는 수동 의미이므로 imposed가 정답입니다.">imposing</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- Prob 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        Dancers often push themselves to the limits of their physical capabilities. But that push is ① <u>misguided</u> if it is directed toward accomplishing something physically impossible. For instance, a tall dancer with long feet may wish to perform repetitive vertical jumps to fast music. That may be ② <u>unattainable</u> no matter how strong the dancer is. Another dancer may be struggling to complete a half-turn in the air. Understanding the connection between a rapid turn rate and the alignment of the body close to the rotation axis tells her how to accomplish her turn ③ <u>successfully</u>. In both of these cases, understanding and working within the constraints imposed by nature and described by physical laws allows dancers to work ④ <u>inefficiently</u>, ⑤ <u>minimizing</u> potential risk of injury.
+      </div>
+      <div class="exam-choices">
+        ① misguided &nbsp;&nbsp;&nbsp; ② unattainable &nbsp;&nbsp;&nbsp; ③ successfully &nbsp;&nbsp;&nbsp; ④ inefficiently &nbsp;&nbsp;&nbsp; ⑤ minimizing
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (inefficiently → efficiently)</b><br>
+          <b>해설:</b> 물리 법칙과 자연적 한계를 이해하고 그 안에서 수련하는 것은 무용수가 '효율적으로(efficiently)' 작업하고 부상 위험을 줄이도록 돕는 것이므로, ④의 비효율적으로(inefficiently)는 문맥상 어긋납니다. (② unattainable은 원문의 impossible을 변형한 적절한 어휘)
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Dancers often push themselves to the limits of their physical capabilities. But that push is misguided if it is directed toward accomplishing something physically impossible.
+      </div>
+      <div class="exam-choices">
+        (A) Another dancer may be struggling to complete a half-turn in the air. Understanding the connection between a rapid turn rate and the alignment of the body close to the rotation axis tells her how to accomplish her turn successfully.<br><br>
+        (B) In both of these cases, understanding and working within the constraints imposed by nature and described by physical laws allows dancers to work efficiently, minimizing potential risk of injury.<br><br>
+        (C) For instance, a tall dancer with long feet may wish to perform repetitive vertical jumps to fast music, pointing his feet while in the air and lowering his heels between jumps. That may be impossible no matter how strong the dancer is. But a short-footed dancer may have no trouble!
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (C) - (A) - (B) &nbsp;&nbsp;&nbsp; ④ (C) - (B) - (A) &nbsp;&nbsp;&nbsp; ⑤ (A) - (B) - (C)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 물리적 불가능에 대한 첫 번째 예시(For instance)인 발 긴 무용수의 점프 이야기 (C)가 먼저 오고, 이어서 또 다른 무용수의 회전 동작 예시인 (A)가 이어지며, 마지막으로 두 사례(In both of these cases)를 종합하여 결론을 내리는 (B)로 연결되는 것이 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Another dancer may be struggling to complete a half-turn in the air.<br><br>
+        Dancers often push themselves to the limits of their physical capabilities. ( ① ) But that push is misguided if it is directed toward accomplishing something physically impossible. ( ② ) For instance, a tall dancer with long feet may wish to perform repetitive vertical jumps to fast music, pointing his feet while in the air and lowering his heels to the floor between jumps. ( ③ ) That may be impossible no matter how strong the dancer is. But a short-footed dancer may have no trouble! ( ④ ) Understanding the connection between a rapid turn rate and the alignment of the body close to the rotation axis tells her how to accomplish her turn successfully. ( ⑤ ) In both of these cases, understanding and working within the constraints imposed by nature and described by physical laws allows dancers to work efficiently.
+      </div>
+      <div class="exam-choices">
+        선택: ① / ② / ③ / ④ / ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> ④번 뒤 문장에서 'her(그녀)'라는 대명사와 'turn(회전)'에 관한 물리적 원리가 처음 설명되고 있으므로, 새로운 회전 동작 사례를 도입하는 주어진 문장(Another dancer may be struggling to complete a half-turn...)은 ④번에 들어가야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건]을 참고하여 다음 우리말을 알맞은 영어 문장으로 완성하시오. (조건부 서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 자연에 의해 부과되고 물리 법칙에 의해 설명되는 한계 내에서 작업하는 것은 무용수들이 부상의 위험을 최소화하면서 효율적으로 훈련할 수 있게 해 준다.<br><br>
+        <b>[조건]</b><br>
+        1. 'constraint', 'impose', 'physical laws', 'allow', 'minimize' 어휘를 모두 활용할 것 (필요시 어형 변화 가능)<br>
+        2. 분사구문(minimizing ~)을 문장 후반부에 포함할 것<br>
+        3. 주어는 'working within the constraints ~'로 시작할 것
+      </div>
+      <details>
+        <summary>모범 답안 및 구문 조건 확인</summary>
+        <div class="answer-content">
+          <b>모범 답안:</b><br>
+          Working within the constraints imposed by nature and described by physical laws allows dancers to work efficiently, minimizing potential risk of injury.<br><br>
+          <b>채점 포인트:</b><br>
+          - constraints를 수식하는 과거분사 병렬 구조(imposed ~ and described ~)의 정확성<br>
+          - 동명사 주어에 따른 단수 본동사 allows 및 5형식 목적보어 to work 구현 여부<br>
+          - 능동 분사구문 minimizing potential risk of injury의 정확한 결합
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
