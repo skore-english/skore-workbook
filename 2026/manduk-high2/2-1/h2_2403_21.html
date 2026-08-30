@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 3월 고2 학평 21번 | 스코어학원 워크북</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 만덕고2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 3월 고2 학평 21번</div>
+    <h1 class="title">Technological Evolution<br><span>in Precision Medicine</span></h1>
+    <p class="header-lead">기술 발전이 가져온 맞춤형 정밀 의학의 혁신적 진화</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 정밀 의학(Precision Medicine) 및 실시간 환자 모니터링 기술의 도입과 발전.</li>
+        <li><b>[배경 맥락]:</b> 과거의 기술적 한계로 인한 비효율적 시도를 자율주행차 초기 단계와 결부하여 의학 발전 과정에 비유.</li>
+        <li><b>[논리 요약]:</b> 도구의 부족으로 원시적 처방에 의존하던 과거를 지나, 실시간 모니터링과 피드백 기반의 정밀 의학이 실현되고 있음.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      If you had wanted to create a “self-driving” car in the 1950s, your best option might have been to strap a brick to the accelerator. Yes, the vehicle would have been able to move forward on its own, but it could not slow down, stop, or turn to avoid barriers. Obviously not ideal. But does that mean the entire concept of the self-driving car is not worth pursuing? No, it only means that at the time we did not yet have the tools we now possess to help enable vehicles to operate both autonomously and safely. This once-distant dream now seems within our reach. It is much the same story in medicine. Two decades ago, we were still taping bricks to accelerators. Today, we are approaching the point where we can begin to bring some appropriate technology to bear in ways that advance our understanding of patients as unique individuals. In fact, many patients are already wearing devices that monitor their conditions in real time, which allows doctors to talk to their patients in a specific, refined, and feedback-driven way that was not even possible a decade ago.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 과거 자율주행의 한계가 적절한 도구의 등장으로 극복되었듯, 의학 분야 역시 실시간 모니터링 웨어러블 기기 등의 발전에 힘입어 환자 개개인에 맞춘 정밀하고 즉각적인 피드백 기반 치료가 가능해지고 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. If you <mark>had wanted</mark> to create a “self-driving” car in the 1950s, your best option <mark>might have been</mark> to strap a brick to the accelerator.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 여러분이 1950년대에 "자율주행" 자동차를 만들기를 원했었다면, / 여러분의 최선의 선택은 가속 페달에 벽돌을 묶어 놓는 것이었을지도 모른다.<br>
+            <b>[구문 포인트]</b> 과거 사실의 반대를 가정하는 <code>가정법 과거완료</code>(If + S + had p.p. ~, S + 조동사과거 + have p.p.) 구문.<br>
+            <b>[핵심 어휘]</b> strap (끈 등으로 묶다), accelerator (가속 페달)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. Yes, the vehicle <mark>would have been able to</mark> move forward on its own, but it could not slow down, stop, or turn to avoid barriers.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그렇다, 그 차량은 스스로 앞으로 나아갈 수는 있었겠지만, / 속도를 줄이거나, 멈추거나, 장애물을 피하기 위해 방향을 바꿀 수는 없었을 것이다.<br>
+            <b>[구문 포인트]</b> <code>on its own</code>(스스로, 독력으로), <code>to avoid</code>는 목적을 나타내는 to부정사의 부사적 용법.<br>
+            <b>[핵심 어휘]</b> vehicle (차량), on one's own (스스로), barrier (장애물)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. Obviously not ideal.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 분명히 이상적이지는 않다.<br>
+            <b>[구문 포인트]</b> <code>It was obviously not ideal.</code>에서 주어와 be동사가 생략된 축약형 구문.<br>
+            <b>[핵심 어휘]</b> obviously (분명히), ideal (이상적인)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. But does that mean the entire concept of the self-driving car <mark>is not worth pursuing</mark>?</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 하지만 그것이 자율주행차라는 전체 개념이 / 추구할 가치가 없다는 것을 의미하는가?<br>
+            <b>[구문 포인트]</b> <code>be worth -ing</code>(~할 가치가 있다) 필수 동명사 관용 표현.<br>
+            <b>[핵심 어휘]</b> entire (전체의), pursue (추구하다, 쫓다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. No, it only means that at the time we did not yet have the tools we now possess <mark>to help enable vehicles to operate</mark> both autonomously and safely.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 아니다, 그것은 단지 그 당시에 우리가 도구를 아직 갖지 못했다는 것을 의미할 뿐이다 / [우리가 차량으로 하여금 자율적이면서도 안전하게 작동하도록 돕기 위해 / 지금 보유하고 있는].<br>
+            <b>[구문 포인트]</b> tools 뒤에 목적격 관계대명사 that/which 생략; <code>help + (to) enable + O + to-v</code>(5형식 연쇄 구조); <code>both A and B</code>.<br>
+            <b>[핵심 어휘]</b> possess (소유하다), autonomously (자율적으로)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. This once-distant dream now seems <mark>within our reach</mark>.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 한때 아득했던 이 꿈이 / 이제 우리의 손이 닿는 곳에 있는 것처럼 보인다.<br>
+            <b>[구문 포인트]</b> <code>seem + 형용사/전치사구</code>; <code>within one's reach</code>(손이 닿는 범위 내에 있는).<br>
+            <b>[핵심 어휘]</b> once-distant (한때 아득했던), reach (손이 닿는 거리, 범위)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 7 -->
+      <div class="chunk-item">
+        <div class="chunk-en">7. It is <mark>much the same story</mark> in medicine.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 의학에서도 / 거의 똑같은 이야기이다.<br>
+            <b>[구문 포인트]</b> 자동차 비유(Analogy)에서 본문 중심 제재인 의학(Medicine) 분야로의 화제 전환.<br>
+            <b>[핵심 어휘]</b> medicine (의학, 의료)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 8 -->
+      <div class="chunk-item">
+        <div class="chunk-en">8. Two decades ago, we were still <mark>taping bricks to accelerators</mark>.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 20년 전만 해도, / 우리는 여전히 가속 페달에 벽돌을 테이프로 붙이고 있었다.<br>
+            <b>[구문 포인트]</b> 1950년대 자율주행 시도 비유를 빌려와 과거 의료 기술의 미흡함과 원시적 처방 한계를 함축 표현함.<br>
+            <b>[핵심 어휘]</b> decade (10년), tape (테이프로 붙이다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 9 -->
+      <div class="chunk-item">
+        <div class="chunk-en">9. Today, we are approaching the point <mark>where</mark> we can begin to <mark>bring some appropriate technology to bear</mark> in ways that advance our understanding of patients as unique individuals.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 오늘날, 우리는 지점에 다가가고 있다 / [우리가 적절한 기술을 적용하기 시작할 수 있는 / 고유한 개인으로서의 환자에 대한 우리의 이해를 증진시키는 방식으로].<br>
+            <b>[구문 포인트]</b> the point를 수식하는 관계부사 <code>where</code>; <code>bring ~ to bear</code>(~을 적용하다/행사하다); ways를 수식하는 주격 관계대명사 <code>that</code>.<br>
+            <b>[핵심 어휘]</b> appropriate (적절한), bring ~ to bear (~을 적용하다), advance (증진시키다, 진보시키다), unique (고유한, 독특한)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 10 -->
+      <div class="chunk-item">
+        <div class="chunk-en">10. In fact, many patients are already wearing devices <mark>that monitor their conditions in real time</mark>, <mark>which allows</mark> doctors to talk to their patients in a specific, refined, and feedback-driven way <mark>that was not even possible</mark> a decade ago.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 실제로, 많은 환자들은 이미 기기를 착용하고 있다 / [실시간으로 그들의 상태를 모니터링하는], / 그리고 이는 의사들이 환자들과 대화할 수 있게 해 준다 / [10년 전에는 가능조차 하지 않았던] 구체적이고 정제되며 피드백에 기반한 방식으로.<br>
+            <b>[구문 포인트]</b> devices를 수식하는 주격관대 <code>that</code>; 앞 절 전체를 선행사로 받는 계속적 용법 관계대명사 <code>, which + 단수동사(allows)</code>; <code>allow + O + to-v</code>.<br>
+            <b>[핵심 어휘]</b> monitor (관찰하다, 모니터링하다), in real time (실시간으로), refined (정제된, 개선된), feedback-driven (피드백 중심의, 피드백에 의해 주도되는)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Analogy & Innovation)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 비유적 도입</span>
+        <h4>초기 자율주행의 한계와 극복</h4>
+        <p>1950년대 페달에 벽돌을 얹던 조잡한 시도는 도구 부재 탓이었으나, 현재는 도구의 발전으로 자율주행이 가시화됨.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[TRANSITION] 화제 전환 및 대비</span>
+        <h4>의학 분야의 과거와 현재</h4>
+        <p>의학 역시 과거에는 '벽돌을 묶는' 수준의 미흡한 처방에 머물렀으나, 오늘날은 개인 맞춤형 기술 적용 단계에 도달함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 현실 적용 및 결론</span>
+        <h4>실시간 정밀 모니터링의 실현</h4>
+        <p>웨어러블 기기를 통한 실시간 생체 데이터 측정이 가능해지며, 10년 전에는 불가능했던 정밀하고 즉각적인 맞춤형 피드백 의료가 정착됨.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">1. Today, we are approaching the point [ which / where ] we can begin to bring some appropriate technology to bear.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: the point 뒤의 절이 완전한 3형식 문장(we can begin to bring...) 구조를 갖추고 있으므로 관계대명사 which는 올 수 없습니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답 (where): the point를 선행사로 받으며, 뒤에 필수 성분을 모두 갖춘 완전한 절이 이어지므로 관계부사 where가 적절합니다.">where</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">2. In fact, many patients are already wearing devices that monitor their conditions in real time, [ which / that ] allows doctors to talk to their patients...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답 (which): 콤마(,) 뒤에서 앞 문장 전체(환자들이 기기를 착용하는 사실)를 선행사로 받는 계속적 용법의 관계대명사로는 that을 쓸 수 없으며 which만 가능합니다.">which</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: 계속적 용법의 관계대명사 자리(콤마 바로 뒤)에는 관계대명사 that을 사용할 수 없습니다.">that</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+    
+    <!-- Problem 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        If you had wanted to create a “self-driving” car in the 1950s, your best option might have been to strap a brick to the accelerator. Yes, the vehicle would have been able to move forward on its own, but it could not slow down, stop, or turn to avoid barriers. Obviously not ① <u>ideal</u>. But does that mean the entire concept of the self-driving car is not worth pursuing? No, it only means that at the time we did not yet have the tools we now possess to help enable vehicles to operate both autonomously and safely. This once-distant dream now seems within our reach. It is much the ② <u>same</u> story in medicine. Two decades ago, we were still taping bricks to accelerators. Today, we are approaching the point where we can begin to bring some appropriate technology to bear in ways that ③ <u>advance</u> our understanding of patients as unique individuals. In fact, many patients are already wearing devices that monitor their conditions in real time, which allows doctors to talk to their patients in a specific, refined, and feedback-driven way that was not even ④ <u>impossible</u> a decade ago.
+      </div>
+      <div class="exam-choices">
+        ① ideal &nbsp;&nbsp;&nbsp; ② same &nbsp;&nbsp;&nbsp; ③ advance &nbsp;&nbsp;&nbsp; ④ impossible
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ④ impossible &rarr; possible</b><br>
+          <b>해설:</b> 실시간 모니터링 장치를 활용하여 환자별로 세밀하고 피드백 기반의 소통을 하는 것은 10년 전에는 '불가능(not possible)'했던 일이 이제 가능해졌다는 문맥이므로, 부정어 not even 뒤에는 possible이 와야 문맥상 알맞습니다. (not even possible = 10년 전에는 가능조차 하지 않았던)
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        Two decades ago in medicine, we were still taping bricks to accelerators due to a lack of sophisticated diagnostic tools. Today, however, we are approaching the point where we can begin to bring some appropriate technology to bear in ways that ____________________________________. In fact, many patients are already wearing devices that monitor their conditions in real time, which allows doctors to talk to their patients in a specific, refined, and feedback-driven way that was not even possible in the past.
+      </div>
+      <div class="exam-choices">
+        ① standardize clinical treatments regardless of symptoms<br>
+        ② advance our understanding of patients as unique individuals<br>
+        ③ replace human medical staff with fully automated robotic systems<br>
+        ④ minimize the interaction time between doctors and patients<br>
+        ⑤ decrease the reliance on advanced wearable health appliances
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 빈칸 뒤에서 환자 개개인의 상태를 실시간으로 추적 관찰하여 구체적이고 정제된 피드백을 제공한다고 상술하고 있으므로, 기술 도입의 목적은 '환자를 고유한 개인으로서 이해하는 것을 증진시키는 것(advance our understanding of patients as unique individuals)'이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <p style="background:#fff; border-left:3px solid var(--amber); padding:6px 10px; margin-bottom:10px; font-weight:600;">
+          It is much the same story in medicine.
+        </p>
+        If you had wanted to create a “self-driving” car in the 1950s, your best option might have been to strap a brick to the accelerator. Yes, the vehicle would have been able to move forward on its own, but it could not slow down, stop, or turn to avoid barriers. Obviously not ideal. ( ① ) But does that mean the entire concept of the self-driving car is not worth pursuing? ( ② ) No, it only means that at the time we did not yet have the tools we now possess to help enable vehicles to operate both autonomously and safely. ( ③ ) This once-distant dream now seems within our reach. ( ④ ) Two decades ago, we were still taping bricks to accelerators. ( ⑤ ) Today, we are approaching the point where we can begin to bring some appropriate technology to bear in ways that advance our understanding of patients as unique individuals.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> ④번 앞 문장까지는 1950년대 자율주행차 비유와 도구의 발전으로 그것이 실현 가능해졌다는 내용이 마무리됩니다. 주어진 문장은 이러한 비유를 '의학(medicine)'이라는 본 제재로 전환시키는 핵심 연결 고리이며, 바로 뒤의 ⑤번 앞에서 '20년 전 의학계에서도 벽돌을 붙이고 있었다'는 부연으로 자연스럽게 이어집니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건부 서술형 영작] 다음 우리말 뜻에 맞도록 &lt;보기&gt;의 단어를 모두 사용하여 조건에 맞게 영작하시오.</h4>
+      <div class="exam-passage">
+        <b>[우리말]:</b> "실제로 많은 환자들은 이미 그들의 상태를 실시간으로 관찰하는 기기들을 착용하고 있다."<br><br>
+        <b>&lt;보기&gt;</b><br>
+        [ monitor / conditions / already / real / in / wear / time / device / patient / that ]<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 현재진행형 시제(be wearing)와 주격 관계대명사(that)를 반드시 사용할 것.<br>
+        2. &lt;보기&gt;의 단어를 필요시 어형 변화시킬 것 (필요 없는 단어 추가 금지).<br>
+        3. 정확히 14단어로 작성할 것 (In fact 제외).
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: In fact, many patients are already wearing devices that monitor their conditions in real time.</b><br>
+          <b>해설:</b> 복수 주어 many patients에 맞추어 <code>are already wearing</code> 진행 시제를 구성하고, 선행사 devices 뒤에 주격 관계대명사 <code>that</code>과 복수 동사 <code>monitor</code>, 그리고 수어 표현인 <code>in real time</code>(실시간으로)을 올바르게 결합해야 합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
