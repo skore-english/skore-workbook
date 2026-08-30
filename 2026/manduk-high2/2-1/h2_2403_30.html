@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 3월 고2 학평 30번 - 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>2026 만덕고 2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 3월 고2 학평 30번</div>
+    <h1 class="title">Adolescent Emotion Socialization:<br><span>Parental Role Adaptation</span></h1>
+    <p class="header-lead">청소년기 자율성을 존중하는 부모의 간접적 감정 조절 지원 방식</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 감정 사회화(Emotion Socialization) — 타인과의 상호작용 및 관찰을 통해 감정의 본질과 대처 방식을 습득하는 발달 과정.</li>
+        <li><b>[배경 맥락]:</b> 아동기에는 부모의 직접적 지시와 달램이 유효하지만, 청소년기에는 자율성 욕구가 커져 부모의 개입 방식 변화가 요구됨.</li>
+        <li><b>[논리 요약]:</b> 청소년기 감정 조절 발달을 위해서는 직접적 통제 대신 관심, 무비판적 수용, 대화 가능성 제공 등 간접적 지지로의 전환이 필수적이다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Emotion socialization—learning from other people about emotions and how to deal with them—starts early in life and plays a foundational role for emotion regulation development. Although extra-familial influences, such as peers or media, gain in importance during adolescence, parents remain the primary socialization agents. For example, their own responses to emotional situations serve as a role model for emotion regulation, increasing the likelihood that their children will show similar reactions in comparable situations. Parental practices at times when their children are faced with emotional challenges also impact emotion regulation development. Whereas direct soothing and directive guidance of what to do are beneficial for younger children, they may intrude on adolescents’ autonomy striving. In consequence, adolescents might pull away from, rather than turn toward, their parents in times of emotional crisis, unless parental practices are adjusted. More suitable in adolescence is indirect support of autonomous emotion regulation, such as through interest in, as well as awareness and nonjudgmental acceptance of, adolescents’ emotional experiences, and being available when the adolescent wants to talk.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 청소년기 감정 조절 발달을 위해 부모는 직접적 개입을 지양하고, 자율성을 존중하는 간접적 지지(수용, 경청 가능성)로 양육 방식을 전환해야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. <mark>Emotion socialization</mark>—learning from other people about emotions and how to deal with them—starts early in life and <mark>plays a foundational role</mark> for emotion regulation development.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 감정 사회화는 / —다른 사람들로부터 감정과 그것을 다루는 방법에 대해 배우는 것인— / 어린 시절에 시작되며 / 감정 조절 발달에 기초적인 역할을 한다.<br>
+            <b>[구문 포인트]</b> 주어 'Emotion socialization' 뒤에 하이픈(—) 동격구가 삽입되었으며, 단수 동사 'starts'와 'plays'가 병렬 구조를 이룸.<br>
+            <b>[핵심 어휘]</b> emotion socialization (감정 사회화), deal with (~을 다루다/대처하다), foundational (기초적인), regulation (조절)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. Although <mark>extra-familial influences</mark>, such as peers or media, <mark>gain in importance</mark> during adolescence, parents remain the <mark>primary socialization agents</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 비록 가족 외부의 영향들이 / 또래나 미디어와 같은 / 청소년기에 중요성을 얻을지라도 / 부모는 여전히 주된 사회화 주체로 남아 있다.<br>
+            <b>[구문 포인트]</b> 'Although'가 이끄는 양보 부사절. 주절의 'remain'은 2형식 불완전 자동사로 뒤에 명사 보어 'the primary socialization agents'를 취함.<br>
+            <b>[핵심 어휘]</b> extra-familial (가족 외부의), peer (또래), adolescence (청소년기), primary (주된), agent (주체/행위자)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. For example, their own responses to emotional situations <mark>serve as a role model</mark> for emotion regulation, <mark>increasing the likelihood</mark> that their children will show similar reactions in comparable situations.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어 / 감정적 상황에 대한 부모 자신의 반응은 / 감정 조절을 위한 롤모델 역할을 한다 / 그들의 자녀들이 유사한 반응을 보일 가능성을 높이면서 / 비슷한 상황에서.<br>
+            <b>[구문 포인트]</b> 주절 뒤의 ', increasing ~'은 능동의 분사구문. 'the likelihood' 뒤의 'that'은 뒤에 완전한 문장이 오는 동격의 접속사 that절.<br>
+            <b>[핵심 어휘]</b> serve as (~의 역할을 하다), likelihood (가능성), comparable (유사한, 필적하는)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. <mark>Parental practices</mark> at times when their children are faced with emotional challenges also <mark>impact</mark> emotion regulation development.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 부모의 양육 관행은 / 그들의 자녀가 감정적 어려움에 직면했을 때의 / 감정 조절 발달에 또한 영향을 미친다.<br>
+            <b>[구문 포인트]</b> 주어 'Parental practices'(복수)에 맞춰 복수 동사 'impact'가 사용됨. 'times' 뒤의 'when'은 관계부사로 수식절을 이끎.<br>
+            <b>[핵심 어휘]</b> parental practice (부모의 양육 관행/행위), be faced with (~에 직면하다), challenge (어려움, 난제)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. Whereas direct soothing and directive guidance of what to do are beneficial for younger children, they may <mark>intrude on</mark> adolescents’ <mark>autonomy striving</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 직접적인 달램과 지시적 지도는 / 무엇을 해야 할지에 대한 / 어린아이들에게는 유익하지만 / 청소년의 자율성 추구를 침해할 수도 있다.<br>
+            <b>[구문 포인트]</b> 대조를 나타내는 부사절 접속사 'Whereas'. 전치사 of 뒤에 '의문사 + to부정사(what to do)' 명사구 위치.<br>
+            <b>[핵심 어휘]</b> soothe (달래다, 진정시키다), directive (지시적인), beneficial (유익한), intrude on (~을 침해하다), autonomy (자율성), striving (추구, 노력)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. In consequence, adolescents might <mark>pull away from</mark>, rather than <mark>turn toward</mark>, their parents in times of emotional crisis, <mark>unless</mark> parental practices are adjusted.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 결과 / 청소년들은 부모로부터 멀어질지도 모른다 / 부모에게 다가가기보다는 / 감정적 위기의 순간에 / 만약 부모의 양육 방식이 조정되지 않는다면.<br>
+            <b>[구문 포인트]</b> 'pull away from'과 'turn toward'가 'rather than'을 통해 대조적으로 병렬 연결됨. 'unless'(= if not) 조건절에서 수동태 'are adjusted' 사용.<br>
+            <b>[핵심 어휘]</b> in consequence (그 결과), pull away from (~에서 물러나다/멀어지다), turn toward (~에게 의지하다/다가가다), adjust (조정하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 7 -->
+      <div class="chunk-item">
+        <div class="chunk-en">7. <mark>More suitable</mark> in adolescence <mark>is</mark> <mark>indirect support</mark> of autonomous emotion regulation, such as through interest in, as well as awareness and nonjudgmental acceptance of, adolescents’ emotional experiences, and being available when the adolescent wants to talk.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 청소년기에 더욱 적합한 것은 / 자율적 감정 조절에 대한 간접적 지원이다 / 이를테면 청소년의 감정 경험에 대한 관심뿐만 아니라 / 인식 및 비판 없는 수용을 통해서 / 그리고 청소년이 대화를 원할 때 곁에 있어 주는 것을 통해서.<br>
+            <b>[구문 포인트]</b> 보어 강조 도치 구문 (보어 'More suitable in adolescence' + 동사 'is' + 주어 'indirect support ~'). 'such as' 뒤에 병렬 연결된 전치사구 및 동명사구 구조 주의.<br>
+            <b>[핵심 어휘]</b> suitable (적합한), autonomous (자율적인), nonjudgmental (비판하지 않는, 편견 없는), available (시간이 있는, 곁에 있어 주는)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (문제 제기 - 메커니즘 분석 - 대안 제시)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[전제 / 현상] 부모의 지속적 영향력</span>
+        <h4>부모의 감정 사회화 역할</h4>
+        <p>어린 시절부터 시작되는 감정 조절 발달에서 부모는 롤모델로서 핵심적인 사회화 주체로 지속 작용함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[갈등 / 문제] 발달 단계와 양육 방식의 불일치</span>
+        <h4>직접적 개입의 부작용</h4>
+        <p>아동기식 직접적 달램과 지시는 청소년의 자율성 추구를 침해하여, 감정 위기 시 부모를 회피하게 만듦.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[해결 / 대안] 양육 방식의 패러다임 전환</span>
+        <h4>간접적 지지 및 수용</h4>
+        <p>감정 경험에 대한 비판 없는 수용, 공감적 관심, 자발적 대화 시 경청 가능성 제공 등 간접적 방식으로 전환해야 함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">Q1. For example, their own responses to emotional situations serve as a role model for emotion regulation, [increasing / increased] the likelihood that their children will show similar reactions.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: increasing · 주절의 주어(their own responses)가 능동적으로 아이들의 반응 가능성을 높이는 주체이므로 현재분사(increasing)가 올바릅니다.">increasing</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · increased는 수동 의미가 되거나 과거분사로 목적어(the likelihood)를 취할 수 없습니다. 능동 분사구문 increasing이 정답입니다.">increased</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">Q2. More suitable in adolescence [is / are] indirect support of autonomous emotion regulation, such as through interest in adolescents’ emotional experiences.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: is · 형용사 보어(More suitable ~)가 문두로 나가 동사와 주어가 도치된 구문입니다. 실제 주어가 단수 명사구인 'indirect support'이므로 단수 동사 is가 올바릅니다.">is</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · 문두의 adolescence를 주어로 보거나 임의로 복수 취급하면 안 됩니다. 주어는 도치된 단수 명사 'indirect support'이므로 is가 와야 합니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- Prob 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Although extra-familial influences gain in importance during adolescence, parents remain primary socialization agents. However, parental practices must adapt to the developmental changes of their children. Whereas direct soothing and directive guidance are beneficial for younger children, they may intrude on adolescents’ autonomy striving. In consequence, adolescents might pull away from their parents in times of emotional crisis, unless parental practices are adjusted. More suitable in adolescence is ________________________, such as through interest in, as well as nonjudgmental acceptance of, adolescents’ emotional experiences, and being available when they want to talk.
+      </div>
+      <div class="exam-choices">
+        ① immediate direct intervention in resolving conflicts<br>
+        ② indirect support of autonomous emotion regulation<br>
+        ③ strict enforcement of family emotional boundaries<br>
+        ④ complete detachment from adolescents' emotional lives<br>
+        ⑤ active encouragement of peer-oriented socialization
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 청소년기에는 직접적인 지시와 통제가 자율성을 침해하므로, 비판 없는 수용과 대화 가능성을 열어두는 '자율적 감정 조절에 대한 간접적 지지(indirect support of autonomous emotion regulation)'가 적합하다는 흐름이 되어야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Emotion socialization starts early in life and plays a foundational role for emotion regulation development. Although extra-familial influences, such as peers or media, gain in importance during adolescence, parents remain the primary socialization agents.
+      </div>
+      <div class="exam-choices">
+        (A) Whereas direct soothing and directive guidance of what to do are beneficial for younger children, they may intrude on adolescents’ autonomy striving. In consequence, adolescents might pull away from parents unless practices are adjusted.<br><br>
+        (B) For example, their own responses to emotional situations serve as a role model for emotion regulation, increasing the likelihood that their children will show similar reactions in comparable situations.<br><br>
+        (C) More suitable in adolescence is indirect support of autonomous emotion regulation, such as through interest in, awareness and nonjudgmental acceptance of emotional experiences, and being available when they want to talk.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 부모의 지속적 영향력에 대한 구체적 예시(For example)인 (B)가 먼저 오고, 이후 아동기와 청소년기의 차이점을 대조하며 발생하는 문제점을 다룬 (A)가 이어지며, 마지막으로 청소년기에 적합한 대안을 제시하는 (C)로 귀결되는 것이 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> In consequence, adolescents might pull away from, rather than turn toward, their parents in times of emotional crisis, unless parental practices are adjusted.<br><br>
+        Emotion socialization starts early in life and plays a foundational role for emotion regulation development. ( ① ) Although extra-familial influences gain in importance during adolescence, parents remain the primary socialization agents. ( ② ) For example, their own responses to emotional situations serve as a role model for emotion regulation, increasing the likelihood that their children will show similar reactions. ( ③ ) Parental practices at times when their children are faced with emotional challenges also impact emotion regulation development. ( ④ ) Whereas direct soothing and directive guidance of what to do are beneficial for younger children, they may intrude on adolescents’ autonomy striving. ( ⑤ ) More suitable in adolescence is indirect support of autonomous emotion regulation.
+      </div>
+      <div class="exam-choices">
+        선택: ① / ② / ③ / ④ / ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ⑤</b><br>
+          <b>해설:</b> 주어진 문장의 'In consequence(그 결과)'는 앞서 언급된 '부모의 직접적 개입이 청소년의 자율성 추구를 침해하는 현상'의 직접적인 결과(부모로부터 멀어짐)를 나타내므로, 자율성 침해를 서술한 문장 바로 뒤인 ⑤에 위치해야 하며, 뒤이어 적절한 대안(More suitable ~) 문장으로 연결됩니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건]을 참고하여 다음 우리말을 알맞은 영어 문장으로 완성하시오. (조건부 서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 만약 부모의 양육 방식이 조정되지 않는다면, 청소년들은 감정적 위기의 순간에 부모에게 의지하기보다는 멀어질지도 모른다.<br><br>
+        <b>[조건]</b><br>
+        1. 'pull away from', 'turn toward', 'unless', 'adjust' 어휘를 모두 활용할 것 (필요시 어형 변화 가능)<br>
+        2. 'rather than' 구문을 활용하여 병렬 구조를 완성할 것<br>
+        3. 총 18~23단어로 영작할 것
+      </div>
+      <details>
+        <summary>모범 답안 및 구문 조건 확인</summary>
+        <div class="answer-content">
+          <b>모범 답안:</b><br>
+          Adolescents might pull away from, rather than turn toward, their parents in times of emotional crisis, unless parental practices are adjusted.<br><br>
+          <b>채점 포인트:</b><br>
+          - rather than을 중심으로 동사구 pull away from과 turn toward의 형태 일치 여부<br>
+          - unless 부사절 내 수동태(are adjusted)의 정확한 구현 여부
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
