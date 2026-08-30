@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 3월 고2 학평 32번 - 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>2026 만덕고 2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 3월 고2 학평 32번</div>
+    <h1 class="title">Children’s Film:<br><span>Popular Culture Center</span></h1>
+    <p class="header-lead">전 연령층의 소비로 대중문화의 중심이 된 아동 영화</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 관객 교차 현상(Audience Crossover) — 특정 연령층을 표적으로 기획된 문화 상품을 다양한 연령대의 대중이 폭넓게 향유하는 현상.</li>
+        <li><b>[배경 맥락]:</b> '아동 영화'라는 명칭 때문에 어린이만의 하위 문화라는 통념이 있었으나, 실제 극장 흥행 통계는 전 연령층의 높은 소비를 증명함.</li>
+        <li><b>[논리 요약]:</b> 아동 영화는 성인 영화에 종속된 주변부 장르가 아니며, 실제 소비 현실에서 현대 대중문화의 핵심 위치를 차지하고 있다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      We must explore the relationship between children’s film production and consumption habits. The term “children’s film” implies ownership by children—their cinema—but films supposedly made for children have always been consumed by audiences of all ages, particularly in commercial cinemas. The considerable crossover in audience composition for children’s films can be shown by the fact that, in 2007, eleven Danish children’s and youth films attracted 59 per cent of theatrical admissions, and in 2014, German children’s films comprised seven out of the top twenty films at the national box office. This phenomenon corresponds with a broader, international embrace of what is seemingly children’s culture among audiences of diverse ages. The old prejudice that children’s film is some other realm, separate from (and forever subordinate to) a more legitimate cinema for adults is not supported by the realities of consumption: children’s film is at the heart of contemporary popular culture.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 아동 영화는 어린이들만의 전유물이 아니며, 전 연령층의 폭넓은 소비를 바탕으로 현대 대중문화의 중심부에 자리 잡고 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. We must <mark>explore the relationship</mark> between children’s film production and <mark>consumption habits</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 관계를 탐구해야 한다 / 아동 영화 제작과 소비 습관 사이의.<br>
+            <b>[구문 포인트]</b> 'between A and B' 병렬 구조 (children’s film production & consumption habits). 글의 핵심 탐구 대상 제시.<br>
+            <b>[핵심 어휘]</b> explore (탐구하다), relationship (관계), production (제작), consumption habit (소비 습관)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. The term “children’s film” <mark>implies ownership</mark> by children—their cinema—but films <mark>supposedly made</mark> for children have always been <mark>consumed by audiences of all ages</mark>, particularly in commercial cinemas.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> “아동 영화”라는 용어는 어린이들에 의한 소유권을 암시하지만 / —그들만의 영화라는— / 어린이들을 위해 만들어졌다고 여겨지는 영화들은 / 항상 모든 연령층의 관객에 의해 소비되어 왔다 / 특히 상업 영화관에서.<br>
+            <b>[구문 포인트]</b> 'films' 뒤에 과거분사구 'supposedly made for children'이 후치 수식. 주절 술어는 현재완료 수동태 'have always been consumed' 사용.<br>
+            <b>[핵심 어휘]</b> imply (암시하다), ownership (소유권), supposedly (~라고 추정상/아마도), commercial cinema (상업 영화관)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. The considerable <mark>crossover</mark> in audience composition for children’s films <mark>can be shown by the fact that</mark>, in 2007, eleven Danish children’s and youth films <mark>attracted 59 per cent</mark> of theatrical admissions, and in 2014, German children’s films <mark>comprised</mark> seven out of the top twenty films at the national box office.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 상당한 교차 현상은 / 아동 영화의 관객 구성에 있어서의 / 사실에 의해 보여질 수 있다 / 2007년에 11편의 덴마크 아동 및 청소년 영화가 극장 관람권의 59퍼센트를 유치했다는 / 그리고 2014년에 독일 아동 영화가 국내 박스오피스 상위 20개 영화 중 7편을 차지했다는.<br>
+            <b>[구문 포인트]</b> 'the fact' 뒤의 'that'은 동격의 접속사. that절 내부에서 덴마크 사례와 독일 사례가 등위접속사 and로 대등하게 연결됨.<br>
+            <b>[핵심 어휘]</b> considerable (상당한), crossover (교차, 넘나듦), audience composition (관객 구성), admission (입장, 관람), comprise (차지하다, 구성하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. This phenomenon <mark>corresponds with</mark> a broader, international <mark>embrace</mark> of <mark>what is seemingly children’s culture</mark> among audiences of diverse ages.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 현상은 부합한다 / 더 넓고 국제적인 수용과 / 겉보기에는 아동 문화인 것에 대한 / 다양한 연령대의 관객 사이에서.<br>
+            <b>[구문 포인트]</b> 'corresponds with'는 '~와 부합하다/일치하다'. 전치사 of 뒤에 불완전한 절을 이끄는 관계대명사 'what' 명사절 위치.<br>
+            <b>[핵심 어휘]</b> phenomenon (현상), correspond with (~와 일치하다/부합하다), embrace (수용, 포용), seemingly (겉보기에는), diverse (다양한)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. The old <mark>prejudice</mark> that children’s film is some other realm, <mark>separate from</mark> (and forever <mark>subordinate to</mark>) a more legitimate cinema for adults is not <mark>supported by the realities of consumption</mark>: children’s film is <mark>at the heart of contemporary popular culture</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 오래된 편견은 / 아동 영화가 어떤 다른 영역이라는 / 성인을 위한 더 정통적인 영화와 분리된 (그리고 영원히 그에 종속된) / 소비의 현실에 의해 뒷받침되지 않는다 / (즉) 아동 영화는 현대 대중문화의 중심부에 있다.<br>
+            <b>[구문 포인트]</b> 'The old prejudice' 뒤의 that은 동격절. 주어 'The old prejudice'(단수)와 수동태 본동사 'is not supported'의 수일치 확인.<br>
+            <b>[핵심 어휘]</b> prejudice (편견), realm (영역), subordinate to (~에 종속된), legitimate (정통적인, 합법적인), contemporary (현대의, 동시대의), at the heart of (~의 중심에)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (통념 비판 - 실증 데이터 - 본질 재정의)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[전제 / 통념] 용어와 실제 소비의 괴리</span>
+        <h4>아동 영화의 전 연령 소비</h4>
+        <p>'아동 영화'라는 명칭과 달리 실제 극장에서는 모든 연령층의 관객이 아동 영화를 소비함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[실증 / 확장] 박스오피스 통계와 세계적 수용</span>
+        <h4>관객 교차 현상의 입증</h4>
+        <p>덴마크(59% 점유), 독일(Top 20 중 7편) 통계처럼 아동 문화가 전 연령층으로 폭넓게 수용됨.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[귀결 / 재정의] 편견 타파와 위상 확립</span>
+        <h4>대중문화의 중심 위치</h4>
+        <p>성인 영화의 하위 영역이라는 편견은 깨졌으며, 아동 영화는 현대 대중문화의 핵심을 차지함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">Q1. The term “children’s film” implies ownership by children, but films supposedly [making / made] for children have always been consumed by audiences of all ages.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: made · 명사 films는 어린이를 위해 '만들어지는' 수동 관계이므로 과거분사 made가 후치 수식해야 합니다.">made</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · making은 능동의 현재분사로 뒤에 목적어가 와야 합니다. 여기서는 수동 수식이므로 made가 정답입니다.">making</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">Q2. The old prejudice that children’s film is some other realm separate from a more legitimate cinema for adults [is / are] not supported by the realities of consumption.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: is · 문장의 주어는 동격 that절의 수식을 받는 단수 명사 'The old prejudice'이므로 본동사는 단수형 is가 올바릅니다.">is</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · 동격절 내부의 복수 명사 adults에 속지 마세요. 문장 전체의 주어는 단수 명사 'The old prejudice'이므로 is가 정답입니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- Prob 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        The term “children’s film” implies ownership by children, but films supposedly made for children have always been consumed by audiences of all ages. The ① <u>considerable</u> crossover in audience composition for children’s films can be shown by theatrical admission facts in Europe. This phenomenon corresponds with a broader, international ② <u>embrace</u> of what is seemingly children’s culture among audiences of diverse ages. The old prejudice that children’s film is some other realm, separate from (and forever ③ <u>dominant</u> to) a more legitimate cinema for adults is ④ <u>unsupported</u> by the realities of consumption: children’s film is at the ⑤ <u>heart</u> of contemporary popular culture.
+      </div>
+      <div class="exam-choices">
+        ① considerable &nbsp;&nbsp;&nbsp; ② embrace &nbsp;&nbsp;&nbsp; ③ dominant &nbsp;&nbsp;&nbsp; ④ unsupported &nbsp;&nbsp;&nbsp; ⑤ heart
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (dominant → subordinate)</b><br>
+          <b>해설:</b> 과거의 편견은 아동 영화가 성인 영화와 분리되어 있으며 성인 영화보다 '열등하고 종속적(subordinate)'이라고 보았던 것이므로, 우세한/지배적인 의미를 갖는 ③의 dominant는 문맥상 잘못되었습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        We must explore the relationship between children’s film production and consumption habits. The term “children’s film” implies ownership by children—their cinema—but films supposedly made for children have always been consumed by audiences of all ages, particularly in commercial cinemas.
+      </div>
+      <div class="exam-choices">
+        (A) The old prejudice that children’s film is some other realm, separate from (and forever subordinate to) a more legitimate cinema for adults is not supported by the realities of consumption: children’s film is at the heart of contemporary popular culture.<br><br>
+        (B) The considerable crossover in audience composition for children’s films can be shown by the fact that, in 2007, eleven Danish children’s and youth films attracted 59 per cent of theatrical admissions, and in 2014, German children’s films comprised seven out of the top twenty films at the national box office.<br><br>
+        (C) This phenomenon corresponds with a broader, international embrace of what is seemingly children’s culture among audiences of diverse ages.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 전 연령층의 소비에 대한 구체적 박스오피스 통계 데이터인 (B)가 먼저 오고, 지시대명사 'This phenomenon'을 통해 이를 일반적인 문화 수용 현상으로 확장한 (C)가 이어지며, 최종적으로 아동 영화의 위상을 대중문화의 중심으로 재정의하는 (A)로 귀결되는 것이 논리적입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> This phenomenon corresponds with a broader, international embrace of what is seemingly children’s culture among audiences of diverse ages.<br><br>
+        We must explore the relationship between children’s film production and consumption habits. ( ① ) The term “children’s film” implies ownership by children—their cinema—but films supposedly made for children have always been consumed by audiences of all ages, particularly in commercial cinemas. ( ② ) The considerable crossover in audience composition for children’s films can be shown by the fact that, in 2007, eleven Danish children’s and youth films attracted 59 per cent of theatrical admissions, and in 2014, German children’s films comprised seven out of the top twenty films at the national box office. ( ③ ) The old prejudice that children’s film is some other realm, separate from (and forever subordinate to) a more legitimate cinema for adults is not supported by the realities of consumption. ( ④ ) Children’s film is at the heart of contemporary popular culture. ( ⑤ )
+      </div>
+      <div class="exam-choices">
+        선택: ① / ② / ③ / ④ / ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 문장의 'This phenomenon(이러한 현상)'은 바로 앞 문장(②번 뒤)에 서술된 '덴마크와 독일의 높은 아동 영화 관람 점유율 통계 현상'을 지칭하므로 ③번에 위치해야 가장 매끄럽게 연결됩니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건]을 참고하여 다음 우리말을 알맞은 영어 문장으로 완성하시오. (조건부 서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 아동 영화가 성인을 위한 더 정통적인 영화와 분리된 어떤 다른 영역이라는 오래된 편견은 소비의 현실에 의해 뒷받침되지 않는다.<br><br>
+        <b>[조건]</b><br>
+        1. 'prejudice', 'realm', 'separate from', 'legitimate', 'support' 어휘를 모두 활용할 것 (필요시 어형 변화 가능)<br>
+        2. 동격의 접속사 'that'절과 수동태(is not supported)를 반드시 포함할 것<br>
+        3. 주어는 'The old prejudice'로 시작할 것
+      </div>
+      <details>
+        <summary>모범 답안 및 구문 조건 확인</summary>
+        <div class="answer-content">
+          <b>모범 답안:</b><br>
+          The old prejudice that children’s film is some other realm, separate from a more legitimate cinema for adults is not supported by the realities of consumption.<br><br>
+          <b>채점 포인트:</b><br>
+          - The old prejudice 뒤의 동격 접속사 that절 완성도<br>
+          - 형용사구 separate from a more legitimate cinema for adults의 realm 수식 구조<br>
+          - 주절의 단수 수동태 동사(is not supported)의 정확한 구현 여부
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
