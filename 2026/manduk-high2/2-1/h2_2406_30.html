@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 6월 고2 학평 30번 - 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>2026 만덕고 2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 6월 고2 학평 30번</div>
+    <h1 class="title">Resetting Hedonic Adaptation:<br><span>Interrupting for Pleasure</span></h1>
+    <p class="header-lead">부정적 경험의 삽입을 통한 쾌락 적응 지연과 즐거움 극대화</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 쾌락 적응(Hedonic Adaptation) — 긍정적인 자극이 연속적으로 지속될 때 느끼는 즐거움의 강도가 점차 감소하여 둔감해지는 심리적 현상.</li>
+        <li><b>[배경 맥락]:</b> 사람들은 광고나 맛없는 음식 같은 부정적 자극이 없어야 더 즐거울 것이라 생각하지만, 실제로는 적응 과정을 깨뜨리는 방해요소가 필요함.</li>
+        <li><b>[논리 요약]:</b> 긍정적 경험 사이에 덜 긍정적인 순간을 끼워 넣으면 쾌락 적응이 지연되어 다음 긍정적 자극을 새롭고 더 즐겁게 경험하게 된다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Because people tend to adapt, interrupting positive things with negative ones can actually increase enjoyment. Take commercials. Most people hate them, so removing them should make shows or other entertainment more enjoyable. But the opposite is true. Shows are actually more enjoyable when they’re broken up by annoying commercials. Because these less enjoyable moments break up adaptation to the positive experience of the show. Think about eating chocolate chips. The first chip is delicious: sweet, melt-in-your-mouth goodness. The second chip is also pretty good. But by the fourth, fifth, or tenth chip in a row, the goodness is no longer as pleasurable. We adapt. Interspersing positive experiences with less positive ones, however, can slow down adaptation. Eating a Brussels sprout between chocolate chips or viewing commercials between parts of TV shows disrupts the process. The less positive moment makes the following positive one new again and thus more enjoyable.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 인간은 긍정적 자극에 빠르게 적응하므로, 중간에 덜 긍정적인 자극을 끼워 넣어 적응을 방해할 때 전체적인 즐거움이 다시 증대된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. Because people tend to adapt, <mark>interrupting positive things with negative ones</mark> can actually <mark>increase enjoyment</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 사람들은 적응하는 경향이 있기 때문에 / 긍정적인 것을 부정적인 것으로 중단시키는 것은 / 실제로 즐거움을 증가시킬 수 있다.<br>
+            <b>[구문 포인트]</b> 이유의 부사절 Because절. 주절의 주어는 동명사구 'interrupting positive things with negative ones'로 단수 취급. 'interrupt A with B'(A를 B로 중단시키다/방해하다).<br>
+            <b>[핵심 어휘]</b> adapt (적응하다), interrupt (중단시키다, 방해하다), negative (부정적인), increase (증가시키다), enjoyment (즐거움)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. <mark>Take commercials</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 상업 광고를 예로 들어보자.<br>
+            <b>[구문 포인트]</b> 예시를 도입하는 명령문 형식의 관용적 표현 (= Consider commercials).<br>
+            <b>[핵심 어휘]</b> take (~을 예로 들다), commercial (상업 광고)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. Most people hate them, so <mark>removing them</mark> should make shows or other entertainment <mark>more enjoyable</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 대부분의 사람들은 그것들을 싫어하므로 / 그것들을 제거하는 것이 / 쇼나 다른 오락거리를 더 즐겁게 만들어 주어야 마땅하다.<br>
+            <b>[구문 포인트]</b> 동명사 주어 'removing them'. 'make + 목적어(shows or other entertainment) + 목적격보어(형용사 more enjoyable)' 5형식 구문. 일반적인 통념을 서술.<br>
+            <b>[핵심 어휘]</b> hate (싫어하다), remove (제거하다), entertainment (오락물), enjoyable (즐거운)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. But the <mark>opposite is true</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 정반대가 사실이다.<br>
+            <b>[구문 포인트]</b> 통념을 뒤집는 역접의 전환문. 글의 핵심 주장을 부각시키는 위치.<br>
+            <b>[핵심 어휘]</b> opposite (정반대), true (사실인)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. Shows are actually more enjoyable when they’re <mark>broken up by annoying commercials</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 쇼는 실제로 더 즐겁다 / 그것들이 짜증스러운 상업 광고로 인해 끊길 때.<br>
+            <b>[구문 포인트]</b> 수동태 'they’re broken up by ~'(~에 의해 중단되다/나뉘다). 현재분사 'annoying'(짜증나게 하는)이 명사 commercials 수식.<br>
+            <b>[핵심 어휘]</b> break up (중단시키다, 쪼개다), annoying (짜증스러운, 거슬리는)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. Because these <mark>less enjoyable moments</mark> <mark>break up adaptation</mark> to the positive experience of the show.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 왜냐하면 이러한 덜 즐거운 순간들이 / 적응을 깨뜨리기 때문이다 / 쇼의 긍정적인 경험에 대한.<br>
+            <b>[구문 포인트]</b> 앞 문장에 대한 직접적 이유 설명. 'break up adaptation to ~'(~에 대한 적응을 중단시키다/깨뜨리다).<br>
+            <b>[핵심 어휘]</b> less enjoyable (덜 즐거운), adaptation (적응), positive experience (긍정적 경험)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 7 -->
+      <div class="chunk-item">
+        <div class="chunk-en">7. <mark>Think about eating chocolate chips</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 초콜릿 칩을 먹는 것에 대해 생각해 보라.<br>
+            <b>[구문 포인트]</b> 새로운 구체적 음식 예시를 제시하는 명령문. 전치사 about 뒤 동명사 eating 위치.<br>
+            <b>[핵심 어휘]</b> think about (~에 대해 생각하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 8 -->
+      <div class="chunk-item">
+        <div class="chunk-en">8. The first chip is delicious: sweet, <mark>melt-in-your-mouth goodness</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 첫 번째 칩은 매우 맛있다 / : 달콤하고, 입안에서 사르르 녹는 훌륭한 맛이다.<br>
+            <b>[구문 포인트]</b> 콜론(:) 뒤에 형용사적 묘사구 'melt-in-your-mouth goodness'(입에서 녹는 맛있는 것)가 위치하여 감각적 쾌락 강조.<br>
+            <b>[핵심 어휘]</b> delicious (매우 맛있는), goodness (맛있는 것, 훌륭함)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 9 -->
+      <div class="chunk-item">
+        <div class="chunk-en">9. The second chip is also <mark>pretty good</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 두 번째 칩 역시 꽤 맛있다.<br>
+            <b>[구문 포인트]</b> 부사 'pretty'(꽤, 상당히)가 형용사 good 수식.<br>
+            <b>[핵심 어휘]</b> pretty (꽤, 상당히)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 10 -->
+      <div class="chunk-item">
+        <div class="chunk-en">10. But by the fourth, fifth, or tenth chip <mark>in a row</mark>, the goodness is <mark>no longer as pleasurable</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 연달아 네 번째, 다섯 번째, 또는 열 번째 칩을 먹을 즈음에는 / 그 맛있는 맛이 더 이상 그만큼 유쾌하지 않다.<br>
+            <b>[구문 포인트]</b> 'in a row'(연속으로). 'no longer as pleasurable'(더 이상 그만큼 즐겁지 않은) 원급 비교 응용 표현.<br>
+            <b>[핵심 어휘]</b> in a row (연속으로), no longer (더 이상 ~않는), pleasurable (즐거운, 유쾌한)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 11 -->
+      <div class="chunk-item">
+        <div class="chunk-en">11. <mark>We adapt</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 적응하는 것이다.<br>
+            <b>[구문 포인트]</b> 단문으로 쾌락 적응 메커니즘을 강력하게 환기.<br>
+            <b>[핵심 어휘]</b> adapt (적응하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 12 -->
+      <div class="chunk-item">
+        <div class="chunk-en">12. <mark>Interspersing positive experiences with less positive ones</mark>, however, can <mark>slow down adaptation</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 긍정적인 경험 사이에 덜 긍정적인 경험을 끼워 넣는 것은 / 적응을 늦출 수 있다.<br>
+            <b>[구문 포인트]</b> 'intersperse A with B'(A 사이에 B를 흩뿌리다/끼워 넣다) 동명사구 주어. 역접 부사 however 삽입.<br>
+            <b>[핵심 어휘]</b> intersperse (~사이에 끼워 넣다/배치하다), slow down (늦추다), adaptation (적응)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 13 -->
+      <div class="chunk-item">
+        <div class="chunk-en">13. <mark>Eating a Brussels sprout</mark> between chocolate chips or <mark>viewing commercials</mark> between parts of TV shows <mark>disrupts the process</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 초콜릿 칩 사이에 방울양배추를 먹거나 / TV 쇼의 파트 사이에 상업 광고를 보는 것은 / 그 과정(적응)을 방해한다.<br>
+            <b>[구문 포인트]</b> 두 개의 동명사구(Eating ~ or viewing ~)가 or로 연결되어 단수 취급되며, 본동사 단수형 'disrupts' 사용.<br>
+            <b>[핵심 어휘]</b> Brussels sprout (방울양배추), disrupt (방해하다, 지장을 주다), process (과정)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 14 -->
+      <div class="chunk-item">
+        <div class="chunk-en">14. The less positive moment <mark>makes the following positive one new again</mark> and thus <mark>more enjoyable</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 덜 긍정적인 순간이 / 뒤이어 오는 긍정적인 순간을 다시 새롭게 / 그리고 따라서 더 즐겁게 만든다.<br>
+            <b>[구문 포인트]</b> 'make(사역/불완전타동사) + 목적어(the following positive one) + 목적격보어(형용사 new again and more enjoyable)' 병렬 연결 구조.<br>
+            <b>[핵심 어휘]</b> following (뒤이어 오는), new again (다시 새로운), thus (따라서)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (통념 비판 - 메커니즘 분석 - 해결 원리)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[통념 / 역설] 광고와 즐거움의 관계</span>
+        <h4>중단 없는 자극의 한계</h4>
+        <p>광고 제거가 쇼의 몰입을 높일 것이라는 통념과 달리, 연속된 자극은 쾌락 적응으로 인해 즐거움을 반감시킴.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[사례 / 기제] 초콜릿 칩과 방울양배추</span>
+        <h4>쾌락 적응의 일상적 사례</h4>
+        <p>연속해서 먹는 초콜릿 칩의 맛이 무뎌지는 것처럼, 지속적인 긍정적 자극은 필연적으로 감흥의 무딤을 초래함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론 / 원리] 의도적 부정 자극의 삽입</span>
+        <h4>적응 지연과 쾌락의 재활성화</h4>
+        <p>덜 긍정적인 순간을 끼워 넣어 적응 과정을 방해(disrupt)함으로써, 뒤따르는 즐거움을 다시 새롭게 부활시킴.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">Q1. Eating a Brussels sprout between chocolate chips or viewing commercials between parts of TV shows [disrupt / disrupts] the process.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: disrupts · 'Eating ~ or viewing ~'처럼 두 동명사구가 상관/등위접속사 or로 연결된 경우 단수 취급하므로 단수 본동사 disrupts가 올바릅니다.">disrupts</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · 동명사구가 or로 연결되어 개별적인 행위 선택으로 제시되므로 복수가 아닌 단수 동사 disrupts를 써야 합니다.">disrupt</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">Q2. The less positive moment makes the following positive one new again and thus more [enjoyable / enjoyably].</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: enjoyable · 5형식 동사 makes의 목적어(the following positive one)를 보충 설명하는 목적격보어 자리이므로 형용사 enjoyable이 올바르며, 앞의 형용사 new와 병렬을 이룹니다.">enjoyable</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · enjoyably는 부사이므로 목적어의 상태를 설명하는 목적격보어 역할을 할 수 없습니다. 형용사 보어 enjoyable이 정답입니다.">enjoyably</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- Prob 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Because people tend to adapt, interrupting positive experiences with negative ones can actually increase overall satisfaction. Although people assume removing annoying commercials makes TV shows more enjoyable, research shows the opposite is true. Continuous positive stimuli lead to hedonic adaptation, diminishing the initial pleasure just as the tenth chocolate chip in a row loses its special taste. Therefore, ________________________ slows down this adaptation process, making subsequent positive experiences feel fresh and intensely pleasurable once again.
+      </div>
+      <div class="exam-choices">
+        ① eliminating all potential sources of stress in advance<br>
+        ② interspersing positive experiences with less positive ones<br>
+        ③ prolonging the duration of pleasant activities continuously<br>
+        ④ avoiding unfamiliar tastes and media content completely<br>
+        ⑤ consuming high-reward stimuli in rapid consecutive sequences
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 긍정적인 경험에 적응하는 것을 막고 즐거움을 다시 새롭게 만들기 위해서는 '긍정적인 경험 사이에 덜 긍정적인 경험을 끼워 넣는 것(interspersing positive experiences with less positive ones)'이 필요하다는 요지의 빈칸 완성 문제입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Because people tend to adapt, interrupting positive things with negative ones can actually increase enjoyment. Take commercials. Most people hate them, so removing them should make shows or other entertainment more enjoyable. But the opposite is true.
+      </div>
+      <div class="exam-choices">
+        (A) Think about eating chocolate chips. The first chip is delicious, but by the tenth chip in a row, the goodness is no longer as pleasurable. We adapt.<br><br>
+        (B) Shows are actually more enjoyable when they’re broken up by annoying commercials. Because these less enjoyable moments break up adaptation to the positive experience of the show.<br><br>
+        (C) Interspersing positive experiences with less positive ones, however, can slow down adaptation. Eating a Brussels sprout between chocolate chips disrupts the process, making the following positive one new again and thus more enjoyable.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> '반대가 사실이다'라는 도입부 직후 광고가 쇼의 즐거움을 높이는 구체적 이유를 제시한 (B)가 오고, 이를 보편적 적응 현상인 초콜릿 칩 사례로 확장한 (A)가 이어진 후, 덜 긍정적인 자극 삽입(방울양배추)의 최종 메커니즘을 요약하는 (C)로 연결되는 구성이 가장 매끄럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Interspersing positive experiences with less positive ones, however, can slow down adaptation.<br><br>
+        Because people tend to adapt, interrupting positive things with negative ones can actually increase enjoyment. ( ① ) Shows are actually more enjoyable when they’re broken up by annoying commercials because these moments break up adaptation. ( ② ) Think about eating chocolate chips. ( ③ ) The first chip is delicious, but by the fourth, fifth, or tenth chip in a row, the goodness is no longer as pleasurable. ( ④ ) We adapt. ( ⑤ ) Eating a Brussels sprout between chocolate chips or viewing commercials between parts of TV shows disrupts the process, making the next experience new again.
+      </div>
+      <div class="exam-choices">
+        선택: ① / ② / ③ / ④ / ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ⑤</b><br>
+          <b>해설:</b> 초콜릿 칩을 연달아 먹으며 적응이 일어난다는 서술(We adapt.) 뒤에 역접(however)과 함께 대안적 원리(적응을 늦추는 방법)를 도입해야 하므로, 주어진 문장은 ⑤번에 들어가야 하며, 뒤이어 방울양배추를 먹는 구체적 행위(Eating a Brussels sprout...)로 상술됩니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건]을 참고하여 다음 우리말을 알맞은 영어 문장으로 완성하시오. (조건부 서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 그 덜 긍정적인 순간은 뒤이어 오는 긍정적인 순간을 다시 새롭게, 따라서 더 즐겁게 만든다.<br><br>
+        <b>[조건]</b><br>
+        1. 'make', 'following', 'positive', 'new again', 'enjoyable' 어휘를 모두 활용할 것<br>
+        2. 5형식 구문(make + 목적어 + 형용사 목적격보어 병렬)을 구성할 것<br>
+        3. 주어는 'The less positive moment'로 시작할 것 (총 14~18단어)
+      </div>
+      <details>
+        <summary>모범 답안 및 구문 조건 확인</summary>
+        <div class="answer-content">
+          <b>모범 답안:</b><br>
+          The less positive moment makes the following positive one new again and thus more enjoyable.<br><br>
+          <b>채점 포인트:</b><br>
+          - 5형식 사역/불완전타동사 makes의 단수 수일치<br>
+          - 목적어 the following positive one의 정확한 수식 구조<br>
+          - 형용사 목적격보어 new again과 more enjoyable의 올바른 병렬 연결 여부
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
