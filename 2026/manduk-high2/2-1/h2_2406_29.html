@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 6월 고2 학평 29번 - 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>2026 만덕고 2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 6월 고2 학평 29번</div>
+    <h1 class="title">Nature and Nurture:<br><span>Developing Social Smiling</span></h1>
+    <p class="header-lead">선천적 본능과 사회적 피드백의 상호작용으로 완성되는 미소</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 생물학적 기제와 후천적 경험의 상호작용(Nature-Nurture Interaction) — 인간의 사회적 행동은 선천적 소양으로 시작되지만 후천적 환경 피드백을 통해 정착된다는 발달심리학 이론.</li>
+        <li><b>[배경 맥락]:</b> 시청각 장애 신생아의 관찰을 통해 미소 짓는 능력이 선천적임을 증명하지만, 양육자의 신체적·사회적 반응(강화)이 없으면 미소가 소멸함을 확인.</li>
+        <li><b>[논리 요약]:</b> 미소는 생물학적 본능(biology)으로 발현되지만 지속적인 상호작용 피드백(experience)이 결합되어야 비로소 영속적인 사회적 행동으로 정착된다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      The built-in capacity for smiling is proven by the remarkable observation that babies who are congenitally both deaf and blind, who have never seen a human face, also start to smile at around 2 months. However, smiling in blind babies eventually disappears if nothing is done to reinforce it. Without the right feedback, smiling dies out. But here’s a fascinating fact: blind babies will continue to smile if they are cuddled, bounced, nudged, and tickled by an adult—anything to let them know that they are not alone and that someone cares about them. This social feedback encourages the baby to continue smiling. In this way, early experience operates with our biology to establish social behaviors. In fact, you don’t need the cases of blind babies to make the point. Babies with sight smile more at you when you look at them or, better still, smile back at them.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 미소는 선천적으로 타고나는 능력이지만, 타인의 관심과 반응이라는 후천적 사회적 피드백이 지속적으로 제공되어야 안정적인 사회적 행동으로 확립된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. The <mark>built-in capacity for smiling</mark> is <mark>proven by</mark> the remarkable observation that babies who are <mark>congenitally</mark> both deaf and blind, who have never seen a human face, also start to smile at around 2 months.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 미소를 짓는 내재된(선천적) 능력은 / 증명된다 / 놀라운 관찰에 의해 / 선천적으로 귀가 들리지 않고 눈이 먼 아기들이 / —사람의 얼굴을 본 적이 전혀 없는— / 생후 약 2개월경에 미소를 짓기 시작한다는.<br>
+            <b>[구문 포인트]</b> 수동태 'is proven by'. 'the remarkable observation' 뒤의 'that'은 동격의 접속사. 주격 관계대명사 who절 두 개가 연달아 babies를 수식함.<br>
+            <b>[핵심 어휘]</b> built-in (내재된, 타고난), capacity (능력), prove (증명하다), remarkable (놀라운), congenitally (선천적으로)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. However, smiling in blind babies eventually <mark>disappears</mark> if nothing is done to <mark>reinforce</mark> it.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 시각 장애가 있는 아기들의 미소는 / 결국 사라진다 / 만약 아무런 조치도 취해지지 않는다면 / 그것을 강화하기 위해.<br>
+            <b>[구문 포인트]</b> 자동사 'disappears'(수동태 불가). 조건절 'if nothing is done'(수동태) 뒤에 목적을 나타내는 to부정사 'to reinforce it' 위치.<br>
+            <b>[핵심 어휘]</b> eventually (결국, 마침내), disappear (사라지다), reinforce (강화하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. Without the right feedback, smiling <mark>dies out</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 적절한 피드백이 없다면 / 미소는 소멸한다.<br>
+            <b>[구문 포인트]</b> 전치사구 'Without ~'이 조건의 의미를 내포함. 'dies out'은 '자취를 감추다/소멸하다'를 뜻하는 자동사구.<br>
+            <b>[핵심 어휘]</b> feedback (피드백, 반응), die out (사라지다, 소멸하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. But here’s a <mark>fascinating fact</mark>: blind babies will continue to smile if they are <mark>cuddled, bounced, nudged, and tickled</mark> by an adult—anything to let them know that they are not alone and that someone cares about them.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 여기에 매우 흥미로운 사실이 있다 / : 시각 장애가 있는 아기들도 계속 미소를 지을 것이다 / 만약 그들이 안아 올려지고, 들썩여지고, 쿡쿡 찔러지고, 간지럼을 태워진다면 / 성인에 의해 / —그들이 혼자가 아니며 / 누군가가 그들을 아끼고 있다는 것을 그들에게 알게 해 주는 무엇이든.<br>
+            <b>[구문 포인트]</b> 조건절 내 수동태 과거분사 4개(cuddled, bounced, nudged, tickled)의 병렬 연결. 'let(사역동사) + them + know(원형)'. know의 목적어로 두 개의 접속사 that절 병렬.<br>
+            <b>[핵심 어휘]</b> fascinating (매혹적인, 흥미진진한), cuddle (꼭 껴안다), bounce (들썩거리다/흔들다), nudge (팔꿈치로 쿡 찌르다), tickle (간지럽히다), care about (~을 아끼다/신경 쓰다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. This <mark>social feedback</mark> <mark>encourages</mark> the baby to continue smiling.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 사회적 피드백은 / 부추긴다 / 아기가 계속해서 미소 짓도록.<br>
+            <b>[구문 포인트]</b> 'encourage + 목적어(the baby) + to부정사(to continue)' 5형식 구문. continue 뒤에 동명사 smiling 사용.<br>
+            <b>[핵심 어휘]</b> social feedback (사회적 피드백), encourage (격려하다, 권장하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. In this way, <mark>early experience</mark> <mark>operates with our biology</mark> to <mark>establish social behaviors</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 방식으로 / 초기 경험은 우리의 생물학적 특성과 함께 작용한다 / 사회적 행동을 확립하기 위해.<br>
+            <b>[구문 포인트]</b> 지문의 핵심 주제문. 'operate with'(~와 함께 작용하다). to부정사(to establish)는 목적(~하기 위해) 또는 결과로 해석 가능.<br>
+            <b>[핵심 어휘]</b> operate with (~와 협력/함께 작용하다), biology (생물학적 특성/소양), establish (확립하다, 정착시키다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 7 -->
+      <div class="chunk-item">
+        <div class="chunk-en">7. In fact, you don’t need the cases of blind babies to <mark>make the point</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 사실 / 당신은 시각 장애 아기들의 사례를 필요로 하지도 않는다 / 이 점(주장)을 입증하기 위해.<br>
+            <b>[구문 포인트]</b> 'make the point'는 '요지를 입증하다/주장을 정당화하다'를 뜻하는 관용구.<br>
+            <b>[핵심 어휘]</b> in fact (사실은), make the point (요지를 입증하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 8 -->
+      <div class="chunk-item">
+        <div class="chunk-en">8. Babies with sight <mark>smile more</mark> at you when you look at them or, <mark>better still</mark>, <mark>smile back at them</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 시력이 있는 일반 아기들도 당신을 보고 더 많이 미소 짓는다 / 당신이 그들을 바라보거나 / 혹은 훨씬 더 좋게는 / 그들에게 마주 미소 지어 줄 때.<br>
+            <b>[구문 포인트]</b> when 부사절 내의 동사 병렬(look at or smile back at). 'better still'은 '더 좋은 것은/금상첨화로'를 나타내는 삽입구.<br>
+            <b>[핵심 어휘]</b> sight (시력, 시각), smile back at (~에게 마주 미소 짓다), better still (더 좋은 것은)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (선천적 본능 증명 - 피드백 부재 시 소멸 - 본능과 경험의 결합)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[증명 / 본능] 선천적 능력의 발현</span>
+        <h4>시청각 장애 신생아의 미소</h4>
+        <p>얼굴을 본 적 없는 선천적 맹아·농아도 2개월 무렵 미소를 지으며 타고난 생물학적 능력(biology)을 입증함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[위기 / 조건] 피드백 부재와 강화</span>
+        <h4>사회적 반응의 필요성</h4>
+        <p>강화 피드백이 없으면 미소가 소멸하지만, 스킨십과 돌봄 반응을 지속하면 미소 행동이 유지됨.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론 / 일반화] 본능과 경험의 상호작용</span>
+        <h4>사회적 행동의 정착 원리</h4>
+        <p>초기 경험(피드백)과 생물학적 소양이 상호작용하여 시각 정상 아기를 포함한 인간의 사회적 행동을 확립함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">Q1. However, smiling in blind babies eventually [disappears / is disappeared] if nothing is done to reinforce it.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: disappears · disappear는 '사라지다'라는 완전자동사로 수동태(is disappeared)를 쓸 수 없습니다. 능동 단수형인 disappears가 올바릅니다.">disappears</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · disappear는 목적어를 취하지 않는 대표적인 자동사이므로 수동태를 만들 수 없습니다. 능동형 disappears가 정답입니다.">is disappeared</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">Q2. In this way, early experience operates with our biology [establishing / to establish] social behaviors.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: to establish · '사회적 행동을 확립하기 위해'라는 목적을 나타내는 to부정사 자리입니다.">to establish</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · establishing 분사구문보다는 초기 경험과 생물학적 기제가 상호작용하여 사회적 행동을 형성하는 목적/결과를 나타내는 to부정사 to establish가 문맥상 정확합니다.">establishing</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- Prob 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        The built-in capacity for smiling is proven by the fact that babies who are congenitally both deaf and blind also start to smile at around 2 months. However, smiling in blind babies eventually disappears without reinforcement. If they are cuddled and tickled, this social feedback encourages them to continue smiling. In this way, ________________________ to establish social behaviors. Sight-gifted infants also smile more when others look at or smile back at them.
+      </div>
+      <div class="exam-choices">
+        ① visual stimulation dominates all early developmental stages<br>
+        ② biological instincts can permanently replace social learning<br>
+        ③ early experience operates with our biology<br>
+        ④ cultural environments override innate neurological reflexes<br>
+        ⑤ isolated individuals eventually develop superior sensory organs
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 타고난 생물학적 소양(biology)으로 시작된 미소가 타인의 신체적·사회적 피드백이라는 후천적 초기 경험(early experience)과 상호작용하여 사회적 행동으로 정착된다는 것이 글의 핵심 요지이므로 ③이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        The built-in capacity for smiling is proven by the remarkable observation that babies who are congenitally both deaf and blind, who have never seen a human face, also start to smile at around 2 months.
+      </div>
+      <div class="exam-choices">
+        (A) This social feedback encourages the baby to continue smiling. In this way, early experience operates with our biology to establish social behaviors.<br><br>
+        (B) In fact, you don’t need the cases of blind babies to make the point. Babies with sight smile more at you when you look at them or, better still, smile back at them.<br><br>
+        (C) However, smiling in blind babies eventually disappears if nothing is done to reinforce it. But blind babies will continue to smile if they are cuddled, bounced, nudged, and tickled by an adult.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (C) - (A) - (B) &nbsp;&nbsp;&nbsp; ④ (C) - (B) - (A) &nbsp;&nbsp;&nbsp; ⑤ (A) - (B) - (C)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 선천적 미소 발현 이후, 피드백 부재 시 소멸과 신체적 스킨십에 의한 유지를 대조하는 (C)가 먼저 오고, 이를 '사회적 피드백(This social feedback)'으로 지칭하며 생물학과 경험의 협동을 정리한 (A)가 이어진 뒤, 일반 시각 정상 아기 사례로 일반화하는 (B)로 귀결되는 것이 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> In this way, early experience operates with our biology to establish social behaviors.<br><br>
+        The built-in capacity for smiling is proven by the observation that congenitally deaf and blind babies start to smile at 2 months. ( ① ) However, smiling in blind babies eventually disappears if nothing is done to reinforce it. ( ② ) Without the right feedback, smiling dies out. ( ③ ) But blind babies will continue to smile if they are cuddled, bounced, nudged, and tickled by an adult. ( ④ ) This social feedback encourages the baby to continue smiling. ( ⑤ ) In fact, you don’t need the cases of blind babies to make the point: sighted babies smile more when you smile back.
+      </div>
+      <div class="exam-choices">
+        선택: ① / ② / ③ / ④ / ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ⑤</b><br>
+          <b>해설:</b> 주어진 문장은 맹아의 미소 유지 사례를 통해 얻은 일반적 원리(초기 경험과 생물학의 상호작용)를 서술하고 있으므로, 'This social feedback' 문장 바로 뒤이자 맹아 사례를 벗어나 일반 아기 사례로 전환되는 ⑤번에 위치해야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건]을 참고하여 다음 우리말을 알맞은 영어 문장으로 완성하시오. (조건부 서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 이러한 방식으로, 초기 경험은 사회적 행동을 확립하기 위해 우리의 생물학적 특성과 함께 작용한다.<br><br>
+        <b>[조건]</b><br>
+        1. 'operate with', 'biology', 'establish', 'social behaviors' 어휘를 모두 활용할 것<br>
+        2. 'In this way'로 문장을 시작할 것<br>
+        3. to부정사('to establish')를 포함하여 총 11~14단어로 영작할 것
+      </div>
+      <details>
+        <summary>모범 답안 및 구문 조건 확인</summary>
+        <div class="answer-content">
+          <b>모범 답안:</b><br>
+          In this way, early experience operates with our biology to establish social behaviors.<br><br>
+          <b>채점 포인트:</b><br>
+          - 단수 주어 early experience에 맞춘 단수 동사 operates with의 정확성<br>
+          - 목적을 나타내는 to부정사 to establish social behaviors의 완벽한 배치
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
