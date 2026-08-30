@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 6월 고2 학평 32번 - 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>2026 만덕고 2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 6월 고2 학평 32번</div>
+    <h1 class="title">Sunk Cost Fallacy:<br><span>Cutting Your Losses</span></h1>
+    <p class="header-lead">매몰 비용의 함정 극복과 조기 손절매의 필요성</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 매몰 비용의 오류(Sunk Cost Fallacy) — 이미 투입되어 회수할 수 없는 비용(돈, 시간 등)에 집착하여 비합리적인 투자를 지속하는 인지 편향.</li>
+        <li><b>[배경 맥락]:</b> 손실을 인정하는 고통을 회피하려다 오히려 추가적인 손실을 키우게 되므로, 잘못된 선택일 때는 과감한 손절매(Cut losses)가 필수적임.</li>
+        <li><b>[논리 요약]:</b> 회수 불가능한 투자에 대한 집착을 버리고 조기에 손실을 끊어내는 것만이 더 큰 낭비를 막는 합리적 해결책이다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      If we’ve invested in something that hasn’t repaid us—be it money in a failing venture, or time in an unhappy relationship—we find it very difficult to walk away. This is the sunk cost fallacy. Our instinct is to continue investing money or time as we hope that our investment will prove to be worthwhile in the end. Giving up would mean acknowledging that we’ve wasted something we can’t get back, and that thought is so painful that we prefer to avoid it if we can. The problem, of course, is that if something really is a bad bet, then staying with it simply increases the amount we lose. Rather than walk away from a bad five-year relationship, for example, we turn it into a bad 10-year relationship; rather than accept that we’ve lost a thousand dollars, we lay down another thousand and lose that too. In the end, by delaying the pain of admitting our problem, we only add to it. Sometimes we just have to cut our losses.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 이미 낭비된 매몰 비용을 인정하는 고통을 피하려다 손실을 더 키우지 말고, 잘못된 상황에서는 과감하게 손실을 끊어내야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. If we’ve invested in something that <mark>hasn’t repaid us</mark>—<mark>be it money</mark> in a failing venture, or time in an unhappy relationship—we <mark>find it very difficult to walk away</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 우리가 우리에게 보답하지 않는 무언가에 투자해왔다면 / —그것이 실패해가는 벤처 사업에 들어간 돈이든, 불행한 관계에 쏟은 시간이든 간에— / 우리는 떠나는 것이 매우 어렵다는 것을 알게 된다.<br>
+            <b>[구문 포인트]</b> 'be it A or B'는 'whether it be A or B'에서 whether가 생략되어 주어와 동사가 도치된 양보 구문. 주절의 'find + it(가목적어) + very difficult(목적격보어 형용사) + to walk away(진목적어)' 5형식 구문.<br>
+            <b>[핵심 어휘]</b> invest in (~에 투자하다), repay (보답하다, 갚다), failing venture (실패해가는 벤처 사업), walk away (떠나다, 손을 떼다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. This is the <mark>sunk cost fallacy</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것이 바로 매몰 비용의 오류이다.<br>
+            <b>[구문 포인트]</b> 앞 문장의 인지적 편향 현상을 학술 개념인 'sunk cost fallacy'로 명명.<br>
+            <b>[핵심 어휘]</b> sunk cost (매몰 비용), fallacy (오류, 그릇된 생각)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. Our instinct is to continue investing money or time as we hope that our investment will <mark>prove to be worthwhile</mark> in the end.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리의 본능은 돈이나 시간을 계속 투자하는 것이다 / 우리의 투자가 결국에는 가치 있는 것으로 판명되기를 바라면서.<br>
+            <b>[구문 포인트]</b> be동사 is 뒤의 보어 자리 to부정사 to continue. 'prove to be + 형용사'(~한 것으로 드러나다/판명되다). 'in the end'(결국에는).<br>
+            <b>[핵심 어휘]</b> instinct (본능), worthwhile (가치 있는, 보람 있는), in the end (결국)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. <mark>Giving up</mark> would mean <mark>acknowledging</mark> that we’ve wasted something we can’t get back, and that thought is <mark>so painful that</mark> we prefer to avoid it if we can.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 포기하는 것은 인정하는 것을 의미할 것이다 / 우리가 되돌려받을 수 없는 무언가를 낭비했다는 것을 / 그리고 그 생각은 너무나 고통스러워서 / 우리는 가능하면 그것을 피하기를 선호한다.<br>
+            <b>[구문 포인트]</b> 동명사 주어 'Giving up'과 동명사 목적어 'acknowledging'. 'so + 형용사(painful) + that 결과절'(너무 ~해서 …하다) 구문.<br>
+            <b>[핵심 어휘]</b> acknowledge (인정하다), waste (낭비하다), get back (되찾다), painful (고통스러운), prefer (선호하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. The problem, of course, is that if something really is a <mark>bad bet</mark>, then <mark>staying with it</mark> simply <mark>increases the amount we lose</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 물론 문제는 ~이다 / 만약 무언가가 정말로 잘못된 선택(나쁜 베팅)이라면 / 그것을 고수하는 것이 / 단순히 우리가 잃는 양을 증가시킬 뿐이라는 것이다.<br>
+            <b>[구문 포인트]</b> is의 보어절을 이끄는 접속사 that. 조건절 뒤의 동명사 주어 'staying with it'에 맞춰 단수 본동사 'increases' 사용. amount 뒤 목적격 관계대명사 생략.<br>
+            <b>[핵심 어휘]</b> bad bet (잘못된 선택/베팅), stay with (~을 고수하다/유지하다), amount (양)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. Rather than walk away from a bad five-year relationship, for example, we turn it into a bad 10-year relationship; rather than accept that we’ve lost a thousand dollars, we <mark>lay down another thousand</mark> and lose that too.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어 / 나쁜 5년의 관계에서 떠나기보다는 / 우리는 그것을 나쁜 10년의 관계로 바꾸어 버린다 / ; 우리가 천 달러를 잃었다는 것을 인정하기보다는 / 우리는 또 다른 천 달러를 쏟아붓고 그것마저 잃는다.<br>
+            <b>[구문 포인트]</b> 'rather than + 동사원형(walk away / accept)'. 세미콜론(;)을 기준으로 두 개의 병렬 예시 구조 배치. 'lay down'(돈을 내놓다/걸다).<br>
+            <b>[핵심 어휘]</b> turn A into B (A를 B로 바꾸다), lay down (돈을 내놓다/쏟아붓다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 7 -->
+      <div class="chunk-item">
+        <div class="chunk-en">7. In the end, by <mark>delaying the pain</mark> of admitting our problem, we only <mark>add to it</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 결국 / 우리의 문제를 인정하는 고통을 미룸으로써 / 우리는 단지 그것(고통/손실)을 가중시킬 뿐이다.<br>
+            <b>[구문 포인트]</b> 'by + -ing'(~함으로써). 'add to'는 '~을 가중시키다/늘리다'를 뜻하는 타동사구.<br>
+            <b>[핵심 어휘]</b> delay (미루다, 연기하다), admit (인정하다), add to (~을 가중시키다/더하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 8 -->
+      <div class="chunk-item">
+        <div class="chunk-en">8. Sometimes we just have to <mark>cut our losses</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 때때로 우리는 그저 손실을 끊어내야(손절매해야) 한다.<br>
+            <b>[구문 포인트]</b> 지문의 최종 결론이자 핵심 해결책. 'cut one's losses'는 관용적으로 '더 큰 손실을 막기 위해 손을 떼다/손절하다'.<br>
+            <b>[핵심 어휘]</b> cut one's losses (더 이상의 손실을 막기 위해 손을 떼다/손절매하다)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상 정의 - 심리적 원인 및 폐해 - 최종 처방)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[개념 / 현상] 매몰 비용의 오류 정의</span>
+        <h4>손을 떼지 못하는 집착</h4>
+        <p>성과 없는 투자나 불행한 관계에서 투입한 비용 때문에 쉽게 빠져나오지 못하는 심리적 함정.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[원인 / 폐해] 인정의 고통 회피와 손실 누적</span>
+        <h4>고통 지연이 부르는 손실 증폭</h4>
+        <p>낭비를 인정하는 고통을 피하려다 관계를 10년으로 늘리고 추가 자금을 잃으며 손실을 가중시킴.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론 / 처방] 조기 손절매의 필요성</span>
+        <h4>과감한 손실 절단(Cut Losses)</h4>
+        <p>잘못된 베팅임을 깨달았을 때는 고통을 감수하고 즉시 손실을 끊어내는 결단이 최선의 해결책임.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">Q1. If we’ve invested in something that hasn’t repaid us, we find [it / that] very difficult to walk away.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: it · 뒤에 진목적어 to부정사(to walk away)가 위치하므로 가목적어 자리에는 오직 it만 올 수 있습니다.">it</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · that은 가목적어로 쓰일 수 없습니다. 5형식 가목적어-진목적어 구문에서는 반드시 it을 사용합니다.">that</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">Q2. If something really is a bad bet, then staying with it simply [increase / increases] the amount we lose.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: increases · 주절의 주어가 동명사구(staying with it)이므로 단수 취급하여 단수 본동사 increases가 올바릅니다.">increases</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · 동명사구 주어는 3인칭 단수로 일치시켜야 하므로 복수형 동사 increase는 틀립니다. increases가 정답입니다.">increase</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- Prob 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        If we’ve invested in something that hasn’t repaid us, we find it very difficult to walk away. This is the sunk cost fallacy. Giving up would mean ① <u>acknowledging</u> that we’ve wasted something we can’t get back, and that thought is so painful that we prefer to ② <u>avoid</u> it. The problem is that if something really is a bad bet, then staying with it simply ③ <u>diminishes</u> the amount we lose. Rather than walk away, we lay down another thousand dollars and lose that too. In the end, by ④ <u>delaying</u> the pain of admitting our problem, we only add to it. Sometimes we just have to ⑤ <u>cut</u> our losses.
+      </div>
+      <div class="exam-choices">
+        ① acknowledging &nbsp;&nbsp;&nbsp; ② avoid &nbsp;&nbsp;&nbsp; ③ diminishes &nbsp;&nbsp;&nbsp; ④ delaying &nbsp;&nbsp;&nbsp; ⑤ cut
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (diminishes → increases)</b><br>
+          <b>해설:</b> 잘못된 선택(bad bet)임에도 손을 떼지 않고 계속 유지하는 것은 잃게 되는 손실의 양을 줄이는(diminishes) 것이 아니라 단순히 '늘릴(increases)' 뿐이므로 ③번이 문맥상 틀렸습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        If we’ve invested in something that hasn’t repaid us—be it money in a failing venture, or time in an unhappy relationship—we find it very difficult to walk away. This is the sunk cost fallacy.
+      </div>
+      <div class="exam-choices">
+        (A) The problem, of course, is that if something really is a bad bet, then staying with it simply increases the amount we lose. Rather than walk away from a bad five-year relationship, we turn it into a bad 10-year relationship.<br><br>
+        (B) In the end, by delaying the pain of admitting our problem, we only add to it. Sometimes we just have to cut our losses.<br><br>
+        (C) Our instinct is to continue investing money or time as we hope that our investment will prove to be worthwhile in the end. Giving up would mean acknowledging that we’ve wasted something we can’t get back.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 매몰 비용 오류의 개념 제시 후 집착하는 심리적 본능과 고통 회피를 서술한 (C)가 먼저 오고, 손을 떼지 않을 때 손실이 증폭되는 문제점과 구체적 예시를 든 (A)가 이어진 뒤, 손실 절단의 최종 처방을 내리는 (B)로 귀결되는 것이 논리적입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> The problem, of course, is that if something really is a bad bet, then staying with it simply increases the amount we lose.<br><br>
+        If we’ve invested in something that hasn’t repaid us, we find it very difficult to walk away. ( ① ) This is the sunk cost fallacy. ( ② ) Our instinct is to continue investing as we hope that our investment will prove worthwhile in the end. ( ③ ) Giving up would mean acknowledging that we’ve wasted something we can’t get back, and that thought is so painful that we prefer to avoid it. ( ④ ) Rather than walk away from a bad five-year relationship, for example, we turn it into a bad 10-year relationship. ( ⑤ ) In the end, by delaying the pain of admitting our problem, we only add to it.
+      </div>
+      <div class="exam-choices">
+        선택: ① / ② / ③ / ④ / ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 주어진 문장은 '잘못된 선택을 고수할 때 손실이 증가하는 문제점'을 일반적으로 진술하고 있으므로, 바로 뒤의 구체적인 5년/10년 관계 예시(for example)가 시작되기 전인 ④번에 들어가야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건]을 참고하여 다음 우리말을 알맞은 영어 문장으로 완성하시오. (조건부 서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 포기하는 것은 우리가 되돌려받을 수 없는 무언가를 낭비했다는 것을 인정하는 것을 의미할 것이다.<br><br>
+        <b>[조건]</b><br>
+        1. 'give up', 'mean', 'acknowledge', 'waste', 'get back' 어휘를 모두 활용할 것 (필요시 어형 변화 가능)<br>
+        2. 동명사 주어('Giving up') 및 동명사 목적어('acknowledging')를 사용할 것<br>
+        3. 목적격 관계대명사가 생략된 관계사절을 포함하여 총 13~16단어로 영작할 것
+      </div>
+      <details>
+        <summary>모범 답안 및 구문 조건 확인</summary>
+        <div class="answer-content">
+          <b>모범 답안:</b><br>
+          Giving up would mean acknowledging that we’ve wasted something we can’t get back.<br><br>
+          <b>채점 포인트:</b><br>
+          - 동명사 주어 Giving up과 mean의 목적어로 쓰인 동명사 acknowledging의 정확성<br>
+          - that절 내부의 현재완료 시제 we’ve wasted something 및 목적격 관계대명사 생략 구문(something we can’t get back)의 완벽한 결합
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
