@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 6월 고2 학평 31번 - 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>2026 만덕고 2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 6월 고2 학평 31번</div>
+    <h1 class="title">Psychological Reactance:<br><span>The Allure of Scarcity</span></h1>
+    <p class="header-lead">선택권의 박탈과 희소성이 촉발하는 심리적 반발과 매력의 증대</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 심리적 반발(Psychological Reactance) — 자신의 자유나 선택권이 제한·박탈될 때 이를 회복하려는 반작용으로 대상의 가치를 더 높게 평가하는 심리 기제.</li>
+        <li><b>[배경 맥락]:</b> 실용적 가치가 전혀 없는 수집품(옛 우표, 주화, 빈티지카)이나 선택 불가능해진 포스터가 사람들에게 더 큰 매력으로 다가오는 이유를 설명함.</li>
+        <li><b>[논리 요약]:</b> 인간은 특정 옵션을 박탈당하거나 공급이 부족(희소)해질 때 대상의 매력도를 본능적으로 훨씬 높게 평가한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      We collect stamps, coins, vintage cars even when they serve no practical purpose. The post office doesn’t accept the old stamps, the banks don’t take old coins, and the vintage cars are no longer allowed on the road. These are all side issues; the attraction is that they are in short supply. In one study, students were asked to arrange ten posters in order of attractiveness—with the agreement that afterward they could keep one poster as a reward for their participation. Five minutes later, they were told that the poster with the third highest rating was no longer available. Then they were asked to judge all ten from scratch. The poster that was no longer available was suddenly classified as the most beautiful. In psychology, this phenomenon is called reactance: when we are deprived of an option, we suddenly deem it more attractive.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 선택권이 박탈되거나 희소성이 발생하는 순간, 인간은 심리적 반발(reactance)로 인해 해당 대상을 훨씬 더 매력적인 것으로 인식한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. We <mark>collect stamps, coins, vintage cars</mark> even when they <mark>serve no practical purpose</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 우표, 주화, 빈티지 자동차를 수집한다 / 그것들이 아무런 실용적인 목적을 수행하지 못할 때조차도.<br>
+            <b>[구문 포인트]</b> 'even when'은 '~할 때조차도'를 나타내는 양보의 부사절 접속사. 'serve a purpose'는 '~한 목적에 부합하다/기여하다'의 표현.<br>
+            <b>[핵심 어휘]</b> collect (수집하다), vintage car (클래식/구형 자동차), practical (실용적인), purpose (목적)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. The post office doesn’t accept the old stamps, the banks don’t take old coins, and the vintage cars are <mark>no longer allowed on the road</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우체국은 옛날 우표를 받아주지 않고 / 은행은 오래된 동전을 받지 않으며 / 빈티지 자동차는 더 이상 도로에서 허용되지 않는다.<br>
+            <b>[구문 포인트]</b> 3개의 독립절이 콤마와 등위접속사 and로 연결된 병렬 구조. 마지막 절은 수동태 'are no longer allowed'(더 이상 허용되지 않는다) 사용.<br>
+            <b>[핵심 어휘]</b> accept (받아들이다), allow (허용하다), no longer (더 이상 ~않는)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. These are all <mark>side issues</mark>; the attraction is that they are <mark>in short supply</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것들은 모두 부차적인 문제들이다 / ; (진짜) 매력은 그것들이 공급 부족 상태(희소)라는 점이다.<br>
+            <b>[구문 포인트]</b> 세미콜론(;)을 통해 원인과 본질을 대조. be동사 is 뒤의 'that'은 완전한 절을 이끄는 보어절 접속사. 'in short supply'는 '공급이 부족한/희소한'.<br>
+            <b>[핵심 어휘]</b> side issue (부차적인 문제), attraction (매력), in short supply (공급이 부족한, 품귀인)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. In one study, students were <mark>asked to arrange</mark> ten posters <mark>in order of attractiveness</mark>—with the agreement that afterward they could keep one poster as a reward for their participation.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 한 연구에서 / 학생들은 10장의 포스터를 배열하도록 요청받았다 / 매력도 순서대로 / —그 후에 그들이 참여에 대한 보상으로 한 장의 포스터를 가질 수 있다는 합의와 함께.<br>
+            <b>[구문 포인트]</b> 5형식 수동태 'were asked to arrange'. 'the agreement' 뒤의 'that'은 동격의 접속사. 'in order of ~'(~의 순서로).<br>
+            <b>[핵심 어휘]</b> arrange (배열하다, 정리하다), in order of (~의 순서로), attractiveness (매력도), agreement (합의, 동의), reward (보상), participation (참여)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. Five minutes later, they <mark>were told that</mark> the poster with the third highest rating was <mark>no longer available</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 5분 후에 / 그들은 들었다 / 세 번째로 높은 평가를 받은 포스터가 / 더 이상 구할 수 없게 되었다는 것을.<br>
+            <b>[구문 포인트]</b> 'were told that'(~라는 말을 들었다 / 수동태). 'available'(이용 가능한/구할 수 있는).<br>
+            <b>[핵심 어휘]</b> rating (평가 순위, 등급), available (이용 가능한, 구할 수 있는)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. Then they were <mark>asked to judge</mark> all ten <mark>from scratch</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러고 나서 그들은 요청받았다 / 10장 모두를 처음부터 다시 평가하도록.<br>
+            <b>[구문 포인트]</b> 수동태 'were asked to-v'. 'from scratch'는 '처음부터 다시/맨 처음부터'를 뜻하는 관용구.<br>
+            <b>[핵심 어휘]</b> judge (판단하다, 평가하다), from scratch (처음부터, 원점에서)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 7 -->
+      <div class="chunk-item">
+        <div class="chunk-en">7. The poster that was no longer available was suddenly <mark>classified as the most beautiful</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 더 이상 구할 수 없게 된 그 포스터가 / 갑자기 가장 아름다운 것으로 분류되었다.<br>
+            <b>[구문 포인트]</b> 주어(The poster)를 주격 관계대명사 that절이 수식. 수동태 'was suddenly classified as ~'(~로 분류되다).<br>
+            <b>[핵심 어휘]</b> suddenly (갑자기), classify A as B (A를 B로 분류하다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 8 -->
+      <div class="chunk-item">
+        <div class="chunk-en">8. In psychology, this phenomenon is called <mark>reactance</mark>: when we are <mark>deprived of an option</mark>, we suddenly <mark>deem it more attractive</mark>.</div>
+        <details>
+          <summary>직독직해 및 구문·어휘 해설</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 심리학에서 / 이러한 현상은 ‘반발심(reactance)’이라 불린다 / : 우리가 어떤 선택권을 박탈당할 때 / 우리는 갑자기 그것을 더 매력적인 것으로 여긴다.<br>
+            <b>[구문 포인트]</b> 수동태 'is called reactance'(보어로 명사 잔류). 'be deprived of ~'(~을 박탈당하다). 'deem(5형식 동사) + 목적어(it) + 목적격보어(형용사 more attractive)'.<br>
+            <b>[핵심 어휘]</b> psychology (심리학), reactance (반발심, 저항), be deprived of (~을 박탈당하다), option (선택권), deem (~로 여기다/간주하다), attractive (매력적인)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상 관찰 - 심리 실험 - 심리학적 명명)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[현상 / 전제] 비실용적 수집품의 매력</span>
+        <h4>희소성(Short Supply)의 힘</h4>
+        <p>실용성이 전혀 없는 옛 우표나 오래된 차를 수집하는 핵심 동기는 오직 '공급의 부족(희소성)'에 있음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[실증 / 실험] 포스터 평가 실험</span>
+        <h4>선택 불가능과 가치 급등</h4>
+        <p>3위 포스터의 획득 기회가 박탈되자, 재평가에서 해당 포스터가 압도적인 1위(가장 아름다운 것)로 등극함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론 / 명명] 심리적 반발의 법칙</span>
+        <h4>박탈이 부르는 매력의 증대</h4>
+        <p>선택권을 빼앗기면 그 대상을 더 매력적으로 평가하게 되는 '심리적 반발(reactance)' 기제가 작동함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">Q1. Five minutes later, they were told that the poster with the third highest rating was no longer [available / availably].</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: available · be동사 was의 주격 보어 자리이므로 형용사 available이 올바릅니다.">available</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · availably는 부사로 be동사의 보어 역할을 할 수 없습니다. 형용사 available이 정답입니다.">availably</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">Q2. In psychology, this phenomenon is called reactance: when we are deprived of an option, we suddenly deem it more [attractive / attractively].</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: attractive · 5형식 동사 deem의 목적격보어 자리이므로 형용사 attractive가 올바릅니다.">attractive</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답 · attractively는 부사로 목적어(it)의 상태를 설명하는 목적격보어가 될 수 없습니다. 형용사 attractive가 정답입니다.">attractively</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- Prob 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+      <div class="exam-passage">
+        We collect stamps, coins, vintage cars even when they serve no ① <u>practical</u> purpose. The banks don’t take old coins, and the vintage cars are no longer allowed on the road. The main attraction is that they are in ② <u>short</u> supply. In one study, students were asked to arrange ten posters in order of attractiveness. Five minutes later, they were told that the poster with the third highest rating was no longer ③ <u>available</u>. Then they were asked to judge all ten from scratch. The poster that was no longer available was suddenly classified as the ④ <u>least</u> beautiful. In psychology, this phenomenon is called reactance: when we are deprived of an option, we suddenly deem it more ⑤ <u>attractive</u>.
+      </div>
+      <div class="exam-choices">
+        ① practical &nbsp;&nbsp;&nbsp; ② short &nbsp;&nbsp;&nbsp; ③ available &nbsp;&nbsp;&nbsp; ④ least &nbsp;&nbsp;&nbsp; ⑤ attractive
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (least → most)</b><br>
+          <b>해설:</b> 심리적 반발(reactance)로 인해 선택권을 박탈당한 포스터의 매력도가 급상승하는 현상을 다루고 있으므로, 3위였던 포스터는 재평가 시 '가장(most)' 아름다운 것으로 분류되어야 문맥상 맞습니다. 따라서 least(가장 덜)는 부적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        We collect stamps, coins, vintage cars even when they serve no practical purpose. The post office doesn’t accept the old stamps, the banks don’t take old coins, and the vintage cars are no longer allowed on the road. These are all side issues; the attraction is that they are in short supply.
+      </div>
+      <div class="exam-choices">
+        (A) The poster that was no longer available was suddenly classified as the most beautiful. In psychology, this phenomenon is called reactance: when we are deprived of an option, we suddenly deem it more attractive.<br><br>
+        (B) In one study, students were asked to arrange ten posters in order of attractiveness—with the agreement that afterward they could keep one poster as a reward for their participation.<br><br>
+        (C) Five minutes later, they were told that the poster with the third highest rating was no longer available. Then they were asked to judge all ten from scratch.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 희소성의 매력을 입증하는 포스터 실험 도입부인 (B)가 먼저 오고, 3위 포스터의 획득 불가 통보 및 재평가 과정을 다룬 (C)가 이어진 후, 실험 결과(1위 등극)와 심리학적 용어인 '반발심(reactance)'의 정의를 제시하는 (A)로 마무리되는 것이 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Then they were asked to judge all ten from scratch.<br><br>
+        We collect stamps, coins, vintage cars even when they serve no practical purpose. ( ① ) These are all side issues; the attraction is that they are in short supply. ( ② ) In one study, students were asked to arrange ten posters in order of attractiveness—with the agreement that afterward they could keep one poster as a reward. ( ③ ) Five minutes later, they were told that the poster with the third highest rating was no longer available. ( ④ ) The poster that was no longer available was suddenly classified as the most beautiful. ( ⑤ ) In psychology, this phenomenon is called reactance.
+      </div>
+      <div class="exam-choices">
+        선택: ① / ② / ③ / ④ / ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 3위 포스터를 더 이상 가질 수 없다는 통보를 들은 직후(③번 뒤), 포스터 10장 전체를 원점에서 다시 평가하라는 요청을 받아야(주어진 문장), 그 결과로서 해당 포스터가 가장 아름다운 것으로 재분류되었다는 ④번 뒤의 결과 문장으로 자연스럽게 연결됩니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Prob 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건]을 참고하여 다음 우리말을 알맞은 영어 문장으로 완성하시오. (조건부 서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말]</b> 우리가 어떤 선택권을 박탈당할 때, 우리는 갑자기 그것을 더 매력적인 것으로 여긴다.<br><br>
+        <b>[조건]</b><br>
+        1. 'deprive of', 'option', 'suddenly', 'deem', 'attractive' 어휘를 모두 사용할 것 (필요시 어형 변화 가능)<br>
+        2. 수동태('be deprived of') 및 5형식 구문(deem + 목적어 + 형용사 목적격보어)을 포함할 것<br>
+        3. 'when' 부사절로 문장을 시작할 것 (총 12~16단어)
+      </div>
+      <details>
+        <summary>모범 답안 및 구문 조건 확인</summary>
+        <div class="answer-content">
+          <b>모범 답안:</b><br>
+          When we are deprived of an option, we suddenly deem it more attractive.<br><br>
+          <b>채점 포인트:</b><br>
+          - When we are deprived of an option 수동태 및 전치사 of의 정확한 사용<br>
+          - 5형식 동사 deem 뒤 목적어 it과 형용사 비교급 보어 more attractive의 올바른 결합
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
