@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2024년 3월 고2 학평 29번 | 스코어학원 워크북</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Banner */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>Score Academy</b> High School Logic Series</span>
+      <span>2026 만덕고2학년 2-1</span>
+    </div>
+    <div class="meta-badge">2024년 3월 고2 학평 29번</div>
+    <h1 class="title">Mental Imagery in Behavior<br><span>Modification Therapy</span></h1>
+    <p class="header-lead">부정적 건강 습관 수정을 돕는 심상 기법과 행동 치료</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 행동의학(Behavioral Medicine) 및 심상 기법(Mental Imagery) — 가치관보다 변화시키기 쉬운 행동을 표적으로 삼아 원하는 긍정적 행동을 시각화·암시함으로써 습관을 강화하는 치료 기법.</li>
+        <li><b>[배경 맥락]:</b> 섭취 습관(흡연, 음주 등)이나 과정 중독(일중독, 쇼핑중독 등)은 성격 중 가장 수정이 용이한 외적 '행동' 자체의 변화를 통해 해결할 수 있음.</li>
+        <li><b>[논리 요약]:</b> 심상 기법 단독으로는 한계가 있으나, 다른 행동 수정 전략과 결합하여 반복 사용할 때 바람직한 행동을 강화하는 강력한 효과를 발휘함.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      For years, many psychologists have held strongly to the belief that the key to addressing negative health habits is to change behavior. This, more than values and attitudes, is the part of personality that is easiest to change. Ingestive habits such as smoking, drinking and various eating behaviors are the most common health concerns targeted for behavioral changes. Process-addiction behaviors (workaholism, shopaholism, and the like) fall into this category as well. Mental imagery combined with power of suggestion was taken up as the premise of behavioral medicine to help people change negative health behaviors into positive ones. Although this technique alone will not produce changes, when used alongside other behavior modification tactics and coping strategies, behavioral changes have proved effective for some people. What mental imagery does is reinforce a new desired behavior. Repeated use of images reinforces the desired behavior more strongly over time.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 부정적 건강 습관을 교정하는 가장 핵심적인 열쇠는 행동 변화이며, 암시의 힘과 결합된 심상 기법을 다른 행동 수정 및 대처 전략과 병행하여 반복적으로 적용할 때 바람직한 목표 행동을 지속적으로 강화할 수 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- Sentence 1 -->
+      <div class="chunk-item">
+        <div class="chunk-en">1. For years, many psychologists have <mark>held strongly to the belief that</mark> the key to addressing negative health habits is to change behavior.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 수년 동안, 많은 심리학자들은 ~라는 믿음을 굳게 고수해 왔다 / 부정적인 건강 습관을 다루는 핵심은 행동을 바꾸는 것이라는.<br>
+            <b>[구문 포인트]</b> <code>hold to</code>(~을 고수하다); the belief 뒤의 <code>that</code>은 완전한 문장이 이어지는 <code>동격의 접속사</code>; <code>the key to + -ing(동명사)</code>(~하는 데 대한 핵심); <code>to change</code>는 명사적 용법의 보어.<br>
+            <b>[핵심 어휘]</b> psychologist (심리학자), address (다루다, 처리하다), negative (부정적인)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 2 -->
+      <div class="chunk-item">
+        <div class="chunk-en">2. This, more than values and attitudes, is the part of personality <mark>that is easiest to change</mark>.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것(행동)은, 가치관과 태도보다도, / 바꾸기에 가장 쉬운 성격의 일부분이다.<br>
+            <b>[구문 포인트]</b> 삽입구 <code>more than values and attitudes</code>; the part of personality를 선행사로 수식하는 주격 관계대명사 <code>that</code>; <code>to change</code>는 형용사 easiest를 수식하는 부사적 용법.<br>
+            <b>[핵심 어휘]</b> personality (성격, 인격), attitude (태도), value (가치관)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 3 -->
+      <div class="chunk-item">
+        <div class="chunk-en">3. Ingestive habits such as smoking, drinking and various eating behaviors are the most common health concerns <mark>targeted for behavioral changes</mark>.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 흡연, 음주 및 다양한 식습관과 같은 섭취 습관은 / 행동 변화를 목표로 삼는 가장 흔한 건강 관심사이다.<br>
+            <b>[구문 포인트]</b> <code>such as</code>(~와 같은); 주어 Ingestive habits에 수일치된 복수 동사 <code>are</code>; <code>targeted</code>는 the most common health concerns를 후치 수식하는 과거분사구.<br>
+            <b>[핵심 어휘]</b> ingestive (섭취의), concern (관심사, 염려), target (목표로 삼다)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 4 -->
+      <div class="chunk-item">
+        <div class="chunk-en">4. Process-addiction behaviors (workaholism, shopaholism, and the like) <mark>fall into this category as well</mark>.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 과정 중독 행동(일중독, 쇼핑중독 등) 역시 / 이 범주에 속한다.<br>
+            <b>[구문 포인트]</b> <code>and the like</code>(기타 등등); <code>fall into</code>(~에 속하다, 해당하다); <code>as well</code>(또한, 역시).<br>
+            <b>[핵심 어휘]</b> process-addiction (과정 중독), workaholism (일중독), shopaholism (쇼핑중독), category (범주)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 5 -->
+      <div class="chunk-item">
+        <div class="chunk-en">5. Mental imagery <mark>combined with power of suggestion</mark> was taken up as the premise of behavioral medicine <mark>to help people change</mark> negative health behaviors into positive ones.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 암시의 힘과 결합된 심상(마음속 이미지)은 / 행동 의학의 전제로 채택되었다 / 사람들이 부정적인 건강 행동을 긍정적인 것으로 바꾸도록 돕기 위해.<br>
+            <b>[구문 포인트]</b> <code>combined with</code>(과거분사 수식구); 주어 Mental imagery에 맞춘 단수 수동태 <code>was taken up</code>; <code>help + O + 원형부정사(change)</code>; <code>change A into B</code>; <code>ones</code>는 behaviors를 받는 부정대명사.<br>
+            <b>[핵심 어휘]</b> mental imagery (심상, 마인드 이미지), suggestion (암시), premise (전제), behavioral medicine (행동 의학)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 6 -->
+      <div class="chunk-item">
+        <div class="chunk-en">6. Although this technique alone will not produce changes, <mark>when used alongside</mark> other behavior modification tactics and coping strategies, behavioral changes have proved effective for some people.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 비록 이 기법 단독으로는 변화를 만들어내지 못할지라도, / 다른 행동 수정 전술 및 대처 전략과 함께 사용될 때, / 행동 변화는 몇몇 사람들에게 효과적인 것으로 입증되어 왔다.<br>
+            <b>[구문 포인트]</b> 접속사 <code>Although</code>; <code>when (it is) used alongside</code> 접속사가 생략되지 않은 수동 분사구문; <code>prove + 형용사(effective)</code>(~임이 입증되다).<br>
+            <b>[핵심 어휘]</b> tactic (전술), coping strategy (대처 전략), modification (수정, 조절), effective (효과적인)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 7 -->
+      <div class="chunk-item">
+        <div class="chunk-en">7. <mark>What mental imagery does</mark> is <mark>reinforce</mark> a new desired behavior.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 심상이 하는 일은 / 새로운 바람직한 행동을 강화하는 것이다.<br>
+            <b>[구문 포인트]</b> 관계대명사 <code>What</code>이 이끄는 명사절 주어(단수 취급 &rarr; <code>is</code>); what절 내에 do 동사가 사용되었을 때 be동사의 보어로 <code>to가 생략된 원형부정사(reinforce)</code> 사용 가능.<br>
+            <b>[핵심 어휘]</b> reinforce (강화하다), desired (원하는, 바람직한)
+          </div>
+        </details>
+      </div>
+
+      <!-- Sentence 8 -->
+      <div class="chunk-item">
+        <div class="chunk-en">8. Repeated use of images <mark>reinforces the desired behavior</mark> more strongly over time.</div>
+        <details>
+          <summary>해석 및 구문 해설 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이미지를 반복적으로 사용하는 것은 / 시간이 지남에 따라 원하는 행동을 더 강력하게 강화한다.<br>
+            <b>[구문 포인트]</b> 단수 주어 <code>Repeated use</code>에 맞춘 단수 동사 <code>reinforces</code>; <code>over time</code>(시간이 지남에 따라).<br>
+            <b>[핵심 어휘]</b> repeated (반복된), over time (시간이 지남에 따라, 점진적으로)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Behavior Focus - Imagery Integration - Reinforcement Mechanism)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PREMISE] 핵심 타깃 설정</span>
+        <h4>행동 수정의 용이성과 적용 대상</h4>
+        <p>가치관보다 수정하기 쉬운 '행동'이 부정적 습관 교정의 핵심이며, 섭취 습관(흡연·음주) 및 과정 중독(일·쇼핑) 등이 대표적 대상임.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[METHOD] 치료 기법의 도입</span>
+        <h4>심상 기법과 복합 전략의 병행</h4>
+        <p>암시와 결합된 심상 기법은 행동의학의 기본 전제로 채택되었으며, 단독 사용보다는 다른 행동 수정 및 대처 전략과 병행할 때 실효성을 발휘함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[MECHANISM] 핵심 원리와 효과</span>
+        <h4>원하는 행동의 반복적 강화</h4>
+        <p>심상의 핵심 역할은 새롭고 바람직한 목표 행동을 강화하는 것이며, 이미지의 반복적 활용을 통해 시간이 지남에 따라 그 행동을 더 견고히 정착시킴.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <!-- Drill 1 -->
+    <div class="drill-card">
+      <div class="drill-q">1. Although this technique alone will not produce changes, when [ using / used ] alongside other behavior modification tactics, behavioral changes have proved effective.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: 분사구문의 의미상 주어인 this technique이 '사용하는' 주체가 아니라 '사용되는' 대상이므로 수동의 과거분사 used가 필요합니다.">using</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답 (used): 접속사 when 뒤에 '주어 + be동사(it is)'가 생략된 형태이며, 기술(this technique)이 수동적으로 '사용될 때'를 의미하므로 과거분사 used가 올바릅니다.">used</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <!-- Drill 2 -->
+    <div class="drill-card">
+      <div class="drill-q">2. [ That / What ] mental imagery does is reinforce a new desired behavior.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: does의 목적어가 비어 있는 불완전한 절이며, 문장 전체의 주어 역할을 하는 명사절을 이끌어야 하므로 접속사 That은 쓸 수 없습니다.">That</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답 (What): does 뒤에 목적어가 빠진 불완전한 절을 이끌고, 문장 전체의 주어 역할을 하는 선행사를 포함한 관계대명사 What이 적절합니다.">What</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제 (4문항 체제)</h2>
+    
+    <!-- Problem 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        For years, many psychologists have held strongly to the belief that the key to addressing negative health habits is to change behavior. This, more than values and attitudes, is the part of personality that is easiest to change. Ingestive habits such as smoking, drinking and various eating behaviors are targeted for behavioral changes, along with process-addiction behaviors. Mental imagery combined with power of suggestion was taken up to help people replace negative health behaviors. Although this technique alone will not produce changes, when used alongside other behavior modification tactics and coping strategies, it has proved effective because what mental imagery ultimately does is ____________________________________.
+      </div>
+      <div class="exam-choices">
+        ① eliminate the subconscious desire for chemical consumption<br>
+        ② reinforce a new desired behavior over time<br>
+        ③ transform core personal values and moral standards<br>
+        ④ diagnose the neurological roots of process addictions<br>
+        ⑤ suppress emotional reactions caused by daily stress
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 지문의 후반부에서 심상 기법(Mental imagery)의 핵심 기능은 '새롭고 바람직한 행동을 강화하는 것(reinforce a new desired behavior)'이며, 이미지를 반복 사용할수록 그 행동이 시간이 지남에 따라 더욱 강화된다고 명시되어 있으므로 ②번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 2: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 2] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <p style="background:#fff; border-left:3px solid var(--amber); padding:6px 10px; margin-bottom:10px; font-weight:600;">
+          Although this technique alone will not produce changes, when used alongside other behavior modification tactics and coping strategies, behavioral changes have proved effective for some people.
+        </p>
+        For years, many psychologists have held strongly to the belief that the key to addressing negative health habits is to change behavior. This, more than values and attitudes, is the part of personality that is easiest to change. ( ① ) Ingestive habits such as smoking, drinking and various eating behaviors are the most common health concerns targeted for behavioral changes. ( ② ) Process-addiction behaviors (workaholism, shopaholism, and the like) fall into this category as well. ( ③ ) Mental imagery combined with power of suggestion was taken up as the premise of behavioral medicine to help people change negative health behaviors into positive ones. ( ④ ) What mental imagery does is reinforce a new desired behavior. ( ⑤ ) Repeated use of images reinforces the desired behavior more strongly over time.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 주어진 문장의 'this technique(이 기법)'은 ③번 뒤에서 언급된 'Mental imagery combined with power of suggestion(암시의 힘과 결합된 심상)'을 지칭합니다. 또한 기법의 단독 한계와 병행 시의 효과를 설명한 뒤, ④번 뒤에서 '그렇다면 심상이 실제로 하는 역할(What mental imagery does is...)'로 세부 메커니즘을 상술하므로 ④번 위치가 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 3: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        For years, many psychologists have held strongly to the belief that the key to addressing negative health habits is to change behavior. This, more than values and attitudes, is the part of personality that is easiest to change.
+        <br><br>
+        (A) What mental imagery does is reinforce a new desired behavior. Repeated use of images reinforces the desired behavior more strongly over time.<br>
+        (B) Ingestive habits such as smoking, drinking and various eating behaviors are the most common health concerns targeted for behavioral changes. Process-addiction behaviors (workaholism, shopaholism, and the like) fall into this category as well.<br>
+        (C) Mental imagery combined with power of suggestion was taken up as the premise of behavioral medicine to help people change negative health behaviors into positive ones. Although this technique alone will not produce changes, when used alongside other behavior modification tactics and coping strategies, behavioral changes have proved effective for some people.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: ③ (B) - (C) - (A)</b><br>
+          <b>해설:</b> 주어진 글에서 행동 변화의 용이성을 제시한 후, (B)에서 행동 수정의 구체적 대상(섭취 습관 및 과정 중독)을 열거하고, (C)에서 이를 수정하기 위한 구체적 기법으로 '암시와 결합된 심상' 및 병행 효과를 소개한 다음, (A)에서 심상이 바람직한 행동을 강화하는 구체적 원리와 반복의 중요성을 정리하며 글을 맺는 (B) - (C) - (A) 순서가 논리적으로 가장 알맞습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Problem 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [조건부 서술형 영작] 다음 우리말 뜻에 맞도록 &lt;보기&gt;의 단어를 모두 활용하여 조건에 맞게 영작하시오.</h4>
+      <div class="exam-passage">
+        <b>[우리말]:</b> "심상이 하는 일은 새로운 바람직한 행동을 강화하는 것이다."<br><br>
+        <b>&lt;보기&gt;</b><br>
+        [ is / imagery / mental / reinforce / behavior / what / desired / new / does / a ]<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 관계대명사 <code>what</code>이 이끄는 명사절을 주어로 사용할 것.<br>
+        2. 동사 do가 포함된 what절 주어에 호응하여 be동사 뒤 보어로 <code>to가 생략된 원형부정사</code>를 사용할 것.<br>
+        3. &lt;보기&gt;의 단어 10개를 모두 한 번씩만 사용하여 정확히 영작할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 보기</summary>
+        <div class="answer-content">
+          <b>정답: What mental imagery does is reinforce a new desired behavior.</b><br>
+          <b>해설:</b> 관계대명사 what절 주어(What mental imagery does) 뒤에 단수 be동사 is를 배치하고, 주어절 내에 does가 포함되어 있으므로 보어 자리에 to가 생략된 원형부정사 reinforce와 목적어 a new desired behavior를 순서대로 배열합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 48px;
+    background: #182238;
+    color: #60a5fa;
+    border: 1px solid #233252;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 150ms ease-in-out;
+  ">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
