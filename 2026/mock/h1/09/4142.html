@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 9월 학평 41~42번 워크북 | 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 전국연합학력평가 (2026년 09월)</span>
+    </div>
+    <div class="meta-badge">09월 학평 41~42번 · 장문</div>
+    <h1 class="title">Internet Democratizes Slang<br><span>Dismantling Linguistic Barriers</span></h1>
+    <p class="header-lead">인터넷과 소셜 미디어가 이끈 규범 파괴와 속어의 대중화</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 언어적 규범주의(Prescriptive Norms)의 붕괴 및 소셜 미디어를 통한 속어의 민주화(Democratization of Slang)</li>
+        <li><b>[배경 맥락]:</b> 과거 인쇄·방송 미디어 체제에서는 표준어 중심의 언어 규칙 제정자(rule makers)가 소통 통로를 독점 통제했음</li>
+        <li><b>[논리 요약]:</b> 소셜 미디어 플랫폼과 크리에이터들의 부상은 기존 언어 장벽을 허물고 속어에 정당성을 부여하여 급속한 밈 확산을 촉진함</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      The role of ‘slang’ in popular culture has fundamentally changed because of the internet. Since the emergence of Standard English, the rule makers of language have been in charge, and their prescriptive norms about a ‘correct’ version of the English language have dominated our channels of communication. If you wanted your voice to be heard by the public, you had to work within their limits, conforming to the strict expectations of either print or broadcast media. Social media completely broke that barrier. The playing field is now level, and public access is democratized. Anybody and everybody can become a public figure on the new communicative platforms, meaning that nobody’s left to enforce the old rules. TV presenters and journalists might not have been able to use slang, but content creators can. We regularly use words like ‘function’ and ‘side­eye,’ and our influence both legitimizes these terms and gives them a large platform to spread quicker than they could have before. Content creators also come from a greater variety of backgrounds than people working in traditional media. This means that slang can more naturally go beyond the economic and social barriers that once limited its growth. The loose social networks that previously connected us geographically are simply stronger online, and memes are now transmitted at rapid pace.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 인터넷과 소셜 미디어는 기존 전통 매체의 표준어 통제 규범을 해체하고, 다양한 배경의 크리에이터들을 통해 속어를 공론장의 정당한 언어로 확산시키며 언어의 민주화를 이끌었다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>The role of ‘slang’ in popular culture has fundamentally changed</mark> because of the internet.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 대중문화에서 '속어'의 역할은 근본적으로 변화했다 / 인터넷 때문에.<br>
+            <b>[구문 포인트]</b> 단수 주어 The role에 맞추어 현재완료 능동형 has changed가 연결됨. 부사 fundamentally가 동사를 수식하며, 이유의 전치사구 [because of + 명사(the internet)]가 결합됨.<br>
+            <b>[핵심 어휘]</b> slang (속어), popular culture (대중문화), fundamentally (근본적으로), because of (~ 때문에)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Since the emergence of Standard English, <mark>the rule makers of language have been in charge</mark>, and their prescriptive norms about a ‘correct’ version of the English language have dominated our channels of communication.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 표준 영어의 등장 이래로, / 언어의 규칙 제정자들이 주도권을 쥐어 왔다, / 그리고 영어의 '올바른' 형태에 대한 그들의 규범적 기준들은 우리의 소통 통로들을 지배해 왔다.<br>
+            <b>[구문 포인트]</b> Since (~이래로) 전치사구로 인해 두 개의 주절 모두 현재완료 시제 [have been in charge] 및 [have dominated]가 사용됨. prescriptive norms는 사용을 규제하고 명령하는 규범을 뜻함.<br>
+            <b>[핵심 어휘]</b> emergence (등장, 출현), in charge (총괄하는, 책임이 있는), prescriptive (규범적인, 지시적인), dominate (지배하다), channel of communication (소통 통로)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">If you wanted your voice to be heard by the public, <mark>you had to work within their limits, conforming to the strict expectations</mark> of either print or broadcast media.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 여러분이 자신의 목소리가 대중에게 들리기를 원했다면, / 여러분은 그들의 한계(제한) 안에서 작업해야만 했다, / 엄격한 기대치에 순응하면서 / 인쇄 매체나 방송 매체 중 하나의.<br>
+            <b>[구문 포인트]</b> want + 목적어 + 수동형 목적격보어(to be heard). 콤마 뒤의 [conforming to...]는 능동의 동시동작 분사구문. [either A or B] 상관접속사 결합.<br>
+            <b>[핵심 어휘]</b> public (대중), limit (한계, 범위), conform to (~에 순응하다), strict (엄격한), broadcast media (방송 매체)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>Social media completely broke that barrier</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 소셜 미디어는 그 장벽을 완전히 허물어뜨렸다.<br>
+            <b>[구문 포인트]</b> 글의 논지가 전통 매체의 통제에서 개방과 해방으로 급변하는 전환문. that barrier는 앞 문장의 '기존 인쇄·방송 매체의 엄격한 규범적 제한'을 가리킴.<br>
+            <b>[핵심 어휘]</b> completely (완전히), break (깨부수다, 허물다), barrier (장벽)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>The playing field is now level</mark>, and public access is democratized.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 운동장은 이제 평평해졌고, / 대중의 접근은 민주화되었다.<br>
+            <b>[구문 포인트]</b> 'The playing field is level'은 모든 참여자에게 조건이 공평해졌음을 나타내는 관용 표현. is democratized는 수동태로 정보 접근의 평등화를 집약함.<br>
+            <b>[핵심 어휘]</b> level (평평한, 공평한), playing field (경쟁 환경, 운동장), access (접근), democratize (민주화하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Anybody and everybody can become a public figure on the new communicative platforms, <mark>meaning that nobody’s left to enforce the old rules</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 누구라도 그리고 모든 사람이 공인이 될 수 있다 / 새로운 소통 플랫폼에서, / 이는 과거의 규칙들을 강제할 사람이 아무도 남아있지 않다는 것을 의미한다.<br>
+            <b>[구문 포인트]</b> 콤마 뒤의 [meaning that...]은 결과를 나타내는 분사구문. that절 내부에서 [nobody is left to-v (~할 사람이 아무도 남아있지 않다)] 수동 구조 결합.<br>
+            <b>[핵심 어휘]</b> public figure (공인, 유명인), communicative (소통의), enforce (집행하다, 강제하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">TV presenters and journalists might not have been able to use slang, <mark>but content creators can</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> TV 진행자들과 언론인들은 속어를 사용할 수 없었을지도 모르지만, / 콘텐츠 크리에이터들은 사용할 수 있다.<br>
+            <b>[구문 포인트]</b> [might not have been able to-v (과거에 ~할 수 없었을지도 모른다)]와 현재 시제 조동사 대동사 [can (= can use slang)]의 명확한 시대적 대조.<br>
+            <b>[핵심 어휘]</b> presenter (진행자), journalist (기자), content creator (콘텐츠 제작자)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">We regularly use words like ‘function’ and ‘side­eye,’ and <mark>our influence both legitimizes these terms and gives them a large platform to spread quicker than they could have before</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 정기적으로 'function'이나 'side-eye'와 같은 단어들을 사용하며, / 우리의 영향력은 이러한 용어들을 정당화하고 / 그것들에게 과거에 퍼질 수 있었던 것보다 더 빠르게 퍼질 커다란 플랫폼을 제공한다.<br>
+            <b>[구문 포인트]</b> 상관접속사 [both A and B]로 3인칭 단수 동사 [legitimizes ... and gives ...]가 병렬 연결됨. to spread는 형용사적 용법. quicker는 부사적 비교급.<br>
+            <b>[핵심 어휘]</b> regularly (정기적으로, 자주), legitimize (정당화하다, 합법화하다), term (용어), platform (발판, 플랫폼)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Content creators also come from <mark>a greater variety of backgrounds than people working in traditional media</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 콘텐츠 크리에이터들은 또한 더 다양한 배경 출신이다 / 전통 매체에서 일하는 사람들보다.<br>
+            <b>[구문 포인트]</b> [a variety of (다양한)]의 비교급 [a greater variety of]. working은 people을 후치 수식하는 능동 현재분사.<br>
+            <b>[핵심 어휘]</b> variety (다양성), background (배경), traditional media (전통 미디어)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">This means that <mark>slang can more naturally go beyond the economic and social barriers that once limited its growth</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것은 의미한다 / 속어가 한때 그것의 성장을 제한했던 경제적 및 사회적 장벽들을 더 자연스럽게 넘어설 수 있다는 것을.<br>
+            <b>[구문 포인트]</b> means의 목적어로 접속사 that절이 결합. barriers 뒤의 that은 주격 관계대명사이며, once는 '한때'를 뜻하는 시간 부사.<br>
+            <b>[핵심 어휘]</b> go beyond (~을 넘어서다), economic (경제적인), limit (제한하다), growth (성장)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">The loose social networks that previously connected us geographically <mark>are simply stronger online, and memes are now transmitted at rapid pace</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이전에 지리적으로 우리를 연결했던 느슨한 사회적 연결망들은 / 온라인에서 단연코 더 강력하며, / 밈들은 이제 빠른 속도로 전파된다.<br>
+            <b>[구문 포인트]</b> 복수 주어 The loose social networks에 맞추어 복수 be동사 are가 연결됨. 수동태 [are transmitted (전파되다)]와 전치사구 [at rapid pace (빠른 속도로)]가 결합되어 지문을 매듭지음.<br>
+            <b>[핵심 어휘]</b> loose (느슨한), social network (사회적 연결망), previously (이전에), transmit (전파하다, 전송하다), rapid (빠른), pace (속도)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (전통 매체의 규범 통제 → 소셜 미디어의 장벽 붕괴 → 크리에이터와 속어의 정당화)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PAST CONTROL] 01-03문장</span>
+        <h4>전통 미디어와 규범적 언어 통제</h4>
+        <p>표준 영어 등장 이후 언어 규칙 제정자들이 인쇄 및 방송 소통 통로를 장악하고 대중에게 엄격한 표준어 규범을 강요함</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEMOCRATIZATION] 04-06문장</span>
+        <h4>소셜 미디어와 장벽의 붕괴</h4>
+        <p>새로운 플랫폼의 등장으로 누구나 공인이 될 수 있게 되면서 낡은 언어 규칙을 강제할 주체가 사라지고 소통 환경이 평등화됨</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[SLANG LEGITIMACY] 07-11문장</span>
+        <h4>크리에이터 다양성과 급속한 밈 확산</h4>
+        <p>다양한 배경의 크리에이터들이 속어에 공적 지위와 정당성을 부여하고 사회적 장벽을 넘어 온라인 연결망을 통해 급속 전파함</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. If you wanted your voice to [hear / be heard] by the public, you had to work within their limits.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="목적어 your voice가 들리는 대상이므로 능동형 to hear는 어법상 틀립니다.">hear</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 목소리는 대중에 의해 '들리는' 수동의 관계이므로 수동형 to be heard가 올바릅니다.">be heard</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. The loose social networks that previously connected us geographically [is / are] simply stronger online.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="관계사절 내부의 us geographically는 수식어구이며, 주어의 핵은 복수명사 networks이므로 단수동사 is는 수일치 오류입니다.">is</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 주어부의 핵심 명사가 복수인 'networks'이므로 복수 동사 are가 올바릅니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 변형 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        Historically, the rule makers of language controlled traditional print and broadcast channels, forcing public speakers to conform strictly to prescriptive linguistic norms. However, the rise of social media dismantled these centralized filters. Because communicative platforms allow anyone to become a public figure without institutional gatekeepers, ________________________. As diverse content creators gain massive followings, unconventional terms and slang that once struggled against socioeconomic boundaries now acquire instant legitimacy and circulate across digital networks at an unprecedented pace.
+      </div>
+      <div class="exam-choices">
+        ① professional journalists maintain absolute authority over grammar<br>
+        ② the traditional gatekeeping mechanisms enforcing linguistic rules have dissolved<br>
+        ③ local regional dialects have been completely eradicated by global standards<br>
+        ④ internet users are legally penalized for utilizing nonstandard vocabulary<br>
+        ⑤ commercial advertisers dictate which slang terms qualify as legitimate language
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 소셜 미디어가 소통 장벽을 허물고 누구나 발언권을 얻게 되면서 과거의 낡은 언어 규칙을 강제할 수 있는 전통적 문지기(gatekeepers)와 통제 체계가 사라졌다는 내용(meaning that nobody’s left to enforce the old rules)이 들어가야 하므로 ②번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 글]</b><br>
+        The role of ‘slang’ in popular culture has fundamentally changed because of the internet. Since the emergence of Standard English, the rule makers of language have dominated our channels of communication.<br><br>
+        <b>(A)</b> Content creators also come from a greater variety of backgrounds than people working in traditional media. This means that slang can more naturally go beyond the economic and social barriers that once limited its growth.<br>
+        <b>(B)</b> If you wanted your voice to be heard by the public, you had to conform to print or broadcast expectations. Social media completely broke that barrier, democratizing public access and leaving nobody to enforce the old rules.<br>
+        <b>(C)</b> TV presenters might not have been able to use slang, but modern content creators can. Their regular usage legitimizes these terms and provides a large platform to spread them quicker than ever before.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (B) - (C) - (A)</b><br>
+          <b>해설:</b> 주어진 글의 전통적 언어 규칙 통제에 이어, (B)에서 대중 매체의 한계와 소셜 미디어가 장벽을 허문 변화를 설명합니다. 이어 (C)에서 과거 방송인과 달리 크리에이터들이 속어를 자유롭게 사용하며 정당성을 부여하는 현상을 서술하고, (A)에서 'Content creators also come from...'로 이어지며 크리에이터들의 다양한 사회적 배경 덕분에 속어가 기존 장벽을 넘어 급속 전파된다는 결론으로 귀결되는 (B) - (C) - (A) 순서가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        Social media completely broke that barrier.<br><br>
+        The role of ‘slang’ in popular culture has fundamentally changed because of the internet. Since the emergence of Standard English, the rule makers of language have been in charge, dominating channels of communication. ( ① ) If you wanted your voice to be heard by the public, you had to work within their limits, conforming to the strict expectations of print or broadcast media. ( ② ) The playing field is now level, and public access is democratized. ( ③ ) Anybody and everybody can become a public figure on the new communicative platforms, meaning that nobody’s left to enforce the old rules. ( ④ ) TV presenters and journalists might not have been able to use slang, but content creators can. ( ⑤ ) We regularly use words like ‘function’ and ‘side­eye,’ and our influence legitimizes these terms and gives them a platform to spread rapidly.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 주어진 문장의 'that barrier'는 ① 뒤에 서술된 '대중에게 목소리를 내기 위해 인쇄 매체나 방송 매체의 엄격한 기대치와 제한에 순응해야 했던 장벽'을 가리킵니다. 따라서 ②에 위치해야 바로 뒤의 'The playing field is now level, and public access is democratized(경쟁 환경이 이제 공평해졌고 대중의 접근이 민주화되었다)'라는 결과와 논리적으로 자연스럽게 맞물립니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [서술형] 다음 우리말 조건에 맞추어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. [우리말]: "이것은 속어가 한때 그것의 성장을 제한했던 경제적 및 사회적 장벽들을 더 자연스럽게 넘어설 수 있다는 것을 의미한다."<br>
+        2. 주격 관계대명사 that을 포함하여 보기의 단어만을 모두 한 번씩 사용하여 영작할 것 (어형 변화 없음).<br>
+        <b>[보기]</b><br>
+        [ its growth / slang / barriers / more naturally / can / that / This means / the economic / once limited / go beyond / that / and social ]
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: This means that slang can more naturally go beyond the economic and social barriers that once limited its growth</b><br>
+          <b>해설:</b> 주어와 동사 [This means] 뒤에 명사절 접속사 [that]이 오고, 절의 주어와 조동사, 동사구 [slang can more naturally go beyond the economic and social barriers] 뒤에 선행사 barriers를 수식하는 주격 관계대명사절 [that once limited its growth]을 어법에 맞게 연결하는 핵심 문장 영작입니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
