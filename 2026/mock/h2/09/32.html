@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 32번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 32번 · 빈칸 추론</div>
+    <h1 class="title">Social Belonging and Certainty:<br><span>Shared Group Understanding</span></h1>
+    <p class="header-lead">안정된 집단 소속감이 제공하는 공유된 사회적 이해가 불확실성을 해소한다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 인지적 동기(Cognitive Motivation)와 공유된 사회적 이해(Shared Social Understanding) — 인간은 불확실한 상황에서 환경을 예측하고 통제하려는 강력한 본능을 지니며, 이는 안정된 사회적 집단 소속을 통해 타인과 의미를 공유함으로써 충족된다.</li>
+        <li><b>[배경 맥락]:</b> 대학 기숙사 부족으로 호텔에 임시 배정된 신입생들은 개인 욕실, TV, 넓은 방 등 우수한 물리적 환경을 누림에도 불구하고 불안감을 느낀다. 이는 편의시설의 문제가 아니라, 1년간 함께할 이웃 집단에 속하지 못해 자신의 사회적 위치(social niche)를 확신할 수 없는 불확실성 때문이다.</li>
+        <li><b>[논리 요약]:</b> 인간에게 가장 근본적인 인지적 동기는 불확실성을 줄이기 위해 안정된 집단 멤버십을 형성하고 환경을 예측하는 것이며, 집단적 소속감의 결여 자체가 본질적인 심리적 고통의 원인이다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Of the cognitive motivations, the most fundamental one encourages people to understand their environment to predict what is going to happen in case of uncertainties. Most important, people prefer to develop meanings that are shared with other people. For example, if in a given year more people accept offers of admission than a college expects, quite a few students end up living in dorm lounges or campus hotels. It is easy to understand why living in the lounge is problematic (no closet, for one thing). But what is wrong with a room at campus hotels? After all, students in a hotel get private bathrooms, their own TV, and larger rooms. In fact, living in those hotels is problematic because the student residents are not a part of a stable group with people who will be their neighbors for the year; they must wait in uncertainty before finding their social niche. The uncertainty itself is the problem. People lack a shared social understanding, normally developed from membership in a stable group.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 인간은 불확실성을 예측하기 위해 안정된 집단 구성원과 공유된 사회적 의미를 형성하길 원하며, 물리적 편의가 충족되더라도 집단 소속감과 안정된 위치가 결여되면 심각한 불확실성을 겪는다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Of the cognitive motivations, the most fundamental one encourages people <mark>to understand their environment to predict what is going to happen in case of uncertainties</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 인지적 동기들 중에서, / 가장 근본적인 것은 사람들이 자신의 환경을 이해하도록 유도한다 / 불확실성의 경우에 무슨 일이 일어날지 예측하기 위해.<br>
+            <b>[구문 포인트]</b> <b>encourage + 목적어(people) + 목적격보어(to understand)</b>의 5형식 구조이며, predict의 목적어로 간접의문문 <b>what is going to happen</b>이 이어집니다.<br>
+            <b>[핵심 어휘]</b> <b>cognitive</b> 인지적인 | <b>motivation</b> 동기 | <b>fundamental</b> 근본적인 | <b>uncertainty</b> 불확실성
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Most important, people prefer <mark>to develop meanings that are shared with other people</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 가장 중요한 점은, / 사람들은 다른 사람들과 공유되는 의미를 발전시키는 것을 선호한다는 것이다.<br>
+            <b>[구문 포인트]</b> 선행사 meanings를 주격 관계대명사절 <b>that are shared with other people</b>(수동태)이 후치수식하고 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>prefer</b> 선호하다 | <b>shared</b> 공유된, 함께 나누는
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en">For example, if in a given year more people accept offers of admission than a college expects, <mark>quite a few students end up living in dorm lounges or campus hotels</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어, / 특정 연도에 대학이 예상하는 것보다 더 많은 사람이 입학 제안을 수락하면, / 꽤 많은 학생들이 결국 기숙사 라운지나 캠퍼스 호텔에서 살게 된다.<br>
+            <b>[구문 포인트]</b> <b>end up -ing</b>(결국 ~하게 되다) 구문이며, <b>quite a few</b>는 복수명사(students)를 수식하여 '상당히 많은'을 뜻합니다.<br>
+            <b>[핵심 어휘]</b> <b>admission</b> 입학, 입회 | <b>quite a few</b> 상당히 많은 | <b>end up -ing</b> 결국 ~하게 되다
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">It is easy <mark>to understand why living in the lounge is problematic</mark> (no closet, for one thing).</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이해하는 것은 쉽다 / 라운지에서 사는 것이 왜 문제가 되는지를 / (한 가지 이유로는, 옷장이 없다는 점이다).<br>
+            <b>[구문 포인트]</b> <b>It(가주어)</b> ~ <b>to understand(진주어)</b> 구문이며, understand의 목적어로 <b>의문사(why) + 주어(living in the lounge) + 동사(is)</b>의 간접의문문이 이어집니다.<br>
+            <b>[핵심 어휘]</b> <b>problematic</b> 문제가 되는 | <b>for one thing</b> 우선 한 가지 이유로는
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">But <mark>what is wrong with a room at campus hotels</mark>?</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 캠퍼스 호텔의 방에는 무엇이 문제란 말인가?<br>
+            <b>[구문 포인트]</b> <b>What is wrong with ~?</b>(~에 무슨 문제가 있는가?) 관용구로 반전을 도입하는 질문을 던집니다.<br>
+            <b>[핵심 어휘]</b> <b>wrong with</b> ~에 문제가 있는
+          </div>
+        </details>
+      </div>
+
+      <!-- S6 -->
+      <div class="chunk-item">
+        <p class="chunk-en">After all, students in a hotel <mark>get private bathrooms, their own TV, and larger rooms</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 어쨌든, / 호텔에 있는 학생들은 개인 욕실, 자신만의 TV, 그리고 더 큰 방을 얻는다.<br>
+            <b>[구문 포인트]</b> <b>After all</b>(어쨌든, 결국) 접속부사와 함께 동사 get의 목적어로 세 개의 명사구가 콤마와 and로 병렬 연결되어 물리적 환경의 우수성을 열거합니다.<br>
+            <b>[핵심 어휘]</b> <b>after all</b> 결국, 어쨌든 | <b>private</b> 개인적인, 전용의
+          </div>
+        </details>
+      </div>
+
+      <!-- S7 -->
+      <div class="chunk-item">
+        <p class="chunk-en">In fact, living in those hotels is problematic <mark>because the student residents are not a part of a stable group with people who will be their neighbors for the year</mark>; they must wait in uncertainty before finding their social niche.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 사실, 그러한 호텔에서 사는 것이 문제가 되는 이유는 / 그곳에 거주하는 학생들이 한 해 동안 그들의 이웃이 될 사람들과의 안정된 집단의 일부가 아니기 때문이다 / 그들은 자신들의 사회적 적소를 찾기 전에 불확실성 속에서 기다려야만 한다.<br>
+            <b>[구문 포인트]</b> 주어 <b>living in those hotels</b>(동명사구 단수주어) + 단수동사 <b>is</b>이며, 선행사 people을 주격 관계대명사절 <b>who will be their neighbors ~</b>가 수식합니다. 세미콜론(;) 뒤에는 추가적인 심리적 결과가 이어집니다.<br>
+            <b>[핵심 어휘]</b> <b>resident</b> 거주자, 입주자 | <b>stable</b> 안정된 | <b>neighbor</b> 이웃 | <b>social niche</b> 사회적 적소, 적합한 위치
+          </div>
+        </details>
+      </div>
+
+      <!-- S8 -->
+      <div class="chunk-item">
+        <p class="chunk-en"><mark>The uncertainty itself</mark> is the problem.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 불확실성 그 자체가 문제이다.<br>
+            <b>[구문 포인트]</b> 재귀대명사 <b>itself</b>가 주어 The uncertainty를 강조하는 강조용법으로 쓰여 단도직입적으로 핵심을 명시합니다.<br>
+            <b>[핵심 어휘]</b> <b>itself</b> 그 자체로 (강조)
+          </div>
+        </details>
+      </div>
+
+      <!-- S9 -->
+      <div class="chunk-item">
+        <p class="chunk-en">People lack a shared social understanding, <mark>normally developed from membership in a stable group</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 사람들은 공유된 사회적 이해가 결여되어 있는 것이다 / 보통 안정된 집단의 구성원 자격으로부터 형성되는.<br>
+            <b>[구문 포인트]</b> 콤마 뒤의 과거분사구 <b>normally developed from ~</b>가 앞선 명사구 a shared social understanding을 수동 수식합니다.<br>
+            <b>[핵심 어휘]</b> <b>lack</b> 결여되다, 부족하다 | <b>shared social understanding</b> 공유된 사회적 이해 | <b>membership</b> 구성원 자격, 멤버십
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (인지적 동기 규정 → 호텔 거주의 역설적 불만족 → 안정된 집단 소속의 본질)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PREMISE] 근본적 인지 동기</span>
+        <h4>불확실성 예측과 공유된 의미</h4>
+        <p>인간의 가장 핵심적인 인지적 동기는 미래를 예측하여 불확실성을 통제하는 것이다. 이를 위해 사람들은 타인과 공유할 수 있는 사회적 의미 체계를 만들기를 강력히 원한다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[PARADOX] 캠퍼스 호텔의 역설</span>
+        <h4>물리적 우수성과 심리적 결핍</h4>
+        <p>기숙사 초과로 호텔에 머무는 학생들은 개인 욕실과 큰 방 등 물리적으로 우수한 환경을 누림에도 불만을 겪는다. 1년을 함께할 이웃이 아니기에 사회적 적소를 찾지 못한 채 유예된 불확실성에 놓인다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[ESSENCE] 문제의 본질</span>
+        <h4>안정된 집단 멤버십의 필요성</h4>
+        <p>고통의 실체는 방의 시설이 아니라 '불확실성 그 자체'이다. 안정된 집단에 확고히 소속됨으로써 획득되는 '공유된 사회적 이해'가 없기 때문에 심리적 불안을 겪게 된다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> In fact, living in those hotels [is / are] problematic because the student residents are not a part of a stable group.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 주어는 복수명사 hotels가 아니라 동명사구인 'living in those hotels'이므로 단수동사 'is'가 올바릅니다.">is</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 바로 앞의 hotels에 착시를 일으키면 안 됩니다. 주어의 핵은 동명사 living이므로 복수동사 are는 어법 오류입니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> People lack a shared social understanding, normally [developing / developed] from membership in a stable group.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒤에 목적어가 없고 선행 명사구(a shared social understanding)가 형성'되는' 수동 관계이므로 현재분사 developing은 틀립니다.">developing</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 수식받는 명사구(공유된 사회적 이해)와 '형성되다'라는 수동 관계를 이루므로 과거분사 'developed'가 정확합니다.">developed</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        Of the cognitive motivations, the most fundamental one encourages people to understand their environment to <b>① predict</b> what is going to happen in case of uncertainties. Most important, people prefer to develop meanings that are <b>② shared</b> with other people. For example, if a college over-enrolls, students end up living in dorm lounges or campus hotels. While living in a lounge is clearly problematic, students in a hotel get private bathrooms and larger rooms. In fact, living in those hotels is problematic because the student residents are not a part of a <b>③ unstable</b> group with people who will be their neighbors for the year; they must wait in uncertainty before finding their social niche. The uncertainty itself is the problem. People <b>④ lack</b> a shared social understanding, normally <b>⑤ developed</b> from membership in a stable group.
+      </div>
+      <div class="exam-choices">
+        ① predict &nbsp;&nbsp;&nbsp;&nbsp; ② shared &nbsp;&nbsp;&nbsp;&nbsp; ③ unstable &nbsp;&nbsp;&nbsp;&nbsp; ④ lack &nbsp;&nbsp;&nbsp;&nbsp; ⑤ developed
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (unstable → stable)</b><br>
+          <b>해설:</b> 캠퍼스 호텔 거주가 좋은 시설에도 불구하고 문제가 되는 이유는 1년 동안 이웃이 될 사람들과 '안정적인(stable)' 집단의 일부가 되지 못하기 때문이다. 따라서 ③의 unstable(불안정한)은 글의 핵심 논지와 반대되므로 stable로 수정해야 한다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Of the cognitive motivations, the most fundamental one encourages people to understand their environment to predict what is going to happen in case of uncertainties. Most important, people prefer to develop meanings that are shared with other people.<br><br>
+        (A) In fact, living in those hotels is problematic because the student residents are not a part of a stable group with people who will be their neighbors for the year; they must wait in uncertainty before finding their social niche. The uncertainty itself is the problem.<br>
+        (B) For example, if in a given year more people accept offers of admission than a college expects, quite a few students end up living in dorm lounges or campus hotels. It is easy to understand why living in the lounge is problematic.<br>
+        (C) But what is wrong with a room at campus hotels? After all, students in a hotel get private bathrooms, their own TV, and larger rooms. People lack a shared social understanding, normally developed from membership in a stable group.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 글에서 인지적 동기(불확실성 예측과 공유된 의미 추구)를 제시한 후, (B)에서 대학 초과 등록으로 기숙사 라운지나 호텔에 거주하는 구체적 사례를 든다. 이어서 (C)에서 라운지와 달리 시설이 뛰어난 호텔 방이 왜 문제가 되는지 반문(But what is wrong ~?)하며 물리적 장점을 나열하고, (A)에서 In fact(사실은)를 통해 호텔의 진짜 문제점(안정된 집단 소속감 결여와 사회적 적소 미확립에 따른 불확실성)을 밝히며 마무리하는 (B) - (C) - (A)가 가장 자연스럽다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        In fact, living in those hotels is problematic because the student residents are not a part of a stable group with people who will be their neighbors for the year; they must wait in uncertainty before finding their social niche.<br><br>
+        For example, if in a given year more people accept offers of admission than a college expects, quite a few students end up living in dorm lounges or campus hotels. ( ① ) It is easy to understand why living in the lounge is problematic (no closet, for one thing). ( ② ) But what is wrong with a room at campus hotels? ( ③ ) After all, students in a hotel get private bathrooms, their own TV, and larger rooms. ( ④ ) The uncertainty itself is the problem. ( ⑤ ) People lack a shared social understanding, normally developed from membership in a stable group.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> ③과 ④ 사이에서는 호텔의 뛰어난 물리적 환경(개인 화장실, TV, 넓은 방)을 언급하고 있다. 주어진 문장은 'In fact(사실은)'로 시작하며 이러한 호텔 거주가 시설 문제가 아니라 '안정된 이웃 집단의 일원이 되지 못해 불확실성 속에서 기다려야 하기 때문에 문제'라고 지적한다. 또한 주어진 문장 뒤의 'The uncertainty itself is the problem(그 불확실성 자체가 문제다)'이라는 문장이 주어진 문장 끝의 'wait in uncertainty'를 직접 가리키므로 정답은 ④이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "가장 중요한 점은, 사람들은 다른 사람들과 공유되는 의미를 발전시키는 것을 선호한다는 것이다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 주격 관계대명사 수동태절을 반드시 포함할 것.<br>
+        2. 아래 제시된 단어 및 어구를 반드시 모두 한 번씩만 사용할 것.<br>
+        [ people / Most important, / to develop meanings / with other people / prefer / that are shared ]<br>
+        3. 어형 변화 없이 어순 배열만 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>Most important, people prefer to develop meanings that are shared with other people.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 부사구(Most important,) 뒤에 주어(people) + 동사(prefer) + 목적어(to develop meanings) 어순을 올바르게 구성했는가?<br>
+          - 선행사 meanings 뒤에 주격 관계대명사절(that are shared with other people)을 문법 오류 없이 연결했는가?
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
