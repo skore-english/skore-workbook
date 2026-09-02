@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 9월 학평 40번 워크북 | 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 전국연합학력평가 (2026년 09월)</span>
+    </div>
+    <div class="meta-badge">09월 학평 40번 · 요약문 완성</div>
+    <h1 class="title">Evolutionary Self-Esteem<br><span>Relational Value Sociometer</span></h1>
+    <p class="header-lead">사회적 수용과 관계적 가치를 감지하는 진화론적 경보 체계</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 자존감의 사회측정기 이론(Sociometer Theory of Self-Esteem)과 진화심리학적 관계 가치(Relational Value)</li>
+        <li><b>[배경 맥락]:</b> 원시 수렵채집 사회에서 집단 배척은 곧 죽음을 의미했으므로, 인간은 자신의 포섭 상태(inclusion status)를 실시간 감지하는 내적 모니터링 경보기를 진화시킴</li>
+        <li><b>[논리 요약]:</b> 자존감은 집단 내 수용 여부와 관계적 가치를 무의식적으로 감시하다가 거절 위험이 감지되면 의식적 경보를 울려 행동 조정을 유도하는 생존 기제임</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      From an evolutionary perspective, self­esteem has developed as a monitoring mechanism for the quality of our relationships. The system monitors other people’s reactions to our behaviors and sends an alarm that alerts us to any possible changes in our inclusion status. The monitoring system generally operates nonconsciously until it detects that our relational value is falling or low. When the alarm bell rings, the threat to our social bonds is pushed into conscious awareness and we evaluate the situation. Am I being accepted or am I being pushed out? Do I need to adjust my behaviors to fix the relationship? With such a high value for survival closely tied with relationships, it makes sense that the way we mobilize our internal resources around relationships would be highly networked in our brain and body. It also makes sense that we would develop specific mechanisms to attend to minimizing rejection and enhancing acceptance. The continuous scanning is normal, a part of being human. We all have an interpersonal process of searching for cues from the environment to assess our value in the social structure.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 자존감은 집단에서의 배척을 최소화하고 수용을 극대화하기 위해 관계적 가치와 포섭 상태를 끊임없이 탐지하고 경보를 울리는 진화론적 생존 모니터링 체계이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">From an evolutionary perspective, <mark>self­esteem has developed as a monitoring mechanism for the quality of our relationships</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 진화론적 관점에서 볼 때, / 자존감은 모니터링(감시) 메커니즘으로 발달해 왔다 / 우리의 인간관계의 질을 위한.<br>
+            <b>[구문 포인트]</b> 문두의 전치사구 [From an evolutionary perspective]가 관점을 제시함. 현재완료 능동형(has developed)이 쓰였으며 전치사 as(~로서) 뒤에 핵심 정의인 a monitoring mechanism이 결합됨.<br>
+            <b>[핵심 어휘]</b> evolutionary (진화론적인), perspective (관점), self-esteem (자존감), monitoring (감시, 추적), mechanism (기제, 메커니즘)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">The system monitors other people’s reactions to our behaviors and <mark>sends an alarm that alerts us to any possible changes in our inclusion status</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 체계는 우리의 행동에 대한 다른 사람들의 반응을 감시한다 / 그리고 경보를 보낸다 / 우리의 소속(포섭) 상태에서의 어떤 가능한 변화들을 우리에게 알리는.<br>
+            <b>[구문 포인트]</b> 단수 주어 The system에 3인칭 단수 현재동사 monitors와 sends가 and로 병렬 연결됨. an alarm을 선행사로 받는 주격 관계대명사 that절 내부에서 [alert A to B (A에게 B를 경고하다/알리다)] 구문이 사용됨.<br>
+            <b>[핵심 어휘]</b> reaction (반응), alert (경고하다, 알리다), inclusion status (포섭 상태, 집단 소속 상태)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>The monitoring system generally operates nonconsciously</mark> until it detects that our relational value is falling or low.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 감시 체계는 일반적으로 무의식적으로 작동한다 / 그것이 우리의 관계적 가치가 떨어지고 있거나 낮다는 것을 감지할 때까지.<br>
+            <b>[구문 포인트]</b> 1형식 완전자동사 operates를 수식하는 양태 부사 nonconsciously. 시간 접속사 until절 내부에서 detects의 목적어로 명사절 접속사 that이 이끄는 완전한 절이 연결됨.<br>
+            <b>[핵심 어휘]</b> nonconsciously (무의식적으로), detect (감지하다, 발견하다), relational value (관계적 가치)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">When the alarm bell rings, <mark>the threat to our social bonds is pushed into conscious awareness</mark> and we evaluate the situation.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 경보 종이 울릴 때, / 우리의 사회적 유대에 대한 위협은 의식적인 자각 속으로 밀려 들어온다 / 그리고 우리는 상황을 평가한다.<br>
+            <b>[구문 포인트]</b> 시간부사절 [When the alarm bell rings] 뒤의 주절에서 수동태 [is pushed into...]가 사용되어 위협이 무의식에서 의식의 영역으로 떠오르는 과정을 생생하게 묘사함.<br>
+            <b>[핵심 어휘]</b> social bond (사회적 유대), conscious awareness (의식적 자각/인지), evaluate (평가하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Am I being accepted or am I being pushed out?</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 내가 수용되고 있는 중인가 아니면 내가 쫓겨나고 있는 중인가?<br>
+            <b>[구문 포인트]</b> 현재진행 수동태 [be being p.p. (accepted / pushed out)] 의문문 2개가 등위접속사 or로 대등하게 병렬 연결되어 내면의 평가 과정을 직접화법으로 드러냄.<br>
+            <b>[핵심 어휘]</b> accept (수용하다, 받아들이다), push out (밀어내다, 배척하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Do I need to adjust my behaviors to fix the relationship?</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 내가 관계를 바로잡기 위해 나의 행동들을 조정할 필요가 있는가?<br>
+            <b>[구문 포인트]</b> need to-v 구문. to adjust는 need의 목적어이며, to fix the relationship은 목적을 나타내는 to부정사의 부사적 용법임.<br>
+            <b>[핵심 어휘]</b> adjust (조정하다, 조절하다), fix (바로잡다, 고치다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">With such a high value for survival closely tied with relationships, <mark>it makes sense that the way we mobilize our internal resources around relationships would be highly networked in our brain and body</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 생존에 대한 그렇게 높은 가치가 인간관계와 밀접하게 묶여 있는 상황에서, / ~라는 점은 타당하다 / 관계를 중심으로 우리의 내적 자원을 동원하는 방식이 우리의 뇌와 신체에 고도로 연결망을 형성하고 있다는 것은.<br>
+            <b>[구문 포인트]</b> [With + 명사(such a high value...) + 분사(closely tied with...)] 부대상황 구문. it은 가주어, that절이 진주어. [the way (how 사용 불가)] 뒤에 관계부사가 생략된 완전한 절이 이어짐.<br>
+            <b>[핵심 어휘]</b> survival (생존), closely tied with (~와 밀접하게 묶인), make sense (이치에 맞다, 타당하다), mobilize (동원하다), networked (네트워크로 연결된)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>It also makes sense that we would develop specific mechanisms to attend to minimizing rejection and enhancing acceptance</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> ~라는 점 또한 타당하다 / 우리가 거절을 최소화하고 수용을 높이는 것을 처리하기 위한 구체적인 메커니즘을 발전시켰으리라는 것은.<br>
+            <b>[구문 포인트]</b> 첨가(also)와 함께 [It makes sense that...] 가주어-진주어 재사용. to attend to는 mechanisms를 수식하며, 전치사 to 뒤에 동명사 병렬 [minimizing rejection and enhancing acceptance]이 결합됨.<br>
+            <b>[핵심 어휘]</b> attend to (~에 주의를 기울이다/처리하다), minimize (최소화하다), rejection (거절, 배척), enhance (향상시키다, 높이다), acceptance (수용)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">The continuous scanning is normal, a part of being human.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 지속적인 탐색(스캐닝)은 정상적이며, 인간이라는 존재의 일부이다.<br>
+            <b>[구문 포인트]</b> 동명사 주어 The continuous scanning(단수) 뒤에 be동사 is가 결합되고, 콤마 뒤의 [a part of being human]은 주격보어 normal과 동격적 관계를 이룸.<br>
+            <b>[핵심 어휘]</b> continuous (지속적인), scanning (살피기, 탐색), normal (정상적인)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">We all have an interpersonal process of <mark>searching for cues from the environment to assess our value in the social structure</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리 모두는 대인 관계의 과정을 지니고 있다 / 사회 구조 속에서 우리의 가치를 평가하기 위해 환경으로부터 단서들을 찾는.<br>
+            <b>[구문 포인트]</b> 전치사 of의 목적어로 동명사구 searching for cues가 왔으며, to assess는 목적을 나타내는 to부정사 부사적 용법. 사회적 가치 탐색이 보편적 본성임을 재확인하며 결론 형성.<br>
+            <b>[핵심 어휘]</b> interpersonal (대인 관계의), cue (단서, 신호), assess (평가하다), social structure (사회 구조)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (자존감의 진화적 정의 → 위협 감지와 경보 촉발 → 생존 메커니즘의 보편성)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[EVOLUTIONARY MONITOR] 01-03문장</span>
+        <h4>관계의 질을 감시하는 자존감</h4>
+        <p>자존감은 타인의 반응을 무의식적으로 살피며 집단 내 포섭 상태와 관계적 가치의 하락을 감지하는 모니터링 체계임</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[ALARM & EVALUATION] 04-06문장</span>
+        <h4>위협의 의식화와 행동 수정</h4>
+        <p>관계적 가치가 떨어지면 경보가 울려 위협을 의식화하고, 배척 여부를 평가하여 관계 회복을 위한 행동 조정을 모색함</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[BIOLOGICAL ADAPTATION] 07-10문장</span>
+        <h4>거절 최소화와 수용의 본능</h4>
+        <p>생존과 직결된 사회적 관계를 지키기 위해 뇌와 신체는 사회 구조 속 가치를 확인하는 상시 탐색 기제를 발달시킴</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. The monitoring system generally operates nonconsciously until it detects that our relational value [is / to be] falling or low.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 명사절 접속사 that 뒤에는 주어(our relational value)와 함께 시제를 갖춘 본동사가 와야 하므로 is가 올바릅니다.">is</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="that절 내부의 완전한 절을 이끄는 본동사 자리이므로 준동사인 부정사 to be는 올 수 없습니다.">to be</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. It also makes sense that we would develop specific mechanisms to attend to minimizing rejection and [enhance / enhancing] acceptance.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="등위접속사 and 앞의 동명사 minimizing과 병렬 구조를 이루어야 하므로 동사원형 enhance는 어법상 틀립니다.">enhance</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 전치사 to의 목적어로 쓰인 동명사 minimizing과 대등하게 병렬 연결되므로 enhancing이 올바릅니다.">enhancing</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 변형 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        From an evolutionary perspective, self­esteem has developed as a monitoring mechanism for the quality of our relationships. The system tracks other people’s reactions to our behaviors and sends an alarm that alerts us to any possible changes in our inclusion status. This psychological apparatus operates nonconsciously until it detects a decline in our social standing. When the alarm bell rings, the threat to our interpersonal bonds enters conscious awareness, compelling us to evaluate whether we are accepted or pushed out. Because ancestral human survival was inextricably linked to group membership, our brain and body have evolved to ________________________ to safeguard our social value.
+      </div>
+      <div class="exam-choices">
+        ① suppress individual emotional reactions to preserve total independence<br>
+        ② prioritize short-term physical pleasures over long-term communal stability<br>
+        ③ continuously scan the environment for cues that minimize social rejection<br>
+        ④ disregard negative social signals to maintain artificially inflated confidence<br>
+        ⑤ eliminate competitive instincts entirely to promote unconditional altruism
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 지문의 후반부에서 인간은 진화론적으로 생존을 위해 거절을 최소화하고(minimizing rejection) 수용을 높이기 위한 특정 메커니즘을 발전시켰으며, 환경으로부터 단서를 지속적으로 탐색(continuous scanning)한다고 설명하고 있습니다. 따라서 빈칸에는 사회적 거절을 최소화하기 위해 환경의 단서들을 상시 탐색한다는 내용의 ③번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 글]</b><br>
+        From an evolutionary perspective, self­esteem has developed as a monitoring mechanism for the quality of our relationships. The system monitors other people’s reactions to our behaviors and sends an alarm.<br><br>
+        <b>(A)</b> With such a high value for survival closely tied with relationships, it makes sense that the way we mobilize our internal resources would be highly networked in our brain and body to minimize rejection and enhance acceptance.<br>
+        <b>(B)</b> The monitoring system generally operates nonconsciously until it detects that our relational value is falling or low. When the alarm bell rings, the threat to our social bonds is pushed into conscious awareness.<br>
+        <b>(C)</b> In this conscious state, we evaluate the situation by asking whether we are being accepted or pushed out, and whether we need to adjust our behaviors to fix the relationship.<br>
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (B) - (C) - (A)</b><br>
+          <b>해설:</b> 주어진 글에서 자존감이라는 감시 경보 체계를 소개한 뒤, (B)에서 평소에는 무의식적으로 작동하다가 관계적 가치가 떨어질 때 경보가 울려 의식적 자각으로 전환되는 과정을 설명합니다. 이어서 (C)에서 'In this conscious state'로 받아 수용 여부를 평가하고 행동을 조정하려는 질문들을 구체화하고, 마지막으로 (A)에서 생존과 직결된 관계를 지키기 위해 뇌와 신체가 거절을 줄이고 수용을 늘리도록 네트워크화되었다는 진화적 결론으로 귀결되는 (B) - (C) - (A) 순서가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 3: 문맥상 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 3] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        From an evolutionary perspective, self­esteem has developed as a monitoring mechanism for the quality of our relationships. The system monitors other people’s reactions and alerts us to changes in our inclusion status. This system operates ① <u>nonconsciously</u> until it detects that our relational value is declining. When the alarm rings, the threat to our social bonds enters conscious awareness, prompting us to ② <u>evaluate</u> whether we need to adjust our behaviors. Because human survival is deeply tied to social connection, it makes sense that we have developed mechanisms aimed at ③ <u>maximizing</u> rejection and enhancing acceptance. This continuous scanning is normal, representing an innate interpersonal process to assess our ④ <u>value</u> in the social hierarchy.
+      </div>
+      <div class="exam-choices">
+        ① nonconsciously &nbsp;&nbsp;&nbsp; ② evaluate &nbsp;&nbsp;&nbsp; ③ maximizing &nbsp;&nbsp;&nbsp; ④ value
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ maximizing → minimizing</b><br>
+          <b>해설:</b> 원시 사회에서 타인으로부터의 거절(rejection)은 생존에 치명적인 위협이었으므로, 인간이 진화시킨 심리적 기제의 목표는 거절을 '극대화(maximizing)'하는 것이 아니라 '최소화(minimizing)'하고 집단의 수용(acceptance)을 증진시키는 것입니다. 따라서 ③의 maximizing은 글의 전체 논지와 반대되므로 어색합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [서술형] 다음 우리말 조건에 맞추어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. [우리말]: "그 감시 체계는 우리의 관계적 가치가 떨어지고 있거나 낮다는 것을 감지할 때까지 일반적으로 무의식적으로 작동한다."<br>
+        2. 시간 접속사 until 및 명사절 접속사 that을 사용할 것.<br>
+        3. 보기의 단어만을 모두 한 번씩 사용하여 영작할 것 (어형 변화 없음).<br>
+        <b>[보기]</b><br>
+        [ nonconsciously / is falling / detects / operates / that / generally / or low / our relational value / The monitoring system / until / it ]
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: The monitoring system generally operates nonconsciously until it detects that our relational value is falling or low</b><br>
+          <b>해설:</b> 주절의 주어와 동사구 [The monitoring system generally operates nonconsciously] 뒤에 시간 부사절 접속사 [until]이 오고, 절의 주어와 동사 [it detects], 그리고 목적어인 명사절 [that our relational value is falling or low]을 어순에 맞게 완성하는 문장 영작입니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
