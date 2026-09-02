@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 33번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 33번 · 빈칸 추론</div>
+    <h1 class="title">Grief Work as Devotion:<br><span>The Power to Transform Loss</span></h1>
+    <p class="header-lead">상실에 대한 애도는 슬픔을 넘어 삶의 지속과 적극적 회복의 동력이 된다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 애도 작업(Grief Work)과 심리적 전환(Self-Transformation) — 상실에 대한 슬픔을 억압하지 않고 온전히 마주하여 수용함으로써, 생명력을 회복하고 남겨진 가치에 대한 헌신과 행동 동기를 이끌어내는 역동적 정서 과정.</li>
+        <li><b>[배경 맥락]:</b> 심리학에서 애도는 단순한 소극적 비탄이나 고통이 아니라, 인간의 취약성과 필멸성을 직시하고 삶 에너지를 복원하는 의식의 필수적 기제이다. 프랜 웰러(Fran Weller)의 견해처럼 애도는 사랑과 연민에 기반한 헌신이며, 이는 남겨진 존재에 대한 책임감과 능동적 복구 행위로 승화됨.</li>
+        <li><b>[논리 요약]:</b> 상실을 진정으로 애도할 때 남아 있는 것에 대한 사랑과 헌신이 강화되며, 이는 슬픔에 머무는 것이 아니라 피해를 복구하고 보상하려는 강력한 행동 동기로 나아간다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Psychological theories across the field agree on the importance of grieving our losses, from the highly personal through to the broadly collective. Grief is a dynamic emotional process essential to consciousness. At a psychological level, it supports us to both face into our own and others’ vulnerability, transience and mortality, and to repair life energy after significant loss. Grief work honours the loss, the sadness and the experience of diminishment or absence, while also setting up the ground for self-transformation and the continuation of life. Psychotherapist Fran Weller describes grief work is “an act of devotion, rooted in love and compassion” that requires “an ongoing practice of deepening, attending and listening.” When we grieve for what is lost, it clears the way towards a strengthening of love and commitment for what remains. In time this may build a desire to make good from the loss by repairing as many damages as we can and/or compensating for them. Grief can make us both very sad and very motivated to act.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 애도는 상실의 슬픔과 인간의 취약성을 인정함으로써 자기 변화와 생명력 회복의 터전을 마련하고, 남겨진 것에 대한 사랑을 강화하여 능동적으로 행동하게 만든다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Psychological theories across the field <mark>agree on the importance of grieving our losses</mark>, from the highly personal through to the broadly collective.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 분야 전반의 심리학 이론들은 / 우리의 상실을 애도하는 것의 중요성에 동의한다 / 매우 개인적인 것으로부터 광범위하게 집단적인 것에 이르기까지.<br>
+            <b>[구문 포인트]</b> 복수주어 Psychological theories에 동사 <b>agree on</b>이 일치하며, <b>from A through to B</b>(A에서부터 B에 이르기까지)의 범위 구조가 동명사 목적어 grieving our losses를 부연합니다.<br>
+            <b>[핵심 어휘]</b> <b>grieve</b> 몹시 슬퍼하다, 애도하다 | <b>loss</b> 상실 | <b>collective</b> 집단적인, 공동의
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Grief is <mark>a dynamic emotional process essential to consciousness</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 비탄(애도)은 역동적인 감정적 과정이다 / 의식에 필수적인.<br>
+            <b>[구문 포인트]</b> 형용사구 <b>essential to consciousness</b>가 앞의 명사구 a dynamic emotional process를 후치수식하고 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>dynamic</b> 역동적인 | <b>consciousness</b> 의식, 자각 | <b>essential</b> 필수적인
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en">At a psychological level, it supports us <mark>to both face into our own and others’ vulnerability, transience and mortality, and to repair life energy</mark> after significant loss.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 심리적 수준에서, / 그것은 우리가 두 가지 모두를 하도록 돕는다 / 우리 자신과 타인의 취약성, 덧없음, 필멸성을 직시하는 것과 / 중대한 상실 이후 삶의 에너지를 회복하는 것.<br>
+            <b>[구문 포인트]</b> <b>support + 목적어(us) + 목적격보어</b> 구조에서 <b>both to face ~ and to repair ~</b>의 to부정사 병렬 형태가 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>vulnerability</b> 취약성 | <b>transience</b> 덧없음, 일시성 | <b>mortality</b> 필멸(죽어야 할 운명) | <b>repair</b> 복구하다, 회복하다
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Grief work honours the loss, the sadness and the experience of diminishment or absence, <mark>while also setting up the ground for self-transformation and the continuation of life</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 애도 작업은 상실과 슬픔, 줄어듦이나 부재의 경험을 존중한다 / 동시에 자기 변화와 삶의 지속을 위한 기반을 마련하면서.<br>
+            <b>[구문 포인트]</b> 접속사 <b>while</b>이 살아있는 분사구문 <b>while setting up ~</b>이 쓰여 주절의 행위(honours)와 동시 진행되는 긍정적 기능을 기술합니다.<br>
+            <b>[핵심 어휘]</b> <b>honour</b> 존중하다, 예우하다 | <b>diminishment</b> 축소, 감소 | <b>absence</b> 부재 | <b>self-transformation</b> 자기 변화
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Psychotherapist Fran Weller describes grief work is <mark>“an act of devotion, rooted in love and compassion” that requires “an ongoing practice of deepening, attending and listening.”</mark></p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 심리치료사 Fran Weller는 설명한다 / 애도 작업이란 "사랑과 연민에 뿌리를 둔 헌신의 행위"라고 / "심화하고 주의를 기울이며 경청하는 지속적인 실천"을 요구하는.<br>
+            <b>[구문 포인트]</b> 과거분사구 <b>rooted in ~</b>이 an act of devotion을 수식하고, 주격 관계대명사 <b>that</b>의 선행사 역시 an act of devotion으로 단수동사 <b>requires</b>가 호응합니다.<br>
+            <b>[핵심 어휘]</b> <b>devotion</b> 헌신, 몰두 | <b>compassion</b> 연민, 동정심 | <b>attend</b> 주의를 기울이다
+          </div>
+        </details>
+      </div>
+
+      <!-- S6 -->
+      <div class="chunk-item">
+        <p class="chunk-en">When we grieve for what is lost, <mark>it clears the way towards a strengthening of love and commitment for what remains</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리가 상실된 것에 대해 슬퍼할 때, / 그것은 길을 열어준다 / 남아 있는 것에 대한 사랑과 헌신을 강화하는 쪽으로의.<br>
+            <b>[구문 포인트]</b> <b>what is lost</b>(잃어버린 것)와 <b>what remains</b>(남아 있는 것)라는 두 관계대명사 what절이 선명한 대조를 이루며, <b>clear the way towards</b>는 '~로 가는 길을 터주다'를 의미합니다.<br>
+            <b>[핵심 어휘]</b> <b>clear the way</b> 길을 터주다 | <b>strengthening</b> 강화 | <b>commitment</b> 헌신, 전념 | <b>remain</b> 남다
+          </div>
+        </details>
+      </div>
+
+      <!-- S7 -->
+      <div class="chunk-item">
+        <p class="chunk-en">In time this may build <mark>a desire to make good from the loss by repairing as many damages as we can and/or compensating for them</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 시간이 흐르면서 이것은 욕구를 형성할 수 있다 / 상실로부터 보상받아 잘 해내려는 / 우리가 할 수 있는 한 많은 피해를 복구하고/복구하거나 그것들을 보상함으로써.<br>
+            <b>[구문 포인트]</b> to부정사 <b>to make good ~</b>이 a desire를 형용사적으로 수식하며, <b>by -ing</b> 구문 내에 <b>as many damages as we can</b>(가능한 한 많은 피해)이라는 원급비교가 포함되어 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>make good</b> 보상하다, 성공하다 | <b>compensate for</b> ~을 보상하다, 상쇄하다
+          </div>
+        </details>
+      </div>
+
+      <!-- S8 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Grief can make us <mark>both very sad and very motivated to act</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 애도는 우리를 만들 수 있다 / 대단히 슬프면서도 행동하도록 매우 동기 부여된 상태로.<br>
+            <b>[구문 포인트]</b> 5형식 사역동사 <b>make + 목적어(us) + 목적격보어 병렬</b> 구조로, 형용사 <b>sad</b>와 과거분사 <b>motivated</b>가 <b>both A and B</b>로 결합되어 애도의 양면적 역동성을 요약합니다.<br>
+            <b>[핵심 어휘]</b> <b>motivated</b> 동기 부여된 | <b>act</b> 행동하다
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (애도의 필수적 기능 → 사랑과 헌신의 심화 → 능동적 행동과 회복)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[FOUNDATION] 심리학적 전제</span>
+        <h4>취약성 직시와 생명력 복원</h4>
+        <p>애도는 의식에 필수적인 역동적 감정 과정이다. 상실과 부재를 정직하게 예우함으로써 자신의 취약성과 필멸성을 직시하고, 심각한 타격 이후 삶의 에너지를 복원하는 토대를 마련한다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[TRANSFORMATION] 애도 작업의 본질</span>
+        <h4>사랑의 강화와 남은 것에 대한 헌신</h4>
+        <p>애도는 사랑과 연민에 뿌리를 둔 헌신 행위이다. 잃어버린 것을 온전히 슬퍼할 때 비로소 남아 있는 것에 대한 사랑과 헌신이 강화되는 새로운 통로가 열린다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CATALYST] 궁극적 행동 유발</span>
+        <h4>슬픔에서 능동적 피해 복구로</h4>
+        <p>애도는 인간을 무기력한 슬픔에 가두지 않는다. 손상된 것을 복구하고 보상하려는 열망을 키움으로써, 우리를 깊이 슬프게 만드는 동시에 적극적으로 행동하도록 동기 부여한다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> At a psychological level, it supports us to both face into vulnerability and [repair / repairing] life energy after significant loss.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 'supports us to both [face] and [repair]' 구조로 to부정사의 동사원형 병렬이므로 'repair'가 올바릅니다. (to repair에서 to 생략 가능)">repair</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! both to face ~ and to repair ~의 to부정사 병렬 구조이므로 동명사 형태인 repairing은 문법적으로 맞지 않습니다.">repairing</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> Grief can make us both very sad and very [motivating / motivated] to act.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 목적어인 우리(us)가 행동하도록 '동기를 부여받는' 수동의 감정 상태를 나타내므로 능동의 현재분사 motivating은 틀립니다.">motivating</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 5형식 사역동사 make의 목적격보어 자리에서 목적어인 us가 '동기 부여를 받는' 수동 관계이므로 과거분사 'motivated'가 정확합니다.">motivated</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        Psychological theories agree on the importance of grieving our losses. Grief is a dynamic emotional process <b>① essential</b> to consciousness. It supports us to face our vulnerability and mortality, and to repair life energy. Grief work honours the sadness, while also setting up the ground for <b>② self-transformation</b> and the continuation of life. Psychotherapist Fran Weller describes grief work as an act of devotion that requires ongoing practice. When we grieve for what is lost, it clears the way towards a <b>③ weakening</b> of love and commitment for what remains. In time this may build a desire to make good from the loss by <b>④ repairing</b> as many damages as we can. Grief can make us both very sad and very <b>⑤ motivated</b> to act.
+      </div>
+      <div class="exam-choices">
+        ① essential &nbsp;&nbsp;&nbsp;&nbsp; ② self-transformation &nbsp;&nbsp;&nbsp;&nbsp; ③ weakening &nbsp;&nbsp;&nbsp;&nbsp; ④ repairing &nbsp;&nbsp;&nbsp;&nbsp; ⑤ motivated
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (weakening → strengthening)</b><br>
+          <b>해설:</b> 잃어버린 상실을 제대로 애도할 때 남아 있는 소중한 것들에 대한 사랑과 헌신이 더욱 견고해지고 강화(strengthening)된다는 것이 글의 핵심 논지이다. 따라서 사랑과 헌신이 약화된다는 의미의 weakening은 맥락상 정반대이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Psychological theories across the field agree on the importance of grieving our losses, from the highly personal through to the broadly collective. Grief is a dynamic emotional process essential to consciousness.<br><br>
+        (A) Psychotherapist Fran Weller describes grief work is “an act of devotion, rooted in love and compassion” that requires ongoing practice. When we grieve for what is lost, it clears the way towards a strengthening of love and commitment for what remains.<br>
+        (B) At a psychological level, it supports us to both face into our own and others’ vulnerability, transience and mortality, and to repair life energy after significant loss. Grief work honours the sadness, while setting up the ground for self-transformation.<br>
+        (C) In time this may build a desire to make good from the loss by repairing as many damages as we can and/or compensating for them. Grief can make us both very sad and very motivated to act.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 주어진 글에서 애도의 정의와 중요성을 제시한 후, (B)에서 심리적 수준에서 애도가 취약성을 마주하고 생명력을 복원하는 기반을 마련해 준다는 기능을 설명한다. 이어서 (A)에서 프랜 웰러의 말을 인용하며 애도가 남겨진 것에 대한 사랑과 헌신을 강화하는 통로를 연다는 점을 상술하고, (C)의 'In time this may build a desire ~'를 통해 남은 것에 대한 헌신이 능동적 피해 복구와 행동 동기로 확장된다는 결론을 도출하는 (B) - (A) - (C)가 가장 자연스럽다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        When we grieve for what is lost, it clears the way towards a strengthening of love and commitment for what remains.<br><br>
+        Grief is a dynamic emotional process essential to consciousness. At a psychological level, it supports us to both face into our own and others’ vulnerability, transience and mortality, and to repair life energy after significant loss. ( ① ) Grief work honours the loss, the sadness and the experience of diminishment or absence, while also setting up the ground for self-transformation and the continuation of life. ( ② ) Psychotherapist Fran Weller describes grief work is “an act of devotion, rooted in love and compassion” that requires “an ongoing practice of deepening, attending and listening.” ( ③ ) In time this may build a desire to make good from the loss by repairing as many damages as we can and/or compensating for them. ( ④ ) Grief can make us both very sad and very motivated to act. ( ⑤ )
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 문장은 잃어버린 것을 애도할 때 '남아 있는 것에 대한 사랑과 헌신이 강화된다'고 말한다. 이는 바로 뒤 문장(③ 뒤)의 'In time this may build a desire ~(시간이 지나며 이것이 욕구를 형성한다)'의 지시대명사 this가 가리키는 직접적인 내용이다. 즉, 남은 것에 대한 사랑과 헌신이 바탕이 되어 피해를 복구하려는 욕구가 생겨나므로 ③의 위치가 논리적으로 완벽하다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "애도는 우리를 매우 슬프게도 만들고 행동하도록 매우 동기 부여되게도 만들 수 있다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 5형식 사역동사 make와 both A and B 상관접속사 구문을 반드시 활용할 것.<br>
+        2. 아래 제시된 단어들을 모두 한 번씩만 변형 없이 사용할 것.<br>
+        [ can make / to act / both very sad / Grief / and / us / very motivated ]<br>
+        3. 어형 변화 없이 온전한 한 문장으로 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>Grief can make us both very sad and very motivated to act.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 주어(Grief) + 조동사 및 사역동사(can make) + 목적어(us)를 바르게 구성했는가?<br>
+          - 목적격보어 자리에 'both very sad and very motivated to act'의 상관접속사 병렬 구조(형용사 sad와 과거분사 motivated)를 정확하게 배치했는가?
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
