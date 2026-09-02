@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 34번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 34번 · 빈칸 추론</div>
+    <h1 class="title">The Unseen Costs of Convenience:<br><span>Microwave and Family Dynamics</span></h1>
+    <p class="header-lead">편의성의 이면에 가려진 기술의 장기적이고 미묘한 사회적 변화를 주목하라.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 기술의 미묘한 장기적 영향(Subtle Long-term Implications) 및 매체 생태학(Media Ecology) — 마샬 맥루한 등의 관점처럼, 새로운 기술이나 매체가 도입될 때 인간은 즉각적이고 명백한 편의성에만 매몰되어 장기적으로 서서히 누적되는 사회적·문화적 구조의 해체를 간과하는 경향.</li>
+        <li><b>[배경 맥락]:</b> 1980년대 전자레인지의 도입은 조리 시간의 극적인 단축과 요리 담당자의 해방이라는 뚜렷한 즉각적 혜택을 제공했으나, 결과적으로는 가족 공동 식사 문화의 붕괴라는 예측하지 못한 사회적 변화를 낳았음.</li>
+        <li><b>[논리 요약]:</b> 명백하고 즉각적인 편리함(단기적 영향)에만 초점을 맞추면, 일상에서는 감지하기 어렵지만 장기적으로 가족의 삶과 인간관계를 재편하는 기술의 심대한 누적 변화를 놓치게 된다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      When we focus on the obvious aspects of media, we miss the changes that accumulate over time but are not apparent day to day. Most of us notice the obvious aspects of a new medium or technology while missing the more subtle aspects. Take, for example, the microwave oven. It was introduced in the early 1980s and revolutionized food preparation. Traditionally, one person spent the better part of an afternoon fixing an evening meal for a family. Now, it was possible to prepare foods very quickly, and this shortening of preparation time was liberating for the cooks in the family, most of whom tended to be women. But the short-term, obvious implications of greater convenience made it easy to overlook the long-term implications of no longer having one person fix food for the family to eat together at an evening meal. As time went on, fewer and fewer families sat down together to eat dinner. Meals that took a long time to prepare became a luxury of the past, except perhaps for special occasions. The effects of the microwave oven on family life were not anticipated and would have been difficult to foresee.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 새로운 기술의 뚜렷한 단기적 편익에만 집중하면, 전자레인지가 가족 공동 식사를 해체한 것처럼 장기적으로 누적되는 미묘하고 예측 불가능한 구조적 변화를 간과하게 된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">When we focus on the obvious aspects of media, <mark>we miss the changes that accumulate over time but are not apparent day to day</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리가 미디어의 명백한 측면들에 집중할 때, / 우리는 변화들을 놓치게 된다 / 시간이 지나면서 누적되지만 매일매일에는 뚜렷하지 않은.<br>
+            <b>[구문 포인트]</b> 주격 관계대명사 <b>that</b>절 내에서 두 개의 동사구 <b>accumulate over time</b>과 <b>are not apparent day to day</b>가 등위접속사 but으로 병렬 연결되어 선행사 the changes를 수식합니다.<br>
+            <b>[핵심 어휘]</b> <b>obvious</b> 명백한, 뚜렷한 | <b>accumulate</b> 누적되다 | <b>apparent</b> 명백한, 드러난 | <b>day to day</b> 매일매일의
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Most of us notice the obvious aspects of a new medium or technology <mark>while missing the more subtle aspects</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리 중 대부분은 새로운 미디어나 기술의 명백한 측면들을 알아차린다 / 더 미묘한 측면들을 놓치면서.<br>
+            <b>[구문 포인트]</b> 접속사 <b>while</b>이 명시된 분사구문 <b>while (we are) missing</b>이 쓰여 대조적인 두 행위의 공존을 나타냅니다.<br>
+            <b>[핵심 어휘]</b> <b>medium</b> 매체, 미디어 (복수형: media) | <b>subtle</b> 미묘한, 포착하기 어려운
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en"><mark>Take, for example, the microwave oven</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어, 전자레인지를 예로 들어보자.<br>
+            <b>[구문 포인트]</b> <b>Take ~ for example</b>(~을 예로 들다) 관용 표현으로 구체적인 사례 도입을 알리는 명령문입니다.<br>
+            <b>[핵심 어휘]</b> <b>microwave oven</b> 전자레인지
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">It was introduced in the early 1980s and <mark>revolutionized food preparation</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것은 1980년대 초에 도입되었고 / 음식 준비(조리)에 혁신을 가져왔다.<br>
+            <b>[구문 포인트]</b> 수동태 술어 <b>was introduced</b>와 능동태 과거동사 <b>revolutionized</b>가 주어 It을 공유하며 병렬 연결되어 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>introduce</b> 도입하다 | <b>revolutionize</b> 대변혁을 일으키다 | <b>preparation</b> 준비, 조리
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Traditionally, one person <mark>spent the better part of an afternoon fixing an evening meal for a family</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 전통적으로, 한 사람이 오후의 대부분을 보냈다 / 가족을 위한 저녁 식사를 준비하면서.<br>
+            <b>[구문 포인트]</b> <b>spend + 시간(the better part of an afternoon) + -ing(fixing)</b>(~하는 데 시간을 쓰다) 구문입니다.<br>
+            <b>[핵심 어휘]</b> <b>the better part of</b> ~의 대부분 | <b>fix</b> (음식을) 준비하다, 마련하다
+          </div>
+        </details>
+      </div>
+
+      <!-- S6 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Now, it was possible to prepare foods very quickly, and <mark>this shortening of preparation time was liberating for the cooks in the family, most of whom tended to be women</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이제, 매우 빠르게 음식을 준비하는 것이 가능해졌고, / 이러한 조리 시간의 단축은 가족 내 요리사들에게 해방감을 주었다 / 그리고 그들 대부분은 여성이기 마련이었다.<br>
+            <b>[구문 포인트]</b> <b>it(가주어)</b> ~ <b>to prepare(진주어)</b> 구문 뒤에, 관계대명사의 계속적 용법인 <b>most of whom</b>(그들 중 대부분)이 선행사 the cooks를 받아 절을 연결합니다.<br>
+            <b>[핵심 어휘]</b> <b>shortening</b> 단축, 줄임 | <b>liberating</b> 해방감을 주는 | <b>tend to V</b> ~하는 경향이 있다
+          </div>
+        </details>
+      </div>
+
+      <!-- S7 -->
+      <div class="chunk-item">
+        <p class="chunk-en">But the short-term, obvious implications of greater convenience <mark>made it easy to overlook the long-term implications</mark> of no longer having one person fix food for the family to eat together at an evening meal.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 더 큰 편리함이라는 단기적이고 명백한 영향은 / 간과하는 것을 쉽게 만들었다 / 장기적인 영향을 / 더 이상 한 사람이 저녁 식사에서 가족이 함께 먹을 음식을 준비하지 않게 된 것의.<br>
+            <b>[구문 포인트]</b> 5형식 가목적어-진목적어 구문(<b>made + 가목적어 it + 목적격보어 easy + 진목적어 to overlook</b>)이며, 전치사 of 뒤에 동명사 having(사역동사) + 목적어(one person) + 원형부정사(fix) 구조가 이어집니다.<br>
+            <b>[핵심 어휘]</b> <b>implication</b> 영향, 함의 | <b>convenience</b> 편리함 | <b>overlook</b> 간과하다, 못 보고 넘어가다
+          </div>
+        </details>
+      </div>
+
+      <!-- S8 -->
+      <div class="chunk-item">
+        <p class="chunk-en">As time went on, <mark>fewer and fewer families sat down together to eat dinner</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 시간이 흐름에 따라, / 점점 더 적은 가족들이 저녁을 먹기 위해 함께 둘러앉았다.<br>
+            <b>[구문 포인트]</b> <b>비교급 and 비교급</b>(fewer and fewer + 복수명사)이 주어로 쓰여 점진적인 감소의 양상을 명확하게 보여줍니다.<br>
+            <b>[핵심 어휘]</b> <b>as time goes on</b> 시간이 흐름에 따라 | <b>fewer and fewer</b> 점점 더 적은
+          </div>
+        </details>
+      </div>
+
+      <!-- S9 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Meals that took a long time to prepare <mark>became a luxury of the past</mark>, except perhaps for special occasions.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 준비하는 데 오랜 시간이 걸리는 식사는 / 과거의 사치가 되었다 / 아마도 특별한 행사를 제외하고는.<br>
+            <b>[구문 포인트]</b> 주어 Meals를 주격 관계대명사절 <b>that took a long time to prepare</b>가 수식하며, 본동사는 <b>became</b>입니다. 전치사구 <b>except for</b>는 '~을 제외하고'를 뜻합니다.<br>
+            <b>[핵심 어휘]</b> <b>luxury</b> 사치, 호사 | <b>occasion</b> 특별한 행사, 경우
+          </div>
+        </details>
+      </div>
+
+      <!-- S10 -->
+      <div class="chunk-item">
+        <p class="chunk-en">The effects of the microwave oven on family life <mark>were not anticipated and would have been difficult to foresee</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 전자레인지가 가족생활에 미친 영향은 / 예상되지 않았으며 / 예견하기 어려웠을 것이다.<br>
+            <b>[구문 포인트]</b> 수동태 과거 <b>were not anticipated</b>와 과거 사실에 대한 추측을 나타내는 가정법/조동사 완료형 <b>would have been difficult to foresee</b>가 병렬 연결되어 결론을 맺습니다.<br>
+            <b>[핵심 어휘]</b> <b>anticipate</b> 예상하다 | <b>foresee</b> 예견하다, 내다보다
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (기술의 양면적 효과 → 전자레인지 사례와 명백한 혜택 → 누적된 구조적 변화와 가족 해체)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PREMISE] 기술 인식의 맹점</span>
+        <h4>명백한 측면과 미묘한 누적 변화</h4>
+        <p>인간은 새로운 매체나 기술의 뚜렷하고 명백한 측면에는 쉽게 주목하지만, 일상 속에서는 보이지 않다가 시간이 지나며 점진적으로 누적되는 미묘한 변화는 간과하기 쉽다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[CASE STUDY] 전자레인지의 도입</span>
+        <h4>조리 시간 단축과 가사 해방</h4>
+        <p>1980년대 전자레인지의 등장은 오후 내내 걸리던 조리 시간을 획기적으로 줄여 주었다. 특히 당시 가사를 전담하던 여성 조리자들에게 즉각적이고 명백한 해방과 편의를 선사했다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[UNSEEN CONSEQUENCE] 공동체의 변모</span>
+        <h4>가족 공동 식사의 붕괴와 예견 불가능성</h4>
+        <p>단기적 편익에 가려 한 사람이 가족 모두를 위해 식사를 준비하던 관습의 소멸이라는 장기적 파급효과를 놓쳤다. 함께 식사하는 가족이 줄어들며 공동체 문화가 해체되는 예기치 못한 결과가 초래되었다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> This shortening of preparation time was liberating for the cooks in the family, most of [whom / them] tended to be women.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 두 개의 독립된 절을 연결하는 접속사가 없으므로, 대명사 them이 아닌 접속사 역할을 겸하는 관계대명사 'whom'이 올바릅니다. (전치사 of 뒤 목적격)">whom</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! them은 단순 대명사로 앞 절과 뒷 절을 연결하는 접속사 기능이 없어 두 문장을 이어줄 수 없습니다. 접속사 and가 있다면 'most of them'이 가능합니다.">them</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> But the short-term implications of greater convenience made [it / that] easy to overlook the long-term implications.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 뒤따르는 to overlook 이하의 진목적어구를 가리키는 가목적어 자리이므로 오직 'it'만이 문법적으로 성립합니다.">it</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 5형식 문형에서 to부정사나 that절을 대신하는 가목적어 자리에는 지시대명사 that을 절대 쓸 수 없습니다.">that</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        When we focus on the obvious aspects of media, we miss the changes that accumulate over time but are not apparent day to day. Most of us notice the obvious aspects while missing the more <b>① subtle</b> aspects. Take, for example, the microwave oven. It revolutionized food preparation. Traditionally, one spent an afternoon fixing meals. Now, it was possible to prepare foods very quickly, and this shortening of time was <b>② liberating</b> for cooks. But the short-term implications of greater convenience made it easy to <b>③ recognize</b> the long-term implications of no longer having one person fix food for the family to eat together. As time went on, <b>④ fewer</b> families sat down together to eat dinner. The effects of the microwave oven on family life were not anticipated and would have been <b>⑤ difficult</b> to foresee.
+      </div>
+      <div class="exam-choices">
+        ① subtle &nbsp;&nbsp;&nbsp;&nbsp; ② liberating &nbsp;&nbsp;&nbsp;&nbsp; ③ recognize &nbsp;&nbsp;&nbsp;&nbsp; ④ fewer &nbsp;&nbsp;&nbsp;&nbsp; ⑤ difficult
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (recognize → overlook 또는 miss)</b><br>
+          <b>해설:</b> 전자레인지가 가져다준 편리함이라는 뚜렷한 단기적 영향 때문에, 가족이 다 함께 모여 식사하는 관습이 사라진다는 심각한 장기적 파급효과를 '쉽게 인식(recognize)'한 것이 아니라 오히려 '간과(overlook)'하게 만들었다는 맥락이다. 따라서 ③은 정반대 흐름의 어휘이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        When we focus on the obvious aspects of media, we miss the changes that accumulate over time but are not apparent day to day. Most of us notice the obvious aspects of a new medium or technology while missing the more subtle aspects.<br><br>
+        (A) But the short-term, obvious implications of greater convenience made it easy to overlook the long-term implications of no longer having one person fix food for the family to eat together at an evening meal.<br>
+        (B) Take, for example, the microwave oven. It was introduced in the early 1980s and revolutionized food preparation. Now, it was possible to prepare foods very quickly, and this shortening of preparation time was liberating for cooks.<br>
+        (C) As time went on, fewer and fewer families sat down together to eat dinner. Meals that took a long time to prepare became a luxury of the past. The effects on family life were not anticipated and would have been difficult to foresee.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 주어진 글에서 기술의 명백한 측면에 집중하느라 미묘한 누적 변화를 놓친다는 일반적 원리를 제시한 후, (B)에서 전자레인지의 도입과 조리 시간 단축이라는 '명백하고 긍정적인 단기적 혜택'을 사례로 든다. 이어 (A)의 역접 'But'을 통해 편리함 때문에 장기적인 가족 식사 준비의 소멸을 간과했음을 지적하고, (C)에서 As time went on(시간이 흐름에 따라)을 연결고리로 가족들이 함께 식사하지 않게 된 구체적 결과와 그 예견 불가능성을 결론짓는 (B) - (A) - (C)의 순서가 가장 논리적이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        As time went on, fewer and fewer families sat down together to eat dinner.<br><br>
+        Take, for example, the microwave oven. ( ① ) It was introduced in the early 1980s and revolutionized food preparation. ( ② ) Traditionally, one person spent the better part of an afternoon fixing an evening meal for a family. ( ③ ) Now, it was possible to prepare foods very quickly, and this shortening of preparation time was liberating for the cooks in the family, most of whom tended to be women. ( ④ ) But the short-term, obvious implications of greater convenience made it easy to overlook the long-term implications of no longer having one person fix food for the family to eat together at an evening meal. ( ⑤ ) Meals that took a long time to prepare became a luxury of the past, except perhaps for special occasions.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ⑤</b><br>
+          <b>해설:</b> ④ 다음의 문장에서 편리함 때문에 '더 이상 한 사람이 가족이 함께 먹을 저녁을 준비하지 않게 된 장기적 영향'을 간과했다고 기술하고 있다. 주어진 문장은 그 직접적인 사회적 결과로서 '시간이 흐르면서 함께 둘러앉아 저녁을 먹는 가족이 점차 줄어들었다'는 사실을 제시하며, ⑤ 뒤의 '오랜 준비 시간이 걸리는 식사가 과거의 사치가 되었다'는 문장과 자연스럽게 결합되므로 ⑤가 정답이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "그러나 더 큰 편리함이라는 단기적이고 명백한 영향은 장기적인 영향을 간과하는 것을 쉽게 만들었다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 반드시 5형식 가목적어-진목적어 구문(make + it + 형용사 + to V)을 활용할 것.<br>
+        2. 아래 제시된 단어들을 모두 한 번씩만 변형 없이 사용할 것.<br>
+        [ the short-term, obvious implications / of greater convenience / easy / made / to overlook / it / the long-term implications / But ]<br>
+        3. 단어의 추가나 어형 변화 없이 온전한 한 문장으로 배열할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>But the short-term, obvious implications of greater convenience made it easy to overlook the long-term implications.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 주어부: But the short-term, obvious implications of greater convenience를 바르게 배열했는가?<br>
+          - 술어부: 5형식 동사 made + 가목적어 it + 형용사 보어 easy + 진목적어 to overlook the long-term implications를 문법적 오류 없이 정확하게 완성했는가?
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
