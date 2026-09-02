@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 9월 학평 21번 워크북 | 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 21번 · 함축의미 추론</div>
+    <h1 class="title">Movement Is Our Nature<br><span>Reclaiming Bodily Life</span></h1>
+    <p class="header-lead">인간 본연의 신체 움직임을 회복하여 삶의 활력 되찾기</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 신체 움직임의 결핍(Sedentary Captivity)과 본래적 신체 설계(Evolutionary Design)의 괴리</li>
+        <li><b>[배경 맥락]:</b> 스마트 기기 과의존으로 인해 아동과 현대인의 신체 활동 레퍼토리가 축소되고 사회적·정서적 발달 지체 및 질병이 유발됨</li>
+        <li><b>[논리 요약]:</b> 인간은 본래 활발히 움직이도록 설계되었으나 비활동적 생활로 본성에서 멀어졌으므로, 신체 움직임을 회복해야 온전한 삶을 영위할 수 있음</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      We are wonderfully made, yet we don’t allow ourselves to participate in the wonder for which we were created. Instead of moving anywhere and everywhere, most of us spend our time moving nowhere. We occupy the same square footage of a chair for hours and hours every day. Many kids today are being held captive by ‘smart’ devices like phones and tablets. They are not going outside to play, they are not learning how to socialize and read physical cues from others. As a result they are not learning or building their movement repertoire, the very thing that will help them learn, communicate, create, and become emotionally mature. They are not even learning how to run, how to skip, or how to climb. Instead, they are learning how to live with anxiety, depression, and even diseases they were never meant to have. The point is we are getting further and further away from our design. We were made to move ― and through movement, we are meant to live extraordinary lives. Movement <i>is</i> life to us.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 현대인은 스마트 기기와 좌식 생활로 인해 타고난 신체적 움직임을 잃어버리고 심신 질환에 시달리고 있으므로, 본래 설계된 목적대로 움직임을 되찾아야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">We are wonderfully made, yet we don’t <mark>allow ourselves to participate in</mark> the wonder for which we were created.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 경이롭게 만들어졌지만, / 우리는 우리 자신에게 허락하지 않는다 / 그 경이로움에 참여하도록 / 우리가 창조된 목적이었던.<br>
+            <b>[구문 포인트]</b> 5형식 사역/허가 동사구 allow + 목적어(ourselves) + 목적격보어(to participate in). 전치사+관계대명사(for which) 뒤에 수동태 완전한 절(we were created) 연결.<br>
+            <b>[핵심 어휘]</b> participate in (~에 참여하다), wonderfully (경이롭게), wonder (경이로움)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Instead of moving anywhere and everywhere, most of us <mark>spend our time moving nowhere</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 어디든 온 사방으로 움직이는 대신에, / 우리 대부분은 시간을 보낸다 / 어디로도 움직이지 않으면서.<br>
+            <b>[구문 포인트]</b> Instead of + 동명사(moving). 관용 표현 [spend + 시간(our time) + -ing(moving)] 구문으로 부사적 어구 'nowhere'와 결합하여 정적인 상태를 강조.<br>
+            <b>[핵심 어휘]</b> instead of (~ 대신에), nowhere (어디에도 ~않다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">We <mark>occupy the same square footage</mark> of a chair for hours and hours every day.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 의자의 똑같은 면적을 차지한다 / 매일 몇 시간이고 계속해서.<br>
+            <b>[구문 포인트]</b> square footage는 '면적(평방피트)'을 의미하며 현대인의 비활동적이고 고착화된 좌식 생활 방식을 구체적 수치 단위 명사로 묘사.<br>
+            <b>[핵심 어휘]</b> occupy (차지하다, 점유하다), square footage (면적, 평방피트 면적)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Many kids today <mark>are being held captive</mark> by ‘smart’ devices like phones and tablets.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 오늘날 많은 아이들은 사로잡혀 포로가 되고 있다 / 스마트폰과 태블릿 같은 '스마트' 기기들에 의해.<br>
+            <b>[구문 포인트]</b> 현재진행 수동태(are being held) + 목적격보어 형용사(captive). 'hold ~ captive (~를 포로로 붙잡다)'의 수동태 전환 구조.<br>
+            <b>[핵심 어휘]</b> be held captive (포로로 잡히다, 사로잡히다), device (기기, 장치)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">They are not going outside to play, they are not learning <mark>how to socialize and read physical cues</mark> from others.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그들은 놀기 위해 밖으로 나가지도 않고, / 그들은 배우지 못하고 있다 / 사회화하는 방법과 신체적 신호를 읽는 방법을 / 다른 사람들로부터의.<br>
+            <b>[구문 포인트]</b> 의문사 + to부정사 병렬 구조: [how to socialize] and [(how to) read physical cues].<br>
+            <b>[핵심 어휘]</b> socialize (어울리다, 사회화하다), physical cue (신체적 신호, 몸짓 언어)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">As a result they are not learning or building their <mark>movement repertoire</mark>, the very thing that will help them learn, communicate, create, and become emotionally mature.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 결과 그들은 배우거나 구축하지 못하고 있다 / 그들의 움직임 레퍼토리를, / 바로 그 움직임 레퍼토리는 / 그들이 학습하고, 소통하고, 창조하고, 정서적으로 성숙해지도록 도와줄 것이다.<br>
+            <b>[구문 포인트]</b> 명사구 movement repertoire와 동격(the very thing). help + 목적어(them) + 동사원형 병렬 [learn, communicate, create, and become].<br>
+            <b>[핵심 어휘]</b> repertoire (레퍼토리, 목록), emotionally mature (정서적으로 성숙한)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">They are not even learning how to run, how to skip, or how to climb.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그들은 달리는 법, 깡충깡충 뛰는 법, 혹은 기어오르는 법조차 배우지 못하고 있다.<br>
+            <b>[구문 포인트]</b> 의문사구 [how to run], [how to skip], or [how to climb]의 3중 A, B, or C 대등 병렬 구조.<br>
+            <b>[핵심 어휘]</b> skip (깡충깡충 뛰다, 줄넘기하다), climb (기어오르다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Instead, they are learning how to live with anxiety, depression, and even diseases they were never meant to have.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 대신에, 그들은 배우고 있다 / 불안, 우울, 심지어 질병과 함께 살아가는 방식을 / 그들이 결코 겪도록 되어 있지 않았던.<br>
+            <b>[구문 포인트]</b> 목적격 관계대명사 that/which 생략: diseases [(which/that) they were never meant to have]. be meant to-v (~하도록 운명 지어지다/예정되다).<br>
+            <b>[핵심 어휘]</b> anxiety (불안), depression (우울증), be meant to-v (~하기로 되어 있다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">The point is <mark>we are getting further and further away from our design</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 핵심은 / 우리가 점점 더 멀어지고 있다는 것이다 / 우리의 본래 설계로부터.<br>
+            <b>[구문 포인트]</b> The point is 뒤에 접속사 that 생략된 명사절 보어. [비교급 and 비교급] 구문: further and further (점점 더 멀리).<br>
+            <b>[핵심 어휘]</b> further and further (점점 더 멀리), design (설계, 본래 의도된 모습)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">We were made to move ― and through movement, we are <mark>meant to live extraordinary lives</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 움직이도록 만들어졌다 / 그리고 움직임을 통해, / 우리는 비범한 삶을 살도록 운명 지어져 있다.<br>
+            <b>[구문 포인트]</b> 사역동사 make의 수동태 [be made to-v (to부정사 필수)]. be meant to-v (~하기로 되어 있다).<br>
+            <b>[핵심 어휘]</b> extraordinary (비범한, 놀라운), movement (움직임)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>Movement <i>is</i> life to us</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 움직임은 우리에게 생명 그 자체이다.<br>
+            <b>[구문 포인트]</b> 간결하고 강력한 단문으로 전체 글의 궁극적인 주제를 압축하는 결론문.<br>
+            <b>[핵심 어휘]</b> movement (움직임), life (생명, 삶)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상 고발 → 폐해 분석 → 본질 규명)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PROBLEM] 01-03문장</span>
+        <h4>신체적 움직임의 박탈과 고착</h4>
+        <p>인간은 경이로운 신체 능력을 지녔으나, 의자에만 머물며 신체 활동 공간을 극단적으로 축소시키는 모순적 생활 양식 지속</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[SYMPTOM] 04-08문장</span>
+        <h4>스마트 기기 중독과 발달 결손</h4>
+        <p>기기에 사로잡힌 아이들이 신체 레퍼토리 습득 기회를 잃고 사회성 결여, 불안, 우울 및 본래 없어야 할 신체 질환에 직면</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[SOLUTION & ESSENCE] 09-11문장</span>
+        <h4>인간 본연의 설계 회복: 움직임</h4>
+        <p>인간은 움직이기 위해 창조된 존재임을 선언하며, 신체 움직임이야말로 비범한 삶을 영위하게 하는 생명의 본질임을 강조</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. We are wonderfully made, yet we don’t allow [us / ourselves] to participate in the wonder for which we were created.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="주어(we)와 목적어가 동일 인물이므로 목적격 us를 쓰면 주어와 다른 제3자를 가리키게 되어 문맥 및 어법상 틀립니다.">us</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 주어인 we가 스스로에게 허락하지 않는 대상이므로 재귀대명사 ourselves가 어법상 올바릅니다.">ourselves</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. As a result they are not learning or building their movement repertoire, the very thing that will help them learn, communicate, create, and [become / becoming] emotionally mature.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 준사역동사 help의 목적격보어인 동사원형 learn, communicate, create와 병렬 연결되는 자리이므로 become이 올바릅니다.">become</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="등위접속사 and 앞의 help 목적격보어 원형들(learn, communicate, create)과 대등 병렬되어야 하므로 becoming은 올 수 없습니다.">becoming</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문항 1: 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        We are wonderfully made, yet we don’t allow ourselves to participate in the wonder for which we were created. Instead of moving anywhere and everywhere, most of us spend our time moving ① <u>nowhere</u>. We occupy the same square footage of a chair for hours and hours every day. Many kids today are being held captive by ‘smart’ devices like phones and tablets. They are not going outside to play, they are not learning how to socialize and read physical cues from others. As a result they are not learning or building their movement repertoire, the very thing that will help them learn, communicate, create, and become emotionally ② <u>mature</u>. They are not even learning how to run, how to skip, or how to climb. Instead, they are learning how to live with anxiety, depression, and even diseases they were never meant to have. The point is we are getting ③ <u>closer</u> to our design. We were made to move ― and through movement, we are meant to live ④ <u>extraordinary</u> lives. Movement is ⑤ <u>life</u> to us.
+      </div>
+      <div class="exam-choices">
+        ① nowhere &nbsp;&nbsp;&nbsp; ② mature &nbsp;&nbsp;&nbsp; ③ closer &nbsp;&nbsp;&nbsp; ④ extraordinary &nbsp;&nbsp;&nbsp; ⑤ life
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ closer → further</b><br>
+          <b>해설:</b> 글 전체에서 인간이 움직이지 않고 의자와 디지털 기기에 묶여 살아가면서 본래 인간이 타고난 설계 및 목적에서 벗어나고 있다고 비판하고 있습니다. 따라서 ③의 closer(더 가까운)는 맥락상 further(더 먼)로 바뀌어야 올바릅니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        We are wonderfully made, yet we don’t allow ourselves to participate in the wonder for which we were created. Instead of moving anywhere and everywhere, most of us spend our time moving nowhere. Many kids today are being held captive by ‘smart’ devices like phones and tablets. They are not learning how to socialize and read physical cues from others. As a result they are not learning or building their movement repertoire, the very thing that will help them learn, communicate, create, and become emotionally mature. Instead, they are learning how to live with anxiety, depression, and even diseases they were never meant to have. The point is ________________________. We were made to move ― and through movement, we are meant to live extraordinary lives. Movement is life to us.
+      </div>
+      <div class="exam-choices">
+        ① intellectual achievements take priority over bodily actions<br>
+        ② we are getting further and further away from our design<br>
+        ③ modern technologies enhance our innate physical agility<br>
+        ④ childhood emotions can be stabilized through virtual games<br>
+        ⑤ sedentary habits are an unavoidable consequence of evolution
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 빈칸 앞뒤 문맥에서 신체적 움직임을 상실하고 질병과 불안에 노출된 현대인의 문제를 짚은 뒤, 본래 인간은 움직이도록 창조되었다고 결론짓고 있습니다. 따라서 인간이 '우리의 본래 설계로부터 점점 더 멀어지고 있다'는 의미인 ② 'we are getting further and further away from our design'이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        Instead, they are learning how to live with anxiety, depression, and even diseases they were never meant to have.<br><br>
+        We are wonderfully made, yet we don’t allow ourselves to participate in the wonder for which we were created. Instead of moving anywhere and everywhere, most of us spend our time moving nowhere. ( ① ) We occupy the same square footage of a chair for hours and hours every day. ( ② ) Many kids today are being held captive by ‘smart’ devices like phones and tablets. ( ③ ) They are not going outside to play, they are not learning how to socialize and read physical cues from others. ( ④ ) As a result they are not learning or building their movement repertoire, the very thing that will help them learn, communicate, create, and become emotionally mature. They are not even learning how to run, how to skip, or how to climb. ( ⑤ ) The point is we are getting further and further away from our design. We were made to move ― and through movement, we are meant to live extraordinary lives.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ⑤</b><br>
+          <b>해설:</b> 주어진 문장의 'Instead(대신에)'는 앞선 부정문과 논리적으로 호응합니다. ⑤ 바로 앞 문장에서 아이들이 달리기, 뛰기, 오르기 같은 신체 활동을 배우지 못하고 있다는 부정문(They are not even learning...)이 제시되었고, 그 '대신에' 배우고 있는 부정적 결과들(불안, 우울증, 질병)이 이어지는 것이 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문항 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [서술형] 다음 우리말 조건에 맞추어 빈칸을 완성하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. [우리말]: "우리는 움직이도록 만들어졌으며, 움직임을 통해 우리는 비범한 삶을 살도록 되어 있다."<br>
+        2. 보기의 단어만을 모두 한 번씩 사용하여 문맥과 어법에 맞게 영작할 것 (어형 변화 불가).<br>
+        <b>[보기]</b><br>
+        [ lives / were / extraordinary / to / made / we / move / live / meant / through / to / are / movement, / and / we ]
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: We were made to move and through movement, we are meant to live extraordinary lives.</b><br>
+          <b>해설:</b> 사역동사 수동태 구문 'We were made to move'와 '의도/운명'을 나타내는 관용 구문 'we are meant to live extraordinary lives'가 등위접속사 and 및 전치사구 through movement로 긴밀히 연결된 원문의 핵심 문장입니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
