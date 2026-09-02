@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 22번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 22번 · 요지</div>
+    <h1 class="title">Digital Ingestion During Meals:<br><span>The Need for Mindful Eating</span></h1>
+    <p class="header-lead">식사 중 디지털 멀티태스킹은 소화 장애와 소통 오류를 부른다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 상시 접속 사회의 인지적 과부하(Cognitive Overload in Always-On Culture) — 24시간 가상 콘텐츠를 섭취하느라 신체적 활동에 필요한 정신적·신체적 에너지가 분산되는 현상.</li>
+        <li><b>[배경 맥락]:</b> 인간의 뇌는 물리적 영양 섭취(음식 소화)와 가상 정보 처리(문자, 메일, 알림 소화)를 동시에 완벽히 수행할 수 없음에도, 현대인들은 식사 중 멀티태스킹을 시도하다가 신체적 소화 장애와 대인 소통의 오류를 동시에 겪고 있음.</li>
+        <li><b>[논리 요약]:</b> 식사 중 디지털 기기를 다루면 정신적 에너지가 분산되어 소화 불량과 부정확한 메시지 전송을 초래하므로, 먼저 온전히 음식을 맛보고 삼킨 뒤에 문자를 보내야 한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      When we are ‘always on’ we are constantly ingesting content ― reading alerts and texts, liking, checking emails, downloading, uploading, upgrading, updating, deleting, submitting responses, and posting. If we do it while we are eating, our multi-tasking is overloading us. As our will attempts to digest the virtual content its forces are diverted from the physical content, our food. It’s easy to eat a sandwich in a minute while talking on the phone. Some people are skilled at doing both at the same time. Others write a half-hearted, shorthand text while they hurriedly eat their sandwich at the same time. The result can be a misunderstood text with the need for further clarifying texts and the beginnings of nervous indigestion. Eat your sandwich. Taste it. Let it go down. Then text.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 식사 중 디지털 기기를 사용하는 멀티태스킹은 인지 과부하로 인한 신체적 소화 불량과 의사소통 오류를 야기하므로, 온전히 식사를 마친 후 메시지를 다루어야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">When we are ‘always on’ we are constantly <mark>ingesting content</mark> ― reading alerts and texts, liking, checking emails, downloading, uploading, upgrading, updating, deleting, submitting responses, and posting.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리가 '항상 켜져(접속되어)' 있을 때 / 우리는 끊임없이 콘텐츠를 섭취하고 있다 / 알림과 문자를 읽고, '좋아요'를 누르고, 이메일을 확인하고, 다운로드하고, 업로드하고, 업그레이드하고, 업데이트하고, 삭제하고, 응답을 제출하고, 게시하면서.<br>
+            <b>[구문 포인트]</b> 대시(―) 뒤의 현재분사구(reading, liking, checking ...)들은 끊임없이 콘텐츠를 섭취하는 구체적인 행위들을 병렬 구조로 부연 설명합니다.<br>
+            <b>[핵심 어휘]</b> <b>always on</b> 항상 켜져 있는, 상시 접속의 | <b>ingest</b> (음식·정보를) 삼키다, 섭취하다 | <b>submit</b> 제출하다
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en">If we do it while we are eating, our multi-tasking is <mark>overloading us</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 우리가 식사하는 동안 그것을 한다면 / 우리의 멀티태스킹은 우리에게 과부하를 주고 있는 것이다.<br>
+            <b>[구문 포인트]</b> 조건 부사절 <b>while we are eating</b>이 삽입되어 식사 행위와 디지털 행위의 병행 상태를 명시하고 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>multi-tasking</b> 다중 작업, 멀티태스킹 | <b>overload</b> 과부하를 걸다
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en">As our will attempts to digest the virtual content <mark>its forces are diverted from</mark> the physical content, our food.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리의 의지가 가상 콘텐츠를 소화하려고 시도함에 따라 / 그것의 힘은 물리적 내용물, 즉 우리의 음식으로부터 다른 곳으로 돌려진다.<br>
+            <b>[구문 포인트]</b> <b>its forces</b>에서 its는 our will을 가리키며, 수동태 표현 <b>are diverted from</b>(~로부터 딴 데로 돌려지다)이 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>will</b> 의지 | <b>digest</b> 소화하다 | <b>virtual</b> 가상의 | <b>divert</b> 방향을 돌리다, 딴 데로 돌리다
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">It’s easy <mark>to eat a sandwich in a minute</mark> while talking on the phone.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 통화하면서 / 1분 만에 샌드위치를 먹는 것은 쉽다.<br>
+            <b>[구문 포인트]</b> <b>It</b>은 가주어, <b>to eat a sandwich ~</b>가 진주어이며, <b>while (we are) talking</b>의 분사구문 형태입니다.<br>
+            <b>[핵심 어휘]</b> <b>in a minute</b> 순식간에, 1분 만에
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Some people are skilled at <mark>doing both at the same time</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 어떤 사람들은 능숙하다 / 동시에 두 가지를 모두 하는 데.<br>
+            <b>[구문 포인트]</b> 전치사 at의 목적어로 동명사 <b>doing</b>이 쓰여 <b>be skilled at -ing</b>(~에 능숙하다) 구문을 형성합니다.<br>
+            <b>[핵심 어휘]</b> <b>skilled at</b> ~에 숙련된, 능숙한 | <b>at the same time</b> 동시에
+          </div>
+        </details>
+      </div>
+
+      <!-- S6 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Others write a half-hearted, shorthand text <mark>while they hurriedly eat their sandwich</mark> at the same time.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 다른 사람들은 성의 없고 생략된 문자를 작성한다 / 동시에 서둘러 샌드위치를 먹으면서.<br>
+            <b>[구문 포인트]</b> 앞 문장의 <b>Some</b>과 호응하여 대조군을 형성하는 부정대명사 <b>Others</b>가 주어로 사용되었습니다.<br>
+            <b>[핵심 어휘]</b> <b>half-hearted</b> 성의 없는, 마음이 내키지 않는 | <b>shorthand</b> 속기의, 생략된 | <b>hurriedly</b> 급하게, 서둘러
+          </div>
+        </details>
+      </div>
+
+      <!-- S7 -->
+      <div class="chunk-item">
+        <p class="chunk-en">The result can be a misunderstood text with the need for further clarifying texts <mark>and the beginnings of nervous indigestion</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 결과는 / 오해를 불러일으킨 문자와 / 추가적인 해명 문자의 필요성 / 그리고 신경성 소화 불량의 시작이 될 수 있다.<br>
+            <b>[구문 포인트]</b> 과거분사 <b>misunderstood</b>가 text를 수식하며, 전치사 for의 목적어로 동명사 <b>clarifying</b>(명확히 설명하는)이 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>misunderstood</b> 오해받은 | <b>clarify</b> 명확하게 하다, 해명하다 | <b>indigestion</b> 소화 불량
+          </div>
+        </details>
+      </div>
+
+      <!-- S8 -->
+      <div class="chunk-item">
+        <p class="chunk-en"><mark>Eat</mark> your sandwich.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 여러분의 샌드위치를 먹어라.<br>
+            <b>[구문 포인트]</b> 직관적이고 단호한 명령문(동사원형 Eat)으로, 주의를 신체적 행위 자체로 되돌릴 것을 촉구합니다.<br>
+            <b>[핵심 어휘]</b> <b>eat</b> 먹다
+          </div>
+        </details>
+      </div>
+
+      <!-- S9 -->
+      <div class="chunk-item">
+        <p class="chunk-en"><mark>Taste</mark> it.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것의 맛을 느껴라.<br>
+            <b>[구문 포인트]</b> 대명사 <b>it</b>은 your sandwich를 가리키며, 감각에 온전히 집중하라는 명령문입니다.<br>
+            <b>[핵심 어휘]</b> <b>taste</b> 맛보다, 맛을 느끼다
+          </div>
+        </details>
+      </div>
+
+      <!-- S10 -->
+      <div class="chunk-item">
+        <p class="chunk-en"><mark>Let it go down</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것이 넘어가도록(소화되도록) 두어라.<br>
+            <b>[구문 포인트]</b> 사역동사 <b>let</b> + 목적어(it) + 목적격보어로 동사원형 <b>go down</b>이 쓰인 5형식 구문입니다.<br>
+            <b>[핵심 어휘]</b> <b>let</b> ~하게 하다 | <b>go down</b> 넘어가다, 내려가다
+          </div>
+        </details>
+      </div>
+
+      <!-- S11 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Then <mark>text</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그런 다음에 문자를 보내라.<br>
+            <b>[구문 포인트]</b> 시간의 선후 관계를 나타내는 부사 <b>Then</b> 뒤에 동사원형 <b>text</b>(문자를 보내다)가 명령문으로 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>then</b> 그러고 나서 | <b>text</b> 문자를 보내다
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상 진단 → 부작용 심화 → 행동 지침)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PHENOMENON] 상시 접속과 식사</span>
+        <h4>가상 콘텐츠 섭취와 인지 과부하</h4>
+        <p>현대인은 알림, 문자 등 끊임없는 디지털 콘텐츠를 섭취한다. 식사 중에 가상 정보를 소화하려 하면 의지의 힘이 물리적 음식 소화로부터 분산되어 과부하를 초래한다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[CONSEQUENCE] 멀티태스킹의 대가</span>
+        <h4>소통 오해와 신경성 소화 불량</h4>
+        <p>서둘러 식사하며 작성한 성의 없는 문자는 상대방에게 오해를 불러일으켜 추가 해명이 필요해지고, 신체적으로는 긴장과 신경성 소화 불량을 일으킨다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[PRESCRIPTION] 명확한 해결책</span>
+        <h4>식사의 온전한 완결 후 문자 전송</h4>
+        <p>음식을 먼저 맛보고 제대로 넘긴 후에 비로소 디지털 소통을 진행하라. 물리적 행위와 가상 행위를 시간적으로 엄격히 분리할 것을 단호한 단문으로 명령한다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> As our will attempts to digest the virtual content its forces [are diverted / divert] from the physical content, our food.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 의지의 힘(its forces)은 다른 곳으로 돌려지는 대상이므로 수동태 'are diverted'가 어법상 올바릅니다.">are diverted</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! its forces(의지의 힘)가 스스로 무언가를 돌리는 것이 아니라 물리적 대상으로부터 딴 데로 돌려지는 수동 관계이므로 능동형 divert는 틀립니다.">divert</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> Eat your sandwich. Taste it. Let it [go / to go] down. Then text.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 사역동사 let은 목적격보어로 to부정사가 아닌 원형부정사를 취하므로 'go'가 올바릅니다.">go</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 사역동사 let의 목적격보어 자리에는 to부정사를 쓸 수 없으므로 'to go'는 문법 오류입니다.">to go</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        When we are 'always on' we are constantly ingesting content. If we do it while we are eating, our multi-tasking is <b>① overloading</b> us. As our will attempts to digest the virtual content its forces are <b>② diverted</b> from the physical content, our food. It's easy to eat a sandwich in a minute while talking on the phone. Some people are skilled at doing both at the same time. Others write a <b>③ whole-hearted</b>, shorthand text while they hurriedly eat their sandwich at the same time. The result can be a <b>④ misunderstood</b> text with the need for further clarifying texts and the beginnings of nervous <b>⑤ indigestion</b>. Eat your sandwich. Taste it. Let it go down. Then text.
+      </div>
+      <div class="exam-choices">
+        ① overloading &nbsp;&nbsp;&nbsp;&nbsp; ② diverted &nbsp;&nbsp;&nbsp;&nbsp; ③ whole-hearted &nbsp;&nbsp;&nbsp;&nbsp; ④ misunderstood &nbsp;&nbsp;&nbsp;&nbsp; ⑤ indigestion
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (whole-hearted → half-hearted)</b><br>
+          <b>해설:</b> 서둘러 샌드위치를 먹으며 동시에 문자를 작성하는 상황에서는 온 마음을 다한(whole-hearted) 글을 쓸 수 없으며, 성의 없고 건성으로 쓴(half-hearted) 문자를 작성하게 되어 결국 오해(misunderstood text)를 낳게 된다. 따라서 문맥상 ③은 반대 의미의 단어이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        When we are connected non-stop, our minds are bombarded with virtual messages. Attempting to consume this flood of information while eating forces our cognitive capacity beyond its limits. As our conscious will attempts to absorb incoming notifications and tasks, ____________________________________. Consequently, rushed eaters produce ambiguous messages that require subsequent clarification, all while suffering from physical discomfort. To avoid both relational confusion and somatic stress, we must fully finish nourishing our bodies before engaging with the screen.
+      </div>
+      <div class="exam-choices">
+        ① our appetite is significantly heightened by the sensory stimulation<br>
+        ② its resources are pulled away from processing our bodily nourishment<br>
+        ③ the efficiency of both mental retention and physical digestion is enhanced<br>
+        ④ social bonds through digital communication become much stronger<br>
+        ⑤ our brain successfully automates the act of chewing and swallowing
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 원문의 'its forces are diverted from the physical content, our food'를 변형 패러프레이징한 선택지이다. 가상 콘텐츠를 소화하려는 인지적 노력이 음식물을 소화하는 신체적 자원을 빼앗아 간다는 맥락이 빈칸에 들어가야 하므로 ②번(신체적 영양분을 처리하는 것으로부터 자원이 분산된다)이 정답이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        When we are ‘always on’ we are constantly ingesting content ― reading alerts and texts, liking, checking emails, downloading, uploading, and posting. If we do it while we are eating, our multi-tasking is overloading us.<br><br>
+        (A) The result can be a misunderstood text with the need for further clarifying texts and the beginnings of nervous indigestion. Eat your sandwich. Taste it. Let it go down. Then text.<br>
+        (B) As our will attempts to digest the virtual content its forces are diverted from the physical content, our food. It’s easy to eat a sandwich in a minute while talking on the phone.<br>
+        (C) Some people are skilled at doing both at the same time. Others write a half-hearted, shorthand text while they hurriedly eat their sandwich at the same time.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 글에서 식사 중 멀티태스킹의 과부하를 언급한 후, (B)에서 그 기제(의지의 힘이 음식에서 가상 콘텐츠로 분산됨)를 설명하며 통화하며 샌드위치를 먹는 예시를 도입한다. 이어서 (C)에서 이를 수행하는 두 부류(능숙한 사람 vs 서둘러 먹으며 성의 없는 문자를 쓰는 사람)를 대조한 뒤, (A)에서 성의 없는 문자가 낳는 부정적 결과(오해와 소화 불량) 및 이에 대한 최종 해결책(식사를 마친 후 문자 보내기)으로 결론을 짓는 것이 가장 자연스럽다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "그 결과는 추가적인 해명 문자의 필요성을 동반한 오해받은 문자와 신경성 소화 불량의 시작이 될 수 있다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 아래 제시된 단어들을 반드시 모두 한 번씩만 사용할 것.<br>
+        [ the result / a misunderstood text / with the need / of nervous indigestion / can be / for further clarifying texts / and the beginnings ]<br>
+        2. 어형 변화 없이 어순 배열만 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>The result can be a misunderstood text with the need for further clarifying texts and the beginnings of nervous indigestion.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 주어(The result) + 조동사 술어(can be) 뒤에 병렬 구조를 이루는 명사구(a misunderstood text ~ and the beginnings ~)를 정확히 배치해야 함.<br>
+          - 수식어구 'with the need for further clarifying texts'가 앞선 명사 text를 적절히 수식하는 어순을 완성해야 정답 처리됨.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
