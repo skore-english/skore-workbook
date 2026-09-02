@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 9월 학평 39번 워크북 | 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 전국연합학력평가 (2026년 09월)</span>
+    </div>
+    <div class="meta-badge">09월 학평 39번 · 문장삽입</div>
+    <h1 class="title">Leaf-cutter Ants Agriculture<br><span>Underground Fungus Farming</span></h1>
+    <p class="header-lead">나뭇잎을 거름 삼아 균류를 재배하는 가위개미의 농경 문명</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 가위개미(Leaf-cutter Ants)의 균류 농경(Fungus Agriculture) 및 역할 분담(Division of Labor)</li>
+        <li><b>[배경 맥락]:</b> 가위개미는 식물을 직접 섭취하는 초식 곤충이 아니라 나뭇잎을 지하 정원의 배지(거름)로 활용해 공생 균류를 재배하는 농부임</li>
+        <li><b>[논리 요약]:</b> 채집개미의 잎 운반과 소형 일개미의 가공·시비, 그리고 균류 버섯체 수확에 이르는 정교한 농경 체계를 통해 거대한 지하 문명을 구축함</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      With millions of members in a colony, leaf­cutter ants cultivate their own food. Just like humans, they’re farmers. Some of the ants set forth from the nest to find fresh vegetation; when they find it, they chew off large pieces that they carry back to the nest. However, the ants don’t eat these leaves. Instead, smaller worker ants take the pieces of leaves, chew them into smaller pieces, and use these as fertilizer to grow fungus in large underground ‘gardens.’ The ants feed the fungus, and the fungus blossoms into small fruiting bodies which the ants later eat. Using this successful farming strategy, the ants build enormous nests underground, something spanning hundreds of square meters. Just like humans, they have perfected an agricultural civilization.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 가위개미는 잎을 직접 먹지 않고 지하 정원에서 균류를 재배하는 비료로 활용하는 고도의 농경 전략과 분업을 통해 거대한 지하 문명을 완성했다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">With millions of members in a colony, <mark>leaf­cutter ants cultivate their own food</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 군집 내 수백만 마리의 구성원을 거느리고, / 가위개미는 그들 자신의 먹이를 경작(재배)한다.<br>
+            <b>[구문 포인트]</b> 전치사구 [With millions of members in a colony]가 부대상황을 나타냄. 타동사 cultivate(경작하다)와 [one's own + 명사] 구조로 자급자족 농경의 특징을 도입함.<br>
+            <b>[핵심 어휘]</b> colony (군집), leaf-cutter ant (가위개미), cultivate (경작하다, 재배하다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Just like humans, <mark>they’re farmers</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 인간과 꼭 마찬가지로, / 그들은 농부들이다.<br>
+            <b>[구문 포인트]</b> [Just like + 명사 (~와 꼭 마찬가지로)] 전치사구. 인간과의 유추(Analogy)를 통해 개미의 농경 정체성을 단정적으로 규정함.<br>
+            <b>[핵심 어휘]</b> farmer (농부), human (인간)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Some of the ants set forth from the nest to find fresh vegetation; <mark>when they find it, they chew off large pieces that they carry back to the nest</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 개미들 중 일부는 서식지로부터 나아간다 / 신선한 초목을 찾기 위해; / 그들이 그것을 찾을 때, / 그들은 커다란 조각들을 물어뜯어 떼어낸다 / 그들이 서식지로 다시 운반하는.<br>
+            <b>[구문 포인트]</b> set forth (나아가다, 출발하다). to find는 목적을 나타내는 to부정사. 세미콜론 뒤 시간부사절 when절 내부의 it은 fresh vegetation(불가산명사)을 지칭함. pieces 뒤의 that은 목적격 관계대명사.<br>
+            <b>[핵심 어휘]</b> set forth (출발하다, 길을 떠나다), vegetation (초목, 식물), chew off (물어뜯어 떼어내다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">However, <mark>the ants don’t eat these leaves</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나, / 그 개미들은 이 잎들을 먹지 않는다.<br>
+            <b>[구문 포인트]</b> 일반적인 통념(개미가 나뭇잎을 먹을 것이라는 예상)을 정면으로 뒤집는 핵심 역접 연결사 However 활용.<br>
+            <b>[핵심 어휘]</b> however (그러나), leaf (나뭇잎, 복수형 leaves)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Instead, <mark>smaller worker ants take the pieces of leaves, chew them into smaller pieces, and use these as fertilizer</mark> to grow fungus in large underground ‘gardens.’</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 대신에, / 더 작은 일개미들이 그 잎 조각들을 가져가고, / 그것들을 더 작은 조각들로 잘게 씹으며, / 이것들을 비료(거름)로 사용한다 / 거대한 지하 '정원'에서 균류를 기르기 위해.<br>
+            <b>[구문 포인트]</b> 앞 문장의 부정문(don't eat) 뒤에 이어지는 Instead(대신에). 주어 smaller worker ants 뒤에 3개의 현재동사 병렬 [take ..., chew ..., and use ...]. to grow는 목적을 나타냄.<br>
+            <b>[핵심 어휘]</b> worker ant (일개미), fertilizer (비료, 거름), fungus (균류, 곰팡이), underground (지하의)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">The ants feed the fungus, and <mark>the fungus blossoms into small fruiting bodies which the ants later eat</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 개미들은 균류를 먹이고, / 그 균류는 작은 자실체(버섯체)로 꽃을 피운다 / 개미들이 나중에 먹는.<br>
+            <b>[구문 포인트]</b> feed(먹이를 주다). blossom into (~으로 활짝 피어나다/결실을 맺다). fruiting bodies(자실체)를 선행사로 받는 목적격 관계대명사 which 절 내부에서 eat의 목적어가 생략됨.<br>
+            <b>[핵심 어휘]</b> feed (먹이를 주다), blossom into (~로 자라나다), fruiting body (자실체, 포자형성체)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Using this successful farming strategy, <mark>the ants build enormous nests underground</mark>, something spanning hundreds of square meters.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 성공적인 농경 전략을 사용하여, / 개미들은 지하에 거대한 서식지를 짓는다, / 수백 제곱미터에 걸쳐 펼쳐지는 (거대한 공간인).<br>
+            <b>[구문 포인트]</b> 문두의 Using은 수단/동시동작의 능동 분사구문. enormous nests underground 뒤의 콤마는 동격으로 이어지며, something 뒤의 현재분사 spanning(타동사로 목적어를 취함)이 후치 수식함.<br>
+            <b>[핵심 어휘]</b> strategy (전략), enormous (거대한), span (걸치다, 포괄하다), square meter (제곱미터)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Just like humans, <mark>they have perfected an agricultural civilization</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 인간과 꼭 마찬가지로, / 그들은 농경 문명을 완성시켰다.<br>
+            <b>[구문 포인트]</b> 2번째 문장(they're farmers)과 수미상관을 이루는 결론. 현재완료(have perfected)를 통해 진화적·생태적 완성도를 강조함.<br>
+            <b>[핵심 어휘]</b> perfect (완성하다), agricultural civilization (농경 문명)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (농부로서의 가위개미 → 나뭇잎 비료화와 균류 재배 → 지하 농경 문명 완성)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[FARMING IDENTITY] 01-03문장</span>
+        <h4>초목 채집과 농경 정체성</h4>
+        <p>수백만 규모의 가위개미는 인간처럼 자급자족하는 농부이며, 채집 개미들이 외부로 나가 신선한 잎을 서식지로 운반함</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[FUNGUS CULTIVATION] 04-06문장</span>
+        <h4>잎을 먹지 않는 균류 재배 과정</h4>
+        <p>잎을 직접 섭취하지 않고 잘게 씹어 거름으로 삼아 지하 정원에서 균류를 재배하며, 균류가 맺는 자실체를 최종 섭취함</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CIVILIZATION SUCCESS] 07-08문장</span>
+        <h4>초대형 서식지와 농경 문명</h4>
+        <p>성공적인 재배 전략을 기반으로 수백 제곱미터 규모의 지하 서식지를 구축함으로써 인간 못지않은 농경 문명을 완성함</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. When they find fresh vegetation, they chew off large pieces [that / what] they carry back to the nest.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사 large pieces가 존재하고 carry의 목적어가 빠진 불완전한 절이므로 목적격 관계대명사 that이 올바릅니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="what은 자체에 선행사를 포함하는 관계대명사이므로 선행사(large pieces)가 있는 자리에는 올 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. The ants build enormous nests underground, something [spanned / spanning] hundreds of square meters.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="뒤에 목적어(hundreds of square meters)가 이어지므로 수동의 과거분사 spanned는 올 수 없습니다.">spanned</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 능동적으로 '수백 제곱미터에 걸쳐 있다'는 의미로 목적어를 취하며 something을 수식하는 현재분사 spanning이 올바릅니다.">spanning</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 변형 1: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        With millions of members in a colony, leaf-cutter ants cultivate their own food. Some ants venture out to bring fresh leaves back to the nest. However, the ants do not consume this foliage directly. Instead, smaller worker ants masticate the plant material into finer fragments to use as fertilizer in extensive subterranean chambers. Through this symbiotic cycle, the ants nourish the mold, and the mold generates edible structures. By relying on this cooperative production system, leaf-cutter ants demonstrate that they ________________________, achieving biological feats comparable to human society.
+      </div>
+      <div class="exam-choices">
+        ① depend strictly on hunting other competing insect colonies<br>
+        ② have perfected a sophisticated form of agricultural civilization<br>
+        ③ adapt to changing weather by relocating their queen constantly<br>
+        ④ consume toxic vegetation to develop natural internal immunity<br>
+        ⑤ destroy the surrounding ecosystem through aggressive defoliation
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 가위개미는 식물을 직접 먹지 않고 잘게 씹어 거름으로 활용해 균류를 재배하며, 이를 바탕으로 거대한 지하 서식지를 구축합니다. 글의 결론부에 명시된 것처럼 인간과 마찬가지로 정교한 농경 문명을 완성했다(have perfected an agricultural civilization)는 내용의 ②번이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 글]</b><br>
+        With millions of members in a colony, leaf­cutter ants cultivate their own food. Just like humans, they’re farmers. Some of the ants set forth from the nest to find fresh vegetation.<br><br>
+        <b>(A)</b> The ants feed the fungus, and the fungus blossoms into small fruiting bodies which the ants later eat. Using this farming strategy, they build enormous nests underground, spanning hundreds of square meters.<br>
+        <b>(B)</b> When they find it, they chew off large pieces that they carry back to the nest. However, the ants don’t eat these leaves.<br>
+        <b>(C)</b> Instead, smaller worker ants take the pieces of leaves, chew them into smaller pieces, and use these as fertilizer to grow fungus in large underground ‘gardens.’ Just like humans, they have perfected an agricultural civilization.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (B) - (C) - (A)</b><br>
+          <b>해설:</b> 주어진 글에서 신선한 초목을 찾으러 나선다는 내용에 이어, (B)에서 초목을 발견하여 잎을 잘라 운반하지만 잎을 먹지 않는다는 반전(However, the ants don’t eat these leaves)이 옵니다. 그 뒤 (C)에서 Instead(그 대신에)로 연결되며 소형 일개미들이 잎을 씹어 균류의 비료로 쓴다는 설명이 나오고, (A)에서 균류가 자실체를 맺어 개미가 이를 먹고 거대한 서식지를 구축해 문명을 완성한다는 흐름으로 완결되는 (B) - (C) - (A)가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 3: 문맥상 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 3] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        With millions of members in a colony, leaf-cutter ants cultivate their own food. Some of the ants set forth from the nest to find fresh vegetation; when they find it, they chew off large pieces that they carry back to the nest. However, the ants ① <u>refuse</u> to eat these leaves directly. Instead, smaller worker ants chew them into smaller pieces and use these as ② <u>fertilizer</u> to grow fungus in underground chambers. The ants feed the fungus, and the fungus develops into fruiting bodies which the ants later consume. Using this ③ <u>inefficient</u> farming strategy, the ants build ④ <u>enormous</u> nests underground, demonstrating that they have perfected an agricultural system.
+      </div>
+      <div class="exam-choices">
+        ① refuse &nbsp;&nbsp;&nbsp; ② fertilizer &nbsp;&nbsp;&nbsp; ③ inefficient &nbsp;&nbsp;&nbsp; ④ enormous
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ inefficient → successful</b><br>
+          <b>해설:</b> 가위개미는 이러한 농경 전략을 통해 수백 제곱미터에 달하는 거대한 지하 서식지를 구축하고 수백만 마리의 군집을 유지하므로, 농경 전략은 '비효율적인(inefficient)' 것이 아니라 '성공적인(successful)' 것이어야 문맥상 올바릅니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [서술형] 다음 우리말 조건에 맞추어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. [우리말]: "그 균류는 개미들이 나중에 먹는 작은 자실체로 피어난다."<br>
+        2. 목적격 관계대명사 which를 사용할 것.<br>
+        3. 보기의 단어만을 모두 한 번씩 사용하여 영작할 것 (어형 변화 없음).<br>
+        <b>[보기]</b><br>
+        [ blossoms / which / into / later eat / fruiting bodies / small / the ants / the fungus ]
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: the fungus blossoms into small fruiting bodies which the ants later eat</b><br>
+          <b>해설:</b> 주어 [the fungus] 뒤에 동사구 [blossoms into small fruiting bodies]가 위치하고, 선행사를 수식하는 목적격 관계대명사절 [which the ants later eat]을 올바르게 결합한 핵심 문장 영작입니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
