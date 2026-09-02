@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 29번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 29번 · 어법</div>
+    <h1 class="title">Capitalism, Nature, and Frontiers:<br><span>The Relentless Quest for Cheapness</span></h1>
+    <p class="header-lead">자본주의는 값싼 자연과 노동의 새로운 개척지를 끊임없이 착취하며 유지된다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 생태 마르크스주의와 값싼 자연(Cheap Nature) — 자본주의는 화폐 교환 경제(Cash Nexus) 자체만으로 작동하지 않으며, 외부에 존재하는 공짜나 다름없는 자원, 에너지, 식량, 노동을 수탈함으로써 유지된다는 정치경제학적 관점.</li>
+        <li><b>[배경 맥락]:</b> 기존 영토 내에서 노동자의 임금 인상 요구, 에너지 고갈, 기후 변화에 따른 농작물 수확 감소로 생산 비용이 폭증하자, 자본주의는 이 비용 상승의 위기를 돌파하기 위해 아직 수탈되지 않은 '새로운 개척지(Frontiers)'를 끊임없이 침탈함.</li>
+        <li><b>[논리 요약]:</b> 화폐 경제 내부의 재생산 비용 상승과 생태적 한계는 위기를 초래하므로, 자본주의 체제는 인간과 자연의 값싼 노동력을 강제로 탈취할 수 있는 새로운 개척지를 필사적으로 필요로 한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Capitalism is not a system where cash is everywhere but rather one in which islands of cash exchange exist within oceans of cheap ― or potentially cheap ― natures. Reproducing life within the cash nexus is expensive, and it grows more expensive over time. Workers’ wages can be frozen, even rolled back, but in the end inequality leads to crises of the kind we’ve recently seen bring about populist protests in the United States and the United Kingdom. Workers demand dignity, and their labor becomes expensive. Production processes burn through an island, and energy is no longer cheap. The climate changes, and crops can no longer grow as abundantly as they once did. Frontiers are so important in these processes because they offer places where the new cheap things can be seized ― and the cheap work of humans and other natures can be forcefully taken.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 자본주의는 화폐 영역 내부의 비용 상승과 생태적 고갈 위기를 극복하기 위해, 새로운 개척지에서 값싼 자연과 인간의 노동력을 지속적으로 강탈해야만 존속할 수 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Capitalism is not a system where cash is everywhere but rather <mark>one in which islands of cash exchange exist within oceans of cheap ― or potentially cheap ― natures</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 자본주의는 현금이 어디에나 있는 시스템이 아니라 / 오히려 하나의 시스템이다 / 값싸거나 잠재적으로 값싼 자연이라는 대양 안에 / 현금 교환이라는 섬들이 존재하는.<br>
+            <b>[구문 포인트]</b> <b>not A but rather B</b>(A가 아니라 오히려 B) 구문이며, 대명사 <b>one</b>은 앞선 a system을 받습니다. 완전한 절을 이끄는 <b>in which</b>(전치사+관계대명사)가 one을 수식하고 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>capitalism</b> 자본주의 | <b>cash nexus</b> 화폐 관계 | <b>potentially</b> 잠재적으로
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en"><mark>Reproducing life within the cash nexus</mark> is expensive, and it grows more expensive over time.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 화폐 관계 안에서 삶을 재생산하는 것은 비용이 많이 들며, / 시간이 지남에 따라 점점 더 비싸진다.<br>
+            <b>[구문 포인트]</b> 동명사구 <b>Reproducing life within the cash nexus</b>가 주어로 쓰여 단수 동사 <b>is</b>와 일치하며, 대명사 <b>it</b>은 삶을 재생산하는 행위를 지칭합니다.<br>
+            <b>[핵심 어휘]</b> <b>reproduce</b> 재생산하다 | <b>nexus</b> 관계, 결속 | <b>over time</b> 시간이 흐르면서
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Workers’ wages can be frozen, even rolled back, but in the end inequality <mark>leads to crises of the kind we’ve recently seen bring about populist protests</mark> in the United States and the United Kingdom.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 노동자들의 임금은 동결되거나 심지어 삭감될 수 있지만, / 결국 불평등은 위기로 이어진다 / 우리가 최근 목격했던 종류의 / 미국과 영국에서 포퓰리즘 시위를 유발한.<br>
+            <b>[구문 포인트]</b> 조동사 수동태 병렬 <b>can be frozen, even (be) rolled back</b>이 쓰였으며, 목적격 관계대명사가 생략된 절 내의 지각동사 <b>seen</b> 뒤에 원형부정사 <b>bring about</b>이 목적격보어로 연결되어 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>freeze</b> 동결하다 | <b>roll back</b> 되돌리다, 삭감하다 | <b>populist</b> 포퓰리즘의, 대중영합적인 | <b>protest</b> 항의, 시위
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Workers demand dignity, and <mark>their labor becomes expensive</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 노동자들은 존엄성을 요구하고, / 그들의 노동은 비싸진다.<br>
+            <b>[구문 포인트]</b> 2형식 불완전자동사 <b>becomes</b> 뒤에 주격보어로 형용사 <b>expensive</b>가 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>dignity</b> 존엄, 존엄성 | <b>labor</b> 노동
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Production processes burn through an island, and <mark>energy is no longer cheap</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 생산 공정은 하나의 섬을 다 써버리고, / 에너지는 더 이상 저렴하지 않다.<br>
+            <b>[구문 포인트]</b> <b>burn through</b>는 자원이나 돈을 '다 써버리다, 소진하다'라는 의미의 구동사이며, <b>no longer</b>(더 이상 ~않는)가 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>burn through</b> 소진하다, 탕진하다 | <b>no longer</b> 더 이상 ~아닌
+          </div>
+        </details>
+      </div>
+
+      <!-- S6 -->
+      <div class="chunk-item">
+        <p class="chunk-en">The climate changes, and <mark>crops can no longer grow as abundantly as they once did</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 기후가 변화하고, / 농작물은 더 이상 과거에 그랬던 것만큼 풍성하게 자라지 못한다.<br>
+            <b>[구문 포인트]</b> 동등비교 <b>as abundantly as</b>에서 동사 grow를 수식하므로 부사 <b>abundantly</b>가 쓰였으며, <b>did</b>는 앞의 일반동사 grew를 대신하는 대동사입니다.<br>
+            <b>[핵심 어휘]</b> <b>abundantly</b> 풍부하게 | <b>crop</b> 농작물
+          </div>
+        </details>
+      </div>
+
+      <!-- S7 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Frontiers are so important in these processes <mark>because they offer places where the new cheap things can be seized</mark> ― and the cheap work of humans and other natures <mark>can be forcefully taken</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 개척지는 이러한 과정에서 대단히 중요하다 / 왜냐하면 그것들이 새로운 값싼 것들이 포획될 수 있는 장소들을 제공하기 때문이다 / 그리고 인간과 여타 자연의 값싼 노동이 강제로 탈취될 수 있는.<br>
+            <b>[구문 포인트]</b> 관계부사 <b>where</b>가 선행사 places를 수식하며, 뒤이어 두 개의 수동태 구조(<b>can be seized</b>, <b>can be forcefully taken</b>)가 대시(―)로 이어져 대등하게 연결되어 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>frontier</b> 개척지, 미개척 영역 | <b>seize</b> 붙잡다, 포획하다 | <b>forcefully</b> 강제로, 강력하게
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (자본주의의 본질 규정 → 화폐권 내부의 비용 폭증과 위기 → 개척지 강탈의 필연성)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PREMISE] 생태정치경제적 규정</span>
+        <h4>값싼 자연의 바다와 현금의 섬</h4>
+        <p>자본주의는 모든 곳에 화폐가 존재하는 체제가 아니다. 본질적으로 자본주의는 광대한 '값싼 자연'이라는 대양에 둘러싸인 '현금 교환의 섬'에 불과하며, 외부의 값싼 자원에 절대적으로 의존한다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[CRISIS] 내부 비용 상승과 한계</span>
+        <h4>노동의 존엄성과 생태적 고갈</h4>
+        <p>화폐 경제 내부의 삶의 재생산 비용은 점점 비싸진다. 임금 삭감은 정치적 위기와 포퓰리즘 시위를 부르고, 노동과 에너지는 더 이상 싸지 않으며, 기후 변화로 농작물 수확마저 감소한다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[RESOLUTION] 개척지의 역할</span>
+        <h4>새로운 값싼 자연과 노동의 강탈</h4>
+        <p>내부의 자원 고갈과 비용 폭증을 해결하기 위해 자본주의는 외부 개척지(Frontiers)로 눈을 돌린다. 새로운 개척지에서 값싼 자원을 포획하고 인간과 자연의 노동력을 강제로 탈취함으로써 체제를 연명한다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> The climate changes, and crops can no longer grow as [abundant / abundantly] as they once did.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! grow는 여기에서 2형식 연결동사가 아니라 '자라다'라는 의미의 1형식 완전자동사로 쓰였으므로 형용사 보어가 아닌 부사가 수식해야 합니다.">abundant</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 1형식 완전자동사 grow를 수식하는 동등비교 구문이므로 부사 'abundantly'가 올바릅니다.">abundantly</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> Frontiers are so important in these processes because they offer places [which / where] the new cheap things can be seized.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒷문장(the new cheap things can be seized)이 수동태로 이루어진 완전한 절이므로 불완전절을 이끄는 관계대명사 which는 올 수 없습니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 선행사 places 뒤에 주어와 수동태 술어를 온전히 갖춘 완전한 절이 이어지므로 관계부사 'where'가 정확합니다.">where</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        Capitalism is not a system where cash is everywhere but rather one in which islands of cash exchange exist within oceans of cheap natures. Reproducing life within the cash nexus is <b>① expensive</b>, and it grows more costly over time. Workers' wages can be rolled back, but in the end inequality leads to crises. Workers demand dignity, and their labor becomes costly. Production processes burn through an island, and energy is <b>② no longer</b> cheap. The climate changes, and crops can no longer grow as <b>③ abundantly</b> as they once did. Frontiers are so <b>④ negligible</b> in these processes because they offer places where the new cheap things can be <b>⑤ seized</b> ― and the cheap work of humans and other natures can be forcefully taken.
+      </div>
+      <div class="exam-choices">
+        ① expensive &nbsp;&nbsp;&nbsp;&nbsp; ② no longer &nbsp;&nbsp;&nbsp;&nbsp; ③ abundantly &nbsp;&nbsp;&nbsp;&nbsp; ④ negligible &nbsp;&nbsp;&nbsp;&nbsp; ⑤ seized
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (negligible → important 또는 crucial)</b><br>
+          <b>해설:</b> 화폐 경제 내부에서 노동, 에너지, 식량 등 삶의 재생산 비용이 폭증하고 자원이 고갈될 때, 자본주의는 외부로부터 새로운 값싼 것들을 강탈해야만 존속할 수 있다. 따라서 이러한 수탈의 공간을 제공하는 개척지(Frontiers)는 무시할 수 있는(negligible) 것이 아니라 대단히 결정적이고 중요하다(important).
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Under capitalism, the internal costs of sustaining life and production tend to escalate inexorably. As laborers resist exploitation and demand dignity, and as domestic resources and stable climates are exhausted, commodities become increasingly expensive. To prevent profitability from collapsing under these mounting internal burdens, the system cannot rely solely on its existing monetary networks. Instead, capitalism fundamentally depends on ____________________________________. Through this external expansion, the economic machine secures the vital low-cost inputs necessary to overcome its domestic exhaustion.
+      </div>
+      <div class="exam-choices">
+        ① establishing a completely equitable distribution of wealth among workers<br>
+        ② expanding into external frontiers to aggressively appropriate cheap resources<br>
+        ③ transitioning from fossil-fuel reliance to entirely self-sufficient local agriculture<br>
+        ④ abolishing the cash nexus in favor of communal non-monetary trade<br>
+        ⑤ strictly regulating industrial production to protect pristine ecosystems
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 자본주의 체제 내부에서 임금 인상, 자원 고갈, 기후 변화로 인해 생산 비용이 상승할 때, 체제는 새로운 개척지(Frontiers)를 찾아 그곳에서 값싼 자연과 인간의 노동력을 강제로 탈취함으로써 위기를 해결한다는 것이 글의 핵심이다. 따라서 빈칸에는 ②번(값싼 자원을 공격적으로 수탈하기 위해 외부 개척지로 확장하는 것)이 가장 적절하다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Capitalism is not a system where cash is everywhere but rather one in which islands of cash exchange exist within oceans of cheap ― or potentially cheap ― natures.<br><br>
+        (A) Frontiers are so important in these processes because they offer places where the new cheap things can be seized ― and the cheap work of humans and other natures can be forcefully taken.<br>
+        (B) Reproducing life within the cash nexus is expensive, and it grows more expensive over time. Workers’ wages can be frozen, even rolled back, but in the end inequality leads to crises of the kind we’ve recently seen bring about populist protests.<br>
+        (C) Workers demand dignity, and their labor becomes expensive. Production processes burn through an island, and energy is no longer cheap. The climate changes, and crops can no longer grow as abundantly as they once did.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 글에서 자본주의가 값싼 자연의 바다에 둘러싸인 화폐의 섬이라는 정의를 내린 후, (B)에서 화폐 관계 내부의 삶의 재생산 비용 증가와 노동자 임금 억제가 낳는 위기를 설명한다. 이어 (C)에서 노동, 에너지, 농작물 등 모든 생산 요소가 비싸지고 고갈되는 구체적 메커니즘을 상술한 다음, (A)에서 이 모든 과정(these processes) 때문에 외부의 새로운 값싼 것을 강탈할 개척지(Frontiers)가 필수적이라는 최종 결론으로 매끄럽게 이어진다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "개척지는 새로운 값싼 것들이 포획될 수 있는 장소들을 제공하기 때문에 이러한 과정에서 대단히 중요하다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 아래 제시된 단어들을 모두 한 번씩 변형 없이 사용할 것.<br>
+        [ in these processes / Frontiers / they offer places / where / are so important / can be seized / because / the new cheap things ]<br>
+        2. 어형 변화 없이 어순 배열만 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>Frontiers are so important in these processes because they offer places where the new cheap things can be seized.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 주절: 주어(Frontiers) + 술어(are so important) + 전치사구(in these processes)를 바르게 구성했는가?<br>
+          - 이유 부사절: 접속사(because) + 주어(they) + 동사(offer) + 목적어(places) 뒤에 관계부사절(where the new cheap things can be seized)이 선행사 places를 정확히 수식하는 어순을 완성해야 정답 처리됨.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
