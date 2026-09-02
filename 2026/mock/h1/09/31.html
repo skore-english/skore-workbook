@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 9월 학평 31번 워크북 | 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 전국연합학력평가 (2026년 09월)</span>
+    </div>
+    <div class="meta-badge">09월 학평 31번 · 빈칸 추론</div>
+    <h1 class="title">Social Nature of Taste<br><span>Food Identity and Conformity</span></h1>
+    <p class="header-lead">음식 취향은 고유한 특성보다 사회적 관계와 정체성에 의해 결정된다</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 취향의 사회적 구성(Social Construction of Taste) 및 사회적 구별짓기(Social Differentiation)</li>
+        <li><b>[배경 맥락]:</b> 음식 취향은 음식 자체의 물리적 맛이나 질보다 주변 인간관계, 소속 집단, 그리고 '내가 누구인가'를 규정하는 정체성 욕구에 의해 전파됨</li>
+        <li><b>[논리 요약]:</b> 개인의 입맛은 유아기부터 주변인들과의 상호작용 속에서 바이러스처럼 확산되며, 타인의 소비 방식을 비판적으로 관찰하고 동조하거나 회피하면서 형성됨</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Our tastes are social. Even when you first drank milk, there was the milk, yes, but there was also the person behind the milk who will have presumably either made or messed up your relationship with food for the couple of decades after that. We learn to eat from our families and friends, at school and in work. A village develops a particular recipe for an apple pie ― one that nobody outside the village likes, but who cares? We want these things not just because of what they are, but who we are. Tastes spread like this, person to person, like viruses, almost irrespective of the qualities of the food involved. We observe other people in their food lives, often judgmentally. Nothing turns me off something quicker than the wrong people liking it, by which I mean people almost identical to me in every respect, in a way that doesn’t flatter me. I avoided the viral chopped salad moment of 2024 by the skin of my teeth.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 우리의 음식 취향은 음식 자체의 객관적 속성이 아니라, 타인과의 사회적 관계, 집단적 정체성, 그리고 타인을 향한 평가적 태도에 의해 형성되고 바이러스처럼 전파된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>Our tastes are social</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리의 취향은 사회적이다.<br>
+            <b>[구문 포인트]</b> 2형식 단문 구조로, 글 전체의 핵심 대전제(Main Thesis)를 첫 문장에서 명료하게 선언함.<br>
+            <b>[핵심 어휘]</b> taste (취향, 입맛), social (사회적인)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Even when you first drank milk, there was the milk, yes, but there was also <mark>the person behind the milk who will have presumably either made or messed up your relationship with food</mark> for the couple of decades after that.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 여러분이 처음 우유를 마셨을 때조차, / 우유가 존재했다, 맞다, / 그러나 우유 뒤에 있는 사람 또한 존재했다 / 아마도 음식과의 관계를 형성해 주었거나 망쳐 놓았을 / 그 후 수십 년 동안.<br>
+            <b>[구문 포인트]</b> the person을 선행사로 받는 주격 관계대명사 who절 내부에서 [will have p.p.(과거 사실에 대한 현재의 강한 추측)]와 상관접속사 [either A or B (either made or messed up)]가 결합됨.<br>
+            <b>[핵심 어휘]</b> presumably (아마도, 짐작건대), mess up (~을 망치다), couple of decades (20~30년, 수십 년)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">We learn to eat from our families and friends, <mark>at school and in work</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 먹는 법을 배운다 / 우리의 가족과 친구들로부터, / 학교에서 그리고 직장에서.<br>
+            <b>[구문 포인트]</b> learn의 목적어로 to부정사(to eat)가 쓰였으며, 전치사구 [from ...]와 장소 부사구 [at school and in work]가 병렬로 이어져 음식 섭취가 사회적 학습임을 뒷받침함.<br>
+            <b>[핵심 어휘]</b> learn to-v (~하는 법을 배우다), in work (직장에서, 일터에서)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">A village develops a particular recipe for an apple pie ― <mark>one that nobody outside the village likes</mark>, but who cares?</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 어떤 마을은 사과파이에 대한 특정한 조리법을 개발한다 / 마을 밖의 누구도 좋아하지 않는 조리법인, / 하지만 누가 신경 쓰겠는가?<br>
+            <b>[구문 포인트]</b> 대시(―) 뒤의 부정대명사 one은 a particular recipe와 동격을 이루며, 목적격 관계대명사 that절(that nobody outside the village likes)의 수식을 받음. 수사의문문 'who cares?'는 '아무도 신경 쓰지 않는다'를 강조함.<br>
+            <b>[핵심 어휘]</b> recipe (조리법), outside (~의 외부에), who cares (누가 상관하겠는가)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">We want these things <mark>not just because of what they are, but who we are</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 이러한 것들을 원한다 / 단지 그것들이 무엇인가 때문만이 아니라, / 우리가 누구인가 때문에.<br>
+            <b>[구문 포인트]</b> 상관접속사 [not just A but B] 구문. 전치사 because of의 목적어로 간접의문문/관계대명사절 [what they are (대상의 본질/속성)]와 [who we are (우리의 정체성)]가 강력한 대조를 이룸.<br>
+            <b>[핵심 어휘]</b> because of (~ 때문에), identity (정체성)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Tastes spread like this, person to person, like viruses, <mark>almost irrespective of the qualities of the food involved</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 취향은 이처럼 퍼져 나간다, / 사람에서 사람으로, / 바이러스처럼, / 관련된 음식의 질과는 거의 무관하게.<br>
+            <b>[구문 포인트]</b> irrespective of (~와 무관하게) 전치사구. involved는 명사 the food를 뒤에서 수식하는 과거분사(후치수식) 형용사로 쓰임.<br>
+            <b>[핵심 어휘]</b> spread (퍼지다, 확산되다), irrespective of (~와 상관없이), involved (관련된)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">We observe other people in their food lives, <mark>often judgmentally</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 사람들의 음식 생활 속에서 다른 사람들을 관찰한다, / 종종 비판적/판단적으로.<br>
+            <b>[구문 포인트]</b> 부사 judgmentally가 동사 observe를 수식하며, 음식이 단순한 영양 섭취가 아닌 타인을 평가하고 규정하는 사회적 잣대임을 드러냄.<br>
+            <b>[핵심 어휘]</b> observe (관찰하다), judgmentally (비판적으로, 판단하듯이)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>Nothing turns me off something quicker than the wrong people liking it</mark>, by which I mean people almost identical to me in every respect, in a way that doesn’t flatter me.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그 어떤 것도 나로 하여금 무언가에 대한 흥미를 더 빠르게 잃게 만들지 않는다 / 어울리지 않는 사람들이 그것을 좋아하는 것보다, / 그런데 그 어울리지 않는 사람들이란 / 모든 면에서 나와 거의 똑같은 사람들을 의미한다, / 나를 돋보이게 하지 않는 방식으로.<br>
+            <b>[구문 포인트]</b> 부정주어(Nothing) + 비교급(quicker than)을 통한 최상급 의미 구현. turn A off B는 'A의 흥미를 떨어뜨리다'. than 뒤의 동명사구(liking it)의 의미상의 주어가 the wrong people임. [, by which I mean]은 관계사절로 직전 어구를 상술함.<br>
+            <b>[핵심 어휘]</b> turn off (흥미를 잃게 하다, 정떨어지게 하다), identical (동일한), flatter (돋보이게 하다, 치켜세우다)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">I avoided the viral chopped salad moment of 2024 <mark>by the skin of my teeth</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 나는 2024년의 입소문 난 찹샐러드 유행의 순간을 / 가까스로 모면했다.<br>
+            <b>[구문 포인트]</b> by the skin of one's teeth는 '가까스로, 간신히(barely)'를 뜻하는 관용적 표현으로, 유행에 무비판적으로 휩쓸리지 않으려는 작성자의 태도를 재치 있게 표현함.<br>
+            <b>[핵심 어휘]</b> viral (바이러스성의, 입소문 난), by the skin of one's teeth (가까스로, 간신히)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (취향의 사회적 본질 → 정체성 기반 전파 → 구별짓기와 유행 회피)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[SOCIAL ORIGIN] 01-03문장</span>
+        <h4>취향의 사회적 형성</h4>
+        <p>유아기 수유 경험부터 가족, 친구, 학교에 이르기까지 음식 취향은 타인과의 관계를 통해 학습되고 각인됨</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[IDENTITY & SPREAD] 04-06문장</span>
+        <h4>음식 품질보다 앞서는 정체성</h4>
+        <p>마을 고유의 파이처럼 음식 자체의 물리적 맛이 아니라 '우리가 누구인가'라는 정체성 욕구가 바이러스처럼 취향을 전파함</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[DIFFERENTIATION] 07-09문장</span>
+        <h4>타인에 대한 평가와 유행 거부</h4>
+        <p>타인의 식생활을 판단하며 바라보고, 자신을 돋보이게 하지 않는 집단과의 동일시를 피하기 위해 유행 음식마저 거부함</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. We want these things not just because of what they are, but [because / because of] who we are.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="뒤에 주어+동사를 갖춘 완전한 절이 아닌, 명사절(who we are)이 목적어로 이어지므로 접속사 because는 올 수 없습니다.">because</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞선 'because of what they are'와 병렬을 이루며 명사절 who we are를 목적어로 취하는 전치사구 because of가 올바릅니다.">because of</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. Nothing turns me off something quicker than the wrong people [like / liking] it.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="접속사/전치사 than 뒤에서 전치사적 목적어로 동명사구가 와야 하며, 동사원형 like는 올 수 없습니다.">like</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 'the wrong people'을 의미상의 주어로 취하는 동명사 liking이 올바른 어법입니다.">liking</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 변형 1: 문맥상 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Our tastes are social. Even when you first drank milk, there was also the person behind the milk who shaped your relationship with food. We learn to eat from our families and friends. A village develops a particular recipe for an apple pie ― one that nobody outside the village likes, but who cares? We want these things not just because of what they are, but who we are. Tastes spread like this, person to person, like viruses, almost ① <u>irrespective</u> of the qualities of the food involved. We observe other people in their food lives, often ② <u>judgmentally</u>. Nothing turns me off something quicker than the ③ <u>wrong</u> people liking it, by which I mean people almost identical to me in a way that doesn’t flatter me. In this sense, individual taste is largely an outcome of social ④ <u>isolation</u>, as our culinary preferences continuously reflect how we want to be seen by others.
+      </div>
+      <div class="exam-choices">
+        ① irrespective &nbsp;&nbsp;&nbsp; ② judgmentally &nbsp;&nbsp;&nbsp; ③ wrong &nbsp;&nbsp;&nbsp; ④ isolation
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ isolation → interaction / conformity / connection</b><br>
+          <b>해설:</b> 글의 핵심 논지는 개인의 음식 취향이 홀로 고립되어 형성되는 것이 아니라, 가족, 친구, 마을 사람들 등 타인과의 사회적 관계 및 상호작용(social interaction)을 통해 바이러스처럼 퍼진다는 것입니다. 따라서 ④의 isolation(고립)은 글의 주제와 정면으로 배치되므로 적절하지 않습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 2: 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 글]</b><br>
+        Our tastes are social. Even when you first drank milk, there was the milk, yes, but there was also the person behind the milk who will have presumably either made or messed up your relationship with food for decades.<br><br>
+        <b>(A)</b> Tastes spread like this, person to person, like viruses, almost irrespective of the qualities of the food involved. We observe other people in their food lives, often judgmentally.<br>
+        <b>(B)</b> Nothing turns me off something quicker than the wrong people liking it, by which I mean people almost identical to me in a way that doesn’t flatter me. I avoided the viral chopped salad moment of 2024 by the skin of my teeth.<br>
+        <b>(C)</b> We learn to eat from our families and friends, at school and in work. A village develops a particular recipe for an apple pie ― one that nobody outside the village likes. We want these things not just because of what they are, but who we are.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (C) - (A) - (B)</b><br>
+          <b>해설:</b> 주어진 글에서 우유를 먹여준 양육자와의 관계를 제시한 후, (C)에서 가족, 친구, 마을의 애플파이 사례를 들며 '우리가 누구인가(who we are)'라는 사회적 정체성 학습으로 논의를 확장합니다. 이어 (A)에서 'Tastes spread like this(취향은 이처럼 퍼진다)'로 받으며 음식의 질과 무관한 바이러스 같은 확산과 타인에 대한 평가적 관찰을 언급합니다. 마지막으로 (B)에서 타인의 취향에 반발하여 유행을 거부하는 개인적 일화로 매듭짓는 (C) - (A) - (B) 전개가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        We want these things not just because of what they are, but who we are.<br><br>
+        Our tastes are social. Even when you first drank milk, there was the milk, yes, but there was also the person behind the milk who shaped your food habits. ( ① ) We learn to eat from our families and friends, at school and in work. ( ② ) A village develops a particular recipe for an apple pie ― one that nobody outside the village likes, but who cares? ( ③ ) Tastes spread like this, person to person, like viruses, almost irrespective of the qualities of the food involved. ( ④ ) We observe other people in their food lives, often judgmentally. ( ⑤ ) Nothing turns me off something quicker than the wrong people liking it, by which I mean people almost identical to me in every respect.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 문장의 'these things'는 바로 앞 문장(② 뒤)에 나온 '마을 외부 사람들은 좋아하지 않는 그 마을만의 사과파이'를 가리킵니다. 마을 사람들이 그 파이를 원하는 이유는 음식 자체의 맛(what they are) 때문이 아니라 자신들의 정체성(who we are) 때문이라는 설명이 이어진 후, ③ 뒤의 '취향은 이처럼(like this) 음식의 질과 상관없이 퍼져 나간다'는 문장으로 긴밀하게 연결됩니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [서술형] 다음 우리말 조건에 맞추어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. [우리말]: "취향은 관련된 음식의 질과는 거의 상관없이, 사람에서 사람으로 바이러스처럼 이와 같이 퍼져 나간다."<br>
+        2. 보기의 단어만을 모두 한 번씩 사용하여 영작할 것 (어형 변화 없음).<br>
+        <b>[보기]</b><br>
+        [ irrespective of / person to person, / like viruses, / Tastes / of the food / spread / like this, / the qualities / almost / involved ]
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: Tastes spread like this, person to person, like viruses, almost irrespective of the qualities of the food involved</b><br>
+          <b>해설:</b> 주어와 자동사 [Tastes spread] 뒤에 방식 부사구 [like this, person to person, like viruses]가 병렬 나열되고, 전치사구 [almost irrespective of] 뒤에 명사구 [the qualities of the food]와 이를 후치 수식하는 과거분사 [involved]를 올바르게 결합하는 문장입니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
