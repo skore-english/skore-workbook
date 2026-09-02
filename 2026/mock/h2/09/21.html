@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 21번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 21번 · 함축의미 추론</div>
+    <h1 class="title">Flexible Meetings as Trees:<br><span>Organic Growth Over Rigidity</span></h1>
+    <p class="header-lead">유연한 시간 문화권의 회의는 상록수처럼 예측 불가능하게 유기적으로 뻗어나간다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 다중 시간 문화(Polychronic / Flexible-time Culture) — 시간 엄수와 직선적 계획보다 관계의 상호작용과 상황적 유연성을 최우선으로 두는 문화적 양식.</li>
+        <li><b>[배경 맥락]:</b> 고정된 일정표(Agenda)를 반드시 기계적으로 따라야 생산적이라고 보는 서구식 단일 시간(Monochronic) 관점과 달리, 남미·중동·남유럽 등에서는 돌발 상황과 즉각적인 우선순위 대응을 자연스럽고 필수적인 생산성의 원천으로 간주함.</li>
+        <li><b>[논리 요약]:</b> 회의 안건(나무의 줄기)은 시작점일 뿐이며, 논의는 상록수처럼 수많은 가지(우선순위 변화, 소모임 토의, 급한 통화 등)로 뻗어 나가므로, 리더의 적응력과 유연한 기회 활용이 생산성의 핵심이다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      A meeting in a flexible-time culture like those found in South America, parts of Europe, Africa, and the Middle East is more like an evergreen tree. An agenda with a meeting start time and a topic will probably be circulated before the meeting. This will serve as the trunk of the tree. But there’s no expectation that the meeting will progress in a linear manner. What seemed like a priority last week when the agenda was crafted is not necessarily the priority right now ― so discussion may branch off in a new direction. Other branches may sprout as some members have urgent phone calls that take them in and out of the meeting. Or sub-groups may form within the room to discuss timely subjects linked in some way to the main meeting trunk. In flexible-time cultures, it seems clear that the most productive meetings grow in unpredictable ways, and the effective manager is flexible and professional enough to capitalize on priorities and changing needs as they arise. Interruptions, agenda changes, and frequent shifts in direction are seen as natural and necessary.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 유연한 시간 문화권의 회의는 미리 정해진 안건에 얽매이지 않고 상록수의 가지처럼 예측 불가능하게 발전하며, 관리자는 이러한 즉각적 변화를 유연하게 활용해야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">A meeting in a flexible-time culture like those found in South America, parts of Europe, Africa, and the Middle East is <mark>more like an evergreen tree</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 유연한 시간 문화에서의 회의는 / 남미, 유럽의 일부, 아프리카, 중동에서 발견되는 것들과 같은 / 오히려 상록수와 더 유사하다.<br>
+            <b>[구문 포인트]</b> 복수 대명사 <b>those</b>는 앞선 cultures를 지칭하며, 과거분사구 <b>found in ~</b>가 수식합니다.<br>
+            <b>[핵심 어휘]</b> <b>flexible-time</b> 유연한 시간의 | <b>evergreen tree</b> 상록수
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en">An agenda with a meeting start time and a topic <mark>will probably be circulated</mark> before the meeting.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 회의 시작 시간과 주제가 담긴 안건은 / 회의 전에 배포될 것이다.<br>
+            <b>[구문 포인트]</b> 주어 An agenda에 대해 <b>will be circulated</b>(수동태)가 쓰여 안건이 공람·배포됨을 나타냅니다.<br>
+            <b>[핵심 어휘]</b> <b>agenda</b> 회의 안건, 의제 | <b>circulate</b> 배포하다, 순환시키다
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en">This will <mark>serve as the trunk</mark> of the tree.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것은 / 그 나무의 줄기 역할을 할 것이다.<br>
+            <b>[구문 포인트]</b> <b>serve as</b>(~의 역할을 하다)는 회의의 기본 안건을 상록수의 주 기둥(trunk)에 비유하고 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>serve as</b> ~로서 기능하다 | <b>trunk</b> (나무의) 줄기, 몸통
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">But there’s no expectation <mark>that the meeting will progress in a linear manner</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 어떠한 기대도 없다 / 회의가 직선적인 방식으로 진행될 것이라는.<br>
+            <b>[구문 포인트]</b> <b>that</b>은 추상명사 expectation을 설명하는 <b>동격 접속사</b>로 뒤에 완전한 절이 이어집니다.<br>
+            <b>[핵심 어휘]</b> <b>linear</b> 직선의, 순차적인 | <b>progress</b> 진행되다
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">What seemed like a priority last week when the agenda was crafted <mark>is not necessarily the priority right now</mark> ― so discussion may branch off in a new direction.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 지난주에 우선순위처럼 보였던 것이 / 안건이 작성되었을 때 / 지금 당장 반드시 우선순위인 것은 아니다 / 그래서 논의는 새로운 방향으로 갈라져 나갈 수 있다.<br>
+            <b>[구문 포인트]</b> <b>What</b>이 이끄는 선행사를 포함한 관계대명사절이 문장의 주어로 쓰여 단수동사 <b>is</b>와 일치하며, <b>not necessarily</b>(부분부정: 반드시 ~인 것은 아니다)를 형성합니다.<br>
+            <b>[핵심 어휘]</b> <b>priority</b> 우선순위 | <b>craft</b> 공들여 만들다 | <b>branch off</b> 갈라지다
+          </div>
+        </details>
+      </div>
+
+      <!-- S6 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Other branches may sprout as some members have urgent phone calls <mark>that take them in and out</mark> of the meeting.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 또 다른 가지들이 돋아날 수 있다 / 몇몇 구성원들이 긴급한 전화를 받음에 따라 / 그들을 회의장 안팎으로 들락거리게 만드는.<br>
+            <b>[구문 포인트]</b> 주격 관계대명사 <b>that</b>이 선행사 urgent phone calls를 수식하며, 동사 take가 복수로 수일치되었습니다.<br>
+            <b>[핵심 어휘]</b> <b>sprout</b> 싹이 트다, 생겨나다 | <b>urgent</b> 긴급한
+          </div>
+        </details>
+      </div>
+
+      <!-- S7 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Or sub-groups may form within the room to discuss timely subjects <mark>linked in some way</mark> to the main meeting trunk.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 혹은 회의실 내에 소그룹들이 형성될 수도 있다 / 시의적절한 주제들을 논의하기 위해 / 주요 회의 줄기와 어떤 방식으로든 연계된.<br>
+            <b>[구문 포인트]</b> <b>to discuss</b>는 목적을 나타내는 to부정사이며, 과거분사구 <b>linked in some way to ~</b>가 앞의 명사 timely subjects를 후치수식합니다.<br>
+            <b>[핵심 어휘]</b> <b>sub-group</b> 소그룹 | <b>timely</b> 시의적절한 | <b>linked</b> 연관된
+          </div>
+        </details>
+      </div>
+
+      <!-- S8 -->
+      <div class="chunk-item">
+        <p class="chunk-en">In flexible-time cultures, it seems clear <mark>that the most productive meetings grow in unpredictable ways</mark>, and the effective manager is flexible and professional enough <mark>to capitalize on priorities and changing needs as they arise</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 유연한 시간 문화권에서는 / 명백해 보인다 / 가장 생산적인 회의는 예측할 수 없는 방식으로 자라난다는 것이 / 그리고 유능한 관리자는 충분히 유연하고 전문적이다 / 우선순위와 변화하는 요구들이 발생할 때 이를 활용할 수 있을 만큼.<br>
+            <b>[구문 포인트]</b> <b>it(가주어)</b> ~ <b>that절(진주어)</b> 구문이며, 후반부는 <b>형용사 + enough to V</b>(~할 만큼 충분히 …한) 구문이 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>unpredictable</b> 예측할 수 없는 | <b>capitalize on</b> ~을 활용하다 | <b>arise</b> 발생하다
+          </div>
+        </details>
+      </div>
+
+      <!-- S9 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Interruptions, agenda changes, and frequent shifts in direction <mark>are seen as natural and necessary</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 방해, 안건 변경, 빈번한 방향 전환은 / 당연하고 필수적인 것으로 여겨진다.<br>
+            <b>[구문 포인트]</b> <b>see A as B</b>(A를 B로 여기다)의 수동태 구문 <b>A are seen as B</b>이며, 보어로 형용사 병렬(natural and necessary)이 사용되었습니다.<br>
+            <b>[핵심 어휘]</b> <b>interruption</b> 중단, 방해 | <b>shift</b> 변화, 전환 | <b>necessary</b> 필수적인
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (비유 도입 → 유기적 확장 → 리더십과 본질)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 은유적 전제</span>
+        <h4>상록수와 나무 줄기(안건)</h4>
+        <p>유연한 시간 문화권의 회의는 상록수에 비유된다. 사전에 배포된 시작 시간과 주제 안건은 단지 '나무의 줄기(trunk)' 역할을 할 뿐이며, 선형적으로 진행될 것이라는 기대는 존재하지 않는다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 유기적 분기</span>
+        <h4>가지치기와 돌발 변수</h4>
+        <p>상황 변화에 따라 즉각 우선순위가 바뀌며 논의가 새 방향으로 갈라진다. 긴급 전화 통화나 소그룹 논의처럼 시의적절한 주제들이 줄기에 연계되어 새로운 가지(branches)로 뻗어 나간다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 생산성의 정의</span>
+        <h4>유연한 대처와 변화의 필연성</h4>
+        <p>생산적인 회의는 비선형적이고 예측 불가능하게 성장한다. 유능한 관리자는 발생하는 요구를 기회로 포착(capitalize on)하며, 회의 중단과 방향 전환을 자연스럽고 필수적인 과정으로 수용한다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> What seemed like a priority last week when the agenda was crafted [is / are] not necessarily the priority right now.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! What이 이끄는 명사절 주어는 단수 취급하므로 단수동사 'is'가 올바릅니다.">is</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! What이 이끄는 명사절 주어(What seemed ~)는 단수 취급해야 하므로 'are'는 문법적으로 불가능합니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> Or sub-groups may form within the room to discuss timely subjects [linking / linked] in some way to the main meeting trunk.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! timely subjects(시의적절한 주제들)는 회의 줄기에 수동적으로 '연결되는' 대상이므로 과거분사가 적절합니다.">linking</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 수식받는 명사구(timely subjects)와 '연계되다'라는 수동 관계를 이루므로 과거분사 'linked'가 올바릅니다.">linked</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        A meeting in a flexible-time culture is more like an evergreen tree. An agenda will serve as the trunk of the tree. But there’s no expectation that the meeting will progress in a <b>① linear</b> manner. What seemed like a priority last week is not necessarily the priority right now ― so discussion may branch off in a new direction. Other branches may sprout as some members take urgent calls. In flexible-time cultures, it seems clear that the most productive meetings grow in <b>② unpredictable</b> ways, and the effective manager is flexible enough to <b>③ capitalize</b> on priorities and changing needs as they arise. Interruptions, agenda changes, and frequent shifts in direction are seen as <b>④ unnatural</b> and <b>⑤ necessary</b>.
+      </div>
+      <div class="exam-choices">
+        ① linear &nbsp;&nbsp;&nbsp;&nbsp; ② unpredictable &nbsp;&nbsp;&nbsp;&nbsp; ③ capitalize &nbsp;&nbsp;&nbsp;&nbsp; ④ unnatural &nbsp;&nbsp;&nbsp;&nbsp; ⑤ necessary
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (unnatural → natural)</b><br>
+          <b>해설:</b> 유연한 시간 문화권에서는 회의의 중단, 의제 변경, 잦은 방향 전환을 비생산적이거나 부자연스러운 장애물로 보는 것이 아니라 지극히 당연하고 필수적인(natural and necessary) 역동성으로 받아들인다. 따라서 unnatural은 글의 핵심 논지와 정면으로 모순된다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        In flexible-time cultures, an agenda with a start time serves merely as the trunk of a tree. What seemed essential when the plan was crafted can easily change, sending discussions into unexplored branches. Interruptions and simultaneous side-discussions are not seen as failures of discipline. Instead, it seems clear that the most productive meetings grow in unpredictable ways, and the effective leader is one who understands that success comes from the ability to ________________________.
+      </div>
+      <div class="exam-choices">
+        ① stick rigidly to the predetermined timetable regardless of changes<br>
+        ② capitalize on shifting priorities and emerging needs flexibly<br>
+        ③ eliminate all informal side-talks to ensure a linear agenda flow<br>
+        ④ delegate decision-making authority entirely to subgroup members<br>
+        ⑤ prevent external interruptions such as urgent calls at all costs
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 원문의 'capitalize on priorities and changing needs as they arise'를 재진술한 선택지이다. 계획에 대한 맹목적 준수나 외부 개입 차단이 아니라, 회의 도중 발생하는 새로운 필요성과 변화하는 우선순위를 기회로 포착해 유연하게 활용하는 태도가 생산성의 핵심 동력이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        What seemed like a priority last week when the agenda was crafted is not necessarily the priority right now ― so discussion may branch off in a new direction.<br><br>
+        A meeting in a flexible-time culture like those found in South America, parts of Europe, Africa, and the Middle East is more like an evergreen tree. ( ① ) An agenda with a meeting start time and a topic will probably be circulated before the meeting. ( ② ) This will serve as the trunk of the tree. ( ③ ) But there’s no expectation that the meeting will progress in a linear manner. ( ④ ) Other branches may sprout as some members have urgent phone calls that take them in and out of the meeting. ( ⑤ ) Or sub-groups may form within the room to discuss timely subjects linked in some way to the main meeting trunk.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          <b>해설:</b> 주어진 문장은 회의가 '직선적으로 진행되지 않는 이유(지난주의 우선순위가 지금은 아닐 수 있어 논의가 다른 방향으로 뻗음)'를 상술하고 있다. 따라서 회의가 선형적으로 진행되지 않는다는 단언(there’s no expectation that the meeting will progress in a linear manner) 바로 뒤인 ④에 위치해야 하며, 그 뒤에 또 다른 구체적 가지치기 사례(Other branches may sprout ~)로 매끄럽게 연결된다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "유능한 관리자는 우선순위와 변화하는 요구들이 발생할 때 이를 활용할 수 있을 만큼 충분히 유연하고 전문적이다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 아래 제시된 단어를 모두 한 번씩 변형 없이 사용할 것.<br>
+        [ the effective manager / and / flexible / enough / is / to capitalize on / professional / priorities / and / as they arise / changing needs ]<br>
+        2. 어순 배열만 수행할 것 (단어 추가 및 삭제 금지).
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>The effective manager is flexible and professional enough to capitalize on priorities and changing needs as they arise.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 주어(The effective manager) + 동사(is) + 형용사 병렬(flexible and professional) + enough to V(~할 만큼 충분히 …한) 어순을 정확하게 구사해야 만점 부여.<br>
+          - capitalize on(~을 활용하다)의 목적어로 'priorities and changing needs'가 오고 시간 부사절 'as they arise'가 후치된 구조임.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
