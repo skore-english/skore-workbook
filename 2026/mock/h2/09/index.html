@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026년 9월 고2 학력평가 영어 심층 워크북 허브 | SKORE ACADEMY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  /* SKORE ACADEMY Core Brand Color System */
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --brand-red: #cb1d06; /* SKORE Signature Red */
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+
+  /* Card Theme */
+  --card-bg: #fffbfb;
+  --card-border: #fecaca;
+  --badge-bg: rgba(203, 29, 6, 0.08);
+  --badge-border: rgba(203, 29, 6, 0.25);
+  --card-shadow: rgba(203, 29, 6, 0.12);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+/* Hero Header */
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 40px 0 32px;
+  border-bottom: 3px solid var(--brand-red);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: #ea2e15;
+  background: rgba(203, 29, 6, 0.18);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 4.5vw, 32px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+h1.title span { color: #ea2e15; }
+.header-lead {
+  font-size: 14px;
+  color: #CBD5E1;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 24px 0 0;
+}
+.stat-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+.stat-val {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+}
+.stat-lbl {
+  font-size: 10.5px;
+  color: #8FA0B8;
+}
+
+/* Main Section */
+main { padding: 36px 0 60px; }
+
+/* Grid & Base Card */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--brand-red);
+}
+.card:active, .card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-red);
+  box-shadow: 0 8px 16px var(--card-shadow);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.card-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand-red);
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.card-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.card-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.45;
+  color: var(--navy);
+  margin-bottom: 6px;
+  word-break: keep-all;
+}
+.card-desc {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+.card-steps {
+  font-family: var(--mono);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.card-action {
+  font-weight: 700;
+  color: var(--brand-red);
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 28px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> High Logic Series</span>
+      <span>2026 Academic Season</span>
+    </div>
+    <div class="meta-badge">고2 전국연합학력평가 영어영역 심층 아카이브</div>
+    <h1 class="title">2026년 9월 고2 학력평가 지문<br><span>5단계 Interactive Workbook</span></h1>
+    <p class="header-lead">
+      2026년 9월 고2 학력평가 주요 17개 지문에 맞춘 5단계 심층 논리 학습 시스템(배경지식 &amp; 원문 정독 ➔ 문장별 디코딩 ➔ 논리 구조도 ➔ 어법 드릴 ➔ 4대 실전 변형 문제) 통합 허브입니다.
+    </p>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-val">2026.09</span>
+        <span class="stat-lbl">고2 학력평가</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">17 PASSAGES</span>
+        <span class="stat-lbl">주요 지문 완비</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">5 STEPS</span>
+        <span class="stat-lbl">완성형 학습 체계</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="grid">
+
+      <!-- 21번 -->
+      <a href="21.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 21번</span>
+            <span class="card-tag">함축의미 추론</span>
+          </div>
+          <h2 class="card-title">유연한 시간 문화권의 회의는 상록수처럼 유기적으로 뻗어나간다</h2>
+          <p class="card-desc">Flexible Meetings as Trees: Organic Growth Over Rigidity</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 22번 -->
+      <a href="22.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 22번</span>
+            <span class="card-tag">요지 파악</span>
+          </div>
+          <h2 class="card-title">식사 중 디지털 멀티태스킹은 소화 장애와 소통 오류를 부른다</h2>
+          <p class="card-desc">Digital Ingestion During Meals: The Need for Mindful Eating</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 23번 -->
+      <a href="23.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 23번</span>
+            <span class="card-tag">주제 추론</span>
+          </div>
+          <h2 class="card-title">음악은 긴장의 생성과 해소를 교차하며 즐거움과 극적 전개를 완성한다</h2>
+          <p class="card-desc">Musical Dynamics Through Tension: The Alternation of Rhythm</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 24번 -->
+      <a href="24.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 24번</span>
+            <span class="card-tag">제목 추론</span>
+          </div>
+          <h2 class="card-title">디지털 설계의 의도를 간파하여 능동적이고 비판적인 사용자로 거듭나기</h2>
+          <p class="card-desc">Cultivating Attention Literacy: Beyond Passive Consumption</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 29번 -->
+      <a href="29.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 29번</span>
+            <span class="card-tag">어법</span>
+          </div>
+          <h2 class="card-title">자본주의는 값싼 자연과 노동의 새로운 개척지를 끊임없이 착취하며 유지된다</h2>
+          <p class="card-desc">Capitalism, Nature, and Frontiers: The Relentless Quest for Cheapness</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 30번 -->
+      <a href="30.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 30번</span>
+            <span class="card-tag">어휘 적합성</span>
+          </div>
+          <h2 class="card-title">도덕적 허가와 환경 죄책감은 친환경 행동의 균형을 맞추려는 심리적 기제이다</h2>
+          <p class="card-desc">Moral Licensing and Eco-Guilt: The Psychology of Green Behavior</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 31번 -->
+      <a href="31.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 31번</span>
+            <span class="card-tag">빈칸 추론</span>
+          </div>
+          <h2 class="card-title">끊임없는 이동과 유동성으로 현대 인류는 양자 입자처럼 정주성을 잃어간다</h2>
+          <p class="card-desc">Quantum People in Constant Flux: The Dissolution of Human Geography</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 32번 -->
+      <a href="32.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 32번</span>
+            <span class="card-tag">빈칸 추론</span>
+          </div>
+          <h2 class="card-title">안정된 집단 소속감이 제공하는 공유된 사회적 이해가 불확실성을 해소한다</h2>
+          <p class="card-desc">Social Belonging and Certainty: Shared Group Understanding</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 33번 -->
+      <a href="33.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 33번</span>
+            <span class="card-tag">빈칸 추론</span>
+          </div>
+          <h2 class="card-title">상실에 대한 애도는 슬픔을 넘어 삶의 지속과 적극적 회복의 동력이 된다</h2>
+          <p class="card-desc">Grief Work as Devotion: The Power to Transform Loss</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 34번 -->
+      <a href="34.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 34번</span>
+            <span class="card-tag">빈칸 추론</span>
+          </div>
+          <h2 class="card-title">편의성의 이면에 가려진 기술의 장기적이고 미묘한 사회적 변화를 주목하라</h2>
+          <p class="card-desc">The Unseen Costs of Convenience: Microwave and Family Dynamics</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 35번 -->
+      <a href="35.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 35번</span>
+            <span class="card-tag">무관한 문장</span>
+          </div>
+          <h2 class="card-title">무선망과 센서 데이터를 통해 디지털 트윈은 고가치 자산의 실시간 복제본으로 진화한다</h2>
+          <p class="card-desc">Digital Twins in Real Time: Sensors, Networks, and Assets</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 36번 -->
+      <a href="36.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 36번</span>
+            <span class="card-tag">순서 배열</span>
+          </div>
+          <h2 class="card-title">동물은 현재보다 미래의 번식 요구를 예측하여 최적의 서식지를 선택한다</h2>
+          <p class="card-desc">Anticipatory Habitat Selection: Securing Future Reproductive Needs</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 37번 -->
+      <a href="37.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 37번</span>
+            <span class="card-tag">순서 배열</span>
+          </div>
+          <h2 class="card-title">언어는 문화의 반영이며 문화적 가치관에 따라 소통 양식과 어휘가 결정된다</h2>
+          <p class="card-desc">Language as Cultural Manifestation: Individualism and Collectivism</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 38번 -->
+      <a href="38.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 38번</span>
+            <span class="card-tag">문장 삽입</span>
+          </div>
+          <h2 class="card-title">혼잡함은 기존의 감정과 지배적 행동을 증폭하는 중립적 촉매제이다</h2>
+          <p class="card-desc">Density, Crowding, and Amplification: The Psychology of Crowded Spaces</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 39번 -->
+      <a href="39.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 39번</span>
+            <span class="card-tag">문장 삽입</span>
+          </div>
+          <h2 class="card-title">조직적 배제는 기여도를 낮추고 배제를 심화시켜 업무 성과를 파괴한다</h2>
+          <p class="card-desc">The Vicious Cycle of Organizational Exclusion: Performance Collapse</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 40번 -->
+      <a href="40.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 40번</span>
+            <span class="card-tag">요약문 완성</span>
+          </div>
+          <h2 class="card-title">선행 그 자체에 집중할 때 진정한 관대함과 지속적인 기부가 나타난다</h2>
+          <p class="card-desc">Intrinsic Goodness vs Social Display: The Psychology of Generosity</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+      <!-- 41~42번 -->
+      <a href="4142.html" class="card">
+        <div>
+          <div class="card-header">
+            <span class="card-num">9월 · 41~42번</span>
+            <span class="card-tag">장문 독해 (제목+어휘)</span>
+          </div>
+          <h2 class="card-title">알고리즘의 넛지에 맞서 비판적 참여와 의도적 선택으로 주체성을 수호해야 한다</h2>
+          <p class="card-desc">Protecting Human Agency: Choice Architecture and Algorithms</p>
+        </div>
+        <div class="card-footer">
+          <span class="card-steps">5-STEP COMPLETE</span>
+          <span class="card-action">학습 시작 ➔</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    SKORE ACADEMY Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+</body>
+</html>
