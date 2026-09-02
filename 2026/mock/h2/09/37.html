@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 37번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 37번 · 순서배열</div>
+    <h1 class="title">Language as Cultural Manifestation:<br><span>Individualism and Collectivism</span></h1>
+    <p class="header-lead">언어는 문화의 반영이며 문화적 가치관에 따라 소통 양식과 어휘가 결정된다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 언어사회화(Language Socialization)와 문화적 의사소통 양식 — 언어 습득은 단순한 어휘·문법 체계의 학습이 아니라, 개별 문화의 사회적 맥락과 가치관(개인주의 vs 집단주의)에 부합하는 소통 규범을 내면화하는 과정.</li>
+        <li><b>[배경 맥락]:</b> 개인주의 문화(영어권)는 'I'의 대문자 표기 및 단정적 어휘(absolutely 등)처럼 직접적이고 명시적인 소통을 지향하는 반면, 집단주의 문화(일본어권 등)는 사회적 조화와 상호의존성을 위해 완곡한 어휘(perhaps 등)와 관계적 자칭어를 발달시킴.</li>
+        <li><b>[논리 요약]:</b> 언어는 문화의 현현이며, 아동은 자신이 속한 문화권의 가치(개인주의의 직접성 vs 집단주의의 암묵성과 조화)를 반영하는 언어적 상호작용 방식과 자아 표현 어휘를 체득한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Language is a manifestation of culture. At different language acquisition stages, children do not learn language per se; rather they learn the various patterns and styles of language interaction that enable them to function as competent communicators in different situational contexts. They develop a culture-specific communication style that is, for example, direct and explicit in individualistic cultures or indirect and implicit in collectivistic cultures. Examples of words linked with the direct style are categorical words like absolutely, certainly, or positively. By contrast, the cultural assumptions of interdependence and harmony require that collectivists limit themselves to implicit and even ambiguous use of words, using terms like maybe, perhaps, or probably. The English language is the only language in the world that spells I with a capital letter. This phenomenon may reflect the fact that the roots of individualism are in England. There is no Japanese equivalent for the English I. Different words are used to refer to the self, depending on the social situation, the speaker’s gender, age, and the other social attributes relative to the listener.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 언어는 소속된 사회의 문화적 가치를 투영하므로, 개인주의 문화에서는 직접적 표현과 'I'의 강조가 나타나고, 집단주의 문화에서는 조화를 위한 완곡한 표현과 관계 맥락에 따른 자칭어가 사용된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Language is <mark>a manifestation of culture</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 언어는 문화의 표명(나타남)이다.<br>
+            <b>[구문 포인트]</b> 2형식 단문으로 글의 대전제(언어와 문화의 불가분적 관계)를 간결하고 명확하게 규정합니다.<br>
+            <b>[핵심 어휘]</b> <b>manifestation</b> 표명, 징후, 나타남 | <b>culture</b> 문화
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en">At different language acquisition stages, children do not learn language per se; rather they learn the various patterns and styles of language interaction <mark>that enable them to function as competent communicators in different situational contexts</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 서로 다른 언어 습득 단계에서, / 아이들은 언어 그 자체를 배우는 것이 아니라; / 오히려 언어적 상호작용의 다양한 패턴과 양식을 배운다 / 그들이 유능한 의사소통자로서 기능할 수 있게 해주는 / 다양한 상황적 맥락 속에서.<br>
+            <b>[구문 포인트]</b> <b>not A; rather B</b>(A가 아니라 오히려 B) 구문이며, 선행사 patterns and styles를 수식하는 주격 관계대명사절 내에 <b>enable + 목적어(them) + 목적격보어(to function)</b>의 5형식 구문이 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>acquisition</b> 습득 | <b>per se</b> 그 자체로 | <b>competent</b> 유능한 | <b>situational context</b> 상황적 맥락
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en">They develop <mark>a culture-specific communication style</mark> that is, for example, <mark>direct and explicit in individualistic cultures or indirect and implicit in collectivistic cultures</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그들은 문화 특유의 의사소통 스타일을 발달시킨다 / 예를 들어, 개인주의 문화에서는 직접적이고 명시적이거나 / 집단주의 문화에서는 간접적이고 암묵적인.<br>
+            <b>[구문 포인트]</b> 주격 관계대명사 <b>that</b>절 내에서 형용사 보어구 <b>direct and explicit ~</b>와 <b>indirect and implicit ~</b>가 접속사 or로 대등하게 병렬 대조를 이룹니다.<br>
+            <b>[핵심 어휘]</b> <b>culture-specific</b> 특정 문화에 고유한 | <b>explicit</b> 명시적인 | <b>implicit</b> 암묵적인 | <b>collectivistic</b> 집단주의의
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Examples of words linked with the direct style are <mark>categorical words like absolutely, certainly, or positively</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 직접적인 스타일과 연관된 단어들의 예는 / 단정적인 단어들이다 / absolutely, certainly, 또는 positively와 같은.<br>
+            <b>[구문 포인트]</b> 주어의 핵이 복수명사 <b>Examples</b>(과거분사구 linked with ~의 수식을 받음)이므로 복수동사 <b>are</b>가 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>categorical</b> 단정적인, 범주에 속하는 | <b>absolutely</b> 전적으로, 절대적으로 | <b>positively</b> 분명히, 긍정적으로
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">By contrast, the cultural assumptions of interdependence and harmony <mark>require that collectivists limit themselves to implicit and even ambiguous use of words</mark>, using terms like maybe, perhaps, or probably.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 대조적으로, / 상호의존성과 조화라는 문화적 전제는 / 요구한다 / 집단주의자들이 스스로를 암묵적이고 심지어 모호한 단어 사용으로 제한할 것을 / maybe, perhaps, 또는 probably와 같은 용어들을 사용하면서.<br>
+            <b>[구문 포인트]</b> 요구 동사 <b>require</b> 뒤의 that절에는 당위성을 나타내는 <b>(should) limit</b> 동사원형이 오며, 주어와 일치하는 재귀대명사 <b>themselves</b>가 목적어로 쓰였습니다. 문미에는 동시 동작을 나타내는 분사구문 <b>using ~</b>이 연결됩니다.<br>
+            <b>[핵심 어휘]</b> <b>interdependence</b> 상호의존성 | <b>harmony</b> 조화 | <b>ambiguous</b> 모호한 | <b>collectivist</b> 집단주의자
+          </div>
+        </details>
+      </div>
+
+      <!-- S6 -->
+      <div class="chunk-item">
+        <p class="chunk-en">The English language is <mark>the only language in the world that spells I with a capital letter</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 영어는 전 세계에서 유일한 언어이다 / 'I'를 대문자로 철자하는.<br>
+            <b>[구문 포인트]</b> 선행사에 한정어 <b>the only</b>가 포함되어 있어 관계대명사 <b>that</b>이 선호되며, 3인칭 단수동사 <b>spells</b>와 일치합니다.<br>
+            <b>[핵심 어휘]</b> <b>spell</b> 철자를 쓰다 | <b>capital letter</b> 대문자
+          </div>
+        </details>
+      </div>
+
+      <!-- S7 -->
+      <div class="chunk-item">
+        <p class="chunk-en">This phenomenon may <mark>reflect the fact that the roots of individualism are in England</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 현상은 사실을 반영할지도 모른다 / 개인주의의 뿌리가 영국에 있다는.<br>
+            <b>[구문 포인트]</b> <b>the fact</b> 뒤의 <b>that</b>은 뒤에 완전한 문장(주어+be동사+전치사구)을 이끄는 <b>동격 접속사</b>입니다.<br>
+            <b>[핵심 어휘]</b> <b>reflect</b> 반영하다 | <b>individualism</b> 개인주의 | <b>root</b> 뿌리, 기원
+          </div>
+        </details>
+      </div>
+
+      <!-- S8 -->
+      <div class="chunk-item">
+        <p class="chunk-en">There is <mark>no Japanese equivalent for the English I</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 영어의 'I'에 상응하는 일본어는 존재하지 않는다.<br>
+            <b>[구문 포인트]</b> <b>There is no + 단수명사</b> 구조로 영어의 절대적 'I'와 대조되는 일본어의 상대성을 환기합니다.<br>
+            <b>[핵심 어휘]</b> <b>equivalent</b> 상응하는 것, 등가물
+          </div>
+        </details>
+      </div>
+
+      <!-- S9 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Different words are used to refer to the self, <mark>depending on the social situation, the speaker’s gender, age, and the other social attributes relative to the listener</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 자아를 지칭하기 위해 서로 다른 단어들이 사용된다 / 사회적 상황, 화자의 성별, 나이, 그리고 청자와 비교한 다른 사회적 속성에 따라서.<br>
+            <b>[구문 포인트]</b> 수동태 <b>are used to refer to</b>(~을 지칭하기 위해 사용되다) 뒤에 전치사구 <b>depending on</b>(~에 따라)의 목적어로 4가지 요소가 병렬 나열되어 있습니다.<br>
+            <b>[핵심 어휘]</b> <b>refer to</b> ~을 가리키다, 지칭하다 | <b>attribute</b> 속성, 특성 | <b>relative to</b> ~에 비례하여, 상대적으로
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (언어의 문화 반영성 → 소통 스타일의 양극화 → 자아 지칭 어휘의 문화적 차이)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PREMISE] 언어사회화의 본질</span>
+        <h4>문화의 표명으로서의 언어</h4>
+        <p>언어는 문화의 발현이다. 아이들은 언어 그 자체(language per se)를 배우는 것이 아니라, 특정 사회적 맥락 속에서 유능한 소통자로 기능할 수 있게 해주는 상호작용 양식을 체득한다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[CONTRAST] 소통 양식의 대비</span>
+        <h4>단정적 직접성 vs 조화로운 완곡성</h4>
+        <p>개인주의 문화는 명시적이고 직접적인 스타일(absolutely 등)을 선호하는 반면, 집단주의 문화는 상호의존성과 집단 내 조화를 위해 암묵적이고 모호한 어휘(perhaps 등)를 사용하도록 요구한다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[EVIDENCE] 자칭 표현의 문화적 분기</span>
+        <h4>영어의 대문자 'I'와 일본어의 관계적 자아</h4>
+        <p>영어는 개인주의 뿌리를 반영하여 유일하게 'I'를 대문자로 표기한다. 반면 집단주의적 일본어에는 고정된 'I'의 등가물이 없으며, 청자와의 사회적 관계, 성별, 나이에 따라 다양한 자칭어가 쓰인다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> By contrast, the cultural assumptions of interdependence and harmony require that collectivists [limit / limited] themselves to implicit use of words.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 주장·요구·명령·제안의 동사 require 뒤에 당위성을 나타내는 that절이 왔으므로, '(should) + 동사원형'에 따라 'limit'이 올바릅니다.">limit</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! require that절 내에는 당위성의 조동사 should가 생략된 형태이므로 과거시제 동사인 limited는 어법상 맞지 않습니다.">limited</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> This phenomenon may reflect the fact [which / that] the roots of individualism are in England.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 뒷문장(the roots of individualism are in England)이 완전한 1형식 구조이므로 불완전절을 이끄는 관계대명사 which는 올 수 없습니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞의 추상명사 the fact의 내용을 설명하는 완전한 절이 이어지므로 동격 접속사 'that'이 정확합니다.">that</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        Language is a manifestation of culture. Children develop a culture-specific communication style that is <b>① direct</b> in individualistic cultures or indirect in collectivistic cultures. Examples of words linked with the direct style are <b>② categorical</b> words like absolutely or certainly. By contrast, the cultural assumptions of interdependence and harmony require that collectivists limit themselves to <b>③ implicit</b> use of words, using terms like perhaps or probably. The English language reflects individualism by spelling I with a capital letter. Conversely, there is no Japanese equivalent for the English I because different words are used to refer to the self, <b>④ regardless of</b> the social situation, gender, and the social attributes <b>⑤ relative</b> to the listener.
+      </div>
+      <div class="exam-choices">
+        ① direct &nbsp;&nbsp;&nbsp;&nbsp; ② categorical &nbsp;&nbsp;&nbsp;&nbsp; ③ implicit &nbsp;&nbsp;&nbsp;&nbsp; ④ regardless of &nbsp;&nbsp;&nbsp;&nbsp; ⑤ relative
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (regardless of → depending on 또는 contingent upon)</b><br>
+          <b>해설:</b> 집단주의 문화권인 일본어에서는 화자의 성별, 나이, 사회적 상황 및 청자와의 상대적 관계에 '따라서(depending on)' 자신을 지칭하는 단어가 달라진다. '사회적 상황과 무관하게(regardless of)' 자아를 지칭한다는 서술은 관계적 조화를 중시하는 집단주의 언어의 특성과 정면으로 모순된다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        During language development, children do not merely memorize grammatical syntax or abstract vocabularies; they absorb the normative communicative conventions of their society. In cultures that prioritize personal autonomy, speakers utilize decisive assertions and elevate the self, as exemplified by the singular capitalization of "I" in English. In contrast, in societies built upon mutual interdependence, speakers favor ambiguity and polite hesitation to preserve interpersonal equilibrium. Furthermore, self-referential terms in such cultures vary continuously according to relational hierarchy. This demonstrates that language operates fundamentally as ____________________________________.
+      </div>
+      <div class="exam-choices">
+        ① an innate biological instinct unaffected by historical environments<br>
+        ② a manifestation of cultural values shaping communicative norms and self-identity<br>
+        ③ an arbitrary communication tool designed purely for economic efficiency<br>
+        ④ a universal cognitive system that standardizes human social behaviors<br>
+        ⑤ a device to suppress individual creativity in favor of collective conformity
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 지문의 첫 문장이자 핵심 주제인 'Language is a manifestation of culture'를 학술적으로 재진술한 선택지이다. 언어는 단순히 어휘 체계가 아니라, 속한 문화권의 가치관(개인주의 vs 집단주의)을 반영하여 의사소통 규범과 자아 정체성 표현 방식을 형성하는 매개체 역할을 한다는 내용이므로 ②가 가장 적절하다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        By contrast, the cultural assumptions of interdependence and harmony require that collectivists limit themselves to implicit and even ambiguous use of words, using terms like maybe, perhaps, or probably.<br><br>
+        Children develop a culture-specific communication style that is, for example, direct and explicit in individualistic cultures or indirect and implicit in collectivistic cultures. ( ① ) Examples of words linked with the direct style are categorical words like absolutely, certainly, or positively. ( ② ) The English language is the only language in the world that spells I with a capital letter. ( ③ ) This phenomenon may reflect the fact that the roots of individualism are in England. ( ④ ) There is no Japanese equivalent for the English I. ( ⑤ ) Different words are used to refer to the self, depending on the social situation, the speaker’s gender, age, and the other social attributes relative to the listener.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> ① 다음 문장에서 개인주의 문화의 직접적 소통 양식에 쓰이는 단호한 단어들(absolutely, certainly 등)을 제시하고 있다. 주어진 문장은 'By contrast(대조적으로)'를 시작으로 집단주의 문화에서 조화와 상호의존성을 위해 완곡하고 모호한 단어들(maybe, perhaps 등)을 사용한다는 대조적 내용을 기술하므로 ②에 들어가는 것이 가장 매끄럽다. ② 뒤에서는 어휘적 차원에서 자아 지칭('I' 대문자 표기)으로 논의가 심화된다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "이러한 현상은 개인주의의 뿌리가 영국에 있다는 사실을 반영할지도 모른다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 동격 접속사 'that'을 반드시 활용할 것.<br>
+        2. 아래 제시된 단어들을 모두 한 번씩만 변형 없이 사용할 것.<br>
+        [ the roots of individualism / This phenomenon / the fact / may reflect / that / are in England ]<br>
+        3. 단어의 추가나 어형 변화 없이 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>This phenomenon may reflect the fact that the roots of individualism are in England.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 주어(This phenomenon) + 조동사 및 동사(may reflect) + 목적어(the fact)를 바르게 구성했는가?<br>
+          - the fact 뒤에 동격 접속사 that을 연결하고, 그 뒤에 완전한 절(the roots of individualism are in England)을 어순 오류 없이 결합했는가?
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
