@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 9월 학평 34번 워크북 | 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 전국연합학력평가 (2026년 09월)</span>
+    </div>
+    <div class="meta-badge">09월 학평 34번 · 빈칸 추론</div>
+    <h1 class="title">Innate Bodily Wisdom<br><span>The Alchemy of Running</span></h1>
+    <p class="header-lead">달리기의 초복잡성과 신체가 지닌 선천적 지능의 이해</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 신체 내재적 지능(Embodied Intelligence)과 달리기의 비의식적 초복잡성(Unconscious Ultra-Complexity)</li>
+        <li><b>[배경 맥락]:</b> 인간의 이족보행 및 달리기는 슈퍼컴퓨터로도 실시간 연산이 불가능할 만큼 방대한 신경·근육 협응을 요구하나 신체는 이를 무의식적으로 수행함</li>
+        <li><b>[논리 요약]:</b> 달리기는 너무나 복잡하여 의식적으로 온전히 규명하기 어렵지만, 감각을 열고 신체 자체가 지닌 고유한 지혜를 인정함으로써 달리기의 신비를 이해할 수 있음</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      If our bodies know best, why are they easily injured when we do something so seemingly natural as running? On the one hand, running seems very easy, but that is only because our bodies are so very good at it. The most powerful supercomputer on the planet cannot administer the enormous number of computations it takes to run, untethered, on two legs. Wherever our running intelligence is, running is not all conscious to us and is so complicated that only the T­1000 Terminators of our imagination are able to do it. Because our running knowledge is buried so deeply within muscle fibres, cells and our DNA, we have to accept that we cannot fully explain its complexities. That doesn’t mean our bodies don’t know how to do it. We may feel our way towards understanding the alchemy of running by learning how to use our senses, getting them firing, and seeing what they are capable of, and accepting that our bodies know more about running than we ever will.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 달리기는 슈퍼컴퓨터도 연산할 수 없을 만큼 복잡한 메커니즘을 지니고 있어 의식적으로 다 설명할 수 없지만, 우리 신체는 DNA와 감각 속에 이를 완벽히 수행하는 지혜를 내재하고 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">If our bodies know best, <mark>why are they easily injured</mark> when we do something so seemingly natural as running?</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 우리의 몸이 가장 잘 알고 있다면, / 왜 몸은 쉽게 다치는가 / 우리가 달리기처럼 겉보기에 매우 자연스러운 무언가를 할 때?<br>
+            <b>[구문 포인트]</b> 조건절 If 뒤에 의문문 수동태 [why are they easily injured]가 이어짐. something을 후치 수식하는 [so + 형용사(natural) + as ~] 원급 비교 표현 결합.<br>
+            <b>[핵심 어휘]</b> injured (부상을 입은, 다친), seemingly (겉보기에, 외견상), natural (자연스러운)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">On the one hand, running seems very easy, <mark>but that is only because our bodies are so very good at it</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 한편으로는, 달리기가 매우 쉬워 보인다, / 그러나 그것은 오직 우리의 몸이 달리기를 대단히 잘하기 때문이다.<br>
+            <b>[구문 포인트]</b> [That is because + 원인절(~한 이유 때문이다)] 구문. be good at (~에 능숙하다). running이 동명사 주어로 쓰임.<br>
+            <b>[핵심 어휘]</b> on the one hand (한편으로는), be good at (~에 능숙하다), easy (쉬운)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">The most powerful supercomputer on the planet cannot administer <mark>the enormous number of computations it takes to run, untethered, on two legs</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 지구상에서 가장 강력한 슈퍼컴퓨터도 처리할 수 없다 / 엄청난 수의 연산을 / 묶이지 않은 채 두 다리로 달리는 데 필요한.<br>
+            <b>[구문 포인트]</b> computations 뒤에 목적격 관계대명사(which/that)가 생략됨. [it takes + 목적어 + to-v] 구문에서 목적어가 선행사로 빠진 구조. untethered는 보충 상태를 나타내는 형용사/과거분사 삽입.<br>
+            <b>[핵심 어휘]</b> administer (처리하다, 집행하다), computation (연산, 계산), untethered (줄에 묶이지 않은, 자유로운)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Wherever our running intelligence is, running is not all conscious to us and <mark>is so complicated that only the T­1000 Terminators of our imagination are able to do it</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리의 달리기 지능이 어디에 존재하든 간에, / 달리기는 우리에게 전적으로 의식적인 것이 아니며 / 너무나 복잡해서 오직 우리 상상 속의 T-1000 터미네이터만이 그것을 할 수 있다.<br>
+            <b>[구문 포인트]</b> 복합관계부사절(Wherever...) 양보 구문. [not all (부분부정: 전부는 아닌)]. [so + 형용사(complicated) + that 결과절 (너무 ~해서 …하다)] 구문 결합.<br>
+            <b>[핵심 어휘]</b> conscious (의식적인), complicated (복잡한), imagination (상상, 상상력)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Because our running knowledge is buried so deeply within muscle fibres, cells and our DNA, <mark>we have to accept that we cannot fully explain its complexities</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리의 달리기 지식이 근육 섬유, 세포, 그리고 우리의 DNA 속에 너무나 깊이 묻혀 있기 때문에, / 우리는 받아들여야만 한다 / 우리가 그것의 복잡성을 완전히 설명할 수는 없다는 점을.<br>
+            <b>[구문 포인트]</b> 수동태 [is buried] 뒤에 부사구 결합. accept의 목적어로 명사절 접속사 that이 이끄는 완전한 절이 위치함.<br>
+            <b>[핵심 어휘]</b> muscle fibre (근육 섬유), bury (묻다, 매장하다), complexity (복잡성)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en"><mark>That doesn’t mean our bodies don’t know how to do it</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것이 우리의 몸이 그것을 하는 방법을 알지 못한다는 것을 의미하지는 않는다.<br>
+            <b>[구문 포인트]</b> That doesn't mean 뒤에 명사절 접속사 that 생략. [의문사 + to부정사 (how to do it)]가 know의 목적어 역할을 함.<br>
+            <b>[핵심 어휘]</b> mean (의미하다), how to-v (~하는 방법)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">We may feel our way towards understanding the alchemy of running <mark>by learning how to use our senses, getting them firing, and seeing what they are capable of</mark>, and accepting that our bodies know more about running than we ever will.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 달리기라는 마법 같은 힘을 이해하는 쪽으로 더듬어 나아갈 수 있다 / 우리의 감각을 사용하는 법을 배우고, / 감각들을 활성화시키고, / 감각들이 무엇을 할 수 있는지를 확인하고, / 그리고 우리의 몸이 우리가 장차 알게 될 것보다 달리기에 대해 더 많이 알고 있음을 받아들임으로써.<br>
+            <b>[구문 포인트]</b> feel one's way towards (~을 향해 조심스럽게 나아가다/더듬어 찾다). 전치사 by의 목적어로 4개의 동명사 병렬 연결: [learning], [getting], [seeing], [and accepting]. getting them firing에서 get + 목적어 + 현재분사(능동 활성화).<br>
+            <b>[핵심 어휘]</b> alchemy (연금술, 신비한 힘), fire (활성화되다, 발화하다), capable of (~을 할 수 있는)
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (역설적 통념 질문 → 초복잡성과 신체적 지능 → 감각 회복을 통한 수용)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PARADOX & EASE] 01-02문장</span>
+        <h4>달리기가 쉬워 보이는 이유</h4>
+        <p>달리기가 겉보기에 단순해 보이는 유일한 이유는, 실제로는 극도로 정교하지만 우리 신체가 이를 너무나 잘하기 때문임</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[SUPER-COMPLEXITY] 03-05문장</span>
+        <h4>초인적 복잡성과 DNA 지능</h4>
+        <p>슈퍼컴퓨터도 감당할 수 없는 방대한 연산 지식이 근육과 DNA에 깊이 묻혀 있어 인간 의식으로는 전부 규명 불가함</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[EMBODIED WISDOM] 06-07문장</span>
+        <h4>신체의 지혜에 대한 신뢰와 감각</h4>
+        <p>이성적 통제를 내려놓고 감각을 깨워 신체 고유의 능력을 신뢰할 때 달리기의 신비로운 메커니즘과 온전히 조화를 이룸</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. Running seems very easy, but that is only [because / why] our bodies are so very good at it.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 앞의 결과(달리기가 쉬워 보이는 것)에 대한 구체적 '원인'을 설명하는 자리이므로 'that is because'가 올바릅니다.">because</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="'that is why' 뒤에는 결과가 와야 하는데, 뒤 문장은 달리기가 쉬워 보이는 이유/원인이므로 문맥상 어색합니다.">why</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. Because our running knowledge is buried so [deep / deeply] within muscle fibres, cells and our DNA, we cannot fully explain it.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="수동태 동사구 'is buried'를 수식하는 일반적 정도 부사 자리이므로 형용사 deep은 어법상 적절하지 않습니다.">deep</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 과거분사 buried를 수식하여 '매우 깊숙이'라는 정도를 나타내는 부사이므로 deeply가 올바릅니다.">deeply</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 변형 1: 문맥상 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        On the one hand, running seems very easy, but that is only because our bodies are so very good at it. The most powerful supercomputer on the planet cannot administer the ① <u>enormous</u> number of computations it takes to run on two legs. Wherever our running intelligence is, running is not all ② <u>conscious</u> to us and is so complicated that it defies simple understanding. Because our running knowledge is buried so deeply within muscle fibres and DNA, we have to accept that we cannot fully explain its complexities. That doesn’t mean our bodies don't know how to do it. We may understand the alchemy of running by learning how to use our senses and ③ <u>rejecting</u> the fact that our bodies know ④ <u>more</u> about running than we ever will.
+      </div>
+      <div class="exam-choices">
+        ① enormous &nbsp;&nbsp;&nbsp; ② conscious &nbsp;&nbsp;&nbsp; ③ rejecting &nbsp;&nbsp;&nbsp; ④ more
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ rejecting → accepting</b><br>
+          <b>해설:</b> 글의 결론에서는 우리가 의식적으로 달리기의 복잡성을 전부 설명할 수 없더라도, 우리 신체가 지닌 고유한 감각을 깨우고 신체가 우리 의식보다 달리기에 대해 훨씬 더 많은 것을 알고 있다는 사실을 '받아들여야(accepting)' 한다고 강조하고 있습니다. 따라서 이를 거부한다는 의미의 ③ rejecting은 글의 흐름과 정반대입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 글]</b><br>
+        If our bodies know best, why are they easily injured when we do something so seemingly natural as running? On the one hand, running seems very easy, but that is only because our bodies are so very good at it.<br><br>
+        <b>(A)</b> That doesn’t mean our bodies don’t know how to do it. We may feel our way towards understanding the alchemy of running by learning how to use our senses, getting them firing, and seeing what they are capable of.<br>
+        <b>(B)</b> The most powerful supercomputer on the planet cannot administer the enormous number of computations it takes to run, untethered, on two legs. Running is not all conscious to us and is so complicated that only the T­1000 Terminators could do it.<br>
+        <b>(C)</b> Because our running knowledge is buried so deeply within muscle fibres, cells and our DNA, we have to accept that we cannot fully explain its complexities. But we must still acknowledge our physical competence.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp; ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A) &nbsp;&nbsp;&nbsp; ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (B) - (C) - (A)</b><br>
+          <b>해설:</b> 주어진 글에서 달리기가 쉬워 보이지만 실제로는 정교하다는 전제를 둔 뒤, (B)에서 슈퍼컴퓨터도 처리 못 할 방대한 연산과 초복잡성을 설명합니다. 이어 (C)에서 그 지식이 근육과 DNA에 깊이 묻혀 있어 의식적으로 온전히 설명할 수 없음을 인정해야 한다고 논의를 구체화합니다. 마지막으로 (A)에서 그렇다고 신체가 모르는 것은 아니며, 감각을 깨우고 신체의 지혜를 신뢰해야 한다는 실천적 결론으로 귀결되는 (B) - (C) - (A)가 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        That doesn’t mean our bodies don’t know how to do it.<br><br>
+        If our bodies know best, why are they easily injured when we do something so seemingly natural as running? ( ① ) Running seems very easy, but that is only because our bodies are so very good at it. ( ② ) The most powerful supercomputer on the planet cannot administer the enormous number of computations it takes to run on two legs. ( ③ ) Wherever our running intelligence is, running is not all conscious to us and is so complicated that only machines of our imagination are able to do it. ( ④ ) Because our running knowledge is buried so deeply within muscle fibres, cells and our DNA, we have to accept that we cannot fully explain its complexities. ( ⑤ ) We may feel our way towards understanding the alchemy of running by learning how to use our senses and accepting our innate bodily wisdom.
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ⑤</b><br>
+          <b>해설:</b> 주어진 문장의 'That'은 ⑤ 앞 문장에 언급된 "우리가 달리기의 복잡성을 의식적으로 완전히 설명할 수 없다"는 내용을 가리킵니다. 우리가 머리로 설명하지 못한다고 해서 신체마저 달리는 법을 모르는 것은 아니라는 역설적 전환을 제공한 후, ⑤ 뒤의 감각 활용과 신체 지능에 대한 신뢰로 자연스럽게 이어집니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] [서술형] 다음 우리말 조건에 맞추어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. [우리말]: "지구상에서 가장 강력한 슈퍼컴퓨터도 묶이지 않은 채 두 다리로 달리는 데 필요한 엄청난 수의 연산을 처리할 수 없다."<br>
+        2. 보기의 단어만을 모두 한 번씩 사용하여 영작할 것 (어형 변화 없음).<br>
+        <b>[보기]</b><br>
+        [ on two legs / cannot administer / to run, / supercomputer / the planet / it takes / on / untethered, / The most powerful / of computations / the enormous number ]
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: The most powerful supercomputer on the planet cannot administer the enormous number of computations it takes to run, untethered, on two legs</b><br>
+          <b>해설:</b> 주어구 [The most powerful supercomputer on the planet] 뒤에 동사구 [cannot administer]가 오고, 목적어 [the enormous number of computations] 뒤에 목적격 관계대명사가 생략된 절 [it takes to run, untethered, on two legs]가 수식하도록 정확히 배열합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
