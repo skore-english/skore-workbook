@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 39번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 39번 · 문장 삽입</div>
+    <h1 class="title">The Vicious Cycle of Organizational Exclusion:<br><span>Workplace Isolation and Performance Collapse</span></h1>
+    <p class="header-lead">조직적 배제는 기여도를 낮추고 배제를 심화시켜 성과를 파괴한다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 조직 내 배제(Organizational Exclusion)와 악순환(Vicious Cycle) — 직장 내에서 개인이 집단이나 소통 채널로부터 소외될 때 기본 심리 욕구가 위협받고, 적응 실패 시 소통 단절과 기여도 급감으로 이어져 다시 배제가 증폭되는 파괴적 연쇄 작용.</li>
+        <li><b>[배경 맥락]:</b> 조직 심리학자들이 흔히 간과하는 조직적 배제는 개인에게 긍정적 친사회적 행동을 유도하기도 하지만, 집단 적응에 실패한 구성원에게는 의사소통 단절과 업무 성과 악화라는 치명적인 역효과를 초래함.</li>
+        <li><b>[논리 요약]:</b> 예방책이 부재한 조직적 배제는 소통 위축과 성과 부진을 낳고 이는 더 가혹한 배제로 이어지므로, 비즈니스 성공을 위해 사전 예방책(precautions) 마련이 필수적이다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Exclusion is a state that is ignored by the organization psychologists. Therefore, it is possible that precautions regarding organizational exclusion are not taken. Individuals react to organizational exclusion by trying to strengthen their basic needs, which are threatened. Positive social behaviors develop belonging and self-respect. The likelihood that individuals who try to adapt to positive social behaviors will experience organizational exclusion decreases. However, individuals may be faced with more exclusion when they cannot adapt to a group. When excluded individuals grow away from communication and social activities, their contribution to the organization they are in may decrease. When this situation is not avoided, exclusion increases even more and strongly affects the performance of the employee in a negative way. Precautions need to be taken regarding organizational exclusion, which is very important for business.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 조직적 배제는 적응에 실패한 구성원의 소통 단절과 기여도 저하를 낳아 배제를 더욱 가속화하므로, 조직 차원의 사전 예방 조치가 기업 경영에 결정적이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Exclusion is <mark>a state that is ignored by the organization psychologists</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 배제는 상태이다 / 조직 심리학자들에 의해 무시되는.<br>
+            <b>[구문 포인트]</b> 선행사 a state를 주격 관계대명사절인 <b>that is ignored by ~</b>(수동태)가 수식하여 학계의 무관심을 지적합니다.<br>
+            <b>[핵심 어휘]</b> <b>exclusion</b> 배제, 소외 | <b>ignored</b> 무시되는 | <b>organization psychologist</b> 조직 심리학자
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Therefore, <mark>it is possible that precautions regarding organizational exclusion are not taken</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 따라서, / 가능성이 있다 / 조직적 배제에 관한 예방 조치들이 취해지지 않을.<br>
+            <b>[구문 포인트]</b> <b>it(가주어)</b> ~ <b>that절(진주어)</b> 구문이며, that절 내에서 복수 주어 precautions에 맞추어 수동태 술어 <b>are not taken</b>(take precautions: 예방 조치를 취하다)이 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>therefore</b> 그러므로 | <b>precaution</b> 예방 조치, 예방책 | <b>regarding</b> ~에 관한
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Individuals react to organizational exclusion <mark>by trying to strengthen their basic needs, which are threatened</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 개인들은 조직적 배제에 반응한다 / 그들의 기본적 욕구들을 강화하려고 노력함으로써 / 그리고 그것들은 위협받고 있다.<br>
+            <b>[구문 포인트]</b> <b>by -ing</b>(~함으로써) 수단 표현 뒤에 계속적 용법의 관계대명사 <b>which</b>가 basic needs를 받아 수동태 동사 <b>are threatened</b>와 연결됩니다.<br>
+            <b>[핵심 어휘]</b> <b>react to</b> ~에 반응하다 | <b>strengthen</b> 강화하다 | <b>threatened</b> 위협받는
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Positive social behaviors <mark>develop belonging and self-respect</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 긍정적인 사회적 행동들은 / 소속감과 자존감을 발달시킨다.<br>
+            <b>[구문 포인트]</b> 복수 주어 Positive social behaviors에 일반동사 <b>develop</b>이 이어지며, 두 개의 명사 목적어 <b>belonging and self-respect</b>를 취합니다.<br>
+            <b>[핵심 어휘]</b> <b>belonging</b> 소속감 | <b>self-respect</b> 자존감, 자긍심
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">The likelihood that individuals who try to adapt to positive social behaviors will experience organizational exclusion <mark>decreases</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 가능성은 / 긍정적 사회적 행동에 적응하려고 노력하는 개인들이 조직적 배제를 경험할 / 감소한다.<br>
+            <b>[구문 포인트]</b> 문장의 진짜 주어는 단수명사 <b>The likelihood</b>이며, 동격의 <b>that절</b> 내에 주어(individuals)를 수식하는 관계대명사절(who try to adapt to ~)이 포함되어 있습니다. 주절의 본동사는 단수형 <b>decreases</b>입니다.<br>
+            <b>[핵심 어휘]</b> <b>likelihood</b> 가능성 | <b>adapt to</b> ~에 적응하다 | <b>decrease</b> 감소하다
+          </div>
+        </details>
+      </div>
+
+      <!-- S6 -->
+      <div class="chunk-item">
+        <p class="chunk-en">However, <mark>individuals may be faced with more exclusion</mark> when they cannot adapt to a group.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나, / 개인들은 더 많은 배제에 직면할 수도 있다 / 그들이 집단에 적응하지 못할 때.<br>
+            <b>[구문 포인트]</b> 역접 접속부사 <b>However</b>로 흐름이 반전되며, <b>be faced with</b>(~에 직면하다) 수동 표현이 사용되었습니다.<br>
+            <b>[핵심 어휘]</b> <b>be faced with</b> ~에 직면하다
+          </div>
+        </details>
+      </div>
+
+      <!-- S7 -->
+      <div class="chunk-item">
+        <p class="chunk-en">When excluded individuals grow away from communication and social activities, <mark>their contribution to the organization they are in may decrease</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 배제된 개인들이 의사소통과 사회적 활동들로부터 멀어질 때, / 그들이 속한 조직에 대한 그들의 기여도는 감소할지도 모른다.<br>
+            <b>[구문 포인트]</b> 과거분사 <b>excluded</b>가 individuals를 수식하고, 주절의 명사 the organization 뒤에 목적격 관계대명사가 생략된 절 <b>(which/that) they are in</b>이 수식합니다.<br>
+            <b>[핵심 어휘]</b> <b>grow away from</b> ~로부터 멀어지다 | <b>contribution</b> 기여, 공헌
+          </div>
+        </details>
+      </div>
+
+      <!-- S8 -->
+      <div class="chunk-item">
+        <p class="chunk-en">When this situation is not avoided, <mark>exclusion increases even more and strongly affects the performance of the employee in a negative way</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이러한 상황이 방지되지 않을 때, / 배제는 훨씬 더 증가하고 / 직원의 성과에 부정적인 방식으로 강력하게 영향을 미친다.<br>
+            <b>[구문 포인트]</b> 조건/시간 부사절의 수동태(is not avoided) 뒤에 주절에서 단수주어 exclusion에 맞춰 <b>increases</b>와 <b>strongly affects</b>가 병렬 연결되었습니다.<br>
+            <b>[핵심 어휘]</b> <b>avoid</b> 피하다, 방지하다 | <b>performance</b> 성과, 업무 수행 | <b>in a negative way</b> 부정적인 방식으로
+          </div>
+        </details>
+      </div>
+
+      <!-- S9 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Precautions need to be taken regarding organizational exclusion, <mark>which is very important for business</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 조직적 배제에 관한 예방 조치들이 취해질 필요가 있다 / 그리고 그것은 비즈니스에 대단히 중요하다.<br>
+            <b>[구문 포인트]</b> <b>need to be taken</b>(수동태 부정사)으로 당위성을 강조하며, 콤마 뒤 계속적 관계대명사 <b>which</b>가 앞선 내용(조직적 배제에 대한 예방 조치를 취하는 것)을 받아 주격으로 쓰였습니다.<br>
+            <b>[핵심 어휘]</b> <b>precaution</b> 예방 조치 | <b>business</b> 사업, 기업 경영
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (예방 부재와 기본 반응 → 적응 실패와 소통 단절 → 악순환 증폭과 경영상 예방 촉구)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PROBLEM & ATTEMPT] 무관심과 적응 시도</span>
+        <h4>조직적 배제의 방치와 기본적 욕구 회복</h4>
+        <p>조직 심리학자들의 무관심으로 배제 예방책이 부재하다. 위협을 느낀 개인은 소속감과 자존감을 높이는 긍정적 사회적 행동을 통해 배제 위험을 낮추려 시도한다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[FAILURE & RETREAT] 적응 실패의 부작용</span>
+        <h4>소통 단절과 조직 기여도 감소</h4>
+        <p>그러나 집단 적응에 실패하면 더 큰 배제에 직면한다. 배제된 직원은 의사소통과 사회적 활동에서 멀어지게 되고, 조직에 대한 실질적 기여도가 급격히 떨어진다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[VICIOUS CYCLE] 악순환과 비즈니스 처방</span>
+        <h4>배제의 가속화와 성과 붕괴 방지</h4>
+        <p>기여도 저하는 배제를 다시 심화시켜 직원의 성과를 파괴하는 악순환을 형성한다. 기업 경영의 파국을 막기 위해 조직 차원의 사전 예방 조치(precautions)가 필수적이다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> The likelihood that individuals who try to adapt to positive social behaviors will experience organizational exclusion [decrease / decreases].</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 바로 앞의 복수명사 social behaviors나 individuals를 주어로 착각하면 안 됩니다. 문장 전체의 핵심 주어는 단수명사인 'The likelihood'입니다.">decrease</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 긴 동격절(that ~ exclusion)의 수식을 받는 문장의 주어는 단수명사인 'The likelihood'이므로 단수동사 'decreases'가 어법상 정확합니다.">decreases</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> Precautions need to [take / be taken] regarding organizational exclusion, which is very important for business.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 주어인 예방 조치(Precautions)는 스스로 취하는 것이 아니라 사람에 의해 '취해지는' 대상이므로 능동형 take는 오류입니다.">take</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 주어 Precautions가 수동적 대상이므로 to부정사의 수동형인 'to be taken'이 와야 올바릅니다. (take precautions의 수동 전환)">be taken</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        Exclusion is a state that is ignored by organization psychologists, making it possible that precautions are not taken. Individuals react to organizational exclusion by trying to strengthen their basic needs. Positive social behaviors develop belonging, so the likelihood of experiencing exclusion <b>① decreases</b> for those who adapt. However, individuals may face more exclusion when they <b>② fail</b> to adapt to a group. When excluded individuals grow away from communication, their contribution to the organization may <b>③ diminish</b>. When this situation is not avoided, exclusion increases even more and strongly affects employee performance in a <b>④ constructive</b> way. Therefore, precautions need to be taken regarding organizational exclusion, which is <b>⑤ critical</b> for business.
+      </div>
+      <div class="exam-choices">
+        ① decreases &nbsp;&nbsp;&nbsp;&nbsp; ② fail &nbsp;&nbsp;&nbsp;&nbsp; ③ diminish &nbsp;&nbsp;&nbsp;&nbsp; ④ constructive &nbsp;&nbsp;&nbsp;&nbsp; ⑤ critical
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (constructive → negative 또는 destructive)</b><br>
+          <b>해설:</b> 배제된 직원이 소통에서 멀어지고 기여도가 떨어지면 배제가 더욱 증가하여 직원의 업무 성과에 매우 '부정적인(negative)' 방식으로 영향을 미친다. 따라서 '건설적인'을 의미하는 constructive는 전체 논리 흐름과 정반대이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        Organizational exclusion is frequently neglected in corporate management, leaving workplaces vulnerable without systematic safeguards. While some employees successfully mitigate social threats by adopting prosocial behaviors, those incapable of integrating into group norms confront escalating ostracism. As isolated workers gradually disengage from internal networks and collaborative routines, their measurable input to organizational goals deteriorates sharply. Left unaddressed, this alienation creates a damaging feedback loop where diminished performance triggers even harsher marginalization. Consequently, firms must implement proactive countermeasures because unmitigated workplace exclusion ultimately ____________________________________.
+      </div>
+      <div class="exam-choices">
+        ① encourages employees to pursue individual leadership initiatives<br>
+        ② undermines employee performance and damages overall business viability<br>
+        ③ promotes healthy competition among diverse departmental teams<br>
+        ④ standardizes informal communication channels across the enterprise<br>
+        ⑤ shields newly hired staff from unnecessary workplace stress
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          <b>해설:</b> 원문의 'strongly affects the performance of the employee in a negative way'와 'very important for business'를 종합 재진술한 선택지이다. 조직적 배제가 방치되면 악순환을 통해 직원의 업무 성과를 갉아먹고 기업의 경영 활동에 심대한 타격을 입힌다는 내용이므로 ②가 가장 적절하다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (순서 배열)</h4>
+      <div class="exam-passage">
+        Exclusion is a state that is ignored by the organization psychologists. Therefore, it is possible that precautions regarding organizational exclusion are not taken. Individuals react to organizational exclusion by trying to strengthen their basic needs, which are threatened.<br><br>
+        (A) When this situation is not avoided, exclusion increases even more and strongly affects the performance of the employee in a negative way. Precautions need to be taken regarding organizational exclusion, which is very important for business.<br>
+        (B) Positive social behaviors develop belonging and self-respect. The likelihood that individuals who try to adapt to positive social behaviors will experience organizational exclusion decreases.<br>
+        (C) However, individuals may be faced with more exclusion when they cannot adapt to a group. When excluded individuals grow away from communication and social activities, their contribution to the organization they are in may decrease.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 글에서 위협받는 기본 욕구를 강화하려는 개인의 반응을 제시한 후, (B)에서 긍정적 사회적 행동을 통한 소속감 형성 및 배제 위험 감소 노력을 먼저 서술한다. 이어 (C)에서 역접 'However'를 통해 집단 적응에 실패했을 때 나타나는 더 큰 배제와 소통 단절, 기여도 감소를 제시하고, (A)에서 'When this situation is not avoided'로 (C)의 기여도 감소 상황을 받아 성과 악화 악순환과 비즈니스 차원의 예방책 촉구로 마무리하는 (B) - (C) - (A) 순서가 가장 논리적이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "긍정적인 사회적 행동에 적응하려고 노력하는 개인들이 조직적 배제를 경험할 가능성은 감소한다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 'The likelihood that ~' 동격 명사절 및 주격 관계대명사절을 정확히 결합할 것.<br>
+        2. 주어와 본동사의 수일치에 유의하여 아래 단어들을 모두 한 번씩만 변형 없이 사용할 것.<br>
+        [ will experience organizational exclusion / The likelihood / who try to adapt to positive social behaviors / that / decreases / individuals ]<br>
+        3. 단어의 추가나 어형 변화 없이 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>The likelihood that individuals who try to adapt to positive social behaviors will experience organizational exclusion decreases.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 주어부: The likelihood that [individuals (who try to adapt to positive social behaviors) will experience organizational exclusion] 구조를 바르게 완성했는가?<br>
+          - 술어부: 긴 수식어구를 건너뛰어 문장의 주어인 The likelihood에 일치하는 단수 본동사 decreases를 문미에 올바르게 배치했는가?
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
