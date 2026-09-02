@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2026년 9월 학평 36번 워크북 | 스코어학원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2026년 9월)</span>
+    </div>
+    <div class="meta-badge">9월 학평 36번 · 순서배열</div>
+    <h1 class="title">Anticipatory Habitat Selection:<br><span>Securing Future Reproductive Needs</span></h1>
+    <p class="header-lead">동물은 현재보다 미래의 번식 요구를 예측하여 최적의 서식지를 선택한다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 선제적 서식지 선택(Anticipatory Habitat Selection) 및 번식 적합도(Reproductive Fitness) — 동물이 현재 시점의 먹이 풍부도에만 의존하지 않고, 미래 번식기 새끼 양육에 필요한 환경적 자원을 예측하여 영역을 선점하는 진화생물학적 적응 기제.</li>
+        <li><b>[배경 맥락]:</b> 북미 가문비나무 숲에 서식하는 검은뺨솔새(black-throated green warbler)는 초여름에 인접한 흰가문비나무 숲보다 먹이가 적음에도 붉은가문비나무 숲에 우선적으로 텃자리를 잡음. 이는 둥지가 지어지고 새끼가 부화하는 시점에 붉은가문비나무 숲의 먹이 획득이 훨씬 수월해지기 때문임.</li>
+        <li><b>[논리 요약]:</b> 생물학적 성공의 핵심 요인인 서식지 선택은 현재의 편의를 넘어 미래의 양육 필요를 정확히 예측하는 동물의 놀라운 선견지명에 의해 결정된다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      The ability to select a set of surroundings suitable for foraging, shelter from predators, and the availability of mates is one of the most important determinants of biological success ― measured as survival to reproductive age and the production of offspring. Many studies have shown that not only do animals have a remarkable ability to seek out the best available locations for the necessities of life, but that they are able to anticipate how a setting will serve their future needs. For example, the black-throated green warbler, a small songbird that nests in spruce forests of eastern North America, establishes territories preferentially among the red spruce trees early in the summer months, even though these trees offer less food than the neighboring white spruce trees. Later, though, when nests are built and hungry baby birds need nourishment, it is the red spruce forest that offers the easier pickings. Somehow, the warbler has been guided to settle in locations that will suit its future parenting needs better than its present ones.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 동물은 현재 풍부한 먹이보다 훗날 새끼를 기를 때 필요한 미래의 자원 조건을 예측하여 서식지를 우선적으로 선택함으로써 번식과 진화적 성공을 달성한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+
+      <!-- S1 -->
+      <div class="chunk-item">
+        <p class="chunk-en">The ability to select a set of surroundings suitable for foraging, shelter from predators, and the availability of mates is <mark>one of the most important determinants of biological success</mark> ― measured as survival to reproductive age and the production of offspring.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 일련의 주변 환경을 선택하는 능력은 / 먹이 찾기, 포식자로부터의 피난처, 짝의 가용성에 적합한 / 생물학적 성공의 가장 중요한 결정 요인 중 하나이다 / 생식 연령까지의 생존과 자손 생산으로 측정되는.<br>
+            <b>[구문 포인트]</b> 주어의 핵은 단수명사 <b>The ability</b>이므로 단수동사 <b>is</b>가 호응하며, 대시(―) 뒤의 과거분사구 <b>measured as ~</b>가 생물학적 성공(biological success)의 측정 기준을 설명합니다.<br>
+            <b>[핵심 어휘]</b> <b>foraging</b> 먹이 찾기, 수렵 채집 | <b>predator</b> 포식자 | <b>availability</b> 가용성, 얻을 수 있음 | <b>determinant</b> 결정 요인 | <b>offspring</b> 자손
+          </div>
+        </details>
+      </div>
+
+      <!-- S2 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Many studies have shown that <mark>not only do animals have a remarkable ability to seek out the best available locations</mark> for the necessities of life, but that they are able to anticipate <mark>how a setting will serve their future needs</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 많은 연구들은 보여주었다 / 동물이 삶의 필수 요소를 위해 이용 가능한 최고의 장소를 찾아내는 놀라운 능력을 가지고 있을 뿐만 아니라 / 한 환경이 어떻게 그들의 미래 필요를 충족시킬 것인지를 예측할 수 있다는 것을.<br>
+            <b>[구문 포인트]</b> 부정어구 <b>not only</b>가 절 앞으로 도치되어 <b>조동사 do + 주어 animals + 동사원형 have</b>의 의문문 어순 도치가 발생하였으며, <b>not only that절 ~, but that절 ~</b>의 명사절 병렬 구조입니다.<br>
+            <b>[핵심 어휘]</b> <b>seek out</b> 찾아내다 | <b>necessities</b> 필수 요소, 필수품 | <b>anticipate</b> 예측하다, 내다보다
+          </div>
+        </details>
+      </div>
+
+      <!-- S3 -->
+      <div class="chunk-item">
+        <p class="chunk-en">For example, the black-throated green warbler, a small songbird that nests in spruce forests of eastern North America, <mark>establishes territories preferentially among the red spruce trees</mark> early in the summer months, even though these trees offer less food than the neighboring white spruce trees.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어, 검은뺨솔새는 / 북미 동부 가문비나무 숲에 둥지를 트는 작은 명금류인 / 초여름 몇 달 동안 붉은가문비나무들 사이에 우선적으로 영역을 구축한다 / 비록 이 나무들이 이웃한 흰가문비나무들보다 더 적은 먹이를 제공할지라도.<br>
+            <b>[구문 포인트]</b> 주어 the black-throated green warbler 뒤에 동격 명사구(a small songbird that nests ~)가 삽입되었고, 양보 부사절 <b>even though</b> 내에 비교급 표현(less food than ~)이 사용되었습니다.<br>
+            <b>[핵심 어휘]</b> <b>warbler</b> 솔새 | <b>territory</b> 영역, 텃자리 | <b>preferentially</b> 우선적으로, 특혜적으로 | <b>spruce</b> 가문비나무
+          </div>
+        </details>
+      </div>
+
+      <!-- S4 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Later, though, when nests are built and hungry baby birds need nourishment, <mark>it is the red spruce forest that offers the easier pickings</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나 나중에, / 둥지가 지어지고 배고픈 어린 새들이 영양을 필요로 할 때, / 더 쉬운 먹잇감을 제공하는 것은 바로 붉은가문비나무 숲이다.<br>
+            <b>[구문 포인트]</b> <b>it is ~ that 강조구문</b>으로 부사구/명사구인 <b>the red spruce forest</b>를 강조하고 있습니다. (easier pickings를 제공하는 바로 그 주체임을 부각)<br>
+            <b>[핵심 어휘]</b> <b>nourishment</b> 영양, 자양분 | <b>easy pickings</b> 쉽게 얻을 수 있는 것, 쉬운 먹잇감
+          </div>
+        </details>
+      </div>
+
+      <!-- S5 -->
+      <div class="chunk-item">
+        <p class="chunk-en">Somehow, the warbler <mark>has been guided to settle in locations that will suit its future parenting needs better than its present ones</mark>.</p>
+        <details>
+          <summary>해석 / 구문 / 어휘 보기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 어떻게든, 그 솔새는 장소들에 정착하도록 이끌려 온 것이다 / 자신의 현재 필요보다 미래의 양육 필요에 더 잘 부합할.<br>
+            <b>[구문 포인트]</b> 현재완료 수동태 <b>has been guided to V</b>(~하도록 인도되어 왔다)가 쓰였으며, 주격 관계대명사절 내의 부정대명사 <b>ones</b>는 앞의 복수명사 needs를 지칭합니다.<br>
+            <b>[핵심 어휘]</b> <b>guide</b> 인도하다, 이끌다 | <b>settle</b> 정착하다 | <b>suit</b> 적합하다, 부합하다 | <b>parenting</b> 양육
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (일반 진술 및 미래 예측 역량 → 검은뺨솔새의 역설적 선택 → 번식 본능과 적응적 결론)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[GENERAL PREMISE] 진화적 서식지 선택</span>
+        <h4>생물학적 성공과 미래 필요의 예측</h4>
+        <p>먹이, 은신처, 짝의 가용성에 맞는 서식지 선택은 생존과 자손 번식의 핵심 결정 요인이다. 동물은 현재의 필수품뿐만 아니라 서식지가 자신의 '미래 필요(future needs)'를 어떻게 충족할지 예측하는 역량을 지닌다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[EXEMPLIFICATION] 검은뺨솔새의 선택</span>
+        <h4>초여름의 부족과 늦여름의 풍요</h4>
+        <p>검은뺨솔새는 초여름에 먹이가 더 풍부한 흰가문비나무 대신 먹이가 적은 붉은가문비나무 숲에 영역을 구축한다. 그러나 둥지가 지어지고 새끼가 부화하는 시기가 오면 바로 그 붉은가문비나무가 훨씬 수월한 먹이를 제공한다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 번식 지향적 적응</span>
+        <h4>현재의 편의보다 미래의 양육 우선</h4>
+        <p>솔새는 현재 시점의 먹이 획득 편의성보다, 새끼들을 먹여 살려야 하는 미래의 부모 역할(parenting needs)에 더 잘 부합하는 장소를 선점하도록 진화적으로 유도된 것이다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q"><b>Q1.</b> Many studies have shown that not only [animals have / do animals have] a remarkable ability to seek out the best locations, but that they are able to anticipate future needs.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 부정어 not only가 절의 맨 앞에 위치했으므로 반드시 '조동사/be동사 + 주어 + 일반동사'의 도치 구조를 취해야 합니다.">animals have</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 부정어구(not only)가 강조를 위해 문두로 이동하면서 일반동사 have에 대응하는 조동사 do가 주어 앞으로 도치된 'do animals have'가 올바릅니다.">do animals have</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q"><b>Q2.</b> Later, though, when nests are built, it is the red spruce forest [that / which] offers the easier pickings.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 'it is ~ that 강조구문'으로 강조 대상인 명사구 the red spruce forest를 감싸고 있으므로 접속사 역할을 하는 'that'이 가장 전형적이고 올바릅니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 사물 선행사 강조 시 구어에서 which가 쓰이기도 하지만, 정통 문법의 'it is ... that' 강조구문 표준 틀에서는 that을 선택해야 합니다.">which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+
+    <!-- 문제 1: 문맥상 부적절한 어휘 파악 -->
+    <div class="exam-item">
+      <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 파악)</h4>
+      <div class="exam-passage">
+        The ability to select surroundings suitable for foraging and shelter is one of the most important determinants of biological success. Studies have shown that animals are able to <b>① anticipate</b> how a setting will serve their future needs. For example, the black-throated green warbler establishes territories preferentially among the red spruce trees early in the summer, even though these trees offer <b>② less</b> food than neighboring white spruce trees. Later, when baby birds need nourishment, it is the red spruce forest that offers the <b>③ easier</b> pickings. Somehow, the warbler has been guided to settle in locations that will suit its future parenting needs <b>④ worse</b> than its <b>⑤ present</b> ones.
+      </div>
+      <div class="exam-choices">
+        ① anticipate &nbsp;&nbsp;&nbsp;&nbsp; ② less &nbsp;&nbsp;&nbsp;&nbsp; ③ easier &nbsp;&nbsp;&nbsp;&nbsp; ④ worse &nbsp;&nbsp;&nbsp;&nbsp; ⑤ present
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ④ (worse → better)</b><br>
+          <b>해설:</b> 검은뺨솔새가 초여름에 먹이가 부족한 붉은가문비나무를 선택하는 이유는 나중에 새끼가 태어났을 때 먹이를 훨씬 더 쉽게 구할 수 있기 때문이다. 즉 현재의 필요보다 미래의 양육 필요에 '더 잘(better)' 부합하는 장소를 고른 것이므로 ④의 worse(더 못하게)는 글의 결론과 정반대이다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 2: 빈칸 추론 -->
+    <div class="exam-item">
+      <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+      <div class="exam-passage">
+        The survival and reproductive fitness of an animal fundamentally depend on its capability to secure an optimal living space. Intriguingly, research demonstrates that habitat selection involves far more than merely satisfying immediate hunger. As observed in migratory songbirds that settle in forests providing modest resources at first but abundance during the brooding period, creatures possess an astonishing ecological foresight. Rather than being confined to the comfort of the moment, animals demonstrate the sophisticated behavioral adaptation of ____________________________________.
+      </div>
+      <div class="exam-choices">
+        ① choosing habitats that align with forthcoming breeding demands rather than current convenience<br>
+        ② defending expansive territories regardless of the actual density of competitor species<br>
+        ③ adjusting their nesting schedules flexibly according to unexpected climatic anomalies<br>
+        ④ prioritizing instantaneous foraging efficiency over long-term parental investments<br>
+        ⑤ relying exclusively on social learning from experienced elder birds to locate food
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          <b>해설:</b> 원문의 'settle in locations that will suit its future parenting needs better than its present ones'를 학술적으로 재진술한 선택지이다. 현재의 즉각적인 편의나 먹이보다 다가올 번식 요구(forthcoming breeding demands)에 부합하는 서식지를 선택한다는 내용이 글 전체의 요지이므로 ①이 가장 적절하다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오. (문장 삽입)</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        Later, though, when nests are built and hungry baby birds need nourishment, it is the red spruce forest that offers the easier pickings.<br><br>
+        Many studies have shown that animals are able to anticipate how a setting will serve their future needs. ( ① ) For example, the black-throated green warbler, a small songbird that nests in spruce forests of eastern North America, establishes territories preferentially among the red spruce trees early in the summer months. ( ② ) This happens even though these trees offer less food than the neighboring white spruce trees. ( ③ ) Somehow, the warbler has been guided to settle in locations that will suit its future parenting needs better than its present ones. ( ④ ) Such foresight in habitat selection represents one of the most remarkable evolutionary adaptations for reproductive success. ( ⑤ )
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> ② 뒤 문장에서 '초여름에 붉은가문비나무가 먹이가 더 적음에도 영역을 구축한다'는 역설적 현상을 언급한 후, 주어진 문장의 'Later, though(그러나 나중에)'가 시간의 흐름과 대조를 형성하며 둥지를 틀고 새끼를 먹일 때는 붉은가문비나무가 더 쉬운 먹이를 제공한다는 반전을 설명한다. 이어 ③ 뒤의 'Somehow, the warbler has been guided ~'가 이를 종합하여 현재보다 미래의 양육 필요를 고려한 선택이라고 요약하므로 위치는 ③이 정확하다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 문제 4: 서술형 조건영작 -->
+    <div class="exam-item">
+      <h4>[변형 4] 다음 우리말 해석에 맞도록 &lt;조건&gt;에 제시된 단어들을 바르게 배열하여 문장을 완성하시오. (서술형)</h4>
+      <div class="exam-passage">
+        <b>[우리말 해석]</b><br>
+        "어찌 된 일인지, 그 솔새는 자신의 현재 필요보다 미래의 양육 필요에 더 잘 부합할 장소들에 정착하도록 이끌려 온 것이다."<br><br>
+        <b>&lt;조건&gt;</b><br>
+        1. 현재완료 수동태(has been guided)와 비교급 구문(better than)을 정확히 활용할 것.<br>
+        2. 아래 제시된 단어들을 반드시 모두 한 번씩만 변형 없이 사용할 것.<br>
+        [ its future parenting needs / to settle in locations / has been guided / that will suit / better than / its present ones / the warbler / Somehow, ]<br>
+        3. 어형 변화 없이 온전한 한 문장으로 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[모범 답안]</b><br>
+          <b>Somehow, the warbler has been guided to settle in locations that will suit its future parenting needs better than its present ones.</b><br><br>
+          <b>[채점 기준 및 해설]</b><br>
+          - 주절 구조: Somehow, the warbler has been guided to settle in locations를 바르게 배열했는가?<br>
+          - 관계대명사절 및 비교급: that will suit its future parenting needs better than its present ones의 어순을 오차 없이 결합했는가?
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
