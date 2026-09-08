@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 3월 학평 34번 워크북 | 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 전국연합학력평가 (2024년 3월)</span>
+    </div>
+    <div class="meta-badge">3월 학평 34번 · 빈칸 추론</div>
+    <h1 class="title">The Pitfall of Proxies<br><span>Measurable vs Meaningful</span></h1>
+    <p class="header-lead">측정 가능한 지표에 대한 집착이 본질적 목표를 왜곡한다</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 대용 지표의 함정(The Problem of Proxies)과 굿하트의 법칙(Goodhart's Law)</li>
+        <li><b>[배경 맥락]:</b> 정량화하기 쉬운 단순 지표(proxy)를 성과 척도로 삼을 때, 진짜 중요하지만 수치화하기 힘든 궁극적 가치를 소홀히 하게 되는 인지적 편향</li>
+        <li><b>[논리 요약]:</b> 기술자들은 측정 가능한 데이터에 의존하지만, 단순 지표는 진정한 문제 해결의 착각을 일으켜 의미 있는 가치 대신 측정 가능한 것만을 대체하는 문제를 유발함</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Technologists are always on the lookout for quantifiable metrics. Measurable inputs to a model are their lifeblood, and like a social scientist, a technologist needs to identify concrete measures, or “proxies,” for assessing progress. This need for quantifiable proxies produces a bias toward measuring things that are easy to quantify. But simple metrics can take us further away from the important goals we really care about, which may require complicated metrics or be extremely difficult, or perhaps impossible, to reduce to any measure. And when we have imperfect or bad proxies, we can easily fall under the illusion that we are solving for a good end without actually making genuine progress toward a worthy solution. The problem of proxies results in technologists frequently substituting what is measurable for what is meaningful. As the saying goes, “Not everything that counts can be counted, and not everything that can be counted counts.”
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 수치화하기 쉬운 대용 지표에만 매달리는 태도는 진정한 발전이라는 착각을 낳고, 궁극적으로 의미 있는 본질 대신 측정 가능한 껍데기만을 추구하게 만든다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">Technologists are always on the lookout / for quantifiable metrics.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 기술자들은 항상 찾고 있다 / 정량화할 수 있는 측정 기준들을.</p>
+            <p><b>[구문 포인트]</b> 'be on the lookout for ~'는 '~을 찾다, 경계하며 살피다'라는 숙어적 표현임. 형용사 'quantifiable'은 명사 'metrics'를 수식함.</p>
+            <p><b>[핵심 어휘]</b> technologist(기술자), on the lookout for(~을 찾는), quantifiable(수량화할 수 있는, 정량화 가능한), metric(측정 기준, 지표)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">Measurable inputs to a model / are their lifeblood, / and like a social scientist, / a technologist needs to identify / concrete measures, or “proxies,” / for assessing progress.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 모형에 대한 측정 가능한 입력값들은 / 그들의 생명선이다 / 그리고 사회 과학자처럼 / 기술자는 확인할 필요가 있다 / 구체적인 측정치, 즉 "대용 지표"를 / 진척도를 평가하기 위한.</p>
+            <p><b>[구문 포인트]</b> 등위접속사 and로 연결된 중문 구조. 앞 문장의 주어는 복수명사구 'Measurable inputs to a model'이므로 복수동사 are가 쓰임. 뒤 문장의 'concrete measures'와 'proxies'는 동격(or) 관계이며, 전치사 for 뒤에 동명사 assessing이 목적어로 쓰임.</p>
+            <p><b>[핵심 어휘]</b> measurable(측정 가능한), input(입력값), lifeblood(생명선, 핵심), identify(확인하다, 식별하다), concrete(구체적인), proxy(대용물, 대용 지표), assess(평가하다), progress(진척, 발전)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">This need for quantifiable proxies / produces a bias / toward measuring things / that are easy to quantify.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 정량화할 수 있는 대용 지표에 대한 이러한 요구는 / 편향을 낳는다 / 것들을 측정하는 쪽으로의 / 수량화하기 쉬운.</p>
+            <p><b>[구문 포인트]</b> 주어의 핵이 단수명사 'need'이므로 단수동사 'produces'가 사용됨. 전치사 toward 뒤에 동명사 measuring이 왔으며, 'that are easy to quantify'는 선행사 things를 수식하는 주격 관계대명사절임. 형용사 easy 뒤의 'to quantify'는 형용사를 수식하는 부사적 용법임.</p>
+            <p><b>[핵심 어휘]</b> bias(편향, 치우침), quantify(수량화하다, 정량화하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">But simple metrics can take us further away / from the important goals / we really care about, / which may require complicated metrics / or be extremely difficult, / or perhaps impossible, / to reduce to any measure.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나 단순한 지표들은 우리를 더 멀어지게 할 수 있다 / 중요한 목표들로부터 / 우리가 진정으로 신경 쓰는 / 그런데 그것들은 복잡한 지표를 필요로 하거나 / 극도로 어려울 수도 있다 / 혹은 어쩌면 불가능할 수도 있다 / 어떤 측정치로 축약하기에.</p>
+            <p><b>[구문 포인트]</b> 'the important goals' 뒤에 목적격 관계대명사(which/that)가 생략되어 [we really care about]이 수식함. 콤마 뒤의 관계대명사 계속적 용법 'which'는 선행사인 the important goals를 가리키며, 조동사 may 뒤에 'require ~'와 'be ~'가 병렬 구조를 이룸. 'to reduce ~'는 difficult와 impossible을 수식하는 부사적 용법임.</p>
+            <p><b>[핵심 어휘]</b> further away from(~로부터 더 멀리), care about(~에 신경 쓰다), complicated(복잡한), extremely(극도로), reduce A to B(A를 B로 축약/환원하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">And when we have imperfect or bad proxies, / we can easily fall under the illusion / that we are solving for a good end / without actually making genuine progress / toward a worthy solution.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그리고 우리가 불완전하거나 잘못된 대용 지표를 가질 때, / 우리는 쉽게 착각에 빠질 수 있다 / 좋은 목적을 위해 문제를 풀고 있다는 / 실제로 진정한 진전을 이루지 못한 채 / 가치 있는 해결책을 향한.</p>
+            <p><b>[구문 포인트]</b> 'the illusion that ~' 구조에서 that은 뒤에 완전한 절(we are solving for a good end)을 이끄는 동격의 접속사임. 전치사 without 뒤에 동명사 making이 연결되어 부사적 조건을 형성함.</p>
+            <p><b>[핵심 어휘]</b> imperfect(불완전한), illusion(착각, 환상), good end(좋은 목적, 선한 결과), genuine(진정한), worthy(가치 있는)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">The problem of proxies results in / technologists frequently substituting / what is measurable / for what is meaningful.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 대용 지표의 문제는 초래한다 / 기술자들이 빈번하게 대체하는 것을 / 측정 가능한 것을 / 의미 있는 것 대신에.</p>
+            <p><b>[구문 포인트]</b> 'results in(~을 초래하다)'의 전치사 in 뒤에 오는 동명사는 'substituting'이며, 바로 앞의 'technologists'는 동명사의 의미상 주어임. 'substitute A for B'는 'B 대신 A를 대체하다/사용하다'의 의미임. 두 개의 what은 모두 선행사를 포함하는 관계대명사(명사절)로 쓰임.</p>
+            <p><b>[핵심 어휘]</b> result in(~을 낳다, 초래하다), substitute A for B(B 대신 A를 쓰다/대체하다), meaningful(의미 있는)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">As the saying goes, / “Not everything that counts can be counted, / and not everything that can be counted counts.”</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 속담에서 말하듯이, / "중요한 모든 것이 셀 수 있는 것은 아니며, / 셀 수 있는 모든 것이 중요한 것도 아니다."</p>
+            <p><b>[구문 포인트]</b> 'Not everything ~'은 부분 부정("모두가 ~인 것은 아니다")을 나타냄. 자동사 count는 "중요하다(=matter)"라는 뜻으로 쓰였고, 수동태 can be counted는 "세어지다, 계산되다"라는 뜻으로 쓰여 단어의 다의성을 활용한 대조 격언임.</p>
+            <p><b>[핵심 어휘]</b> as the saying goes(속담/격언에 이르기를), count (자)중요하다 / (타)세다, 계산하다</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (정량 지표의 필요성 → 단순 지표의 왜곡과 착각 → 본질적 가치 대체 문제)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[STAGE 1] 전제 및 현상</span>
+        <h4>정량적 대용 지표의 추구</h4>
+        <p>기술자들은 모형 검증과 진척 평가를 위해 수치화 가능한 대용 지표(proxies)를 필수적으로 요구하며, 이는 측정하기 쉬운 것에 집중하는 편향을 유발함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[STAGE 2] 문제 제기 및 위험성</span>
+        <h4>단순 지표의 괴리와 착각</h4>
+        <p>진짜 중요한 목표는 단순 수치화가 불가능한 경우가 많음. 불완전한 지표는 실제 진전 없이도 가치 있는 해결책을 내고 있다는 위험한 착각(illusion)을 조성함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[STAGE 3] 귀결 및 격언 비판</span>
+        <h4>측정 가능한 것과 의미의 전도</h4>
+        <p>기술자들은 '의미 있는 것' 대신 '측정 가능한 것'을 대체해버리는 우를 범함. 중요한 것이 다 세어질 수 없고, 세어지는 것이 다 중요한 것은 아님.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. The problem of proxies results in technologists frequently [substituting / substituted] what is measurable for what is meaningful.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 전치사 in의 목적어 역할을 하는 동명사 'substituting'이 올바릅니다. 앞의 technologists는 동명사의 의미상 주어이며, 부사 frequently가 동명사를 수식하고 있습니다.">substituting</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! results in의 in은 전치사이므로 목적어로 동명사가 와야 합니다. substituted(과거분사)가 오면 문법적 목적어가 성립하지 않습니다.">substituted</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. And when we have imperfect or bad proxies, we can easily fall under the illusion [which / that] we are solving for a good end without actually making genuine progress toward a worthy solution.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답! 뒤에 이어지는 절(we are solving for a good end)이 주어, 동사, 전치사구를 모두 갖춘 완전한 문장이므로 추상명사 the illusion과 동격을 이루는 접속사 'that'이 적절합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답! 관계대명사 which 뒤에는 주어나 목적어가 빠진 불완전한 문장이 와야 합니다. 뒤따르는 절이 완전하므로 동격 접속사 that을 써야 합니다.">which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <!-- 변형 1: 문맥상 어휘 추론 -->
+    <div class="exam-item">
+      <h4>[변형 1 · 문맥상 어휘] 다음 밑줄 친 ⓐ~ⓔ 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Technologists are always on the lookout for quantifiable metrics. Measurable inputs to a model are their lifeblood, and like a social scientist, a technologist needs to identify ⓐ<u>concrete</u> measures, or “proxies,” for assessing progress. This need for quantifiable proxies produces a ⓑ<u>bias</u> toward measuring things that are easy to quantify. But simple metrics can take us ⓒ<u>closer</u> to the important goals we really care about, which may require complicated metrics or be extremely difficult, or perhaps impossible, to reduce to any measure. And when we have imperfect or bad proxies, we can easily fall under the ⓓ<u>illusion</u> that we are solving for a good end without actually making genuine progress toward a worthy solution. The problem of proxies results in technologists frequently ⓔ<u>substituting</u> what is measurable for what is meaningful.
+      </div>
+      <div class="exam-choices">
+        ① ⓐ &nbsp;&nbsp;&nbsp;&nbsp; ② ⓑ &nbsp;&nbsp;&nbsp;&nbsp; ③ ⓒ &nbsp;&nbsp;&nbsp;&nbsp; ④ ⓓ &nbsp;&nbsp;&nbsp;&nbsp; ⑤ ⓔ
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ (ⓒ closer → further away)</b><br>
+          <b>해설:</b> 역접 접속사 But 뒤에서 단순한 지표들은 우리가 진정으로 신경 쓰는 중요한 목표들로부터 우리를 "더 멀어지게(take us further away)" 할 수 있다는 비판적 맥락이 이어져야 합니다. 진짜 중요한 목표는 수치화하기 어렵기 때문에 단순 지표에 의존하면 목표로부터 멀어지므로 ⓒ의 closer(더 가까이)는 문맥상 반의어입니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 2: 글의 순서 배열 -->
+    <div class="exam-item">
+      <h4>[변형 2 · 글의 순서] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        Technologists are always on the lookout for quantifiable metrics. Measurable inputs to a model are their lifeblood, and like a social scientist, a technologist needs to identify concrete measures, or “proxies,” for assessing progress.<br><br>
+        (A) The problem of proxies results in technologists frequently substituting what is measurable for what is meaningful. As the saying goes, “Not everything that counts can be counted, and not everything that can be counted counts.”<br>
+        (B) This need for quantifiable proxies produces a bias toward measuring things that are easy to quantify. But simple metrics can take us further away from the important goals we really care about, which may require complicated metrics or be extremely difficult, or perhaps impossible, to reduce to any measure.<br>
+        (C) And when we have imperfect or bad proxies, we can easily fall under the illusion that we are solving for a good end without actually making genuine progress toward a worthy solution.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ② (B) - (A) - (C) &nbsp;&nbsp;&nbsp;&nbsp; ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B) &nbsp;&nbsp;&nbsp;&nbsp; ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③ ((B) - (C) - (A))</b><br>
+          <b>해설:</b> 주어진 글에서 대용 지표(proxies)의 필요성을 제시한 후, (B)에서 '이러한 요구(This need)'가 정량화하기 쉬운 것만을 측정하려는 편향을 낳고 목표에서 멀어지게 할 수 있다는 한계를 밝힙니다. 이어 (C)에서 불완전한 지표를 쓸 때 빠지는 착각(illusion)을 첨언(And)하고, (A)에서 대용 지표의 문제점을 최종적으로 정리하며 격언으로 결론을 짓는 (B) - (C) - (A)가 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 3: 문장 삽입 -->
+    <div class="exam-item">
+      <h4>[변형 3 · 문장 삽입] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b><br>
+        And when we have imperfect or bad proxies, we can easily fall under the illusion that we are solving for a good end without actually making genuine progress toward a worthy solution.<br><br>
+        Technologists are always on the lookout for quantifiable metrics. Measurable inputs to a model are their lifeblood, and like a social scientist, a technologist needs to identify concrete measures, or “proxies,” for assessing progress. ( ① ) This need for quantifiable proxies produces a bias toward measuring things that are easy to quantify. ( ② ) But simple metrics can take us further away from the important goals we really care about, which may require complicated metrics or be extremely difficult, or perhaps impossible, to reduce to any measure. ( ③ ) The problem of proxies results in technologists frequently substituting what is measurable for what is meaningful. ( ④ ) As the saying goes, “Not everything that counts can be counted, and not everything that can be counted counts.” ( ⑤ )
+      </div>
+      <div class="exam-choices">
+        ① &nbsp;&nbsp;&nbsp;&nbsp; ② &nbsp;&nbsp;&nbsp;&nbsp; ③ &nbsp;&nbsp;&nbsp;&nbsp; ④ &nbsp;&nbsp;&nbsp;&nbsp; ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          <b>해설:</b> 주어진 문장은 불완전한 대용 지표(imperfect or bad proxies)로 인해 문제를 잘 해결하고 있다는 착각에 빠진다는 내용을 담고 있습니다. 이는 단순 지표의 한계를 설명한 ② 뒤의 문장에 이어지는 부연(And)이며, 바로 뒤의 문장인 "The problem of proxies(대용 지표의 문제점)"라는 지칭어로 집약 연결되므로 ③번 자리가 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- 변형 4: 조건부 서술형 영작 -->
+    <div class="exam-item">
+      <h4>[변형 4 · 서술형] 다음 글의 빈칸에 들어갈 말을 [조건]에 맞추어 완전한 영어 문장으로 영작하시오.</h4>
+      <div class="exam-passage">
+        Technologists tend to focus heavily on easily quantifiable metrics. However, relying on inadequate proxies leads to a serious issue. The problem of proxies results in __________________________________________________.
+      </div>
+      <div class="exam-choices">
+        <b>[조건]</b><br>
+        1. 'substitute', 'technologist', 'meaningful', 'measurable' 단어를 반드시 모두 활용할 것 (필요 시 어형 변화 가능).<br>
+        2. 'result in' 뒤에 연결되는 동명사구 구조(동명사의 의미상 주어 포함)로 작성할 것.<br>
+        3. 관계대명사 'what'을 두 번 포함하여 총 9단어로 완성할 것.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>정답: technologists frequently substituting what is measurable for what is meaningful</b><br>
+          <b>해설:</b> 전치사 in의 목적어로 동명사 substituting을 사용하고, 동명사의 의미상 주어로 technologists를 앞에 배치합니다. 그리고 'B 대신 A를 대체하다'라는 'substitute A for B' 구문과 선행사를 포함하는 관계대명사 what절을 결합하여 문장을 완성합니다. (부사 frequently 생략 시 8단어이므로, 조건 9단어 충족을 위해 frequently 포함: technologists frequently substituting what is measurable for what is meaningful)
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
