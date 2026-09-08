@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>[SKORE] 여명중1 영어 독서수행 워크북 | Diary of a Wimpy Kid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #D97706;
+  --cheese-yellow: #FEF08A;
+  --cheese-dark: #854D0E;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: #FBBF24; }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 8px 4px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--blue);
+  display: block;
+}
+.track-step .s-name { font-size: 11.5px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* Strategy Notice */
+.strategy-box {
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  border-left: 4px solid var(--amber);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+.strategy-box h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--cheese-dark);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.strategy-box p {
+  font-size: 12.5px;
+  color: #78350F;
+  line-height: 1.6;
+}
+
+/* VOCAB GRID */
+.vocab-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.v-btn {
+  background: var(--white);
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.v-btn.active {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+.vocab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+.vocab-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.2s ease;
+}
+.vocab-card.starred {
+  border-left: 4px solid #EF4444;
+  background: #FFFBFB;
+}
+.vocab-word {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.star-tag {
+  color: #EF4444;
+  font-size: 13px;
+}
+.vocab-meaning {
+  font-size: 13px;
+  color: var(--blue);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #EFF6FF;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+.vocab-meaning.hidden-text {
+  background: #E2E8F0;
+  color: #94A3B8;
+  font-weight: 500;
+  font-size: 11px;
+}
+
+/* 2-COLUMN TEXT DECODING */
+.table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+table.decode-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+table.decode-table th {
+  background: #F1F5F9;
+  padding: 12px 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+table.decode-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.7;
+}
+table.decode-table tr:hover {
+  background: #FAF5FF;
+}
+.en-col {
+  width: 52%;
+  font-weight: 600;
+  color: #1E293B;
+  border-right: 1px solid var(--border);
+}
+.ko-col {
+  width: 48%;
+  color: #475569;
+}
+.target-w {
+  background: var(--cheese-yellow);
+  color: var(--cheese-dark);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.p-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: #0369A1;
+  background: #E0F2FE;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+
+/* STEP 3 & 4 CARDS */
+.item-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+.item-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.line-hint {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #0369A1;
+  background: #E0F2FE;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.task-instruction {
+  font-size: 13px;
+  color: #334155;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.cloze-sentence {
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  padding: 12px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1E293B;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+.cloze-blank {
+  display: inline-block;
+  min-width: 90px;
+  border-bottom: 2px solid var(--blue);
+  color: var(--blue);
+  text-align: center;
+  font-weight: 700;
+  padding: 0 4px;
+}
+.q-box {
+  background: #EFF6FF;
+  border-left: 4px solid var(--blue);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1E3A8A;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 10px;
+}
+
+details.ans-toggle {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+details.ans-toggle summary {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--blue);
+  padding: 9px 14px;
+  cursor: pointer;
+  user-select: none;
+}
+.ans-body {
+  padding: 12px 14px;
+  border-top: 1px dashed #BFDBFE;
+  font-size: 13.5px;
+  color: #1E3A8A;
+  line-height: 1.65;
+}
+.ans-body b {
+  color: #0F172A;
+}
+.trans-ko {
+  font-size: 12px;
+  color: #475569;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Practice Input Area */
+.practice-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+  background: #FAF8F5;
+  outline: none;
+}
+.practice-input:focus {
+  border-color: var(--blue);
+  background: #fff;
+}
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 28px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> Middle School Operations</span>
+      <span>2026 여명중1 영어 독서수행평가 완벽대비</span>
+    </div>
+    <div class="meta-badge">중1 실전 특화 (사전 블라인드 암기형) · Diary of a Wimpy Kid</div>
+    <h1 class="title">The Cheese Touch <span>실전 대비 워크북</span></h1>
+    <p class="header-lead">[어휘 클리닉(사전 암기)] ──> [원문 대역] ──> [요약 빈칸] ──> [오픈북 서술형 Q&A]</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">어휘 클리닉</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">원문 2단 대역</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">요약 빈칸완성</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">오픈북 서술형Q&A</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: VOCABULARY DRILL -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · VOCABULARY PRE-TEST (SEPARATE MEMORIZATION)</span>
+    <h2 class="sec-title">어휘 시험 전용 클리닉 50선 (단독 시험 대비)</h2>
+    
+    <div class="strategy-box">
+      <h4>🚨 [필독] 어휘 시험 운영 안내</h4>
+      <p>• <b>어휘 시험은 본문 독해 수행평가와 달리 '오픈북 대상이 아니므로' 사전에 철저히 암기해야 합니다.</b><br>
+      • 화면 진입 시 <b>모든 단어의 뜻이 기본적으로 가려져 있습니다.</b> 단어를 보고 뜻을 떠올린 뒤, 회색 박스를 클릭하여 정답을 확인하세요.<br>
+      • 특히 <b>★ 표시된 14개 단어</b>는 학교 어휘 시험 필수 출제 단어이므로 우선 집중 암기하세요.</p>
+    </div>
+
+    <div class="vocab-controls">
+      <button class="v-btn active" id="btn-all">전체 어휘 보기 (50개)</button>
+      <button class="v-btn" id="btn-star">★ 시험 출제 단어만 보기 (14개)</button>
+      <button class="v-btn" id="btn-toggle-meaning" style="background:#0F172A; color:#fff;">뜻 전체 보이기 / 가리기</button>
+    </div>
+
+    <div class="vocab-grid" id="vocab-container"></div>
+  </div>
+</section>
+
+<!-- STEP 2: 2-COLUMN TEXT DECODING -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · 2-COLUMN PARALLEL TEXT DECODING</span>
+    <h2 class="sec-title">원문 2단 대역 분석 (직독직해 및 오픈북 문장 맵핑)</h2>
+    
+    <div class="strategy-box">
+      <h4>📌 중1 오픈북 실전 독해 가이드</h4>
+      <p>• 질문에서 물어보는 핵심 단어를 본문에서 찾아 <b>줄 번호(LINE)</b>를 확인합니다.<br>
+      • 본문의 1인칭 표현(I, mine)을 질문에 맞게 <b>3인칭(He, his fingers)</b>으로 정확히 바꿔 적습니다.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="decode-table">
+        <thead>
+          <tr>
+            <th>원문 영문 (Text with Key Vocab)</th>
+            <th>직독직해 국문 번역 (Direct Translation)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="en-col">
+              <span class="p-badge">LINE 01-02</span><br>
+              Wednesday<br>
+              Today we had <span class="target-w">Phys Ed</span>, so the first thing I did when I got outside was <span class="target-w">sneak off</span> to the basketball court to see if the Cheese was still there.
+            </td>
+            <td class="ko-col">
+              <b>수요일</b><br>
+              오늘 우리는 <b>체육(Phys Ed)</b> 수업이 있었고, 그래서 밖으로 나갔을 때 내가 가장 먼저 한 일은 치즈가 여전히 그곳에 있는지 확인하기 위해 농구 코트로 <b>몰래 빠져나가는 것(sneak off)</b>이었습니다.
+            </td>
+          </tr>
+          <tr>
+            <td class="en-col">
+              <span class="p-badge">LINE 03-05</span><br>
+              And <span class="target-w">sure enough</span>, it was. That piece of Cheese has been sitting on the <span class="target-w">blacktop</span> <span class="target-w">since</span> last spring. I guess it must've dropped out of someone's sandwich or something.
+            </td>
+            <td class="ko-col">
+              그리고 <b>아니나 다를까(sure enough)</b>, 치즈는 그대로 있었습니다. 그 치즈 조각은 지난봄<b>부터(since)</b> <b>아스팔트 바닥(blacktop)</b> 위에 계속 놓여 있었습니다. 내 생각에 그것은 누군가의 샌드위치나 그런 것에서 떨어졌음에 틀림없습니다.
+            </td>
+          </tr>
+          <tr>
+            <td class="en-col">
+              <span class="p-badge">LINE 05-08</span><br>
+              After <span class="target-w">a couple of</span> days, the Cheese started getting all <span class="target-w">moldy</span> and <span class="target-w">nasty</span>. Nobody would play basketball on the court where the Cheese was, <span class="target-w">even though</span> that was the only court that had a hoop with a <span class="target-w">net</span>.
+            </td>
+            <td class="ko-col">
+              <b>두어(a couple of)</b> 날이 지난 후, 그 치즈는 완전히 <b>곰팡이가 피고(moldy)</b> <b>역겨워지기(nasty)</b> 시작했습니다. 그 치즈가 있는 코트에서는 아무도 농구를 하려 하지 않았습니다, 비록 그곳이 <b>그물망(net)</b>이 달린 림이 있는 유일한 코트였<b>음에도 불구하고(even though)</b> 말입니다.
+            </td>
+          </tr>
+          <tr>
+            <td class="en-col">
+              <span class="p-badge">LINE 08-11</span><br>
+              Then one day, this kid named Darren Walsh touched the Cheese with his finger, and that's what started this thing called the <span class="target-w">Cheese Touch</span>. It's basically like the <span class="target-w">Cooties</span>.
+            </td>
+            <td class="ko-col">
+              그러던 어느 날, Darren Walsh라는 이름의 아이가 손가락으로 그 치즈를 만졌고, 그것이 바로 <b>'치즈 터치(Cheese Touch)'</b>라 불리는 이 일을 시작되게 만든 계기였습니다. 그것은 기본적으로 <b>가상 세균(Cooties)</b> 놀이와 같습니다.
+            </td>
+          </tr>
+          <tr>
+            <td class="en-col">
+              <span class="p-badge">LINE 11-13</span><br>
+              If you get the Cheese Touch, you're <span class="target-w">stuck with</span> it until you pass it on to someone else. The only way to <span class="target-w">protect</span> yourself from the Cheese Touch is to cross your fingers.
+            </td>
+            <td class="ko-col">
+              만약 당신이 치즈 터치에 걸린다면, 다른 누군가에게 그것을 넘겨줄 때까지 당신은 그것을 <b>떠맡게(stuck with)</b> 됩니다. 치즈 터치로부터 자신을 <b>보호하는(protect)</b> 유일한 방법은 손가락을 교차하는 것입니다.
+            </td>
+          </tr>
+          <tr>
+            <td class="en-col">
+              <span class="p-badge">LINE 13-16</span><br>
+              But it's not that easy remembering to keep your fingers crossed every moment of the day. I <span class="target-w">ended up</span> taping mine together so they'd stay crossed all the time. I got a D in handwriting, but it was totally <span class="target-w">worth</span> it.
+            </td>
+            <td class="ko-col">
+              하지만 하루의 모든 순간마다 손가락을 교차한 채 유지하는 것을 기억하기란 그리 쉽지 않습니다. 나는 손가락이 항상 교차된 상태를 유지하도록 결국 내 손가락들을 테이프로 함께 붙이게 <b>되었습니다(ended up)</b>. 나는 글씨 쓰기에서 D를 받았지만, 그것은 완전히 그럴 만한 <b>가치가 있었습니다(worth)</b>.
+            </td>
+          </tr>
+          <tr>
+            <td class="en-col">
+              <span class="p-badge">LINE 16-20</span><br>
+              This one kid named Abe Hall got the Cheese Touch in April, and nobody would even come near him for the <span class="target-w">rest</span> of the year. This summer Abe moved away to California and took the Cheese Touch with him. I just hope someone doesn't start the Cheese Touch up again, because I don't need that kind of stress in my life anymore.
+            </td>
+            <td class="ko-col">
+              Abe Hall이라는 이 한 아이가 4월에 치즈 터치에 걸렸고, 그해 <b>나머지 기간(rest)</b> 동안 아무도 그에게 가까이 다가가지조차 않았습니다. 이번 여름에 Abe는 캘리포니아로 이사를 갔고 치즈 터치를 자신과 함께 가져가 버렸습니다. 나는 단지 누군가가 치즈 터치를 다시 시작하지 않기를 바랄 뿐인데, 왜냐하면 내 삶에서 더 이상 그런 종류의 스트레스는 필요 없기 때문입니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 03: PART 1 CLOZE SUMMARY -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · PART 1: CORE SUMMARY CLOZE DRILL</span>
+    <h2 class="sec-title">스토리 5단계 핵심 요약 빈칸 완성 (Warm-up 훈련)</h2>
+    
+    <div class="strategy-box">
+      <h4>🎯 [학생 학습 가이드] 무엇을 해야 하나요?</h4>
+      <p>본문 속 핵심 사건의 흐름을 파악하는 1단계 훈련입니다. <b>안내된 본문 줄(LINE)을 찾아 빈칸에 알맞은 핵심 단어를 채워 넣으세요.</b> 전체 문장의 뼈대를 완벽히 이해하게 됩니다.</p>
+    </div>
+
+    <!-- 1번 빈칸 -->
+    <div class="item-card">
+      <h4>
+        <span>1. [배경] 농구 코트 바닥의 치즈 조각</span>
+        <span class="line-hint">본문 LINE 03-04 확인</span>
+      </h4>
+      <p class="task-instruction">본문을 읽고, 치즈가 어디에 어떻게 놓여 있었는지 빈칸에 들어갈 두 단어를 채워 문장을 완성하세요.</p>
+      <div class="cloze-sentence">
+        That piece of Cheese has been <span class="cloze-blank">( 1 )</span> on the <span class="cloze-blank">( 2 )</span> since last spring.
+      </div>
+      <input type="text" class="practice-input" placeholder="빈칸에 들어갈 단어를 입력해 보세요 (예: sitting / blacktop)...">
+      <details class="ans-toggle">
+        <summary>정답 및 문장 해석 확인</summary>
+        <div class="ans-body">
+          <b>정답:</b> (1) <b>sitting</b> / (2) <b>blacktop</b><br>
+          <b>완성 문장:</b> That piece of Cheese has been <b>sitting</b> on the <b>blacktop</b> since last spring.<br>
+          <span class="trans-ko">그 치즈 조각은 지난봄부터 아스팔트 바닥 위에 계속 놓여 있었습니다.</span>
+        </div>
+      </details>
+    </div>
+
+    <!-- 2번 빈칸 -->
+    <div class="item-card">
+      <h4>
+        <span>2. [상태] 치즈의 부패와 학생들의 기피</span>
+        <span class="line-hint">본문 LINE 05-07 확인</span>
+      </h4>
+      <p class="task-instruction">본문을 읽고, 며칠 뒤 치즈가 어떤 상태로 변했는지 빈칸에 알맞은 형용사 두 단어를 채우세요.</p>
+      <div class="cloze-sentence">
+        After a couple of days, the Cheese started getting all <span class="cloze-blank">( 1 )</span> and <span class="cloze-blank">( 2 )</span>.
+      </div>
+      <input type="text" class="practice-input" placeholder="빈칸에 들어갈 단어를 입력해 보세요 (예: moldy / nasty)...">
+      <details class="ans-toggle">
+        <summary>정답 및 문장 해석 확인</summary>
+        <div class="ans-body">
+          <b>정답:</b> (1) <b>moldy</b> / (2) <b>nasty</b><br>
+          <b>완성 문장:</b> After a couple of days, the Cheese started getting all <b>moldy</b> and <b>nasty</b>.<br>
+          <span class="trans-ko">며칠이 지난 후, 그 치즈는 완전히 곰팡이가 피고 역겨워지기 시작했습니다.</span>
+        </div>
+      </details>
+    </div>
+
+    <!-- 3번 빈칸 -->
+    <div class="item-card">
+      <h4>
+        <span>3. [발단] Darren Walsh의 치즈 터치 시작</span>
+        <span class="line-hint">본문 LINE 08-10 확인</span>
+      </h4>
+      <p class="task-instruction">본문을 읽고, Darren Walsh가 치즈에 무엇을 했고 어떤 일이 시작되었는지 동사 두 개를 채우세요.</p>
+      <div class="cloze-sentence">
+        Darren Walsh <span class="cloze-blank">( 1 )</span> the Cheese with his finger, and that's what <span class="cloze-blank">( 2 )</span> the Cheese Touch.
+      </div>
+      <input type="text" class="practice-input" placeholder="빈칸에 들어갈 단어를 입력해 보세요 (예: touched / started)...">
+      <details class="ans-toggle">
+        <summary>정답 및 문장 해석 확인</summary>
+        <div class="ans-body">
+          <b>정답:</b> (1) <b>touched</b> / (2) <b>started</b><br>
+          <b>완성 문장:</b> Darren Walsh <b>touched</b> the Cheese with his finger, and that's what <b>started</b> the Cheese Touch.<br>
+          <span class="trans-ko">Darren Walsh가 손가락으로 치즈를 만졌고, 그것이 바로 치즈 터치를 시작시킨 계기였습니다.</span>
+        </div>
+      </details>
+    </div>
+
+    <!-- 4번 빈칸 -->
+    <div class="item-card">
+      <h4>
+        <span>4. [대처] 주인공 Greg의 테이핑 행동</span>
+        <span class="line-hint">본문 LINE 14-15 확인</span>
+      </h4>
+      <p class="task-instruction">본문을 읽고, Greg가 손가락을 꼬아두기 위해 결국 어떤 행동을 했는지 알맞은 단어를 채우세요.</p>
+      <div class="cloze-sentence">
+        Greg ended up <span class="cloze-blank">( 1 )</span> his fingers together so they'd <span class="cloze-blank">( 2 )</span> crossed all the time.
+      </div>
+      <input type="text" class="practice-input" placeholder="빈칸에 들어갈 단어를 입력해 보세요 (예: taping / stay)...">
+      <details class="ans-toggle">
+        <summary>정답 및 문장 해석 확인</summary>
+        <div class="ans-body">
+          <b>정답:</b> (1) <b>taping</b> / (2) <b>stay</b><br>
+          <b>완성 문장:</b> Greg ended up <b>taping</b> his fingers together so they'd <b>stay</b> crossed all the time.<br>
+          <span class="trans-ko">Greg는 손가락이 항상 교차된 상태를 유지하도록 결국 테이프로 함께 감았습니다.</span>
+        </div>
+      </details>
+    </div>
+
+    <!-- 5번 빈칸 -->
+    <div class="item-card">
+      <h4>
+        <span>5. [결말] Abe Hall의 이사와 사건 종료</span>
+        <span class="line-hint">본문 LINE 18-19 확인</span>
+      </h4>
+      <p class="task-instruction">본문을 읽고, Abe가 어디로 떠났고 치즈 터치가 어떻게 학교에서 사라졌는지 동사구를 완성하세요.</p>
+      <div class="cloze-sentence">
+        This summer Abe <span class="cloze-blank">( 1 )</span> away to California and <span class="cloze-blank">( 2 )</span> the Cheese Touch with him.
+      </div>
+      <input type="text" class="practice-input" placeholder="빈칸에 들어갈 단어를 입력해 보세요 (예: moved / took)...">
+      <details class="ans-toggle">
+        <summary>정답 및 문장 해석 확인</summary>
+        <div class="ans-body">
+          <b>정답:</b> (1) <b>moved</b> / (2) <b>took</b><br>
+          <b>완성 문장:</b> This summer Abe <b>moved</b> away to California and <b>took</b> the Cheese Touch with him.<br>
+          <span class="trans-ko">이번 여름에 Abe는 캘리포니아로 이사를 갔고 치즈 터치를 자신과 함께 가져가 버렸습니다.</span>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 04: PART 2 QUESTION-ANSWER DRILL -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · PART 2: REAL EXAM QUESTION & ANSWER DRILL (OPEN-BOOK)</span>
+    <h2 class="sec-title">오픈북 실전 질문-답변형 본문 탐색 서술형 드릴 (7문항)</h2>
+    
+    <div class="strategy-box">
+      <h4>🎯 [학생 학습 가이드] 오픈북 실전 시험 완벽 적응</h4>
+      <p>학교 시험지에 실제로 출제될 <b>영어 질문(Question)</b>에 답하는 최종 훈련입니다.<br>
+      1. 안내된 <b>본문 줄(LINE)</b>에서 정답 문장을 찾으세요.<br>
+      2. 1인칭 대명사를 질문 주어에 맞게 <b>3인칭(He, his)</b>으로 바꾸어 완전한 문장으로 적으세요.</p>
+    </div>
+
+    <!-- Q1 -->
+    <div class="item-card">
+      <h4>
+        <span>Question 1. 치즈의 위치</span>
+        <span class="line-hint">본문 LINE 03-04 확인</span>
+      </h4>
+      <div class="q-box">
+        Q1. Where has the piece of Cheese been sitting since last spring?
+      </div>
+      <p class="task-instruction"><b>[풀이 요령]:</b> 의문사 Where(어디에)를 묻고 있습니다. 본문 LINE 03에서 위치를 나타내는 표현을 찾아 문장으로 완성하세요.</p>
+      <input type="text" class="practice-input" placeholder="It has been sitting on...">
+      <details class="ans-toggle">
+        <summary>모범 답안 및 인칭/시제 해설 확인</summary>
+        <div class="ans-body">
+          <b>모범 답안:</b> It has been sitting on the blacktop since last spring.<br>
+          <span class="trans-ko">그것은 지난봄부터 아스팔트 바닥 위에 계속 놓여 있었습니다.</span>
+          <br><b>[실전 포인트]:</b> 주어를 대명사 It으로 받고, 현재완료 진행형(has been sitting) 시제를 그대로 유지하여 정확하게 옮겨 적습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Q2 -->
+    <div class="item-card">
+      <h4>
+        <span>Question 2. 농구 코트를 쓰지 않은 이유</span>
+        <span class="line-hint">본문 LINE 06-07 확인</span>
+      </h4>
+      <div class="q-box">
+        Q2. Why wouldn't anyone play basketball on the court that had a hoop with a net?
+      </div>
+      <p class="task-instruction"><b>[풀이 요령]:</b> Why(왜)에 대해 이유를 설명해야 합니다. 본문 LINE 06의 치즈가 있던 상황을 `because`를 사용하여 연결하세요.</p>
+      <input type="text" class="practice-input" placeholder="Nobody would play basketball there because...">
+      <details class="ans-toggle">
+        <summary>모범 답안 및 인칭/시제 해설 확인</summary>
+        <div class="ans-body">
+          <b>모범 답안:</b> Nobody would play basketball there because the Cheese was on that court.<br>
+          <span class="trans-ko">치즈가 그 코트 위에 있었기 때문에 아무도 그곳에서 농구를 하려 하지 않았습니다.</span>
+          <br><b>[실전 포인트]:</b> 과거 시제(would not, was)를 일치시켜 질문의 조건에 부합하게 작성합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Q3 -->
+    <div class="item-card">
+      <h4>
+        <span>Question 3. 치즈 터치 예방법</span>
+        <span class="line-hint">본문 LINE 12-13 확인</span>
+      </h4>
+      <div class="q-box">
+        Q3. What is the only way to protect yourself from the Cheese Touch?
+      </div>
+      <p class="task-instruction"><b>[풀이 요령]:</b> 치즈 터치를 피하는 유일한 방법을 묻고 있습니다. 본문 LINE 12의 문장을 찾아 적으세요.</p>
+      <input type="text" class="practice-input" placeholder="The only way to protect yourself is...">
+      <details class="ans-toggle">
+        <summary>모범 답안 및 인칭/시제 해설 확인</summary>
+        <div class="ans-body">
+          <b>모범 답안:</b> The only way to protect yourself is to cross your fingers.<br>
+          <span class="trans-ko">자신을 보호하는 유일한 방법은 손가락을 교차하는 것입니다.</span>
+          <br><b>[실전 포인트]:</b> 원문의 주어부 "The only way to protect yourself..."를 그대로 활용하여 to부정사 보어로 끝맺습니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Q4 -->
+    <div class="item-card">
+      <h4>
+        <span>Question 4. Greg의 손가락 테이핑</span>
+        <span class="line-hint">본문 LINE 14-15 확인</span>
+      </h4>
+      <div class="q-box">
+        Q4. What did Greg do so that his fingers would stay crossed all the time?
+      </div>
+      <p class="task-instruction"><b>[풀이 요령 ⚠️ 중요]:</b> 질문의 주어가 'Greg'이므로, 본문 LINE 14의 <b>'I'를 'He'로, 'mine'을 'his fingers'</b>로 반드시 바꿔야 감점이 없습니다!</p>
+      <input type="text" class="practice-input" placeholder="He ended up taping his fingers...">
+      <details class="ans-toggle">
+        <summary>모범 답안 및 대명사 전환 해설 확인</summary>
+        <div class="ans-body">
+          <b>모범 답안:</b> He ended up taping his fingers together so they would stay crossed.<br>
+          <span class="trans-ko">그는 손가락이 교차된 상태를 유지하도록 손가락들을 함께 테이프로 붙였습니다.</span>
+          <br><b>[실전 포인트]:</b> I ended up taping mine → <b>He ended up taping his fingers</b>로 대명사를 1:1 완벽 치환합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Q5 -->
+    <div class="item-card">
+      <h4>
+        <span>Question 5. 글씨 쓰기 성적 결과</span>
+        <span class="line-hint">본문 LINE 15-16 확인</span>
+      </h4>
+      <div class="q-box">
+        Q5. What grade did Greg get in handwriting after taping his fingers?
+      </div>
+      <p class="task-instruction"><b>[풀이 요령]:</b> 필기 과목에서 받은 등급과 그에 대한 생각을 묻습니다. 본문의 'I got a D...' 문장의 주어를 'He'로 바꾸세요.</p>
+      <input type="text" class="practice-input" placeholder="He got a D in handwriting...">
+      <details class="ans-toggle">
+        <summary>모범 답안 및 대명사 전환 해설 확인</summary>
+        <div class="ans-body">
+          <b>모범 답안:</b> He got a D in handwriting, but it was totally worth it.<br>
+          <span class="trans-ko">그는 글씨 쓰기에서 D를 받았지만, 그것은 완전히 그럴 만한 가치가 있었습니다.</span>
+          <br><b>[실전 포인트]:</b> 과거 동사 got과 대명사 He를 일치시켜 완전한 문장으로 마무리합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Q6 -->
+    <div class="item-card">
+      <h4>
+        <span>Question 6. Abe Hall에게 다가가지 않은 이유</span>
+        <span class="line-hint">본문 LINE 16-18 확인</span>
+      </h4>
+      <div class="q-box">
+        Q6. Why did nobody come near Abe Hall for the rest of the year?
+      </div>
+      <p class="task-instruction"><b>[풀이 요령]:</b> 4월에 Abe에게 일어난 사건을 `because` 뒤에 연결하여 이유를 명확히 쓰세요.</p>
+      <input type="text" class="practice-input" placeholder="Nobody came near him because...">
+      <details class="ans-toggle">
+        <summary>모범 답안 및 접속사 연결 해설 확인</summary>
+        <div class="ans-body">
+          <b>모범 답안:</b> Nobody would come near him because he got the Cheese Touch in April.<br>
+          <span class="trans-ko">그가 4월에 치즈 터치에 걸렸기 때문에 아무도 그에게 다가오지 않았습니다.</span>
+          <br><b>[실전 포인트]:</b> 본문의 "Abe Hall got the Cheese Touch in April"을 because 절 안의 주어(he)와 과거 동사(got)로 자연스럽게 결합합니다.
+        </div>
+      </details>
+    </div>
+
+    <!-- Q7 -->
+    <div class="item-card">
+      <h4>
+        <span>Question 7. 치즈 터치가 사라진 경위</span>
+        <span class="line-hint">본문 LINE 18-19 확인</span>
+      </h4>
+      <div class="q-box">
+        Q7. Where did Abe Hall move away this summer with the Cheese Touch?
+      </div>
+      <p class="task-instruction"><b>[풀이 요령]:</b> Where(어디로) 이사를 갔는지 묻고 있습니다. 본문 LINE 18의 문장을 찾아 정확한 목적지를 포함해 쓰세요.</p>
+      <input type="text" class="practice-input" placeholder="Abe moved away to...">
+      <details class="ans-toggle">
+        <summary>모범 답안 및 목적어 확인</summary>
+        <div class="ans-body">
+          <b>모범 답안:</b> Abe moved away to California and took the Cheese Touch with him.<br>
+          <span class="trans-ko">Abe는 캘리포니아로 이사를 갔고 치즈 터치를 자신과 함께 가져가 버렸습니다.</span>
+          <br><b>[실전 포인트]:</b> 질문의 과거 시제에 맞춰 moved away와 took 병렬 구조를 그대로 살려 작성합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 여명중1 영어 독서수행평가 2단계 오픈북 완성 시스템
+  </div>
+</footer>
+
+<script>
+// 50단어 데이터베이스
+const vocabData = [
+  { no: 1, word: "Phys Ed", meaning: "체육 (Physical Education)", star: false },
+  { no: 2, word: "sneak off", meaning: "몰래 빠져나가다", star: false },
+  { no: 3, word: "sure enough", meaning: "아니나 다를까", star: false },
+  { no: 4, word: "blacktop", meaning: "아스팔트 바닥", star: false },
+  { no: 5, word: "since", meaning: "~부터; ~이므로", star: false },
+  { no: 6, word: "a couple of", meaning: "두어 개의, 몇 개의", star: false },
+  { no: 7, word: "moldy", meaning: "곰팡이가 핀", star: false },
+  { no: 8, word: "nasty", meaning: "불쾌한, 역겨운", star: false },
+  { no: 9, word: "even though", meaning: "~에도 불구하고", star: true },
+  { no: 10, word: "net", meaning: "그물(망)", star: false },
+  { no: 11, word: "Cooties", meaning: "세균 (가상의 전염병)", star: false },
+  { no: 12, word: "stuck with", meaning: "~을 떠맡다", star: true },
+  { no: 13, word: "protect", meaning: "보호하다", star: true },
+  { no: 14, word: "end up", meaning: "결국 ~하게 되다", star: false },
+  { no: 15, word: "worth", meaning: "~할 가치가 있는", star: false },
+  { no: 16, word: "rest", meaning: "나머지", star: false },
+  { no: 17, word: "come up with", meaning: "~을 생각해 내다", star: false },
+  { no: 18, word: "screeching", meaning: "날카로운 소리를 내는, 끼익거리는", star: true },
+  { no: 19, word: "pickup truck", meaning: "소형 트럭", star: false },
+  { no: 20, word: "pile out", meaning: "우르르 빠져나오다", star: true },
+  { no: 21, word: "take off", meaning: "떠나다; 이륙하다", star: false },
+  { no: 22, word: "head", meaning: "(v) 향하다", star: false },
+  { no: 23, word: "make a run for it", meaning: "급히 도망치다", star: false },
+  { no: 24, word: "honest", meaning: "솔직한, 정직한", star: false },
+  { no: 25, word: "concerned about", meaning: "~을 걱정하는, 염려하는", star: true },
+  { no: 26, word: "look for", meaning: "찾다", star: true },
+  { no: 27, word: "get singled out", meaning: "지목당하다", star: false },
+  { no: 28, word: "drag A over to B", meaning: "A를 B쪽으로 질질 끌고 가다", star: false },
+  { no: 29, word: "exactly", meaning: "정확히, 바로", star: false },
+  { no: 30, word: "run for", meaning: "~에 출마하다", star: true },
+  { no: 31, word: "chance", meaning: "기회, 가능성", star: false },
+  { no: 32, word: "fight one's way out of~", meaning: "~에서 빠져나오다, 벗어나다", star: false },
+  { no: 33, word: "allergic", meaning: "알레르기가 있는", star: false },
+  { no: 34, word: "dairy", meaning: "유제품(의)", star: false },
+  { no: 35, word: "finish off", meaning: "마무리하다, 다 먹어 치우다", star: false },
+  { no: 36, word: "realize", meaning: "깨닫다", star: true },
+  { no: 37, word: "spot", meaning: "장소, 지점", star: false },
+  { no: 38, word: "crowd around", meaning: "주위에 모여들다", star: false },
+  { no: 39, word: "used to", meaning: "~하곤 했다", star: true },
+  { no: 40, word: "actually", meaning: "실제로, 정말로", star: false },
+  { no: 41, word: "theory", meaning: "이론, 추측", star: true },
+  { no: 42, word: "egg somebody on", meaning: "~를 부추기다", star: false },
+  { no: 43, word: "put two and two together", meaning: "앞뒤를 맞춰 생각하다", star: false },
+  { no: 44, word: "blame", meaning: "~을 탓하다, 비난하다", star: true },
+  { no: 45, word: "state", meaning: "(미국의) 주", star: false },
+  { no: 46, word: "speak up", meaning: "의견을 말하다, 목소리를 내다", star: false },
+  { no: 47, word: "get rid of", meaning: "~을 없애다, 제거하다", star: true },
+  { no: 48, word: "once and for all", meaning: "이번에 확실히, 완전히", star: false },
+  { no: 49, word: "word", meaning: "(v) 표현하다, 특정 말을 쓰다", star: false },
+  { no: 50, word: "throw away", meaning: "버리다", star: true }
+];
+
+const container = document.getElementById('vocab-container');
+// 기본 상태: 뜻 가려짐(hideAll = true)
+let hideAll = true;
+
+function renderVocab(filterStar = false) {
+  container.innerHTML = '';
+  const filtered = filterStar ? vocabData.filter(v => v.star) : vocabData;
+  filtered.forEach(item => {
+    const card = document.createElement('div');
+    card.className = `vocab-card ${item.star ? 'starred' : ''}`;
+    card.innerHTML = `
+      <div class="vocab-word">
+        ${item.star ? '<span class="star-tag">★</span>' : ''}
+        <span style="font-family:var(--mono); color:var(--text-muted); font-size:11px; margin-right:4px;">#${item.no}</span>
+        ${item.word}
+      </div>
+      <div class="vocab-meaning ${hideAll ? 'hidden-text' : ''}" onclick="toggleMeaning(this, '${item.meaning.replace(/'/g, "\\'")}')">
+        ${hideAll ? '클릭하여 뜻 확인' : item.meaning}
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function toggleMeaning(el, actualMeaning) {
+  if (el.classList.contains('hidden-text')) {
+    el.classList.remove('hidden-text');
+    el.textContent = actualMeaning;
+  } else {
+    el.classList.add('hidden-text');
+    el.textContent = '클릭하여 뜻 확인';
+  }
+}
+
+document.getElementById('btn-all').addEventListener('click', function() {
+  this.classList.add('active');
+  document.getElementById('btn-star').classList.remove('active');
+  renderVocab(false);
+});
+
+document.getElementById('btn-star').addEventListener('click', function() {
+  this.classList.add('active');
+  document.getElementById('btn-all').classList.remove('active');
+  renderVocab(true);
+});
+
+document.getElementById('btn-toggle-meaning').addEventListener('click', function() {
+  hideAll = !hideAll;
+  this.textContent = hideAll ? "뜻 전체 보이기" : "뜻 전체 가리기";
+  const isStar = document.getElementById('btn-star').classList.contains('active');
+  renderVocab(isStar);
+});
+
+// 초기 렌더링: 기본 가려진 상태로 시작
+renderVocab(false);
+</script>
+</body>
+</html>
