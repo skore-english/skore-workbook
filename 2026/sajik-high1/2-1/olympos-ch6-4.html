@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 사직고 1-2-1 올림포스 9대변별유형 6강 4번</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+ <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+ <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+ <link rel="manifest" href="/skore-workbook/site.webmanifest">
+ <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+ --navy: #0B1220;
+ --paper: #F8FAFC;
+ --white: #FFFFFF;
+ --blue: #1D4ED8;
+ --cyan: #0E8F9E;
+ --amber: #B8791A;
+ --text-main: #0F172A;
+ --text-muted: #64748B;
+ --border: #E2E8F0;
+ --mono: "IBM Plex Mono", -apple-system, monospace;
+ --serif: "Noto Serif KR", serif;
+ --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+ --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+ background: var(--paper);
+ color: var(--text-main);
+ font-family: var(--sans);
+ line-height: 1.75;
+ -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+ background: var(--navy);
+ color: var(--white);
+ padding: 36px 0 28px;
+ border-bottom: 3px solid var(--blue);
+}
+.masthead {
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--mono);
+ font-size: 11px;
+ letter-spacing: 0.12em;
+ color: #8FA0B8;
+ text-transform: uppercase;
+ border-bottom: 1px solid rgba(255,255,255,0.12);
+ padding-bottom: 8px;
+ margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+ display: inline-block;
+ font-family: var(--mono);
+ font-size: 12px;
+ font-weight: 600;
+ color: var(--cyan);
+ background: rgba(14, 143, 158, 0.15);
+ padding: 4px 10px;
+ border-radius: 4px;
+ margin-bottom: 12px;
+}
+h1.title {
+ font-family: var(--serif);
+ font-size: clamp(20px, 4vw, 30px);
+ font-weight: 900;
+ line-height: 1.35;
+ margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+ background: var(--white);
+ border-bottom: 1px solid var(--border);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 6px;
+ padding: 8px 0;
+}
+.track-step {
+ text-align: center;
+ padding: 6px 2px;
+ border-radius: 4px;
+ border: 1px solid var(--border);
+ background: var(--paper);
+ text-decoration: none;
+ color: var(--text-main);
+ display: block;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+ font-family: var(--mono);
+ font-size: 9px;
+ font-weight: 600;
+ color: var(--cyan);
+ display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+ font-family: var(--mono);
+ font-size: 10.5px;
+ font-weight: 600;
+ color: var(--blue);
+ letter-spacing: 0.12em;
+ display: block;
+ margin-bottom: 4px;
+}
+h2.sec-title {
+ font-family: var(--serif);
+ font-size: 20px;
+ font-weight: 900;
+ margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ border-left: 4px solid var(--blue);
+ border-radius: 6px;
+ padding: 16px 18px;
+ margin-bottom: 18px;
+}
+.bg-header {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 700;
+ color: var(--blue);
+ margin-bottom: 8px;
+}
+.bg-list {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+}
+.bg-list li {
+ font-size: 12.5px;
+ color: #1E3A8A;
+ line-height: 1.6;
+ position: relative;
+ padding-left: 14px;
+}
+.bg-list li::before {
+ content: "•";
+ position: absolute;
+ left: 2px;
+ color: var(--blue);
+ font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-left: 4px solid var(--blue);
+ padding: 20px;
+ font-size: 15px;
+ line-height: 1.85;
+ color: #1E293B;
+ border-radius: 4px;
+}
+.key-takeaway {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 12px 16px;
+ margin-top: 14px;
+ border-radius: 4px;
+ font-size: 13px;
+ color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-radius: 6px;
+ padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ border-radius: 4px;
+ margin-top: 8px;
+}
+summary {
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 600;
+ color: var(--blue);
+ padding: 8px 12px;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+.details-content {
+ padding: 10px 12px;
+ font-size: 13px;
+ color: #334155;
+ border-top: 1px dashed var(--border);
+ line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 12px;
+}
+.flow-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+ font-family: var(--mono);
+ font-size: 10px;
+ font-weight: 600;
+ color: var(--text-muted);
+ display: block;
+ margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ font-family: var(--mono);
+ font-size: 12px;
+ padding: 8px 14px;
+ cursor: pointer;
+ border-radius: 4px;
+ min-height: 40px;
+ display: flex;
+ align-items: center;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+ outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+ display: none;
+ font-size: 12.5px;
+ padding: 8px 12px;
+ border-radius: 4px;
+ margin-top: 6px;
+ line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ padding: 12px;
+ font-size: 13px;
+ line-height: 1.7;
+ color: #334155;
+ margin-bottom: 10px;
+ border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 10px 12px;
+ font-size: 12px;
+ color: #1E3A8A;
+ border-radius: 4px;
+ line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ width: 100%;
+ min-height: 48px;
+ background: #182238;
+ color: #60a5fa;
+ border: 1px solid #233252;
+ border-radius: 10px;
+ font-size: 14px;
+ font-weight: 700;
+ text-decoration: none;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+ background: var(--navy);
+ color: #64748B;
+ padding: 24px 0;
+ text-align: center;
+ font-family: var(--mono);
+ font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+ <div class="masthead">
+ <span><b>SKORE Academy</b> High School Logic Series</span>
+ <span>2026 사직고 1학년 2-1</span>
+ </div>
+ <div class="meta-badge">올림포스 9대변별유형 6강 4번</div>
+ <h1 class="title">Empathy on Command<br><span>& Bodily Sensations</span></h1>
+ <p class="header-lead">신체 감각을 인지하고 훈련하여 마음을 달래는 의도적 공감의 힘</p>
+ </div>
+</header>
+
+<div class="tracker-wrap">
+ <div class="wrap">
+ <div class="tracker">
+ <a href="#step1" class="track-step">
+ <span class="s-num">STEP 01</span>
+ <span class="s-name">원문정독</span>
+ </a>
+ <a href="#step2" class="track-step">
+ <span class="s-num">STEP 02</span>
+ <span class="s-name">디코딩</span>
+ </a>
+ <a href="#step3" class="track-step">
+ <span class="s-num">STEP 03</span>
+ <span class="s-name">논리구조</span>
+ </a>
+ <a href="#step4" class="track-step">
+ <span class="s-num">STEP 04</span>
+ <span class="s-name">어법드릴</span>
+ </a>
+ <a href="#step5" class="track-step">
+ <span class="s-num">STEP 05</span>
+ <span class="s-name">실전변형</span>
+ </a>
+ </div>
+ </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+ <div class="wrap">
+ <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+ <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+ 
+<div class="bg-knowledge-box">
+ <div class="bg-header">
+ <span>💡</span>
+ <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+ </div>
+ <ul class="bg-list">
+ <li><b>[핵심 개념]:</b> 신체화된 인지(Embodied Cognition)와 의도적 공감 활성화(Empathy on Command)</li>
+ <li><b>[배경 맥락]:</b> 분노와 자비심(공감)은 뇌의 신경생리학적 구조상 동시에 공존할 수 없음</li>
+ <li><b>[논리 요약]:</b> 공감 시의 신체 감각 인지 → 뇌의 공감 영역 활성화 → 훈련을 통한 공감 순간 확장 및 갈등 완화</li>
+ </ul>
+ </div>
+
+ <div class="full-passage-box">
+ One of the best ways to soothe ourselves is by extending empathy. It is impossible to be angry and compassionate at the same time. To activate empathy on command, we must know what we feel in our body when we are empathetic. We can watch for the beating of our heart, the smile on our face, the calm we feel. These bodily sensations activate the part of our brain that feels sympathy and closeness to others. They will happen when we are in harmony with our children and last only a few seconds at first, but over time, we can stretch these moments. With practice, we can find empathy even when we are upset with our young teenager or they are angry at us, if we remember not to take their behavior personally.
+ </div>
+
+ <div class="key-takeaway">
+ <b>[핵심 요지]</b> 신체 감각을 자각하고 훈련함으로써 공감 능력을 의도적으로 활성화하여 분노를 가라앉히고 갈등을 극복할 수 있다.
+ </div>
+ </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+ <div class="wrap">
+ <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+ <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+ <div class="chunk-box">
+ <div class="chunk-item">
+ <div class="chunk-en">One of the best ways to soothe ourselves / is by extending empathy.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 우리 자신을 달래는 가장 좋은 방법들 중 하나는 / 공감을 베푸는 것에 의해서이다.</p>
+ <p><b>[구문 포인트]</b> 'One of + 복수명사(the best ways)'가 주어이므로 단수 동사 is가 쓰였으며, 전치사 by 뒤에 동명사 extending이 보어로 연결됨.</p>
+ <p><b>[핵심 어휘]</b> soothe(달래다, 진정시키다), extend(베풀다, 전하다), empathy(공감)</p>
+ </div>
+ </details>
+ </div>
+ <div class="chunk-item">
+ <div class="chunk-en">It is impossible / to be angry and compassionate / at the same time.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 불가능하다 / 화가 나 있으면서 동시에 온정적(자비로운)인 것은 / 동시에.</p>
+ <p><b>[구문 포인트]</b> It(가주어) - to be angry and compassionate(진주어) 구문으로 상반된 두 감정 상태가 병존할 수 없음을 명시함.</p>
+ <p><b>[핵심 어휘]</b> compassionate(온정적인, 자비로운), at the same time(동시에)</p>
+ </div>
+ </details>
+ </div>
+ <div class="chunk-item">
+ <div class="chunk-en">To activate empathy on command, / we must know / what we feel in our body / when we are empathetic.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 명령에 따라(원할 때 마음대로) 공감을 활성화하기 위해, / 우리는 알아야만 한다 / 우리가 우리 몸에서 무엇을 느끼는지를 / 우리가 공감할 때.</p>
+ <p><b>[구문 포인트]</b> 목적을 나타내는 to부정사구 'To activate ~'로 시작하며, 동사 know의 목적어로 의문대명사절(간접의문문) 'what we feel in our body'가 이어짐.</p>
+ <p><b>[핵심 어휘]</b> activate(활성화하다), on command(명령에 따라, 원할 때 언제든), empathetic(공감하는)</p>
+ </div>
+ </details>
+ </div>
+ <div class="chunk-item">
+ <div class="chunk-en">We can watch for the beating of our heart, / the smile on our face, / the calm we feel.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 우리는 심장의 고동을 주의 깊게 살필 수 있다, / 우리 얼굴의 미소를, / 그리고 우리가 느끼는 평온함을.</p>
+ <p><b>[구문 포인트]</b> 'watch for'의 목적어로 세 개의 명사구(the beating ~, the smile ~, the calm [that] we feel)가 병렬 연결되어 구체적 신체 감각을 열거함.</p>
+ <p><b>[핵심 어휘]</b> watch for(~를 주의 깊게 살피다), beating(박동, 고동), calm(평온, 고요)</p>
+ </div>
+ </details>
+ </div>
+ <div class="chunk-item">
+ <div class="chunk-en">These bodily sensations / activate the part of our brain / that feels sympathy and closeness to others.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 이러한 신체적 감각들은 / 우리 뇌의 부분을 활성화한다 / 타인에 대한 동정심과 친밀감을 느끼는.</p>
+ <p><b>[구문 포인트]</b> 주어 These bodily sensations에 복수 동사 activate가 호응하며, 선행사 'the part of our brain'을 주격 관계대명사 that절(단수 동사 feels)이 수식함.</p>
+ <p><b>[핵심 어휘]</b> bodily sensation(신체 감각), sympathy(동정심, 공감), closeness(친밀감)</p>
+ </div>
+ </details>
+ </div>
+ <div class="chunk-item">
+ <div class="chunk-en">They will happen / when we are in harmony with our children / and last only a few seconds at first, / but over time, / we can stretch these moments.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그것들은 발생할 것이다 / 우리가 자녀들과 조화를 이룰 때 / 그리고 처음에는 불과 몇 초 동안 지속될 것이다, / 하지만 시간이 지나면서, / 우리는 이러한 순간들을 늘려갈 수 있다.</p>
+ <p><b>[구문 포인트]</b> 조동사 will에 동사원형 happen과 last가 and로 병렬 연결되어 있으며, 역접의 접속사 but 이후 훈련을 통한 지속 가능성을 제시함.</p>
+ <p><b>[핵심 어휘]</b> in harmony with(~와 조화를 이루는), last(지속되다), stretch(늘리다, 연장하다)</p>
+ </div>
+ </details>
+ </div>
+ <div class="chunk-item">
+ <div class="chunk-en">With practice, / we can find empathy / even when we are upset with our young teenager / or they are angry at us, / if we remember not to take their behavior personally.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 연습을 통해, / 우리는 공감을 찾을 수 있다 / 심지어 우리가 어린 십 대 자녀에게 화가 나 있을 때나 / 그들이 우리에게 화가 나 있을 때에도, / 우리가 그들의 행동을 개인적으로 받아들이지 않을 것을 기억한다면.</p>
+ <p><b>[구문 포인트]</b> 'remember to-v(~할 것을 기억하다)'의 부정형인 'remember not to take ~'가 쓰였으며, 'take ~ personally'는 '~을 기분 나쁘게 개인적인 감정으로 받아들이다'의 필수 숙어임.</p>
+ <p><b>[핵심 어휘]</b> upset with(~에게 화가 난), personally(개인적인 일로, 기분 상하게)</p>
+ </div>
+ </details>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+ <div class="wrap">
+ <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+ <h2 class="sec-title">지문 맞춤형 논리 구조도 (원리 제시 및 훈련을 통한 실전 적용 구조)</h2>
+ <div class="flow-container">
+ <div class="flow-card s1">
+ <span class="badge">[STAGE 1] 기본 원리</span>
+ <h4>자기 진정과 감정의 상충성</h4>
+ <p>자신을 진정시키는 최선의 길은 공감이며, 뇌신경학적으로 분노와 자비심(공감)은 동시에 양립할 수 없음.</p>
+ </div>
+ <div class="flow-card s2">
+ <span class="badge">[STAGE 2] 신체 메커니즘</span>
+ <h4>신체 감각을 통한 뇌 부위 활성화</h4>
+ <p>심장 박동, 미소, 평온함 등 공감 시 발생하는 신체 감각을 인지하면 타인에게 친밀감을 느끼는 뇌 영역이 작동함.</p>
+ </div>
+ <div class="flow-card s3">
+ <span class="badge">[STAGE 3] 실전 적용</span>
+ <h4>훈련을 통한 공감 확장 및 갈등 극복</h4>
+ <p>처음에는 짧지만 연습을 통해 순간을 늘릴 수 있으며, 자녀의 반항을 사적으로 받아들이지 않으면 극심한 갈등 속에서도 공감이 가능함.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+ <div class="wrap">
+ <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+ <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+ <div class="drill-card">
+ <div class="drill-q">1. To activate empathy on command, we must know [what / that] we feel in our body when we are empathetic.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="correct" data-exp="[정답] 동사 feel의 목적어가 빠져 있는 불완전한 절을 이끌며 know의 목적어 역할을 하는 명사절이 필요하므로 의문대명사/관계대명사 what이 올바릅니다.">what</button>
+ <button class="drill-btn" data-ans="wrong" data-exp="[오답] 접속사 that이 명사절로 쓰이려면 뒤에 필수 문장 성분을 모두 갖춘 완전한 절이 와야 합니다.">that</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+ <div class="drill-card">
+ <div class="drill-q">2. With practice, we can find empathy, if we remember [not to take / not taking] their behavior personally.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="correct" data-exp="[정답] 앞으로 '~해야 할 것을 기억하다'라는 미래 지향적 행동을 의미하므로 remember 뒤에는 to부정사(not to take)가 와야 올바릅니다.">not to take</button>
+ <button class="drill-btn" data-ans="wrong" data-exp="[오답] remember 뒤에 동명사(-ing)가 오면 '과거에 ~했던 것을 기억하다'라는 과거 회상의 의미가 되므로 문맥상 어색합니다.">not taking</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+ </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+ <div class="wrap">
+ <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+ <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+ <div class="exam-item">
+ <h4>[변형 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘 추론)</h4>
+ <div class="exam-passage">
+ One of the best ways to soothe ourselves is by extending empathy. It is ① <u>impossible</u> to be angry and compassionate at the same time. To activate empathy on command, we must know what we feel in our body when we are empathetic. We can watch for the beating of our heart, the smile on our face, the calm we feel. These bodily sensations ② <u>activate</u> the part of our brain that feels sympathy and closeness to others. They will happen when we are in harmony with our children and last only a few seconds at first, but over time, we can ③ <u>stretch</u> these moments. With practice, we can find empathy even when we are upset with our young teenager or they are angry at us, if we remember not to take their behavior ④ <u>objectively</u>, but rather recognize that it is not a direct ⑤ <u>personal</u> attack.
+ </div>
+ <div class="exam-choices">
+ ① impossible &nbsp;&nbsp;&nbsp;&nbsp; ② activate &nbsp;&nbsp;&nbsp;&nbsp; ③ stretch &nbsp;&nbsp;&nbsp;&nbsp; ④ objectively &nbsp;&nbsp;&nbsp;&nbsp; ⑤ personal
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>[정답] ④</b><br>
+ <b>[해설]</b> 자녀의 반항적인 태도나 화를 '개인적인 감정으로/자신에 대한 공격으로(personally)' 받아들이지 않아야 공감을 유지할 수 있다는 맥락입니다. 따라서 객관적으로 받아들이지 않는다는 의미의 objectively는 정반대의 표현이므로 personally가 적절합니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형 2] 다음 빈칸에 들어갈 말로 가장 적절한 것을 고르시오. (빈칸 추론)</h4>
+ <div class="exam-passage">
+ One of the best ways to soothe ourselves is by extending empathy. It is impossible to be angry and compassionate at the same time. To activate empathy on command, we must ________________________________. We can watch for the beating of our heart, the smile on our face, the calm we feel. These bodily sensations activate the part of our brain that feels sympathy and closeness to others. They will happen when we are in harmony with our children and last only a few seconds at first, but over time, we can stretch these moments. With practice, we can find empathy even when we are upset with our young teenager or they are angry at us, if we remember not to take their behavior personally.
+ </div>
+ <div class="exam-choices">
+ ① suppress emotional expressions to avoid unnecessary interpersonal conflicts<br>
+ ② be consciously aware of the physical sensations that accompany empathy<br>
+ ③ demand immediate behavioral modifications from our teenage children<br>
+ ④ rationally analyze the logical flaws in the counterarguments of others<br>
+ ⑤ separate our intellectual thoughts entirely from physical reactions
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>[정답] ②</b><br>
+ <b>[해설]</b> 빈칸 바로 뒤 문장에서 심장 박동, 얼굴의 미소, 평온함과 같은 구체적인 신체 감각(bodily sensations)을 살피고 인지해야 한다고 서술하고 있습니다. 따라서 의도적으로 공감을 활성화하기 위해 '공감에 수반되는 신체적 감각을 의식적으로 인지해야 한다(be consciously aware of the physical sensations that accompany empathy)'는 ②가 가장 알맞습니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오. (글의 순서)</h4>
+ <div class="exam-passage">
+ One of the best ways to soothe ourselves is by extending empathy. It is impossible to be angry and compassionate at the same time.<br><br>
+ (A) They will happen when we are in harmony with our children and last only a few seconds at first, but over time, we can stretch these moments. With practice, we can find empathy even when we are upset with our young teenager or they are angry at us, if we remember not to take their behavior personally.<br>
+ (B) To activate empathy on command, we must know what we feel in our body when we are empathetic. We can watch for the beating of our heart, the smile on our face, the calm we feel.<br>
+ (C) These bodily sensations activate the part of our brain that feels sympathy and closeness to others.
+ </div>
+ <div class="exam-choices">
+ ① (A) - (C) - (B)<br>
+ ② (B) - (A) - (C)<br>
+ ③ (B) - (C) - (A)<br>
+ ④ (C) - (A) - (B)<br>
+ ⑤ (C) - (B) - (A)
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>[정답] ③</b><br>
+ <b>[해설]</b> 주어진 글(공감의 필요성과 분노와의 양립 불가)에 이어, (B)에서 공감을 마음대로 켜기 위해 신체 감각(심장 박동, 미소 등)을 관찰해야 한다는 방법론이 나오고, (C)의 지시 형용사구 'These bodily sensations'가 (B)의 감각들을 받아 뇌의 공감 영역 활성화를 설명한 뒤, (A)에서 대명사 'They'로 받아 처음에는 몇 초에 불과하지만 훈련을 통해 자녀와의 갈등 상황에서도 지속될 수 있다는 내용으로 귀결되는 (B) - (C) - (A)의 순서가 가장 자연스럽습니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형 4] 다음 글의 내용을 요약하고자 한다. [조건]에 맞추어 빈칸 (A)와 (B)를 완성하시오. (서술형)</h4>
+ <div class="exam-passage">
+ <b>[문제]</b> 아래 요약문의 빈칸 (A)와 (B)에 들어갈 적절한 말을 [조건]에 맞추어 영작하시오.<br><br>
+ Because anger cannot coexist with compassion, consciously recognizing (A)________________________________ can trigger our empathetic brain response, allowing us to maintain empathy during emotional conflicts provided that we (B)________________________________.<br><br>
+ [조건]<br>
+ 1. (A)는 본문에 나온 'bodily', 'sensations', 'empathy' 등의 어휘를 활용하여 4단어로 작성할 것.<br>
+ 2. (B)는 본문의 'not to take ~ personally' 표현을 변형하여 5단어로 완성할 것.<br>
+ 3. [배점: 6점 / (A) 3점, (B) 3점 - 어형 및 문법 오류 시 각 1점 감점]
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>[모범 답안]</b><br>
+ (A) <b>bodily sensations of empathy</b> (또는 <b>physical sensations of empathy</b>)<br>
+ (B) <b>do not take it personally</b> (또는 <b>do not take behaviors personally</b>)<br><br>
+ <b>[채점 기준 및 해설]</b><br>
+ - (A): recognizing의 목적어 역할을 하는 명사구 구조를 바르게 형성했는지 평가 (3점).<br>
+ - (B): 조건절 접속사 'provided that' 뒤에 이어지는 주어-동사 완결절로 올바른 부정문과 숙어 'take ~ personally'를 활용했는지 평가 (3점).
+ </div>
+ </details>
+ </div>
+ </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+ <a href="index.html" class="btn-back-hub">
+ <span>📋</span>
+ <span>전체 지문 목록으로 돌아가기</span>
+ </a>
+</nav>
+
+<footer>
+ <div class="wrap">
+ Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+ </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+ document.querySelectorAll('.drill-options').forEach(function(group) {
+ group.addEventListener('click', function(e) {
+ var btn = e.target.closest('.drill-btn');
+ if (!btn) return;
+ 
+var isCorrect = btn.getAttribute('data-ans') === 'correct';
+ var exp = btn.getAttribute('data-exp');
+ var fb = group.parentElement.querySelector('.drill-feedback');
+ 
+fb.style.display = 'block';
+ if (isCorrect) {
+ fb.style.background = '#ECFDF5';
+ fb.style.color = '#065F46';
+ fb.style.border = '1px solid #A7F3D0';
+ } else {
+ fb.style.background = '#FEF2F2';
+ fb.style.color = '#991B1B';
+ fb.style.border = '1px solid #FECACA';
+ }
+ fb.innerHTML = '<b>' + exp + '</b>';
+ });
+ });
+});
+</script>
+</body>
+</html>
