@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 사직고 1학년 2학기 중간고사 올림포스 9대변별유형 7강 기출 2번 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+ <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+ <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+ <link rel="manifest" href="/skore-workbook/site.webmanifest">
+ <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+ --navy: #0B1220;
+ --paper: #F8FAFC;
+ --white: #FFFFFF;
+ --blue: #1D4ED8;
+ --cyan: #0E8F9E;
+ --amber: #B8791A;
+ --text-main: #0F172A;
+ --text-muted: #64748B;
+ --border: #E2E8F0;
+ --mono: "IBM Plex Mono", -apple-system, monospace;
+ --serif: "Noto Serif KR", serif;
+ --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+ --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+ background: var(--paper);
+ color: var(--text-main);
+ font-family: var(--sans);
+ line-height: 1.75;
+ -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+ background: var(--navy);
+ color: var(--white);
+ padding: 36px 0 28px;
+ border-bottom: 3px solid var(--blue);
+}
+.masthead {
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--mono);
+ font-size: 11px;
+ letter-spacing: 0.12em;
+ color: #8FA0B8;
+ text-transform: uppercase;
+ border-bottom: 1px solid rgba(255,255,255,0.12);
+ padding-bottom: 8px;
+ margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+ display: inline-block;
+ font-family: var(--mono);
+ font-size: 12px;
+ font-weight: 600;
+ color: var(--cyan);
+ background: rgba(14, 143, 158, 0.15);
+ padding: 4px 10px;
+ border-radius: 4px;
+ margin-bottom: 12px;
+}
+h1.title {
+ font-family: var(--serif);
+ font-size: clamp(20px, 4vw, 30px);
+ font-weight: 900;
+ line-height: 1.35;
+ margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+ background: var(--white);
+ border-bottom: 1px solid var(--border);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 6px;
+ padding: 8px 0;
+}
+.track-step {
+ text-align: center;
+ padding: 6px 2px;
+ border-radius: 4px;
+ border: 1px solid var(--border);
+ background: var(--paper);
+ text-decoration: none;
+ color: var(--text-main);
+ display: block;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+ font-family: var(--mono);
+ font-size: 9px;
+ font-weight: 600;
+ color: var(--cyan);
+ display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+ font-family: var(--mono);
+ font-size: 10.5px;
+ font-weight: 600;
+ color: var(--blue);
+ letter-spacing: 0.12em;
+ display: block;
+ margin-bottom: 4px;
+}
+h2.sec-title {
+ font-family: var(--serif);
+ font-size: 20px;
+ font-weight: 900;
+ margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ border-left: 4px solid var(--blue);
+ border-radius: 6px;
+ padding: 16px 18px;
+ margin-bottom: 18px;
+}
+.bg-header {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 700;
+ color: var(--blue);
+ margin-bottom: 8px;
+}
+.bg-list {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+}
+.bg-list li {
+ font-size: 12.5px;
+ color: #1E3A8A;
+ line-height: 1.6;
+ position: relative;
+ padding-left: 14px;
+}
+.bg-list li::before {
+ content: "•";
+ position: absolute;
+ left: 2px;
+ color: var(--blue);
+ font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-left: 4px solid var(--blue);
+ padding: 20px;
+ font-size: 15px;
+ line-height: 1.85;
+ color: #1E293B;
+ border-radius: 4px;
+}
+.key-takeaway {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 12px 16px;
+ margin-top: 14px;
+ border-radius: 4px;
+ font-size: 13px;
+ color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-radius: 6px;
+ padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ border-radius: 4px;
+ margin-top: 8px;
+}
+summary {
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 600;
+ color: var(--blue);
+ padding: 8px 12px;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+.details-content {
+ padding: 10px 12px;
+ font-size: 13px;
+ color: #334155;
+ border-top: 1px dashed var(--border);
+ line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 12px;
+}
+.flow-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+ font-family: var(--mono);
+ font-size: 10px;
+ font-weight: 600;
+ color: var(--text-muted);
+ display: block;
+ margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ font-family: var(--mono);
+ font-size: 12px;
+ padding: 8px 14px;
+ cursor: pointer;
+ border-radius: 4px;
+ min-height: 40px;
+ display: flex;
+ align-items: center;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+ outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+ display: none;
+ font-size: 12.5px;
+ padding: 8px 12px;
+ border-radius: 4px;
+ margin-top: 6px;
+ line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ padding: 12px;
+ font-size: 13px;
+ line-height: 1.7;
+ color: #334155;
+ margin-bottom: 10px;
+ border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 10px 12px;
+ font-size: 12px;
+ color: #1E3A8A;
+ border-radius: 4px;
+ line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ width: 100%;
+ min-height: 48px;
+ background: #182238;
+ color: #60a5fa;
+ border: 1px solid #233252;
+ border-radius: 10px;
+ font-size: 14px;
+ font-weight: 700;
+ text-decoration: none;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+ background: var(--navy);
+ color: #64748B;
+ padding: 24px 0;
+ text-align: center;
+ font-family: var(--mono);
+ font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+ <div class="masthead">
+ <span><b>SKORE Academy</b> High School Logic Series</span>
+ <span>2026 사직고 1학년 2-1</span>
+ </div>
+ <div class="meta-badge">올림포스 9대변별유형 · 7강 기출 2번</div>
+ <h1 class="title">Constructed Reality & Perceptual Blindness<br><span>지각의 상상성과 인지적 무지의 간과</span></h1>
+ <p class="header-lead">자신이 구축한 현실을 맹신하며 무지를 완전히 간과하는 지각 메커니즘</p>
+ </div>
+</header>
+
+<div class="tracker-wrap">
+ <div class="wrap">
+ <div class="tracker">
+ <a href="#step1" class="track-step">
+ <span class="s-num">STEP 01</span>
+ <span class="s-name">원문정독</span>
+ </a>
+ <a href="#step2" class="track-step">
+ <span class="s-num">STEP 02</span>
+ <span class="s-name">디코딩</span>
+ </a>
+ <a href="#step3" class="track-step">
+ <span class="s-num">STEP 03</span>
+ <span class="s-name">논리구조</span>
+ </a>
+ <a href="#step4" class="track-step">
+ <span class="s-num">STEP 04</span>
+ <span class="s-name">어법드릴</span>
+ </a>
+ <a href="#step5" class="track-step">
+ <span class="s-num">STEP 05</span>
+ <span class="s-name">실전변형</span>
+ </a>
+ </div>
+ </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+ <div class="wrap">
+ <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+ <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+ 
+<div class="bg-knowledge-box">
+ <div class="bg-header">
+ <span>💡</span>
+ <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+ </div>
+ <ul class="bg-list">
+ <li><b>[핵심 개념]:</b> 지각의 능동적 구성(Perceptual Construction)과 확증 편향에 기인한 현실 맹신</li>
+ <li><b>[배경 맥락]:</b> 인간의 지각은 객관적 현실을 기록하는 사진이 아니라 뇌의 상상력이 가미된 회화와 같음</li>
+ <li><b>[논리 요약]:</b> 우리는 스스로 구축한 현실을 확신하지만 실제로는 눈앞의 장면에도 무지하며, 그 무지 자체를 완전히 무시함</li>
+ </ul>
+ </div>
+
+ <div class="full-passage-box">
+ Our perception always involves some imagination. It is more similar to painting than to photography. And, according to the confirmation effect, we blindly trust the reality we construct. This is best witnessed in visual illusions, which we perceive with full confidence, as if there were no doubt that we are portraying reality faithfully. One interesting way of discovering this ─ in a simple game that can be played at any moment ─ is the following. Whenever you are with another person, ask him or her to close their eyes, and start asking questions about what is nearby ─ not very particular details but the most striking elements of the scene. What is the color of the wall? Is there a table in the room? Does that man have a beard? You will see that the majority of us are quite ignorant about what lies around us. This is not so puzzling. The most extraordinary fact is that we completely disregard this ignorance.
+ </div>
+
+ <div class="key-takeaway">
+ <b>[핵심 요지]</b> 지각은 상상력을 통해 주관적으로 구성되며, 우리는 주변 환경에 대한 무지를 완전히 간과한 채 이를 맹신한다.
+ </div>
+ </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+ <div class="wrap">
+ <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+ <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+ <div class="chunk-box">
+ 
+ <div class="chunk-item">
+ <div class="chunk-en">Our perception always involves some imagination.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 우리의 지각은 / 항상 약간의 상상력을 수반한다.</p>
+ <p><b>[구문 포인트]</b> 3형식 기본 문장 구조 / 빈도부사 always의 위치(일반동사 앞) / 불가산명사 imagination 수식.</p>
+ <p><b>[핵심 어휘]</b> perception (지각, 인식), involve (수반하다, 포함하다), imagination (상상력)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">It is more similar to painting / than to photography.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그것은 회화와 더 유사하다 / 사진술보다는.</p>
+ <p><b>[구문 포인트]</b> 전치사구 병렬 비교급 구문 (more similar to A than to B)을 통해 주관적 지각의 특성을 강조.</p>
+ <p><b>[핵심 어휘]</b> similar (유사한), painting (회화, 그림), photography (사진 촬영, 사진술)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">And, / according to the confirmation effect, / we blindly trust the reality we construct.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그리고, / 확증 효과에 따르면, / 우리는 우리가 구축하는 현실을 맹목적으로 신뢰한다.</p>
+ <p><b>[구문 포인트]</b> 전치사구 according to ~ / 목적격 관계대명사가 생략된 관계사절(we construct)이 the reality를 후위 수식.</p>
+ <p><b>[핵심 어휘]</b> confirmation effect (확증 효과), blindly (맹목적으로), construct (구축하다, 구성하다)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">This is best witnessed in visual illusions, / which we perceive with full confidence, / as if there were no doubt / that we are portraying reality faithfully.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 이것은 착시 현상에서 가장 잘 목격된다, / (그런데 착시를) 우리는 완전한 확신을 가지고 지각한다, / 마치 의심의 여지가 전혀 없는 것처럼 / 우리가 현실을 충실하게 묘사하고 있다는.</p>
+ <p><b>[구문 포인트]</b> 계속적 용법의 목적격 관계대명사 which / as if 가정법 과거 구문 (there were no doubt) / 명사 doubt 뒤의 동격 접속사 that절.</p>
+ <p><b>[핵심 어휘]</b> witness (목격하다), visual illusion (착시), confidence (확신), portray (묘사하다), faithfully (충실하게)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">One interesting way of discovering this / ─ in a simple game that can be played at any moment ─ / is the following.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 이것을 발견하는 한 가지 흥미로운 방법은 / ─ 언제든지 행해질 수 있는 간단한 게임 속에서 ─ / 다음과 같다.</p>
+ <p><b>[구문 포인트]</b> 핵심 주어 One interesting way에 호응하는 단수 동사 is / 대시(─) 삽입구 내 주격 관계대명사 that절과 수동태 can be played.</p>
+ <p><b>[핵심 어휘]</b> discover (발견하다), at any moment (언제든지), the following (다음의 것)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">Whenever you are with another person, / ask him or her to close their eyes, / and start asking questions about what is nearby / ─ not very particular details / but the most striking elements of the scene.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 당신이 다른 사람과 함께 있을 때마다, / 그 사람에게 눈을 감으라고 요청하라, / 그리고 주변에 무엇이 있는지에 대해 질문하기 시작하라 / ─ 매우 구체적인 세부 사항들이 아니라 / 그 장면의 가장 두드러진 요소들에 대해.</p>
+ <p><b>[구문 포인트]</b> 복합관계부사 Whenever절 / 명령문 병렬 ask ~ and start ~ / 5형식 ask + 목적어 + to부정사 / 전치사 about의 목적어인 관계대명사 what절 / 상관접속사 not A but B.</p>
+ <p><b>[핵심 어휘]</b> particular (구체적인, 특별한), striking (두드러진, 눈에 띄는), element (요소)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">What is the color of the wall?</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 벽의 색깔은 무엇인가?</p>
+ <p><b>[구문 포인트]</b> 의문사 What이 주격 보어로 쓰인 직접의문문 구문.</p>
+ <p><b>[핵심 어휘]</b> color (색상, 색깔), wall (벽)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">Is there a table in the room?</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 방 안에 테이블이 있는가?</p>
+ <p><b>[구문 포인트]</b> 유도부사 there를 이용한 단수 의문문 도치 구문 (Is there + 단수주어).</p>
+ <p><b>[핵심 어휘]</b> table (탁자, 테이블), room (방)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">Does that man have a beard?</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 저 남자는 턱수염이 있는가?</p>
+ <p><b>[구문 포인트]</b> 3인칭 단수 주어 that man에 호응하는 일반동사 의문문 도치 (Does + 주어 + 동사원형 have).</p>
+ <p><b>[핵심 어휘]</b> man (남자), beard (턱수염)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">You will see / that the majority of us are quite ignorant about what lies around us.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 당신은 알게 될 것이다 / 우리 중 대다수가 / 우리 주변에 무엇이 놓여 있는지에 대해 꽤 무지하다는 것을.</p>
+ <p><b>[구문 포인트]</b> 동사 see의 목적어 명사절 접속사 that / the majority of + 복수명사(us)에 호응하는 복수동사 are / 전치사 about의 목적어 역할을 하는 관계대명사 what절.</p>
+ <p><b>[핵심 어휘]</b> majority (대다수), ignorant (무지한, 모르는), lie (놓여 있다, 있다)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">This is not so puzzling.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 이것은 그렇게 당혹스럽지 않다.</p>
+ <p><b>[구문 포인트]</b> 사물 주어 This의 능동적 특성을 나타내는 현재분사 보어 puzzling.</p>
+ <p><b>[핵심 어휘]</b> puzzling (당혹스러운, 수수께끼 같은)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">The most extraordinary fact is / that we completely disregard this ignorance.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 가장 놀라운 사실은 / 우리가 이러한 무지를 완전히 무시한다는 점이다.</p>
+ <p><b>[구문 포인트]</b> 주격 보어 자리를 이끄는 명사절 접속사 that / 부사 completely가 일반동사 disregard를 수식.</p>
+ <p><b>[핵심 어휘]</b> extraordinary (놀라운, 비범한), disregard (무시하다, 묵살하다), ignorance (무지)</p>
+ </div>
+ </details>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+ <div class="wrap">
+ <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+ <h2 class="sec-title">지문 맞춤형 논리 구조도 (지각의 주관적 구성과 무지의 은폐)</h2>
+ <div class="flow-container">
+ <div class="flow-card s1">
+ <span class="badge">[PHASE 1] 지각의 본질과 확증 편향</span>
+ <h4>회화와 같은 주관적 지각과 맹목적 신뢰</h4>
+ <p>지각은 객관적 사진이 아니라 상상력이 개입된 주관적 회화에 가까우며, 우리는 착시처럼 자신이 구성한 현실을 의심 없이 맹신한다.</p>
+ </div>
+ <div class="flow-card s2">
+ <span class="badge">[PHASE 2] 간단한 게임을 통한 현실 검증</span>
+ <h4>눈앞의 두드러진 요소에 대한 무지 폭로</h4>
+ <p>동행자에게 눈을 감게 하고 벽 색깔이나 가구 유무 등 눈앞의 명확한 핵심 요소를 질문하는 순간, 대다수가 주변 환경에 대해 무지함이 증명된다.</p>
+ </div>
+ <div class="flow-card s3">
+ <span class="badge">[PHASE 3] 인지적 역설과 최종 결론</span>
+ <h4>자신의 지각적 무지마저 간과하는 인간</h4>
+ <p>주변을 제대로 알지 못한다는 사실 자체보다 더 놀라운 점은, 인간이 일상 속에서 이러한 자신의 무지를 완전히 무시하고 살아간다는 것이다.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+ <div class="wrap">
+ <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+ <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+ 
+ <div class="drill-card">
+ <div class="drill-q">Q1. [가정법 과거 구문 및 동격절] This is best witnessed in visual illusions, which we perceive with full confidence, as if there <b>(was / were)</b> no doubt <b>(which / that)</b> we are portraying reality faithfully.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="correct" data-exp="정답! '마치 ~인 것처럼'을 뜻하는 as if 가정법 과거 구문에서는 주어의 수와 관계없이 가정법 과거 were를 사용하는 것이 원칙이며, doubt 뒤의 완전한 절(we are portraying reality faithfully)을 연결하는 동격 접속사 that이 올바릅니다.">were / that</button>
+ <button class="drill-btn" data-ans="wrong" data-exp="오답! 가정법 과거 구문에서는 were를 우선적으로 취하며, 뒤따르는 절이 완벽하므로 불완전한 절을 이끄는 관계대명사 which는 올 수 없습니다.">was / which</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+
+ <div class="drill-card">
+ <div class="drill-q">Q2. [부분사 수일치 및 관계대명사 선택] You will see that the majority of us <b>(is / are)</b> quite ignorant about <b>(that / what)</b> lies around us.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="wrong" data-exp="오답! the majority of 뒤에 복수 대명사 us가 왔으므로 복수 동사 are를 써야 하며, 전치사 about 뒤에서 주어가 빠진 불완전한 절을 이끄는 것은 선행사를 포함하는 관계대명사 what입니다.">is / that</button>
+ <button class="drill-btn" data-ans="correct" data-exp="정답! 'the majority of + 복수명사'는 복수 동사(are)와 호응하며, 전치사의 목적어 역할을 하면서 절 내부의 주어를 겸하는 선행사 포함 관계대명사 what이 정확한 어법입니다.">are / what</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+
+ </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+ <div class="wrap">
+ <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+ <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+ 
+ <div class="exam-item">
+ <h4>[변형문항 01] 글의 요지 추론 (글의 요지로 가장 적절한 것은?)</h4>
+ <div class="exam-passage">
+ Our perception always involves some imagination. It is more similar to painting than to photography. And, according to the confirmation effect, we blindly trust the reality we construct. This is best witnessed in visual illusions, which we perceive with full confidence, as if there were no doubt that we are portraying reality faithfully. One interesting way of discovering this ─ in a simple game that can be played at any moment ─ is the following. Whenever you are with another person, ask him or her to close their eyes, and start asking questions about what is nearby ─ not very particular details but the most striking elements of the scene. What is the color of the wall? Is there a table in the room? Does that man have a beard? You will see that the majority of us are quite ignorant about what lies around us. This is not so puzzling. The most extraordinary fact is that we completely disregard this ignorance.
+ </div>
+ <div class="exam-choices">
+ ① 객관적인 관찰력을 기르기 위해서는 세부적인 시각 정보를 사진처럼 기록해야 한다.<br>
+ ② 인간의 지각은 상상력을 통해 주관적으로 구성되며, 우리는 주변에 대한 무지를 간과한 채 이를 맹신한다.<br>
+ ③ 일상적인 게임과 시각적 착시 현상은 기억력을 회복하는 데 효과적인 도구가 된다.<br>
+ ④ 확증 편향을 극복하기 위해서는 대인 관계에서 상대방의 세부 묘사에 집중해야 한다.<br>
+ ⑤ 뇌는 시각적 오류를 감지하면 즉각적으로 무의식적인 상상력을 차단한다.
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ②</b><br>
+ <b>해설:</b> 우리의 지각은 사진처럼 객관적인 기록이 아니라 상상력이 개입된 주관적 산물이며, 실제로 눈앞의 핵심적인 요소조차 모를 정도로 무지함에도 불구하고 그 무지 자체를 완전히 무시한 채 자신이 구축한 현실을 맹목적으로 믿는다는 점을 비판적으로 설명하고 있습니다. 따라서 ②번이 글의 요지로 가장 적절합니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 02] 문맥상 어휘의 적절성 파악 (밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?)</h4>
+ <div class="exam-passage">
+ Our perception always involves some imagination. It is more similar to painting than to photography. And, according to the confirmation effect, we blindly trust the reality we construct. This is best witnessed in visual illusions, which we perceive with full confidence, as if there were no doubt that we are portraying reality faithfully. One interesting way of discovering this ─ in a simple game that can be played at any moment ─ is the following. Whenever you are with another person, ask him or her to close their eyes, and start asking questions about what is nearby ─ not very particular details but the most ① <b>striking</b> elements of the scene. What is the color of the wall? Is there a table in the room? Does that man have a beard? You will see that the majority of us are quite ② <b>ignorant</b> about what lies around us. This is not so puzzling. The most extraordinary fact is that we completely ③ <b>disregard</b> this ignorance.
+ </div>
+ <div class="exam-choices">
+ ① striking<br>
+ ② ignorant<br>
+ ③ disregard<br>
+ ④ faithfully<br>
+ ⑤ construct
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ② (변형 출제 시 낱말의 반의어 확인 필요)</b><br>
+ <b>해설:</b> 눈을 감고 주변의 두드러진 요소(벽 색깔, 탁자 유무 등)에 대해 질문했을 때 대다수의 사람이 주변 환경에 대해 잘 알지 못한다는 내용이 전개되어야 하므로, ignorant(무지한) 대신 knowledgeable 등의 반의어가 사용되면 틀린 어휘가 됩니다. 원문의 흐름상 눈앞의 명확한 요소에 대해 모른다는 사실을 지적하는 문맥을 정확히 파악해야 합니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 03] 문장 삽입 (글의 흐름으로 보아, 주어진 문장이 들어갈 가장 적절한 곳은?)</h4>
+ <div class="exam-passage">
+ <b>[주어진 문장]</b><br>
+ One interesting way of discovering this ─ in a simple game that can be played at any moment ─ is the following.<br><br>
+ Our perception always involves some imagination. It is more similar to painting than to photography. ( ① ) And, according to the confirmation effect, we blindly trust the reality we construct. ( ② ) This is best witnessed in visual illusions, which we perceive with full confidence, as if there were no doubt that we are portraying reality faithfully. ( ③ ) Whenever you are with another person, ask him or her to close their eyes, and start asking questions about what is nearby ─ not very particular details but the most striking elements of the scene. ( ④ ) What is the color of the wall? Is there a table in the room? Does that man have a beard? ( ⑤ ) You will see that the majority of us are quite ignorant about what lies around us. This is not so puzzling. The most extraordinary fact is that we completely disregard this ignorance.
+ </div>
+ <div class="exam-choices">
+ ①번<br>
+ ②번<br>
+ ③번<br>
+ ④번<br>
+ ⑤번
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ③</b><br>
+ <b>해설:</b> 주어진 문장은 지각의 주관성과 착시를 맹신하는 현상(this)을 입증하는 간단한 게임 방식을 소개하는 문장입니다. 이는 앞 문장의 착시 현상에 대한 일반적 설명이 끝나고, 구체적으로 동행자와 함께 게임을 수행하는 지침(Whenever you are with another person, ask him or her to close their eyes...)이 시작되기 직전인 ③번에 들어가는 것이 가장 자연스럽습니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 04] 서술형</h4>
+ <div class="exam-passage">
+ 다음 글의 내용을 참고하여, 주변 환경에 대해 무지하다는 사실 자체보다 우리가 간과하는 "가장 놀라운 사실(the most extraordinary fact)"이 무엇인지 본문에 제시된 표현을 활용하여 영어 완결문으로 서술하시오.
+ </div>
+ <div class="exam-choices">
+ <b>[조건]</b><br>
+ 1. 본문에 등장하는 표현인 <b>"completely disregard this ignorance"</b>를 반드시 포함할 것.<br>
+ 2. 주어와 동사가 갖추어진 1개의 완결된 평서문 형태로 작성할 것.<br>
+ 3. 문법 및 맞춤법에 오류가 없도록 유의할 것.<br><br>
+ <b>[배점 및 채점 기준]</b><br>
+ - 필수 표현을 포함하여 완전한 문장 구조 완성: 5점<br>
+ - 철자 오류 또는 문법적 결함 발생 시: 1개당 -1점 감점
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: The most extraordinary fact is that we completely disregard this ignorance. (또는 'We completely disregard this ignorance.')</b><br>
+ <b>해설:</b> 지문의 마지막 문장에서 인간이 주변 환경에 대해 무지하다는 것 자체보다, 우리가 그 무지함을 일상에서 완전히 무시하고 살아간다는 점이 가장 놀라운 사실이라고 역설하고 있으므로 해당 문장을 조건에 맞추어 작성하면 정답입니다.
+ </div>
+ </details>
+ </div>
+
+ </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+ <a href="index.html" class="btn-back-hub">
+ <span>📋</span>
+ <span>전체 지문 목록으로 돌아가기</span>
+ </a>
+</nav>
+
+<footer>
+ <div class="wrap">
+ Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+ </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+ document.querySelectorAll('.drill-options').forEach(function(group) {
+ group.addEventListener('click', function(e) {
+ var btn = e.target.closest('.drill-btn');
+ if (!btn) return;
+ 
+var isCorrect = btn.getAttribute('data-ans') === 'correct';
+ var exp = btn.getAttribute('data-exp');
+ var fb = group.parentElement.querySelector('.drill-feedback');
+ 
+fb.style.display = 'block';
+ if (isCorrect) {
+ fb.style.background = '#ECFDF5';
+ fb.style.color = '#065F46';
+ fb.style.border = '1px solid #A7F3D0';
+ } else {
+ fb.style.background = '#FEF2F2';
+ fb.style.color = '#991B1B';
+ fb.style.border = '1px solid #FECACA';
+ }
+ fb.innerHTML = '<b>' + exp + '</b>';
+ });
+ });
+});
+</script>
+</body>
+</html>

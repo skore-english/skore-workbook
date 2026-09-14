@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 사직고 1학년 2-1 올림포스 9대변별유형 7강 5번 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+ <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+ <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+ <link rel="manifest" href="/skore-workbook/site.webmanifest">
+ <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+ --navy: #0B1220;
+ --paper: #F8FAFC;
+ --white: #FFFFFF;
+ --blue: #1D4ED8;
+ --cyan: #0E8F9E;
+ --amber: #B8791A;
+ --text-main: #0F172A;
+ --text-muted: #64748B;
+ --border: #E2E8F0;
+ --mono: "IBM Plex Mono", -apple-system, monospace;
+ --serif: "Noto Serif KR", serif;
+ --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+ --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+ background: var(--paper);
+ color: var(--text-main);
+ font-family: var(--sans);
+ line-height: 1.75;
+ -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+ background: var(--navy);
+ color: var(--white);
+ padding: 36px 0 28px;
+ border-bottom: 3px solid var(--blue);
+}
+.masthead {
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--mono);
+ font-size: 11px;
+ letter-spacing: 0.12em;
+ color: #8FA0B8;
+ text-transform: uppercase;
+ border-bottom: 1px solid rgba(255,255,255,0.12);
+ padding-bottom: 8px;
+ margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+ display: inline-block;
+ font-family: var(--mono);
+ font-size: 12px;
+ font-weight: 600;
+ color: var(--cyan);
+ background: rgba(14, 143, 158, 0.15);
+ padding: 4px 10px;
+ border-radius: 4px;
+ margin-bottom: 12px;
+}
+h1.title {
+ font-family: var(--serif);
+ font-size: clamp(20px, 4vw, 30px);
+ font-weight: 900;
+ line-height: 1.35;
+ margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+ background: var(--white);
+ border-bottom: 1px solid var(--border);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 6px;
+ padding: 8px 0;
+}
+.track-step {
+ text-align: center;
+ padding: 6px 2px;
+ border-radius: 4px;
+ border: 1px solid var(--border);
+ background: var(--paper);
+ text-decoration: none;
+ color: var(--text-main);
+ display: block;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+ font-family: var(--mono);
+ font-size: 9px;
+ font-weight: 600;
+ color: var(--cyan);
+ display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+ font-family: var(--mono);
+ font-size: 10.5px;
+ font-weight: 600;
+ color: var(--blue);
+ letter-spacing: 0.12em;
+ display: block;
+ margin-bottom: 4px;
+}
+h2.sec-title {
+ font-family: var(--serif);
+ font-size: 20px;
+ font-weight: 900;
+ margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ border-left: 4px solid var(--blue);
+ border-radius: 6px;
+ padding: 16px 18px;
+ margin-bottom: 18px;
+}
+.bg-header {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 700;
+ color: var(--blue);
+ margin-bottom: 8px;
+}
+.bg-list {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+}
+.bg-list li {
+ font-size: 12.5px;
+ color: #1E3A8A;
+ line-height: 1.6;
+ position: relative;
+ padding-left: 14px;
+}
+.bg-list li::before {
+ content: "•";
+ position: absolute;
+ left: 2px;
+ color: var(--blue);
+ font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-left: 4px solid var(--blue);
+ padding: 20px;
+ font-size: 15px;
+ line-height: 1.85;
+ color: #1E293B;
+ border-radius: 4px;
+}
+.key-takeaway {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 12px 16px;
+ margin-top: 14px;
+ border-radius: 4px;
+ font-size: 13px;
+ color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-radius: 6px;
+ padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ border-radius: 4px;
+ margin-top: 8px;
+}
+summary {
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 600;
+ color: var(--blue);
+ padding: 8px 12px;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+.details-content {
+ padding: 10px 12px;
+ font-size: 13px;
+ color: #334155;
+ border-top: 1px dashed var(--border);
+ line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 12px;
+}
+.flow-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+ font-family: var(--mono);
+ font-size: 10px;
+ font-weight: 600;
+ color: var(--text-muted);
+ display: block;
+ margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ font-family: var(--mono);
+ font-size: 12px;
+ padding: 8px 14px;
+ cursor: pointer;
+ border-radius: 4px;
+ min-height: 40px;
+ display: flex;
+ align-items: center;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+ outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+ display: none;
+ font-size: 12.5px;
+ padding: 8px 12px;
+ border-radius: 4px;
+ margin-top: 6px;
+ line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ padding: 12px;
+ font-size: 13px;
+ line-height: 1.7;
+ color: #334155;
+ margin-bottom: 10px;
+ border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 10px 12px;
+ font-size: 12px;
+ color: #1E3A8A;
+ border-radius: 4px;
+ line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ width: 100%;
+ min-height: 48px;
+ background: #182238;
+ color: #60a5fa;
+ border: 1px solid #233252;
+ border-radius: 10px;
+ font-size: 14px;
+ font-weight: 700;
+ text-decoration: none;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+ background: var(--navy);
+ color: #64748B;
+ padding: 24px 0;
+ text-align: center;
+ font-family: var(--mono);
+ font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+ <div class="masthead">
+ <span><b>SKORE Academy</b> High School Logic Series</span>
+ <span>2026 사직고 1학년 2-1</span>
+ </div>
+ <div class="meta-badge">올림포스 9대변별유형 · 7강 5번</div>
+ <h1 class="title">Limits of Instinct Theory<br><span>인간 행동 설명에서 본능 개념의 한계와 학습된 행동</span></h1>
+ <p class="header-lead">인간 행동에서 본능적 설명의 한계와 학습된 행동으로의 진화적 대체</p>
+ </div>
+</header>
+
+<div class="tracker-wrap">
+ <div class="wrap">
+ <div class="tracker">
+ <a href="#step1" class="track-step">
+ <span class="s-num">STEP 01</span>
+ <span class="s-name">원문정독</span>
+ </a>
+ <a href="#step2" class="track-step">
+ <span class="s-num">STEP 02</span>
+ <span class="s-name">디코딩</span>
+ </a>
+ <a href="#step3" class="track-step">
+ <span class="s-num">STEP 03</span>
+ <span class="s-name">논리구조</span>
+ </a>
+ <a href="#step4" class="track-step">
+ <span class="s-num">STEP 04</span>
+ <span class="s-name">어법드릴</span>
+ </a>
+ <a href="#step5" class="track-step">
+ <span class="s-num">STEP 05</span>
+ <span class="s-name">실전변형</span>
+ </a>
+ </div>
+ </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+ <div class="wrap">
+ <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+ <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+ 
+<div class="bg-knowledge-box">
+ <div class="bg-header">
+ <span>💡</span>
+ <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+ </div>
+ <ul class="bg-list">
+ <li><b>[핵심 개념]:</b> 본능 이론(Instinct Theory)의 정의와 순환 논리적 설명의 한계</li>
+ <li><b>[배경 맥락]:</b> 초기 심리학자들은 인간 행동을 본능으로 설명하려 했으나 이는 실질적 원인 분석을 회피한 동어반복에 불과함</li>
+ <li><b>[논리 요약]:</b> 동물과 달리 인간 진화 과정에서 고정된 본능은 대부분 유연하고 가변적인 학습된 행동으로 대체됨</li>
+ </ul>
+ </div>
+
+ <div class="full-passage-box">
+ Greeks relied heavily on the concept of instinct in their attempts to explain human behavior. An instinct is a complex behavior that is automatic, unlearned, and unmodifiable, and occurs in all the members of a species. Migration and parental behavior are good examples of instinctive behaviors in animals. According to early instinct theorists, humans were guided by instincts, too, waging war because of an aggressive instinct, caring for their young because of a parental instinct, and so on. At first glance, these explanations sound meaningful. But if we say that a person is combative because of an aggressive instinct, we know little more about what makes the person fight than we did before; if we cannot then analyze the supposed aggressive instinct, we have simply dodged the explanation. Contemporary students of behavior have used strict requirements of evidence to identify a few instincts in animals, such as homing and flight in birds. But most psychologists believe that, in human evolution, instincts have been for the most part replaced by learned behaviors.
+ </div>
+
+ <div class="key-takeaway">
+ <b>[핵심 요지]</b> 본능을 통한 인간 행동 설명은 순환적 회피에 불과하며, 인간 진화에서 본능은 대부분 학습된 행동으로 대체되었다.
+ </div>
+ </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+ <div class="wrap">
+ <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+ <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+ <div class="chunk-box">
+ 
+ <div class="chunk-item">
+ <div class="chunk-en">Greeks relied heavily on the concept of instinct / in their attempts to explain human behavior.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그리스인들은 본능이라는 개념에 크게 의존했다 / 인간의 행동을 설명하려는 시도에서.</p>
+ <p><b>[구문 포인트]</b> rely heavily on (~에 크게 의존하다) / attempts를 수식하는 형용사적 용법의 to부정사 (to explain).</p>
+ <p><b>[핵심 어휘]</b> rely on (~에 의존하다), concept (개념), instinct (본능), attempt (시도)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">An instinct is a complex behavior / that is automatic, unlearned, and unmodifiable, / and occurs in all the members of a species.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 본능은 복잡한 행동이다 / 자동적이고, 학습되지 않으며, 수정 불가능하고, / 한 종의 모든 구성원에게서 발생하는.</p>
+ <p><b>[구문 포인트]</b> 선행사 a complex behavior를 수식하는 주격 관계대명사 that절 / 동사 병렬 구조 (is ~ and occurs).</p>
+ <p><b>[핵심 어휘]</b> automatic (자동적인), unlearned (학습되지 않은), unmodifiable (수정할 수 없는), occur (발생하다)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">Migration and parental behavior / are good examples of instinctive behaviors in animals.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 이주와 부모의 양육 행동은 / 동물에게 나타나는 본능적 행동의 좋은 예시이다.</p>
+ <p><b>[구문 포인트]</b> 복수 주어(Migration and parental behavior)에 맞춘 be동사 복수형 are.</p>
+ <p><b>[핵심 어휘]</b> migration (이주, 이동), parental (부모의, 양육의), instinctive (본능적인)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">According to early instinct theorists, / humans were guided by instincts, too, / waging war because of an aggressive instinct, / caring for their young because of a parental instinct, and so on.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 초기 본능 이론가들에 따르면, / 인간 또한 본능에 의해 인도되었다, / 공격적인 본능 때문에 전쟁을 벌이고, / 부모의 본능 때문에 어린 새끼를 돌보는 등.</p>
+ <p><b>[구문 포인트]</b> 수동태 were guided by / 동시 동작을 나타내는 분사구문의 병렬 구조 (waging ~, caring ~).</p>
+ <p><b>[핵심 어휘]</b> theorist (이론가), guide (인도하다, 이끌다), wage (벌이다, 수행하다), aggressive (공격적인)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">At first glance, / these explanations sound meaningful.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 얼핏 보기에는, / 이러한 설명들이 유의미하게 들린다.</p>
+ <p><b>[구문 포인트]</b> 2형식 감각동사 sound + 형용사 보어 meaningful.</p>
+ <p><b>[핵심 어휘]</b> at first glance (얼핏 보기에), explanation (설명), meaningful (의미 있는)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">But if we say that a person is combative because of an aggressive instinct, / we know little more about what makes the person fight than we did before; / if we cannot then analyze the supposed aggressive instinct, / we have simply dodged the explanation.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그러나 만약 어떤 사람이 공격적 본능 때문에 호전적이라고 말한다면, / 우리는 그 사람을 싸우게 만드는 요인에 대해 이전보다 거의 더 알지 못한다; / 만약 우리가 그 소위 공격적 본능을 분석할 수 없다면, / 우리는 단지 설명을 회피한 것에 불과하다.</p>
+ <p><b>[구문 포인트]</b> say의 목적어 명사절 that / 사역동사 make + 목적어 + 동사원형 (what makes the person fight) / 대동사 did (= knew) / 현재완료 have dodged.</p>
+ <p><b>[핵심 어휘]</b> combative (호전적인), supposed (소위, 추정되는), analyze (분석하다), dodge (회피하다)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">Contemporary students of behavior / have used strict requirements of evidence / to identify a few instincts in animals, / such as homing and flight in birds.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 현대의 행동 연구자들은 / 엄격한 증거 요건을 사용해 왔다 / 동물의 몇 가지 본능을 규명하기 위해, / 조류의 귀소 본능이나 비행과 같은.</p>
+ <p><b>[구문 포인트]</b> 현재완료 have used / 목적을 나타내는 to부정사 to identify / 예시를 나타내는 전치사 such as.</p>
+ <p><b>[핵심 어휘]</b> contemporary (현대의), requirement (요건, 조건), evidence (증거), identify (확인하다, 규명하다), homing (귀소 본능)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">But most psychologists believe / that, in human evolution, / instincts have been for the most part replaced by learned behaviors.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그러나 대부분의 심리학자들은 믿는다 / 인류의 진화에서 / 본능은 대부분 학습된 행동으로 대체되어 왔다고.</p>
+ <p><b>[구문 포인트]</b> believe의 목적어 명사절 접속사 that / 현재완료 수동태 have been replaced by (~에 의해 대체되다).</p>
+ <p><b>[핵심 어휘]</b> evolution (진화), for the most part (대부분), replace (대체하다), learned behavior (학습된 행동)</p>
+ </div>
+ </details>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+ <div class="wrap">
+ <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+ <h2 class="sec-title">지문 맞춤형 논리 구조도 (본능 개념의 정의와 인간 행동 적용의 한계 및 학습으로의 대체)</h2>
+ <div class="flow-container">
+ <div class="flow-card s1">
+ <span class="badge">[PHASE 1] 본능의 정의와 초기 적용</span>
+ <h4>본능의 학술적 정의와 초기 이론</h4>
+ <p>본능은 자동적이고 수정 불가능한 선천적 행동이며, 초기 이론가들은 전쟁이나 양육 등 인간 행동 역시 본능의 결과로 설명하려 했다.</p>
+ </div>
+ <div class="flow-card s2">
+ <span class="badge">[PHASE 2] 본능 이론의 논리적 결함</span>
+ <h4>순환 논리와 실질적 원인 규명 회피</h4>
+ <p>공격성 본능으로 호전성을 설명하는 방식은 행동의 실질적 원인을 밝히지 못하고 설명을 회피하는 동어반복적 오류에 불과하다.</p>
+ </div>
+ <div class="flow-card s3">
+ <span class="badge">[PHASE 3] 현대적 관점과 결론</span>
+ <h4>학습된 행동으로의 진화적 대체</h4>
+ <p>현대 행동학은 동물에게서 극소수의 엄격한 본능만을 인정하며, 인간의 경우 진화 과정에서 본능이 대부분 학습된 행동으로 대체되었다.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+ <div class="wrap">
+ <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+ <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+ 
+ <div class="drill-card">
+ <div class="drill-q">Q1. [사역동사 목적격 보어 및 대동사 형태] But if we say that a person is combative because of an aggressive instinct, we know little more about what makes the person <b>(fight / to fight)</b> than we <b>(were / did)</b> before.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="correct" data-exp="정답! 사역동사 make의 목적격 보어로는 원형부정사 fight가 와야 하며, than 뒤에서 일반동사 knew를 대신하는 대동사로는 did가 올바릅니다.">fight / did</button>
+ <button class="drill-btn" data-ans="wrong" data-exp="오답! 사역동사 makes 뒤에 to부정사는 올 수 없으며, 일반동사 과거형(knew)을 받는 대동사 자리이므로 be동사 were는 잘못되었습니다.">to fight / were</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+
+ <div class="drill-card">
+ <div class="drill-q">Q2. [현재완료 능동 vs 수동태] But most psychologists believe that, in human evolution, instincts <b>(have replaced / have been replaced)</b> for the most part by learned behaviors.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="wrong" data-exp="오답! 주어인 본능(instincts)은 학습된 행동을 대체하는 주체가 아니라 학습된 행동에 의해 '대체되는' 대상이므로 수동태가 되어야 합니다.">have replaced</button>
+ <button class="drill-btn" data-ans="correct" data-exp="정답! 주어 instincts가 전치사구 by learned behaviors에 의해 대체당하는 수동의 관계이므로 현재완료 수동태 have been replaced가 정확합니다.">have been replaced</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+
+ </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+ <div class="wrap">
+ <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+ <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+ 
+ <div class="exam-item">
+ <h4>[변형문항 01] 글의 제목 추론 (다음 글의 제목으로 가장 적절한 것은?)</h4>
+ <div class="exam-passage">
+ Greeks relied heavily on the concept of instinct in their attempts to explain human behavior. An instinct is a complex behavior that is automatic, unlearned, and unmodifiable, and occurs in all the members of a species. Migration and parental behavior are good examples of instinctive behaviors in animals. According to early instinct theorists, humans were guided by instincts, too, waging war because of an aggressive instinct, caring for their young because of a parental instinct, and so on. At first glance, these explanations sound meaningful. But if we say that a person is combative because of an aggressive instinct, we know little more about what makes the person fight than we did before; if we cannot then analyze the supposed aggressive instinct, we have simply dodged the explanation. Contemporary students of behavior have used strict requirements of evidence to identify a few instincts in animals, such as homing and flight in birds. But most psychologists believe that, in human evolution, instincts have been for the most part replaced by learned behaviors.
+ </div>
+ <div class="exam-choices">
+ ① The Superiority of Innate Instincts Over Learned Behaviors in Human Survival<br>
+ ② Fallacy of the Instinct Theory: Why Learned Behavior Defines Human Action<br>
+ ③ Biological Mechanisms of Animal Instincts: From Migration to Flying Skills<br>
+ ④ Evolutionary Origins of Aggression: How Instincts Spark Warfare Among Species<br>
+ ⑤ Historical Transition from Ancient Greek Philosophy to Modern Psychotherapy
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ②</b><br>
+ <b>해설:</b> 초기 이론가들은 인간 행동을 본능으로 설명하려 했으나, 이는 실질적 원인 분석을 회피하는 오류에 불과하며 현대 심리학에서는 인간 진화 과정에서 본능이 대부분 학습된 행동으로 대체되었다고 보고 있습니다. 따라서 ② 'Fallacy of the Instinct Theory: Why Learned Behavior Defines Human Action (본능 이론의 오류: 왜 학습된 행동이 인간의 행동을 규정하는가)'가 가장 적절한 제목입니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 02] 문맥상 어휘의 적절성 파악 (다음 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?)</h4>
+ <div class="exam-passage">
+ Greeks relied heavily on the concept of instinct in their attempts to explain human behavior. An instinct is a complex behavior that is automatic, unlearned, and unmodifiable, and occurs in all the members of a species. Migration and parental behavior are good examples of instinctive behaviors in animals. According to early instinct theorists, humans were guided by instincts, too, waging war because of an aggressive instinct, caring for their young because of a parental instinct, and so on. At first glance, these explanations sound meaningful. But if we say that a person is combative because of an aggressive instinct, we know little more about what makes the person fight than we did before; if we cannot then analyze the supposed aggressive instinct, we have simply ① <b>dodged</b> the explanation. Contemporary students of behavior have used ② <b>strict</b> requirements of evidence to identify a few instincts in animals, such as homing and flight in birds. But most psychologists believe that, in human evolution, instincts have been for the most part ③ <b>reinforced</b> by ④ <b>learned</b> behaviors.
+ </div>
+ <div class="exam-choices">
+ ① dodged<br>
+ ② strict<br>
+ ③ reinforced<br>
+ ④ learned<br>
+ ⑤ automatic
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ③</b><br>
+ <b>해설:</b> 글의 후반부에서 인간의 진화 과정에서 본능이 학습된 행동에 의해 '대체되었다(replaced)'고 설명하는 것이 문맥상 올바릅니다. 본능이 학습된 행동에 의해 강화되었다는 의미의 ③번 reinforced는 전체적인 논지(인간 행동은 본능이 아닌 학습의 산물)와 정반대이므로 잘못된 어휘입니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 03] 문장 삽입 (글의 흐름으로 보아, 주어진 문장이 들어갈 가장 적절한 곳은?)</h4>
+ <div class="exam-passage">
+ <b>[주어진 문장]</b><br>
+ But if we say that a person is combative because of an aggressive instinct, we know little more about what makes the person fight than we did before; if we cannot then analyze the supposed aggressive instinct, we have simply dodged the explanation.<br><br>
+ Greeks relied heavily on the concept of instinct in their attempts to explain human behavior. ( ① ) An instinct is a complex behavior that is automatic, unlearned, and unmodifiable, and occurs in all the members of a species. ( ② ) Migration and parental behavior are good examples of instinctive behaviors in animals. ( ③ ) According to early instinct theorists, humans were guided by instincts, too, waging war because of an aggressive instinct, caring for their young because of a parental instinct, and so on. ( ④ ) At first glance, these explanations sound meaningful. ( ⑤ ) Contemporary students of behavior have used strict requirements of evidence to identify a few instincts in animals, such as homing and flight in birds. But most psychologists believe that, in human evolution, instincts have been for the most part replaced by learned behaviors.
+ </div>
+ <div class="exam-choices">
+ ①번<br>
+ ②번<br>
+ ③번<br>
+ ④번<br>
+ ⑤번
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ⑤</b><br>
+ <b>해설:</b> 주어진 문장은 "그러나 만약 어떤 사람이 공격적 본능 때문에 호전적이라고 말한다면..."으로 시작하며 본능을 통한 설명이 실질적 설명을 회피한 것에 불과하다는 비판을 제기합니다. 이는 앞 문장인 "얼핏 보기에는 이러한 설명들이 유의미하게 들린다(At first glance, these explanations sound meaningful.)"의 겉보기 타당성을 정면으로 뒤집는 내용이므로 ⑤번 위치가 가장 적절합니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 04] 서술형 (조건에 맞추어 본문 내용을 바탕으로 영작하시오.)</h4>
+ <div class="exam-passage">
+ 다음 글을 읽고, 인간의 진화 과정에서 본능이 겪은 변화에 대해 대다수 심리학자들이 내린 결론을 [조건]에 맞추어 완전한 영어 한 문장으로 서술하시오.
+ </div>
+ <div class="exam-choices">
+ <b>[조건]</b><br>
+ 1. <b>"most psychologists believe that"</b>으로 문장을 시작할 것.<br>
+ 2. <b>[in human evolution, replaced, learned behaviors]</b> 표현을 반드시 포함할 것.<br>
+ 3. 현재완료 수동태(have been p.p.) 시제를 반드시 활용할 것.<br><br>
+ <b>[배점 및 채점 기준]</b><br>
+ - 필수 어구 및 현재완료 수동태를 완벽하게 사용하여 복문 완성: 5점<br>
+ - 수동태 형태 오류 또는 필수 어휘 누락 1개당: -1점 감점<br>
+ - 문법 및 철자 오류: 1개당 -1점 감점
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: Most psychologists believe that, in human evolution, instincts have been for the most part replaced by learned behaviors.</b><br>
+ <b>해설:</b> 인간 진화에서 본능이 대부분 학습된 행동으로 대체되었다는 심리학자들의 결론을 나타내는 마지막 문장의 핵심 절을 조건에 맞추어 기술하면 정답입니다.
+ </div>
+ </details>
+ </div>
+
+ </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+ <a href="index.html" class="btn-back-hub">
+ <span>📋</span>
+ <span>전체 지문 목록으로 돌아가기</span>
+ </a>
+</nav>
+
+<footer>
+ <div class="wrap">
+ Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+ </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+ document.querySelectorAll('.drill-options').forEach(function(group) {
+ group.addEventListener('click', function(e) {
+ var btn = e.target.closest('.drill-btn');
+ if (!btn) return;
+ 
+var isCorrect = btn.getAttribute('data-ans') === 'correct';
+ var exp = btn.getAttribute('data-exp');
+ var fb = group.parentElement.querySelector('.drill-feedback');
+ 
+fb.style.display = 'block';
+ if (isCorrect) {
+ fb.style.background = '#ECFDF5';
+ fb.style.color = '#065F46';
+ fb.style.border = '1px solid #A7F3D0';
+ } else {
+ fb.style.background = '#FEF2F2';
+ fb.style.color = '#991B1B';
+ fb.style.border = '1px solid #FECACA';
+ }
+ fb.innerHTML = '<b>' + exp + '</b>';
+ });
+ });
+});
+</script>
+</body>
+</html>
