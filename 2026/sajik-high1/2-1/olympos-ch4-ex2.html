@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 사직고 1학년 2학기 중간고사 올림포스 9대변별유형 4강 기출 2번 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+ <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+ <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+ <link rel="manifest" href="/skore-workbook/site.webmanifest">
+ <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+ --navy: #0B1220;
+ --paper: #F8FAFC;
+ --white: #FFFFFF;
+ --blue: #1D4ED8;
+ --cyan: #0E8F9E;
+ --amber: #B8791A;
+ --text-main: #0F172A;
+ --text-muted: #64748B;
+ --border: #E2E8F0;
+ --mono: "IBM Plex Mono", -apple-system, monospace;
+ --serif: "Noto Serif KR", serif;
+ --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+ --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+ background: var(--paper);
+ color: var(--text-main);
+ font-family: var(--sans);
+ line-height: 1.75;
+ -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+ background: var(--navy);
+ color: var(--white);
+ padding: 36px 0 28px;
+ border-bottom: 3px solid var(--blue);
+}
+.masthead {
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--mono);
+ font-size: 11px;
+ letter-spacing: 0.12em;
+ color: #8FA0B8;
+ text-transform: uppercase;
+ border-bottom: 1px solid rgba(255,255,255,0.12);
+ padding-bottom: 8px;
+ margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+ display: inline-block;
+ font-family: var(--mono);
+ font-size: 12px;
+ font-weight: 600;
+ color: var(--cyan);
+ background: rgba(14, 143, 158, 0.15);
+ padding: 4px 10px;
+ border-radius: 4px;
+ margin-bottom: 12px;
+}
+h1.title {
+ font-family: var(--serif);
+ font-size: clamp(20px, 4vw, 30px);
+ font-weight: 900;
+ line-height: 1.35;
+ margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+ background: var(--white);
+ border-bottom: 1px solid var(--border);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 6px;
+ padding: 8px 0;
+}
+.track-step {
+ text-align: center;
+ padding: 6px 2px;
+ border-radius: 4px;
+ border: 1px solid var(--border);
+ background: var(--paper);
+ text-decoration: none;
+ color: var(--text-main);
+ display: block;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+ font-family: var(--mono);
+ font-size: 9px;
+ font-weight: 600;
+ color: var(--cyan);
+ display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+ font-family: var(--mono);
+ font-size: 10.5px;
+ font-weight: 600;
+ color: var(--blue);
+ letter-spacing: 0.12em;
+ display: block;
+ margin-bottom: 4px;
+}
+h2.sec-title {
+ font-family: var(--serif);
+ font-size: 20px;
+ font-weight: 900;
+ margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ border-left: 4px solid var(--blue);
+ border-radius: 6px;
+ padding: 16px 18px;
+ margin-bottom: 18px;
+}
+.bg-header {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 700;
+ color: var(--blue);
+ margin-bottom: 8px;
+}
+.bg-list {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+}
+.bg-list li {
+ font-size: 12.5px;
+ color: #1E3A8A;
+ line-height: 1.6;
+ position: relative;
+ padding-left: 14px;
+}
+.bg-list li::before {
+ content: "•";
+ position: absolute;
+ left: 2px;
+ color: var(--blue);
+ font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-left: 4px solid var(--blue);
+ padding: 20px;
+ font-size: 15px;
+ line-height: 1.85;
+ color: #1E293B;
+ border-radius: 4px;
+}
+.key-takeaway {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 12px 16px;
+ margin-top: 14px;
+ border-radius: 4px;
+ font-size: 13px;
+ color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-radius: 6px;
+ padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ border-radius: 4px;
+ margin-top: 8px;
+}
+summary {
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 600;
+ color: var(--blue);
+ padding: 8px 12px;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+.details-content {
+ padding: 10px 12px;
+ font-size: 13px;
+ color: #334155;
+ border-top: 1px dashed var(--border);
+ line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 12px;
+}
+.flow-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+ font-family: var(--mono);
+ font-size: 10px;
+ font-weight: 600;
+ color: var(--text-muted);
+ display: block;
+ margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ font-family: var(--mono);
+ font-size: 12px;
+ padding: 8px 14px;
+ cursor: pointer;
+ border-radius: 4px;
+ min-height: 40px;
+ display: flex;
+ align-items: center;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+ outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+ display: none;
+ font-size: 12.5px;
+ padding: 8px 12px;
+ border-radius: 4px;
+ margin-top: 6px;
+ line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ padding: 12px;
+ font-size: 13px;
+ line-height: 1.7;
+ color: #334155;
+ margin-bottom: 10px;
+ border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 10px 12px;
+ font-size: 12px;
+ color: #1E3A8A;
+ border-radius: 4px;
+ line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ width: 100%;
+ min-height: 48px;
+ background: #182238;
+ color: #60a5fa;
+ border: 1px solid #233252;
+ border-radius: 10px;
+ font-size: 14px;
+ font-weight: 700;
+ text-decoration: none;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+ background: var(--navy);
+ color: #64748B;
+ padding: 24px 0;
+ text-align: center;
+ font-family: var(--mono);
+ font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+ <div class="masthead">
+ <span><b>SKORE Academy</b> High School Logic Series</span>
+ <span>2026 사직고 1학년 2-1</span>
+ </div>
+ <div class="meta-badge">올림포스 9대변별유형 · 4강 기출 2번</div>
+ <h1 class="title">Autonomy and Learning in Agents<br><span>에이전트의 자율성과 학습의 통합 메커니즘</span></h1>
+ <p class="header-lead">사전 지식의 한계를 극복하고 다양한 환경에서 성공하기 위한 인공 지능의 학습 및 자율성 구현 원리</p>
+ </div>
+</header>
+
+<div class="tracker-wrap">
+ <div class="wrap">
+ <div class="tracker">
+ <a href="#step1" class="track-step">
+ <span class="s-num">STEP 01</span>
+ <span class="s-name">원문정독</span>
+ </a>
+ <a href="#step2" class="track-step">
+ <span class="s-num">STEP 02</span>
+ <span class="s-name">디코딩</span>
+ </a>
+ <a href="#step3" class="track-step">
+ <span class="s-num">STEP 03</span>
+ <span class="s-name">논리구조</span>
+ </a>
+ <a href="#step4" class="track-step">
+ <span class="s-num">STEP 04</span>
+ <span class="s-name">어법드릴</span>
+ </a>
+ <a href="#step5" class="track-step">
+ <span class="s-num">STEP 05</span>
+ <span class="s-name">실전변형</span>
+ </a>
+ </div>
+ </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+ <div class="wrap">
+ <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+ <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+ 
+<div class="bg-knowledge-box">
+ <div class="bg-header">
+ <span>💡</span>
+ <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+ </div>
+ <ul class="bg-list">
+ <li><b>[핵심 개념]:</b> 인공 지능 에이전트의 자율성(Autonomy)과 학습(Learning)을 통한 사전 지식의 보완</li>
+ <li><b>[배경 맥락]:</b> 에이전트는 완벽한 사전 지식 없이 설계되므로, 생물처럼 초기 반사 능력과 학습 능력을 동시에 갖추어야 함</li>
+ <li><b>[논리 요약]:</b> 학습 기능의 통합을 통해 에이전트는 경험을 쌓고 사전 지식으로부터 독립되어 다양한 환경에서 성공할 수 있음</li>
+ </ul>
+ </div>
+
+ <div class="full-passage-box">
+ To the extent that an agent relies on the prior knowledge of its designer rather than on its own percepts, we say that the agent lacks autonomy. A rational agent should be autonomous ― it should learn what it can to compensate for partial or incorrect prior knowledge. For example, a vacuum-cleaning agent that learns to foresee where and when additional dirt will appear will do better than one that does not. As a practical matter, one seldom requires complete autonomy from the start: when the agent has had little or no experience, it would have to act randomly unless the designer gave some assistance. So, just as evolution provides animals with enough built-in reflexes to survive long enough to learn for themselves, it would be reasonable to provide an artificial intelligent agent with some initial knowledge as well as an ability to learn. After sufficient experience of its environment, the behavior of a rational agent can become effectively independent of its prior knowledge. Hence, the incorporation of learning allows one to design a single rational agent that will succeed in a vast variety of environments.
+ </div>
+
+ <div class="key-takeaway">
+ <b>[핵심 요지]</b> 합리적 에이전트는 학습 능력을 통해 불완전한 사전 지식을 보완하고 다양한 환경에서 성공할 수 있다.
+ </div>
+ </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+ <div class="wrap">
+ <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+ <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+ <div class="chunk-box">
+ 
+ <div class="chunk-item">
+ <div class="chunk-en">To the extent that an agent relies on the prior knowledge of its designer rather than on its own percepts, / we say that the agent lacks autonomy.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 에이전트가 자신의 지각 결과보다는 설계자의 사전 지식에 의존하는 정도만큼, / 우리는 그 에이전트가 자율성이 부족하다고 말한다.</p>
+ <p><b>[구문 포인트]</b> To the extent that (~하는 한, ~하는 정도까지) 부사절 접속사구 / relies on ~ rather than on ... (~보다는 …에 의존하다) 병렬 구조.</p>
+ <p><b>[핵심 어휘]</b> rely on (~에 의존하다), prior knowledge (사전 지식), percept (지각 결과, 지각물), autonomy (자율성)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">A rational agent should be autonomous / ― it should learn what it can to compensate for partial or incorrect prior knowledge.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 합리적인 에이전트는 자율적이어야 한다 / 즉 그것은 부분적이거나 잘못된 사전 지식을 보완하기 위해 자신이 할 수 있는 것을 배워야 한다.</p>
+ <p><b>[구문 포인트]</b> 조동사 should be / 부사적 용법의 투부정사 to compensate for / what it can [learn] (관계대명사 what절).</p>
+ <p><b>[핵심 어휘]</b> rational (합리적인), autonomous (자율적인), compensate for (~을 보완하다), partial (부분적인)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">For example, a vacuum-cleaning agent that learns to foresee where and when additional dirt will appear / will do better than one that does not.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 예를 들어, 추가적인 먼지가 어디에 그리고 언제 나타날지 예견하는 것을 배우는 진공청소기 에이전트는 / 그렇지 않은 것(에이전트)보다 더 잘할 것이다.</p>
+ <p><b>[구문 포인트]</b> 주격 관계대명사 that절이 a vacuum-cleaning agent를 수식 / 명사절 where and when ~ / 부정대명사 one (a vacuum-cleaning agent).</p>
+ <p><b>[핵심 어휘]</b> foresee (예견하다, 내다보다), additional (추가적인), dirt (먼지)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">As a practical matter, one seldom requires complete autonomy from the start: / when the agent has had little or no experience, / it would have to act randomly unless the designer gave some assistance.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 현실적인 문제로서, 사람들은 처음부터 완전한 자율성을 거의 요구하지 않는다 / 에이전트가 경험이 거의 없거나 전혀 없을 때, / 설계자가 어떤 도움을 주지 않는다면 그것은 무작위로 행동해야 할 것이다.</p>
+ <p><b>[구문 포인트]</b> 빈도부사 seldom (거의 ~않다) / 조건 부사절 unless (= if not).</p>
+ <p><b>[핵심 어휘]</b> practical (현실적인, 실용적인), seldom (거의 ~않는), completely (완전히), assistance (지원, 도움)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">So, just as evolution provides animals with enough built-in reflexes to survive long enough to learn for themselves, / it would be reasonable to provide an artificial intelligent agent with some initial knowledge as well as an ability to learn.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 | 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그러므로, 진화가 동물들에게 스스로 학습할 수 있을 만큼 충분히 오래 생존할 수 있는 내장된 반사 능력을 제공하는 것과 마찬가지로, / 인공 지능 에이전트에게 학습 능력뿐만 아니라 어느 정도의 초기 지식을 제공하는 것도 합리적일 것이다.</p>
+ <p><b>[구문 포인트]</b> 가주어 it - 진주어 to provide 구문 / provide A with B (A에게 B를 제공하다) / 형용사 enough를 수식하는 부사적 용법의 투부정사.</p>
+ <p><b>[핵심 어휘]</b> evolution (진화), reflex (반사 작용, 반사 신경), reasonable (합리적인, 타당한), initial (초기의)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">After sufficient experience of its environment, / the behavior of a rational agent can become effectively independent of its prior knowledge.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 환경에 대한 충분한 경험 후에, / 합리적인 에이전트의 행동은 사실상 사전 지식으로부터 독립되게 될 수 있다.</p>
+ <p><b>[구문 포인트]</b> 전치사구 After sufficient experience / 독립된 상태를 나타내는 보어 independent of (~와 무관한, 독립된).</p>
+ <p><b>[핵심 어휘]</b> sufficient (충분한), environment (환경), effectively (사실상, 효과적으로), independent of (~와 독립된)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">Hence, the incorporation of learning allows one to design a single rational agent / that will succeed in a vast variety of environments.</div>
+ <details>
+ <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 따라서, 학습의 결합은 사람이 단 하나의 합리적인 에이전트를 설계할 수 있게 해준다 / 광범위한 다양한 환경에서 성공할.</p>
+ <p><b>[구문 포인트]</b> 5형식 동사 allows + 목적어(one) + 목적격 보어(to design) / 주격 관계대명사 that절.</p>
+ <p><b>[핵심 어휘]</b> incorporation (통합, 결합), allow (허용하다, 가능하게 하다), vast (방대한, 광대한)</p>
+ </div>
+ </details>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+ <div class="wrap">
+ <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+ <h2 class="sec-title">지문 맞춤형 논리 구조도 (에이전트의 자율성 확보와 학습 통합 구조)</h2>
+ <div class="flow-container">
+ <div class="flow-card s1">
+ <span class="badge">[PHASE 1] 자율성의 정의와 사전 지식 의존성</span>
+ <h4>설계자 지식 의존과 자율성의 결여</h4>
+ <p>에이전트가 자신의 지각보다 설계자의 사전 지식에 과도하게 의존할수록 자율성이 부족해지며, 합리적 에이전트는 불완전한 지식을 보완하기 위해 학습해야 한다.</p>
+ </div>
+ <div class="flow-card s2">
+ <span class="badge">[PHASE 2] 초기 지원과 생물의 진화 유추</span>
+ <h4>초기 지식 제공과 생물의 반사 작용</h4>
+ <p>경험이 부족한 초기 단계에서는 무작위 행동을 막기 위해 동물들의 진화적 반사 신경처럼 초기 지식과 학습 능력을 함께 제공하는 것이 합리적이다.</p>
+ </div>
+ <div class="flow-card s3">
+ <span class="badge">[PHASE 3] 학습 통합을 통한 최종 자율성 달성</span>
+ <h4>사전 지식으로부터의 독립과 성공</h4>
+ <p>충분한 환경 경험을 거치면 에이전트의 행동은 사전 지식으로부터 독립되며, 학습의 결합으로 다양한 환경에서 성공하는 단일 에이전트를 설계할 수 있다.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+ <div class="wrap">
+ <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+ <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+ 
+ <div class="drill-card">
+ <div class="drill-q">Q1. [관계대명사 vs 전치사+관계대명사] A rational agent should be autonomous — it should learn what it can <b>(compensate / to compensate)</b> for partial or incorrect prior knowledge.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="wrong" data-exp="오답! 동사원형 compensate가 바로 오면 문장의 동사가 겹치거나 문맥상 의미가 통하지 않습니다. 목적을 나타내는 부사적 용법의 투부정사 to compensate가 와야 합니다.">compensate</button>
+ <button class="drill-btn" data-ans="correct" data-exp="정답! '~하기 위해서'라는 목적을 나타내는 부사적 용법의 투부정사 to compensate가 올바릅니다.">to compensate</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+
+ <div class="drill-card">
+ <div class="drill-q">Q2. [대명사 지칭] ...will do better than <b>(it / one)</b> that does not.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="wrong" data-exp="오답! 대명사 it은 특정한 앞선 명사(a vacuum-cleaning agent) 그 자체를 가리키므로, 여기서는 불특정 단수 명사를 받는 대명사 one을 써야 합니다.">it</button>
+ <button class="drill-btn" data-ans="correct" data-exp="정답! 앞서 언급된 일반 명사구(a vacuum-cleaning agent)를 가리키며 후속 수식어(that does not)의 수식을 받는 대명사 one이 정답입니다.">one</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+
+ </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+ <div class="wrap">
+ <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+ <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+ 
+ <div class="exam-item">
+ <h4>[변형문항 01] 글의 흐름상 적절하지 않은 어휘 찾기 (어휘 적절성)</h4>
+ <div class="exam-passage">
+ To the extent that an agent relies on the prior knowledge of its designer rather than on its own percepts, we say that the agent lacks ① <b>autonomy</b>. A rational agent should be autonomous ― it should learn what it can to compensate for partial or incorrect prior knowledge. For example, a vacuum-cleaning agent that learns to foresee where and when additional dirt will appear will do better than one that does not. As a practical matter, one seldom requires complete autonomy from the start: when the agent has had little or no experience, it would have to act randomly unless the designer gave some assistance. So, just as evolution provides animals with enough built-in reflexes to survive long enough to learn for themselves, it would be ② <b>unreasonable</b> to provide an artificial intelligent agent with some initial knowledge as well as an ability to learn. After sufficient experience of its environment, the behavior of a rational agent can become ③ <b>independent</b> of its prior knowledge. Hence, the incorporation of learning allows one to design a single rational agent that will succeed in a ④ <b>vast</b> variety of environments.
+ </div>
+ <div class="exam-choices">
+ ① autonomy<br>
+ ② unreasonable<br>
+ ③ independent<br>
+ ④ vast
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ②</b><br>
+ <b>해설:</b> 진화가 동물들에게 생존할 수 있는 반사 능력을 제공하는 것처럼, 인공 지능 에이전트에게 초기 지식과 학습 능력을 제공하는 것은 '합리적(reasonable)'이라고 해야 맥락이 자연스럽습니다. 따라서 ②번의 unreasonable(비합리적인)은 원문의 reasonable과 반대되므로 틀린 어휘입니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 02] 빈칸 추론 (글의 흐름상 빈칸에 들어갈 가장 적절한 것은?)</h4>
+ <div class="exam-passage">
+ To the extent that an agent relies on the prior knowledge of its designer rather than on its own percepts, we say that the agent lacks autonomy. A rational agent should be autonomous ― it should learn what it can to compensate for partial or incorrect prior knowledge. For example, a vacuum-cleaning agent that learns to foresee where and when additional dirt will appear will do better than one that does not. As a practical matter, one seldom requires complete autonomy from the start: when the agent has had little or no experience, it would have to act randomly unless the designer gave some assistance. So, just as evolution provides animals with enough built-in reflexes to survive long enough to learn for themselves, it would be reasonable to provide an artificial intelligent agent with some initial knowledge as well as an ability to learn. After sufficient experience of its environment, ________________________________________. Hence, the incorporation of learning allows one to design a single rational agent that will succeed in a vast variety of environments.
+ </div>
+ <div class="exam-choices">
+ ① the designer must constantly update the program manually<br>
+ ② the behavior of a rational agent can become effectively independent of its prior knowledge<br>
+ ③ the agent will completely lose its capacity to process external percepts<br>
+ ④ the prior knowledge of the designer becomes the only reliable guide<br>
+ ⑤ the system will fail to adapt to unpredictable real-world changes
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ②</b><br>
+ <b>해설:</b> 환경에 대한 충분한 경험을 쌓은 후에는 합리적인 에이전트의 행동이 사전 지식으로부터 실질적으로 독립될 수 있다는 내용(the behavior of a rational agent can become effectively independent of its prior knowledge)이 결과로 이어져야 하므로 빈칸에는 ②번이 가장 적절합니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 03] 문장 삽입 (글의 흐름으로 보아, 주어진 문장이 들어갈 가장 적절한 곳은?)</h4>
+ <div class="exam-passage">
+ <b>[주어진 문장]</b><br>
+ As a practical matter, one seldom requires complete autonomy from the start: when the agent has had little or no experience, it would have to act randomly unless the designer gave some assistance.<br><br>
+ To the extent that an agent relies on the prior knowledge of its designer rather than on its own percepts, we say that the agent lacks autonomy. ( ① ) A rational agent should be autonomous ― it should learn what it can to compensate for partial or incorrect prior knowledge. ( ② ) For example, a vacuum-cleaning agent that learns to foresee where and when additional dirt will appear will do better than one that does not. ( ③ ) So, just as evolution provides animals with enough built-in reflexes to survive long enough to learn for themselves, it would be reasonable to provide an artificial intelligent agent with some initial knowledge as well as an ability to learn. ( ④ ) After sufficient experience of its environment, the behavior of a rational agent can become effectively independent of its prior knowledge. ( ⑤ ) Hence, the incorporation of learning allows one to design a single rational agent that will succeed in a vast variety of environments.
+ </div>
+ <div class="exam-choices">
+ ①번, ②번, ③번, ④번, ⑤번 중 선택
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: ③</b><br>
+ <b>해설:</b> 주어진 문장은 에이전트가 처음부터 완전한 자율성을 가지기 어렵고 경험이 없을 때 설계자의 도움이 필요하다는 현실적인 제약을 설명합니다. 이 내용은 진공청소기 예시(For example...) 바로 다음이자, 진화의 비유를 통해 초기 지식 제공의 필요성을 논하기 직전인 ③번에 들어가는 것이 가장 매끄럽습니다.
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>[변형문항 04] 서술형 (조건에 맞춰 본문 내용 영작 또는 빈칸 완성)</h4>
+ <div class="exam-passage">
+ 다음 글의 내용을 참고하여, 학습의 결합(incorporation of learning)이 에이전트 설계 측면에서 최종적으로 허용해 주는 이점이 무엇인지 영어 본문에서 찾아 완결된 한 문장으로 쓰시오.
+ </div>
+ <div class="exam-choices">
+ <b>[조건]</b><br>
+ 1. 본문에 등장하는 단어 및 표현을 그대로 활용할 것.<br>
+ 2. 'allows'를 포함하여 주어-동사 완결된 5형식 문장 형태로 작성할 것.<br>
+ 3. 문법적 오류와 맞춤법에 유의할 것.
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <b>정답: Hence, the incorporation of learning allows one to design a single rational agent that will succeed in a vast variety of environments. (또는 'The incorporation of learning allows one to design a single rational agent that will succeed in a vast variety of environments.')</b><br>
+ <b>해설:</b> 지문의 마지막 문장인 "the incorporation of learning allows one to design a single rational agent that will succeed in a vast variety of environments"를 조건에 맞게 정확히 적으면 정답입니다.
+ </div>
+ </details>
+ </div>
+
+ </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+ <a href="index.html" class="btn-back-hub">
+ <span>📋</span>
+ <span>전체 지문 목록으로 돌아가기</span>
+ </a>
+</nav>
+
+<footer>
+ <div class="wrap">
+ Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+ </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+ document.querySelectorAll('.drill-options').forEach(function(group) {
+ group.addEventListener('click', function(e) {
+ var btn = e.target.closest('.drill-btn');
+ if (!btn) return;
+ 
+var isCorrect = btn.getAttribute('data-ans') === 'correct';
+ var exp = btn.getAttribute('data-exp');
+ var fb = group.parentElement.querySelector('.drill-feedback');
+ 
+fb.style.display = 'block';
+ if (isCorrect) {
+ fb.style.background = '#ECFDF5';
+ fb.style.color = '#065F46';
+ fb.style.border = '1px solid #A7F3D0';
+ } else {
+ fb.style.background = '#FEF2F2';
+ fb.style.color = '#991B1B';
+ fb.style.border = '1px solid #FECACA';
+ }
+ fb.innerHTML = '<b>' + exp + '</b>';
+ });
+ });
+});
+</script>
+</body>
+</html>
