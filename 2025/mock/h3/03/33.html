@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>25년 3월 고3 33번 분석 - 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고3 2025년 3월 학력평가</span>
+    </div>
+    <div class="meta-badge">33번 / 원문: 빈칸 추론</div>
+    <h1 class="title">2025년 3월 고3 33번<br><span>학력평가 심층 분석</span></h1>
+    <p class="header-lead">스코어학원 모바일 최적화 웹 워크북</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 최원 평면 (The Farthest Plane)과 크기 항상성의 한계</li>
+        <li><b>[배경 맥락]:</b> 인간의 시각적 공간은 무한히 열려 있지 않고 하늘이나 '최원 평면'이라는 시각적 한계선에서 끝난다는 개념입니다. 이 한계를 넘어선 대상은 더 멀어지는 것이 아니라 크기가 작아지는 것으로 인식됩니다.</li>
+        <li><b>[논리 요약]:</b> 먼 거리의 대상을 동일한 거리(하늘)로 지각하는 시각적 한계(최원 평면)가 존재하며, 이 한계를 넘어서면 대상이 멀어지는 대신 축소되는 것으로 지각되어 크기 항상성이 깨진다는 것을 설명합니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Perceived distance of objects that are far away from the observer is often assumed to be subject to some global limitation in the sense that the moon, the stars, and the sun are all perceived at the "sky": that is, at about the same distance. This observation is related to the idea that visual space is not open but ends at visible surfaces or, indeed, the sky. Uexküll and Kriszat (1934) suggested that this is realized as a hard limit, which they call the "farthest plane." If an observed person or object would walk beyond this farthest plane, it would no longer be perceived as moving further away, but rather as shrinking in size. This observation is actually quite common; if looking down from a high tower, for example, cars or even houses on the ground below may appear as if they were toys: that is, shrunk, presumably because they are perceived at the distance of the farthest plane while subtending a visual angle that corresponds to a larger distance. The farthest plane would thus mark the limit of the perception of size constancy.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 인간의 시각적 지각에는 '최원 평면'이라는 한계가 있어, 이를 넘어선 대상은 더 멀리 있는 것이 아니라 크기가 작아진 장난감처럼 지각된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+<div class="chunk-item">
+<div class="chunk-en">1. Perceived distance of objects that are far away from the observer / is often assumed to <mark>be subject to</mark> some <mark>global</mark> limitation / in the sense that the moon, the stars, and the sun are all perceived at the "sky": / <mark>that is</mark>, at about the same distance.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 관찰자로부터 멀리 떨어져 있는 대상들의 지각된 거리는 / 종종 어떤 전반적인 한계의 지배를 받는 것으로 가정된다 / 달, 별들, 그리고 태양이 모두 "하늘"에 있는 것으로 지각된다는 의미에서: / 즉, 대략 같은 거리에서.<br>
+[구문 해설] that are far away from the observer는 objects를 수식하는 주격 관계대명사절. is assumed to be subject to (~의 지배를 받는 것으로 가정되다) 수동태 구조. in the sense that ~ (~라는 의미에서) 동격의 that이 쓰임.<br>
+[핵심 어휘] perceive (지각하다), be subject to (~의 지배/영향을 받다), global (전반적인, 포괄적인), limitation (한계)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">2. This observation is related to the idea / <mark>that</mark> visual space is not open / but ends at visible surfaces or, indeed, the sky.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 이 관찰은 아이디어와 관련이 있다 / 시각적 공간이 열려 있지 않다는 / 오히려 보이는 표면들이나, 실제로, 하늘에서 끝난다는.<br>
+[구문 해설] that은 the idea와 동격을 이루는 접속사. not A but B (A가 아니라 B) 구조.<br>
+[핵심 어휘] observation (관찰), visual space (시각적 공간), surface (표면)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">3. Uexküll and Kriszat (1934) suggested / that this is <mark>realized</mark> as a hard limit, / <mark>which</mark> they call the "farthest plane."</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] Uexküll과 Kriszat(1934)은 제안했다 / 이것이 단단한 한계로 실현된다고, / 그것을 그들은 "최원 평면"이라고 부른다.<br>
+[구문 해설] which는 a hard limit을 선행사로 받는 계속적 용법의 관계대명사. call A B (A를 B라고 부르다)에서 목적어가 생략된 형태.<br>
+[핵심 어휘] realize (실현하다), hard limit (단단한/확고한 한계), farthest plane (최원 평면)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">4. If an observed person or object would walk <mark>beyond</mark> this farthest plane, / it would <mark>no longer</mark> be perceived as moving further away, / <mark>but rather</mark> as <mark>shrinking</mark> in size.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 만약 관찰되는 사람이나 대상이 이 최원 평면 너머로 걸어간다면, / 그것은 더 이상 더 멀어지는 것으로 지각되지 않을 것이다, / 오히려 크기가 줄어드는 것으로 (지각될 것이다).<br>
+[구문 해설] 가정법 과거의 뉘앙스를 담은 조건절. no longer A but rather B (더 이상 A가 아니라 오히려 B) 구조.<br>
+[핵심 어휘] beyond (~너머로), shrink (줄어들다, 축소되다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">5. This observation is actually quite common; / if looking down from a high tower, for example, / cars or even houses on the ground below may appear / <mark>as if</mark> they were toys: / <mark>that is</mark>, shrunk, / <mark>presumably</mark> because they are perceived at the distance of the farthest plane / while <mark>subtending</mark> a visual angle that <mark>corresponds to</mark> a larger distance.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 이 관찰은 실제로 꽤 흔하다; / 예를 들어, 높은 탑에서 내려다보면, / 아래 땅 위의 차들이나 심지어 집들은 보일지도 모른다 / 마치 그것들이 장난감인 것처럼: / 즉, 축소된 것으로, / 아마도 그것들이 최원 평면의 거리에서 지각되기 때문일 것이다 / 더 큰 거리에 해당하는 시각적 각도를 이루면서.<br>
+[구문 해설] if looking down은 주어와 be동사가 생략된 분사구문(if you are looking down). as if + 가정법 과거(were) '마치 ~인 것처럼'. while subtending은 동시동작 분사구문.<br>
+[핵심 어휘] presumably (아마도), subtend (마주 대하다, (각도를) 이루다), visual angle (시각적 각도, 시각), correspond to (~에 해당하다, 일치하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">6. The farthest plane would thus mark the limit of the perception of <mark>size constancy</mark>.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 최원 평면은 따라서 크기 항상성 지각의 한계를 표시할 것이다.<br>
+[구문 해설] would는 추측의 조동사로 쓰여 '~할 것이다'라는 의미를 나타낸다.<br>
+[핵심 어휘] mark (표시하다), perception (지각), size constancy (크기 항상성)
+</div></details>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (원인-현상-결과 구조)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PHENOMENON] 거리 지각의 전반적 한계</span>
+        <h4>시각적 공간의 닫힘</h4>
+        <p>달이나 별들처럼 멀리 있는 대상들이 '하늘'이라는 동일한 거리(전반적 한계)에 있는 것으로 인식되는 현상이 관찰됩니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[CONCEPT] 최원 평면 (The Farthest Plane)</span>
+        <h4>시각적 한계선</h4>
+        <p>Uexküll과 Kriszat은 이 닫힌 공간의 한계를 '최원 평면'이라 불렀으며, 대상을 인식할 수 있는 가장 먼 거리의 기준선으로 보았습니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 크기 항상성의 붕괴</span>
+        <h4>장난감처럼 보이는 이유</h4>
+        <p>높은 탑에서 아래를 볼 때 차가 장난감처럼 보이는 것은, 대상이 최원 평면 너머의 거리에 있음에도 뇌가 이를 최원 평면의 거리에 있는 것으로 지각하여 크기 항상성이 깨지기 때문입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+  <div class="drill-q">1. This observation is related to the idea [ which / that ] visual space is not open but ends at visible surfaces...</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: which (which 뒤에는 불완전한 문장이 와야 하지만, 여기서는 완전한 문장이 이어지므로 관계대명사는 적절하지 않습니다.)">which</button>
+    <button class="drill-btn" data-ans="correct" data-exp="정답: that (추상명사 the idea 뒤에서 완전한 문장을 이끌며 동격을 나타내는 접속사 that이 필요합니다.)">that</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+<div class="drill-card">
+  <div class="drill-q">2. ...cars or even houses on the ground below may appear as if they [ are / were ] toys...</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="correct" data-exp="정답: were (as if 뒤에 현재 사실과 반대되는 가정 상황을 나타내기 위해 가정법 과거 동사 were가 쓰여야 합니다.)">were</button>
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: are (직설법 are를 쓰면 그들이 실제 장난감이라는 의미가 되므로 문맥(가정)에 맞지 않습니다.)">are</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+<div class="exam-item">
+  <h4>[문제 1] 다음 글의 제목으로 가장 적절한 것은? (제목 추론)</h4>
+  <div class="exam-passage">
+    Perceived distance of objects that are far away from the observer is often assumed to be subject to some global limitation in the sense that the moon, the stars, and the sun are all perceived at the "sky": that is, at about the same distance. This observation is related to the idea that visual space is not open but ends at visible surfaces or, indeed, the sky. Uexküll and Kriszat (1934) suggested that this is realized as a hard limit, which they call the "farthest plane." If an observed person or object would walk beyond this farthest plane, it would no longer be perceived as moving further away, but rather as shrinking in size. ... The farthest plane would thus mark the limit of the perception of size constancy.
+  </div>
+  <div class="exam-choices">
+    ① Why Humans Prefer Closed Visual Spaces<br>
+    ② The Mathematical Calculation of Visual Angles<br>
+    ③ How the Sun and Stars Are Perceived Differently<br>
+    ④ The "Farthest Plane": Where Size Constancy Breaks Down<br>
+    ⑤ Shrinking Illusions: A Unique Feature of Toy Cars
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ④ The "Farthest Plane": Where Size Constancy Breaks Down<br>
+      <b>해설:</b> 시각적 공간의 한계인 '최원 평면'을 넘어서면 대상이 더 멀어지는 것이 아니라 크기가 작아지는 것으로 인식되어 크기 항상성이 깨진다는 것을 설명하고 있으므로, ④번이 가장 적절합니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 2] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘)</h4>
+  <div class="exam-passage">
+    Perceived distance of objects that are far away from the observer is often assumed to be ① <u>subject</u> to some global limitation in the sense that the moon, the stars, and the sun are all perceived at the "sky": that is, at about the same distance. This observation is related to the idea that visual space is not open but ② <u>ends</u> at visible surfaces or, indeed, the sky. Uexküll and Kriszat (1934) suggested that this is realized as a hard limit, which they call the "farthest plane." If an observed person or object would walk beyond this farthest plane, it would no longer be perceived as moving further away, but rather as ③ <u>shrinking</u> in size. This observation is actually quite common; if looking down from a high tower, for example, cars or even houses on the ground below may appear as if they were toys: that is, shrunk, ④ <u>presumably</u> because they are perceived at the distance of the farthest plane while subtending a visual angle that corresponds to a larger distance. The farthest plane would thus mark the ⑤ <u>beginning</u> of the perception of size constancy.
+  </div>
+  <div class="exam-choices">
+    ① subject<br>
+    ② ends<br>
+    ③ shrinking<br>
+    ④ presumably<br>
+    ⑤ beginning
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ⑤ beginning -> <b>limit</b><br>
+      <b>해설:</b> 최원 평면은 크기 항상성이 시작되는 곳이 아니라, 항상성이 더 이상 유지되지 않고 무너지는 '한계(limit)'를 표시합니다. 따라서 beginning은 문맥에 맞지 않습니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳은? (문장 삽입)</h4>
+  <div class="exam-passage">
+    [주어진 문장] Uexküll and Kriszat (1934) suggested that this is realized as a hard limit, which they call the "farthest plane."
+    <br><br>
+    Perceived distance of objects that are far away from the observer is often assumed to be subject to some global limitation in the sense that the moon, the stars, and the sun are all perceived at the "sky": that is, at about the same distance. ( ① ) This observation is related to the idea that visual space is not open but ends at visible surfaces or, indeed, the sky. ( ② ) If an observed person or object would walk beyond this farthest plane, it would no longer be perceived as moving further away, but rather as shrinking in size. ( ③ ) This observation is actually quite common; if looking down from a high tower, for example, cars or even houses on the ground below may appear as if they were toys: that is, shrunk... ( ④ ) ...presumably because they are perceived at the distance of the farthest plane while subtending a visual angle that corresponds to a larger distance. ( ⑤ ) The farthest plane would thus mark the limit of the perception of size constancy.
+  </div>
+  <div class="exam-choices">
+    ①<br>
+    ②<br>
+    ③<br>
+    ④<br>
+    ⑤
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ②<br>
+      <b>해설:</b> 주어진 문장에서는 Uexküll과 Kriszat이 이 한계를 "최원 평면(farthest plane)"이라 불렀다고 소개합니다. 이어지는 문장(②번 위치 뒤)에서 "this farthest plane"이라고 직접 지칭하며 최원 평면 너머로 물체가 이동할 때의 상황을 설명하므로 ②번 위치가 가장 적절합니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 4] [조건부 서술형] According to the passage, what specific illusion happens when you look down from a high tower at cars or houses because of the farthest plane? Complete the sentence by writing the exact three English words from the text.</h4>
+  <div class="exam-passage">
+    [Question]<br>
+    The cars or houses on the ground may appear as if ____________________.
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> they were toys<br>
+      <b>해설:</b> 최원 평면 현상으로 인해 높은 곳에서 내려다볼 때 사물이 너무 작아 보여서 생기는 착시를 묻는 질문입니다. 본문의 "appear as if they were toys"에서 빈칸 3단어는 'they were toys'입니다.
+    </div>
+  </details>
+</div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

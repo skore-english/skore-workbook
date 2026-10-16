@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>25년 3월 고3 23번 분석 - 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고3 2025년 3월 학력평가</span>
+    </div>
+    <div class="meta-badge">23번 / 원문: 주제 추론</div>
+    <h1 class="title">2025년 3월 고3 23번<br><span>학력평가 심층 분석</span></h1>
+    <p class="header-lead">스코어학원 모바일 최적화 웹 워크북</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 과학적 현실의 언어적 구성 (Linguistic Construction of Scientific Reality)</li>
+        <li><b>[배경 맥락]:</b> 입자 물리학과 같은 객관적인 물리적 실체조차도 인간이 그것을 공유하고 사회적으로 조율하며 이해하기 위해서는 언어를 통한 '묘사'와 '명명'이 필수적이라는 철학적 관점입니다.</li>
+        <li><b>[논리 요약]:</b> 사물이나 현상 자체는 인간의 합의 없이도 자연 상태에 독립적으로 존재하지만, 과학이라는 학문적 성취와 집단적 문화를 이루기 위해서는 필연적으로 언어적 틀(수학적 묘사 포함)에 의존할 수밖에 없음을 강조합니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      If you want to bring something into shared reality for the purpose of social coordination, you have to describe it, or at the very least label it. Even the ideally objective pursuit of science is unable to escape the framing effects of language. Like all collective culture, science is constructed on report, reason, debate, negotiation, justification, consensus, and, most important, coordination. And all of these things depend on language. Even something as fundamental as particle physics depends on language in a particular way. I don’t mean that particle physics wouldn’t exist if we didn’t describe it. Particle physics is part of brute reality and so it will carry on independent of any human agreement or understanding of what it is. But consider this remark by Michael I. Jordan, referring to the “infinite potential well” model, which studies how a single particle behaves in a small, enclosed space: “A particle in a potential well is optimizing a function called the Lagrangian function. The particle doesn’t know that. There’s no algorithm running that does that. It just happens. It’s a description mathematically of something that helps us understand as analysts what’s happening.”
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 객관적인 물리적 현실 그 자체는 언어와 무관하게 존재하지만, 우리가 그 현실을 파악하고 과학적으로 소통 및 조율하기 위해서는 언어를 통한 묘사가 필수적이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+<div class="chunk-item">
+<div class="chunk-en">1. If you want to bring something / into shared reality / for the purpose of social coordination, / you have to describe it, / or at the very least <mark>label</mark> it.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 만약 당신이 무언가를 가져오고 싶다면 / 공유된 현실로 / 사회적 조율을 목적으로, / 당신은 그것을 묘사해야 한다, / 혹은 적어도 그것에 이름을 붙여야 한다.<br>
+[구문 해설] If 조건절과 주절(you have to...)로 이루어진 긴 문장. at the very least는 '적어도'라는 의미의 부사구로 쓰임.<br>
+[핵심 어휘] shared reality (공유된 현실), coordination (조율), label (이름표를 붙이다, 명명하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">2. Even the ideally objective pursuit of science is unable to escape <mark>the framing effects</mark> of language.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 심지어 이상적으로 객관적인 과학의 추구조차도 언어의 틀 짓기 효과에서 벗어날 수 없다.<br>
+[구문 해설] be unable to 동사원형 (~할 수 없다) 구조. 주어 pursuit에 맞춰 단수 동사 is가 사용됨.<br>
+[핵심 어휘] objective (객관적인), pursuit (추구), framing effect (틀 짓기 효과)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">3. Like all collective culture, / science is <mark>constructed on</mark> report, reason, debate, negotiation, justification, consensus, / and, most important, coordination.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 모든 집단적 문화처럼, / 과학은 보고, 이성(추론), 토론, 협상, 정당화, 합의, / 그리고 가장 중요한, 조율에 기초하여 구성된다.<br>
+[구문 해설] 전치사 on 뒤에 여러 개의 명사가 병렬 구조로 연결됨.<br>
+[핵심 어휘] collective (집단적인), construct (구성하다), justification (정당화), consensus (합의)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">4. And all of these things <mark>depend on</mark> language.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 그리고 이 모든 것들은 언어에 의존한다.<br>
+[구문 해설] all of 복수명사 주어이므로 복수 동사 depend 사용.<br>
+[핵심 어휘] depend on (~에 의존하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">5. Even something as fundamental as particle physics depends on language in a <mark>particular</mark> way.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 심지어 입자 물리학만큼 근본적인 것조차도 특정한 방식으로 언어에 의존한다.<br>
+[구문 해설] -thing으로 끝나는 대명사는 형용사가 뒤에서 수식함(something fundamental). as ~ as 원급 비교 구문 사용.<br>
+[핵심 어휘] fundamental (근본적인), particle physics (입자 물리학)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">6. I don’t mean / that particle physics wouldn’t exist / if we didn’t <mark>describe</mark> it.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 나는 의미하는 것은 아니다 / 입자 물리학이 존재하지 않을 것이라고 / 만약 우리가 그것을 묘사하지 않는다면.<br>
+[구문 해설] 가정법 과거(if 주어+과거동사, 주어+조동사과거+동사원형) 문장이 that절 안에 명사절로 포함됨.<br>
+[핵심 어휘] exist (존재하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">7. Particle physics is part of <mark>brute reality</mark> / and so it will carry on / independent of any human agreement / or understanding of what it is.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 입자 물리학은 있는 그대로의 현실의 일부이다 / 그래서 그것은 계속될 것이다 / 어떠한 인간의 합의나 / 혹은 그것이 무엇인지에 대한 이해와 독립적으로.<br>
+[구문 해설] independent of는 '~와 독립적으로'로 해석됨. of 뒤에 명사 agreement와 동명사 understanding이 병렬로 연결됨.<br>
+[핵심 어휘] brute reality (있는 그대로의 현실), carry on (계속되다), independent of (~와 독립적으로)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">8. But consider this remark by Michael I. Jordan, / referring to the “infinite potential well” model, / which studies how a single particle <mark>behaves</mark> / in a small, enclosed space:</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 하지만 Michael I. Jordan의 이 발언을 고려해 보라, / "무한 퍼텐셜 우물" 모델을 언급하는, / 그것은 단일 입자가 어떻게 행동하는지를 연구한다 / 작고 밀폐된 공간에서:<br>
+[구문 해설] referring은 분사구문으로 remark를 수식하며, which는 계속적 용법의 관계대명사로 선행사 model을 부연 설명함.<br>
+[핵심 어휘] remark (발언), refer to (~을 가리키다, 언급하다), behave (행동하다), enclosed (밀폐된)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">9. “A particle in a potential well is <mark>optimizing</mark> a function called the Lagrangian function.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] "퍼텐셜 우물 안의 입자는 라그랑지안 함수라 불리는 함수를 최적화하고 있다.<br>
+[구문 해설] called는 과거분사로 앞의 a function을 수식함.<br>
+[핵심 어휘] optimize (최적화하다), function (함수)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">10. The particle doesn’t know that.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 입자는 그것을 알지 못한다.<br>
+[구문 해설] that은 앞 문장의 내용(함수를 최적화하고 있다는 사실)을 가리키는 지시대명사.<br>
+[핵심 어휘] particle (입자)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">11. There’s no algorithm running that <mark>does</mark> that.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 그렇게 작동하는 알고리즘은 없다.<br>
+[구문 해설] running은 현재분사로 algorithm을 수식하고, that does that은 주격 관계대명사절로 algorithm을 수식함.<br>
+[핵심 어휘] algorithm (알고리즘)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">12. It just happens.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 그것은 단지 일어날 뿐이다.<br>
+[구문 해설] happen은 자동사로 수동태로 쓰이지 않음.<br>
+[핵심 어휘] happen (일어나다, 발생하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">13. It’s a description mathematically of something / that helps us understand as analysts / <mark>what’s happening</mark>.”</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 그것은 무언가에 대한 수학적인 묘사이다 / 분석가로서 우리가 이해하도록 돕는 / 무슨 일이 일어나고 있는지를."<br>
+[구문 해설] that helps~는 주격 관계대명사절로 something을 수식. help + 목적어 + 동사원형(understand). what's happening은 understand의 목적어절.<br>
+[핵심 어휘] description (묘사), mathematically (수학적으로), analyst (분석가)
+</div></details>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (대비-보완 구조)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[THESIS] 언어의 필수성 (사회와 과학)</span>
+        <h4>과학의 언어적 의존성</h4>
+        <p>현실을 공유하고 사회적으로 조율하기 위해서는 묘사와 명명, 즉 '언어'가 필수적입니다. 가장 객관적이라는 과학(입자 물리학 포함)조차 합의와 조율을 위해 언어의 틀을 벗어날 수 없습니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[ANTITHESIS] 자연의 물리적 독립성</span>
+        <h4>있는 그대로의 현실 (Brute reality)</h4>
+        <p>그렇다고 현상 자체가 언어 때문에 존재하는 것은 아닙니다. 입자의 움직임과 같은 물리적 현실은 인간의 합의나 이해와 전혀 상관없이 그 자체로 독립적으로 발생합니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[SYNTHESIS] 이해를 위한 묘사 도구</span>
+        <h4>분석가로서의 인간과 언어(수학)</h4>
+        <p>스스로 일어나는 자연 현상(예: 입자의 행동)을 우리(분석가)가 '이해'하고 학문적으로 '공유'하기 위해 '라그랑지안 함수'와 같은 수학적 묘사(언어)를 활용하는 것입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+  <div class="drill-q">1. Particle physics is part of brute reality and so it will carry on independent of any human agreement or understanding of [ what / that ] it is.</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="correct" data-exp="정답: what (전치사 of의 목적어 역할을 하는 명사절을 이끌며, 뒤에 보어가 빠진 불완전한 문장이므로 선행사를 포함하는 의문대명사/관계대명사 what이 적절합니다.)">what</button>
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: that (전치사 뒤에는 접속사 that을 쓸 수 없으며, 뒷문장이 불완전하므로 부적절합니다.)">that</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+<div class="drill-card">
+  <div class="drill-q">2. It’s a description mathematically of something that [ help / helps ] us understand as analysts what’s happening.</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: help (주격 관계대명사 that의 선행사는 복수가 아닌 단수명사 something이므로 복수동사는 틀립니다.)">help</button>
+    <button class="drill-btn" data-ans="correct" data-exp="정답: helps (주격 관계대명사 that의 선행사는 단수명사 something이므로 단수동사 helps가 적절합니다.)">helps</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+<div class="exam-item">
+  <h4>[문제 1] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘)</h4>
+  <div class="exam-passage">
+    If you want to bring something into shared reality for the purpose of social coordination, you have to describe it, or at the very least label it. Even the ideally ① <u>objective</u> pursuit of science is unable to escape the framing effects of language. Like all collective culture, science is constructed on report, reason, debate, negotiation, justification, consensus, and, most important, coordination. And all of these things ② <u>depend</u> on language. Even something as fundamental as particle physics depends on language in a particular way. I don’t mean that particle physics wouldn’t exist if we didn’t describe it. Particle physics is part of brute reality and so it will carry on ③ <u>dependent</u> of any human agreement or understanding of what it is. But consider this remark by Michael I. Jordan, referring to the “infinite potential well” model... It’s a description mathematically of something that ④ <u>helps</u> us understand as analysts what’s happening.
+  </div>
+  <div class="exam-choices">
+    ① objective<br>
+    ② depend<br>
+    ③ dependent<br>
+    ④ helps<br>
+    ⑤ happening
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ③ dependent -> <b>independent</b><br>
+      <b>해설:</b> 입자 물리학과 같은 물리적 현실 그 자체는 인간의 합의나 이해와는 무관하게, 즉 '독립적으로(independent)' 계속된다는 것이 글의 핵심 논리 중 하나입니다. 따라서 dependent(의존적인)는 문맥상 틀립니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 2] 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은? (빈칸 추론)</h4>
+  <div class="exam-passage">
+    If you want to bring something into shared reality for the purpose of social coordination, you have to describe it, or at the very least label it. Even the ideally objective pursuit of science ________________________________. Like all collective culture, science is constructed on report, reason, debate, negotiation, justification, consensus, and, most important, coordination. And all of these things depend on language. Even something as fundamental as particle physics depends on language in a particular way. 
+  </div>
+  <div class="exam-choices">
+    ① exists perfectly without human intervention<br>
+    ② prioritizes brute reality over social consensus<br>
+    ③ is unable to escape the framing effects of language<br>
+    ④ proves that physical reality is a mere illusion<br>
+    ⑤ operates on algorithms that function independently
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ③ is unable to escape the framing effects of language<br>
+      <b>해설:</b> 빈칸 바로 뒷문장에서 과학이 보고, 토론, 합의 등 '언어에 의존하는' 집단적 문화 요소를 바탕으로 구성된다고 부연 설명하고 있으므로, 객관적인 과학조차도 '언어의 틀 짓기 효과에서 벗어날 수 없다'는 ③번이 가장 적절합니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 3] 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것은? (글의 순서)</h4>
+  <div class="exam-passage">
+    [주어진 글] If you want to bring something into shared reality for the purpose of social coordination, you have to describe it, or at the very least label it. Even the ideally objective pursuit of science is unable to escape the framing effects of language.
+    <br><br>
+    (A) I don’t mean that particle physics wouldn’t exist if we didn’t describe it. Particle physics is part of brute reality and so it will carry on independent of any human agreement or understanding of what it is.
+    <br><br>
+    (B) Like all collective culture, science is constructed on report, reason, debate, negotiation, justification, consensus, and, most important, coordination. And all of these things depend on language. Even something as fundamental as particle physics depends on language in a particular way.
+    <br><br>
+    (C) But consider this remark by Michael I. Jordan, referring to the “infinite potential well” model, which studies how a single particle behaves in a small, enclosed space... “It’s a description mathematically of something that helps us understand as analysts what’s happening.”
+  </div>
+  <div class="exam-choices">
+    ① (A) - (C) - (B)<br>
+    ② (B) - (A) - (C)<br>
+    ③ (B) - (C) - (A)<br>
+    ④ (C) - (A) - (B)<br>
+    ⑤ (C) - (B) - (A)
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ② (B) - (A) - (C)<br>
+      <b>해설:</b> 주어진 글에서 과학이 언어의 틀을 못 벗어난다고 한 뒤, (B)에서 그 이유(토론, 합의 등 언어 의존성)와 입자 물리학의 예시를 도입합니다. (A)에서는 입자 물리학이 언어 없이도 독립적으로 존재한다는 점을 명확히 하고, (C)에서 'But'으로 흐름을 전환하며 현상 자체는 독립적이지만 우리가 이해하기 위해 수학적 묘사(언어)를 쓴다는 결론(조던의 발언)으로 이어집니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 4] [조건부 서술형] Complete the sentence by finding the exact two words from the passage to fill in the blanks.</h4>
+  <div class="exam-passage">
+    [Question]<br>
+    Even the ideally objective pursuit of science is unable to escape the ( A ) ( B ) of language.
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> (A) framing, (B) effects<br>
+      <b>해설:</b> 두 번째 문장인 "Even the ideally objective pursuit of science is unable to escape the framing effects of language."에서 그대로 찾아 빈칸을 채우는 영단어 작성 문제입니다.
+    </div>
+  </details>
+</div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

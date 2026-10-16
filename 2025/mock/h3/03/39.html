@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>25년 3월 고3 39번 분석 - 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고3 2025년 3월 학력평가</span>
+    </div>
+    <div class="meta-badge">39번 / 원문: 문장 삽입</div>
+    <h1 class="title">2025년 3월 고3 39번<br><span>학력평가 심층 분석</span></h1>
+    <p class="header-lead">스코어학원 모바일 최적화 웹 워크북</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 동기가 부여된 추론 (Motivated Reasoning)</li>
+        <li><b>[배경 맥락]:</b> 사람들은 스스로 편견 없이 공정하게 판단한다고 생각하지만, 실제로는 무의식적인 동기나 욕구에 의해 자신이 원하는 결론에 유리한 정보만 수용하고 반대되는 정보는 배척하는 심리적 경향을 의미합니다.</li>
+        <li><b>[논리 요약]:</b> 인간의 추론은 완벽하게 객관적이지 않으며, 흔히 무의식적인 동기에 의해 편향되는 '동기가 부여된 추론'의 영향을 강하게 받습니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Everyone likes to think of themselves as behaving in an unbiased fashion most of the time. We all view ourselves similar to the blindfolded statue of Lady Justice evaluating competing claims without bias, emotions, or motivations. And yet, overwhelming psychological research suggests that such unbiased rationality is actually a fairly elusive quality in humans. Much of the time people are on automatic pilot. In other words, individuals are acting without reflection more often than they are thinking carefully and deliberately. The rest of the time, even as individuals are trying their best to think through issues, motivational goals may bias their thought processes and bias their reasoning. Ziva Kunda, who coined the term "motivated reasoning" to describe this phenomenon, explained that although individuals try to make well-thought-out decisions, use available evidence, and look at both sides of an issue, the process is often tainted by motivations that may be unknown to them. Individuals' motivations may direct them to attend more carefully to some information while ignoring other relevant facts. Or they may use different strategies to evaluate information they prefer to be correct while at the same time being hypercritical of flaws in information they prefer to be wrong.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 인간은 스스로를 편견 없이 합리적이라고 믿지만, 실제로는 의식하지 못하는 동기에 의해 추론 과정이 깊게 편향되어 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+<div class="chunk-item">
+<div class="chunk-en">1. Everyone likes to think of themselves / as <mark>behaving</mark> in an unbiased fashion / most of the time.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 모든 사람은 자신을 생각하기를 좋아한다 / 편견 없는 방식으로 행동하는 것으로 / 대부분의 시간에.<br>
+[구문 해설] think of A as B (A를 B로 생각하다) 구문. as 뒤에 동명사 behaving이 쓰임.<br>
+[핵심 어휘] unbiased (편견 없는), fashion (방식)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">2. We all view ourselves / similar to the blindfolded statue of Lady Justice / <mark>evaluating</mark> competing claims / without bias, emotions, or motivations.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 우리 모두는 우리 자신을 간주한다 / 눈을 가린 정의의 여신상과 비슷하다고 / 대립하는 주장들을 평가하는 / 편견, 감정, 혹은 동기 없이.<br>
+[구문 해설] view A similar to B (A를 B와 비슷하게 간주하다). evaluating은 앞의 statue of Lady Justice를 수식하는 현재분사.<br>
+[핵심 어휘] blindfolded (눈을 가린), statue (조각상), evaluate (평가하다), competing (대립하는, 경쟁하는), claim (주장)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">3. And yet, overwhelming psychological research suggests / that such unbiased rationality is actually a fairly <mark>elusive</mark> quality in humans.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 그러나, 압도적인 심리학 연구는 시사한다 / 그러한 편견 없는 합리성은 사실 인간에게 상당히 찾기 힘든 특성이라는 것을.<br>
+[구문 해설] suggests 뒤에 목적어절을 이끄는 접속사 that이 사용됨.<br>
+[핵심 어휘] overwhelming (압도적인), rationality (합리성), elusive (찾기 힘든, 규정하기 어려운), quality (특성, 자질)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">4. Much of the time people are on automatic pilot.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 대부분의 시간에 사람들은 자동 조종 상태에 있다.<br>
+[구문 해설] be on automatic pilot (자동 조종 상태에 있다, 즉 무의식적으로 행동하다).<br>
+[핵심 어휘] automatic pilot (자동 조종)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">5. In other words, individuals are acting without reflection / more often than they are thinking carefully and <mark>deliberately</mark>.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 다시 말해서, 개인들은 숙고 없이 행동하고 있다 / 그들이 주의 깊고 신중하게 생각하고 있는 것보다 더 자주.<br>
+[구문 해설] more often than 비교구문을 사용하여 숙고 없이 행동하는 빈도가 더 높음을 강조함.<br>
+[핵심 어휘] reflection (숙고, 반성), deliberately (신중하게, 고의로)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">6. The rest of the time, / even as individuals are trying their best to think through issues, / motivational goals may <mark>bias</mark> their thought processes / and bias their reasoning.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 나머지 시간에, / 심지어 개인들이 문제들을 철저히 생각하려고 최선을 다하고 있을 때조차도, / 동기적 목표들이 그들의 사고 과정을 편향되게 할 수 있다 / 그리고 그들의 추론을 편향되게 할 수 있다.<br>
+[구문 해설] even as는 '~하는 중에도, ~할 때조차도'라는 부사절을 이끎. bias가 동사로 쓰임.<br>
+[핵심 어휘] think through (철저히 생각하다), motivational (동기적인), bias (편향되게 하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">7. Ziva Kunda, / who <mark>coined</mark> the term "motivated reasoning" to describe this phenomenon, / explained that although individuals try to make well-thought-out decisions, / use available evidence, and look at both sides of an issue, / the process is often <mark>tainted</mark> by motivations / that may be unknown to them.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] Ziva Kunda는, / 이 현상을 설명하기 위해 "동기가 부여된 추론"이라는 용어를 만들어낸, / 개인들이 심사숙고한 결정을 내리려고 하고, 비록 가용한 증거를 사용하며, 문제의 양면을 보려고 노력할지라도, / 그 과정은 종종 동기들에 의해 오염된다고 설명했다 / 그들에게 알려지지 않았을지도 모르는.<br>
+[구문 해설] who는 Ziva Kunda를 부연 설명하는 계속적 용법의 관계대명사. that may be~는 앞의 motivations를 수식하는 주격 관계대명사절. is tainted 수동태 구문.<br>
+[핵심 어휘] coin (용어를 만들어내다), phenomenon (현상), well-thought-out (심사숙고한), taint (오염시키다, 더럽히다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">8. Individuals' motivations may direct them / to attend more carefully to some information / while <mark>ignoring</mark> other relevant facts.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 개인들의 동기들은 그들을 지시할지도 모른다 / 일부 정보에 더 주의 깊게 집중하도록 / 다른 관련 사실들을 무시하는 반면에.<br>
+[구문 해설] direct + 목적어 + to부정사 구조. while ignoring은 접속사를 남겨둔 분사구문.<br>
+[핵심 어휘] direct (지시하다, 이끌다), attend to (~에 주의를 기울이다), ignore (무시하다), relevant (관련 있는)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">9. Or they may use different strategies to evaluate information they prefer to be correct / while at the same time being <mark>hypercritical</mark> of flaws / in information they prefer to be wrong.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 혹은 그들은 자신들이 옳기를 선호하는 정보를 평가하기 위해 다른 전략들을 사용할지도 모른다 / 동시에 결점들에 대해 과도하게 비판적이면서 / 자신들이 틀리기를 선호하는 정보의 (결점들에).<br>
+[구문 해설] information 뒤에 목적격 관계대명사 that/which가 생략됨. while ~ being은 접속사 뒤의 분사구문.<br>
+[핵심 어휘] strategy (전략), prefer (선호하다), hypercritical (과도하게 비판적인), flaw (결점)
+</div></details>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (통념-반박-상술 구조)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[MYTH] 객관성에 대한 착각</span>
+        <h4>정의의 여신상 같은 우리</h4>
+        <p>사람들은 스스로가 편견이나 감정 없이 공정하게 판단하는 존재라고 생각하기를 좋아합니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[REALITY] 무의식적 편향과 동기</span>
+        <h4>자동 조종과 편향된 추론</h4>
+        <p>실제로는 무의식적인 자동 조종 상태에 있거나, 신중하게 생각하려 할 때조차 무의식적 동기에 의해 추론 과정이 편향(오염)됩니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[DETAIL] 동기가 부여된 추론</span>
+        <h4>유리한 취사선택</h4>
+        <p>자신이 원하는 결론에 유리한 정보는 쉽게 수용하고, 반대되는 정보는 무시하거나 그 결점을 과도하게 비판하는 '동기가 부여된 추론(motivated reasoning)' 현상이 발생합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+  <div class="drill-q">1. We all view ourselves similar to the blindfolded statue of Lady Justice [ evaluating / evaluated ] competing claims without bias, emotions, or motivations.</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="correct" data-exp="정답: evaluating (앞의 명사 statue of Lady Justice가 대립하는 주장들을 '능동적으로 평가하는' 주체이므로 현재분사 evaluating이 적절합니다.)">evaluating</button>
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: evaluated (수동의 과거분사를 쓰면 조각상이 평가'된다'는 의미가 되어 문맥에 맞지 않습니다.)">evaluated</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+<div class="drill-card">
+  <div class="drill-q">2. ...the process is often tainted by motivations [ that / what ] may be unknown to them.</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: what (what은 선행사를 포함하는 관계대명사이므로 앞에 명사 선행사가 올 수 없습니다.)">what</button>
+    <button class="drill-btn" data-ans="correct" data-exp="정답: that (앞에 선행사 motivations가 존재하며 뒤에 동사 may be가 바로 오는 불완전한 문장이므로 주격 관계대명사 that이 적절합니다.)">that</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+<div class="exam-item">
+  <h4>[문제 1] 다음 글의 제목으로 가장 적절한 것은? (제목 추론)</h4>
+  <div class="exam-passage">
+    Everyone likes to think of themselves as behaving in an unbiased fashion most of the time. We all view ourselves similar to the blindfolded statue of Lady Justice evaluating competing claims without bias, emotions, or motivations. And yet, overwhelming psychological research suggests that such unbiased rationality is actually a fairly elusive quality in humans. Much of the time people are on automatic pilot. ... The rest of the time, even as individuals are trying their best to think through issues, motivational goals may bias their thought processes and bias their reasoning. Ziva Kunda, who coined the term "motivated reasoning" to describe this phenomenon, explained that although individuals try to make well-thought-out decisions... the process is often tainted by motivations that may be unknown to them. Individuals' motivations may direct them to attend more carefully to some information while ignoring other relevant facts.
+  </div>
+  <div class="exam-choices">
+    ① The Essential Role of Rationality in Justice<br>
+    ② Overcoming Biases Through Deliberate Thinking<br>
+    ③ The Myth of Unbiased Rationality: Motivated Reasoning<br>
+    ④ How Automatic Pilot Helps Fast Decision Making<br>
+    ⑤ The Process of Evaluating Correct Information
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ③ The Myth of Unbiased Rationality: Motivated Reasoning<br>
+      <b>해설:</b> 인간이 스스로를 편견 없이 합리적이라고 생각하지만(통념/신화), 실제로는 무의식적인 동기에 의해 추론이 편향된다는 '동기가 부여된 추론(Motivated Reasoning)'을 설명하는 글입니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 2] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘)</h4>
+  <div class="exam-passage">
+    Everyone likes to think of themselves as behaving in an ① <u>unbiased</u> fashion most of the time. We all view ourselves similar to the blindfolded statue of Lady Justice evaluating competing claims without bias, emotions, or motivations. And yet, overwhelming psychological research suggests that such unbiased rationality is actually a fairly ② <u>elusive</u> quality in humans. Much of the time people are on automatic pilot. In other words, individuals are acting without reflection more often than they are thinking carefully and deliberately. The rest of the time, even as individuals are trying their best to think through issues, motivational goals may ③ <u>bias</u> their thought processes and bias their reasoning. Ziva Kunda, who coined the term "motivated reasoning" to describe this phenomenon, explained that although individuals try to make well-thought-out decisions, use available evidence, and look at both sides of an issue, the process is often ④ <u>purified</u> by motivations that may be unknown to them. Or they may use different strategies to evaluate information they prefer to be correct while at the same time being hypercritical of ⑤ <u>flaws</u> in information they prefer to be wrong.
+  </div>
+  <div class="exam-choices">
+    ① unbiased<br>
+    ② elusive<br>
+    ③ bias<br>
+    ④ purified<br>
+    ⑤ flaws
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ④ purified -> <b>tainted</b> 또는 <b>corrupted</b><br>
+      <b>해설:</b> 신중하게 결정을 내리려 노력할지라도 그 과정은 알지 못하는 '동기들에 의해 오염된다(tainted)'는 맥락이므로, '정화된다(purified)'는 단어는 정반대의 뜻으로 적절하지 않습니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 3] 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은? (빈칸 추론)</h4>
+  <div class="exam-passage">
+    Ziva Kunda, who coined the term "motivated reasoning" to describe this phenomenon, explained that although individuals try to make well-thought-out decisions, use available evidence, and look at both sides of an issue, the process is often ________________________ that may be unknown to them. Individuals' motivations may direct them to attend more carefully to some information while ignoring other relevant facts. Or they may use different strategies to evaluate information they prefer to be correct while at the same time being hypercritical of flaws in information they prefer to be wrong.
+  </div>
+  <div class="exam-choices">
+    ① completely based on strict logic<br>
+    ② untainted by personal emotions<br>
+    ③ tainted by motivations<br>
+    ④ driven by collective intelligence<br>
+    ⑤ cleared of all cognitive biases
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ③ tainted by motivations<br>
+      <b>해설:</b> 아무리 심사숙고하려 해도 자신도 모르는 '동기에 의해 과정이 오염(편향)된다'는 것이 동기가 부여된 추론의 핵심입니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 4] [조건부 서술형] What specific two-word term did Ziva Kunda coin to describe the phenomenon where people's reasoning is biased by their hidden desires and goals? Write the exact phrase from the passage.</h4>
+  <div class="exam-passage">
+    [Question]<br>
+    Identify the exact 2-word psychological term coined by Ziva Kunda in the text.
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> motivated reasoning<br>
+      <b>해설:</b> 원문 중 "Ziva Kunda, who coined the term 'motivated reasoning' to describe this phenomenon..."에서 해당 용어를 정확히 찾아 적는 문제입니다.
+    </div>
+  </details>
+</div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

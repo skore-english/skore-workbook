@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>25년 3월 고3 40번 분석 - 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고3 2025년 3월 학력평가</span>
+    </div>
+    <div class="meta-badge">40번 / 원문: 요약문 완성</div>
+    <h1 class="title">2025년 3월 고3 40번<br><span>학력평가 심층 분석</span></h1>
+    <p class="header-lead">스코어학원 모바일 최적화 웹 워크북</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 메타 알고리즘(Meta-algorithmics)과 지적 소유권 (Intellectual Ownership)</li>
+        <li><b>[배경 맥락]:</b> 인간이 만든 초기 알고리즘이 스스로 다른 새로운 알고리즘을 만들어낼 때, 과연 그 결과물(새로운 알고리즘)의 소유권은 누구에게 있는지에 대한 철학적, 법적 고찰을 다루고 있습니다.</li>
+        <li><b>[논리 요약]:</b> 알고리즘이 다른 알고리즘을 생성하는 과정에서 초기 프로그래머의 의도와 다른 결과가 발생하여 인간의 통제력을 벗어난다면, 그 결과물의 소유권은 인간이 아닌 그것을 만들어낸 장치(컴퓨터)에게 귀속되어야 한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      It may be assumed that meta-algorithmics, that is, the creation of algorithms that generate other algorithms, is a human creation as well. A human programmer must have composed the first algorithm that, in turn, generates new algorithms and as such the initial programmer must be in control of the original idea. However, this is not necessarily true. Unlike humanly conceived ideas, where the author is the intellectual owner of the idea, algorithms are processes that define, describe, and implement a series of actions that in turn produce other actions. During the transfer of actions it is possible for a discrepancy to occur between the original intention and the actual result. If that happens then, by definition, the author of the algorithm is not in control of, and therefore does not own intellectually from that point on, the resulting process. Theoretically, ownership of an idea is intrinsically connected to the predictability of its outcome, that is, to its intellectual control. Therefore, in the absence of human control the ownership of the algorithmic process must be instead credited to the device that produced it, that is, to the computer.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 메타 알고리즘 과정에서 인간의 예측과 통제를 벗어난 결과가 발생할 경우, 그 지적 소유권은 인간이 아닌 그것을 생성한 컴퓨터에게 주어져야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+<div class="chunk-item">
+<div class="chunk-en">1. It may be <mark>assumed</mark> / that meta-algorithmics, / <mark>that is</mark>, the creation of algorithms that generate other algorithms, / is a human creation <mark>as well</mark>.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 가정될지도 모른다 / 메타 알고리즘, / 즉 다른 알고리즘을 생성하는 알고리즘의 창조가, / 역시 인간의 창조물이라고.<br>
+[구문 해설] It은 가주어, that절이 진주어. that is는 '즉, 다시 말해'라는 뜻으로 앞의 meta-algorithmics를 동격으로 설명함.<br>
+[핵심 어휘] assume (가정하다), meta-algorithmics (메타 알고리즘), generate (생성하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">2. A human programmer <mark>must have composed</mark> the first algorithm / that, <mark>in turn</mark>, generates new algorithms / and <mark>as such</mark> the initial programmer must be <mark>in control of</mark> the original idea.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 인간 프로그래머가 첫 번째 알고리즘을 작성했음이 틀림없다 / 결과적으로 새로운 알고리즘을 생성하는 / 그래서 초기 프로그래머는 원래의 아이디어를 통제하고 있음이 틀림없다.<br>
+[구문 해설] must have p.p.는 과거 사실에 대한 강한 추측(~했음이 틀림없다). that은 the first algorithm을 수식하는 주격 관계대명사.<br>
+[핵심 어휘] compose (작성하다, 구성하다), in turn (결과적으로, 차례로), as such (따라서, 그러므로), initial (초기의), in control of (~을 통제하는)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">3. However, this is not <mark>necessarily</mark> true.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 그러나, 이것이 반드시 사실인 것은 아니다.<br>
+[구문 해설] not necessarily는 부분 부정으로 '반드시 ~인 것은 아니다'의 뜻.<br>
+[핵심 어휘] necessarily (반드시, 필연적으로)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">4. <mark>Unlike</mark> humanly <mark>conceived</mark> ideas, / <mark>where</mark> the author is the intellectual owner of the idea, / algorithms are processes / that define, describe, and <mark>implement</mark> a series of actions / that in turn produce other actions.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 인간에 의해 고안된 아이디어와 달리, / (그곳에서는) 저자가 아이디어의 지적 소유자인, / 알고리즘은 과정이다 / 일련의 행동들을 정의하고, 묘사하고, 실행하는 / 결과적으로 또 다른 행동들을 만들어내는.<br>
+[구문 해설] where는 앞의 humanly conceived ideas의 맥락적 상황을 받아주는 계속적 용법의 관계부사. 첫 번째 that은 processes를, 두 번째 that은 a series of actions를 수식하는 주격 관계대명사.<br>
+[핵심 어휘] conceive (고안하다, 생각하다), intellectual (지적인), implement (실행하다, 이행하다), a series of (일련의)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">5. During the transfer of actions / it is possible / <mark>for</mark> a <mark>discrepancy</mark> <mark>to occur</mark> / between the original intention and the actual result.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 행동들의 전환 과정 중에 / 가능하다 / 불일치가 발생하는 것이 / 원래의 의도와 실제 결과 사이에.<br>
+[구문 해설] it은 가주어, to occur가 진주어이며, for a discrepancy는 to부정사의 의미상 주어.<br>
+[핵심 어휘] transfer (전환, 전달), discrepancy (불일치, 괴리), occur (발생하다), intention (의도)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">6. If that happens / then, <mark>by definition</mark>, the author of the algorithm is not in control of, / and therefore does not own intellectually from that point on, / the resulting process.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 만약 그런 일이 발생한다면 / 그러면, 당연히, 알고리즘의 저자는 통제하지 못하는 것이다, / 따라서 그 시점부터 지적으로 소유하지 못한다, / 그 결과로 나온 과정을.<br>
+[구문 해설] in control of와 own intellectually의 공통 목적어가 맨 뒤에 있는 the resulting process임.<br>
+[핵심 어휘] by definition (당연히, 정의상), resulting (결과로 나오는)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">7. Theoretically, ownership of an idea is <mark>intrinsically</mark> connected / to the predictability of its outcome, / <mark>that is</mark>, to its intellectual control.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 이론적으로, 어떤 아이디어의 소유권은 본질적으로 연결되어 있다 / 그것의 결과에 대한 예측 가능성에, / 즉, 그것의 지적 통제력에.<br>
+[구문 해설] be connected to (~에 연결되다). to the predictability... 와 to its intellectual control이 that is(즉)를 매개로 동격의 의미를 가짐.<br>
+[핵심 어휘] theoretically (이론적으로), intrinsically (본질적으로), predictability (예측 가능성), outcome (결과)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">8. Therefore, in the <mark>absence</mark> of human control / the ownership of the algorithmic process must be instead <mark>credited</mark> to the device / that produced it, / <mark>that is</mark>, to the computer.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 그러므로, 인간 통제력의 부재 속에서 / 알고리즘 과정의 소유권은 대신 장치에게 귀속되어야만 한다 / 그것을 생산한, / 즉 컴퓨터에게.<br>
+[구문 해설] be credited to (~의 공으로 돌려지다, ~에게 귀속되다). that은 the device를 수식하는 주격 관계대명사.<br>
+[핵심 어휘] absence (부재), ownership (소유권), credit A to B (A를 B의 공/소유로 인정하다)
+</div></details>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (통념-반박-결론 구조)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[MYTH] 초기 통제력에 대한 통념</span>
+        <h4>인간 프로그래머의 소유권</h4>
+        <p>일반적으로 사람들은 초기 알고리즘을 만든 인간 프로그래머가, 그 알고리즘이 만들어낸 새로운 알고리즘에 대해서도 통제력과 지적 소유권을 가질 것이라고 가정합니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[REALITY] 의도와 결과의 불일치 발생</span>
+        <h4>통제력 상실</h4>
+        <p>하지만 알고리즘이 일련의 새로운 행동들을 생성(transfer)하는 과정에서 원래의 의도와 실제 결과 간에 불일치(discrepancy)가 발생하면, 인간은 그 결과물에 대한 예측 가능성과 통제력을 상실하게 됩니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 지적 소유권의 이전</span>
+        <h4>장치(컴퓨터)로의 귀속</h4>
+        <p>지적 소유권은 본질적으로 결과의 예측 가능성(통제력)과 연결되어 있으므로, 인간의 통제력이 부재한 상황에서는 그 소유권이 알고리즘을 생성해 낸 장치(컴퓨터)에게 귀속되어야 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+  <div class="drill-q">1. Unlike humanly conceived ideas, [ which / where ] the author is the intellectual owner of the idea, algorithms are processes...</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="correct" data-exp="정답: where (뒤에 주어, 동사, 보어가 모두 있는 완전한 문장이 이어지며, '인간이 고안한 아이디어라는 상황 속에서'를 나타내는 관계부사 where가 적절합니다.)">where</button>
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: which (which는 뒤에 불완전한 문장이 와야 하므로 쓰일 수 없습니다.)">which</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+<div class="drill-card">
+  <div class="drill-q">2. During the transfer of actions it is possible [ for / of ] a discrepancy to occur between the original intention and the actual result.</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: of (사람의 성격이나 태도를 나타내는 형용사가 아니므로 of는 쓸 수 없습니다.)">of</button>
+    <button class="drill-btn" data-ans="correct" data-exp="정답: for (possible은 사람의 성질을 나타내는 형용사가 아니므로, to부정사의 의미상 주어를 나타낼 때 for를 씁니다.)">for</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+<div class="exam-item">
+  <h4>[문제 1] 다음 글의 제목으로 가장 적절한 것은? (제목 추론)</h4>
+  <div class="exam-passage">
+    It may be assumed that meta-algorithmics, that is, the creation of algorithms that generate other algorithms, is a human creation as well. A human programmer must have composed the first algorithm that, in turn, generates new algorithms and as such the initial programmer must be in control of the original idea. However, this is not necessarily true. ... During the transfer of actions it is possible for a discrepancy to occur between the original intention and the actual result. If that happens then, by definition, the author of the algorithm is not in control of, and therefore does not own intellectually from that point on, the resulting process. Theoretically, ownership of an idea is intrinsically connected to the predictability of its outcome... Therefore, in the absence of human control the ownership of the algorithmic process must be instead credited to the device that produced it, that is, to the computer.
+  </div>
+  <div class="exam-choices">
+    ① Why Programmers Still Control Modern Meta-algorithms<br>
+    ② Who Owns Algorithms When Human Control Is Lost?<br>
+    ③ Discrepancies Between Human Imagination and Computers<br>
+    ④ How to Prevent the Transfer of Algorithmic Actions<br>
+    ⑤ The Process of Predicting Computer Outcomes
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ② Who Owns Algorithms When Human Control Is Lost?<br>
+      <b>해설:</b> 메타 알고리즘이 작동하는 과정에서 인간의 예측과 통제를 벗어난 결과가 발생했을 때, 그 지적 소유권이 누구(컴퓨터)에게 귀속되어야 하는지를 논하는 글이므로 ②번이 가장 적절합니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 2] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘)</h4>
+  <div class="exam-passage">
+    A human programmer must have composed the first algorithm that, in turn, generates new algorithms and as such the initial programmer must be in ① <u>control</u> of the original idea. However, this is not ② <u>necessarily</u> true. Unlike humanly conceived ideas, where the author is the intellectual owner of the idea, algorithms are processes that define, describe, and implement a series of actions that in turn produce other actions. During the transfer of actions it is possible for a ③ <u>consistency</u> to occur between the original intention and the actual result. If that happens then, by definition, the author of the algorithm is not in control of, and therefore does not own intellectually from that point on, the ④ <u>resulting</u> process. Theoretically, ownership of an idea is intrinsically connected to the ⑤ <u>predictability</u> of its outcome, that is, to its intellectual control. Therefore, in the absence of human control the ownership of the algorithmic process must be instead credited to the computer.
+  </div>
+  <div class="exam-choices">
+    ① control<br>
+    ② necessarily<br>
+    ③ consistency<br>
+    ④ resulting<br>
+    ⑤ predictability
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ③ consistency -> <b>discrepancy</b><br>
+      <b>해설:</b> 인간의 통제력을 잃고 소유권이 박탈되는 조건은 원래의 의도와 실제 결과 사이에 '불일치(discrepancy)'나 차이가 발생할 때입니다. 일치성, 일관성(consistency)이 발생한다면 통제력을 잃지 않으므로 문맥에 맞지 않습니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 3] 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은? (빈칸 추론)</h4>
+  <div class="exam-passage">
+    During the transfer of actions it is possible for a discrepancy to occur between the original intention and the actual result. If that happens then, by definition, the author of the algorithm is not in control of, and therefore does not own intellectually from that point on, the resulting process. Theoretically, ownership of an idea is intrinsically connected to __________________________________, that is, to its intellectual control. Therefore, in the absence of human control the ownership of the algorithmic process must be instead credited to the device that produced it, that is, to the computer.
+  </div>
+  <div class="exam-choices">
+    ① the predictability of its outcome<br>
+    ② the financial investment in the device<br>
+    ③ the original intention of the programmer<br>
+    ④ the discrepancy of the generated actions<br>
+    ⑤ the collaborative effort between algorithms
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ① the predictability of its outcome<br>
+      <b>해설:</b> 지적 통제력(intellectual control)과 직결되는 개념은 그 결과물을 미리 내다보고 조절할 수 있는 능력, 즉 '결과에 대한 예측 가능성(predictability of its outcome)'입니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 4] [조건부 서술형] According to the passage, when human control is absent, to what exactly must the ownership of the algorithmic process be credited? Write the answer using exactly two words from the text.</h4>
+  <div class="exam-passage">
+    [Question]<br>
+    In the absence of human predictability, who or what receives the intellectual credit?
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> the computer<br>
+      <b>해설:</b> 마지막 문장의 "credited to the device that produced it, that is, to the computer."에서 인간 통제가 부재할 때 소유권이 귀속되는 대상은 "the computer"입니다. (the device 도 정답으로 인정될 수 있습니다.)
+    </div>
+  </details>
+</div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>25년 3월 고3 35번 분석 - 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고3 2025년 3월 학력평가</span>
+    </div>
+    <div class="meta-badge">35번 / 원문: 무관한 문장 추론</div>
+    <h1 class="title">2025년 3월 고3 35번<br><span>학력평가 심층 분석</span></h1>
+    <p class="header-lead">스코어학원 모바일 최적화 웹 워크북</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 문화적 지식의 저장과 전수 (Cultural Storage and Transmission)</li>
+        <li><b>[배경 맥락]:</b> 인간은 생물학적인 DNA 유전이 아닌 교육과 '외부 기억 장치(예: 쇼베 동굴벽화)'를 통해 세대 간 지식을 보존하고 누적 발전시켜 왔습니다.</li>
+        <li><b>[논리 요약]:</b> 초기 인류는 쇼베 동굴과 같은 외부 기억 장치를 활용하여 수많은 세대에 걸쳐 협력함으로써 지식을 저장하고 다음 세대로 전수하는 데에 높은 의식을 가지고 있었습니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Cultural storage and transmission require humans to accomplish the work of storing knowledge and passing it on to the next generation by means other than DNA. To that end, humans developed techniques of memorization, of transmitting knowledge through education and by using external memory devices. The Chauvet cave was such a device, a place that humans returned to generation after generation, cooperating on a project that none of them could have accomplished alone. Each generation of artists learned techniques and continued the work of previous ones, preserving and improving what their predecessors had worked on. For us, the idea that humans might work on a single system of caves for thousands of years in the same style is almost unimaginable. But these early humans were highly conscious of the importance of storing and preserving knowledge and of passing down ideas.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 초기 인류는 쇼베 동굴과 같은 외부 기억 장치를 통해 세대를 거듭하며 지식을 보존하고 전수하는 문화적 능력을 지니고 있었다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+<div class="chunk-item">
+<div class="chunk-en">1. Cultural storage and transmission <mark>require</mark> humans <mark>to accomplish</mark> the work of storing knowledge and passing it on to the next generation / <mark>by means other than</mark> DNA.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 문화적 저장과 전수는 인간이 지식을 저장하고 그것을 다음 세대에게 전달하는 작업을 완수하도록 요구한다 / DNA 이외의 수단에 의해.<br>
+[구문 해설] require + 목적어(humans) + to부정사(to accomplish) 구조. by means other than ~ : ~ 이외의 수단으로.<br>
+[핵심 어휘] transmission (전수, 전달), accomplish (완수하다), by means of (~의 수단으로)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">2. <mark>To that end</mark>, / humans developed techniques of memorization, / of transmitting knowledge through education / and by using <mark>external memory devices</mark>.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 그 목적을 위해, / 인간은 암기 기술을 발달시켰다, / 교육을 통해 지식을 전수하는 (기술을) / 그리고 외부 기억 장치를 사용함으로써 (지식을 전수하는 기술을).<br>
+[구문 해설] To that end: 그 목적을 위해. techniques 뒤에 of memorization과 of transmitting~ 이 병렬로 연결됨.<br>
+[핵심 어휘] to that end (그 목적을 위해), memorization (암기), external memory device (외부 기억 장치)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">3. The Chauvet cave was such a device, / a place <mark>that</mark> humans returned to generation after generation, / <mark>cooperating</mark> on a project / that none of them <mark>could have accomplished</mark> alone.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 쇼베 동굴은 그러한 장치였다, / 인류가 대대로 돌아왔던 장소인, / 프로젝트에 협력하면서 / 그들 중 누구도 혼자서는 완수할 수 없었을.<br>
+[구문 해설] a place는 such a device와 동격. that humans returned to에서 that은 목적격 관계대명사(to의 목적어). cooperating은 동시동작 분사구문. could have p.p.(~할 수도 있었을 것이다) 사용.<br>
+[핵심 어휘] generation after generation (대대로), cooperate (협력하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">4. Each generation of artists learned techniques and continued the work of previous ones, / <mark>preserving</mark> and <mark>improving</mark> what their predecessors had worked on.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 각 세대의 예술가들은 기술을 배웠고 이전 세대들의 작업을 계속했다, / 그들의 선조들이 작업했던 것을 보존하고 개선하면서.<br>
+[구문 해설] preserving and improving은 동시동작을 나타내는 분사구문. what은 선행사를 포함하는 관계대명사(~하는 것), had worked on은 대과거(과거완료) 시제.<br>
+[핵심 어휘] predecessor (선조, 전임자), preserve (보존하다), improve (개선하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">5. For us, / the idea <mark>that</mark> humans might work on a single system of caves for thousands of years in the same style / is almost unimaginable.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 우리에게, / 인간이 수천 년 동안 같은 스타일로 단일한 동굴 시스템에서 작업했을지도 모른다는 생각은 / 거의 상상할 수 없다.<br>
+[구문 해설] the idea와 that humans might... style은 동격 관계. 주어는 the idea, 동사는 is.<br>
+[핵심 어휘] unimaginable (상상할 수 없는)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">6. But these early humans were highly <mark>conscious of</mark> the importance / of storing and preserving knowledge / and of passing down ideas.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 하지만 이 초기 인류는 중요성을 매우 의식하고 있었다 / 지식을 저장하고 보존하는 것의 / 그리고 아이디어를 물려주는 것의.<br>
+[구문 해설] be conscious of (~을 의식하다). of storing... 과 of passing... 이 the importance에 병렬로 연결됨.<br>
+[핵심 어휘] conscious of (~을 의식하는), pass down (물려주다)
+</div></details>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (주제-예시-결론 구조)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[THESIS] 문화적 지식의 전수</span>
+        <h4>외부 기억 장치의 발달</h4>
+        <p>인간은 DNA가 아닌 암기, 교육, 외부 기억 장치를 통해 세대 간 지식을 저장하고 전수하는 기술을 발달시켰습니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[EXAMPLE] 쇼베 동굴벽화 프로젝트</span>
+        <h4>세대 간 협력과 보존</h4>
+        <p>쇼베 동굴은 그러한 외부 기억 장치의 예로, 수많은 예술가들이 대대로 기술을 배우고 선조들의 작업을 보존 및 개선하며 협력했습니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 지식 보존에 대한 의식</span>
+        <h4>초기 인류의 문화적 유산</h4>
+        <p>현대인에게는 수천 년간 한 동굴에서 같은 스타일로 작업했다는 것이 상상하기 어렵지만, 초기 인류는 지식 보존과 전수의 중요성을 깊이 인식하고 있었습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+  <div class="drill-q">1. Cultural storage and transmission require humans [ to accomplish / accomplishing ] the work of storing knowledge and passing it on to the next generation.</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="correct" data-exp="정답: to accomplish (동사 require는 목적어 뒤에 목적격 보어로 to부정사를 취합니다.)">to accomplish</button>
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: accomplishing (require는 목적격 보어로 동명사나 현재분사를 취하지 않습니다.)">accomplishing</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+<div class="drill-card">
+  <div class="drill-q">2. The Chauvet cave was such a device, a place [ that / where ] humans returned to generation after generation...</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: where (뒤에 returned 'to'의 전치사 목적어가 빠져있는 불완전한 문장이므로 관계부사 where는 올 수 없습니다.)">where</button>
+    <button class="drill-btn" data-ans="correct" data-exp="정답: that (전치사 to의 목적어 역할을 하는 목적격 관계대명사 that이나 which가 와야 합니다.)">that</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+<div class="exam-item">
+  <h4>[문제 1] 다음 글의 제목으로 가장 적절한 것은? (제목 추론)</h4>
+  <div class="exam-passage">
+    Cultural storage and transmission require humans to accomplish the work of storing knowledge and passing it on to the next generation by means other than DNA. To that end, humans developed techniques of memorization, of transmitting knowledge through education and by using external memory devices. The Chauvet cave was such a device, a place that humans returned to generation after generation, cooperating on a project that none of them could have accomplished alone. Each generation of artists learned techniques and continued the work of previous ones, preserving and improving what their predecessors had worked on. For us, the idea that humans might work on a single system of caves for thousands of years in the same style is almost unimaginable. But these early humans were highly conscious of the importance of storing and preserving knowledge and of passing down ideas.
+  </div>
+  <div class="exam-choices">
+    ① The Role of DNA in Cultural Storage and Evolution<br>
+    ② The Chauvet Cave: An External Memory Device for Cultural Transmission<br>
+    ③ Why Early Humans Failed to Cooperate on Large Projects<br>
+    ④ Modern Technologies Outperforming Ancient Memory Devices<br>
+    ⑤ The Difference Between Memorization and Formal Education
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ② The Chauvet Cave: An External Memory Device for Cultural Transmission<br>
+      <b>해설:</b> 초기 인류가 지식을 보존하고 전수하기 위해 쇼베 동굴과 같은 외부 기억 장치를 활용하여 대대로 협력했다는 내용이므로, ② "쇼베 동굴: 문화적 전수를 위한 외부 기억 장치"가 가장 적절한 제목입니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 2] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘)</h4>
+  <div class="exam-passage">
+    Cultural storage and transmission require humans to accomplish the work of storing knowledge and passing it on to the next generation by means other than DNA. To that end, humans developed techniques of memorization, of transmitting knowledge through education and by using ① <u>external</u> memory devices. The Chauvet cave was such a device, a place that humans returned to generation after generation, ② <u>cooperating</u> on a project that none of them could have accomplished alone. Each generation of artists learned techniques and continued the work of previous ones, ③ <u>preserving</u> and improving what their predecessors had worked on. For us, the idea that humans might work on a single system of caves for thousands of years in the same style is almost ④ <u>unimaginable</u>. But these early humans were highly ⑤ <u>ignorant</u> of the importance of storing and preserving knowledge and of passing down ideas.
+  </div>
+  <div class="exam-choices">
+    ① external<br>
+    ② cooperating<br>
+    ③ preserving<br>
+    ④ unimaginable<br>
+    ⑤ ignorant
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ⑤ ignorant -> <b>conscious</b><br>
+      <b>해설:</b> 초기 인류는 수천 년에 걸쳐 동굴 벽화를 통해 지식을 누적할 만큼 지식 보존의 중요성을 깊이 '의식(conscious)'하고 있었으므로, '무지한(ignorant)'은 문맥상 정반대의 의미가 되어 틀립니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 3] 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳은? (문장 삽입)</h4>
+  <div class="exam-passage">
+    [주어진 문장] But these early humans were highly conscious of the importance of storing and preserving knowledge and of passing down ideas.
+    <br><br>
+    Cultural storage and transmission require humans to accomplish the work of storing knowledge and passing it on to the next generation by means other than DNA. ( ① ) To that end, humans developed techniques of memorization, of transmitting knowledge through education and by using external memory devices. ( ② ) The Chauvet cave was such a device, a place that humans returned to generation after generation, cooperating on a project that none of them could have accomplished alone. ( ③ ) Each generation of artists learned techniques and continued the work of previous ones, preserving and improving what their predecessors had worked on. ( ④ ) For us, the idea that humans might work on a single system of caves for thousands of years in the same style is almost unimaginable. ( ⑤ )
+  </div>
+  <div class="exam-choices">
+    ①<br>
+    ②<br>
+    ③<br>
+    ④<br>
+    ⑤
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ⑤<br>
+      <b>해설:</b> 우리(현대인)에게는 수천 년 동안 같은 동굴 시스템에서 작업했다는 것이 '상상하기 어렵다(unimaginable)'는 내용 뒤에, 역접의 접속사 But과 함께 '하지만 이들 초기 인류는 지식 보존의 중요성을 고도로 의식하고 있었다'는 결론이 오는 것이 논리적으로 가장 자연스럽습니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 4] [조건부 서술형] What kind of tools did humans develop to transmit knowledge outside of DNA, which the Chauvet cave serves as a prime example of? Write the exact three English words from the text.</h4>
+  <div class="exam-passage">
+    [Question]<br>
+    What specific phrase from the text describes tools like the Chauvet cave used for storing knowledge?
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> external memory devices<br>
+      <b>해설:</b> 쇼베 동굴이 예시로 든 것은 인간이 발달시킨 "외부 기억 장치"입니다. 지문 내의 "external memory devices"를 그대로 가져와 적으면 됩니다.
+    </div>
+  </details>
+</div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

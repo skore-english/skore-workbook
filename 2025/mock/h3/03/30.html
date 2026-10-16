@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>25년 3월 고3 30번 분석 - 스코어학원</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고3 2025년 3월 학력평가</span>
+    </div>
+    <div class="meta-badge">30번 / 원문: 어휘 추론</div>
+    <h1 class="title">2025년 3월 고3 30번<br><span>학력평가 심층 분석</span></h1>
+    <p class="header-lead">스코어학원 모바일 최적화 웹 워크북</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 발터 벤야민의 아우라 (Aura)와 기계적 복제 시대의 예술</li>
+        <li><b>[배경 맥락]:</b> 현대 기술의 발달로 예술 작품의 복제가 너무나 쉬워졌지만, 그 과정에서 원본만이 가지는 고유한 '아우라(Aura)'와 인간적 연결감은 상실되었다는 발터 벤야민의 철학적 통찰입니다.</li>
+        <li><b>[논리 요약]:</b> 기계적 복제는 원본의 유일성(unique existence)을 다수의 복제품으로 대체하여 작품의 '아우라'를 파괴하고, 나아가 사물이 맺고 있는 전통의 권위마저 위협한다는 내용입니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Surely one reason that copies have lost their sense of human connection, abundance, and intimate relation is that modern technology has made copying so easy. The methods of copying available to us have never been more powerfully abundant. This seems true even as a sense of loss has attended our ever more powerful means to reproduce what we care about. Walter Benjamin has famously formulated this loss as an "aura": that which is lost in mechanical reproduction. The aura of a work of art, he suggests, cannot be copied by mechanical technology. By around 1900, he writes, "technical reproduction had reached a standard that not only permitted it to reproduce all transmitted works of art and thus to cause the most profound change in their impact upon the public." The ability to copy mechanically "substituted a plurality of copies for a unique existence," Benjamin argued. In addition to transforming art and the public's relation to it, Benjamin asserted that mechanical reproduction has the power to rend traditions by interfering with the authority of objects "embedded in the fabric of tradition." This threat to tradition was twofold and concerned the presence of objects, Benjamin believed.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 현대의 기계적 복제 기술은 복제를 쉽게 만들었지만, 예술 작품의 고유한 '아우라'를 파괴하고 원본의 유일성과 전통의 권위를 위협한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+<div class="chunk-item">
+<div class="chunk-en">1. Surely one reason that copies have lost their sense of human connection, abundance, and intimate relation / is <mark>that</mark> modern technology has made copying so easy.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 확실히 복제품들이 인간적 연결, 풍부함, 그리고 친밀한 관계의 감각을 잃어버린 한 가지 이유는 / 현대 기술이 복제를 너무 쉽게 만들었기 때문이다.<br>
+[구문 해설] one reason을 수식하는 동격의 접속사(또는 관계부사 대용) that이 쓰였고, 전체 문장의 주동사는 is이다. that은 보어절을 이끄는 접속사.<br>
+[핵심 어휘] abundance (풍부함), intimate (친밀한)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">2. The methods of copying <mark>available</mark> to us have never been more powerfully abundant.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 우리가 이용할 수 있는 복제 방법들은 결코 더 강력하게 풍부했던 적이 없다.<br>
+[구문 해설] 짧은 문장이므로 슬래시 생략. 부정어(never) + 비교급 구문으로 '지금이 가장 풍부하다'는 최상급의 의미를 나타냄. available to us가 앞의 methods를 수식함.<br>
+[핵심 어휘] available (이용할 수 있는), abundant (풍부한)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">3. This seems true / even as a sense of loss <mark>has attended</mark> our ever more powerful means / to reproduce <mark>what</mark> we care about.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 이것은 사실인 것처럼 보인다 / 상실감이 우리의 훨씬 더 강력한 수단에 수반되었음에도 불구하고 / 우리가 아끼는 것을 재생산하는.<br>
+[구문 해설] even as는 '~함에도 불구하고, ~하는 동안'의 의미. attend는 타동사로 '~에 수반되다'. to reproduce는 means를 수식하는 형용사적 용법의 to부정사.<br>
+[핵심 어휘] attend (수반되다, 참석하다), means (수단), reproduce (재생산하다, 복제하다)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">4. Walter Benjamin has famously <mark>formulated</mark> this loss as an "aura": / <mark>that which</mark> is lost in mechanical reproduction.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 발터 벤야민은 유명하게도 이 상실을 "아우라"로 공식화했다: / 기계적 복제에서 상실되는 그것으로.<br>
+[구문 해설] formulate A as B (A를 B로 공식화하다). that which는 the thing which와 같으며 '~하는 것'으로 해석됨.<br>
+[핵심 어휘] formulate (공식화하다, 형태를 짓다), mechanical reproduction (기계적 복제)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">5. The aura of a work of art, he suggests, cannot be copied by mechanical technology.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 예술 작품의 아우라는, 그가 제안하기를, 기계적 기술에 의해 복제될 수 없다고 한다.<br>
+[구문 해설] 짧은 문장이므로 슬래시 생략. he suggests는 문장 중간에 들어간 삽입절.<br>
+[핵심 어휘] aura (아우라, 고유의 분위기)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">6. By around 1900, he writes, / "technical reproduction had reached a standard / that <mark>not only</mark> permitted it to reproduce all transmitted works of art / and <mark>thus</mark> to cause the most profound change in their impact upon the public."</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 1900년경에, 그가 쓰기를, / "기술적 복제는 기준에 도달했다 / 그것이 전수된 모든 예술 작품들을 복제하도록 허용할 뿐만 아니라 / 따라서 대중에게 미치는 그것들의 영향에 가장 심오한 변화를 일으키도록 허용하는."<br>
+[구문 해설] permit + 목적어(it) + 목적격 보어(to reproduce... and thus to cause) 구조. not only와 but also가 명확히 짝을 이루지 않지만 문맥상 and thus로 연결됨.<br>
+[핵심 어휘] standard (기준), transmitted (전수된, 전달된), profound (심오한, 깊은), impact (영향)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">7. The ability to copy mechanically / "<mark>substituted</mark> a plurality of copies <mark>for</mark> a unique existence," / Benjamin argued.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 기계적으로 복제하는 능력은 / "유일한 존재를 다수의 복제품으로 대체했다"고 / 벤야민은 주장했다.<br>
+[구문 해설] substitute A for B (B를 A로 대체하다) 구문이 쓰여 '유일한 존재'가 '다수의 복제품'으로 대체됨을 의미.<br>
+[핵심 어휘] substitute A for B (B를 A로 대체하다), plurality (다수, 복수성), unique existence (유일한 존재)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">8. <mark>In addition to</mark> transforming art and the public's relation to it, / Benjamin asserted that mechanical reproduction has the power to <mark>rend</mark> traditions / by interfering with the authority of objects / "<mark>embedded</mark> in the fabric of tradition."</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 예술과 그것에 대한 대중의 관계를 변화시키는 것 외에도, / 벤야민은 기계적 복제가 전통을 찢어버릴 힘을 가진다고 주장했다 / 사물의 권위를 방해함으로써 / "전통의 직물 속에 짜여진."<br>
+[구문 해설] In addition to는 전치사구. embedded in~은 분사구로 앞의 objects를 수식함.<br>
+[핵심 어휘] assert (주장하다), rend (찢다, 파괴하다), interfere with (~을 방해하다), authority (권위), embedded (내재된, 짜여진), fabric (직물, 구조)
+</div></details>
+</div>
+
+<div class="chunk-item">
+<div class="chunk-en">9. This threat to tradition was twofold / and <mark>concerned</mark> the presence of objects, / Benjamin believed.</div>
+<details><summary>▼ 직독직해 및 어휘</summary>
+<div class="details-content">
+[직독직해] 전통에 대한 이 위협은 두 가지였다 / 그리고 사물의 현존과 관련이 있었다고, / 벤야민은 믿었다.<br>
+[구문 해설] concerned는 동사로 쓰여 '~와 관련되다'의 의미를 가짐.<br>
+[핵심 어휘] threat (위협), twofold (두 가지의, 이중의), concern (~와 관련되다, 우려하게 하다), presence (현존, 존재)
+</div></details>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (현상-개념-영향 구조)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[PHENOMENON] 복제 기술의 발달과 상실감</span>
+        <h4>기계적 복제의 양면성</h4>
+        <p>현대의 기술은 예술 작품의 복제를 엄청나게 쉽고 풍부하게 만들었지만, 동시에 우리가 아끼는 것들에 대한 상실감을 수반하게 되었습니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[CONCEPT] 벤야민의 '아우라(Aura)'</span>
+        <h4>대체된 유일성</h4>
+        <p>발터 벤야민은 기계적 복제로 인해 상실된 것을 '아우라'로 정의했습니다. 기계적 복제는 원본만이 가지는 유일한 존재(unique existence)를 다수의 복제품(plurality of copies)으로 대체해 버립니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[IMPACT] 원본성 상실과 전통의 파괴</span>
+        <h4>전통의 권위 훼손</h4>
+        <p>이러한 복제 기술은 단순히 대중과 예술의 관계를 바꾸는 것을 넘어, 전통 속에 짜여진 사물의 권위를 방해함으로써 전통 자체를 파괴(rend)하는 위협이 되었습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+  <div class="drill-q">1. Surely one reason [ that / what ] copies have lost their sense of human connection, abundance, and intimate relation is that modern technology has made copying so easy.</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="correct" data-exp="정답: that (one reason을 수식하는 동격의 접속사 혹은 관계부사 why를 대신하는 that이 쓰여야 합니다. 뒤에 완전한 문장이 이어집니다.)">that</button>
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: what (what 뒤에는 불완전한 문장이 와야 하는데 뒤 문장이 완전하며, 선행사 reason을 수식할 수도 없습니다.)">what</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+<div class="drill-card">
+  <div class="drill-q">2. The ability to copy mechanically substituted a plurality of copies [ for / with ] a unique existence, Benjamin argued.</div>
+  <div class="drill-options">
+    <button class="drill-btn" data-ans="wrong" data-exp="오답: with (substitute A with B는 'A를 B로 대체하다'라는 뜻이 되므로 의미가 반대가 됩니다.)">with</button>
+    <button class="drill-btn" data-ans="correct" data-exp="정답: for (substitute A for B는 'B를 A로 대체하다'라는 뜻으로, '유일한 존재(B)'를 '다수의 복제품(A)'으로 대체했다는 의미이므로 for가 맞습니다.)">for</button>
+  </div>
+  <div class="drill-feedback"></div>
+</div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+<div class="exam-item">
+  <h4>[문제 1] 다음 글의 제목으로 가장 적절한 것은? (제목 추론)</h4>
+  <div class="exam-passage">
+    Surely one reason that copies have lost their sense of human connection, abundance, and intimate relation is that modern technology has made copying so easy. The methods of copying available to us have never been more powerfully abundant. This seems true even as a sense of loss has attended our ever more powerful means to reproduce what we care about. Walter Benjamin has famously formulated this loss as an "aura": that which is lost in mechanical reproduction. The aura of a work of art, he suggests, cannot be copied by mechanical technology. ... The ability to copy mechanically "substituted a plurality of copies for a unique existence," Benjamin argued. In addition to transforming art and the public's relation to it, Benjamin asserted that mechanical reproduction has the power to rend traditions by interfering with the authority of objects "embedded in the fabric of tradition."
+  </div>
+  <div class="exam-choices">
+    ① The Loss of Aura in the Age of Mechanical Reproduction<br>
+    ② The Positive Impact of Mass Production on Art<br>
+    ③ How Traditional Art Survives in the Modern Era<br>
+    ④ Human Connection Through Technical Reproduction<br>
+    ⑤ The Evolution of Classic Art Preservation
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ① The Loss of Aura in the Age of Mechanical Reproduction<br>
+      <b>해설:</b> 기계적 복제 기술이 발달하면서 예술 작품의 원본이 가지는 유일성(아우라)과 전통의 권위가 상실되었다는 내용이므로, ①번 "기계적 복제 시대에 아우라의 상실"이 가장 적절한 제목입니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 2] 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은? (어휘)</h4>
+  <div class="exam-passage">
+    The methods of copying available to us have never been more powerfully ① <u>abundant</u>. This seems true even as a sense of loss has attended our ever more powerful means to reproduce what we care about. Walter Benjamin has famously formulated this loss as an "aura": that which is ② <u>lost</u> in mechanical reproduction. The aura of a work of art, he suggests, cannot be copied by mechanical technology. By around 1900, he writes, "technical reproduction had reached a standard that not only permitted it to reproduce all transmitted works of art and thus to cause the most ③ <u>profound</u> change in their impact upon the public." The ability to copy mechanically ④ <u>substituted</u> a plurality of copies for a unique existence, Benjamin argued. In addition to transforming art and the public's relation to it, Benjamin asserted that mechanical reproduction has the power to ⑤ <u>reinforce</u> traditions by interfering with the authority of objects "embedded in the fabric of tradition."
+  </div>
+  <div class="exam-choices">
+    ① abundant<br>
+    ② lost<br>
+    ③ profound<br>
+    ④ substituted<br>
+    ⑤ reinforce
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ⑤ reinforce -> <b>rend</b> 또는 <b>destroy</b><br>
+      <b>해설:</b> 기계적 복제가 사물의 권위를 방해(interfering)함으로써 전통을 '강화한다(reinforce)'는 것은 문맥에 맞지 않습니다. 원문은 전통을 '찢어버린다, 파괴한다(rend)'입니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 3] 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은? (빈칸 추론)</h4>
+  <div class="exam-passage">
+    Walter Benjamin has famously formulated this loss as an "aura": that which is lost in mechanical reproduction. The aura of a work of art, he suggests, cannot be copied by mechanical technology. By around 1900, he writes, "technical reproduction had reached a standard that not only permitted it to reproduce all transmitted works of art and thus to cause the most profound change in their impact upon the public." The ability to copy mechanically "substituted a plurality of copies for ____________________," Benjamin argued. In addition to transforming art and the public's relation to it, Benjamin asserted that mechanical reproduction has the power to rend traditions.
+  </div>
+  <div class="exam-choices">
+    ① a unique existence<br>
+    ② an easily accessible resource<br>
+    ③ an illusion of human connection<br>
+    ④ the diverse methods of production<br>
+    ⑤ a mechanically restored tradition
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> ① a unique existence<br>
+      <b>해설:</b> 기계적 복제는 원본만이 가지는 '유일한 존재(unique existence)'를 '다수의 복제품(a plurality of copies)'으로 대체해버린다는 것이 벤야민의 핵심 주장입니다.
+    </div>
+  </details>
+</div>
+
+<div class="exam-item">
+  <h4>[문제 4] [조건부 서술형] According to Walter Benjamin, what cannot be copied by mechanical technology? Complete the answer using the exact words from the passage (up to 7 words).</h4>
+  <div class="exam-passage">
+    [Question]<br>
+    According to Walter Benjamin, what is it that mechanical technology cannot copy?
+    <br><br>
+    [Answer]<br>
+    It is ________________________________________.
+  </div>
+  <details>
+    <summary>정답 및 해설 보기</summary>
+    <div class="answer-content">
+      <b>정답:</b> the aura of a work of art<br>
+      <b>해설:</b> 원문의 "The aura of a work of art, he suggests, cannot be copied by mechanical technology." 문장에서 정답을 그대로 찾아 영작하는 문제입니다.
+    </div>
+  </details>
+</div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
