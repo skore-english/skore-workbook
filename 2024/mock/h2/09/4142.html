@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 41-42번 · 장문독해</div>
+    <h1 class="title">NURTURING CRITICAL MINDS<br><span>Why We Must Respect Children's Questions</span></h1>
+    <p class="header-lead">어른들이 아이들의 반복되는 질문을 억압하지 않고 진지하게 받아들일 때, 아이들은 스스로 생각하고 권위에 의문을 제기하는 힘을 기를 수 있습니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 권위에 대한 의문 제기(Questioning Authority)와 인지적 독립성</li>
+        <li><b>[배경 맥락]:</b> 아동기에는 언어와 사회화를 위해 부모(권위자)의 가르침을 무조건 수용하도록 학습받으며, 이는 아이들이 커서도 권위에 의문을 품기 어렵게 만드는 원인이 됩니다.</li>
+        <li><b>[논리 요약]:</b> 아이들의 정당한 호기심인 "왜?"라는 질문에 대해 어른들이 무시하거나 윽박지르면 비판적 사고가 억압된다. 아이들이 스스로 생각할 수 있도록 그들의 끊임없는 질문을 진지하게 존중하고 수용해야 한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      What makes questioning authority so hard? The difficulties start in childhood, when parents — the first and most powerful authority figures — show children “the way things are.” This is a necessary element of learning language and socialization, and certainly most things learned in early childhood are noncontroversial: the English alphabet starts with A and ends with Z, the numbers 1 through 10 come before the numbers 11 through 20, and so on. Children, however, will spontaneously question things that are quite obvious to adults and even to older kids. The word “why?” becomes a challenge, as in, “Why is the sky blue?” Answers such as “because it just is” or “because I say so” tell children that they must unquestioningly accept what authorities say “just because,” and children who persist in their questioning are likely to find themselves dismissed or yelled at for “bothering” adults with “meaningless” or “unimportant” questions. But these questions are in fact perfectly reasonable. Why is the sky blue? Many adults do not themselves know the answer. And who says the sky’s color needs to be called “blue,” anyway? How do we know that what one person calls “blue” is the same color that another calls “blue”? The scientific answers come from physics, but those are not the answers that children are seeking. They are trying to understand the world, and no matter how irritating the repeated questions may become to stressed and time-pressed parents, it is important to take them seriously to encourage kids to question authority to think for themselves.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 아이들이 스스로 생각하고 권위에 건설적인 의문을 제기할 수 있도록, 어른들은 그들의 호기심 어린 질문을 억압하지 말고 진지하게 존중해야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. What makes questioning authority so hard?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 무엇이 권위에 의문을 제기하는 것을 그토록 어렵게 만드는가?</p>
+            <p><b>[구문 해설]</b> 5형식 구문으로 주어 `What`, 동사 `makes`, 목적어 `questioning authority`, 목적격 보어 `so hard`의 형태입니다.</p>
+            <p><b>[핵심 어휘]</b> question(의문을 제기하다), authority(권위)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. The difficulties start in childhood, / <mark>when</mark> parents — the first and most powerful authority figures — / show children “the way things are.”</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 어려움은 아동기에 시작된다, / 그때 부모들이 - 최초이자 가장 강력한 권위자 인물인 - / 아이들에게 "세상 이치"를 보여준다.</p>
+            <p><b>[구문 해설]</b> 관계부사 `when`의 계속적 용법으로 선행사 `childhood`를 부연 설명합니다. `the way things are`는 '상황이 존재하는 방식' 즉 '세상 이치'를 뜻합니다.</p>
+            <p><b>[핵심 어휘]</b> childhood(아동기), authority figure(권위자 인물), the way things are(세상 이치, 있는 그대로의 모습)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. This is a necessary element of learning language and socialization, / and certainly most things learned in early childhood are <mark>noncontroversial</mark>: / the English alphabet starts with A and ends with Z, / the numbers 1 through 10 come before the numbers 11 through 20, and so on.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이것은 언어 학습과 사회화의 필수 요소이다, / 그리고 확실히 유아기에 배우는 대부분의 것들은 논쟁의 여지가 없다: / 영어 알파벳은 A로 시작하고 Z로 끝나며, / 1부터 10까지의 숫자는 11에서 20까지의 숫자 앞에 온다, 등등.</p>
+            <p><b>[구문 해설]</b> `learned`는 과거분사로 앞의 `most things`를 후치 수식합니다. 콜론(:) 이하는 논쟁의 여지가 없는 사실들의 구체적 예시입니다.</p>
+            <p><b>[핵심 어휘]</b> socialization(사회화), noncontroversial(논쟁의 여지가 없는)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. Children, however, will <mark>spontaneously</mark> question things / <mark>that</mark> are quite obvious to adults and even to older kids.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 하지만 아이들은 자발적으로 사물에 의문을 제기할 것이다 / 어른들과 심지어 더 나이 든 아이들에게는 꽤 명백한.</p>
+            <p><b>[구문 해설]</b> `that`은 주격 관계대명사로 선행사 `things`를 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> spontaneously(자발적으로), obvious(명백한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. The word “why?” becomes a challenge, / as in, “Why is the sky blue?”</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> "왜?"라는 단어는 도전이 된다, / "왜 하늘은 파란가요?"와 같이.</p>
+            <p><b>[구문 해설]</b> `as in`은 '~의 경우처럼'의 뜻으로 구체적인 사례를 도입합니다.</p>
+            <p><b>[핵심 어휘]</b> challenge(도전)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. Answers such as “because it just is” or “because I say so” / tell children <mark>that</mark> they must unquestioningly accept / <mark>what</mark> authorities say “just because,” / and children <mark>who</mark> persist in their questioning / are likely to find themselves dismissed or yelled at / for “bothering” adults with “meaningless” or “unimportant” questions.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> "그냥 그러니까" 또는 "내가 그렇게 말하니까"와 같은 대답은 / 아이들에게 의심의 여지 없이 받아들여야 한다고 말한다 / 권위자가 말하는 것을 "그냥 그러니까"라는 이유로, / 그리고 계속해서 질문을 하는 아이들은 / 자신들이 무시당하거나 호통을 듣는 것을 발견할 가능성이 크다 / "무의미하거나" "중요하지 않은" 질문으로 어른들을 "귀찮게 한" 것에 대해.</p>
+            <p><b>[구문 해설]</b> `tell + 간접목적어(children) + 직접목적어(that절)`. `what`은 선행사를 포함한 관계대명사(~하는 것)입니다. `persist in -ing`는 '계속해서 ~하다'라는 뜻이며, `find themselves dismissed(수동)`는 5형식 구조입니다.</p>
+            <p><b>[핵심 어휘]</b> unquestioningly(의심의 여지 없이), persist in(~을 고집하다, 계속하다), dismiss(묵살하다, 무시하다), yell at(~에게 소리치다), bother(괴롭히다, 귀찮게 하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. But these questions are in fact perfectly reasonable.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 하지만 이 질문들은 사실 완벽하게 합리적이다.</p>
+            <p><b>[구문 해설]</b> 앞 문장의 어른들의 태도(무의미하다고 무시함)를 반박하는 문장입니다.</p>
+            <p><b>[핵심 어휘]</b> reasonable(합리적인, 타당한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. Why is the sky blue?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 왜 하늘은 파란가?</p>
+            <p><b>[구문 해설]</b> 짧은 문장이므로 슬래시 생략</p>
+            <p><b>[핵심 어휘]</b> (생략)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">9. Many adults do not themselves know the answer.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 많은 어른들 스스로도 그 대답을 모른다.</p>
+            <p><b>[구문 해설]</b> `themselves`는 주어 Many adults를 강조하기 위해 쓰인 재귀대명사의 강조 용법입니다.</p>
+            <p><b>[핵심 어휘]</b> (생략)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">10. And who says the sky’s color needs to be called “blue,” anyway?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그리고 어쨌든 누가 하늘의 색깔이 "파랑"이라고 불려야 한다고 말하는가?</p>
+            <p><b>[구문 해설]</b> `needs to be called`는 수동형 부정사입니다.</p>
+            <p><b>[핵심 어휘]</b> anyway(어쨌든)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">11. How do we know / <mark>that</mark> <mark>what</mark> one person calls “blue” is the same color / <mark>that</mark> another calls “blue”?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 우리는 어떻게 아는가 / 한 사람이 "파랑"이라고 부르는 것이 같은 색깔이라는 것을 / 다른 사람이 "파랑"이라고 부르는 것과?</p>
+            <p><b>[구문 해설]</b> 첫 번째 `that`은 know의 목적어인 명사절을 이끌고, `what`은 그 안에서 주어 역할을 하는 관계대명사입니다. 두 번째 `that`은 color를 수식하는 목적격 관계대명사입니다.</p>
+            <p><b>[핵심 어휘]</b> (생략)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">12. The scientific answers come from physics, / but those are not the answers <mark>that</mark> children are seeking.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 과학적 대답은 물리학에서 온다, / 하지만 그것들은 아이들이 찾고 있는 대답이 아니다.</p>
+            <p><b>[구문 해설]</b> `that`은 목적격 관계대명사로 answers를 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> physics(물리학), seek(찾다, 추구하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">13. They are trying to understand the world, / and <mark>no matter how</mark> irritating the repeated questions may become / to stressed and time-pressed parents, / it is important <mark>to take</mark> them seriously / <mark>to encourage</mark> kids to question authority / to think for themselves.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들은 세상을 이해하려고 노력하고 있다, / 그리고 그 반복되는 질문들이 아무리 짜증나게 될지라도 / 스트레스를 받고 시간에 쫓기는 부모들에게, / 그것들을 진지하게 받아들이는 것이 중요하다 / 아이들이 권위에 의문을 제기하도록 격려하기 위해 / 그들 스스로 생각할 수 있도록.</p>
+            <p><b>[구문 해설]</b> `no matter how 형용사/부사 주어 동사`는 '아무리 ~할지라도'라는 양보절을 이끕니다(= however). `it`은 가주어, `to take`가 진주어입니다. `encourage + 목적어 + to부정사` 구조가 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> irritating(짜증나게 하는), time-pressed(시간에 쫓기는), take ~ seriously(~을 진지하게 받아들이다), encourage(격려하다, 권장하다)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (권위에 대한 의문 제기와 아동의 질문)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 권위에 의문을 제기하기 어려운 이유</span>
+        <h4>아동기의 학습 과정과 권위 수용</h4>
+        <p>권위에 의문을 제기하기 어려운 근본적 이유는 아동기에 최초의 권위자인 '부모'로부터 세상의 이치를 무비판적으로 수용하도록 배우기 때문입니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 아이들의 "왜?"와 어른들의 억압</span>
+        <h4>정당한 호기심을 무시하는 태도</h4>
+        <p>아이들은 자발적으로 당연해 보이는 것들에 질문을 던지지만, 어른들은 무의미하다며 윽박지르고 권위에 순응할 것을 강요합니다. 그러나 아이들의 질문은 철학적, 과학적으로 매우 합리적입니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 질문을 존중해야 하는 이유</span>
+        <h4>비판적 사고를 위한 격려</h4>
+        <p>아이들의 끊임없는 질문이 부모를 짜증 나게 할지라도, 아이들이 스스로 생각하고 권위에 건설적인 의문을 제기할 수 있도록 그들의 질문을 진지하게 받아들여야 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. Children, however, will spontaneously question things [ that / what ] are quite obvious to adults and even to older kids.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 선행사(things)가 존재하고 뒤에 주어가 없는 불완전한 절이 오므로 주격 관계대명사 that이 적절합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 what은 선행사를 포함하므로 앞에 선행사(things)가 있을 때는 사용할 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. They are trying to understand the world, and no matter how [ irritating / irritated ] the repeated questions may become...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 주어인 '반복되는 질문들(the repeated questions)'이 부모들에게 짜증을 '유발하는' 원인이 되므로 현재분사 irritating이 맞습니다.">irritating</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 과거분사 irritated는 질문 자체가 짜증을 '느끼는' 주체라는 뜻이 되므로 사물 주어의 성질과 맞지 않습니다.">irritated</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        What makes questioning authority so hard? The difficulties start in childhood, when parents show children “the way things are.” The word “why?” becomes a challenge. Answers such as “because it just is” or “because I say so” tell children that they must unquestioningly accept what authorities say “just because,” and children who persist in their questioning are likely to find themselves dismissed or yelled at for “bothering” adults. But these questions are in fact perfectly reasonable. The scientific answers come from physics, but those are not the answers that children are seeking. They are trying to understand the world, and no matter how irritating the repeated questions may become to stressed and time-pressed parents, it is important to take them seriously to encourage kids to ______________________________ to think for themselves.
+      </div>
+      <div class="exam-choices">
+        ① seek scientific evidence blindly<br>
+        ② find immediate solutions to their tasks<br>
+        ③ accept parental guidance unquestionably<br>
+        ④ question authority<br>
+        ⑤ avoid bothersome conversations
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ question authority</b></p>
+          <p>해설: 지문의 첫 문장에서 '권위에 의문을 제기하는 것'이 왜 어려운지에 대한 화두를 던진 후, 아이들의 합리적 질문을 억압하는 어른들을 비판합니다. 따라서 결론부 빈칸에는 아이들이 스스로 생각할 수 있도록 '권위에 의문을 제기하도록(question authority)' 격려해야 한다는 내용이 들어가야 합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        [주어진 문장] Answers such as “because it just is” or “because I say so” tell children that they must unquestioningly accept what authorities say “just because,” and children who persist in their questioning are likely to find themselves dismissed or yelled at.<br><br>
+        The difficulties start in childhood, when parents show children “the way things are.” ( ① ) This is a necessary element of learning language and socialization, and certainly most things learned in early childhood are noncontroversial. ( ② ) Children, however, will spontaneously question things that are quite obvious to adults and even to older kids. ( ③ ) The word “why?” becomes a challenge, as in, “Why is the sky blue?” ( ④ ) But these questions are in fact perfectly reasonable. ( ⑤ ) Why is the sky blue? Many adults do not themselves know the answer. And who says the sky’s color needs to be called “blue,” anyway?
+      </div>
+      <div class="exam-choices">
+        ①<br>②<br>③<br>④<br>⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④</b></p>
+          <p>해설: 아이들이 "왜 하늘은 파란가요?"라고 도전적인 질문을 던진다는 내용(④번 앞) 바로 뒤에, 그 질문에 대해 어른들이 "그냥 그러니까"라며 억압하는 대답을 하는 상황인 주어진 문장이 오는 것이 가장 자연스럽습니다. 그 후 "하지만 이 질문들은 사실 완벽하게 합리적이다"라고 어른들의 태도를 반박하는 내용으로 부드럽게 이어집니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        What makes questioning authority so hard? The difficulties start in childhood, when parents — the first and most powerful authority figures — show children “the way things are.”
+        <br><br>
+        (A) Answers such as “because it just is” or “because I say so” tell children that they must unquestioningly accept what authorities say “just because,” and children who persist in their questioning are likely to find themselves dismissed or yelled at.
+        <br><br>
+        (B) But these questions are in fact perfectly reasonable. Why is the sky blue? Many adults do not themselves know the answer. The scientific answers come from physics, but those are not the answers that children are seeking.
+        <br><br>
+        (C) This is a necessary element of learning language and socialization, and certainly most things learned in early childhood are noncontroversial. Children, however, will spontaneously question things that are quite obvious to adults. The word “why?” becomes a challenge, as in, “Why is the sky blue?”
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (C) - (A) - (B)<br>
+        ④ (C) - (B) - (A)<br>
+        ⑤ (A) - (B) - (C)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ (C) - (A) - (B)</b></p>
+          <p>해설: 부모가 세상의 이치를 알려주는 것은 언어 학습에 필수적이지만, 아이들은 자발적으로 "왜?"라는 질문을 던진다는 (C)가 먼저 옵니다. 이 질문에 대해 부모가 무조건적인 수용을 강요하고 아이들을 무시한다는 (A)의 내용이 이어지고, 마지막으로 (B)에서 아이들의 그 질문들이 사실은 합리적인 이유라고 반박하며 마무리됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 바르게 배열하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        그리고 그 반복되는 질문들이 스트레스를 받고 시간에 쫓기는 부모들에게 아무리 짜증나게 될지라도,<br><br>
+        [조건]<br>
+        1. 'no matter how' 구문을 사용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것. (어형 변화 없음)<br>
+        ( become / time-pressed / parents / irritating / may / to / questions / matter / the / no / and / repeated / stressed / how / and )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: and no matter how irritating the repeated questions may become to stressed and time-pressed parents</b></p>
+          <p>해설: '아무리 ~할지라도'는 'no matter how + 형용사/부사 + 주어 + 동사' 순서로 영작합니다. 'no matter how irritating(형용사 보어)' 뒤에 주어 'the repeated questions', 동사 'may become', 그리고 부사구 'to stressed and time-pressed parents'를 차례대로 배열합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

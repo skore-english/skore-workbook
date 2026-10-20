@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 39번 · 문장삽입</div>
+    <h1 class="title">SLEEP VS. HIBERNATION<br><span>Bears Don't Actually Hibernate</span></h1>
+    <p class="header-lead">수면과 동면은 신경학적, 대사적으로 전혀 다른 상태이며, 곰의 겨울잠은 진정한 동면이 아니라 무기력 상태입니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 수면(Sleep)과 동면(Hibernation)의 생물학적 차이</li>
+        <li><b>[배경 맥락]:</b> 많은 사람들이 동면과 수면을 혼동하며 곰을 동면의 대표적인 동물로 생각하지만, 실제 생물학적 정의는 전혀 다릅니다.</li>
+        <li><b>[논리 요약]:</b> 동면은 마취된 것과 같은 깊은 무의식과 체온 저하를 동반하며, 이 상태에서도 별도의 수면이 필요하다. 곰은 체온이 거의 정상으로 유지되므로 진정한 동면이 아닌 무기력 상태(torpor)에 가깝다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Sleep is clearly about more than just resting. One curious fact is that animals that are hibernating also have periods of sleep. It comes as a surprise to most of us, but hibernation and sleep are not the same thing at all, at least not from a neurological and metabolic perspective. Hibernating is more like being anesthetized: the subject is unconscious but not actually asleep. So a hibernating animal needs to get a few hours of conventional sleep each day within the larger unconsciousness. A further surprise to most of us is that bears, the most famous of wintry sleepers, don’t actually hibernate. Real hibernation involves profound unconsciousness and a dramatic fall in body temperature ― often to around 32 degrees Fahrenheit. By this definition, bears don’t hibernate, because their body temperature stays near normal and they are easily awakened. Their winter sleeps are more accurately called a state of torpor.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 수면과 동면은 신경학적, 대사적으로 완전히 다른 상태이며, 곰의 겨울잠은 진정한 의미의 동면이 아니라 무기력 상태(torpor)이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Sleep is clearly about more than just resting.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 수면은 분명히 단순한 휴식 그 이상에 관한 것이다.</p>
+            <p><b>[구문 해설]</b> `more than`은 '~이상'을 의미하며, 전치사 `about`의 목적어로 명사구(`more than just resting`)가 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> clearly(분명히), rest(휴식하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. One curious fact is / <mark>that</mark> animals <mark>that</mark> are hibernating / also have periods of sleep.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 한 가지 흥미로운 사실은 / 동면 중인 동물들도 / 수면 주기를 갖는다는 것이다.</p>
+            <p><b>[구문 해설]</b> 첫 번째 `that`은 보어 역할을 하는 명사절 접속사이고, 두 번째 `that`은 선행사 `animals`를 수식하는 주격 관계대명사입니다.</p>
+            <p><b>[핵심 어휘]</b> curious(흥미로운, 호기심을 끄는), hibernate(동면하다), period(주기, 기간)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. It comes as a surprise to most of us, / but hibernation and sleep are not the same thing at all, / at least not from a neurological and metabolic perspective.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그것은 우리 대부분에게 놀라운 일로 다가온다, / 하지만 동면과 수면은 전혀 같은 것이 아니다, / 적어도 신경학적 그리고 대사적 관점에서는 아니다.</p>
+            <p><b>[구문 해설]</b> `not ~ at all`은 '전혀 ~가 아닌'이라는 강한 부정의 표현입니다. `from a ~ perspective`는 '~의 관점에서'라는 뜻입니다.</p>
+            <p><b>[핵심 어휘]</b> hibernation(동면), neurological(신경학적인), metabolic(대사의, 신진대사의), perspective(관점)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. Hibernating is more like being <mark>anesthetized</mark>: / the subject is unconscious / but not actually asleep.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 동면하는 것은 마취되는 것과 더 비슷하다: / 대상은 무의식 상태이다 / 하지만 실제로 잠든 것은 아니다.</p>
+            <p><b>[구문 해설]</b> `being anesthetized`는 전치사 `like`의 목적어로 쓰인 수동형 동명사입니다. 콜론(:)은 앞의 내용을 부연 설명합니다.</p>
+            <p><b>[핵심 어휘]</b> anesthetize(마취시키다), subject(대상, 실험 대상자), unconscious(무의식의)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. So a hibernating animal needs to get a few hours of <mark>conventional</mark> sleep each day / within the larger unconsciousness.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그래서 동면하는 동물은 매일 몇 시간의 전통적인 수면을 취해야 한다 / 그 더 큰 무의식 상태 안에서.</p>
+            <p><b>[구문 해설]</b> `need to get`은 '~을 취할 필요가 있다'라는 의미이며, `within`을 통해 무의식(동면)과 수면이 포함 관계에 있음을 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> conventional(전통적인, 일반적인), unconsciousness(무의식)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. A further surprise to most of us is / <mark>that</mark> bears, the most famous of wintry sleepers, / don’t actually <mark>hibernate</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 우리 대부분에게 한층 더 놀라운 점은 ~이다 / 겨울잠을 자는 동물 중 가장 유명한 곰이, / 실제로는 동면하지 않는다는 것.</p>
+            <p><b>[구문 해설]</b> 콤마(,)와 콤마(,) 사이의 `the most famous of wintry sleepers`는 주어 `bears`와 동격입니다. `that`은 주격 보어절을 이끄는 접속사입니다.</p>
+            <p><b>[핵심 어휘]</b> wintry(겨울의)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. Real hibernation involves <mark>profound</mark> unconsciousness / and a dramatic fall in body temperature / ― often to around 32 degrees Fahrenheit.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 진짜 동면은 깊은 무의식을 수반한다 / 그리고 체온의 극적인 저하를 / - 종종 화씨 32도 정도까지.</p>
+            <p><b>[구문 해설]</b> 동사 `involves`의 목적어로 명사구 `profound unconsciousness`와 `a dramatic fall`이 병렬로 연결되어 있습니다.</p>
+            <p><b>[핵심 어휘]</b> involve(수반하다, 포함하다), profound(깊은, 심오한), dramatic(극적인), temperature(체온, 온도), Fahrenheit(화씨)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. By this definition, / bears don’t hibernate, / because their body temperature stays near normal / and they are easily awakened.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이 정의에 따르면, / 곰은 동면하지 않는다, / 왜냐하면 그들의 체온이 정상에 가깝게 유지되기 때문에 / 그리고 그들은 쉽게 깨어나기 때문에.</p>
+            <p><b>[구문 해설]</b> `because` 부사절 내에서 주어 `their body temperature`와 `they`가 각각 동사 `stays`와 `are awakened(수동태)`로 이어져 병렬 구조를 이룹니다.</p>
+            <p><b>[핵심 어휘]</b> definition(정의), normal(정상의), awaken(깨우다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">9. Their winter sleeps are more accurately called / a state of <mark>torpor</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들의 겨울잠은 더 정확히 불린다 / 무기력의 상태라고.</p>
+            <p><b>[구문 해설]</b> 5형식 동사 call의 수동태(`be called`) 구문으로 뒤에 명사 보어(`a state of torpor`)가 그대로 남아있습니다.</p>
+            <p><b>[핵심 어휘]</b> accurately(정확하게), state(상태), torpor(무기력, 휴면 상태)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (수면과 동면의 차이)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 수면과 동면의 분리</span>
+        <h4>단순한 휴식 이상의 수면</h4>
+        <p>수면은 단순한 휴식이 아니며, 흥미롭게도 동면 중인 동물들도 그 기간 안에 별도의 수면 주기를 갖습니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 동면의 신경학적 정의</span>
+        <h4>잠이 아닌 마취 상태</h4>
+        <p>동면은 수면이 아니라 마치 마취된 것과 같은 깊은 무의식 상태이며, 이로 인해 동면 동물도 매일 몇 시간의 일반적인 수면을 취해야만 합니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 곰의 겨울잠에 대한 진실</span>
+        <h4>동면이 아닌 무기력 상태(Torpor)</h4>
+        <p>진정한 동면은 극적인 체온 저하를 동반합니다. 곰은 체온이 정상에 가깝고 쉽게 깨어나므로 진정한 동면이 아닌 무기력 상태(torpor)에 해당합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. One curious fact is that animals [ that / what ] are hibernating also have periods of sleep.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 선행사인 animals가 명확하게 존재하므로 선행사를 수식하는 주격 관계대명사 that이 적절합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 what은 선행사를 스스로 포함하고 있기 때문에 앞에 선행사(animals)가 있을 때는 사용할 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. By this definition, bears don’t hibernate, because their body temperature [ stays / staying ] near normal and they are easily awakened.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 접속사 because가 이끄는 부사절 안에는 주어(their body temperature)와 짝을 이루는 정동사가 필요하므로 stays가 와야 합니다.">stays</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. staying은 준동사(현재분사)이므로 부사절의 동사 역할을 수행할 수 없습니다.">staying</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Sleep is clearly about more than just resting. One curious fact is that animals that are hibernating also have periods of sleep. It comes as a surprise to most of us, but hibernation and sleep are not the same thing at all, at least not from a neurological and metabolic perspective. Hibernating is more like being anesthetized: the subject is unconscious but not actually asleep. So a hibernating animal needs to get a few hours of conventional sleep each day within the larger unconsciousness. A further surprise to most of us is that bears, the most famous of wintry sleepers, don’t actually hibernate. Real hibernation involves profound unconsciousness and a dramatic fall in body temperature. By this definition, bears don’t hibernate, because their body temperature stays near normal and they are easily awakened. Their winter sleeps are more accurately called a state of torpor.
+      </div>
+      <div class="exam-choices">
+        ① The Hidden Benefits of Winter Sleep for Bears<br>
+        ② Why Animals Need Both Sleep and Hibernation<br>
+        ③ The Misconception About Sleep, Hibernation, and Bears<br>
+        ④ How to Survive Extreme Cold Without Hibernating<br>
+        ⑤ Neurological Similarities Between Sleep and Anesthesia
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ The Misconception About Sleep, Hibernation, and Bears</b></p>
+          <p>해설: 이 글은 수면과 동면이 같다는 착각, 그리고 곰이 진정한 동면을 한다는 대중적인 오해(Misconception)를 신경학적 관점과 체온의 변화를 통해 바로잡고 있는 글입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Sleep is clearly about more than just resting. One curious fact is that animals that are hibernating also have periods of sleep. It comes as a surprise to most of us, but hibernation and sleep are not the ①<u>same</u> thing at all, at least not from a neurological and metabolic perspective. Hibernating is more like being anesthetized: the subject is ②<u>unconscious</u> but not actually asleep. So a hibernating animal needs to get a few hours of conventional sleep each day within the larger unconsciousness. A further surprise to most of us is that bears don’t actually ③<u>hibernate</u>. Real hibernation involves profound unconsciousness and a ④<u>dramatic</u> fall in body temperature. By this definition, bears don’t hibernate, because their body temperature stays ⑤<u>far</u> from normal and they are easily awakened.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ⑤ far</b></p>
+          <p>해설: 원문에서 곰이 진짜 동면을 하지 않는 이유는 체온이 '정상에 가깝게(near normal)' 유지되기 때문이라고 했습니다. 따라서 정상에서 '멀다(far)'라는 표현은 문맥상 오답입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Sleep is clearly about more than just resting. One curious fact is that animals that are hibernating also have periods of sleep. It comes as a surprise to most of us, but hibernation and sleep are not the same thing at all, at least not from a neurological and metabolic perspective. Hibernating is more like ______________________________: the subject is unconscious but not actually asleep. So a hibernating animal needs to get a few hours of conventional sleep each day within the larger unconsciousness. A further surprise to most of us is that bears, the most famous of wintry sleepers, don’t actually hibernate. Real hibernation involves profound unconsciousness and a dramatic fall in body temperature. By this definition, bears don’t hibernate. Their winter sleeps are more accurately called a state of torpor.
+      </div>
+      <div class="exam-choices">
+        ① having a conventional dream<br>
+        ② waking up from a deep rest<br>
+        ③ being fully paralyzed by cold<br>
+        ④ being anesthetized<br>
+        ⑤ lowering your metabolic rate slightly
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ being anesthetized</b></p>
+          <p>해설: 동면은 단순한 수면이 아니라 깊은 무의식 상태라는 것을 강조하기 위해 '마취된 것(being anesthetized)'에 비유하고 있습니다. 빈칸 뒤의 '대상은 무의식 상태이지만 실제 잠든 것은 아니다'라는 설명이 이를 뒷받침합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 바르게 배열하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        그래서 동면하는 동물은 그 더 큰 무의식 상태 안에서 매일 몇 시간의 전통적인 수면을 취해야 한다.<br><br>
+        [조건]<br>
+        1. 본문에 등장하는 표현을 모두 사용할 것. (어형 변화 없음)<br>
+        ( hours / the / sleep / larger / unconsciousness / of / day / needs / few / within / to / a / hibernating / get / conventional / animal / each / a / So )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: So a hibernating animal needs to get a few hours of conventional sleep each day within the larger unconsciousness.</b></p>
+          <p>해설: 주어 'a hibernating animal' 뒤에 '~해야 한다'는 의미의 'needs to get'을 씁니다. 목적어인 'a few hours of conventional sleep'를 쓴 후 빈도를 나타내는 'each day'를 붙이고, 마지막으로 전치사구 'within the larger unconsciousness'로 문장을 마무리합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 24번 · 제목추론</div>
+    <h1 class="title">MENTAL DEVELOPMENT & LEGAL AGE BOUNDARIES<br><span>Are Strict Age Limits for Responsibility Truly Fair?</span></h1>
+    <p class="header-lead">정신적 발달은 사회적 상호작용을 통해 이루어지며, 개인마다 발달 속도가 다르기 때문에 일률적인 연령 기준을 적용하는 것은 의문의 여지가 있습니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 정신적 발달의 사회적 성격과 법적 책임 연령의 한계</li>
+        <li><b>[배경 맥락]:</b> 덴마크의 형사 책임 연령과 투표권 부여 연령 사례를 통해, 법적으로 정해진 일률적 책임 연령 기준이 개인의 발달 속도 차이를 반영하지 못하는 문제점을 지적함.</li>
+        <li><b>[논리 요약]:</b> 정신적 발달은 환경에 따라 개인마다 속도가 다르므로, 모든 사람에게 특정한 연령부터 일괄적인 책임을 묻는 제도는 한계가 있으나 현실적인 대안을 찾기도 어렵다는 내용.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Mental development consists of individuals increasingly mastering social codes and signals themselves, which they can master only in social situations with the support of more competent individuals, typically adults. In this sense, mental development consists of internalizing social patterns and gradually becoming a responsible actor among other responsible actors. In Denmark, the age of criminal responsibility is 15 years, which means that we then say that people have developed sufficient mental maturity to be accountable for their actions at this point. And at the age of 18 people are given the right to vote and are thereby formally included in the basic democratic process. I do not know whether these age boundaries are optimal, but it is clear that mental development takes place at different rates for different individuals, and depends especially on the social and family environment they have been given. Therefore, having formal limits for responsibility from a specific age that apply to everyone is a somewhat questionable practice. But the question, of course, is whether it can be done any differently.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 개인마다 다른 정신적 발달 속도를 고려할 때 일괄적인 책임 연령 기준은 의문스럽지만 현실적인 대안 마련 또한 쉽지 않다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Mental development consists of individuals increasingly mastering social codes and signals themselves, / which they can master only in social situations / with the support of more competent individuals, typically adults.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 정신적 발달은 개인이 점점 더 사회적 규범과 신호들을 스스로 마스터하는 것으로 구성되며, / 이는 그들이 사회적 상황에서만 마스터할 수 있다 / 더 유능한 개인들, 일반적으로 어른들의 지원과 함께.</p>
+            <p><b>[구문 해설]</b> 전치사 `of`의 목적어로 동명사 `mastering`이 왔으며, `individuals`는 동명사의 의미상 주어입니다. 계속적 용법의 관계대명사 `which`는 선행사인 `social codes and signals`를 받습니다.</p>
+            <p><b>[핵심 어휘]</b> mental development(정신적 발달), consist of(~로 구성되다), competent(유능한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. In this sense, / mental development consists of <mark>internalizing social patterns</mark> / and gradually becoming a responsible actor / among other responsible actors.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이러한 의미에서, / 정신적 발달은 사회적 패턴을 내면화하는 것과 / 점진적으로 책임감 있는 행위자가 되는 것으로 구성된다 / 다른 책임감 있는 행위자들 사이에서.</p>
+            <p><b>[구문 해설]</b> 전치사 `of` 뒤에 두 개의 동명사 `internalizing`과 `becoming`이 등위접속사 `and`로 연결되어 병렬 구조를 이룹니다.</p>
+            <p><b>[핵심 어휘]</b> internalize(내면화하다), responsible(책임감 있는), gradually(점진적으로)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. In Denmark, / the age of criminal responsibility is 15 years, / which means that we then say / that people have developed sufficient mental maturity / to be accountable for their actions at this point.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 덴마크에서는, / 형사 책임 연령이 15세인데, / 이는 우리가 그때 말한다는 것을 의미한다 / 사람들이 충분한 정신적 성숙을 발달시켰다고 / 이 시점에서 그들의 행동에 책임질 수 있을 만큼.</p>
+            <p><b>[구문 해설]</b> 계속적 용법의 관계대명사 `which`는 앞 문장 전체를 선행사로 받아 단수 취급하므로 동사 `means`가 쓰였습니다. `to be accountable`은 앞의 명사 `maturity`를 수식하는 형용사적 용법의 to부정사입니다.</p>
+            <p><b>[핵심 어휘]</b> criminal responsibility(형사 책임), maturity(성숙), accountable(책임이 있는)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. And at the age of 18 / people are given the right to vote / and are thereby formally included / in the basic democratic process.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그리고 18세의 나이에 / 사람들은 투표할 권리를 부여받고 / 그로 인해 공식적으로 포함된다 / 기본적인 민주주의 과정에.</p>
+            <p><b>[구문 해설]</b> 수동태 `are given`과 `are included`가 병렬 구조를 이룹니다. `right to vote`에서 `to vote`는 형용사적 용법으로 명사 `right`를 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> right to vote(투표권), formally(공식적으로), democratic process(민주주의 과정)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. I do not know whether these age boundaries are optimal, / but it is clear / that mental development takes place at different rates for different individuals, / and <mark>depends especially on the social and family environment</mark> / they have been given.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 나는 이러한 연령 경계가 최적인지는 모른다, / 하지만 명확하다 / 정신적 발달은 각기 다른 개인들에게 각기 다른 속도로 일어나며, / 특히 사회적 그리고 가족적 환경에 달려있다는 것은 / 그들에게 주어진.</p>
+            <p><b>[구문 해설]</b> `whether`는 명사절을 이끄는 접속사(~인지 아닌지)입니다. `it`은 가주어, `that`절 이하가 진주어입니다. 진주어 절 안에서 주어인 `mental development`에 동사 `takes place`와 `depends`가 병렬로 연결되어 있습니다.</p>
+            <p><b>[핵심 어휘]</b> boundary(경계), optimal(최적의), take place(일어나다, 발생하다), rate(속도, 비율)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. Therefore, / having formal limits for responsibility from a specific age / that apply to everyone / is a somewhat <mark>questionable practice</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러므로, / 특정 연령부터 책임에 대한 공식적인 한계를 두는 것은 / 모든 사람에게 적용되는 / 다소 의문스러운 관행이다.</p>
+            <p><b>[구문 해설]</b> 동명사구 `having ~ everyone`이 문장의 주어이며 단수 취급하여 동사 `is`가 쓰였습니다. 주격 관계대명사 `that` 절이 선행사 `formal limits`를 꾸며줍니다.</p>
+            <p><b>[핵심 어휘]</b> formal(공식적인), limit(한계, 제한), questionable(의심스러운, 의문스러운), practice(관행)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. But the question, of course, is whether it can be done any differently.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 하지만 물론 문제는 그것이 다르게 행해질 수 있는지이다.</p>
+            <p><b>[구문 해설]</b> `whether`가 이끄는 명사절이 주격 보어로 쓰였습니다. `it`은 앞서 언급한 '특정 연령부터 책임을 일괄 적용하는 것'을 지칭합니다.</p>
+            <p><b>[핵심 어휘]</b> differently(다르게)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (정신적 발달과 연령 기준의 딜레마)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 정신적 발달의 본질</span>
+        <h4>사회적 상호작용 속에서의 내면화</h4>
+        <p>정신적 발달은 타인(성인 등)의 도움을 받아 사회적 규범을 마스터하고 점진적으로 책임감 있는 행위자가 되는 사회적 내면화 과정입니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 일률적인 법적 연령 사례</span>
+        <h4>덴마크의 책임 연령 기준</h4>
+        <p>덴마크는 15세를 형사 책임 연령으로, 18세를 투표권 부여 연령으로 정해놓고 특정 연령이 되면 충분히 성숙했다고 일률적으로 간주합니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 연령 기준의 한계와 고민</span>
+        <h4>개인차를 무시하는 제도의 모순</h4>
+        <p>정신 발달 속도는 환경에 따라 개인차가 크므로 특정 연령을 일괄 적용하는 것은 의문스러우나, 현실적으로 다르게 처리할 방법이 마땅치 않다는 딜레마를 남깁니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. ...which they can master only in social situations with the support of more [ competent / competently ] individuals...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 뒤에 명사인 individuals를 직접 수식하는 자리이므로 형용사인 competent가 적절합니다.">competent</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 부사인 competently는 명사인 individuals를 수식할 수 없습니다.">competently</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. Therefore, having formal limits for responsibility from a specific age that apply to everyone [ is / are ] a somewhat questionable practice.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 문장의 핵심 주어는 동명사구인 having이므로 단수 동사인 is를 사용해야 합니다.">is</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 바로 앞의 everyone이나 복수명사인 limits에 속아 복수 동사 are를 고르면 안 됩니다. 진짜 주어는 동명사 having입니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Mental development consists of individuals increasingly mastering social codes and signals themselves, which they can master only in social situations with the support of more competent individuals, typically adults. In this sense, mental development consists of internalizing social patterns and gradually becoming a responsible actor among other responsible actors. In Denmark, the age of criminal responsibility is 15 years. And at the age of 18 people are given the right to vote. I do not know whether these age boundaries are optimal, but it is clear that mental development takes place at different rates for different individuals, and depends especially on the social and family environment they have been given. Therefore, having formal limits for responsibility from a specific age that apply to everyone is a somewhat ______________________________.
+      </div>
+      <div class="exam-choices">
+        ① ideal pedagogical approach<br>
+        ② undeniable historical truth<br>
+        ③ reasonable legal framework<br>
+        ④ questionable practice<br>
+        ⑤ universally accepted standard
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ questionable practice</b></p>
+          <p>해설: 사람마다 발달 속도가 다른데 특정한 법적 나이 기준을 모든 사람에게 일괄 적용하는 것은 모순이 있다는 내용의 흐름이므로, '다소 의문스러운 관행(questionable practice)'이 정답입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        In Denmark, the age of criminal responsibility is 15 years, which means that we then say that people have developed sufficient mental ①<u>maturity</u> to be accountable for their actions at this point. And at the age of 18 people are given the right to vote and are thereby ②<u>formally</u> included in the basic democratic process. I do not know whether these age boundaries are ③<u>optimal</u>, but it is clear that mental development takes place at ④<u>identical</u> rates for different individuals, and depends especially on the social and family environment they have been given. Therefore, having formal limits for responsibility from a specific age that apply to everyone is a somewhat ⑤<u>questionable</u> practice.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ identical</b></p>
+          <p>해설: 원문에서는 사람마다 발달하는 속도가 '다르다(different)'고 설명하고 있습니다. 속도가 '동일한(identical)'이라고 하면 일괄적인 연령 적용을 비판하는 필자의 논리와 어긋나게 됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        [주어진 문장] Therefore, having formal limits for responsibility from a specific age that apply to everyone is a somewhat questionable practice.<br><br>
+        Mental development consists of individuals increasingly mastering social codes and signals themselves. ( ① ) In this sense, mental development consists of internalizing social patterns and gradually becoming a responsible actor among other responsible actors. ( ② ) In Denmark, the age of criminal responsibility is 15 years. ( ③ ) And at the age of 18 people are given the right to vote and are thereby formally included in the basic democratic process. ( ④ ) I do not know whether these age boundaries are optimal, but it is clear that mental development takes place at different rates for different individuals, and depends especially on the social and family environment they have been given. ( ⑤ ) But the question, of course, is whether it can be done any differently.
+      </div>
+      <div class="exam-choices">
+        ①<br>②<br>③<br>④<br>⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ⑤</b></p>
+          <p>해설: 주어진 문장은 "그러므로(Therefore) 모든 사람에게 일괄적으로 특정 나이부터 책임의 한계를 두는 것은 의문스럽다"는 내용입니다. 이 문장은 개인마다 환경에 의해 발달 속도가 다르다고 지적한 ④번 문장 바로 뒤에 결론으로서 등장하는 것이 자연스럽습니다. 그 후 "하지만 다르게 행해질 수 있을지가 문제다"라는 여운을 남기는 문장으로 마무리됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        그러므로 특정 연령부터 책임에 대한 공식적인 한계를 두는 것은 다소 의문스러운 관행이다.<br><br>
+        [조건]<br>
+        1. 본문에 등장하는 단어를 포함하여 작성할 것.<br>
+        2. 동명사구(having~)를 주어로 사용하여 총 8단어로 핵심 의미 단위만 영작할 것. (수식어 that절 이하 등은 제외)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: having formal limits for responsibility from a specific age</b></p>
+          <p>해설: 동명사 주어를 구성하는 문제입니다. '공식적인 한계를 두는 것'은 `having formal limits`, '책임에 대한'은 `for responsibility`, '특정 연령부터'는 `from a specific age`를 결합하면 됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

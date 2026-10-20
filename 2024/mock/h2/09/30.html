@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 30번 · 어휘적합성</div>
+    <h1 class="title">THE EVOLUTION OF EARLY HOMINIDS<br><span>How Tools and Diet Fueled Human Expansion</span></h1>
+    <p class="header-lead">초기 인류는 직립 보행과 도구 제작을 통해 고에너지 식단을 섭취하게 되었고, 이로 인해 신체적, 지적 영토를 전 세계로 확장할 수 있었습니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 인류의 진화와 두뇌 발달 (Evolution and Brain Expansion)</li>
+        <li><b>[배경 맥락]:</b> 초기 인류는 열대 지역에서 생활했으나 직립 보행과 도구 제작 능력을 갖추며 육식(고단백, 고지방)이 가능해졌고, 이를 통해 뇌를 비약적으로 발달시킴.</li>
+        <li><b>[논리 요약]:</b> 도구를 활용한 사냥으로 인한 고에너지 식단의 섭취는 초기 인류의 두뇌 성장을 촉진했고, 궁극적으로 신체적, 지적 영역을 전 세계로 확장하는 원동력이 되었다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      The first human beings probably evolved in tropical regions where survival was possible without clothing. It is likely that they had very dark skin because light skin would have given little protection against the burning rays of the sun. There is a debate about whether these people spread into other parts of the world or, instead, whether people developed independently in various parts of the world. Whichever the case, it is believed that in time they became capable of spreading out from Africa, eventually to most of the world. This was probably because their physical characteristics changed. For instance, early hominids probably did not walk upright, but when they developed that ability, they could travel more efficiently. More important, perhaps, was their development of tool making. With tools, they could hunt other animals, so they could consume more protein and fat than their low-energy vegetarian diet would have provided. Not only their bodies but also their brains would have been changed with more energy. The brain needs lots of energy to grow. As their diet expanded, hominids could physically and intellectually expand their territory.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 초기 인류는 직립 보행과 도구 제작을 통한 고에너지 식단 섭취로 뇌를 성장시켰고, 이를 바탕으로 자신들의 영역을 전 세계로 확장할 수 있었다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. The first human beings / probably evolved in tropical regions / <mark>where</mark> survival was possible without clothing.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 최초의 인류는 / 아마도 열대 지역에서 진화했을 것이다 / 옷 없이도 생존이 가능했던.</p>
+            <p><b>[구문 해설]</b> 관계부사 `where`가 선행사 `tropical regions`를 수식하며 뒤에 완전한 구조의 문장이 이어집니다.</p>
+            <p><b>[핵심 어휘]</b> evolve(진화하다), tropical(열대의), survival(생존)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. It is likely that they had very dark skin / because light skin <mark>would have given</mark> little protection / against the burning rays of the sun.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들은 매우 어두운 피부를 가졌을 가능성이 높다 / 밝은 피부는 보호를 거의 제공하지 못했을 것이기 때문에 / 태양의 타는 듯한 광선으로부터.</p>
+            <p><b>[구문 해설]</b> `It is likely that~`은 '~일 가능성이 높다'는 뜻입니다. `would have p.p.`는 과거 사실에 대한 추측(~했을 것이다)을 나타내며, `little`은 부정의 의미로 '거의 ~않는'으로 해석합니다.</p>
+            <p><b>[핵심 어휘]</b> likely(~일 것 같은), protection(보호), ray(광선)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. There is a debate about / <mark>whether</mark> these people spread into other parts of the world / or, instead, <mark>whether</mark> people developed independently / in various parts of the world.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> ~에 대한 논쟁이 있다 / 이 사람들이 세계의 다른 지역으로 퍼져나갔는지 / 아니면 대신에, 사람들이 독립적으로 발달했는지에 대한 / 세계의 다양한 지역에서.</p>
+            <p><b>[구문 해설]</b> 전치사 `about`의 목적어로 두 개의 명사절(`whether` 절)이 등위접속사 `or`로 연결되어 병렬 구조를 이룹니다.</p>
+            <p><b>[핵심 어휘]</b> debate(논쟁), spread(퍼지다, 확산되다), independently(독립적으로), various(다양한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. <mark>Whichever the case</mark>, / it is believed that / in time they became capable of spreading out from Africa, / eventually to most of the world.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 어느 경우든 간에, / ~라고 믿어진다 / 머지않아 그들이 아프리카에서 뻗어나갈 수 있게 되었다고, / 마침내 세계의 대부분으로.</p>
+            <p><b>[구문 해설]</b> `Whichever the case (may be)`는 양보의 부사절 축약형입니다. `it is believed that`은 가주어 진주어 구문으로 '대중적으로 ~라고 믿어진다'는 뜻을 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> capable of(~할 수 있는), eventually(마침내, 결국)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. This was probably / because their physical characteristics changed.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이것은 아마도 ~였을 것이다 / 그들의 신체적 특성이 변했기 때문에.</p>
+            <p><b>[구문 해설]</b> `This is because + 원인` 구문으로 확산의 이유를 설명합니다.</p>
+            <p><b>[핵심 어휘]</b> physical(신체적인), characteristic(특징, 특성)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. For instance, / early hominids probably did not <mark>walk upright</mark>, / but when they developed that ability, / they could travel more efficiently.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 예를 들어, / 초기 인류는 아마도 직립보행을 하지 않았을 것이다, / 하지만 그들이 그 능력을 발달시켰을 때, / 그들은 더 효율적으로 이동할 수 있었다.</p>
+            <p><b>[구문 해설]</b> `walk upright`는 부사 upright(똑바로)가 동사 walk를 수식하는 형태입니다. `that ability`는 직립보행 능력을 지칭합니다.</p>
+            <p><b>[핵심 어휘]</b> hominid(인류, 원인), upright(똑바로 선, 직립하여), efficiently(효율적으로)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. <mark>More important</mark>, perhaps, / <mark>was</mark> their development of tool making.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 아마도 더 중요한 것은, / 그들의 도구 제작의 발달이었다.</p>
+            <p><b>[구문 해설]</b> 보어인 `More important`가 문장 앞으로 도치되면서 동사 `was`와 주어 `their development...`의 어순이 바뀐 도치 구문입니다.</p>
+            <p><b>[핵심 어휘]</b> development(발달, 발전), tool making(도구 제작)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. With tools, / they could hunt other animals, / so they could consume more protein and fat / than their low-energy vegetarian diet <mark>would have provided</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 도구를 가지고, / 그들은 다른 동물들을 사냥할 수 있었다, / 그래서 그들은 더 많은 단백질과 지방을 섭취할 수 있었다 / 그들의 저에너지 채식주의 식단이 제공했을 것보다.</p>
+            <p><b>[구문 해설]</b> `would have provided`는 만약 도구가 없어서 채식만 했다면 가정했을 때 제공되었을 에너지의 양을 과거의 가정/추측으로 표현한 것입니다.</p>
+            <p><b>[핵심 어휘]</b> consume(섭취하다, 소비하다), protein(단백질), fat(지방), vegetarian(채식주의의)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">9. <mark>Not only</mark> their bodies <mark>but also</mark> their brains / would have been changed / with more energy.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들의 신체뿐만 아니라 그들의 뇌도 / 변화되었을 것이다 / 더 많은 에너지로.</p>
+            <p><b>[구문 해설]</b> `Not only A but also B` (A뿐만 아니라 B도) 구문. 동사는 과거에 변화된 수동의 의미를 담아 조동사+have been p.p. 형태가 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> body(신체), brain(뇌)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">10. The brain needs lots of energy / to grow.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 뇌는 많은 에너지를 필요로 한다 / 성장하기 위해.</p>
+            <p><b>[구문 해설]</b> `to grow`는 목적(~하기 위해)을 나타내는 부사적 용법의 to부정사입니다.</p>
+            <p><b>[핵심 어휘]</b> energy(에너지), grow(성장하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">11. <mark>As</mark> their diet expanded, / hominids could physically and intellectually <mark>expand</mark> their territory.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들의 식단이 확장됨에 따라, / 인류는 신체적으로 그리고 지적으로 확장할 수 있었다 / 그들의 영역을.</p>
+            <p><b>[구문 해설]</b> 접속사 `As`는 '~함에 따라, ~하면서'의 뜻으로 비례적 변화를 나타냅니다. 부사 physically와 intellectually가 동사 expand를 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> expand(확장하다), physically(신체적으로), intellectually(지적으로), territory(영역, 영토)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (식단과 뇌의 발달)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 초기 인류의 기원과 이동</span>
+        <h4>열대 지역에서 세계로</h4>
+        <p>초기 인류는 열대 지역에서 진화했으며, 기원에 대한 논쟁이 있지만 신체적 변화를 거쳐 결국 세계 전역으로 퍼져나갔음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 직립 보행과 도구 제작</span>
+        <h4>이동성과 식단의 혁명</h4>
+        <p>직립 보행은 효율적 이동을 가능케 했고, 도구 제작은 사냥을 가능하게 하여 저에너지 채식에서 고에너지(단백질/지방) 육식으로의 식단 확장을 이끌었음.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 두뇌의 성장과 영토 확장</span>
+        <h4>에너지가 만든 지적 확장</h4>
+        <p>뇌의 성장을 위해 막대한 에너지가 필요한데, 육식을 통한 고에너지 섭취가 신체뿐 아니라 뇌를 변화시켰고 인류의 신체적, 지적 영토 확장을 가능하게 함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. Whichever the case, [ it / which ] is believed that in time they became capable of spreading out from Africa...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 뒤의 진주어 that절을 받는 가주어 자리이므로 it이 와야 합니다.">it</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 which는 가주어 역할을 할 수 없습니다.">which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. More important, perhaps, [ was / were ] their development of tool making.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 보어(More important)가 도치된 문장으로 실제 주어는 단수명사인 'their development'이므로 단수 동사 was가 올바릅니다.">was</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 문장의 맨 앞만 보고 판단하면 안 되며, 도치된 뒤의 주어 'development'에 수일치 해야 합니다.">were</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        For instance, early hominids probably did not walk upright, but when they developed that ability, they could travel more efficiently. More important, perhaps, was their development of tool making. With tools, they could hunt other animals, so they could consume more protein and fat than their low-energy vegetarian diet would have provided. Not only their bodies but also their brains would have been changed with more energy. The brain needs lots of energy to grow. As their diet expanded, hominids could physically and intellectually ______________________________.
+      </div>
+      <div class="exam-choices">
+        ① expand their territory<br>
+        ② maintain their vegetarian diet<br>
+        ③ depend entirely on warm climates<br>
+        ④ restrict their daily movements<br>
+        ⑤ avoid encountering other animals
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① expand their territory</b></p>
+          <p>해설: 고에너지 섭취를 통해 신체와 뇌가 발달함에 따라, 인류는 자신들의 영토(영역)를 물리적, 지적으로 확장할 수 있게 되었다는 흐름이 논리적입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        [주어진 문장] More important, perhaps, was their development of tool making.<br><br>
+        The first human beings probably evolved in tropical regions where survival was possible without clothing. ( ① ) It is likely that they had very dark skin because light skin would have given little protection against the burning rays of the sun. ( ② ) There is a debate about whether these people spread into other parts of the world or developed independently. ( ③ ) Whichever the case, it is believed that they became capable of spreading out from Africa. This was probably because their physical characteristics changed. ( ④ ) For instance, early hominids probably did not walk upright, but when they developed that ability, they could travel more efficiently. ( ⑤ ) With tools, they could hunt other animals, so they could consume more protein and fat than their low-energy vegetarian diet would have provided. Not only their bodies but also their brains would have been changed with more energy.
+      </div>
+      <div class="exam-choices">
+        ①<br>②<br>③<br>④<br>⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ⑤</b></p>
+          <p>해설: 주어진 문장은 도구 제작 능력의 발달을 언급합니다. ⑤번 앞 문장에서는 직립 보행이라는 신체적 변화를 예로 들었고, ⑤번 뒷 문장에서는 '도구를 가지고(With tools)' 사냥을 하여 고단백 식단을 섭취했다는 내용이 자연스럽게 이어지므로 주어진 문장이 들어가기에 ⑤번이 가장 적절합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        The first human beings probably evolved in tropical regions where survival was possible without clothing. It is likely that they had very dark skin because light skin would have given little protection against the burning rays of the sun.
+        <br><br>
+        (A) More important, perhaps, was their development of tool making. With tools, they could hunt other animals, so they could consume more protein and fat than their low-energy vegetarian diet would have provided.
+        <br><br>
+        (B) Not only their bodies but also their brains would have been changed with more energy. The brain needs lots of energy to grow. As their diet expanded, hominids could physically and intellectually expand their territory.
+        <br><br>
+        (C) There is a debate about whether these people spread into other parts of the world or developed independently. Whichever the case, it is believed that they became capable of spreading out from Africa. This was probably because their physical characteristics changed, like walking upright to travel more efficiently.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ (C) - (A) - (B)</b></p>
+          <p>해설: 주어진 문장은 초기 인류의 기원과 피부색을 말합니다. 이어서 세계로 퍼져나갔는지에 대한 논쟁과 그 원인(신체 변화, 직립보행)을 다루는 (C)가 오고, 신체 변화보다 '더 중요한' 변화로 도구 제작과 식단 개선을 언급하는 (A)가 이어집니다. 고단백 식단이 에너지를 제공했다는 (A)의 내용이 뇌의 성장과 영토 확장이라는 결론인 (B)로 연결됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        더 많은 에너지로 그들의 신체뿐만 아니라 그들의 뇌도 변화되었을 것이다.<br><br>
+        [조건]<br>
+        1. 'Not only A but also B' 구문을 사용할 것.<br>
+        2. 조동사 would 및 수동태 완료형을 활용할 것.<br>
+        3. 본문과 동일한 철자로 작성할 것. (총 14단어)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: Not only their bodies but also their brains would have been changed with more energy.</b></p>
+          <p>해설: 주어 자리에 'Not only their bodies but also their brains'를 배치하고, 과거에 일어난 수동의 변화를 의미하는 조동사 구문 'would have been changed'를 씁니다. 마지막으로 전치사구 'with more energy'를 덧붙입니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

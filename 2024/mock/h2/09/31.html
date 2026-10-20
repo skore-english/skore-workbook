@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 31번 · 빈칸추론</div>
+    <h1 class="title">THE BURDEN OF A FAIR PROCESS<br><span>Why We Hate Fair Processes When Outcomes Are Bad</span></h1>
+    <p class="header-lead">결과가 나쁠 때 과정이 공정했다면, 우리는 그 실패를 남 탓으로 돌리지 못하고 온전히 자신의 탓으로 받아들여야 하는 심리적 부담을 안게 됩니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 자기방어 기제와 공정성 (Self-defense Mechanism and Fairness)</li>
+        <li><b>[배경 맥락]:</b> 사람들은 실패(나쁜 결과)를 마주했을 때 그것을 외부 환경 탓으로 돌림으로써 자존심을 보호하려는 경향이 있음.</li>
+        <li><b>[논리 요약]:</b> 결과가 나쁠 때 과정마저 불공정했다면 그것을 위안거리 삼아 남 탓을 할 수 있다. 하지만 과정이 완전히 공정했다면 변명의 여지가 없어 실패의 원인을 내 행동이나 자질 탓으로 돌릴 수밖에 없기에 괴롭다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      When we get an unfavorable outcome, in some ways the last thing we want to hear is that the process was fair. As outraging as the combination of an unfavorable outcome and an unfair process is, this combination also brings with it a consolation prize: the possibility of attributing the bad outcome to something other than ourselves. We may reassure ourselves by believing that our bad outcome had little to do with us and everything to do with the unfair process. If the process is fair, however, we cannot nearly as easily externalize the outcome; we got what we got “fair and square.” When the process is fair we believe that our outcome is deserved, which is another way of saying that there must have been something about ourselves (what we did or who we are) that caused the outcome.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 불리한 결과가 나왔을 때 과정이 공정하면 그 실패를 남 탓으로 돌릴 수 없고 전적으로 자신의 책임으로 받아들여야만 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. When we get an unfavorable outcome, / in some ways the last thing we want to hear / is <mark>that</mark> the process was fair.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 우리가 불리한 결과를 얻을 때, / 어떤 면에서 우리가 가장 듣기 싫은 것은 / 과정이 공정했다는 것이다.</p>
+            <p><b>[구문 해설]</b> `the last thing to do`는 '가장 ~하기 싫은 것'이라는 강한 부정의 의미를 지닙니다. `that`은 명사절 접속사로 보어 역할을 합니다.</p>
+            <p><b>[핵심 어휘]</b> unfavorable(불리한, 호의적이지 않은), outcome(결과)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. <mark>As outraging as</mark> the combination of an unfavorable outcome and an unfair process is, / this combination also brings with it a consolation prize: / the possibility of <mark>attributing</mark> the bad outcome / to something other than ourselves.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 불리한 결과와 불공정한 과정의 결합이 분노를 일으키는 만큼이나, / 이 결합은 또한 위안거리를 함께 가져온다: / 나쁜 결과를 탓할 가능성(이라는 위안거리)을 / 우리 자신이 아닌 다른 무언가의 (탓으로).</p>
+            <p><b>[구문 해설]</b> `As 형용사/부사 as 주어+동사` 구문이 양보절(~이긴 하지만, ~만큼이나)로 쓰였습니다. `attribute A to B`는 'A를 B의 탓으로 돌리다'라는 뜻입니다.</p>
+            <p><b>[핵심 어휘]</b> outraging(분노를 일으키는), combination(결합), consolation prize(위안상, 위안거리), attribute ~ to...(~을 ...의 탓으로 돌리다), other than(~외에, ~이 아닌)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. We may reassure ourselves / by believing <mark>that</mark> our bad outcome <mark>had little to do with</mark> us / and <mark>everything to do with</mark> the unfair process.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 우리는 우리 자신을 안심시킬 수 있다 / 우리의 나쁜 결과가 우리와는 관련이 거의 없고 / 불공정한 과정과 전적으로 관련이 있다고 믿음으로써.</p>
+            <p><b>[구문 해설]</b> `have little to do with`(~와 관련이 거의 없다)와 `have everything to do with`(~와 전적으로 관련이 있다)가 대조적으로 사용되어 핑계를 정당화하는 심리를 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> reassure(안심시키다), have little to do with(~와 관련이 거의 없다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. If the process is fair, however, / we cannot nearly as easily <mark>externalize</mark> the outcome; / we got <mark>what</mark> we got “fair and square.”</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 하지만 만약 과정이 공정하다면, / 우리는 그 결과를 그만큼 쉽게 외부로 돌릴 수 없다; / 우리는 우리가 얻은 것을 "정정당당하게" 얻었다.</p>
+            <p><b>[구문 해설]</b> `nearly as easily`에서 nearly는 '거의 ~만큼 (쉽게)'라는 원급 비교 수식어로 쓰였습니다. `what`은 선행사를 포함한 관계대명사(~하는 것)입니다.</p>
+            <p><b>[핵심 어휘]</b> externalize(외부로 돌리다, 표출하다), fair and square(정정당당하게)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. When the process is fair / we believe that our outcome is <mark>deserved</mark>, / <mark>which</mark> is another way of saying / that there must <mark>have been</mark> something about ourselves (what we did or who we are) / that caused the outcome.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 과정이 공정할 때 / 우리는 우리의 결과가 마땅하다고 믿는다, / 이는 다르게 말하는 방식이다 / 우리 자신에 대한 무언가(우리가 한 일이나 우리의 존재)가 있었음에 틀림없다고 / 그 결과를 야기한.</p>
+            <p><b>[구문 해설]</b> 계속적 용법의 관계대명사 `which`는 앞 절(우리의 결과가 마땅하다는 것)을 받습니다. `must have been`은 과거 사실에 대한 강한 추측(~했었음에 틀림없다)을 나타냅니다. 마지막 `that`은 something을 수식하는 주격 관계대명사입니다.</p>
+            <p><b>[핵심 어휘]</b> deserved(마땅한, 응당한), must have p.p.(~했음에 틀림없다), cause(야기하다)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (공정성이 주는 내면적 부담)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 공정한 과정에 대한 거부감</span>
+        <h4>실패 앞에서의 가장 듣기 싫은 진실</h4>
+        <p>자신에게 불리하고 나쁜 결과가 나왔을 때, 과정이 공정했다는 사실은 사람들이 심리적으로 가장 마주하기 싫어하는 부분입니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 불공정함이 주는 뜻밖의 위안</span>
+        <h4>실패를 정당화하는 자기방어</h4>
+        <p>결과도 나쁘고 과정도 불공정하면 화가 나긴 하지만, 그 실패를 자신이 아닌 '불공정한 과정 탓'으로 돌려 심리적 위안을 얻을 수 있습니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 공정함이 가져오는 내면적 책임</span>
+        <h4>변명 불가, 온전한 내 탓</h4>
+        <p>하지만 과정이 완전히 공정했다면 실패의 원인을 외부로 돌릴 수 없으며, 결국 내 행동이나 나의 존재 자체에서 실패의 원인을 찾고 받아들여야만 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. As [ outraging / outraged ] as the combination of an unfavorable outcome and an unfair process is...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 나쁜 결과와 불공정한 과정의 '결합(combination)'이 사람들에게 분노를 '일으키는' 능동적 주체이므로 현재분사 outraging이 적절합니다.">outraging</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 과거분사 outraged는 사람이 분노를 '느낄 때' 쓰는 수동의 의미이므로 사물 주어인 combination의 성질을 설명하기에는 부적절합니다.">outraged</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. ...which is another way of saying that there must [ have been / be ] something about ourselves that caused the outcome.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 이미 일어난 과거의 결과(caused the outcome)에 대한 강한 추측이므로 'must have p.p.(~했었음에 틀림없다)'가 쓰여야 합니다.">have been</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. must be는 '현재 ~임에 틀림없다'라는 의미가 되어 과거에 결과를 야기했던 과거의 원인을 추측하는 문맥과 시제가 맞지 않습니다.">be</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        When we get an unfavorable outcome, in some ways the last thing we want to hear is that the process was fair. As outraging as the combination of an unfavorable outcome and an unfair process is, this combination also brings with it a consolation prize: the possibility of attributing the bad outcome to something other than ourselves. We may reassure ourselves by believing that our bad outcome had little to do with us and everything to do with the unfair process. If the process is fair, however, we cannot nearly as easily externalize the outcome; we got what we got “fair and square.” When the process is fair we believe that our outcome is deserved, which is another way of saying that there must have been something about ourselves (what we did or who we are) that caused the outcome.
+      </div>
+      <div class="exam-choices">
+        ① Why We Accept Fair Results So Easily<br>
+        ② The Hidden Psychological Burden of a Fair Process<br>
+        ③ How to Turn an Unfavorable Outcome into Success<br>
+        ④ Strategies for Making Unfair Systems Fair<br>
+        ⑤ The Importance of Externalizing Your Failures
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ② The Hidden Psychological Burden of a Fair Process</b></p>
+          <p>해설: 불리한 결과를 얻었을 때 과정마저 공정하면 실패를 온전히 자신의 탓으로 돌려야 하므로, 공정한 과정이 오히려 심리적으로 더 큰 부담이 된다는 것이 이 글의 핵심 내용입니다. 따라서 '공정한 과정의 숨겨진 심리적 부담'이라는 제목이 가장 적절합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        When we get an ①<u>unfavorable</u> outcome, in some ways the last thing we want to hear is that the process was fair. As outraging as the combination of an unfavorable outcome and an unfair process is, this combination also brings with it a ②<u>consolation</u> prize: the possibility of attributing the bad outcome to something other than ourselves. We may reassure ourselves by believing that our bad outcome had ③<u>little</u> to do with us and everything to do with the unfair process. If the process is fair, however, we cannot nearly as easily ④<u>internalize</u> the outcome; we got what we got “fair and square.” When the process is fair we believe that our outcome is ⑤<u>deserved</u>, which is another way of saying that there must have been something about ourselves that caused the outcome.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ internalize</b></p>
+          <p>해설: 과정이 공정하다면 우리는 결과를 남의 탓으로 '외부화(externalize)'할 수 없다는 논리가 되어야 하므로 internalize(내면화하다)는 문맥에 정반대되는 단어입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        [주어진 문장] If the process is fair, however, we cannot nearly as easily externalize the outcome; we got what we got “fair and square.”<br><br>
+        When we get an unfavorable outcome, in some ways the last thing we want to hear is that the process was fair. ( ① ) As outraging as the combination of an unfavorable outcome and an unfair process is, this combination also brings with it a consolation prize. ( ② ) This prize is the possibility of attributing the bad outcome to something other than ourselves. ( ③ ) We may reassure ourselves by believing that our bad outcome had little to do with us and everything to do with the unfair process. ( ④ ) When the process is fair we believe that our outcome is deserved. ( ⑤ ) This is another way of saying that there must have been something about ourselves (what we did or who we are) that caused the outcome.
+      </div>
+      <div class="exam-choices">
+        ①<br>②<br>③<br>④<br>⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④</b></p>
+          <p>해설: 과정이 불공정할 때 외부 탓을 하며 위안을 얻는다는 내용(③번 뒤 문장)에 이어, '하지만(however) 과정이 공정하다면 외부로 돌릴 수 없다'는 반전을 제시하는 주어진 문장이 ④번 위치에 들어가는 것이 논리적으로 가장 완벽합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        나쁜 결과를 우리 자신이 아닌 다른 무언가의 탓으로 돌릴 가능성<br><br>
+        [조건]<br>
+        1. 본문에 등장하는 'attribute'를 동명사 형태로 사용할 것.<br>
+        2. '~외에, ~이 아닌'을 의미하는 두 단어 표현을 포함할 것.<br>
+        3. 본문과 동일한 철자로 작성할 것. (총 11단어)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: the possibility of attributing the bad outcome to something other than ourselves</b></p>
+          <p>해설: 'the possibility of' 뒤에 'attribute A to B(A를 B의 탓으로 돌리다)' 구문을 동명사 형태로 결합하고, B 자리에 'something other than ourselves(우리 자신이 아닌 다른 무언가)'를 넣습니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

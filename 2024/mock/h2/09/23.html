@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 23번 · 주제추론</div>
+    <h1 class="title">TWO VIEWS ON THE NATURE OF SCIENCE<br><span>Culturally Contextual vs. Purely Objective</span></h1>
+    <p class="header-lead">과학을 문화적 맥락 속 역사적 활동으로 보는 시각과, 가치가 배제된 순수한 객관적 사실의 발견으로 보는 시각이 대립합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 과학 철학(Philosophy of Science)과 객관성 논쟁</li>
+        <li><b>[배경 맥락]:</b> 예술은 널리 문화적 산물로 여겨지지만, 과학의 본질에 대해서는 학자들 사이에서 의견이 크게 두 가지로 나뉨.</li>
+        <li><b>[논리 요약]:</b> J.B.S. Haldane과 같은 학자들은 과학을 특정 시대와 문화적 맥락 속에서 이해해야 하는 역사적 활동으로 보는 반면, 다른 학자들은 과학을 가치나 인간 경험과 분리된 순수한 객관적 사실의 탐구로 여긴다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      People seem to recognize that the arts are cultural activities that draw on (or react against) certain cultural traditions, certain shared understanding, and certain values and ideas that are characteristic of the time and place in which the art is created. In the case of science, however, opinions differ. Some scientists, like the great biologist J. B. S. Haldane, see science in a similar light ― as a historical activity that occurs in a particular time and place, and that needs to be understood within that context. Others, however, see science as a purely “objective” pursuit, uninfluenced by the cultural viewpoint and values of those who create it. In describing this view of science, philosopher Hugh Lacey speaks of the belief that there is an underlying order of the world which is simply there to be discovered ― the world of pure “fact” stripped of any link with value. The aim of science according to this view is to represent this world of pure “fact”, independently of any relationship it might bear contingently to human practices and experiences.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 예술과 달리 과학의 본질에 대해서는 시대와 문화적 맥락의 산물이라는 견해와, 완전히 객관적이고 가치가 배제된 순수 사실의 탐구라는 견해가 대립한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. People seem to recognize / that the arts are cultural activities / that draw on (or react against) certain cultural traditions, / certain shared understanding, / and certain values and ideas / that are characteristic of the time and place / in which the art is created.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 사람들은 인식하는 것 같다 / 예술이 문화적 활동이라는 것을 / 특정한 문화적 전통, / 특정한 공유된 이해, / 그리고 특정한 가치와 사상에 기반하거나 (혹은 반발하는) / 그 시대와 장소의 특징이 되는 / 예술이 창조되는.</p>
+            <p><b>[구문 해설]</b> `seem to recognize` 뒤의 `that`은 명사절 접속사입니다. `activities`를 수식하는 주격 관계대명사 `that` 절이 이어지며, 또 그 안의 `values and ideas`를 수식하는 두 번째 주격 관계대명사 `that` 절이 옵니다. 마지막의 `in which`는 `the time and place`를 선행사로 받는 전치사+관계대명사로, 뒤에 완전한 문장이 옵니다.</p>
+            <p><b>[핵심 어휘]</b> recognize(인식하다), draw on(~에 기반하다), react against(~에 반발하다), characteristic(특징적인)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. In the case of science, however, / opinions differ.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나 과학의 경우에는, / 의견이 다르다.</p>
+            <p><b>[구문 해설]</b> 부사 `however`가 삽입되어 앞 문장(예술)과 대조를 이룹니다. `differ`는 자동사로 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> in the case of(~의 경우에), differ(다르다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. Some scientists, like the great biologist J. B. S. Haldane, / <mark>see</mark> science <mark>in a similar light</mark> / ― as a historical activity / that occurs in a particular time and place, / and that needs to be understood / within that context.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 위대한 생물학자 J.B.S. Haldane과 같은 일부 과학자들은, / 과학을 비슷한 관점에서 본다 / 즉 역사적 활동으로서 / 특정 시대와 장소에서 발생하는, / 그리고 이해될 필요가 있는 / 그 맥락 안에서.</p>
+            <p><b>[구문 해설]</b> `see A in a similar light` (A를 비슷한 관점에서 보다). 대시(―) 이하에서 `as` 전치사구가 부연 설명합니다. `that occurs`와 `that needs`는 선행사 `activity`를 공통으로 꾸미는 주격 관계대명사의 병렬 구조입니다.</p>
+            <p><b>[핵심 어휘]</b> in a light(관점에서), historical(역사적인), context(맥락)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. Others, however, / <mark>see</mark> science <mark>as</mark> a purely “objective” pursuit, / <mark>uninfluenced</mark> by the cultural viewpoint and values / of those who create it.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나 다른 사람들은, / 과학을 순전히 "객관적인" 추구로 본다, / 문화적 관점과 가치에 영향을 받지 않는 / 그것을 창조하는 사람들의.</p>
+            <p><b>[구문 해설]</b> `see A as B` (A를 B로 여기다). `uninfluenced`는 과거분사구로 분사구문 혹은 앞의 `pursuit`를 후치 수식하는 역할을 하여 '~에 영향을 받지 않는'의 뜻을 더합니다.</p>
+            <p><b>[핵심 어휘]</b> purely(순전히), objective(객관적인), pursuit(추구, 활동), uninfluenced(영향을 받지 않는)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. In describing this view of science, / philosopher Hugh Lacey speaks of the belief / <mark>that</mark> there is an underlying order of the world / which is simply there to be discovered / ― the world of pure “fact” <mark>stripped of</mark> any link with value.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 과학에 대한 이러한 관점을 설명할 때, / 철학자 Hugh Lacey는 믿음에 대해 말한다 / 세계의 근본적인 질서가 존재한다는 / 단순히 발견되기 위해 거기에 있는 / 즉 어떤 가치와의 연결고리도 벗겨진 순수한 "사실"의 세계라는.</p>
+            <p><b>[구문 해설]</b> `the belief that`에서 `that`은 동격의 접속사로 쓰여 뒤에 완전한 절이 옵니다. `stripped of`는 과거분사구로 앞의 명사 `the world of pure "fact"`를 후치 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> describe(설명하다), underlying(근본적인), order(질서), stripped of(~이 벗겨진, 제거된)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. The aim of science according to this view / is to represent this world of pure “fact”, / independently of any relationship / it might bear contingently / to human practices and experiences.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이 관점에 따른 과학의 목적은 / 이 순수한 "사실"의 세계를 나타내는 것이다, / 어떠한 관계와도 독립적으로 / 그것이 우연히 맺을지도 모르는 / 인간의 관행 및 경험과.</p>
+            <p><b>[구문 해설]</b> 주어인 `The aim`에 맞춰 단수동사 `is`가 쓰였고, 보어로 명사적 용법의 to부정사 `to represent`가 쓰였습니다. `relationship`과 `it might bear` 사이에는 목적격 관계대명사가 생략되어 있습니다.</p>
+            <p><b>[핵심 어휘]</b> aim(목적), represent(나타내다, 대변하다), independently of(~와는 독립적으로), bear a relationship(관계를 맺다), contingently(우연히), practice(관행, 실천)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (과학의 본질에 대한 두 시각)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 예술과 과학의 대비</span>
+        <h4>예술의 문화적 속성과 과학의 특수성</h4>
+        <p>예술은 특정 시대와 장소의 문화적 가치를 반영하는 산물로 보편적으로 인식되지만, 과학에 대해서는 학자들의 의견이 엇갈립니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 맥락 의존적 관점</span>
+        <h4>문화적 맥락 속의 과학</h4>
+        <p>Haldane과 같은 과학자들은 과학 역시 예술과 마찬가지로 특정 시대와 장소에서 발생하며 그 역사적, 문화적 맥락 내에서 이해해야 한다고 주장합니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 순수 객관적 관점</span>
+        <h4>가치가 배제된 순수 객관성의 추구</h4>
+        <p>다른 학자들은 과학을 문화적 관점과 독립된, 세계의 근본 질서를 발견하는 순수 객관적 추구(가치와 단절된 순수한 사실의 세계)로 정의합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. ...certain values and ideas that are characteristic of the time and place [ in which / which ] the art is created.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 뒤에 주어(the art)와 수동태 동사(is created)로 이루어진 완전한 문장이 오므로 전치사+관계대명사인 in which가 적절합니다.">in which</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 which 단독으로는 뒤에 불완전한 문장이 와야 하지만, 수동태로 완전한 문장이 이어지므로 전치사가 필요합니다.">which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. Some scientists see science... as a historical activity that occurs in a particular time and place, and [ that / what ] needs to be understood within that context.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 선행사인 activity를 수식하는 첫 번째 관계대명사 that(occurs)과 병렬 구조를 이루기 위해 주격 관계대명사 that이 필요합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 앞에 수식을 받는 선행사(activity)가 명확히 존재하므로 선행사를 포함하는 관계대명사 what은 올 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        People seem to recognize that the arts are cultural activities that draw on certain cultural traditions, certain shared understanding, and certain values and ideas that are characteristic of the time and place in which the art is created. In the case of science, however, opinions differ. Some scientists see science in a similar light ― as a historical activity that occurs in a particular time and place, and that needs to be understood within that context. Others, however, see science as a purely “objective” pursuit, ______________________________ of those who create it. In describing this view of science, philosopher Hugh Lacey speaks of the belief that there is an underlying order of the world which is simply there to be discovered.
+      </div>
+      <div class="exam-choices">
+        ① entirely determined by the cultural viewpoint and values<br>
+        ② heavily dependent on the artistic expression<br>
+        ③ uninfluenced by the cultural viewpoint and values<br>
+        ④ primarily focused on the social relationships<br>
+        ⑤ strictly controlled by the subjective emotions
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ uninfluenced by the cultural viewpoint and values</b></p>
+          <p>해설: 문맥상 다른 과학자들은 과학을 순전히 "객관적인(objective)" 추구로 본다고 했으므로, 창조하는 사람들의 문화적 관점과 가치에 '영향을 받지 않는(uninfluenced)' 것이 자연스럽습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        In the case of science, opinions differ. Some scientists see science as a historical activity that occurs in a particular time and place, and that needs to be understood within that ①<u>context</u>. Others, however, see science as a purely ②<u>subjective</u> pursuit, uninfluenced by the cultural viewpoint and values of those who create it. In describing this view of science, philosopher Hugh Lacey speaks of the belief that there is an ③<u>underlying</u> order of the world which is simply there to be discovered ― the world of pure “fact” ④<u>stripped</u> of any link with value. The aim of science according to this view is to represent this world of pure “fact”, ⑤<u>independently</u> of any relationship it might bear contingently to human practices.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ② subjective</b></p>
+          <p>해설: 과학을 문화적 관점이나 가치에 영향을 받지 않는(uninfluenced) 것으로 본다면, 이는 주관적(subjective)인 것이 아니라 객관적(objective)인 추구를 의미합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        [주어진 문장] Others, however, see science as a purely “objective” pursuit, uninfluenced by the cultural viewpoint and values of those who create it.<br><br>
+        People seem to recognize that the arts are cultural activities that draw on certain cultural traditions. ( ① ) In the case of science, however, opinions differ. ( ② ) Some scientists, like the great biologist J. B. S. Haldane, see science in a similar light ― as a historical activity that occurs in a particular time and place. ( ③ ) In describing this view of science, philosopher Hugh Lacey speaks of the belief that there is an underlying order of the world which is simply there to be discovered. ( ④ ) This is the world of pure “fact” stripped of any link with value. ( ⑤ ) The aim of science according to this view is to represent this world independently of any human practices.
+      </div>
+      <div class="exam-choices">
+        ①<br>②<br>③<br>④<br>⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③</b></p>
+          <p>해설: ②번 뒤의 문장에서 '일부 과학자(Some scientists)'가 과학을 예술처럼 맥락적/역사적 활동으로 본다고 언급한 후, 그와 상반되는 '다른 사람들(Others)'의 객관적 견해를 제시하는 주어진 문장이 ③번 위치에 들어가는 것이 논리적입니다. 그 후 이 객관적 관점(this view of science)을 휴 레이시의 철학으로 부연 설명하게 됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        이 관점에 따른 과학의 목적은 이 순수한 "사실"의 세계를 나타내는 것이다.<br><br>
+        [조건]<br>
+        1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        ( to / represent / science / view / is / pure / the / of / according / this / aim / this / world / of / "fact" )<br>
+        2. 어형 변화 없음.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: The aim of science according to this view is to represent this world of pure "fact"</b></p>
+          <p>해설: 주어부 '이 관점에 따른 과학의 목적은(The aim of science according to this view)'을 먼저 쓰고, 동사 'is', 주격보어 역할을 하는 명사적 용법의 to부정사구 'to represent this world of pure "fact"'를 순서대로 배열합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

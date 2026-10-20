@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 35번 · 무관한 문장찾기</div>
+    <h1 class="title">MINIMAL PROCESSING FOR OPTIMAL NUTRITION<br><span>Why We Should Avoid Harsh Milling</span></h1>
+    <p class="header-lead">인공 첨가물 없이 음식의 풍미와 영양소를 지키는 최소한의 가공의 중요성과 과도한 제분의 문제점.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 최소 가공 (Minimal Processing)과 영양소 보존</li>
+        <li><b>[배경 맥락]:</b> 현대 사회에서 곡물을 하얗게 깎아내는 제분 과정은 핵심 영양소(미네랄, 비타민 등)를 파괴하는 가혹한 가공 방식입니다.</li>
+        <li><b>[논리 요약]:</b> 최소한의 가공은 본래의 풍미와 섬세한 영양소를 보존하는 최선의 방법이다. 곡물의 제분처럼 영양소를 심각하게 파괴하는 가공은 지속 가능한 식단에서 지양되며, 대신 발효나 발아 같은 전통적인 최소 가공 방식이 권장된다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Minimal processing can be one of the best ways to keep original flavors and taste, without any need to add artificial flavoring or additives, or too much salt. This would also be the efficient way to keep most nutrients, especially the most sensitive ones such as many vitamins and anti-oxidants. Milling of cereals is one of the most harsh processes which dramatically affect nutrient content. While grains are naturally very rich in micronutrients, anti-oxidants and fiber (i.e. in wholemeal flour or flakes), milling usually removes the vast majority of minerals, vitamins and fibers to raise white flour. Such a spoilage of key nutrients and fiber is no longer acceptable in the context of a sustainable diet aiming at an optimal nutrient density and health protection. In contrast, fermentation of various foodstuffs or germination of grains are traditional, locally accessible, low-energy and highly nutritious processes of sounded interest.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 최소한의 가공은 음식의 영양소와 풍미를 지키는 가장 좋은 방법이며, 영양을 파괴하는 과도한 제분 대신 발효나 발아 같은 전통적 가공이 장려된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Minimal processing can be one of the best ways / <mark>to keep</mark> original flavors and taste, / without any need to add artificial flavoring or additives, / or too much salt.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 최소한의 가공은 최고의 방법 중 하나가 될 수 있다 / 본래의 풍미와 맛을 유지하는, / 인공 향신료나 첨가물을 추가할 필요 없이, / 또는 너무 많은 소금을.</p>
+            <p><b>[구문 해설]</b> `one of the 최상급 + 복수명사(ways)` 구문입니다. `to keep`은 형용사적 용법의 to부정사로 앞의 ways를 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> minimal(최소한의), processing(가공), artificial(인공적인), flavoring(향신료), additive(첨가물)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. This would also be the efficient way to keep most nutrients, / especially the most sensitive ones / such as many vitamins and anti-oxidants.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이것은 또한 대부분의 영양소를 유지하는 효율적인 방법이 될 것이다, / 특히 가장 민감한 것들을 / 많은 비타민과 항산화제와 같은.</p>
+            <p><b>[구문 해설]</b> 대명사 `ones`는 앞의 복수명사 nutrients를 대신합니다.</p>
+            <p><b>[핵심 어휘]</b> efficient(효율적인), nutrient(영양소), sensitive(민감한), anti-oxidant(항산화제)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. <mark>Milling</mark> of cereals is one of the most harsh processes / <mark>which</mark> dramatically affect nutrient content.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 곡물의 제분은 가장 가혹한 과정 중 하나이다 / 영양소 함량에 극적으로 영향을 미치는.</p>
+            <p><b>[구문 해설]</b> `which`는 주격 관계대명사로 선행사인 복수명사 `processes`를 수식하므로 뒤에 복수동사 `affect`가 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> milling(제분), cereal(곡물), harsh(가혹한), dramatically(극적으로), content(함량, 내용물)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. <mark>While</mark> grains are naturally very rich in micronutrients, anti-oxidants and fiber / (i.e. in wholemeal flour or flakes), / milling usually removes the vast majority of minerals, vitamins and fibers / to <mark>raise</mark> white flour.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 곡물은 본래 미량 영양소, 항산화제, 그리고 섬유질이 매우 풍부하지만 / (즉, 통밀가루나 플레이크 형태로), / 제분은 대개 미네랄, 비타민, 그리고 섬유질의 대다수를 제거한다 / 흰 밀가루를 만들기(늘리기) 위해.</p>
+            <p><b>[구문 해설]</b> `While`은 '~인 반면에, ~이지만'이라는 대조를 나타내는 접속사입니다. `to raise`는 목적(~하기 위해)을 나타내는 부사적 용법의 to부정사입니다.</p>
+            <p><b>[핵심 어휘]</b> naturally(본래, 자연적으로), rich in(~이 풍부한), micronutrient(미량 영양소), fiber(섬유질), wholemeal(통밀의), vast majority(대다수)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. Such a spoilage of key nutrients and fiber / is no longer <mark>acceptable</mark> / in the context of a sustainable diet / <mark>aiming at</mark> an optimal nutrient density and health protection.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 핵심 영양소와 섬유질의 그러한 훼손은 / 더 이상 받아들여지지 않는다 / 지속 가능한 식단의 맥락에서 / 최적의 영양소 밀도와 건강 보호를 목표로 하는.</p>
+            <p><b>[구문 해설]</b> `aiming at`은 현재분사구로 앞의 `a sustainable diet`를 능동적으로 수식합니다. (식단이 ~을 목표로 하다)</p>
+            <p><b>[핵심 어휘]</b> spoilage(훼손, 손상), acceptable(받아들일 수 있는), context(맥락), sustainable(지속 가능한), density(밀도)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. In contrast, / fermentation of various foodstuffs or germination of grains / are traditional, locally accessible, low-energy and highly nutritious processes / of sounded interest.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이와 대조적으로, / 다양한 식품의 발효나 곡물의 발아는 / 전통적이고, 지역적으로 접근 가능하며, 저에너지이고 매우 영양가가 높은 과정들이다 / 깊은 관심(을 끄는).</p>
+            <p><b>[구문 해설]</b> 주어부인 `fermentation ~ or germination ~`가 복수 개념(여러 과정들)을 나타내어 복수동사 `are`로 받았습니다. `of sounded interest`는 '매우 흥미로운, 타당한 관심사가 되는'이라는 뜻으로 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> in contrast(이와 대조적으로), fermentation(발효), foodstuff(식품), germination(발아), accessible(접근 가능한), nutritious(영양가가 높은)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (최소 가공의 이점)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 최소 가공의 장점</span>
+        <h4>본연의 맛과 민감한 영양소 보호</h4>
+        <p>인공 첨가물을 넣지 않는 '최소 가공'은 본래의 풍미를 살리고, 특히 비타민이나 항산화제 같이 손상되기 쉬운 민감한 영양소들을 유지하는 가장 효율적인 방식입니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 과도한 가공의 폐해</span>
+        <h4>영양소를 깎아내는 제분(Milling)</h4>
+        <p>곡물은 본래 영양소가 풍부하지만, 흰 밀가루를 만들기 위해 행해지는 가혹한 '제분' 과정은 대다수의 핵심 영양소와 섬유질을 심각하게 훼손(spoilage)합니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 지속 가능한 대안</span>
+        <h4>전통적인 최소 가공의 부상</h4>
+        <p>지속 가능하고 건강을 보호하는 식단에서는 이러한 영양소 훼손을 용납하지 않으며, 대신 영양가가 높고 에너지가 적게 드는 발효나 발아 같은 전통적 가공 방식이 주목받고 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. Milling of cereals is one of the most harsh processes which dramatically [ affect / affects ] nutrient content.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 관계대명사 which의 선행사는 복수명사인 processes이므로 수일치를 위해 복수 동사인 affect가 와야 합니다.">affect</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 선행사가 단수인 milling이 아니라 복수인 processes이므로 단수 동사 affects는 틀립니다.">affects</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. Such a spoilage of key nutrients and fiber is no longer acceptable in the context of a sustainable diet [ aiming / aimed ] at an optimal nutrient density.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 능동적으로 '~을 목표로 하는' 지속 가능한 식단이므로 능동의 현재분사 aiming이 앞의 명사를 수식합니다.">aiming</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 식단 자체가 목표를 세우고 향하는 주체적 의미로 쓰였으므로 수동의 과거분사 aimed보다는 능동의 aiming at이 적절합니다.">aimed</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Minimal processing can be one of the best ways to keep original flavors and taste, without any need to add artificial flavoring or additives, or too much salt. This would also be the efficient way to keep most nutrients, especially the most sensitive ones such as many vitamins and anti-oxidants. Milling of cereals is one of the most harsh processes which dramatically affect nutrient content. While grains are naturally very rich in micronutrients, anti-oxidants and fiber, milling usually removes the vast majority of minerals, vitamins and fibers to raise white flour. Such a spoilage of key nutrients and fiber is no longer acceptable in the context of a sustainable diet aiming at an optimal nutrient density and health protection. In contrast, fermentation of various foodstuffs or germination of grains are traditional, locally accessible, low-energy and highly nutritious processes of sounded interest.
+      </div>
+      <div class="exam-choices">
+        ① Why Minimal Processing Matters for Nutrition<br>
+        ② The Evolution of Cereal Milling Technology<br>
+        ③ How to Add Artificial Flavors Safely<br>
+        ④ The Hidden Dangers of Traditional Fermentation<br>
+        ⑤ White Flour: The Secret to a Sustainable Diet
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① Why Minimal Processing Matters for Nutrition</b></p>
+          <p>해설: 과도한 가공(제분)이 핵심 영양소를 파괴하므로, 본연의 영양소를 지키고 건강을 보호하기 위해서는 최소 가공(Minimal processing)이나 발효 같은 전통적 방식이 필요하다는 내용입니다. 따라서 영양을 위해 최소 가공이 왜 중요한지를 다루는 ①번이 제목으로 가장 적절합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Minimal processing can be one of the best ways to keep original flavors and taste, without any need to add ①<u>artificial</u> flavoring or additives. This would also be the efficient way to keep most nutrients, especially the most ②<u>sensitive</u> ones such as many vitamins and anti-oxidants. Milling of cereals is one of the most ③<u>harsh</u> processes which dramatically affect nutrient content. While grains are naturally very rich in micronutrients, anti-oxidants and fiber, milling usually removes the vast majority of minerals, vitamins and fibers to raise white flour. Such a spoilage of key nutrients and fiber is highly ④<u>acceptable</u> in the context of a sustainable diet aiming at an optimal nutrient density and health protection. In contrast, fermentation of various foodstuffs or germination of grains are traditional, locally accessible, low-energy and highly ⑤<u>nutritious</u> processes of sounded interest.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ acceptable</b></p>
+          <p>해설: 흰 밀가루를 얻기 위해 필수 영양소를 파괴(spoilage)하는 행위는 지속 가능한 건강 식단의 맥락에서 '더 이상 수용될 수 없다(no longer acceptable)'고 해야 합니다. 원문의 부정어(no longer)가 빠진 상태에서 acceptable이 단독으로 쓰이면 내용이 정반대가 되므로 부적절합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        [주어진 문장] While grains are naturally very rich in micronutrients, anti-oxidants and fiber (i.e. in wholemeal flour or flakes), milling usually removes the vast majority of minerals, vitamins and fibers to raise white flour.<br><br>
+        Minimal processing can be one of the best ways to keep original flavors and taste, without any need to add artificial flavoring or additives. ( ① ) This would also be the efficient way to keep most nutrients, especially the most sensitive ones such as many vitamins and anti-oxidants. ( ② ) Milling of cereals is one of the most harsh processes which dramatically affect nutrient content. ( ③ ) Such a spoilage of key nutrients and fiber is no longer acceptable in the context of a sustainable diet aiming at an optimal nutrient density and health protection. ( ④ ) In contrast, fermentation of various foodstuffs or germination of grains are traditional, locally accessible, low-energy and highly nutritious processes of sounded interest. ( ⑤ )
+      </div>
+      <div class="exam-choices">
+        ①<br>②<br>③<br>④<br>⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③</b></p>
+          <p>해설: 주어진 문장은 본래 영양소가 풍부한 곡물을 제분(milling)이 어떻게 훼손하여 흰 밀가루로 만드는지를 구체적으로 설명합니다. 따라서 '제분이 가장 가혹한 과정 중 하나'라는 도입부(③번 앞 문장) 뒤에, 그리고 이러한 영양소 파괴(Such a spoilage)를 지칭하는 ④번 앞 문장 사이에 위치하는 것이 논리적으로 완벽합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        최적의 영양소 밀도를 목표로 하는 지속 가능한 식단의 맥락에서<br><br>
+        [조건]<br>
+        1. 본문에 등장하는 분사구문 표현 'aiming at'을 활용할 것.<br>
+        2. 주어진 단어들을 올바르게 배열할 것. (어형 변화 없음)<br>
+        ( context / nutrient / diet / sustainable / optimal / of / a / at / the / aiming / in / an / density )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: in the context of a sustainable diet aiming at an optimal nutrient density</b></p>
+          <p>해설: '~의 맥락에서'는 `in the context of`로 표현합니다. 이어서 명사 `a sustainable diet`를 쓰고, 그 식단을 능동적으로 뒤에서 수식하는 현재분사구 `aiming at an optimal nutrient density`를 연결하면 됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

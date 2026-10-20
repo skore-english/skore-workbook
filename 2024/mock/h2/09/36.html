@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 36번 · 순서배열</div>
+    <h1 class="title">THE PARADOX OF COMPETENCE<br><span>Why Perfection Can Make You Less Likable</span></h1>
+    <p class="header-lead">사람들은 유능한 사람을 좋아할 것 같지만, 지나치게 완벽한 사람보다는 약간의 빈틈(실수)을 보여주는 사람에게 더 큰 호감을 느낍니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 실수 효과 (Pratfall Effect)와 호감도</li>
+        <li><b>[배경 맥락]:</b> 유능함은 호감의 중요한 요소로 여겨지지만, 실제 연구에서는 가장 유능한 사람이 가장 인기 있는 사람은 아님. 지나친 완벽함은 타인에게 심리적 거리감과 비교에 의한 위축감을 줌.</li>
+        <li><b>[논리 요약]:</b> 사람들은 유능한 사람 곁에 있고 싶어하지만 완벽한 사람에게는 불편함을 느끼며, 오히려 그들이 가끔 실수를 통해 인간적인 빈틈을 보여줄 때 더 큰 호감을 느낀다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      It would seem obvious that the more competent someone is, the more we will like that person. By “competence,” I mean a cluster of qualities: smartness, the ability to get things done, wise decisions, etc. We stand a better chance of doing well at our life tasks if we surround ourselves with people who know what they’re doing and have a lot to teach us. But the research evidence is paradoxical: In problem-solving groups, the participants who are considered the most competent and have the best ideas tend not to be the ones who are best liked. Why? One possibility is that, although we like to be around competent people, those who are too competent make us uncomfortable. They may seem unapproachable, distant, superhuman ― and make us look bad (and feel worse) by comparison. If this were true, we might like people more if they reveal some evidence of fallibility. For example, if your friend is a brilliant mathematician, superb athlete, and gourmet cook, you might like him or her better if, every once in a while, they screwed up.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 타인의 지나친 유능함은 심리적 불편함을 유발할 수 있으며, 약간의 인간적인 실수(불완전성)가 오히려 호감도를 높인다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. It would seem obvious / <mark>that</mark> <mark>the more competent</mark> someone is, / <mark>the more</mark> we will like that person.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 명백해 보일 것이다 / 누군가가 더 유능할수록, / 우리가 그 사람을 더 좋아할 것이라는 점은.</p>
+            <p><b>[구문 해설]</b> `It`은 가주어, `that` 이하가 진주어입니다. `the 비교급(~할수록), the 비교급(더 ~하다)` 구문이 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> obvious(명백한), competent(유능한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. By “competence,” / I mean a cluster of qualities: / smartness, the ability to get things done, wise decisions, etc.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> "유능함"이라는 말로, / 나는 일련의 자질들을 의미한다: / 영리함, 일을 완수하는 능력, 현명한 결정 등.</p>
+            <p><b>[구문 해설]</b> `mean`은 '~을 의미하다'로 쓰였으며, 콜론(:) 뒤에 구체적인 자질들을 나열하고 있습니다.</p>
+            <p><b>[핵심 어휘]</b> competence(유능함), cluster(무리, 집단), quality(자질, 특성)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. We <mark>stand a better chance of</mark> doing well at our life tasks / if we surround ourselves with people / <mark>who</mark> know what they’re doing and have a lot to teach us.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 우리는 우리 삶의 과제들을 잘 해낼 가능성이 더 높다 / 만약 우리가 사람들로 우리 자신을 에워싼다면 / 자신들이 무엇을 하고 있는지 알고 우리에게 가르쳐줄 것이 많은 (사람들로).</p>
+            <p><b>[구문 해설]</b> `stand a chance of -ing`는 '~할 가능성이 있다'는 뜻입니다. `who`는 people을 수식하는 주격 관계대명사이며, know와 have가 병렬 연결되어 있습니다.</p>
+            <p><b>[핵심 어휘]</b> task(과제), surround(둘러싸다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. But the research evidence is <mark>paradoxical</mark>: / In problem-solving groups, / the participants <mark>who</mark> are considered the most competent and have the best ideas / <mark>tend not to be</mark> the ones who are best liked.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 하지만 연구 증거는 역설적이다: / 문제 해결 집단에서, / 가장 유능하다고 여겨지고 가장 좋은 아이디어를 가진 참가자들이 / 가장 호감을 얻는 사람들이 아닌 경향이 있다.</p>
+            <p><b>[구문 해설]</b> `tend not to V`는 '~하지 않는 경향이 있다'는 뜻입니다. `the ones`는 the participants를 대신하는 대명사입니다.</p>
+            <p><b>[핵심 어휘]</b> paradoxical(역설적인), participant(참가자), consider(여기다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. Why?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 왜 그럴까?</p>
+            <p><b>[구문 해설]</b> 의문사 단독으로 사용하여 독자의 주의를 환기합니다.</p>
+            <p><b>[핵심 어휘]</b> (생략)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. One possibility is / <mark>that</mark>, although we like to be around competent people, / those who are too competent make us <mark>uncomfortable</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 한 가지 가능성은 ~이다 / 비록 우리가 유능한 사람들 곁에 있기를 좋아하지만, / 너무 유능한 사람들은 우리를 불편하게 만든다는 것.</p>
+            <p><b>[구문 해설]</b> `that`은 명사절 접속사 보어입니다. `make(동사) + us(목적어) + uncomfortable(목적격 보어)`로 쓰인 5형식 구문이므로 형용사가 와야 합니다.</p>
+            <p><b>[핵심 어휘]</b> possibility(가능성), uncomfortable(불편한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. They may seem unapproachable, distant, superhuman / ― and <mark>make us look bad</mark> (and feel worse) / by comparison.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들은 다가가기 힘들고, 멀고, 초인적으로 보일 수 있다 / - 그리고 우리가 나빠 보이게 (그리고 더 기분 나쁘게) 만든다 / 비교됨으로써.</p>
+            <p><b>[구문 해설]</b> `seem` 뒤에 형용사 보어(unapproachable, distant, superhuman)가 병렬 연결되었습니다. `make(사역동사) + us(목적어) + look/feel(동사원형)` 구조입니다.</p>
+            <p><b>[핵심 어휘]</b> unapproachable(다가가기 힘든), distant(먼, 거리를 두는), superhuman(초인적인), by comparison(비교됨으로써, 비교해 보면)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. If this <mark>were</mark> true, / we <mark>might like</mark> people more / if they reveal some evidence of <mark>fallibility</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 만약 이것이 사실이라면, / 우리는 사람들을 더 좋아할지도 모른다 / 만약 그들이 약간의 불완전성(실수할 수 있음)의 증거를 드러낸다면.</p>
+            <p><b>[구문 해설]</b> 가정법 과거 `If 주어 were ~, 주어 might 동사원형` 구조로 현재 사실에 대한 반대나 가정을 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> reveal(드러내다), evidence(증거), fallibility(불완전성, 실수할 수 있음)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">9. For example, / if your friend is a brilliant mathematician, superb athlete, and gourmet cook, / you might like him or her better / if, every once in a while, they <mark>screwed up</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 예를 들어, / 만약 당신의 친구가 뛰어난 수학자이고, 최고의 운동선수이며, 미식 요리사라면, / 당신은 그나 그녀를 더 좋아할지도 모른다 / 만약, 가끔씩, 그들이 실수를 한다면.</p>
+            <p><b>[구문 해설]</b> 앞 문장과 마찬가지로 가정법 형태의 구문을 사용하여 가상의 상황(완벽한 친구가 실수하는 상황)을 묘사합니다.</p>
+            <p><b>[핵심 어휘]</b> brilliant(뛰어난), superb(최고의), gourmet(미식가), every once in a while(가끔씩), screw up(실수하다, 망치다)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (유능함과 호감도의 역설)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 유능함에 대한 통념</span>
+        <h4>유능함 = 호감?</h4>
+        <p>유능한 사람일수록 호감을 얻고 우리 삶에 도움이 될 것이라는 것이 일반적인 생각입니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 역설적인 연구 결과</span>
+        <h4>완벽함이 주는 불편함</h4>
+        <p>하지만 실제 연구에서는 지나치게 유능한 사람이 타인에게 불편함과 비교에 의한 위축감을 주어 오히려 호감도가 떨어집니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 빈틈이 주는 매력</span>
+        <h4>불완전성의 증거 (실수 효과)</h4>
+        <p>완벽해 보이는 사람이 가끔 인간적인 실수(screw up)나 불완전성(fallibility)을 보여줄 때 오히려 사람들은 심리적 거리를 좁히며 더 큰 호감을 느낍니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. It would seem obvious that the more competent someone is, the [ more / much ] we will like that person.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. '~할수록 더 ~하다'를 표현하는 'the 비교급, the 비교급' 구문이므로 more가 필요합니다.">more</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. much는 원급이므로 'the 비교급' 구문의 짝을 이룰 수 없습니다.">much</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. ...those who are too competent make us [ uncomfortable / uncomfortably ].</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. make 동사가 5형식으로 쓰였으므로 목적어 us 뒤에는 목적격 보어인 형용사 uncomfortable이 와야 합니다.">uncomfortable</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 우리말 해석상 '불편하게'로 해석되더라도, 부사 uncomfortably는 목적격 보어 자리에 들어갈 수 없습니다.">uncomfortably</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        It would seem obvious that the more competent someone is, the more we will like that person. By “competence,” I mean a cluster of qualities: smartness, the ability to get things done, wise decisions, etc. We stand a better chance of doing well at our life tasks if we surround ourselves with people who know what they’re doing and have a lot to teach us. But the research evidence is paradoxical: In problem-solving groups, the participants who are considered the most competent and have the best ideas tend not to be the ones who are best liked. Why? One possibility is that, although we like to be around competent people, those who are too competent make us uncomfortable. They may seem unapproachable, distant, superhuman ― and make us look bad (and feel worse) by comparison. If this were true, we might like people more if they reveal some evidence of fallibility. For example, if your friend is a brilliant mathematician, superb athlete, and gourmet cook, you might like him or her better if, every once in a while, they screwed up.
+      </div>
+      <div class="exam-choices">
+        ① How Competence Can Guarantee Your Success<br>
+        ② The Importance of Being Surrounded by Experts<br>
+        ③ The Pratfall Effect: Why Perfect People Need Flaws<br>
+        ④ Why Problem-Solving Groups Always Fail<br>
+        ⑤ The Hidden Dangers of Making Mistakes
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ The Pratfall Effect: Why Perfect People Need Flaws</b></p>
+          <p>해설: 사람들은 지나치게 완벽한 사람에게 거리감을 느끼며, 오히려 그들이 가끔 빈틈(결점)을 보여줄 때 호감을 느낀다는 것이 이 글의 핵심입니다. 따라서 '실수 효과: 왜 완벽한 사람들에게 결점이 필요한가'가 가장 적절한 제목입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        It would seem obvious that the more competent someone is, the more we will like that person. We stand a better chance of doing well at our life tasks if we surround ourselves with people who know what they’re doing and have a lot to teach us. But the research evidence is ①<u>paradoxical</u>: In problem-solving groups, the participants who are considered the most competent tend ②<u>not</u> to be the ones who are best liked. Why? One possibility is that those who are too competent make us ③<u>comfortable</u>. They may seem unapproachable, distant, superhuman ― and make us look bad by comparison. If this were true, we might like people more if they reveal some evidence of ④<u>fallibility</u>. For example, if your friend is a brilliant mathematician and athlete, you might like him better if, every once in a while, they ⑤<u>screwed up</u>.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ comfortable</b></p>
+          <p>해설: 너무 유능한 사람은 우리로 하여금 열등감을 느끼게 하고 비교하게 만들어 '불편하게(uncomfortable)' 만든다고 해야 논리에 맞습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        It would seem obvious that the more competent someone is, the more we will like that person. But the research evidence is paradoxical: In problem-solving groups, the participants who are considered the most competent and have the best ideas tend not to be the ones who are best liked. Why? One possibility is that, although we like to be around competent people, those who are too competent make us uncomfortable. They may seem unapproachable, distant, superhuman ― and make us look bad (and feel worse) by comparison. If this were true, we might like people more if they reveal some evidence of ______________________________. For example, if your friend is a brilliant mathematician, superb athlete, and gourmet cook, you might like him or her better if, every once in a while, they screwed up.
+      </div>
+      <div class="exam-choices">
+        ① intellectual superiority<br>
+        ② unwavering confidence<br>
+        ③ flawless execution<br>
+        ④ human fallibility<br>
+        ⑤ distant aloofness
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ human fallibility</b></p>
+          <p>해설: 완벽해 보이는 친구가 가끔 실수를 할 때(screwed up) 더 좋아진다고 했으므로, 빈칸에는 '불완전성, 오류를 범할 수 있음(fallibility)'을 뜻하는 어휘가 들어가야 합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        만약 이것이 사실이라면, 우리는 사람들을 더 좋아할지도 모른다.<br><br>
+        [조건]<br>
+        1. 현재 사실에 대한 가정을 나타내는 가정법 과거를 사용할 것.<br>
+        2. 주어진 단어를 한 번씩만 사용하여 올바르게 배열할 것. (어형 변화 없음)<br>
+        ( we / people / this / true / like / if / might / more / were )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: If this were true, we might like people more</b></p>
+          <p>해설: 현재 사실에 대한 가정을 나타내는 '가정법 과거' 영작입니다. 조건절은 `If + 주어 + were` (If this were true) 형태를 취하고, 주절은 `주어 + 조동사과거형 + 동사원형` (we might like people more) 구조로 작성합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

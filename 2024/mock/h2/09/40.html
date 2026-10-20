@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 40번 · 요약문 완성</div>
+    <h1 class="title">PEER PRESENCE AND HELPING BEHAVIOR<br><span>How Age Affects Our Concern for Others' Judgment</span></h1>
+    <p class="header-lead">타인의 시선을 의식하는 현상은 나이에 따라 다르게 나타나며, 나이가 들수록 또래의 평가를 의식해 타인을 돕는 행동을 주저하게 됩니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 타인의 시선(Peer Evaluation)과 이타적 행동(Helping Behavior)의 관계</li>
+        <li><b>[배경 맥락]:</b> 심리학자 Ervin Staub의 연구에 따르면, 나이에 따라 누군가와 함께 있을 때 곤경에 처한 사람을 돕는 빈도가 다르게 나타납니다.</li>
+        <li><b>[논리 요약]:</b> 저학년 아이들은 또래와 함께 있을 때 돕는 행동을 더 편안해하지만, 고학년 아이들은 또래에게 평가받는 것과 과민반응으로 당혹스러워지는 것을 두려워하여 돕는 행동을 줄이고 의도적으로 무반응(포커페이스)을 보입니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      The concern about how we appear to others can be seen in children, though work by the psychologist Ervin Staub suggests that the effect may vary with age. In a study where children heard another child in distress, young children (kindergarten through second grade) were more likely to help the child in distress when with another child than when alone. But for older children ― in fourth and sixth grade ― the effect reversed: they were less likely to help a child in distress when they were with a peer than when they were alone. Staub suggested that younger children might feel more comfortable acting when they have the company of a peer, whereas older children might feel more concern about being judged by their peers and fear feeling embarrassed by overreacting. Staub noted that “older children seemed to discuss the distress sounds less and to react to them less openly than younger children.” In other words, the older children were deliberately putting on a poker face in front of their peers. The study suggests that, contrary to younger children, older children are less likely to help those in distress in the presence of others because they care more about how they are evaluated.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 나이가 들수록 또래의 평가를 더 많이 의식하게 되어, 타인이 있을 때 곤경에 처한 사람을 돕는 행동을 덜 하게 된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. The concern about how we appear to others / can be seen in children, / <mark>though</mark> work by the psychologist Ervin Staub suggests / <mark>that</mark> the effect may vary with age.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 우리가 타인에게 어떻게 보이는지에 대한 걱정은 / 아이들에게서도 볼 수 있다, / 비록 심리학자 Ervin Staub의 연구가 시사하지만 / 그 효과가 나이에 따라 다를 수 있다는 것을.</p>
+            <p><b>[구문 해설]</b> `how we appear to others`는 전치사 `about`의 목적어로 쓰인 간접의문문입니다. `vary with`는 '~에 따라 다르다'는 뜻입니다.</p>
+            <p><b>[핵심 어휘]</b> concern(걱정, 염려), appear(~처럼 보이다), vary(다르다, 변하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. In a study / <mark>where</mark> children heard another child in distress, / young children (kindergarten through second grade) / <mark>were more likely to</mark> help the child in distress / when with another child / than when alone.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 한 연구에서 / 아이들이 괴로워하는 다른 아이의 소리를 들은, / 어린 아이들은 (유치원부터 2학년까지) / 괴로워하는 아이를 도울 가능성이 더 높았다 / 다른 아이와 함께 있을 때 / 혼자 있을 때보다.</p>
+            <p><b>[구문 해설]</b> 관계부사 `where`가 `a study`를 수식합니다. `when with another child`는 `when (they were) with~`에서 주어와 be동사가 생략된 형태입니다.</p>
+            <p><b>[핵심 어휘]</b> distress(고통, 괴로움), be likely to(~할 가능성이 있다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. But for older children / ― in fourth and sixth grade ― / the effect <mark>reversed</mark>: / they <mark>were less likely to</mark> help a child in distress / when they were with a peer / than when they were alone.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 하지만 고학년 아이들의 경우 / - 4학년과 6학년 - / 그 효과는 반대로 나타났다: / 그들은 괴로워하는 아이를 도울 가능성이 더 낮았다 / 또래와 함께 있을 때 / 혼자 있을 때보다.</p>
+            <p><b>[구문 해설]</b> 앞선 저학년의 경우와 대조되는 결과를 `reversed`라는 동사로 명확히 보여줍니다.</p>
+            <p><b>[핵심 어휘]</b> reverse(뒤바뀌다, 반대되다), peer(또래)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. Staub suggested / <mark>that</mark> younger children might feel more comfortable acting / when they have the company of a peer, / <mark>whereas</mark> older children might feel more concern / about being judged by their peers / and fear feeling embarrassed / by <mark>overreacting</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> Staub는 시사했다 / 더 어린 아이들은 행동하는 것을 더 편안하게 느낄지도 모른다고 / 또래의 동반이 있을 때, / 반면에 더 나이가 많은 아이들은 더 많은 걱정을 느낄지도 모른다고 / 또래에 의해 평가받는 것에 대해 / 그리고 당혹스러움을 느끼는 것을 두려워할지도 (모른고) / 과민반응함으로써.</p>
+            <p><b>[구문 해설]</b> `whereas`는 대조를 나타내는 접속사입니다. `fear`는 `feel more concern`의 `feel`과 병렬 구조를 이루고 있습니다. `being judged`는 전치사 `about`의 목적어로 쓰인 동명사 수동태입니다.</p>
+            <p><b>[핵심 어휘]</b> comfortable(편안한), company(함께 있음, 동반), judge(평가하다, 판단하다), embarrassed(당혹스러운), overreact(과민반응하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. Staub noted / <mark>that</mark> “older children seemed to discuss the distress sounds less / and to react to them less openly / than younger children.”</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> Staub는 주목했다 / "더 나이가 많은 아이들은 괴로워하는 소리에 대해 덜 논의하고 / 그것들에 덜 공개적으로 반응하는 것처럼 보였다"고 / 더 어린 아이들보다.</p>
+            <p><b>[구문 해설]</b> `seem to discuss`와 `(seem) to react`가 병렬 구조를 이룹니다.</p>
+            <p><b>[핵심 어휘]</b> note(주목하다, 언급하다), discuss(논의하다), openly(공개적으로)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. In other words, / the older children were deliberately <mark>putting on a poker face</mark> / in front of their peers.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 다시 말해서, / 더 나이가 많은 아이들은 의도적으로 포커페이스를 하고 있었다 / 그들의 또래들 앞에서.</p>
+            <p><b>[구문 해설]</b> `put on a poker face`는 감정을 드러내지 않는 무표정을 짓는다는 관용적 표현입니다.</p>
+            <p><b>[핵심 어휘]</b> in other words(다시 말해서), deliberately(의도적으로), put on a poker face(포커페이스를 하다, 무표정을 짓다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. The study suggests that, / contrary to younger children, / older children are less likely to help those in distress / in the presence of others / because they care more / about <mark>how they are evaluated</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이 연구는 시사한다, / 더 어린 아이들과는 반대로, / 더 나이가 많은 아이들은 괴로워하는 사람들을 도울 가능성이 더 낮다는 것을 / 타인이 있는 곳에서 / 그들이 더 많이 신경 쓰기 때문에 / 자신들이 어떻게 평가받는지에 대해.</p>
+            <p><b>[구문 해설]</b> 지문 전체의 내용을 요약하는 문장입니다. `how they are evaluated`는 전치사 `about`의 목적어로 쓰인 간접의문문 수동태 구조입니다.</p>
+            <p><b>[핵심 어휘]</b> contrary to(~와는 반대로), in the presence of(~이 있는 곳에서, ~의 앞에서), evaluate(평가하다)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (연령별 이타적 행동과 타인의 시선)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 타인의 시선과 나이</span>
+        <h4>나이에 따른 상반된 효과</h4>
+        <p>타인에게 어떻게 보일지 걱정하는 현상은 아이들에게서도 나타나지만, 심리학자 Staub의 연구는 이 효과가 나이에 따라 다르게 적용됨을 보여줍니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 연령별 행동의 차이</span>
+        <h4>편안함 vs 두려움</h4>
+        <p>저학년은 또래와 함께 있을 때 돕는 행동을 더 편안하게 여겨 잘 돕지만, 고학년은 오히려 타인의 평가를 의식하고 과민반응으로 인한 당혹감을 두려워하여 덜 돕습니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 고학년의 의도적 무반응</h4>
+        <h4>포커페이스와 평가에 대한 걱정</h4>
+        <p>결과적으로 고학년 아이들은 또래 앞에서 의도적으로 무반응(포커페이스)을 보이며, 이는 그들이 타인의 평가를 더 많이 신경 쓰기 때문입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. In a study [ where / which ] children heard another child in distress, young children were more likely to help...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 뒤에 '아이들이 소리를 들었다'는 완전한 문장이 이어지므로, 선행사 a study를 수식하는 관계부사 where가 적절합니다.">where</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 which 뒤에는 주어나 목적어가 빠진 불완전한 문장이 와야 합니다.">which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. ...older children might feel more concern about being judged by their peers and fear feeling embarrassed by [ overreacting / overreacted ].</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 전치사 by 뒤에는 명사 역할을 하는 동명사가 와야 하므로 overreacting이 맞습니다.">overreacting</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 전치사 뒤에는 과거분사나 동사 형태가 바로 올 수 없습니다.">overreacted</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        The concern about how we appear to others can be seen in children, though work by the psychologist Ervin Staub suggests that the effect may vary with age. In a study where children heard another child in distress, young children were more likely to help the child in distress when with another child than when alone. But for older children the effect reversed: they were less likely to help a child in distress when they were with a peer than when they were alone. Staub suggested that younger children might feel more comfortable acting when they have the company of a peer, whereas older children might feel more concern about being judged by their peers and fear feeling embarrassed by overreacting. Staub noted that “older children seemed to discuss the distress sounds less and to react to them less openly than younger children.” In other words, the older children were deliberately ______________________________ in front of their peers.
+      </div>
+      <div class="exam-choices">
+        ① encouraging their peers to act quickly<br>
+        ② putting on a poker face<br>
+        ③ showing deep empathy for the child<br>
+        ④ criticizing the child in distress<br>
+        ⑤ leaving the room to avoid the situation
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ② putting on a poker face</b></p>
+          <p>해설: 고학년 아이들은 평가받는 것을 두려워하여 괴로워하는 소리에 덜 공개적으로 반응한다고 했으므로, '의도적으로 무표정(포커페이스)을 짓고 있었다'는 내용이 가장 논리적입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        The concern about how we appear to others can be seen in children, though work by the psychologist Ervin Staub suggests that the effect may ①<u>vary</u> with age. In a study where children heard another child in distress, young children were ②<u>more</u> likely to help the child in distress when with another child than when alone. But for older children the effect ③<u>reversed</u>: they were less likely to help a child in distress when they were with a peer than when they were alone. Staub suggested that younger children might feel more comfortable acting when they have the company of a peer, whereas older children might feel more concern about being ④<u>judged</u> by their peers and fear feeling embarrassed by overreacting. Staub noted that “older children seemed to discuss the distress sounds less and to react to them ⑤<u>more</u> openly than younger children.”
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ⑤ more</b></p>
+          <p>해설: 고학년 아이들은 평가를 의식하고 당혹감을 두려워하기 때문에 어린 아이들보다 괴로워하는 소리에 '덜(less)' 공개적으로 반응한다고 해야 올바른 문맥이 됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        [주어진 문장] But for older children ― in fourth and sixth grade ― the effect reversed: they were less likely to help a child in distress when they were with a peer than when they were alone.<br><br>
+        The concern about how we appear to others can be seen in children, though work by the psychologist Ervin Staub suggests that the effect may vary with age. ( ① ) In a study where children heard another child in distress, young children (kindergarten through second grade) were more likely to help the child in distress when with another child than when alone. ( ② ) Staub suggested that younger children might feel more comfortable acting when they have the company of a peer. ( ③ ) Whereas older children might feel more concern about being judged by their peers and fear feeling embarrassed by overreacting. ( ④ ) Staub noted that “older children seemed to discuss the distress sounds less and to react to them less openly than younger children.” ( ⑤ ) In other words, the older children were deliberately putting on a poker face in front of their peers.
+      </div>
+      <div class="exam-choices">
+        ①<br>②<br>③<br>④<br>⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ②</b></p>
+          <p>해설: 저학년 아이들의 경우 또래와 있을 때 더 잘 도왔다는 실험 결과(①번 뒤)와 대조되는 결과를 제시하는 주어진 문장이 오고, 그 뒤에 Staub가 그 이유를 분석(저학년의 편안함 vs 고학년의 걱정)하는 내용으로 이어지는 것이 자연스럽습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        더 나이가 많은 아이들은 자신들이 어떻게 평가받는지에 대해 더 많이 신경 쓰기 때문에 타인이 있는 곳에서 괴로워하는 사람들을 도울 가능성이 더 낮다.<br><br>
+        [조건]<br>
+        1. 'be less likely to' 구문과 전치사구 'in the presence of'를 사용할 것.<br>
+        2. 간접의문문 수동태를 활용할 것.<br>
+        3. 아래 단어들을 모두 올바르게 배열할 것. (어형 변화 없음)<br>
+        ( in / evaluated / are / those / how / older / care / because / children / distress / presence / likely / they / to / are / more / others / the / less / help / of / about / they )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: older children are less likely to help those in distress in the presence of others because they care more about how they are evaluated</b></p>
+          <p>해설: 주절 'older children are less likely to help those in distress'를 먼저 쓰고, 부사구 'in the presence of others(타인이 있는 곳에서)'를 붙입니다. 그 뒤에 이유를 나타내는 접속사 'because they care more about'을 쓴 후, 전치사의 목적어인 간접의문문 'how they are evaluated'로 마무리합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 34번 · 빈칸추론</div>
+    <h1 class="title">THE PARADOX OF EXPERTISE<br><span>Why Masters Struggle to Teach the Basics</span></h1>
+    <p class="header-lead">어떤 분야에 능통한 전문가일수록 그 지식이 암묵적이고 직관적이 되어 기초를 명확히 설명하는 데 어려움을 겪습니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 암묵적 지식(Implicit Knowledge)과 전문가의 맹점</li>
+        <li><b>[배경 맥락]:</b> 어떤 분야에서 뛰어난 성과를 내는 전문가일수록, 자신이 어떻게 그것을 해내는지 그 '기초 과정'을 말로 설명하는 데는 오히려 취약하다는 역설적 현상을 설명합니다.</li>
+        <li><b>[논리 요약]:</b> 전문가의 지식은 명시적이기보다 직관적이고 암묵적이어서 숙달될수록 기초에 대한 의식적 자각이 줄어들며, 이를 언어로 설명하려 하면 오히려 수행 능력이 떨어지기도 한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      It’s often said that those who can’t do, teach. It would be more accurate to say that those who can do, can’t teach the basics. A great deal of expert knowledge is implicit, not explicit. The further you progress toward mastery, the less conscious awareness you often have of the fundamentals. Experiments show that skilled golfers and wine aficionados have a hard time describing their putting and tasting techniques — even asking them to explain their approaches is enough to interfere with their performance, so they often stay on autopilot. When I first saw an elite diver do four and a half somersaults, I asked how he managed to spin so fast. His answer: “Just go up in a ball.” Experts often have an intuitive understanding of a route, but they struggle to clearly express all the steps to take. Their brain dump is partially filled with garbage.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 지식이 암묵적이고 직관적인 전문가는 기초 과정에 대한 자각이 부족하여 자신이 하는 일을 명확히 가르치고 설명하는 데 어려움을 겪는다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. It’s often said that those who can’t do, / teach.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 할 수 없는 사람들이 / 가르친다고 종종 말해진다.</p>
+            <p><b>[구문 해설]</b> `It is said that ~`은 '~라고 말해진다'라는 수동태 구문입니다. `those who`는 '~하는 사람들'을 의미합니다.</p>
+            <p><b>[핵심 어휘]</b> those who(~하는 사람들)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. It would be more accurate to say / <mark>that</mark> those who can do, / can’t teach the basics.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> ~라고 말하는 것이 더 정확할 것이다 / 할 수 있는 사람들이 / 기초를 가르칠 수 없다고.</p>
+            <p><b>[구문 해설]</b> `It`은 가주어, `to say that ~` 이하가 진주어입니다. `that`은 명사절을 이끄는 접속사입니다.</p>
+            <p><b>[핵심 어휘]</b> accurate(정확한), the basics(기초, 기본)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. A great deal of expert knowledge / is <mark>implicit</mark>, / not explicit.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 전문가 지식의 상당 부분은 / 암묵적이다, / 명시적인 것이 아니라.</p>
+            <p><b>[구문 해설]</b> `A great deal of`는 셀 수 없는 명사 앞에 쓰여 '많은, 상당한'의 의미를 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> a great deal of(상당한, 많은), implicit(암묵적인, 내포된), explicit(명시적인, 뚜렷한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. <mark>The further</mark> you progress toward mastery, / <mark>the less</mark> conscious awareness you often have / of the fundamentals.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 숙달을 향해 당신이 더 나아갈수록, / 당신은 흔히 의식적인 자각을 덜 갖게 된다 / 기초에 대해.</p>
+            <p><b>[구문 해설]</b> `The + 비교급 ~, the + 비교급 ...` 구문으로 '~하면 할수록 더 ...하다'는 비례 관계를 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> progress(나아가다, 진전하다), mastery(숙달, 통달), conscious(의식적인), awareness(자각, 인식), fundamental(기초, 기본 원칙)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. Experiments show / <mark>that</mark> skilled golfers and wine aficionados have a hard time / <mark>describing</mark> their putting and tasting techniques / — even asking them to explain their approaches / is enough to <mark>interfere with</mark> their performance, / so they often stay on autopilot.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 실험은 보여준다 / 숙련된 골퍼와 와인 애호가들이 어려움을 겪는다는 것을 / 그들의 퍼팅과 테이스팅 기술을 설명하는 데 / - 심지어 그들에게 그들의 접근법을 설명하라고 요구하는 것조차 / 그들의 수행을 방해하기에 충분하다, / 그래서 그들은 흔히 자동 조종 상태에 머문다.</p>
+            <p><b>[구문 해설]</b> `have a hard time -ing`는 '~하는 데 어려움을 겪다'라는 관용 표현입니다. 대시(—) 뒤의 문장에서 동명사 주어 `asking them...`에 맞춰 단수 동사 `is`가 쓰였습니다. `asking + 목적어 + to부정사` 구조도 확인해야 합니다.</p>
+            <p><b>[핵심 어휘]</b> aficionado(애호가), describe(설명하다, 묘사하다), approach(접근법), interfere with(~을 방해하다), performance(수행, 실력), autopilot(자동 조종)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. When I first saw an elite diver <mark>do</mark> four and a half somersaults, / I asked how he managed to spin so fast.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 내가 처음 어떤 엘리트 다이버가 4회전 반 공중제비를 도는 것을 보았을 때, / 나는 어떻게 그가 그렇게 빨리 회전할 수 있었는지 물었다.</p>
+            <p><b>[구문 해설]</b> 지각동사 `saw` + 목적어(an elite diver) + 목적격 보어로 동사원형 `do`가 사용되었습니다. `manage to`는 '가까스로 ~하다, 어떻게든 ~해내다'는 뜻입니다.</p>
+            <p><b>[핵심 어휘]</b> somersault(공중제비), manage to(~해내다), spin(회전하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. His answer: “Just go up in a ball.”</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그의 대답: "그냥 공 모양으로 말아서 올라가세요."</p>
+            <p><b>[구문 해설]</b> 전문가가 자신의 복잡한 기술을 기초부터 구체적으로 설명하지 못하고 직관적인 결과물(공 모양)로 단순화해서 말하는 상황을 보여줍니다.</p>
+            <p><b>[핵심 어휘]</b> go up(올라가다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. Experts often have an intuitive understanding of a route, / but they struggle to clearly express / all the steps <mark>to take</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 전문가는 종종 경로에 대한 직관적인 이해를 갖는다, / 하지만 그들은 명확하게 표현하는 데 어려움을 겪는다 / 취해야 할 모든 단계들을.</p>
+            <p><b>[구문 해설]</b> `to take`는 형용사적 용법의 to부정사로 앞의 명사 `the steps`를 수식하여 '취해야 할 단계들'로 해석합니다.</p>
+            <p><b>[핵심 어휘]</b> intuitive(직관적인), route(경로), struggle to(~하는 데 어려움을 겪다), express(표현하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">9. Their brain dump is partially filled with garbage.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들이 쏟아내는 정보는 부분적으로 쓰레기로 채워져 있다.</p>
+            <p><b>[구문 해설]</b> 전문가들이 지식을 언어로 꺼내놓을 때(brain dump), 초보자에게 필요한 구체적 단계가 생략되어 실질적인 도움이 안 되는 무의미한 말(garbage)이 섞여 있음을 비유적으로 표현했습니다. `be filled with`는 '~로 채워져 있다'는 뜻입니다.</p>
+            <p><b>[핵심 어휘]</b> brain dump(머릿속의 정보를 쏟아내는 것), partially(부분적으로), garbage(쓰레기, 무의미한 것)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (전문가와 기초 교육의 역설)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 오해와 진실</span>
+        <h4>기초를 가르치지 못하는 실력자</h4>
+        <p>"할 수 없는 자가 가르친다"는 통념과 달리, 실제로는 "잘하는 사람이 오히려 기초를 가르치지 못한다"는 것이 더 정확합니다. 이는 전문가의 지식이 명시적이지 않고 '암묵적'이기 때문입니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 숙달과 자각의 반비례</span>
+        <h4>설명이 방해가 되는 자동 조종 상태</h4>
+        <p>숙련될수록 기초에 대한 의식적 자각이 줄어듭니다. 골퍼나 와인 애호가처럼 이를 억지로 언어로 설명하게 하면 오히려 무의식적이고 자연스러운 수행 능력이 방해를 받습니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 직관의 언어적 한계</span>
+        <h4>무의미해진 전문가의 조언</h4>
+        <p>엘리트 다이버의 사례처럼 전문가는 직관적 결론만 말할 뿐 세부 단계를 명확히 표현하지 못하여, 그들이 언어로 쏟아내는 조언(brain dump)은 학습자에게 쓸모없는 정보(garbage)가 되곤 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. The further you progress toward mastery, the [ less / least ] conscious awareness you often have of the fundamentals.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. '~하면 할수록 더 ~하다'라는 의미를 만들기 위해 'The + 비교급 ~, the + 비교급' 구조가 필요하므로 less가 정답입니다.">less</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. least는 최상급이므로 'The + 비교급' 구문과 짝을 이룰 수 없습니다.">least</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. Experiments show that skilled golfers and wine aficionados have a hard time [ to describe / describing ] their putting and tasting techniques.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. '~하는 데 어려움을 겪다'라는 표현은 관용적으로 'have a hard time -ing(동명사)' 형태를 취합니다.">describing</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 'have a hard time' 뒤에는 to부정사가 아니라 동명사가 이어져야 합니다.">to describe</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        It’s often said that those who can’t do, teach. It would be more accurate to say that those who can do, can’t teach the basics. A great deal of expert knowledge is implicit, not explicit. The further you progress toward mastery, the less conscious awareness you often have of the fundamentals. Experiments show that skilled golfers and wine aficionados have a hard time describing their putting and tasting techniques — even asking them to explain their approaches is enough to interfere with their performance, so they often stay on autopilot. When I first saw an elite diver do four and a half somersaults, I asked how he managed to spin so fast. His answer: “Just go up in a ball.” Experts often have an intuitive understanding of a route, but they struggle to clearly express all the steps to take.
+      </div>
+      <div class="exam-choices">
+        ① Why We Should Learn from the Experts First<br>
+        ② The Power of Explicit Knowledge in Sports<br>
+        ③ Autopilot Mode: The Enemy of Perfect Performance<br>
+        ④ Why Experts Struggle to Teach the Basics<br>
+        ⑤ The Importance of Explaining Your Techniques
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ Why Experts Struggle to Teach the Basics</b></p>
+          <p>해설: 이 글은 전문가일수록 지식이 직관적이고 암묵적으로 변하여(자동 조종 상태), 자신이 하는 동작의 기초 원리나 단계를 타인에게 명확하게 언어로 설명하고 가르치는 데 오히려 어려움을 겪는다는 내용을 다루고 있습니다. 따라서 '전문가들이 기초를 가르치는 데 고군분투하는 이유'가 가장 알맞은 제목입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        It’s often said that those who can’t do, teach. It would be more accurate to say that those who can do, can’t teach the basics. A great deal of expert knowledge is ①<u>explicit</u>, not implicit. The further you progress toward mastery, the ②<u>less</u> conscious awareness you often have of the fundamentals. Experiments show that skilled golfers and wine aficionados have a hard time ③<u>describing</u> their putting and tasting techniques — even asking them to explain their approaches is enough to ④<u>interfere</u> with their performance, so they often stay on autopilot. Experts often have an ⑤<u>intuitive</u> understanding of a route, but they struggle to clearly express all the steps to take. Their brain dump is partially filled with garbage.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① explicit</b></p>
+          <p>해설: 원문에서 전문가의 지식은 언어로 겉으로 드러나는 '명시적(explicit)'인 것이 아니라 내면화된 '암묵적(implicit)'인 것이라고 설명하고 있습니다. 본 변형 문제에서는 ①번의 위치가 원문의 implicit과 명시적이라는 explicit의 자리를 서로 바꿔놓아 문맥을 훼손했습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        [주어진 문장] Experiments show that skilled golfers and wine aficionados have a hard time describing their putting and tasting techniques — even asking them to explain their approaches is enough to interfere with their performance, so they often stay on autopilot.<br><br>
+        It’s often said that those who can’t do, teach. ( ① ) It would be more accurate to say that those who can do, can’t teach the basics. ( ② ) A great deal of expert knowledge is implicit, not explicit. ( ③ ) The further you progress toward mastery, the less conscious awareness you often have of the fundamentals. ( ④ ) When I first saw an elite diver do four and a half somersaults, I asked how he managed to spin so fast. His answer: “Just go up in a ball.” ( ⑤ ) Experts often have an intuitive understanding of a route, but they struggle to clearly express all the steps to take. Their brain dump is partially filled with garbage.
+      </div>
+      <div class="exam-choices">
+        ①<br>②<br>③<br>④<br>⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④</b></p>
+          <p>해설: 숙달될수록 기초에 대한 의식적 자각이 적어진다는 이론적 설명(③번 뒤 문장)에 대한 구체적인 증거와 예시로, '실험(Experiments)에서 골퍼와 와인 애호가들이 설명을 어려워하고 수행 능력이 떨어진다'는 내용의 주어진 문장이 ④번 위치에 들어가는 것이 자연스럽습니다. 그 후 필자가 직접 겪은 다이버의 또 다른 예시가 이어집니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        숙달을 향해 더 나아갈수록, 너는 종종 기초에 대한 의식적인 자각을 덜 갖게 된다.<br><br>
+        [조건]<br>
+        1. 'The + 비교급 ~, the + 비교급 ...' 구문을 활용하여 영작할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        ( progress / conscious / of / the / mastery / you / less / you / have / further / often / fundamentals / the / awareness / toward )<br>
+        [배점 및 채점 기준]<br>
+        - 5점 만점<br>
+        - 'The + 비교급' 구문 어순 오류 시 0점.<br>
+        - 단어 누락 시 각 1점 감점.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: The further you progress toward mastery, the less conscious awareness you often have of the fundamentals.</b></p>
+          <p>해설: 고등학교 핵심 어법인 'The 비교급 주어 동사, the 비교급 주어 동사' 구문을 활용하는 문제입니다. 앞부분은 'The further(비교급) you(주어) progress(동사) toward mastery'로 구성하고, 뒷부분은 목적어인 '의식적인 자각(conscious awareness)'이 수량형용사 'less'의 수식을 받아 비교급 덩어리로 함께 앞으로 튀어나가 'the less conscious awareness you often have of the fundamentals'가 되어야 합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

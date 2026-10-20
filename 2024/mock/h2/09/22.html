@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 2024년 9월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고2 2024년 9월</span>
+    </div>
+    <div class="meta-badge">학력평가 22번 · 요지추론</div>
+    <h1 class="title">BREAKING SOCIAL BARRIERS FOR INFORMATION<br><span>Communication and Rumors in Threatening Situations</span></h1>
+    <p class="header-lead">재난이나 위협적인 상황에서는 정보에 대한 갈망으로 사회적 장벽이 낮아지며, 신뢰할 수 있는 출처가 없을 경우 소문이 확산됩니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 위기 상황에서의 의사소통과 소문의 확산</li>
+        <li><b>[배경 맥락]:</b> 새로운 위협 상황에서는 결정과 정보가 필요하여 낯선 사람과도 소통하게 되며, 권위 있는 정보 출처가 부재할 시 소문이 무성해짐.</li>
+        <li><b>[논리 요약]:</b> 위협적인 상황이나 재난 발생 시 정보에 대한 절실한 필요성 때문에 기존의 사회적 장벽이 낮아지며, 신뢰할 수 있는 정보가 부족하면 두려움으로 인해 미확인 소문이 쉽게 전파된다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Any new or threatening situation may require us to make decisions and this requires information. So important is communication during a disaster that normal social barriers are often lowered. We will talk to strangers in a way we would never consider normally. Even relatively low grade disruption of our life such as a fire drill or a very late train seems to give us the permission to break normal etiquette and talk to strangers. The more important an event to a particular public, the more detailed and urgent the requirement for news becomes. Without an authoritative source of facts, whether that is a newspaper or trusted broadcast station, rumours often run riot. Rumours start because people believe their group to be in danger and so, although the rumour is unproven, feel they should pass it on. For example, if a worker heard that their employer’s business was doing badly and people were going to be made redundant, they would pass that information on to colleagues.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 위협적인 상황에서는 정보가 필요하여 낯선 이와의 사회적 장벽이 낮아지며, 권위 있는 정보원이 없을 때 소문이 확산된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Any new or threatening situation / may require us to make decisions / and this requires information.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 어떠한 새롭거나 위협적인 상황은 / 우리가 결정을 내리도록 요구할 수 있고 / 이것은 정보를 필요로 한다.</p>
+            <p><b>[구문 해설]</b> `require + 목적어(us) + to부정사(to make)` 구문으로 '목적어가 ~하도록 요구하다'의 의미를 지닙니다. 대명사 `this`는 앞 절의 내용 전체를 지칭합니다.</p>
+            <p><b>[핵심 어휘]</b> threatening(위협적인), require(요구하다, 필요로 하다), decision(결정)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. <mark>So important</mark> is communication during a disaster <mark>that</mark> normal social barriers are often lowered.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 재난 중의 의사소통은 매우 중요해서 / 정상적인 사회적 장벽이 종종 낮아진다.</p>
+            <p><b>[구문 해설]</b> 보어인 `So important`가 문장 맨 앞으로 도치되면서 주어(communication)와 동사(is)의 어순이 도치된 구조입니다. 형태는 도치되어 있으나 근본적으로는 '너무 ~해서 ...하다'를 뜻하는 `so ~ that` 구문입니다.</p>
+            <p><b>[핵심 어휘]</b> communication(의사소통), disaster(재난), barrier(장벽), lower(낮추다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. We will talk to strangers / in a way we would never consider normally.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 우리는 낯선 사람들에게 말을 걸 것이다 / 우리가 평소에는 결코 고려하지 않을 방식으로.</p>
+            <p><b>[구문 해설]</b> `in a way` 뒤에 목적격 관계대명사 that 또는 which가 생략되어 있으며, 뒤의 절(we would never consider ~)이 way를 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> stranger(낯선 사람), normally(평소에, 정상적으로)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. Even relatively low grade disruption of our life / such as a fire drill or a very late train / seems to give us the permission / to break normal etiquette and talk to strangers.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 비교적 낮은 수준의 우리 삶의 혼란조차도 / 소방 훈련이나 매우 늦은 기차와 같은 / 우리에게 허락을 주는 것처럼 보인다 / 정상적인 에티켓을 깨고 낯선 사람들에게 말을 걸.</p>
+            <p><b>[구문 해설]</b> `seems to give`(~을 주는 것 같다). 4형식 동사 give 뒤에 간접목적어 us, 직접목적어 the permission이 왔습니다. `to break`와 `(to) talk`가 병렬 구조를 이루며 permission을 후위 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> relatively(비교적), disruption(혼란, 붕괴), fire drill(소방 훈련), permission(허락, 허가), etiquette(에티켓, 예절)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. <mark>The more important</mark> an event (is) to a particular public, / <mark>the more detailed and urgent</mark> the requirement for news becomes.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 특정 대중에게 어떤 사건이 더 중요할수록, / 뉴스에 대한 요구는 더 상세하고 긴급해진다.</p>
+            <p><b>[구문 해설]</b> `The + 비교급 ~, the + 비교급 ...` 구문으로 '~하면 할수록 더 ...하다'의 의미를 나타냅니다. 첫 번째 절의 be동사 is가 생략되어 있습니다.</p>
+            <p><b>[핵심 어휘]</b> particular(특정한), public(대중), detailed(상세한), urgent(긴급한), requirement(요구)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. Without an authoritative source of facts, / whether that is a newspaper or trusted broadcast station, / rumours often run riot.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 사실에 대한 권위 있는 출처가 없다면, / 그것이 신문이든 신뢰받는 방송국이든 간에, / 소문이 종종 걷잡을 수 없이 퍼진다.</p>
+            <p><b>[구문 해설]</b> 전치사 `Without`은 가정의 의미를 내포합니다. `whether A or B`는 'A이든 B이든 간에'라는 의미의 양보 부사절을 이끕니다.</p>
+            <p><b>[핵심 어휘]</b> authoritative(권위 있는), source(출처), trusted(신뢰받는), broadcast station(방송국), rumour(소문), run riot(걷잡을 수 없이 퍼지다, 날뛰다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. Rumours start / because people believe their group to be in danger / and so, although the rumour is unproven, / feel they should pass it on.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 소문은 시작된다 / 사람들이 자신의 그룹이 위험에 처해 있다고 믿기 때문에 / 그래서, 비록 그 소문이 입증되지 않았더라도, / 그것을 전달해야 한다고 느끼기 때문에.</p>
+            <p><b>[구문 해설]</b> `believe + 목적어 + to be` 구조(목적어가 ~라고 믿다). `believe`와 `feel`이 `and so`로 병렬 연결되어 because에 걸립니다. `pass it on`에서 대명사 목적어 it은 반드시 동사와 부사 사이에 위치해야 합니다(이어동사 규칙).</p>
+            <p><b>[핵심 어휘]</b> danger(위험), unproven(입증되지 않은), pass on(전달하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. For example, / if a worker heard that their employer’s business was doing badly / and people were going to be made redundant, / they would pass that information on to colleagues.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 예를 들어, / 만약 어떤 근로자가 자신의 고용주의 사업이 악화되고 있다는 것을 듣는다면 / 그리고 사람들이 해고될 것이라는 (것을 듣는다면), / 그들은 그 정보를 동료들에게 전달할 것이다.</p>
+            <p><b>[구문 해설]</b> 가정법 과거 구문(`If + 주어 + 과거동사 ~, 주어 + would/could/might + 동사원형 ...`)을 사용하여 현재나 미래의 상황에 대한 가정을 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> employer(고용주), doing badly(악화되다, 실적이 나쁘다), redundant(해고된, 불필요한), colleague(동료)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (위협과 소문의 확산)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[INTRODUCTION] 위기 상황과 소통의 필요성</span>
+        <h4>사회적 장벽의 붕괴</h4>
+        <p>새롭거나 위협적인 상황은 결정과 정보를 요구하며, 재난 중에는 의사소통이 매우 중요해져 낯선 사람과도 말을 섞게 하는 등 평소의 사회적 장벽이 낮아짐.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[DEVELOPMENT] 일상적 혼란 속의 정보 요구</span>
+        <h4>에티켓을 넘어서는 정보 탐색</h4>
+        <p>소방 훈련이나 기차 연착 같은 사소한 혼란조차 에티켓을 깨고 소통하게 만들며, 사건이 대중에게 중요할수록 정보(뉴스)에 대한 요구는 더 상세하고 긴급해짐.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[CONCLUSION] 정보 부재와 소문의 전파</span>
+        <h4>권위의 부재가 부르는 소문 확산</h4>
+        <p>신뢰할 만한 권위 있는 정보 출처가 없으면, 사람들은 속한 집단이 위험하다고 믿는 두려움 때문에 미확인된 소문이라도 동료들에게 전파하고 확산시킴.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. [ So important / So importantly ] is communication during a disaster that normal social barriers are often lowered.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 문장의 본동사인 be동사(is)의 주격 보어 역할을 하므로 형용사인 important가 와야 하며, So important가 강조를 위해 도치된 형태입니다.">So important</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 부사인 importantly는 be동사(is)의 보어 자리에 올 수 없습니다.">So importantly</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. The more important an event to a particular public, the [ more detailed / more detail ] and urgent the requirement for news becomes.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다. 동사 becomes의 보어 역할을 하며 뒤의 urgent와 병렬을 이루는 형용사(과거분사형) 형태인 detailed가 필요합니다.">more detailed</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. '더 상세한'이라는 의미의 형용사로 쓰여야 하므로 명사형이나 동사원형인 detail은 적절하지 않습니다.">more detail</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 PROBLEMS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Any new or threatening situation may require us to make decisions and this requires information. So important is communication during a disaster that normal social barriers are often lowered. We will talk to strangers in a way we would never consider normally. Even relatively low grade disruption of our life such as a fire drill or a very late train seems to give us the permission to break normal etiquette and talk to strangers. The more important an event to a particular public, the more detailed and urgent the requirement for news becomes. Without an authoritative source of facts, whether that is a newspaper or trusted broadcast station, ______________________________.
+      </div>
+      <div class="exam-choices">
+        ① people trust strangers more<br>
+        ② social barriers are strongly reinforced<br>
+        ③ communication becomes entirely impossible<br>
+        ④ rumours often run riot<br>
+        ⑤ logical decisions are made easily
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ rumours often run riot</b></p>
+          <p>해설: 위협적인 상황에서 정보를 간절히 원하는데, 믿을 만한 권위 있는 정보 출처(authoritative source of facts)가 없을 경우에는 '소문이 걷잡을 수 없이 퍼진다(rumours often run riot)'는 것이 문맥상 가장 자연스럽습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        So important is communication during a disaster that normal social barriers are often ①<u>raised</u>. We will talk to strangers in a way we would never consider normally. Even relatively ②<u>low</u> grade disruption of our life such as a fire drill seems to give us the permission to break normal etiquette and talk to strangers. The more important an event to a particular public, the more ③<u>detailed</u> and urgent the requirement for news becomes. Without an ④<u>authoritative</u> source of facts, rumours often run riot. Rumours start because people believe their group to be in danger and so, although the rumour is ⑤<u>unproven</u>, feel they should pass it on.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① raised</b></p>
+          <p>해설: 재난 상황에서는 소통이 중요해져서 평소에 낯선 사람과 이야기하지 않던 사회적 장벽이 '낮아진다(lowered)'고 해야 문맥에 맞습니다. 장벽이 '높아진다(raised)'는 것은 앞뒤 논리와 모순됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        Any new or threatening situation may require us to make decisions and this requires information. So important is communication during a disaster that normal social barriers are often lowered. We will talk to strangers in a way we would never consider normally.
+        <br><br>
+        (A) The more important an event to a particular public, the more detailed and urgent the requirement for news becomes. Without an authoritative source of facts, rumours often run riot.
+        <br><br>
+        (B) Even relatively low grade disruption of our life such as a fire drill or a very late train seems to give us the permission to break normal etiquette and talk to strangers.
+        <br><br>
+        (C) Rumours start because people believe their group to be in danger and so, although the rumour is unproven, feel they should pass it on. For example, if a worker heard that their employer’s business was doing badly...
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ② (B) - (A) - (C)</b></p>
+          <p>해설: 주어진 문장에서 낯선 사람과 평소 안 하던 방식으로 소통하게 된다고 한 뒤, (B)에서 '사소한 혼란'의 예(소방 훈련, 연착)를 들며 부연 설명합니다. 이어서 (A)에서 사태가 더 중요해질수록 정보(뉴스) 요구가 강해지며 신뢰할 출처가 없으면 소문이 퍼진다고 논리가 확장되고, (C)에서 왜 그러한 소문이 시작되고 퍼지는지에 대한 심리적 이유와 예시가 구체적으로 제시됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 우리말 의미와 같도록 주어진 단어를 활용하여 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        [우리말 의미]<br>
+        재난 중의 의사소통은 매우 중요해서 정상적인 사회적 장벽이 종종 낮아진다.<br><br>
+        [조건]<br>
+        1. 본문에 등장하는 도치 구문을 활용할 것.<br>
+        2. 'So important'로 시작할 것.<br>
+        3. 총 14단어로 작성할 것. (철자 및 띄어쓰기 유의)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: So important is communication during a disaster that normal social barriers are often lowered.</b></p>
+          <p>해설: 'so ~ that ...' 구문에서 보어인 'So important'가 문두로 도치된 구조를 영작하는 문제입니다. 주어(communication)와 동사(is)가 도치되어 `So important is communication` 순서로 작성해야 합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
