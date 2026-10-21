@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 40번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 40번 · 요약문 완성</div>
+    <h1 class="title">DOLPHINS' SPECIALIZED BRAINS FOR ECHOLOCATION<br><span>The Power of Parallel Processing in Acoustic Perception</span></h1>
+    <p class="header-lead">돌고래의 뇌는 반향 정위를 위해 어떻게 진화했으며, 병렬 처리 시스템은 어떤 이점을 제공하는가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 반향 정위와 병렬 처리 (Echolocation and Parallel Processing)</li>
+        <li><b>[배경 맥락]:</b> 돌고래는 수중 환경에서 소리의 메아리를 이용해 위치를 파악하는 반향 정위를 사용하며, 이를 위해 뇌의 청각 피질이 특화되도록 진화했다.</li>
+        <li><b>[논리 요약]:</b> 돌고래의 뇌는 반향 정위 신호의 다양한 측면(타이밍, 주파수, 강도 등)을 각각 전담하는 전문화된 영역들을 통해 정보를 '순차적'이 아닌 '병렬적'으로 처리함으로써 인지적 부하를 줄이고 반응 속도를 극대화한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Dolphins' brains have evolved specialized areas dedicated to echolocation, allowing them to process acoustic information more quickly and with less energy. One key adaptation is the structure of the dolphin's auditory pathway. The signals from the ears are rapidly transmitted to the auditory cortex, the brain region responsible for processing sound. However, unlike many other mammals, dolphins have a highly specialized auditory cortex with distinct areas dedicated to processing different aspects of echolocation signals. Some areas may be responsible for analyzing the timing of echoes, while others focus on the frequency content or the intensity of the sound. This specialization allows the dolphin's brain to process echo information in parallel, rather than sequentially. Imagine a factory assembly line, where different workers are responsible for different tasks. By dividing the work among specialized areas, the brain can process information much faster and more efficiently. This parallel processing reduces the cognitive load associated with echolocation, allowing dolphins to react quickly to changes in their environment.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 돌고래의 청각 피질은 반향 정위 정보를 병렬적으로 처리하도록 특화되어, 에너지 소비를 줄이고 환경 변화에 신속하게 반응할 수 있게 해준다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. Dolphins' brains have evolved specialized areas <mark>dedicated to</mark> echolocation, / <mark>allowing</mark> them <mark>to process</mark> acoustic information more quickly and with less energy.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 돌고래의 뇌는 반향 정위에 전담하는 전문화된 영역들을 진화시켜 왔다, / 그들이 음향 정보를 더 빠르고 더 적은 에너지로 처리하도록 허용하면서.<br>
+            [구문 해설] `dedicated to echolocation`은 areas를 후치 수식하는 과거분사구입니다. 콤마 뒤의 `allowing`은 동시 동작이나 결과를 나타내는 분사구문이며, `allow + 목적어(them) + to 부정사(to process)` 구조가 쓰였습니다.<br>
+            [핵심 어휘] evolve: 진화시키다 / specialized: 전문화된, 특화된 / dedicate to: ~에 전담하다, 헌신하다 / echolocation: 반향 정위 / acoustic: 음향의, 소리의
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. One key adaptation is the structure of the dolphin's auditory pathway.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 한 가지 핵심적인 적응은 돌고래의 청각 경로 구조이다.<br>
+            [핵심 어휘] adaptation: 적응 / auditory pathway: 청각 경로
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. The signals from the ears <mark>are rapidly transmitted</mark> to the auditory cortex, / the brain region <mark>responsible for</mark> processing sound.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 귀로부터 온 신호들은 청각 피질로 빠르게 전달된다, / 즉 소리를 처리하는 것을 담당하는 뇌 영역인.<br>
+            [구문 해설] `are transmitted` 수동태 구문입니다. 콤마(,) 뒤의 `the brain region`은 앞의 `the auditory cortex`와 동격 관계이며, 형용사구 `responsible for processing sound`가 region을 후치 수식합니다.<br>
+            [핵심 어휘] rapidly: 빠르게 / transmit: 전달하다 / auditory cortex: 청각 피질 / responsible for: ~을 담당하는
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. However, unlike many other mammals, / dolphins have a highly specialized auditory cortex / with distinct areas <mark>dedicated to</mark> <mark>processing</mark> different aspects of echolocation signals.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그러나 다른 많은 포유류와는 다르게, / 돌고래는 고도로 전문화된 청각 피질을 가지고 있다 / 반향 정위 신호의 다른 측면들을 처리하는 데 전담하는 뚜렷한 영역들을 가진.<br>
+            [구문 해설] `dedicated to -ing`에서 to는 전치사이므로 뒤에 동명사 processing이 왔습니다.<br>
+            [핵심 어휘] mammal: 포유류 / highly: 고도로 / distinct: 뚜렷한, 구별되는 / aspect: 측면
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. <mark>Some</mark> areas may be responsible for analyzing the timing of echoes, / <mark>while others</mark> focus on the frequency content or the intensity of the sound.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 일부 영역들은 메아리의 타이밍을 분석하는 것을 담당할지도 모른다, / 반면에 다른 영역들은 소리의 주파수 내용이나 강도에 초점을 맞춘다.<br>
+            [구문 해설] 불특정 다수를 나눌 때 쓰는 `Some ~, (while) others ...` (일부는 ~, 반면에 다른 일부는 ...) 구문이 사용되었습니다. 접속사 while은 대조를 나타냅니다.<br>
+            [핵심 어휘] analyze: 분석하다 / echo: 메아리 / frequency content: 주파수 내용 / intensity: 강도
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">6. This specialization <mark>allows</mark> the dolphin's brain / <mark>to process</mark> echo information in parallel, rather than sequentially.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이러한 전문화는 돌고래의 뇌가 허용한다 / 메아리 정보를 순차적이라기보다는 병렬로 처리하도록.<br>
+            [구문 해설] `allow + 목적어 + to 부정사` 구문입니다.<br>
+            [핵심 어휘] specialization: 전문화 / in parallel: 병렬로 / sequentially: 순차적으로
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">7. Imagine a factory assembly line, / <mark>where</mark> different workers are responsible for different tasks.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 공장 조립 라인을 상상해 보아라, / 그곳에서 각기 다른 작업자들이 각기 다른 임무를 담당하는.<br>
+            [구문 해설] `where`는 선행사 a factory assembly line을 계속적 용법으로 부연 설명하는 관계부사입니다.<br>
+            [핵심 어휘] assembly line: 조립 라인 / task: 임무, 일
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">8. <mark>By dividing</mark> the work among specialized areas, / the brain can process information <mark>much</mark> faster and more efficiently.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 전문화된 영역들 사이에 그 일을 나눔으로써, / 뇌는 정보를 훨씬 더 빠르고 더 효율적으로 처리할 수 있다.<br>
+            [구문 해설] `By -ing`는 '~함으로써'라는 수단/방법을 나타냅니다. 비교급 faster와 more 앞의 much는 비교급을 강조하는 부사(훨씬)입니다.<br>
+            [핵심 어휘] divide: 나누다 / efficiently: 효율적으로
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">9. This parallel processing reduces the cognitive load <mark>associated with</mark> echolocation, / <mark>allowing</mark> dolphins <mark>to react</mark> quickly to changes in their environment.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이러한 병렬 처리는 반향 정위와 관련된 인지적 부하를 줄여준다, / 돌고래들이 그들의 환경 변화에 빠르게 반응할 수 있도록 허용하면서.<br>
+            [구문 해설] 과거분사 `associated with~`가 the cognitive load를 후치 수식합니다. 콤마 뒤의 `allowing`은 분사구문으로 `allow + 목적어 + to 부정사` 형태를 취합니다.<br>
+            [핵심 어휘] parallel processing: 병렬 처리 / reduce: 줄이다 / cognitive load: 인지적 부하 / associated with: ~와 관련된 / react: 반응하다
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 반향 정위에 특화된 뇌</span>
+        <h4>돌고래의 진화된 청각 경로</h4>
+        <p>돌고래는 반향 정위를 위해 뇌의 청각 피질 영역을 고도로 전문화시켜 음향 정보를 빠르고 효율적으로 처리하도록 진화함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 청각 피질의 병렬 처리 시스템</span>
+        <h4>역할 분담과 동시 처리</h4>
+        <p>타이밍, 주파수, 강도 등 소리의 각 측면을 각기 다른 뇌 영역이 전담하는 공장 조립 라인 같은 '병렬 처리' 시스템을 갖춤.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 인지적 부하 감소와 신속한 반응</span>
+        <h4>효율성 극대화의 결과</h4>
+        <p>이러한 병렬 처리는 반향 정위 시 발생하는 뇌의 인지적 부하를 줄여, 환경 변화에 신속하게 반응할 수 있는 생존의 이점을 제공함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. Some areas may be responsible for analyzing the timing of echoes, while [ other / others ] focus on the frequency content or the intensity of the sound.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. other는 형용사이므로 단독으로 주어 자리에 올 수 없습니다. 명사 역할을 하는 대명사 others가 필요합니다.">other</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! '일부는 ~, 다른 일부는 ...'을 나타내는 부정대명사 'Some ~, others ...' 구문이므로 명사 역할을 하는 others가 올바릅니다.">others</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. This parallel processing reduces the cognitive load [ associated / associating ] with echolocation...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 인지적 부하(load)가 스스로 관련시키는 능동의 주체가 아니라 반향 정위와 '관련된' 수동의 대상이므로 과거분사 associated가 맞습니다.">associated</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 인지적 부하(load)가 반향 정위와 관련된 수동적 관계이므로 현재분사인 associating이 올 수 없습니다.">associating</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Dolphins' brains have evolved specialized areas dedicated to echolocation, allowing them to process acoustic information more quickly and with less energy. One key adaptation is the structure of the dolphin's auditory pathway. The signals from the ears are rapidly transmitted to the auditory cortex, the brain region responsible for processing sound. However, unlike many other mammals, dolphins have a highly specialized auditory cortex with distinct areas dedicated to processing different aspects of echolocation signals. Some areas may be responsible for analyzing the timing of echoes, while others focus on the frequency content or the intensity of the sound. This specialization allows the dolphin's brain to process echo information in parallel, rather than sequentially. Imagine a factory assembly line, where different workers are responsible for different tasks. By dividing the work among specialized areas, the brain can process information much faster and more efficiently. This parallel processing reduces the cognitive load associated with echolocation, allowing dolphins to react quickly to changes in their environment.
+      </div>
+      <div class="exam-choices">
+        ① Echolocation: A Common Feature Across All Mammals<br>
+        ② The Secret of Dolphins: Parallel Processing in the Auditory Cortex<br>
+        ③ Why Sequential Processing is Better for Acoustic Information<br>
+        ④ How Dolphins Communicate with Other Marine Species<br>
+        ⑤ The Impact of Environmental Changes on Dolphins' Hearing
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          해설: 이 글은 돌고래가 뇌의 청각 피질 영역들을 세분화하여 반향 정위와 관련된 음향 정보를 효율적인 '병렬 처리(parallel processing)' 방식으로 분석한다는 것을 설명하고 있습니다. 따라서 '돌고래의 비밀: 청각 피질에서의 병렬 처리(The Secret of Dolphins: Parallel Processing in the Auditory Cortex)'가 제목으로 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Dolphins' brains have evolved specialized areas dedicated to echolocation... (중략) ... Some areas may be responsible for analyzing the timing of echoes, while others focus on the frequency content or the intensity of the sound. This specialization allows the dolphin's brain to process echo information ____________________________________. Imagine a factory assembly line, where different workers are responsible for different tasks. By dividing the work among specialized areas, the brain can process information much faster and more efficiently. This parallel processing reduces the cognitive load associated with echolocation, allowing dolphins to react quickly to changes in their environment.
+      </div>
+      <div class="exam-choices">
+        ① strictly based on visual inputs<br>
+        ② in parallel, rather than sequentially<br>
+        ③ through a single, unified auditory channel<br>
+        ④ by focusing entirely on the timing of echoes<br>
+        ⑤ at a much slower and deliberate pace
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          해설: 소리의 타이밍, 주파수, 강도를 각기 다른 영역이 나누어서 전담한다는 내용 뒤에 이어지므로, 이는 정보를 한 번에 하나씩(순차적으로) 처리하는 것이 아니라 '순차적이라기보다는 병렬로(in parallel, rather than sequentially)' 동시에 처리한다는 것을 뜻합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage" style="border:1px solid #000; padding:10px; margin-bottom:12px; background:#fff;">
+        Imagine a factory assembly line, where different workers are responsible for different tasks.
+      </div>
+      <div class="exam-passage">
+        However, unlike many other mammals, dolphins have a highly specialized auditory cortex with distinct areas dedicated to processing different aspects of echolocation signals. ( ① ) Some areas may be responsible for analyzing the timing of echoes, while others focus on the frequency content or the intensity of the sound. ( ② ) This specialization allows the dolphin's brain to process echo information in parallel, rather than sequentially. ( ③ ) By dividing the work among specialized areas, the brain can process information much faster and more efficiently. ( ④ ) This parallel processing reduces the cognitive load associated with echolocation, allowing dolphins to react quickly to changes in their environment. ( ⑤ )
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 주어진 문장은 작업을 분담하는 '공장 조립 라인'을 비유로 들고 있습니다. 앞 문장에서 '병렬 처리(in parallel)'라는 개념이 등장했고, 주어진 문장에서 이를 알기 쉬운 조립 라인 비유로 설명한 후, 뒷 문장(By dividing the work~)에서 '그 일을 분담함으로써(dividing the work)'라고 부연 설명하는 흐름이 매우 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 전체 영어 문장을 완성하시오. (단, 어법에 맞게 어형을 변화시킬 것, 단어 중복 사용 불가)</h4>
+      <div class="exam-passage">
+        By dividing the work among specialized areas, the brain can process information much faster and more efficiently. <u>이러한 병렬 처리는 돌고래들이 그들의 환경 변화에 빠르게 반응할 수 있도록 허용하면서, 반향 정위와 관련된 인지적 부하를 줄여준다.</u><br><br>
+        [조건]<br>
+        1. 과거분사 후치 수식과 분사구문을 활용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: associated with / the cognitive load / allowing / react quickly / this parallel processing / reduces / echolocation, / to / changes in their environment. / dolphins to
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: This parallel processing reduces the cognitive load associated with echolocation, allowing dolphins to react quickly to changes in their environment.</b><br>
+          해설: 주어와 동사인 `This parallel processing reduces` 뒤에 목적어로 `the cognitive load`를 씁니다. 이어 이를 후치 수식하는 분사구 `associated with echolocation,`을 배치합니다. 콤마 뒤에는 '~하도록 허용하면서'라는 의미의 분사구문 `allowing dolphins to`를 쓰고, 그 뒤에 남은 `react quickly to changes in their environment.`를 연결하여 영작을 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

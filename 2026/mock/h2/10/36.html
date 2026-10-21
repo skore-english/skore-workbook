@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 36번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 36번 · 순서배열</div>
+    <h1 class="title">USABILITY TESTING IN DESIGN<br><span>Why Designers Must Remember They Are Not the Users</span></h1>
+    <p class="header-lead">디자이너는 왜 자신이 사용자가 아님을 인정하고, 실제 사용자를 관찰하는 사용성 테스트를 거쳐야 하는가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 사용성 테스트 (Usability Testing)와 객관성</li>
+        <li><b>[배경 맥락]:</b> 제품이나 서비스를 만드는 디자이너는 자신이 만든 결과물에 너무 깊이 관여하여 객관성을 잃기 쉽다. 따라서 실제 사용자의 눈높이와 반응을 확인하는 과정이 필수적이다.</li>
+        <li><b>[논리 요약]:</b> 디자이너는 자신이 사용자가 아님을 인정하고, 실제 사용자가 참여하는 사용성 테스트를 통해 문제점을 발견하고 지속적으로 디자인을 수정 및 개선해야 한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      A simple truth that designers must embrace in order to create more effective products and experiences is the fact that we are not the user. We're much too close to what we build to objectively see it and understand how users will interact with it. The best user interfaces are those that have been shaped by observations of real users and their interactions with them. So how can designers shape their work to be more effective? An incredibly effective way is with usability testing. The goal of this method is to uncover problems in a design, discover existing opportunities, and learn more about the behaviors and preferences of users by asking participants to engage in realistic activities. This technique is effective for understanding how well a design will perform once it is in the hands of real users. Designers can use this method to improve their work through subsequent revisions based on the findings from representative users.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 디자이너는 자신이 만든 결과물에 대해 객관성을 갖기 어려우므로, 실제 사용자를 관찰하는 사용성 테스트를 통해 지속적으로 디자인을 개선해야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. A simple truth / <mark>that</mark> designers must embrace / <mark>in order to</mark> create more effective products and experiences / is the fact / <mark>that</mark> we are not the user.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 하나의 단순한 진실은 / 디자이너들이 받아들여야만 하는 / 더 효과적인 제품과 경험을 창조하기 위해 / 사실이다 / 우리가 사용자가 아니라는.<br>
+            [구문 해설] 첫 번째 `that`은 선행사 truth를 수식하는 목적격 관계대명사이며, 두 번째 `that`은 the fact와 내용을 이어주는 동격의 명사절 접속사입니다.<br>
+            [핵심 어휘] embrace: 받아들이다, 수용하다 / effective: 효과적인 / the fact that: ~라는 사실
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. We're <mark>much too close</mark> / to <mark>what</mark> we build / <mark>to</mark> objectively see it / and understand how users will interact with it.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 우리는 너무 많이 가깝다 / 우리가 만드는 것에 / 객관적으로 그것을 보고 / 사용자들이 어떻게 그것과 상호작용할지 이해하기에는.<br>
+            [구문 해설] `too 형용사 to 동사원형` (너무 ~해서 ...할 수 없다, ...하기에는 너무 ~하다) 구문이 쓰였습니다. `what we build`는 전치사 to의 목적어로 쓰인 관계대명사 명사절입니다.<br>
+            [핵심 어휘] objectively: 객관적으로 / interact with: ~와 상호작용하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. The best user interfaces are <mark>those</mark> / <mark>that</mark> have been shaped / by observations of real users / and their interactions with them.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 최고의 사용자 인터페이스는 그것들이다 / 형성되어 온 / 실제 사용자들에 대한 관찰에 의해 / 그리고 그것들과 그들의 상호작용에 의해.<br>
+            [구문 해설] 대명사 `those`는 user interfaces를 대신하며, 주격 관계대명사 `that`이 이끄는 현재완료 수동태(`have been shaped`) 절의 수식을 받습니다.<br>
+            [핵심 어휘] shape: 형성하다, 만들다 / observation: 관찰
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. So how can designers shape their work / to be more effective?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그렇다면 디자이너들은 어떻게 그들의 작업을 형성할 수 있을까 / 더 효과적이 되도록?<br>
+            [구문 해설] 짧은 문장이므로 슬래시 생략 가능하나, 호흡 구분을 위해 최소한으로 사용했습니다.<br>
+            [핵심 어휘] shape: 모양을 만들다, 구체화하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. An incredibly effective way is with usability testing.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 믿을 수 없을 정도로 효과적인 방법은 사용성 테스트를 활용하는 것이다.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] incredibly: 믿을 수 없을 정도로 / usability testing: 사용성 테스트
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">6. The goal of this method is <mark>to uncover</mark> problems in a design, / discover existing opportunities, / and learn more about the behaviors and preferences of users / <mark>by asking</mark> participants <mark>to engage</mark> in realistic activities.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이 방법의 목표는 디자인 내의 문제점들을 알아내는 것이다, / 기존의 기회들을 발견하고, / 사용자의 행동과 선호도에 대해 더 배우는 것(이다) / 참가자들에게 현실적인 활동에 참여하도록 요청함으로써.<br>
+            [구문 해설] 보어로 쓰인 to 부정사구 안에서 동사원형 `uncover`, `discover`, `learn`이 병렬 연결되었습니다. `ask + 목적어 + to 부정사`는 '목적어에게 ~하도록 요청하다'라는 뜻입니다.<br>
+            [핵심 어휘] uncover: 알아내다, 밝히다 / preference: 선호(도) / engage in: ~에 참여하다 / realistic: 현실적인
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">7. This technique is effective / for understanding <mark>how well</mark> a design will perform / <mark>once</mark> it is in the hands of real users.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이 기술은 효과적이다 / 디자인이 얼마나 잘 수행될지 이해하는 데 / 일단 그것이 실제 사용자들의 손에 들어가면.<br>
+            [구문 해설] `how well~`은 간접의문문으로 understanding의 목적어 역할을 합니다. 접속사 `once`는 '일단 ~하면'이라는 조건의 의미를 지닙니다.<br>
+            [핵심 어휘] perform: 수행하다, 작동하다 / once: 일단 ~하면
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">8. Designers can use this method / to improve their work / through subsequent revisions / <mark>based on</mark> the findings from representative users.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 디자이너들은 이 방법을 사용할 수 있다 / 그들의 작업을 개선하기 위해 / 후속 수정을 통해 / 대표 사용자들로부터의 발견(결과)에 기반하여.<br>
+            [구문 해설] `based on`은 과거분사구로 '~에 근거하여'라는 뜻으로 앞의 명사를 수식하거나 부사적으로 쓰입니다.<br>
+            [핵심 어휘] subsequent: 후속의, 다음의 / revision: 수정 / representative: 대표적인 / finding: 발견, 결과
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 디자이너의 착각과 한계</span>
+        <h4>객관성의 상실</h4>
+        <p>디자이너는 자신이 만드는 것에 너무 가까이 몰입해 있어, 자신이 사용자가 아님을 망각하고 객관적으로 결과물을 보지 못하는 한계가 있음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 해결책 제시</span>
+        <h4>사용성 테스트의 도입</h4>
+        <p>효과적인 디자인을 위해서는 실제 사용자의 관찰이 필수적이며, 이를 위해 현실적인 활동을 통한 '사용성 테스트'가 가장 효과적인 방법임.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 지속적인 개선 사이클</h4>
+        <h4>피드백과 후속 수정</h4>
+        <p>사용성 테스트를 통해 실제 사용자의 손에서 제품이 어떻게 작동할지 파악하고, 대표 사용자의 피드백을 바탕으로 디자인을 지속적으로 수정 및 개선해야 함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. We're much too close to what we build [ objectively / to objectively ] see it and understand how users will interact with it.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 앞의 too close와 호응하여 '너무 ~해서 ...할 수 없다'는 구문을 완성하려면 to 부정사가 필요합니다.">objectively</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 'too 형용사 to 동사원형' 구문입니다. 부사 objectively가 to 부정사(see)를 수식하기 위해 to와 동사 사이에 들어간 형태(분리 부정사)입니다.">to objectively</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. The best user interfaces are those [ that / what ] have been shaped by observations of real users...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 선행사인 대명사 those(user interfaces를 지칭)가 존재하므로, 선행사를 수식하는 주격 관계대명사 that이 올바릅니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 what은 선행사를 포함하므로 앞에 선행사 역할을 하는 명사나 대명사가 올 수 없습니다. 여기서는 선행사 those가 있으므로 that이 맞습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 밑줄 친 부분 중, 어법상 틀린 것은?</h4>
+      <div class="exam-passage">
+        A simple truth that designers must embrace in order to create more effective products and experiences ①<u>is</u> the fact that we are not the user. We're much too close to ②<u>what</u> we build to objectively see it and understand how users will interact with it. The best user interfaces are those that have ③<u>shaped</u> by observations of real users and their interactions with them. So how can designers shape their work to be more effective? An incredibly effective way is with usability testing. The goal of this method is to uncover problems in a design, discover existing opportunities, and ④<u>learn</u> more about the behaviors and preferences of users by asking participants to engage in realistic activities. This technique is effective for understanding how well a design will perform once it is in the hands of real ⑤<u>users</u>.
+      </div>
+      <div class="exam-choices">
+        ① is<br>
+        ② what<br>
+        ③ shaped<br>
+        ④ learn<br>
+        ⑤ users
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 사용자 인터페이스(user interfaces)는 디자이너의 관찰에 의해 스스로 형성하는 것이 아니라 '형성되는' 수동의 대상이므로, 현재완료 수동태인 **been shaped**로 고쳐 써야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        A simple truth that designers must embrace in order to create more effective products and experiences is the fact that we are not the user. We're much too close to what we build to objectively see it and understand how users will interact with it. The best user interfaces are those that have been shaped by observations of real users and their interactions with them. So how can designers shape their work to be more effective? An incredibly effective way is with usability testing. The goal of this method is to uncover problems in a design, discover existing opportunities, and learn more about the behaviors and preferences of users by asking participants to engage in realistic activities. This technique is effective for understanding how well a design will perform once it is in the hands of real users. Designers can use this method to improve their work through subsequent revisions based on the findings from representative users.
+      </div>
+      <div class="exam-choices">
+        ① Usability Testing: A Crucial Mirror for Designers<br>
+        ② How to Educate Users on Complex Interfaces<br>
+        ③ The Hidden Costs of Designing for the Public<br>
+        ④ Why Observation is Better Than Participation<br>
+        ⑤ The Future of User Interfaces in the Tech Industry
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          해설: 이 글은 디자이너가 객관성을 잃기 쉽기 때문에, 실제 사용자를 대상으로 하는 사용성 테스트(Usability testing)가 자신들의 결과물을 객관적으로 비춰보고 개선하는 핵심적인 거울 역할을 한다는 것을 설명하고 있습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글에서 전체 흐름과 관계 없는 문장은?</h4>
+      <div class="exam-passage">
+        So how can designers shape their work to be more effective? An incredibly effective way is with usability testing. ① The goal of this method is to uncover problems in a design, discover existing opportunities, and learn more about the behaviors and preferences of users by asking participants to engage in realistic activities. ② This technique is effective for understanding how well a design will perform once it is in the hands of real users. ③ However, usability testing often requires a significant budget and time, which makes it less attractive for small start-up companies. ④ Designers can use this method to improve their work through subsequent revisions based on the findings from representative users. ⑤ Ultimately, products that undergo this process tend to offer a far superior user experience than those relying solely on the designer's intuition.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 이 글은 사용성 테스트가 디자인의 객관성을 확보하고 결과물을 개선하는 데 얼마나 유용하고 효과적인지에 대해 일관되게 긍정적인 설명을 하고 있습니다. 그러나 ③번 문장은 예산과 시간 문제로 스타트업에게 매력적이지 않다는 단점을 지적하고 있으므로, 글의 전체적인 논지와 벗어납니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 영어 문장을 완성하시오. (단, 어법에 맞게 어형을 변화시킬 것, 단어 중복 사용 불가)</h4>
+      <div class="exam-passage">
+        A simple truth that designers must embrace in order to create more effective products and experiences is the fact that we are not the user. <u>우리는 우리가 만드는 것에 너무 가까이 있어서 객관적으로 그것을 보고 사용자들이 그것과 어떻게 상호작용할지 이해할 수 없다.</u> The best user interfaces are those that have been shaped by observations of real users and their interactions with them.<br><br>
+        [조건]<br>
+        1. 'too ~ to' 구문과 관계대명사 명사절을 활용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: objectively / interact / we / to / close / much / it / see / what / we / build / to / are / and understand how users will / with it
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: We are much too close to what we build to objectively see it and understand how users will interact with it.</b><br>
+          해설: '너무 ~해서 ...할 수 없다'는 `too 형용사 to 부정사` 구문을 사용합니다. 주어 동사인 `We are` 뒤에 `much too close`를 쓰고, 그 뒤에 전치사 to의 목적어절인 `what we build`(우리가 만드는 것)를 씁니다. 이어지는 to 부정사 자리에 부사 objectively를 넣어 `to objectively see it`을 만들고, 마지막으로 제공된 `and understand how users will interact with it`을 연결하여 문장을 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

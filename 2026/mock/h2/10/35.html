@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 35번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 35번 · 무관한 문장</div>
+    <h1 class="title">MEDICAL BREAKTHROUGHS AGAINST INFECTIOUS DISEASES<br><span>How Science and Technology Triumphed Over Deadly Viruses</span></h1>
+    <p class="header-lead">페니실린의 발견과 백신의 개발 등 의학적 진보는 어떻게 인류를 치명적인 감염병으로부터 구원했는가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 감염병 퇴치를 위한 의학적 진보 (Medical Progress against Infectious Diseases)</li>
+        <li><b>[배경 맥락]:</b> 페니실린의 발견(플레밍)이나 천연두 백신(제너)과 같은 획기적인 의학의 발전은 과거 인류의 생존을 크게 위협했던 치명적인 감염병들을 통제 가능하게 만들었다.</li>
+        <li><b>[논리 요약]:</b> 의학 분야의 과학적, 기술적 발전은 백신 개발, 위생 관리, 치료법 개선 등을 통해 감염병의 예방과 치료에 엄청난 진전을 가져오며 인류의 질병 부담을 크게 줄였다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Scientific developments and technologies in medical practice have brought us enormous progress in the treatment and prevention of infectious diseases. The discovery of penicillin in 1928 by Alexander Fleming, for which he later received the Nobel Prize, was one of the biggest breakthroughs in the battle against infectious diseases. Edward Jenner discovered around 1796 that humans were protected against the deadly smallpox virus after exposure to the cowpox virus, which is harmless to humans. Vaccines developed in laboratories have contributed enormously to the reduction of the burden of bacterial and viral diseases and have even led to the elimination of poxvirus. For other infectious diseases (for example cholera and malaria), control and hygiene management measures have reduced their burden, while for others treatment therapies turned viral diseases that were deadly into chronic manageable diseases.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 의학 분야의 과학적 발견과 기술(페니실린, 백신, 위생 관리, 치료법 등)은 치명적인 감염병의 예방과 치료에 엄청난 진전을 가져왔다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. Scientific developments and technologies in medical practice / have brought us / enormous progress / in the treatment and prevention of infectious diseases.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 의료 관행(의학 분야)에서의 과학적 발전과 기술은 / 우리에게 가져다주었다 / 엄청난 진전을 / 감염병의 치료와 예방에서.<br>
+            [구문 해설] `have brought`는 과거부터 현재까지 영향을 미치는 현재완료 시제입니다. brought 뒤에 간접목적어(us)와 직접목적어(enormous progress)가 쓰였습니다.<br>
+            [핵심 어휘] medical practice: 의료 관행, 의학 분야 / enormous: 엄청난 / progress: 진전, 발전 / treatment: 치료 / prevention: 예방 / infectious disease: 감염병
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. The discovery of penicillin in 1928 by Alexander Fleming, / <mark>for which</mark> he later received the Nobel Prize, / was one of the biggest breakthroughs / in the battle against infectious diseases.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 1928년 알렉산더 플레밍에 의한 페니실린의 발견은, / 그리고 그것으로 인해 그는 나중에 노벨상을 받았는데, / 가장 큰 돌파구 중 하나였다 / 감염병과의 전투에서.<br>
+            [구문 해설] `for which`는 선행사인 The discovery of penicillin을 부연 설명하는 전치사+관계대명사 계속적 용법입니다. (received the prize 'for' the discovery). `one of the 최상급 복수명사(breakthroughs)` 구문이 쓰였습니다.<br>
+            [핵심 어휘] discovery: 발견 / breakthrough: 돌파구, 획기적 발전
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. Edward Jenner discovered around 1796 / <mark>that</mark> humans were protected against the deadly smallpox virus / after exposure to the cowpox virus, / <mark>which</mark> is harmless to humans.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 에드워드 제너는 1796년경 발견했다 / 인간이 치명적인 천연두 바이러스로부터 보호받는다는 것을 / 우두 바이러스에 노출된 후에, / 그리고 그것(우두)은 인간에게 무해하다.<br>
+            [구문 해설] `that`은 discovered의 목적어 명사절을 이끕니다. `which`는 선행사 the cowpox virus를 부연 설명하는 주격 관계대명사입니다.<br>
+            [핵심 어휘] protect: 보호하다 / deadly: 치명적인 / smallpox: 천연두 / exposure: 노출 / cowpox: 우두 / harmless: 무해한
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. Vaccines <mark>developed</mark> in laboratories / have contributed enormously / to the reduction of the burden of bacterial and viral diseases / and have even led to the elimination of poxvirus.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 실험실에서 개발된 백신들은 / 엄청나게 기여해 왔다 / 세균성 및 바이러스성 질병의 부담 감소에 / 그리고 심지어 폭스바이러스(천연두 바이러스)의 퇴치로 이어졌다.<br>
+            [구문 해설] 과거분사 `developed`가 주어인 Vaccines를 후치 수식합니다. `have contributed`와 `have led`가 등위접속사 and로 병렬 연결되어 있습니다.<br>
+            [핵심 어휘] laboratory: 실험실 / contribute to: ~에 기여하다 / reduction: 감소 / burden: 부담 / bacterial: 세균성의 / elimination: 퇴치, 제거
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. For other infectious diseases (for example cholera and malaria), / control and hygiene management measures / have reduced their burden, / <mark>while</mark> for others / treatment therapies turned viral diseases / <mark>that</mark> were deadly / into chronic manageable diseases.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 다른 감염병들(예를 들어 콜레라와 말라리아)의 경우, / 통제 및 위생 관리 조치들이 / 그것들의 부담을 줄였다, / 반면에 다른 질병들의 경우 / 치료 요법들이 바이러스성 질병들을 바꾸어 놓았다 / 치명적이었던 (질병들을) / 만성적인 관리 가능한 질환으로.<br>
+            [구문 해설] 접속사 `while`은 '~인 반면에'라는 대조의 의미로 쓰였습니다. `turn A into B`(A를 B로 바꾸다) 구문이 사용되었으며, `that`은 viral diseases를 수식하는 주격 관계대명사입니다.<br>
+            [핵심 어휘] hygiene: 위생 / management: 관리 / measure: 조치, 대책 / therapy: 치료(법) / turn into: ~로 변하다, 바꾸다 / chronic: 만성적인 / manageable: 관리 가능한
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 감염병 퇴치 진전</span>
+        <h4>의학 기술의 발전</h4>
+        <p>의료 관행의 과학적 발전과 새로운 기술 도입은 인류가 감염병을 치료하고 예방하는 데 있어 엄청난 진전을 가져다줌.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 획기적인 주요 발견</span>
+        <h4>페니실린과 백신</h4>
+        <p>플레밍의 페니실린 발견과 제너의 천연두(우두) 백신 개발 등 실험실 연구 성과는 감염병의 부담을 줄이고 일부 바이러스를 퇴치함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 질병 관리와 치료</span>
+        <h4>만성 질환으로의 전환</h4>
+        <p>백신 외에도 엄격한 위생 관리 조치와 발전된 치료 요법 덕분에, 과거 치명적이었던 많은 감염병들이 이제는 통제 가능한 만성 질환으로 전환됨.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. The discovery of penicillin in 1928 by Alexander Fleming, [ which / for which ] he later received the Nobel Prize, was one of the biggest breakthroughs...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 which만 쓰면 뒤에 주어(he)와 목적어(the Nobel Prize)가 다 있는 완전한 문장이 오게 되어 어법상 틀립니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 그가 노벨상을 받은 '이유'가 그 발견(the discovery) 때문이므로, 'receive the prize for the discovery' 구조에 맞게 전치사 for가 결합된 for which가 와야 뒤의 완전한 문장 구조와 어울립니다.">for which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. Vaccines [ developed / developing ] in laboratories have contributed enormously to the reduction of the burden of bacterial and viral diseases...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 백신(Vaccines)은 실험실에서 '개발되는' 대상이므로 수동의 의미를 갖는 과거분사 developed가 명사를 뒤에서 수식하는 것이 맞습니다.">developed</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. developing(현재분사)을 쓰면 백신이 스스로 무언가를 '개발하는' 능동의 의미가 되므로 문맥상 어색합니다.">developing</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Scientific developments and technologies in medical practice have brought us enormous ①<u>progress</u> in the treatment and prevention of infectious diseases. The discovery of penicillin in 1928 by Alexander Fleming, for which he later received the Nobel Prize, was one of the biggest ②<u>breakthroughs</u> in the battle against infectious diseases. Edward Jenner discovered around 1796 that humans were protected against the deadly smallpox virus after exposure to the cowpox virus, which is ③<u>harmful</u> to humans. Vaccines developed in laboratories have contributed enormously to the ④<u>reduction</u> of the burden of bacterial and viral diseases and have even led to the elimination of poxvirus. For other infectious diseases (for example cholera and malaria), control and hygiene management measures have reduced their burden, while for others treatment therapies turned viral diseases that were deadly into chronic ⑤<u>manageable</u> diseases.
+      </div>
+      <div class="exam-choices">
+        ① progress<br>
+        ② breakthroughs<br>
+        ③ harmful<br>
+        ④ reduction<br>
+        ⑤ manageable
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 천연두(smallpox)를 예방하기 위해 인간에게 노출시키는 우두 바이러스(cowpox virus)는 인간에게 '해가 없는, 무해한(harmless)' 바이러스여야 논리적으로 예방 접종이 성립합니다. 따라서 harmful(해로운)은 문맥상 적절하지 않습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage" style="border:1px solid #000; padding:10px; margin-bottom:12px; background:#fff;">
+        Vaccines developed in laboratories have contributed enormously to the reduction of the burden of bacterial and viral diseases and have even led to the elimination of poxvirus.
+      </div>
+      <div class="exam-passage">
+        Scientific developments and technologies in medical practice have brought us enormous progress in the treatment and prevention of infectious diseases. ( ① ) The discovery of penicillin in 1928 by Alexander Fleming, for which he later received the Nobel Prize, was one of the biggest breakthroughs in the battle against infectious diseases. ( ② ) Edward Jenner discovered around 1796 that humans were protected against the deadly smallpox virus after exposure to the cowpox virus, which is harmless to humans. ( ③ ) For other infectious diseases (for example cholera and malaria), control and hygiene management measures have reduced their burden, while for others treatment therapies turned viral diseases that were deadly into chronic manageable diseases. ( ④ )
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤ (해당 문항은 선택지가 4개인 변형입니다. ①~④ 중 선택)
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 주어진 문장은 '실험실에서 개발된 백신'의 기여와 폭스바이러스(천연두 바이러스)의 퇴치에 대한 내용입니다. 바로 앞 문장(② 뒤)에서 에드워드 제너의 우두 바이러스(초기 백신의 원리) 발견이 언급되었고, 이 발견을 계기로 실험실 백신 개발과 천연두 퇴치(elimination of poxvirus)로 이어지는 흐름이 자연스럽습니다. 그 후(③ 뒤) '다른 감염병들(For other infectious diseases)'에 대한 조치로 넘어갑니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Scientific developments and technologies in medical practice have brought us enormous progress in the treatment and prevention of infectious diseases. The discovery of penicillin in 1928 by Alexander Fleming, for which he later received the Nobel Prize, was one of the biggest breakthroughs in the battle against infectious diseases. Edward Jenner discovered around 1796 that humans were protected against the deadly smallpox virus after exposure to the cowpox virus, which is harmless to humans. Vaccines developed in laboratories have contributed enormously to the reduction of the burden of bacterial and viral diseases and have even led to the elimination of poxvirus. For other infectious diseases (for example cholera and malaria), control and hygiene management measures have reduced their burden, while for others treatment therapies turned viral diseases that were deadly into ___________________________________.
+      </div>
+      <div class="exam-choices">
+        ① inevitable threats to future generations<br>
+        ② acute conditions without proper cures<br>
+        ③ chronic manageable diseases<br>
+        ④ global pandemics requiring immediate action<br>
+        ⑤ symptoms difficult to identify early
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 본문은 의학 기술의 발전이 감염병에 미친 긍정적인 영향을 서술하고 있습니다. 결론부에서는 뛰어난 치료법(treatment therapies) 덕분에 과거 치명적이었던 바이러스성 질병들이 이제는 우리가 통제할 수 있는 '만성적인 관리 가능한 질환(chronic manageable diseases)'으로 바뀌었음을 강조하고 있습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 영작하시오. (단, 어법에 맞게 어형을 변화시킬 것, 단어 중복 사용 불가)</h4>
+      <div class="exam-passage">
+        Edward Jenner discovered around 1796 that humans were protected against the deadly smallpox virus after exposure to the cowpox virus, which is harmless to humans. <u>실험실에서 개발된 백신들은 세균성 및 바이러스성 질병의 부담 감소에 엄청나게 기여해 왔다</u> and have even led to the elimination of poxvirus.<br><br>
+        [조건]<br>
+        1. 현재완료 시제와 과거분사 후치 수식을 사용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: enormously / the burden / reduction / of / vaccines / in laboratories / to / have / develop / contribute / the
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: Vaccines developed in laboratories have contributed enormously to the reduction of the burden</b><br>
+          해설: 주어는 `Vaccines`이며 이를 후치 수식하는 과거분사구를 만들어 `Vaccines developed in laboratories`(실험실에서 개발된 백신들은)로 주어부를 완성합니다. 그 뒤 '~에 기여해 왔다'는 현재완료 시제 `have contributed`를 쓰고 부사 `enormously`를 붙입니다. 마지막으로 `to the reduction of the burden`(~의 부담 감소에)을 배열하여 문장을 완성합니다. (본문의 세균성 질병 뒷부분은 조건 밖입니다.)
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

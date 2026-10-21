@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 30번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 30번 · 어휘 적합성</div>
+    <h1 class="title">THE DOMINANCE OF NONVERBAL SIGNALS<br><span>Why Actions Speak Louder Than Words in Conflicting Messages</span></h1>
+    <p class="header-lead">언어적 메시지와 비언어적 메시지가 충돌할 때, 사람들은 왜 비언어적 신호를 더 신뢰하는가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 비언어적 신호의 우위 (Dominance of Nonverbal Signals)</li>
+        <li><b>[배경 맥락]:</b> 대화 상황에서 말(언어)과 행동/표정(비언어)이 일치하지 않을 때, 사람들은 본능적으로 무의식에 가깝고 조작하기 어려운 비언어적 단서를 통해 상대방의 진심을 파악하려는 경향이 있다.</li>
+        <li><b>[논리 요약]:</b> 언어적 메시지와 비언어적 메시지가 충돌하는 상황에서 사람들은 언어보다 비언어적 신호를 더 신뢰하므로, 단순히 거짓된 말로 상대를 조종하려는 시도는 실패하기 쉽다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      A study by Eva McMahan, professor of speech communication, confirmed the dominance of nonverbal signals. The phenomenon, however, was especially pronounced when adults found themselves in situations with conflicting messages (i.e., situations in which the contents of the verbal and nonverbal messages differ). Attempts to manipulate another person verbally are therefore likely to fail if the accompanying nonverbal communication does not match the spoken message. This is because people trust nonverbal messages more than verbal ones. When somebody tells you that they enjoy spending time with you, but you notice how they are looking away and are forcing a smile, you are probably less inclined to believe their words. The same is probably true when you are back at the office after a sickness and your colleague tells you with a frowning expression that they were happy to take over your workload. You might not believe that they enjoyed replacing you while you were gone.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 사람들은 말과 행동이 불일치할 때 비언어적 메시지를 더 신뢰하므로, 거짓된 말로 상대를 조종하려는 시도는 실패할 확률이 높다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. A study / by Eva McMahan, professor of speech communication, / <mark>confirmed</mark> the dominance of nonverbal signals.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 한 연구는 / 언어 소통학 교수인 Eva McMahan에 의한, / 비언어적 신호의 우위를 확인했다.<br>
+            [구문 해설] A study가 주어, confirmed가 동사로 쓰인 단순한 3형식 문장입니다.<br>
+            [핵심 어휘] confirm: 확인하다, 확증하다 / dominance: 우위, 지배 / nonverbal: 비언어적인
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. The phenomenon, however, / <mark>was especially pronounced</mark> / when adults found themselves / in situations <mark>with</mark> conflicting messages / (i.e., situations <mark>in which</mark> the contents of the verbal and nonverbal messages differ).</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그러나, 그 현상은 / 특히 두드러졌다 / 어른들이 자신을 발견했을 때 / 충돌하는 메시지가 있는 상황에서 / (즉, 언어적 메시지와 비언어적 메시지의 내용이 다른 상황에서).<br>
+            [구문 해설] `was pronounced`는 수동태로 '두드러졌다'라는 의미입니다. `in which`는 전치사+관계대명사로 선행사 situations를 수식하며 뒤에 완전한 문장(the contents~ differ)이 옵니다.<br>
+            [핵심 어휘] phenomenon: 현상 / pronounced: 확연한, 두드러진 / conflicting: 충돌하는, 상충하는 / verbal: 언어적인
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. Attempts <mark>to manipulate</mark> another person verbally / <mark>are</mark> therefore likely to fail / if the accompanying nonverbal communication does not match the spoken message.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 다른 사람을 언어적으로 조종하려는 시도는 / 그러므로 실패할 가능성이 높다 / 만약 동반되는 비언어적 의사소통이 그 말해진 메시지와 일치하지 않는다면.<br>
+            [구문 해설] `to manipulate`는 앞의 명사 Attempts를 꾸며주는 to부정사의 형용사적 용법입니다. 주어가 복수형(Attempts)이므로 동사도 복수(are)를 썼습니다.<br>
+            [핵심 어휘] manipulate: 조종하다, 다루다 / verbally: 언어적으로 / accompanying: 동반되는 / match: 일치하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. This is <mark>because</mark> people trust nonverbal messages / more than verbal ones.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이것은 사람들이 비언어적 메시지를 신뢰하기 때문이다 / 언어적인 것들(메시지들)보다 더.<br>
+            [구문 해설] `This is because ~`는 원인을 나타내는 명사절 접속사 구문입니다. 대명사 ones는 messages를 대신합니다.<br>
+            [핵심 어휘] trust: 신뢰하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. When somebody tells you / <mark>that</mark> they enjoy spending time with you, / but you notice / <mark>how</mark> they are looking away and are forcing a smile, / you are probably less inclined to believe their words.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 누군가가 당신에게 말할 때 / 당신과 시간을 보내는 것을 즐긴다고, / 하지만 당신이 눈치챈다면 / 그들이 어떻게 시선을 피하고 억지웃음을 짓고 있는지를, / 당신은 아마도 그들의 말을 덜 믿는 경향이 있을 것이다.<br>
+            [구문 해설] `that`은 tells의 직접목적어 역할을 하는 명사절을 이끌며, `how~`절은 notice의 목적어 역할을 하는 간접의문문입니다. `be inclined to`는 '~하는 경향이 있다'는 뜻입니다.<br>
+            [핵심 어휘] look away: 시선을 돌리다 / force a smile: 억지웃음을 짓다 / inclined to: ~하는 경향이 있는
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">6. The same <mark>is</mark> probably true / when you are back at the office / after a sickness / and your colleague tells you / with a frowning expression / <mark>that</mark> they were happy to take over your workload.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 같은 것이 아마도 사실일 것이다(마찬가지일 것이다) / 당신이 사무실로 돌아왔을 때 / 아픈 후에 / 그리고 당신의 동료가 당신에게 말할 때 / 찡그린 표정으로 / 당신의 업무량을 떠맡아서 기뻤다고.<br>
+            [구문 해설] `that`은 tells의 직접목적어 명사절을 이끕니다. `The same is true`는 '마찬가지다'라는 뜻의 관용 표현입니다.<br>
+            [핵심 어휘] colleague: 동료 / frowning: 찡그린 / expression: 표정 / take over: 떠맡다 / workload: 업무량
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">7. You might not believe / <mark>that</mark> they enjoyed <mark>replacing</mark> you / while you were gone.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 당신은 믿지 않을지도 모른다 / 그들이 당신을 대신하는 것을 즐겼다고 / 당신이 부재중에.<br>
+            [구문 해설] enjoy 동사는 동명사(`replacing`)만을 목적어로 취합니다.<br>
+            [핵심 어휘] replace: 대신하다, 대체하다 / be gone: 부재중이다, 자리에 없다
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 비언어적 신호의 우위</span>
+        <h4>메시지 충돌 시의 현상</h4>
+        <p>에바 맥마한의 연구에 따르면, 언어적 메시지와 비언어적 메시지가 서로 충돌하는 상황에서 비언어적 신호의 지배력이 특히 확연하게 나타남.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 말과 행동의 불일치</span>
+        <h4>조작의 실패 원인</h4>
+        <p>사람들은 언어보다 비언어적 신호를 본능적으로 더 신뢰하기 때문에, 동반되는 행동이나 표정이 말과 일치하지 않으면 말로 상대를 조종하려는 시도는 실패함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 일상 속 불일치의 예시</h4>
+        <h4>표정이 말해주는 진심</h4>
+        <p>시선을 피하며 억지웃음을 짓거나(즐겁다는 말), 찡그린 표정을 지을 때(업무를 도와 기쁘다는 말), 우리는 상대의 '말'을 믿지 않고 '비언어'를 믿음.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. Attempts to manipulate another person verbally [ is / are ] therefore likely to fail if the accompanying nonverbal communication does not match the spoken message.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 문장의 핵심 주어는 단수인 person이 아니라 복수 명사인 Attempts(시도들)이므로 복수 동사가 와야 합니다.">is</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 'to manipulate another person verbally'는 수식어구일 뿐이며, 진짜 주어는 복수형 명사인 Attempts이므로 복수 동사 are가 올바릅니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. The phenomenon was especially pronounced when adults found themselves in situations [ which / in which ] the contents of the verbal and nonverbal messages differ.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 which 뒤에는 불완전한 문장이 와야 하는데, 뒤에 주어(the contents)와 자동사(differ)로 이루어진 완전한 문장이 왔으므로 전치사+관계대명사 형태가 필요합니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 선행사가 situations이고 뒤에 'the contents ~ differ'라는 1형식의 완전한 문장이 이어지므로, 부사어구 역할을 할 수 있는 전치사+관계대명사인 in which가 필요합니다. (where로 바꿀 수도 있습니다.)">in which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        A study by Eva McMahan, professor of speech communication, confirmed the dominance of nonverbal signals. The phenomenon, however, was especially pronounced when adults found themselves in situations with conflicting messages (i.e., situations in which the contents of the verbal and nonverbal messages differ). Attempts to manipulate another person verbally are therefore likely to fail if ____________________________________________________. This is because people trust nonverbal messages more than verbal ones. When somebody tells you that they enjoy spending time with you, but you notice how they are looking away and are forcing a smile, you are probably less inclined to believe their words. The same is probably true when you are back at the office after a sickness and your colleague tells you with a frowning expression that they were happy to take over your workload. You might not believe that they enjoyed replacing you while you were gone.
+      </div>
+      <div class="exam-choices">
+        ① they perfectly hide their emotional vulnerabilities<br>
+        ② the verbal messages are logically consistent<br>
+        ③ the accompanying nonverbal communication does not match the spoken message<br>
+        ④ people tend to pay more attention to the context of the conversation<br>
+        ⑤ the speaker attempts to use persuasive language and tone
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 비언어적 메시지와 언어적 메시지가 충돌할 때 사람들은 비언어적 메시지를 신뢰한다는 것이 이 글의 요지입니다. 따라서 말로 상대를 조종하려는 시도는 '동반되는 비언어적 의사소통이 말로 표현된 메시지와 일치하지 않을 때(the accompanying nonverbal communication does not match the spoken message)' 실패하게 됩니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage" style="border:1px solid #000; padding:10px; margin-bottom:12px; background:#fff;">
+        This is because people trust nonverbal messages more than verbal ones.
+      </div>
+      <div class="exam-passage">
+        A study by Eva McMahan, professor of speech communication, confirmed the dominance of nonverbal signals. ( ① ) The phenomenon, however, was especially pronounced when adults found themselves in situations with conflicting messages. ( ② ) Attempts to manipulate another person verbally are therefore likely to fail if the accompanying nonverbal communication does not match the spoken message. ( ③ ) When somebody tells you that they enjoy spending time with you, but you notice how they are looking away and are forcing a smile, you are probably less inclined to believe their words. ( ④ ) The same is probably true when you are back at the office after a sickness and your colleague tells you with a frowning expression that they were happy to take over your workload. ( ⑤ ) You might not believe that they enjoyed replacing you while you were gone.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 주어진 문장은 '이것은 사람들이 언어보다 비언어적 메시지를 더 신뢰하기 때문이다'라는 내용입니다. 바로 앞 문장에서 말과 비언어가 불일치할 때 조종 시도가 실패하는 현상을 언급했고, 그 실패에 대한 구체적인 인과(원인)를 설명하는 문장이므로 ③번 자리에 들어가며 그 뒤에 구체적인 예시(억지웃음 등)가 이어지는 것이 논리적입니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        A study by Eva McMahan, professor of speech communication, confirmed the dominance of nonverbal signals... (중략) ... When somebody tells you that they enjoy spending time with you, but you notice how they are looking away and are forcing a smile, you are probably less inclined to believe their words. The same is probably true when you are back at the office after a sickness and your colleague tells you with a frowning expression that they were happy to take over your workload. You might not believe that they enjoyed replacing you while you were gone.
+      </div>
+      <div class="summary-box">
+        When there is a (A)_________ between what is said and how it is expressed nonverbally, people are more likely to rely on the (B)_________ cues to determine the speaker's true intentions.
+      </div>
+      <div class="exam-choices">
+        ① (A) conflict — (B) nonverbal<br>
+        ② (A) harmony — (B) verbal<br>
+        ③ (A) conflict — (B) emotional<br>
+        ④ (A) balance — (B) nonverbal<br>
+        ⑤ (A) similarity — (B) logical
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          해설: 말해진 것(verbal)과 비언어적으로 표현된 것(how it is expressed nonverbally) 사이에 서로 '충돌, 불일치(conflict)'가 있을 때, 사람들은 말보다 표정이나 행동 같은 '비언어적(nonverbal)' 단서에 더 의존하여 진심을 파악하려 합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 전체 영어 문장을 완성하시오. (단, 어법에 맞게 어형을 변화시킬 것, 단어 중복 사용 금지)</h4>
+      <div class="exam-passage">
+        The same is probably true when you are back at the office after a sickness and your colleague tells you with a frowning expression that they were happy to take over your workload. <u>당신은 아마도 당신이 없는 동안 그들이 당신을 대신하는 것을 즐겼다고 믿지 않을지도 모른다</u>.<br><br>
+        [조건]<br>
+        1. enjoy 동사의 목적어 형태 유의할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: you / might not / you / that / they / replace / believe / were / while / enjoy / gone
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: You might not believe that they enjoyed replacing you while you were gone.</b><br>
+          해설: 문맥의 시제가 과거이므로 동사 enjoy를 enjoyed로 변형해야 합니다. enjoy는 동명사만을 목적어로 취하므로 replace를 replacing으로 변형하여 `enjoyed replacing you`(당신을 대신하는 것을 즐겼다) 형태로 작문합니다. 부사절 접속사 while(~동안) 뒤에는 `you were gone`(당신이 자리에 없었다)을 연결합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

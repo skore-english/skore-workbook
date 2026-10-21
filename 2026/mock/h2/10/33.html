@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 33번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 33번 · 빈칸 추론</div>
+    <h1 class="title">LIFELONG HUMAN DEVELOPMENT<br><span>The Power of Plasticity Across the Lifespan</span></h1>
+    <p class="header-lead">인간 발달은 почему 아동기에만 국한되지 않고 평생에 걸쳐 변화하고 적응하는 과정인가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 가소성 (Plasticity)과 평생 발달</li>
+        <li><b>[배경 맥락]:</b> 과거에는 발달이 어린 시절에만 국한되고 성인기는 안정, 노년기는 쇠퇴로 보았으나, 현대 심리학에서는 인간이 평생 동안 환경과 경험에 맞춰 자신을 재조직하는 능력을 가졌다고 본다.</li>
+        <li><b>[논리 요약]:</b> 인간 발달은 고정된 단계가 아닌 일생에 걸친 유연하고 지속적인 과정(가소성)이며, 이는 인간이 발달의 수동적 수용자가 아닌 평생 성장이 가능한 능동적 주체임을 강조한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Human development is now increasingly understood as an ongoing, flexible, and evolving process rather than a fixed sequence of stages. At the core of this perspective lies the concept of plasticity. Plasticity refers to the human capacity to change, adapt, and reorganize cognitive, emotional, and behavioural patterns in response to life experiences, environmental demands, and biological changes. It highlights that individuals are not merely passive recipients of development but active agents capable of growth throughout their lives. In earlier views, development was believed to occur mainly during childhood, with adulthood seen as a period of stability and old age as a phase of decline. The concept of plasticity challenges this rigid outlook by emphasizing that development continues across the entire lifespan. Although the extent of change may vary at different stages, every phase of life allows room for adaptation and transformation.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 인간 발달의 핵심인 가소성(plasticity)은 발달이 아동기에만 국한되지 않고 평생에 걸쳐 계속되는 유연하고 지속적인 변화 과정임을 보여준다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. Human development / <mark>is</mark> now increasingly <mark>understood as</mark> an ongoing, flexible, and evolving process / <mark>rather than</mark> a fixed sequence of stages.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 인간 발달은 / 이제 점점 더 이해된다 지속적이고, 유연하며, 진화하는 과정으로 / 고정된 일련의 단계들보다는.<br>
+            [구문 해설] `is understood as`(~로 이해되다) 수동태 구문입니다. `rather than` 뒤에 명사구가 와서 대조를 이룹니다.<br>
+            [핵심 어휘] ongoing: 지속적인 / flexible: 유연한 / evolving: 진화하는, 발전하는 / sequence: 일련, 순서
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. At the core of this perspective <mark>lies</mark> the concept of plasticity.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이러한 관점의 핵심에 가소성의 개념이 있다.<br>
+            [구문 해설] 장소의 부사구(At the core of this perspective)가 문두로 와서 동사(lies)와 주어(the concept)가 도치된 구문입니다.<br>
+            [핵심 어휘] perspective: 관점 / lie: 있다, 눕다 / plasticity: 가소성, 유연성
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. Plasticity refers to the human capacity / <mark>to change</mark>, adapt, and reorganize cognitive, emotional, and behavioural patterns / in response to life experiences, environmental demands, and biological changes.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 가소성은 인간의 능력을 가리킨다 / 인지적, 감정적, 그리고 행동적 패턴을 변화시키고, 적응하며, 재조직하는 (능력을) / 삶의 경험, 환경적 요구, 그리고 생물학적 변화에 반응하여.<br>
+            [구문 해설] `to change, adapt, and reorganize`는 앞의 명사 capacity를 뒤에서 수식하는 형용사적 용법의 to부정사 병렬 구조입니다.<br>
+            [핵심 어휘] refer to: ~을 가리키다, 언급하다 / capacity: 능력 / reorganize: 재조직하다 / in response to: ~에 반응하여
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. It highlights / <mark>that</mark> individuals are <mark>not merely</mark> passive recipients of development / <mark>but</mark> active agents <mark>capable of</mark> growth / throughout their lives.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그것은 강조한다 / 개인들이 단지 발달의 수동적인 수용자가 아니라 / 성장이 가능한 능동적인 주체라는 것을 / 그들의 일생에 걸쳐.<br>
+            [구문 해설] `not merely A but B`(A뿐만 아니라 B도, 단지 A가 아니라 B인) 구문이 쓰였습니다. `capable of growth`는 명사 agents를 후치 수식합니다.<br>
+            [핵심 어휘] highlight: 강조하다 / merely: 단지 / passive: 수동적인 / recipient: 수용자 / agent: 주체, 행위자 / capable of: ~할 수 있는
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. In earlier views, / development <mark>was believed to occur</mark> mainly during childhood, / <mark>with</mark> adulthood <mark>seen</mark> as a period of stability / and old age as a phase of decline.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이전의 관점들에서는, / 발달은 주로 아동기 동안에 일어난다고 믿어졌다, / 성인기는 안정기로 여겨지고 / 노년기는 쇠퇴기로 (여겨지면서).<br>
+            [구문 해설] `was believed to occur` 형태의 수동태 구문입니다. `with + 명사(adulthood) + 과거분사(seen)` 형태의 부대상황 분사구문이 쓰였으며, old age 뒤에도 seen이 생략되었습니다.<br>
+            [핵심 어휘] occur: 일어나다, 발생하다 / stability: 안정(기) / decline: 쇠퇴, 감소
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">6. The concept of plasticity challenges this rigid outlook / <mark>by emphasizing</mark> <mark>that</mark> development continues / across the entire lifespan.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 가소성 개념은 이러한 엄격한(경직된) 관점에 이의를 제기한다 / 발달이 계속된다는 것을 강조함으로써 / 전체 수명(일생)에 걸쳐.<br>
+            [구문 해설] `by -ing`(~함으로써) 구문이며, `that`은 emphasizing의 목적어 역할을 하는 명사절을 이끕니다.<br>
+            [핵심 어휘] challenge: 이의를 제기하다, 도전하다 / rigid: 엄격한, 경직된 / outlook: 관점, 전망 / emphasize: 강조하다 / lifespan: 수명, 일생
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">7. <mark>Although</mark> the extent of change may vary / at different stages, / every phase of life allows room / for adaptation and transformation.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 비록 변화의 정도가 다를지라도 / 다른 단계들에서, / 삶의 모든 단계는 여지를 허용한다 / 적응과 변형(변화)을 위한.<br>
+            [구문 해설] `Although`는 양보를 나타내는 부사절 접속사입니다. 주절의 주어 every phase 뒤에는 단수 동사(allows)가 옵니다.<br>
+            [핵심 어휘] extent: 정도, 범위 / vary: 다르다, 다양하다 / phase: 단계 / room: 여지, 공간 / adaptation: 적응 / transformation: 변형, 변화
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 발달에 대한 새로운 이해</span>
+        <h4>지속적 과정과 가소성</h4>
+        <p>인간 발달은 고정된 단계가 아닌 지속적이고 유연한 과정으로 이해되며, 그 핵심 바탕에는 '가소성(plasticity)'이라는 개념이 자리 잡고 있음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 능동적 주체로서의 인간</span>
+        <h4>경험에 반응하는 적응력</h4>
+        <p>가소성은 환경과 경험에 반응해 자신을 재조직하는 능력으로, 인간이 수동적 존재가 아닌 평생 성장이 가능한 능동적 주체임을 강조함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 전통적 관점 타파</span>
+        <h4>수명 전체에 걸친 변화</h4>
+        <p>발달이 유년기에만 일어난다는 과거의 경직된 시각을 깨고, 삶의 모든 단계에서 적응과 변화의 여지가 열려 있음을 역설함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. At the core of this perspective [ lies / laying ] the concept of plasticity.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 장소를 나타내는 부사구(At the core of this perspective)가 문두로 강조되면서 도치된 구문이므로, 동사 자리에는 lies가 와야 합니다.">lies</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 부사구가 강조를 위해 앞으로 나가면서 주어와 동사가 도치된 문장이므로, 현재분사인 laying은 동사 역할을 할 수 없습니다. 동사인 lies가 필요합니다.">laying</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. In earlier views, development was believed to occur mainly during childhood, with adulthood [ seeing / seen ] as a period of stability and old age as a phase of decline.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 성인기(adulthood)가 스스로 무언가를 보는 것이 아니라, 안정기로 '여겨지는(보여지는)' 수동의 관계이므로 과거분사 seen을 써야 합니다.">seeing</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 'with + 명사 + 분사' 구문에서 명사인 adulthood가 안정기로 '여겨지는' 수동적 관계에 있으므로 과거분사 seen이 올바릅니다.">seen</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Human development is now increasingly understood as an ongoing, flexible, and evolving process rather than a ①<u>fixed</u> sequence of stages. At the core of this perspective lies the concept of plasticity. Plasticity refers to the human capacity to change, adapt, and reorganize cognitive, emotional, and behavioural patterns in response to life experiences, environmental demands, and biological changes. It highlights that individuals are not merely ②<u>passive</u> recipients of development but active agents capable of growth throughout their lives. In earlier views, development was believed to occur mainly during childhood, with adulthood seen as a period of stability and old age as a phase of ③<u>decline</u>. The concept of plasticity ④<u>supports</u> this rigid outlook by emphasizing that development continues across the entire lifespan. Although the extent of change may vary at different stages, every phase of life allows ⑤<u>room</u> for adaptation and transformation.
+      </div>
+      <div class="exam-choices">
+        ① fixed<br>
+        ② passive<br>
+        ③ decline<br>
+        ④ supports<br>
+        ⑤ room
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          해설: 가소성 개념은 발달이 평생 지속된다고 역설하므로, 유년기에만 발달이 일어난다고 보는 과거의 '경직된 관점(rigid outlook)'을 '지지(supports)'하는 것이 아니라 '반박하고 이의를 제기(challenges)'합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage" style="border:1px solid #000; padding:10px; margin-bottom:12px; background:#fff;">
+        The concept of plasticity challenges this rigid outlook by emphasizing that development continues across the entire lifespan.
+      </div>
+      <div class="exam-passage">
+        Human development is now increasingly understood as an ongoing, flexible, and evolving process rather than a fixed sequence of stages. ( ① ) At the core of this perspective lies the concept of plasticity. ( ② ) Plasticity refers to the human capacity to change, adapt, and reorganize cognitive, emotional, and behavioural patterns in response to life experiences, environmental demands, and biological changes. ( ③ ) It highlights that individuals are not merely passive recipients of development but active agents capable of growth throughout their lives. ( ④ ) In earlier views, development was believed to occur mainly during childhood, with adulthood seen as a period of stability and old age as a phase of decline. ( ⑤ ) Although the extent of change may vary at different stages, every phase of life allows room for adaptation and transformation.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ⑤</b><br>
+          해설: 주어진 문장의 '이러한 경직된 관점(this rigid outlook)'은 바로 앞 문장인 과거의 관점(발달은 아동기에만 일어나고, 성인기는 안정, 노년기는 쇠퇴라는 견해)을 지칭합니다. 따라서 과거의 관점을 설명한 후, 그것에 이의를 제기하는 주어진 문장이 ⑤번 자리에 들어가는 것이 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Human development is now increasingly understood as an ongoing, flexible, and evolving process rather than a fixed sequence of stages. At the core of this perspective lies the concept of plasticity... (중략) ... In earlier views, development was believed to occur mainly during childhood, with adulthood seen as a period of stability and old age as a phase of decline. The concept of plasticity challenges this rigid outlook by emphasizing that development continues across the entire lifespan. Although the extent of change may vary at different stages, every phase of life allows room for adaptation and transformation.
+      </div>
+      <div class="summary-box">
+        The concept of (A) ________ highlights that human development is an ongoing, active process that continues throughout the entire (B) ________, challenging the traditional view of fixed developmental stages.
+      </div>
+      <div class="exam-choices">
+        ① (A) plasticity — (B) lifespan<br>
+        ② (A) stability — (B) childhood<br>
+        ③ (A) plasticity — (B) society<br>
+        ④ (A) transformation — (B) adulthood<br>
+        ⑤ (A) rigidity — (B) lifespan
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          해설: 인간은 고정된 단계를 거치는 것이 아니라, 평생에 걸쳐 계속 진화하는 능동적인 주체라는 것이 글의 핵심입니다. 이러한 '가소성(plasticity)'의 개념은 인간 발달이 전체 '수명(일생, lifespan)'에 걸쳐 지속된다는 것을 강조합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 영어 문장을 완성하시오. (단, 어법에 맞게 어형을 변화시킬 것, 단어 중복 사용 불가)</h4>
+      <div class="exam-passage">
+        In earlier views, development was believed to occur mainly during childhood, with adulthood seen as a period of stability and old age as a phase of decline. <u>가소성의 개념은 발달이 전체 수명에 걸쳐 계속된다는 것을 강조함으로써 이러한 경직된 관점에 이의를 제기한다.</u> Although the extent of change may vary at different stages, every phase of life allows room for adaptation and transformation.<br><br>
+        [조건]<br>
+        1. 'by -ing' 구문과 명사절 접속사 'that'을 활용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: by / challenges / continues / emphasizing / lifespan / that / the entire / the concept of plasticity / this rigid outlook / development / across
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: The concept of plasticity challenges this rigid outlook by emphasizing that development continues across the entire lifespan.</b><br>
+          해설: 주어 `The concept of plasticity` 뒤에 동사 `challenges`, 목적어 `this rigid outlook`을 배열합니다. '~함으로써'는 전치사 `by`와 동명사 `emphasizing`을 씁니다. 강조하는 내용인 명사절 접속사 `that`을 쓴 뒤, 다시 주어 `development`, 동사 `continues`를 쓰고 전치사구 `across the entire lifespan`으로 문장을 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

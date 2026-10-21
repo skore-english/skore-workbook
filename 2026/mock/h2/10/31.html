@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 31번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 31번 · 빈칸 추론</div>
+    <h1 class="title">THE TRIUMPH OF AUTOMATION IN HUMAN DESIGN<br><span>Why Our Default Behaviors Are Essential for Survival</span></h1>
+    <p class="header-lead">우리의 삶을 지배하는 무의식적인 자동화 행동은 왜 인간 설계의 결함이 아니라 핵심적인 특징인가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 무의식적 자동화와 인지적 경제성 (Unconscious Automation and Cognitive Economy)</li>
+        <li><b>[배경 맥락]:</b> 인간은 일상적인 행동의 대부분을 과거에 형성된 '기본값(default)'에 의존하여 처리한다. 만약 모든 행동을 의식적으로 결정해야 한다면 우리의 뇌는 과부하에 걸려 생존할 수 없을 것이다.</li>
+        <li><b>[논리 요약]:</b> 인간의 자동화된 행동(기본값)은 결함이 아니라, 의식적인 뇌(선장)가 정말 중요한 문제에 집중할 수 있도록 돕는 인류 진화의 핵심적인 설계 특징이자 공학적 승리이다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      A person who lives eighty years lives some twenty-nine thousand days, and the overwhelming majority of the behaviour packed into them runs on settings laid down, most of them, decades earlier and rarely inspected since. This need not be a hopeless thought. In one light it is a triumph of engineering. If you had to consciously decide every footstep and every fork-grip and every word, you would never make it out of bed; the deliberate mind is far too slow and too costly to run a whole life in real time, and any creature that tried would be outcompeted by a creature that didn't. The automation is precisely what frees the captain to come up on deck for the few problems that actually require him. The default is not a flaw in the human design. It is arguably the central feature, the thing that makes a complex life affordable at all.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 우리의 일상 행동을 지배하는 무의식적인 기본값(자동화)은 인지적 에너지를 절약하여 뇌가 복잡하고 중요한 문제에 집중할 수 있게 해주는 필수적인 설계적 특징이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. A person who lives eighty years / lives some twenty-nine thousand days, / and the overwhelming majority of the behaviour <mark>packed into them</mark> / runs on settings <mark>laid down</mark>, / most of them, decades earlier / and rarely inspected since.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 80년을 사는 사람은 / 대략 29,000일을 산다, / 그리고 그 안에 꽉 채워진 행동의 압도적인 대다수는 / 설정된 기본값(설정)에 따라 실행된다, / 그것들의 대부분은 수십 년 전에, / 그리고 그 이후로 거의 점검되지 않은 채.<br>
+            [구문 해설] `packed into them`은 앞의 behaviour를 수식하는 과거분사구이며, `laid down` 역시 settings를 수식하는 과거분사구입니다.<br>
+            [핵심 어휘] overwhelming: 압도적인 / majority: 대다수 / packed into: ~안에 꽉 채워진 / run on: ~에 따라 작동하다 / lay down: 정하다, 설정하다 / inspect: 점검하다, 조사하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. This need not be a hopeless thought.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이것이 절망적인 생각일 필요는 없다.<br>
+            [구문 해설] 조동사 역할을 하는 need에 not이 붙어 '~할 필요가 없다'는 뜻을 나타냅니다.<br>
+            [핵심 어휘] hopeless: 절망적인
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. In one light / it is a triumph of engineering.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 어떤 관점에서 보면 / 그것은 공학적 승리이다.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] in one light: 어떤 관점에서 보면 / triumph: 승리, 업적 / engineering: 공학
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. <mark>If</mark> you had to consciously decide every footstep and every fork-grip and every word, / you <mark>would never make it</mark> out of bed; / the deliberate mind is far too slow and too costly / to run a whole life in real time, / and any creature <mark>that</mark> tried / <mark>would be outcompeted</mark> by a creature that didn't.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 만약 당신이 모든 발걸음과 모든 포크 쥐기와 모든 단어를 의식적으로 결정해야 한다면, / 당신은 결코 침대 밖으로 빠져나오지 못할 것이다; / 의도적인(의식적인) 마음은 너무 느리고 비용이 너무 많이 든다 / 실시간으로 전체 삶을 운영하기에는, / 그리고 그것을 시도한 어떤 생물체라도 / 그렇지 않은 생물체에 의해 도태될 것이다.<br>
+            [구문 해설] 현재 사실의 반대를 가정하는 `가정법 과거 (If + 주어 + 동사의 과거형 ~, 주어 + 조동사 과거 + 동사원형 ...)` 구문이 사용되었습니다. that tried의 tried 뒤에는 to run a whole life in real time이 생략되었고, that didn't 뒤에는 try가 생략되었습니다.<br>
+            [핵심 어휘] consciously: 의식적으로 / make it out of: ~에서 빠져나오다 / deliberate: 의도적인, 신중한 / costly: 대가가 큰, 비용이 많이 드는 / outcompete: 능가하다, 도태시키다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. The automation is <mark>precisely what</mark> frees the captain / to come up on deck / for the few problems <mark>that</mark> actually require him.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그 자동화는 정확히 선장을 자유롭게 해주는 것이다 / 갑판 위로 올라오도록 / 실제로 그를 필요로 하는 몇 안 되는 문제들을 위해.<br>
+            [구문 해설] `what`은 '~하는 것'이라는 뜻의 관계대명사 명사절을 이끌어 주격 보어 역할을 합니다. `free A to B`는 A를 자유롭게 하여 B할 수 있게 만들다라는 뜻입니다.<br>
+            [핵심 어휘] automation: 자동화 / precisely: 정확히 / deck: 갑판 / require: 필요로 하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">6. The default is not a flaw in the human design.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그 기본값은 인간 설계의 결함이 아니다.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] default: 기본값, 초기 설정 / flaw: 결함
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">7. It is arguably the central feature, / the thing <mark>that</mark> makes a complex life affordable at all.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그것은 틀림없이 중심적인 특징이다, / 복잡한 삶을 어쨌든 감당할 수 있게 만들어주는 (것이다).<br>
+            [구문 해설] 콤마(,) 뒤의 the thing은 앞의 the central feature와 동격 관계입니다. that은 the thing을 수식하는 주격 관계대명사이며, 5형식 동사 makes 뒤에 목적어(a complex life)와 목적격 보어(affordable)가 왔습니다.<br>
+            [핵심 어휘] arguably: 틀림없이, 주장하건대 / feature: 특징 / affordable: 감당할 수 있는, 비용을 댈 수 있는 / at all: 어쨌든, 적어도
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 무의식적 행동의 지배</span>
+        <h4>자동화된 삶의 기본 설정</h4>
+        <p>인생의 대부분의 행동은 과거에 형성되어 거의 점검되지 않은 채로 작동하는 '기본 설정(settings)'에 따라 무의식적으로 실행됨.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 인지적 경제성과 생존</span>
+        <h4>비효율성 방지와 도태 회피</h4>
+        <p>모든 행동을 의식적으로 결정하려면 뇌가 과부하에 걸리고 생존할 수 없음. 의식적 판단은 일상을 실시간으로 운영하기에 너무 느리고 비효율적임.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 자동화의 가치</h4>
+        <h4>공학적 승리이자 설계의 핵심</h4>
+        <p>행동의 자동화(기본값)는 인간의 결함이 아니라, 의식적인 뇌가 정말 중요한 소수의 문제에 집중하게 해주는 필수불가결한 중심 특징임.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. If you had to consciously decide every footstep and every fork-grip and every word, you [ will never make / would never make ] it out of bed.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 조건절에 과거 동사(had to)가 쓰인 가정법 과거 문장이므로 주절에도 조동사의 과거형(would)이 쓰여야 합니다.">will never make</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 현재 사실의 반대를 가정하는 가정법 과거 구문이므로 조건절의 과거 동사(had to)에 맞추어 주절에는 조동사의 과거형인 would never make가 와야 합니다.">would never make</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. The automation is precisely [ that / what ] frees the captain to come up on deck for the few problems that actually require him.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 접속사 that 뒤에는 완전한 문장이 와야 하고, 관계대명사 that 앞에는 선행사가 있어야 합니다. 여기서는 둘 다 해당하지 않습니다.">that</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! is 뒤에서 주격 보어 역할을 하는 명사절을 이끌며, 뒤에 주어가 없는 불완전한 문장(frees~)이 이어지므로 선행사를 포함하는 관계대명사 what이 올바릅니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        A person who lives eighty years lives some twenty-nine thousand days, and the overwhelming majority of the behaviour packed into them runs on settings laid down, most of them, decades earlier and rarely inspected since. This need not be a ①<u>hopeless</u> thought. In one light it is a triumph of engineering. If you had to consciously decide every footstep and every fork-grip and every word, you would never make it out of bed; the deliberate mind is far too slow and too ②<u>efficient</u> to run a whole life in real time, and any creature that tried would be ③<u>outcompeted</u> by a creature that didn't. The automation is precisely what ④<u>frees</u> the captain to come up on deck for the few problems that actually require him. The default is not a ⑤<u>flaw</u> in the human design. It is arguably the central feature, the thing that makes a complex life affordable at all.
+      </div>
+      <div class="exam-choices">
+        ① hopeless<br>
+        ② efficient<br>
+        ③ outcompeted<br>
+        ④ frees<br>
+        ⑤ flaw
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          해설: 실시간으로 삶의 모든 것을 의도적으로(의식적으로) 결정하는 것은 너무 느리고 인지적 대가가 크다(비용이 든다)는 맥락이므로 efficient(효율적인)가 아니라 costly(비용이 많이 드는, 손실이 큰)와 같은 부정적 의미의 단어가 와야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage" style="border:1px solid #000; padding:10px; margin-bottom:12px; background:#fff;">
+        The automation is precisely what frees the captain to come up on deck for the few problems that actually require him.
+      </div>
+      <div class="exam-passage">
+        A person who lives eighty years lives some twenty-nine thousand days, and the overwhelming majority of the behaviour packed into them runs on settings laid down, most of them, decades earlier and rarely inspected since. ( ① ) This need not be a hopeless thought. ( ② ) In one light it is a triumph of engineering. ( ③ ) If you had to consciously decide every footstep and every fork-grip and every word, you would never make it out of bed; the deliberate mind is far too slow and too costly to run a whole life in real time, and any creature that tried would be outcompeted by a creature that didn't. ( ④ ) The default is not a flaw in the human design. ( ⑤ ) It is arguably the central feature, the thing that makes a complex life affordable at all.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          해설: 모든 것을 의식적으로 결정하면 생존 경쟁에서 도태된다는 내용 뒤에, 자동화가 왜 유용한지(선장=의식적인 뇌가 중요한 문제에만 신경 쓰게 해줌)를 설명하는 제시문이 와야 합니다. 그 뒤에 이 '기본값(default=automation)'은 인간 설계의 결함이 아니라는 결론이 이어집니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        A person who lives eighty years lives some twenty-nine thousand days, and the overwhelming majority of the behaviour packed into them runs on settings laid down... (중략) ... If you had to consciously decide every footstep and every fork-grip and every word, you would never make it out of bed... The default is not a flaw in the human design. It is arguably the central feature, the thing that makes a complex life affordable at all.
+      </div>
+      <div class="summary-box">
+        Rather than being a (A)________, the automatic "default" settings of our behavior act as a crucial mechanism that (B)________ our cognitive resources, enabling us to handle complex lives.
+      </div>
+      <div class="exam-choices">
+        ① (A) limitation — (B) exhausts<br>
+        ② (A) weakness — (B) conserves<br>
+        ③ (A) strength — (B) wastes<br>
+        ④ (A) defect — (B) overloads<br>
+        ⑤ (A) miracle — (B) consumes
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          해설: 우리의 자동화된 기본 행동 설정은 '약점이나 결함(weakness)'이 아니라, 의식적인 뇌가 모든 것에 신경 쓰지 않도록 우리의 인지 자원을 '보존해주는(conserves)' 핵심 메커니즘입니다. 
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 영어 문장을 완성하시오. (단, 어법에 맞게 어형을 변화시킬 것, 단어 중복 사용 불가)</h4>
+      <div class="exam-passage">
+        The automation is precisely what frees the captain to come up on deck for the few problems that actually require him. The default is not a flaw in the human design. <u>그것은 틀림없이 중심적인 특징이다, 복잡한 삶을 어쨌든 감당할 수 있게 만들어주는 (것이다)</u>.<br><br>
+        [조건]<br>
+        1. 관계대명사와 5형식 구문을 사용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: that / make / affordable / life / a complex / at all / the thing
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: It is arguably the central feature, the thing that makes a complex life affordable at all.</b><br>
+          해설: 앞문장의 It is arguably the central feature 뒤에 동격의 콤마를 찍고 `the thing`을 씁니다. 이어 주격 관계대명사 `that`을 연결하고 선행사(the thing)가 3인칭 단수이므로 동사 make를 **makes**로 씁니다. 그 뒤 5형식 어순에 맞춰 목적어 `a complex life`, 목적격 보어 형용사 `affordable`을 쓰고 마지막에 `at all`을 붙입니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

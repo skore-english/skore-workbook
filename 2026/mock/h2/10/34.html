@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 34번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 34번 · 빈칸 추론</div>
+    <h1 class="title">THE DANGERS OF INTERCONNECTEDNESS<br><span>How Digital Interdependence Breeds Complex Failures</span></h1>
+    <p class="header-lead">현대 사회의 고도화된 상호 연결성은 왜 우리를 예측 불가능한 복잡한 실패와 취약성에 빠뜨리는가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 상호 연결성과 복잡한 실패 (Interconnectedness and Complex Failure)</li>
+        <li><b>[배경 맥락]:</b> 과거에는 기관들이 서로 분리되어 있어 외부의 오류로부터 자체적인 보호가 가능했으나, 현대에는 소셜 미디어, 글로벌 금융망, 자율 시스템 등으로 인해 모든 것이 긴밀하게 연결되어 있다.</li>
+        <li><b>[논리 요약]:</b> 정보 기술 발달로 인한 극도의 상호 의존성은 작은 오류조차 순식간에 전파시켜 예측하기 힘든 거대한 복잡한 실패를 낳는 새로운 취약성이 되었다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Social media has altered business, politics, and friendships, making going viral a household term. The global financial industry links every bank and countless households in every country, making us vulnerable to human error taking place on the other side of the world. As Columbia University strategy professor Rita McGrath explains, years ago most of our institutions were separate and thereby buffered from the effects of errors outside their walls. That is no longer the case. The digitization of massive amounts of information has continued to grow enormously as the cost of computing power has decreased. The development of smart systems that communicate autonomously gave rise to an infinite variety of potential breakdowns. This interdependence is a breeding ground for complex failure. As Rita puts it, when "things that used to be kept separate bump up against each other, it becomes far more difficult to predict what's going to happen next." Information technology creates new vulnerabilities because interconnectedness instantly spreads the impact of small failures.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 고도로 디지털화되고 상호 연결된 현대 사회의 시스템은 기관 간의 경계를 허물어, 작은 오류의 영향마저 즉각적으로 확산시키는 복잡한 실패의 온상이 되었다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. Social media has altered business, politics, and friendships, / <mark>making</mark> going viral a household term.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 소셜 미디어는 비즈니스, 정치, 그리고 우정을 변화시켰다, / 입소문이 나는 것을 일상적인 용어로 만들면서.<br>
+            [구문 해설] 콤마 뒤의 `making`은 동시 동작이나 결과를 나타내는 분사구문입니다. make 뒤에 목적어(going viral)와 목적격 보어(a household term)가 이어집니다.<br>
+            [핵심 어휘] alter: 변화시키다 / go viral: 입소문이 나다, 널리 퍼지다 / household term: 일상적인 용어
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. The global financial industry links every bank and countless households in every country, / <mark>making</mark> us vulnerable to human error / <mark>taking place</mark> on the other side of the world.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 글로벌 금융 산업은 모든 국가의 모든 은행과 무수히 많은 가정을 연결한다, / 우리를 인적 오류에 취약하게 만들면서 / 세계 반대편에서 발생하는.<br>
+            [구문 해설] `making`은 분사구문이며, `taking place~`는 현재분사구로서 앞의 명사 human error를 후치 수식합니다.<br>
+            [핵심 어휘] countless: 무수한 / vulnerable to: ~에 취약한 / human error: 인적 오류 / take place: 발생하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. As Columbia University strategy professor Rita McGrath explains, / years ago most of our institutions were separate / and thereby <mark>buffered</mark> from the effects of errors outside their walls.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 컬럼비아 대학 전략 교수인 Rita McGrath가 설명하듯, / 수년 전 대부분의 우리 기관들은 분리되어 있었다 / 그리고 그로 인해 그들 장벽 밖의 오류의 영향으로부터 보호받았다.<br>
+            [구문 해설] 등위접속사 and 뒤의 `buffered`는 앞에 were가 생략되어 separate와 병렬 구조를 이루는 수동태(과거분사) 형태입니다.<br>
+            [핵심 어휘] institution: 기관 / separate: 분리된 / thereby: 그로 인해 / buffer: 보호하다, 완충 작용을 하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. That is no longer the case.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그것은 더 이상 사실이 아니다.<br>
+            [구문 해설] 짧은 문장이므로 슬래시 생략.<br>
+            [핵심 어휘] no longer: 더 이상 ~아닌 / the case: 사실, 실정
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. The digitization of massive amounts of information / has continued to grow enormously / <mark>as</mark> the cost of computing power has decreased.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 방대한 양의 정보의 디지털화는 / 엄청나게 계속 성장해 왔다 / 컴퓨팅 파워의 비용이 감소함에 따라.<br>
+            [구문 해설] 접속사 `as`는 상태의 변화에 따른 비례(~함에 따라)를 의미합니다.<br>
+            [핵심 어휘] digitization: 디지털화 / massive: 방대한 / enormously: 엄청나게 / decrease: 감소하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">6. The development of smart systems <mark>that</mark> communicate autonomously / <mark>gave rise to</mark> an infinite variety of potential breakdowns.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 자율적으로 소통하는 스마트 시스템의 발전은 / 무한히 다양한 잠재적 고장을 낳았다.<br>
+            [구문 해설] `that`은 선행사 smart systems를 수식하는 주격 관계대명사입니다.<br>
+            [핵심 어휘] autonomously: 자율적으로 / give rise to: ~을 낳다, 야기하다 / infinite: 무한한 / breakdown: 고장, 붕괴
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">7. This interdependence is a breeding ground for complex failure.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이러한 상호 의존성은 복잡한 실패의 온상이다.<br>
+            [구문 해설] 짧은 문장이므로 슬래시 생략.<br>
+            [핵심 어휘] interdependence: 상호 의존성 / breeding ground: 온상, 번식지 / complex: 복잡한
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">8. As Rita puts it, / when "things that <mark>used to</mark> be kept separate bump up against each other, / <mark>it</mark> becomes far more difficult / <mark>to predict</mark> what's going to happen next."</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] Rita가 말하듯, / "분리되어 유지되던 것들이 서로 부딪칠 때, / 훨씬 더 어려워진다 / 다음에 무슨 일이 일어날지 예측하는 것은."<br>
+            [구문 해설] `it`은 가주어이고 `to predict ~` 이하가 진주어입니다. `used to`는 과거의 규칙적인 상태나 습관(~하곤 했다, 예전에는 ~했다)을 의미합니다.<br>
+            [핵심 어휘] put it: 말하다, 표현하다 / used to: (과거에) ~하곤 했다 / bump up against: ~와 부딪치다 / predict: 예측하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">9. Information technology creates new vulnerabilities / <mark>because</mark> interconnectedness instantly spreads the impact of small failures.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 정보 기술은 새로운 취약성을 만들어 낸다 / 왜냐하면 상호 연결성이 작은 실패의 영향을 즉각적으로 퍼뜨리기 때문이다.<br>
+            [구문 해설] `because`는 원인을 나타내는 부사절 접속사입니다.<br>
+            [핵심 어휘] vulnerability: 취약성 / interconnectedness: 상호 연결성 / instantly: 즉각적으로 / spread: 퍼뜨리다, 확산시키다
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 상호 연결된 현대 사회</span>
+        <h4>초연결 사회의 취약성</h4>
+        <p>소셜 미디어와 글로벌 금융망은 국경을 넘어 모든 것을 연결하며, 이로 인해 우리는 지구 반대편의 인적 오류에도 쉽게 노출됨.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 분리에서 의존으로의 변화</span>
+        <h4>시스템 경계의 붕괴</h4>
+        <p>과거에는 기관들이 분리되어 있어 오류의 영향으로부터 보호받았으나, 디지털화와 자율 시스템의 발달로 기관 간의 경계가 허물어지고 상호 의존성이 극대화됨.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 복잡한 실패의 온상</h4>
+        <h4>작은 실패의 거대한 파급</h4>
+        <p>서로 분리되어 있던 시스템들이 부딪치면서 예측 불가능성이 커졌고, 이러한 상호 연결성은 작은 실패를 즉각적으로 퍼뜨리는 새로운 취약성을 낳음.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. The global financial industry links every bank and countless households in every country, making us [ vulnerable / vulnerably ] to human error taking place on the other side of the world.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 분사구문 making 뒤에 목적어(us)를 보충 설명하는 목적격 보어 자리가 필요하므로 형용사인 vulnerable이 맞습니다.">vulnerable</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. make + 목적어 + 목적격 보어 구문에서 보어 자리에는 부사가 올 수 없으므로 형용사 vulnerable을 써야 합니다.">vulnerably</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. As Rita puts it, when things that used to be kept separate [ bump / bumping ] up against each other, it becomes far more difficult to predict...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. when이 이끄는 부사절 안에서 주어(things)에 연결되는 본동사가 필요하므로 현재분사인 bumping은 올 수 없습니다.">bumping</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! when 절의 주어는 things이고 'that used to be kept separate'는 수식어구입니다. 따라서 복수 주어인 things와 수일치하는 본동사 bump가 필요합니다.">bump</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 주제로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Social media has altered business, politics, and friendships, making going viral a household term. The global financial industry links every bank and countless households in every country, making us vulnerable to human error taking place on the other side of the world. As Columbia University strategy professor Rita McGrath explains, years ago most of our institutions were separate and thereby buffered from the effects of errors outside their walls. That is no longer the case. The digitization of massive amounts of information has continued to grow enormously as the cost of computing power has decreased. The development of smart systems that communicate autonomously gave rise to an infinite variety of potential breakdowns. This interdependence is a breeding ground for complex failure. As Rita puts it, when "things that used to be kept separate bump up against each other, it becomes far more difficult to predict what's going to happen next." Information technology creates new vulnerabilities because interconnectedness instantly spreads the impact of small failures.
+      </div>
+      <div class="exam-choices">
+        ① the necessity of autonomous systems in modern society<br>
+        ② the unpredictable risks and vulnerabilities caused by extreme interconnectedness<br>
+        ③ strategies for protecting financial industries from global errors<br>
+        ④ the positive impacts of information technology on global communication<br>
+        ⑤ historical shifts in institutional management to prevent failures
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          해설: 이 글은 과거 분리되어 있던 시스템들이 고도로 디지털화되고 상호 연결되면서, 작은 실패도 즉각적으로 퍼져나가 예측할 수 없는 거대한 위험과 취약성을 만들어낸다는 것을 설명하고 있습니다. 따라서 극단적 상호 연결성이 야기하는 예측 불가능한 위험과 취약성(the unpredictable risks and vulnerabilities caused by extreme interconnectedness)이 주제로 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        Social media has altered business, politics, and friendships, making going viral a household term. The global financial industry links every bank and countless households in every country, making us vulnerable to human error taking place on the other side of the world.
+      </div>
+      <div class="exam-choices">
+        (A) This interdependence is a breeding ground for complex failure. As Rita puts it, when "things that used to be kept separate bump up against each other, it becomes far more difficult to predict what's going to happen next." Information technology creates new vulnerabilities because interconnectedness instantly spreads the impact of small failures.<br><br>
+        (B) As Columbia University strategy professor Rita McGrath explains, years ago most of our institutions were separate and thereby buffered from the effects of errors outside their walls. That is no longer the case.<br><br>
+        (C) The digitization of massive amounts of information has continued to grow enormously as the cost of computing power has decreased. The development of smart systems that communicate autonomously gave rise to an infinite variety of potential breakdowns.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 제시문에서 현대 사회의 상호 연결성으로 인한 취약성을 언급한 후, (B)에서 '과거에는 기관들이 분리되어 보호받았다'고 대조하며 변화를 짚습니다. 그 변화의 원인과 양상(정보의 디지털화와 자율 시스템의 발전)을 (C)에서 설명하고, 마지막으로 (A)에서 이러한 상호 의존성이 어떻게 복잡한 실패의 온상이 되는지 결론을 내리는 것이 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글에서 전체 흐름과 관계 없는 문장은?</h4>
+      <div class="exam-passage">
+        As Columbia University strategy professor Rita McGrath explains, years ago most of our institutions were separate and thereby buffered from the effects of errors outside their walls. That is no longer the case. ① The digitization of massive amounts of information has continued to grow enormously as the cost of computing power has decreased. ② The development of smart systems that communicate autonomously gave rise to an infinite variety of potential breakdowns. ③ Furthermore, the integration of these smart systems has proven highly effective in increasing overall corporate productivity and reducing manual labor. ④ This interdependence is a breeding ground for complex failure. ⑤ As Rita puts it, when "things that used to be kept separate bump up against each other, it becomes far more difficult to predict what's going to happen next."
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 글 전체의 흐름은 시스템의 고도화와 상호 의존성이 초래하는 '복잡한 실패와 취약성'이라는 부정적 측면에 집중되어 있습니다. 그러나 ③번 문장은 '스마트 시스템의 통합이 기업의 생산성을 높이고 수작업을 줄이는 데 효과적'이라며 긍정적인 측면을 이야기하고 있으므로 전체 흐름과 무관합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 전체 영어 문장을 완성하시오. (단, 필요시 어형을 변화시킬 것, 단어 중복 사용 불가)</h4>
+      <div class="exam-passage">
+        As Rita puts it, when "things that used to be kept separate bump up against each other, it becomes far more difficult to predict what's going to happen next." <u>정보 기술은 새로운 취약성을 만들어 낸다 / 왜냐하면 상호 연결성이 작은 실패의 영향을 즉각적으로 퍼뜨리기 때문이다.</u><br><br>
+        [조건]<br>
+        1. 접속사 because를 활용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: spread / creates / technology / interconnectedness / instantly / new vulnerabilities / the impact / small / of / because / information / failures
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: Information technology creates new vulnerabilities because interconnectedness instantly spreads the impact of small failures.</b><br>
+          해설: 주어 `Information technology` 뒤에 동사 `creates`와 목적어 `new vulnerabilities`를 씁니다. 이어 원인을 나타내는 접속사 `because`를 쓰고, 종속절의 주어 `interconnectedness`(상호 연결성)가 3인칭 단수이므로 부사 `instantly` 뒤에 오는 동사 spread를 **spreads**로 수일치시킵니다. 마지막으로 목적어 `the impact of small failures`를 배열하여 문장을 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

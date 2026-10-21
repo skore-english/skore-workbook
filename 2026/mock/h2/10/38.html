@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 38번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 38번 · 문장 삽입</div>
+    <h1 class="title">THE RELATIVITY OF WATER QUALITY<br><span>Safety Limits Dependent on Water's Purpose</span></h1>
+    <p class="header-lead">수질을 결정하는 기준은 왜 물의 사용 목적에 따라 다르게 설정되어야 하는가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 수질의 상대성 (Relativity of Water Quality)</li>
+        <li><b>[배경 맥락]:</b> 물이 '깨끗하다'는 것은 단순히 맑아 보이는 것이 아니라, 식수, 농업용수, 산업용수 등 용도에 따라 허용되는 물리적, 화학적, 생물학적 기준(벤치마크)을 충족하는 것을 의미한다.</li>
+        <li><b>[논리 요약]:</b> 물은 그 용도가 매우 다양하기 때문에 '모두에게 적용되는 단일 기준'이 있을 수 없으며, 사용 목적에 따라 서로 다른 안전 한계치(수질 기준)가 설정되어야 한다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      When we say that water is "clean," we don't just mean that it looks like a glass of water. Water quality is about following a certain set of criteria, or "benchmarks." These guidelines inform us exactly how much physical, chemical, or biological stuff can be in the water. These rules ensure the water is safe for anything we want to do with it, whether that's drinking it at home, watering crops on a farm, or running it through a huge industrial boiler. We can't utilize the same "one size fits all" rule for everyone because we use water for so many diverse things. For instance, the water that cools down a huge power plant generator doesn't need to be as clean as the water you drink from the kitchen tap. This is why groups set different "safety limits" for the water dependent on how it will be utilized.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 수질은 시각적 맑음이 아니라 용도에 따른 기준 충족을 의미하며, 물의 다양한 활용 목적 때문에 만능 단일 기준이 아닌 개별적인 안전 한계치가 설정된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. When we say / <mark>that</mark> water is "clean," / we don't just mean / <mark>that</mark> it looks like a glass of water.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 우리가 말할 때 / 물이 '깨끗하다'고, / 우리는 단지 의미하는 것이 아니다 / 그것이 한 잔의 물처럼 보인다는 것을.<br>
+            [구문 해설] 두 개의 that 모두 명사절을 이끄는 접속사로 쓰였습니다.<br>
+            [핵심 어휘] clean: 깨끗한 / mean: 의미하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. Water quality is about following a certain set of criteria, / or "benchmarks."</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 수질은 특정한 일련의 기준을 따르는 것에 관한 것이다, / 즉 '벤치마크(기준점)'를.<br>
+            [구문 해설] or는 여기서 '즉, 다시 말해'라는 동격의 의미로 쓰였습니다.<br>
+            [핵심 어휘] water quality: 수질 / criteria: 기준 (단수형: criterion) / benchmark: 기준점
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. These guidelines inform us / exactly <mark>how much physical, chemical, or biological stuff / can be</mark> in the water.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이 지침들은 우리에게 알려준다 / 정확히 얼마나 많은 물리적, 화학적, 또는 생물학적 물질이 / 물속에 있을 수 있는지를.<br>
+            [구문 해설] inform + 간접목적어(us) + 직접목적어(how much ~ in the water) 구조의 4형식 문장입니다. 직접목적어 자리에 의문형용사구가 이끄는 간접의문문이 왔습니다.<br>
+            [핵심 어휘] guideline: 지침 / physical: 물리적인 / chemical: 화학적인 / biological: 생물학적인 / stuff: 물질, 것
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. These rules ensure / <mark>that</mark> the water is safe / for anything we want to do with it, / <mark>whether</mark> that's drinking it at home, / watering crops on a farm, / or running it through a huge industrial boiler.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이 규칙들은 보장한다 / 물이 안전하다는 것을 / 우리가 그것으로 하고자 하는 어떤 것에든, / 그것이 집에서 그것을 마시는 것이든, / 농장에서 작물에 물을 주는 것이든, / 혹은 거대한 산업용 보일러를 통해 그것을 가동하는 것이든 간에.<br>
+            [구문 해설] anything과 we 사이에 목적격 관계대명사가 생략되었습니다. `whether A, B, or C`는 'A이든, B이든, 혹은 C이든 간에'라는 부사절을 이끕니다. drinking, watering, running이 동명사로 병렬 연결되어 있습니다.<br>
+            [핵심 어휘] ensure: 보장하다 / crop: 작물 / industrial: 산업의
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. We can't utilize the same "one size fits all" rule for everyone / <mark>because</mark> we use water for so many diverse things.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 우리는 모두를 위해 똑같은 '모두에게 적용되는 단일' 규칙을 활용할 수 없다 / 왜냐하면 우리가 물을 너무나 다양하게 많은 것들을 위해 사용하기 때문이다.<br>
+            [핵심 어휘] utilize: 활용하다 / one size fits all: 모두에게 (두루) 적용되는 / diverse: 다양한
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">6. For instance, the water <mark>that</mark> cools down a huge power plant generator / doesn't need to be <mark>as</mark> clean / <mark>as</mark> the water you drink from the kitchen tap.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 예를 들어, 거대한 발전소 발전기를 냉각시키는 물은 / 그만큼 깨끗할 필요가 없다 / 당신이 부엌 수도꼭지에서 마시는 물만큼.<br>
+            [구문 해설] `that`은 주격 관계대명사로 the water를 수식합니다. `not as 형용사원급 as` 구문이 쓰여 동등 비교의 부정을 나타냅니다.<br>
+            [핵심 어휘] cool down: 냉각시키다 / power plant: 발전소 / generator: 발전기 / tap: 수도꼭지
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">7. This is <mark>why</mark> groups set different "safety limits" for the water / dependent on how it will be utilized.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이것이 단체들이 물에 대해 다른 '안전 한계치'를 설정하는 이유이다 / 그것이 어떻게 활용될지에 따라.<br>
+            [구문 해설] `This is why + 결과` 구문입니다. `dependent on`은 분사구문(being dependent on) 또는 형용사구로 앞 문장 상황에 대한 부연을 나타냅니다.<br>
+            [핵심 어휘] set: 설정하다 / safety limit: 안전 한계치 / dependent on: ~에 따라, ~에 의존하는
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 수질의 진짜 의미</span>
+        <h4>단순한 맑음을 넘은 기준점</h4>
+        <p>물이 겉보기에 깨끗하다는 것을 넘어, 수질이란 물속에 허용되는 물질의 양을 규정하는 특정 '기준(벤치마크)'을 따르는 것을 의미함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 용도의 다양성과 한계</span>
+        <h4>만능 단일 기준의 불가</h4>
+        <p>식수, 농업용수, 산업용수 등 물의 용도는 매우 다양하므로 모든 상황에 똑같이 적용되는 '모두에게 적용되는 단일 규칙'을 사용할 수 없음.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 목적에 따른 기준 차등화</span>
+        <h4>맞춤형 안전 한계치 설정</h4>
+        <p>발전소 냉각수가 부엌의 식수만큼 깨끗할 필요가 없듯이, 단체들은 물이 어떻게 활용될지에 따라 각기 다른 안전 한계치를 설정함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. These guidelines inform us exactly how much physical, chemical, or biological stuff [ can be / it can be ] in the water.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 의문형용사구인 'how much ~ biological stuff' 전체가 간접의문문의 주어 역할을 하므로, 주어 중복을 피하기 위해 대명사 it 없이 바로 동사 can be가 이어져야 합니다.">can be</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. '얼마나 많은 물리적, 화학적, 생물학적 물질이'라는 명사구 자체가 주어 역할을 하고 있으므로 대명사 it을 쓰면 주어가 중복됩니다.">it can be</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. For instance, the water that [ cool / cools ] down a huge power plant generator doesn't need to be as clean as the water you drink...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 주격 관계대명사 that의 선행사는 단수 명사인 the water이므로 복수형 동사인 cool은 올 수 없습니다.">cool</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 주격 관계대명사 that은 단수 명사인 선행사 the water를 대신하므로, 수일치에 따라 단수 동사 cools가 올바릅니다.">cools</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        When we say that water is "clean," we don't just mean that it looks like a glass of water. Water quality is about following a certain set of criteria, or "benchmarks." These guidelines inform us exactly how much physical, chemical, or biological stuff can be in the water. These rules ensure the water is safe for anything we want to do with it, whether that's drinking it at home, watering crops on a farm, or running it through a huge industrial boiler. We can't utilize the same "_______________________" rule for everyone because we use water for so many diverse things. For instance, the water that cools down a huge power plant generator doesn't need to be as clean as the water you drink from the kitchen tap. This is why groups set different "safety limits" for the water dependent on how it will be utilized.
+      </div>
+      <div class="exam-choices">
+        ① one size fits all<br>
+        ② visually transparent<br>
+        ③ environmentally sustainable<br>
+        ④ highly purified<br>
+        ⑤ universally affordable
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          해설: 물은 집에서 마시거나, 농작물에 물을 주거나, 산업용 보일러에 쓰는 등 그 용도가 너무나 다양하기 때문에, 모든 상황에 천편일률적으로 적용할 수 있는 '모두에게 적용되는 단일(one size fits all)' 규칙을 활용할 수 없다는 것이 논리적 흐름입니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        When we say that water is "clean," we don't just mean that it looks like a glass of water. Water quality is about following a certain set of criteria, or "benchmarks."
+      </div>
+      <div class="exam-choices">
+        (A) We can't utilize the same "one size fits all" rule for everyone because we use water for so many diverse things. For instance, the water that cools down a huge power plant generator doesn't need to be as clean as the water you drink from the kitchen tap.<br><br>
+        (B) This is why groups set different "safety limits" for the water dependent on how it will be utilized.<br><br>
+        (C) These guidelines inform us exactly how much physical, chemical, or biological stuff can be in the water. These rules ensure the water is safe for anything we want to do with it, whether that's drinking it at home, watering crops on a farm, or running it through a huge industrial boiler.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          해설: 제시문에서 수질에 대한 특정 '기준(benchmarks)'을 언급합니다. (C)에서 '이 지침들(These guidelines)'로 그 기준을 받아 용도의 다양성(drinking, watering, running)을 나열합니다. (A)에서 용도가 다양하므로 단일 규칙(one size fits all)을 쓸 수 없다고 한계를 지적하고 발전소 예시를 듭니다. 마지막으로 (B)에서 이러한 이유(This is why)로 용도에 따라 한계치가 다르게 설정된다는 결론을 내립니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 밑줄 친 <u>"one size fits all" rule</u>이 이 글에서 의미하는 바로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        When we say that water is "clean," we don't just mean that it looks like a glass of water. Water quality is about following a certain set of criteria, or "benchmarks." These guidelines inform us exactly how much physical, chemical, or biological stuff can be in the water. These rules ensure the water is safe for anything we want to do with it, whether that's drinking it at home, watering crops on a farm, or running it through a huge industrial boiler. We can't utilize the same <u>"one size fits all" rule</u> for everyone because we use water for so many diverse things. For instance, the water that cools down a huge power plant generator doesn't need to be as clean as the water you drink from the kitchen tap. This is why groups set different "safety limits" for the water dependent on how it will be utilized.
+      </div>
+      <div class="exam-choices">
+        ① A single universal standard of water purity applied equally to all situations<br>
+        ② An environmental policy that restricts daily water usage uniformly<br>
+        ③ A method to precisely measure the chemical balance in drinking water<br>
+        ④ A filtering technology designed to fit any household kitchen tap<br>
+        ⑤ A standard guaranteeing that all industrial water is perfectly safe for drinking
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          해설: 이 글에서 "one size fits all"은 모든 상황과 용도(식수, 농업용, 산업용 등)에 똑같이 적용되는 '단일하고 보편적인 수질 기준(A single universal standard of water purity applied equally to all situations)'을 의미합니다. 글쓴이는 물의 용도가 다르기 때문에 이러한 만능 기준을 적용할 수 없다고 주장합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 전체 영어 문장을 완성하시오. (단, 어법에 맞게 어형을 변화시킬 것, 단어 중복 사용 불가)</h4>
+      <div class="exam-passage">
+        For instance, the water that cools down a huge power plant generator doesn't need to be as clean as the water you drink from the kitchen tap. <u>이것이 단체들이 물이 어떻게 활용될지에 따라 물에 대해 서로 다른 '안전 한계치'를 설정하는 이유이다.</u><br><br>
+        [조건]<br>
+        1. 관계부사 why와 의문사구절(간접의문문)을 활용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: set / limits / the water / different / this / why / groups / safety / is / for / dependent on how it will be utilized
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: This is why groups set different safety limits for the water dependent on how it will be utilized.</b><br>
+          해설: '~한 이유이다'라는 뜻의 `This is why` 뒤에 주어 `groups`와 동사 `set`을 씁니다. 목적어로 `different safety limits`를 쓰고 `for the water`를 연결합니다. 마지막으로 제공된 분사/형용사구 표현인 `dependent on how it will be utilized`를 이어 영작을 완성합니다. (원문의 큰따옴표는 영작 조건 상 생략되었습니다.)
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

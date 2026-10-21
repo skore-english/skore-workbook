@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026년 10월 고2 학평 37번 분석</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>고2 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 37번 · 순서배열</div>
+    <h1 class="title">THE POWER OF REAPPRAISAL<br><span>Transforming Emotions at Their Root for Resilience</span></h1>
+    <p class="header-lead">감정적 상황에 대한 생각을 바꾸는 '재평가'는 어떻게 우리의 심리적 건강과 회복력을 형성하는가?</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 감정 재평가 (Emotional Reappraisal)와 회복력 (Resilience)</li>
+        <li><b>[배경 맥락]:</b> 동일한 부정적 사건(예: 이혼)이라도 개인이 그 상황을 어떻게 해석하느냐에 따라 겪게 되는 감정의 강도와 종류가 달라지며, 이는 장기적인 심리적 건강에 직결된다.</li>
+        <li><b>[논리 요약]:</b> 감정적 상황에 대한 해석을 바꾸는 '재평가'는 부정적 감정을 줄이고 긍정적 감정을 유발하여 단기적 감정 반응을 긍정적으로 변화시킬 뿐만 아니라, 장기적으로 심리적 회복력을 구축하는 핵심 열쇠가 된다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Reappraisal-changing the way one thinks about emotional situations-might present a particularly effective avenue to regulating emotions because it transforms emotions at their root. Take, for example, someone who is going through a divorce. This is often an adverse event, and yet, it can be construed in different ways. One might view it as an overpowering loss that will mark one's family for life. Alternatively, one might see it as something that is painful but that might lead to positive outcomes in the long run, such as improved relationships. As a result of these different construals, one might feel different emotions. The first construal may bring intense sadness and anger. The second construal might also bring sadness and anger but perhaps at lower levels. Crucially, it might also bring some positive emotions, such as hope, strength, or gratitude. This example illustrates how reappraisal might powerfully transform short-term emotional responses. When repeated over time, these short-term emotional consequences of reappraisal might accumulate to shape people's psychological health. Thereby, reappraisal might be a key to resilience.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 상황을 다르게 생각하는 감정 재평가는 근본적으로 감정을 변화시키며, 이러한 단기적 반응이 누적되어 장기적인 심리적 건강과 회복력을 기르는 데 핵심 역할을 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">1. Reappraisal-changing the way one thinks about emotional situations- / <mark>might present</mark> a particularly effective avenue to regulating emotions / <mark>because</mark> it transforms emotions at their root.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 재평가는-즉 누군가 감정적인 상황에 대해 생각하는 방식을 바꾸는 것은- / 감정을 조절하는 데 특히 효과적인 방법을 제공할지도 모른다 / 왜냐하면 그것이 감정을 근원부터 변화시키기 때문이다.<br>
+            [구문 해설] 대시(-)로 둘러싸인 부분은 Reappraisal을 동격으로 부연 설명합니다. `to regulating`의 to는 전치사이므로 뒤에 동명사(regulating)가 옵니다.<br>
+            [핵심 어휘] reappraisal: 재평가 / avenue: 수단, 방법, 길 / regulate: 조절하다 / transform: 변화시키다 / at their root: 근원부터
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">2. Take, for example, someone who is going through a divorce.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 예를 들어, 이혼을 겪고 있는 누군가를 생각해 보자.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] go through: 겪다 / divorce: 이혼
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">3. This is often an adverse event, / and yet, it <mark>can be construed</mark> in different ways.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이것은 흔히 부정적인(불운한) 사건이다, / 하지만, 그것은 다른 방식들로 해석될 수 있다.<br>
+            [구문 해설] `can be construed`는 조동사가 포함된 수동태로 '해석될 수 있다'라는 의미입니다.<br>
+            [핵심 어휘] adverse: 부정적인, 불운한 / construe: 해석하다
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">4. One might view it / <mark>as</mark> an overpowering loss <mark>that</mark> will mark one's family for life.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 어떤 이는 그것을 볼지도 모른다 / 일생 동안 자신의 가족에게 상처를 남길 압도적인 상실로.<br>
+            [구문 해설] `view A as B`(A를 B로 보다) 구문이 사용되었으며, `that`은 주격 관계대명사로 an overpowering loss를 수식합니다.<br>
+            [핵심 어휘] overpowering: 압도적인 / loss: 상실 / mark: 상처를 남기다, 표시하다 / for life: 일생 동안
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">5. Alternatively, one might see it / <mark>as</mark> something <mark>that</mark> is painful / but <mark>that</mark> might lead to positive outcomes in the long run, / such as improved relationships.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 대안으로, 어떤 이는 그것을 볼지도 모른다 / 고통스러운 무언가로 / 하지만 장기적으로는 긍정적인 결과로 이어질지도 모르는 (무언가로), / 개선된 관계들과 같은.<br>
+            [구문 해설] `see A as B` 구문 안에 something을 수식하는 두 개의 주격 관계대명사절(`that is painful`과 `that might lead to~`)이 but으로 병렬 연결되어 있습니다.<br>
+            [핵심 어휘] alternatively: 대안으로, 그 대신에 / outcome: 결과 / in the long run: 장기적으로
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">6. As a result of these different construals, / one might feel different emotions.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이러한 다른 해석들의 결과로, / 사람은 다른 감정들을 느낄지도 모른다.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] construal: 해석, 이해
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">7. The first construal may bring intense sadness and anger.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 첫 번째 해석은 강렬한 슬픔과 분노를 가져올 수 있다.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] intense: 강렬한
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">8. The second construal might also bring sadness and anger / but perhaps at lower levels.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 두 번째 해석 또한 슬픔과 분노를 가져올 수 있다 / 하지만 아마도 더 낮은 수준으로.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] lower: 더 낮은
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">9. Crucially, it might also bring some positive emotions, / such as hope, strength, or gratitude.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 결정적으로, 그것은 긍정적인 감정들도 가져올 수 있다, / 희망, 강인함, 혹은 감사함과 같은.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] crucially: 결정적으로 / gratitude: 감사(함)
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">10. This example illustrates / <mark>how</mark> reappraisal might powerfully transform short-term emotional responses.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이 예시는 보여준다 / 어떻게 재평가가 단기적인 감정 반응들을 강력하게 변화시킬 수 있는지를.<br>
+            [구문 해설] `how` 이하의 간접의문문 명사절이 동사 illustrates의 목적어로 쓰였습니다.<br>
+            [핵심 어휘] illustrate: 보여주다, 설명하다 / powerfully: 강력하게 / short-term: 단기적인
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">11. When <mark>repeated</mark> over time, / these short-term emotional consequences of reappraisal / might accumulate <mark>to shape</mark> people's psychological health.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 시간이 지남에 따라 반복될 때, / 재평가의 이러한 단기적인 감정적 결과들은 / 축적되어 사람들의 심리적 건강을 형성할지도 모른다.<br>
+            [구문 해설] `When repeated`는 접속사 When 뒤에 주어와 be동사(they are)가 생략된 분사구문입니다. `to shape`는 결과를 나타내는 부사적 용법의 to부정사(~하여 그 결과 ...하다)로 쓰였습니다.<br>
+            [핵심 어휘] repeat: 반복하다 / consequence: 결과 / accumulate: 축적되다, 누적되다 / shape: 형성하다 / psychological: 심리적인
+          </div>
+        </details>
+      </div>
+      
+      <div class="chunk-item">
+        <div class="chunk-en">12. Thereby, reappraisal might be a key to resilience.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 그렇게 함으로써, 재평가는 회복력의 핵심이 될지도 모른다.<br>
+            [구문 해설] 핵심 문법/구문 포인트만 설명합니다.<br>
+            [핵심 어휘] thereby: 그렇게 함으로써 / resilience: 회복력
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 재평가의 근본적 조절</span>
+        <h4>감정 변화의 핵심 수단</h4>
+        <p>감정적 상황에 대한 생각을 바꾸는 '재평가'는 감정을 근원부터 변화시키므로 매우 효과적인 감정 조절 방법을 제공함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 해석이 만드는 감정의 차이</span>
+        <h4>이혼이라는 위기의 두 가지 시각</h4>
+        <p>이혼을 영구적 상실로 보느냐, 고통스럽지만 성장의 기회로 보느냐에 따라 겪는 슬픔의 강도가 다르고 긍정적 감정까지 유발됨.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 심리적 건강과 회복력</h4>
+        <h4>단기적 반응의 누적</h4>
+        <p>이러한 단기적인 긍정적 감정 반응의 변화가 시간이 지나며 반복, 누적되면 결국 장기적인 심리적 건강과 '회복력(Resilience)'의 열쇠가 됨.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. Reappraisal-changing the way one thinks about emotional situations-[ might present / might presenting ] a particularly effective avenue to regulating emotions...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 대시(-) 안의 부분은 삽입구이고 본동사는 조동사 might 뒤에 와야 하므로 동사원형인 present가 올바릅니다.">might present</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 문장의 주어인 Reappraisal에 대한 본동사 자리이며, 조동사 might 뒤에는 동사원형이 와야 합니다.">might presenting</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. Alternatively, one might see it as something that is painful but [ that / what ] might lead to positive outcomes in the long run...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 선행사인 something을 공통으로 수식하며 앞의 주격 관계대명사 that(that is painful)과 접속사 but으로 병렬 구조를 이루어야 하므로 that이 맞습니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 앞의 something을 선행사로 꾸며주는 주격 관계대명사가 접속사 but에 의해 병렬로 나열되는 구조입니다. 선행사를 포함하는 what은 이 자리에 올 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 요지로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Reappraisal-changing the way one thinks about emotional situations-might present a particularly effective avenue to regulating emotions because it transforms emotions at their root. Take, for example, someone who is going through a divorce. This is often an adverse event, and yet, it can be construed in different ways. One might view it as an overpowering loss that will mark one's family for life. Alternatively, one might see it as something that is painful but that might lead to positive outcomes in the long run, such as improved relationships. As a result of these different construals, one might feel different emotions. The first construal may bring intense sadness and anger. The second construal might also bring sadness and anger but perhaps at lower levels. Crucially, it might also bring some positive emotions, such as hope, strength, or gratitude. This example illustrates how reappraisal might powerfully transform short-term emotional responses. When repeated over time, these short-term emotional consequences of reappraisal might accumulate to shape people's psychological health. Thereby, reappraisal might be a key to resilience.
+      </div>
+      <div class="exam-choices">
+        ① 심각한 이혼 위기를 극복하려면 전문가의 심리 상담이 필수적이다.<br>
+        ② 부정적 상황에 대한 객관적 사실 인식은 문제 해결의 첫걸음이다.<br>
+        ③ 상황에 대한 해석 방식을 바꾸는 감정 재평가는 심리적 회복력을 기르는 데 핵심적이다.<br>
+        ④ 감정을 억누르지 않고 솔직하게 표현하는 것이 정신 건강에 가장 이롭다.<br>
+        ⑤ 단기적인 긍정적 사고는 일시적 위안을 줄 뿐 장기적인 해결책이 되지 못한다.
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ③</b><br>
+          해설: 이 글은 감정적 상황을 다르게 해석하는 '재평가(reappraisal)'가 부정적 감정을 줄이고 긍정적 감정을 이끌어내어 궁극적으로 사람들의 장기적인 심리적 건강과 회복력(resilience)을 형성한다는 내용을 핵심 요지로 삼고 있습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Reappraisal-changing the way one thinks about emotional situations-might present a particularly effective avenue to regulating emotions because it transforms emotions at their root. (중략) The first construal may bring intense sadness and anger. The second construal might also bring sadness and anger but perhaps at lower levels. Crucially, it might also bring some positive emotions, such as hope, strength, or gratitude. This example illustrates how reappraisal might powerfully transform short-term emotional responses. When repeated over time, these short-term emotional consequences of reappraisal might accumulate to shape people's psychological health. Thereby, reappraisal might be a key to resilience.
+      </div>
+      <div class="summary-box">
+        Reappraisal regulates our (A) ________ reactions to difficult situations by altering our perspectives, which ultimately fosters psychological (B) ________.
+      </div>
+      <div class="exam-choices">
+        ① (A) logical — (B) health<br>
+        ② (A) immediate — (B) dependence<br>
+        ③ (A) physical — (B) resilience<br>
+        ④ (A) short-term — (B) resilience<br>
+        ⑤ (A) short-term — (B) distress
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ④</b><br>
+          해설: 재평가는 상황에 대한 관점을 바꿔 우리의 '단기적인(short-term)' 감정 반응을 조절하며, 이것이 누적되면 궁극적으로 심리적 건강과 '회복력(resilience)'을 기르게 됩니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Reappraisal-changing the way one thinks about emotional situations-might present a particularly effective avenue to regulating emotions because it transforms emotions at their ①<u>root</u>. Take, for example, someone who is going through a divorce. This is often an ②<u>adverse</u> event, and yet, it can be construed in different ways. One might view it as an overpowering loss that will mark one's family for life. Alternatively, one might see it as something that is painful but that might lead to ③<u>positive</u> outcomes in the long run, such as improved relationships. As a result of these different construals, one might feel different emotions. The first construal may bring intense sadness and anger. The second construal might also bring sadness and anger but perhaps at ④<u>lower</u> levels. Crucially, it might also bring some positive emotions, such as hope, strength, or gratitude. This example illustrates how reappraisal might powerfully transform short-term emotional responses. When repeated over time, these short-term emotional consequences of reappraisal might ⑤<u>diminish</u> to shape people's psychological health. Thereby, reappraisal might be a key to resilience.
+      </div>
+      <div class="exam-choices">
+        ① root<br>
+        ② adverse<br>
+        ③ positive<br>
+        ④ lower<br>
+        ⑤ diminish
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ⑤</b><br>
+          해설: 단기적인 감정 반응의 변화가 시간이 지나면서 반복되면, 그것들이 '줄어드는(diminish)' 것이 아니라 '축적되어(accumulate)' 장기적인 심리적 건강과 회복력을 형성하게 됩니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고, 밑줄 친 우리말과 일치하도록 주어진 단어들을 배열하여 전체 영어 문장을 완성하시오. (단, 어법에 맞게 어형을 변화시킬 것, 단어 중복 사용 불가)</h4>
+      <div class="exam-passage">
+        Crucially, it might also bring some positive emotions, such as hope, strength, or gratitude. <u>이 예시는 어떻게 재평가가 단기적인 감정 반응들을 강력하게 변화시킬 수 있는지를 보여준다.</u> When repeated over time, these short-term emotional consequences of reappraisal might accumulate to shape people's psychological health.<br><br>
+        [조건]<br>
+        1. 간접의문문 어순(의문사+주어+동사)을 활용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 주어진 단어: emotional responses / powerfully / illustrates / how / short-term / reappraisal / this example / transform / might
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: This example illustrates how reappraisal might powerfully transform short-term emotional responses.</b><br>
+          해설: 주어 동사인 `This example illustrates` 뒤에 목적어로 쓰일 명사절(간접의문문)을 만듭니다. 의문사 `how` 뒤에 주어인 `reappraisal`을 쓰고, 조동사 `might` 뒤에 부사 `powerfully`와 동사원형 `transform`을 연결합니다. 마지막으로 목적어 `short-term emotional responses`를 배치하여 영작을 완성합니다.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
