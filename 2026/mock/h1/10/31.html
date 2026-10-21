@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 10월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content p { margin-bottom: 6px; }
+.details-content p:last-child { margin-bottom: 0; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.answer-content p { margin-bottom: 6px; }
+.answer-content p:last-child { margin-bottom: 0; }
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 31번 · 빈칸 추론</div>
+    <h1 class="title">BEYOND SCARCITY: A NEW ERA<br><span>How Generative AI Parallels the Star Trek Universe</span></h1>
+    <p class="header-lead">희소성을 전제로 한 고전 경제학과 달리, 모든 것이 풍요로운 스타트렉의 세계관이 생성형 AI를 통해 어떻게 우리 현실이 될 수 있는지 분석합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 자원의 희소성(Scarcity)과 기술적 풍요(Abundance)</li>
+        <li><b>[배경 맥락]:</b> 고전 경제학은 세상의 자원이 부족하다는 '희소성'의 원리를 바탕으로 시장과 가격을 통해 자원을 배분합니다. 하지만 기술이 극도로 발달한 영화 스타트렉 세계관에서는 이 희소성이 사라졌습니다.</li>
+        <li><b>[논리 요약]:</b> 스타트렉 세계관처럼 자원의 희소성이 사라진 풍요로운 사회가, 오늘날 무한한 산출물을 만들어내는 '생성형 AI(Generative AI)'의 발전으로 인해 곧 우리 사회의 현실이 될 수 있습니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Few people may view the Star Trek universe through an economic lens, but doing so provides a window into a world that might soon be upon us. All of classical economics is based on the notion that there isn't usually enough of anything to give everyone everything they want or need. Because of that, we use markets and pricing to allocate those goods, services, and resources to where they might result in the highest benefit. In Star Trek, however, there isn't much scarcity. Technology has allowed that society to reproduce any food they want, transport themselves thousands of miles in the blink of an eye, communicate over light-years, and travel among the stars. All of humanity in that world has been fully educated so that they can participate in this prosperity. Everyone is an explorer, researcher, engineer, artist, doctor, or counselor. Generative AI has the potential to allow many dimensions of our own society to be similarly highly abundant.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 희소성에 기초한 고전 경제학과 달리, 기술 발달로 희소성이 사라진 스타트렉의 풍요로운 세계관은 생성형 AI를 통해 우리 현실에서도 구현될 잠재력이 있다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Few people may view the Star Trek universe through an economic lens, / but <mark>doing so</mark> provides a window into a world / <mark>that</mark> might soon be upon us.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 스타트렉 세계관을 경제적 렌즈로 보는 사람은 거의 없을지도 모른다, / 하지만 그렇게 하는 것은 세계를 들여다보는 창을 제공한다 / 곧 우리에게 다가올지도 모르는.</p>
+            <p><b>[구문 해설]</b> Few는 부정의 의미로 '거의 없는'입니다. 'doing so'는 앞선 'viewing the Star Trek universe through an economic lens'를 받는 대동사 성격의 동명사 주어입니다. that은 선행사 a world를 수식하는 주격 관계대명사입니다.</p>
+            <p><b>[핵심 어휘]</b> view A through B (A를 B를 통해 보다), economic lens (경제적 렌즈/관점), provide a window into (~을 들여다보는 창을 제공하다), be upon us (우리에게 닥치다, 다가오다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. All of classical economics is based on the notion / <mark>that</mark> there isn't usually enough of anything / to give everyone everything they want or need.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 모든 고전 경제학은 개념에 기초하고 있다 / 보통 어떤 것도 충분하지 않다는 / 모든 사람에게 그들이 원하거나 필요로 하는 모든 것을 줄 만큼.</p>
+            <p><b>[구문 해설]</b> that은 추상명사 the notion의 구체적 내용을 설명하는 동격의 명사절 접속사입니다. to give는 앞의 enough를 수식하는 부사적 용법의 to부정사입니다.</p>
+            <p><b>[핵심 어휘]</b> classical economics (고전 경제학), be based on (~에 기초하다), notion (개념, 관념)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. Because of that, / we use markets and pricing to allocate those goods, services, and resources / to where they might <mark>result in</mark> the highest benefit.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그것 때문에, / 우리는 그러한 재화, 서비스, 그리고 자원을 할당하기 위해 시장과 가격을 사용한다 / 그것들이 가장 높은 이익을 낳을지도 모르는 곳으로.</p>
+            <p><b>[구문 해설]</b> to allocate는 목적을 나타내는 부사적 용법의 to부정사입니다. 'to where ~'에서 where는 의문부사 또는 선행사를 포함한 관계부사로 쓰여 '~하는 곳으로'라는 장소의 부사구를 이끕니다.</p>
+            <p><b>[핵심 어휘]</b> allocate (할당하다, 배분하다), goods (재화), resource (자원), result in (~을 낳다, ~의 결과를 초래하다), benefit (이익, 혜택)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. In Star Trek, however, / there isn't much <mark>scarcity</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 하지만, 스타트렉에서는, / 희소성이 별로 없다.</p>
+            <p><b>[구문 해설]</b> 짧은 문장이므로 복잡한 해설 생략. 이 글의 전환점이 되는 핵심 문장입니다.</p>
+            <p><b>[핵심 어휘]</b> scarcity (희소성)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. Technology has <mark>allowed</mark> that society <mark>to reproduce</mark> any food they want, / transport themselves thousands of miles in the blink of an eye, / communicate over light-years, / and travel among the stars.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 기술은 그 사회가 그들이 원하는 어떤 음식이든 복제하게 해 주었다, / 눈 깜짝할 사이에 수천 마일을 이동하고, / 광년을 넘어 통신하고, / 그리고 별들 사이를 여행하도록.</p>
+            <p><b>[구문 해설]</b> 'allow + 목적어 + to부정사' 구조에서, 목적격 보어로 4개의 동사원형(reproduce, transport, communicate, travel)이 병렬 연결되었습니다. (to가 모두 생략됨)</p>
+            <p><b>[핵심 어휘]</b> reproduce (복제하다, 재생산하다), transport (이동시키다, 수송하다), in the blink of an eye (눈 깜짝할 사이에), communicate (통신하다, 의사소통하다), light-year (광년)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. All of humanity in that world has been fully educated / <mark>so that</mark> they can participate in this prosperity.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그 세계의 모든 인류는 완전히 교육받았다 / 그들이 이 번영에 참여할 수 있도록.</p>
+            <p><b>[구문 해설]</b> humanity는 단수 취급하여 현재완료 수동태(has been educated)가 쓰였습니다. so that은 목적(~하기 위해서, ~할 수 있도록)을 나타내는 접속사입니다.</p>
+            <p><b>[핵심 어휘]</b> humanity (인류), participate in (~에 참여하다), prosperity (번영, 풍요)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. Everyone is an explorer, researcher, engineer, artist, doctor, or counselor.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 모두가 탐험가, 연구원, 엔지니어, 예술가, 의사, 또는 상담가이다.</p>
+            <p><b>[구문 해설]</b> 희소성이 사라진 사회에서 인간이 자아 실현적 직업에 종사하고 있음을 나열합니다.</p>
+            <p><b>[핵심 어휘]</b> explorer (탐험가), counselor (상담가)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. Generative AI has the potential / to <mark>allow</mark> many dimensions of our own society <mark>to be</mark> similarly highly <mark>abundant</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 생성형 AI는 잠재력을 가지고 있다 / 우리 사회의 많은 차원들이 비슷하게 매우 풍요로워지게 할.</p>
+            <p><b>[구문 해설]</b> to allow는 the potential을 수식하는 형용사적 용법의 to부정사이며, 그 안에서 다시 'allow + 목적어(many dimensions~) + to부정사(to be)' 구조가 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> generative AI (생성형 AI), potential (잠재력), dimension (차원, 영역), similarly (비슷하게), abundant (풍요로운, 풍부한)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Contrast & Application)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[01 배경] 고전 경제학의 전제</span>
+        <h4>자원의 희소성</h4>
+        <p>고전 경제학은 세상의 자원이 모든 사람의 욕구를 채워줄 만큼 충분하지 않다는 '희소성'의 개념을 바탕으로 시장과 가격을 통해 자원을 분배합니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[02 대조] 스타트렉 세계관</span>
+        <h4>기술을 통한 극도의 풍요</h4>
+        <p>영화 스타트렉의 사회는 고도로 발달한 기술 덕분에 희소성이 거의 없으며, 모든 인류가 번영 속에서 자아 실현에 참여하는 삶을 누립니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[03 결론] 현실로의 적용</span>
+        <h4>생성형 AI가 가져올 미래</h4>
+        <p>스타트렉과 같이 희소성이 사라진 풍요로운 사회의 모습은, 폭발적인 생산성을 지닌 '생성형 AI'를 통해 곧 우리 현실 사회에서도 구현될 잠재력이 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. All of classical economics is based on the notion [ that / which ] there isn't usually enough of anything to give everyone everything they want or need.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: that. 뒤에 주어(there)와 동사(isn't)를 갖춘 완전한 문장이 이어지며, 앞에 있는 추상명사 the notion의 구체적인 내용을 설명하므로 동격의 접속사 that이 쓰여야 합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: which. 관계대명사 which는 뒤에 불완전한 문장을 이끌어야 하지만, 여기서는 완전한 문장이 이어지므로 어법상 틀립니다.">which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. Technology has allowed that society to reproduce any food they want, transport themselves thousands of miles in the blink of an eye, [ communicate / communicating ] over light-years, and travel among the stars.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: communicate. 'allow + 목적어 + to부정사' 구문에서 목적격 보어인 to reproduce에 등위접속사 and로 연결되어 병렬 구조를 이루고 있습니다. (to) transport, (to) communicate, and (to) travel처럼 동사원형이 와야 합니다.">communicate</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: communicating. 현재분사나 동명사 형태가 올 구조적 이유가 전혀 없습니다. 목적격 보어들의 병렬을 파악하는 것이 중요합니다.">communicating</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 요지로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Few people may view the Star Trek universe through an economic lens, but doing so provides a window into a world that might soon be upon us. All of classical economics is based on the notion that there isn't usually enough of anything to give everyone everything they want or need. Because of that, we use markets and pricing to allocate those goods, services, and resources to where they might result in the highest benefit. In Star Trek, however, there isn't much scarcity. Technology has allowed that society to reproduce any food they want, transport themselves thousands of miles in the blink of an eye, communicate over light-years, and travel among the stars. All of humanity in that world has been fully educated so that they can participate in this prosperity. Everyone is an explorer, researcher, engineer, artist, doctor, or counselor. Generative AI has the potential to allow many dimensions of our own society to be similarly highly abundant.
+      </div>
+      <div class="exam-choices">
+        ① 고전 경제학의 원리는 현대 기술 사회에서도 여전히 유효하게 작동한다.<br>
+        ② 기술의 발전은 직업의 다양성을 줄이고 인간을 대체할 가능성이 높다.<br>
+        ③ 생성형 AI는 자원의 희소성을 극복하여 사회 전반에 극도의 풍요를 가져올 잠재력이 있다.<br>
+        ④ 우주 탐사 기술의 발전이 인류의 경제적 문제 해결에 핵심적인 역할을 할 것이다.<br>
+        ⑤ 자원의 효율적 배분을 위해서는 시장 경제 체제에 대한 철저한 교육이 필수적이다.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ 생성형 AI는 자원의 희소성을 극복하여 사회 전반에 극도의 풍요를 가져올 잠재력이 있다.</b></p>
+          <p>해설: 글의 전반부에서 희소성을 바탕으로 한 경제학과 이를 탈피한 스타트렉의 풍요로운 세계관을 대조한 뒤, 마지막 문장에서 생성형 AI(Generative AI)가 우리 사회를 이처럼 매우 풍요롭게(abundant) 만들어줄 잠재력이 있다는 결론을 맺고 있으므로 ③번이 가장 적절한 요지입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> In Star Trek, however, there isn't much scarcity.<br><br>
+        Few people may view the Star Trek universe through an economic lens, but doing so provides a window into a world that might soon be upon us. ( ① ) All of classical economics is based on the notion that there isn't usually enough of anything to give everyone everything they want or need. ( ② ) Because of that, we use markets and pricing to allocate those goods, services, and resources to where they might result in the highest benefit. ( ③ ) Technology has allowed that society to reproduce any food they want, transport themselves thousands of miles in the blink of an eye, communicate over light-years, and travel among the stars. ( ④ ) All of humanity in that world has been fully educated so that they can participate in this prosperity. ( ⑤ ) Generative AI has the potential to allow many dimensions of our own society to be similarly highly abundant.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③</b></p>
+          <p>해설: 주어진 문장은 역접(however)과 함께 스타트렉 세계관에는 희소성(scarcity)이 없다고 선언합니다. 바로 앞 문장들(①, ②)은 고전 경제학의 기본 전제인 부족함(희소성)과 그로 인한 시장/가격의 사용을 설명합니다. 따라서 경제학적 희소성 설명이 끝나는 곳이자, 기술을 통한 구체적인 풍요(reproduce any food~)의 예시가 시작되기 직전인 ③번 위치에 들어가는 것이 가장 완벽한 논리적 흐름을 만듭니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Few people may view the Star Trek universe through an economic lens, but doing so provides a window into a world that might soon be upon us. All of classical economics is based on the notion that there isn't usually enough of anything to give everyone everything they want or need. Because of that, we use markets and pricing to allocate those goods, services, and resources to where they might result in the highest benefit. In Star Trek, however, there isn't much scarcity. Technology has allowed that society to reproduce any food they want, transport themselves thousands of miles in the blink of an eye, communicate over light-years, and travel among the stars. All of humanity in that world has been fully educated so that they can participate in this prosperity. Everyone is an explorer, researcher, engineer, artist, doctor, or counselor. Generative AI has the potential to allow many dimensions of our own society to be similarly highly abundant.
+      </div>
+      <div class="exam-passage" style="margin-top:12px; background:#fff; border:1px solid var(--border); padding:12px; border-radius:4px;">
+        <b>[요약문]</b><br>
+        While traditional economics assumes constant (A) ___________ of resources, advanced technologies like Generative AI could lead our society toward a future of extreme (B) ___________, much like the fictional Star Trek world.
+      </div>
+      <div class="exam-choices">
+        ① (A) scarcity …… (B) abundance<br>
+        ② (A) scarcity …… (B) poverty<br>
+        ③ (A) abundance …… (B) scarcity<br>
+        ④ (A) abundance …… (B) efficiency<br>
+        ⑤ (A) stability …… (B) uncertainty
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① (A) scarcity …… (B) abundance</b></p>
+          <p>해설: 고전 경제학은 자원의 '희소성(scarcity)'을 전제로 하지만, 생성형 AI와 같은 첨단 기술은 스타트렉의 세계관처럼 사회를 극도의 '풍요(abundance)' 속으로 이끌 잠재력이 있다는 글의 핵심 대조 구조를 완벽하게 요약한 ①번이 정답입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 조건에 맞게 우리말 뜻을 올바른 영어 문장으로 영작하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. 아래의 제시된 단어들을 모두 한 번씩만 사용할 것.<br>
+        2. 의미와 어법에 맞게 <b>1개의 단어 형태를 변형</b>하여 'allow A to B' 구문을 완성할 것.<br>
+        3. 총 16단어로 작성할 것.<br><br>
+        <b>[우리말]</b><br>
+        생성형 AI는 우리 사회의 많은 차원들이 비슷하게 매우 풍요로워지게 할 잠재력을 가지고 있다.<br><br>
+        <b>[제시어]</b><br>
+        ( potential / of / many / has / our / generative / highly / allow / be / the / to / AI / own / similarly / abundant / dimensions / society / to )
+        <br><br>
+        <small>*참고: to는 2번 제시되었습니다.</small>
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: Generative AI has the potential to allow many dimensions of our own society to be similarly highly abundant.</b></p>
+          <p>해설: 주어와 동사 'Generative AI has'를 쓰고 목적어 'the potential'을 씁니다. 잠재력을 수식하는 형용사적 용법의 to부정사를 써서 'to allow'로 이어가며, 이 안에서 'allow + 목적어 + to부정사' 구조를 형성해야 합니다. 목적어 자리에 '우리 사회의 많은 차원들'인 'many dimensions of our own society'를 배열하고, 목적격 보어 자리에 'to be'를 씁니다. 마지막으로 비슷하게 매우 풍요롭다는 부사구 'similarly highly abundant'를 연결하면 완벽한 영작이 됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

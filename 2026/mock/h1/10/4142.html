@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 10월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content p { margin-bottom: 6px; }
+.details-content p:last-child { margin-bottom: 0; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.answer-content p { margin-bottom: 6px; }
+.answer-content p:last-child { margin-bottom: 0; }
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 41-42번 · 장문 독해</div>
+    <h1 class="title">ETHICAL WEB DESIGN AND SUSTAINABILITY<br><span>Balancing Default Settings with Environmental Impact</span></h1>
+    <p class="header-lead">무한 스크롤, 자동 재생 등 사용자 통제권을 빼앗는 웹 디자인 패턴이 어떻게 데이터와 에너지 과소비를 조장하는지 비판하고, 환경 영향을 줄이는 윤리적 디폴트 설정의 필요성을 분석합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">4 QUESTIONS</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 웹 디자인 패턴의 환경적 영향과 윤리적 디폴트 설정 (Environmental Impact of Web Design & Ethical Defaults)</li>
+        <li><b>[배경 맥락]:</b> 무한 스크롤이나 자동 재생 비디오 같은 웹 디자인 요소들은 사용자의 편의를 위한 것처럼 보이지만, 실제로는 데이터와 에너지를 과소비하게 만듭니다.</li>
+        <li><b>[논리 요약]:</b> 웹 디자인은 불가피하게 사용자의 행동을 유도(nudge)하지만, 그 방식은 투명해야 하며, 환경적 영향을 최소화하는 선택지를 기본값(default)으로 설정하는 것이 책임 있는 접근법입니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Patterns such as infinite scroll, autoplaying videos, or requiring an account just to make a purchase all interfere with the user's control over their own experience. From a sustainability perspective, many of these patterns encourage overconsumption of data and attention. Infinite scroll keeps loading new content whether the user wants it or not, increasing data usage and device processing. Autoplay forces media to load and play even for people who may never watch it. These choices consume more energy on both the user's device and the servers delivering the content. Take the decision by a popular music streaming platform to replace static album artwork with short video loops by default. This change significantly increases data usage and battery consumption, while the option to disable it is buried deep in the settings. As a result, most users consume more resources unless they actively search for a way to opt out.<br><br>It is important to acknowledge that web design always nudges behavior in some way. Showing consequences and highlighting options are all forms of influence. The ethical line is not whether nudging exists, but whether it is transparent, reversible, and aligned with the user's interests. In many cases, the most responsible approach is to make the lower-impact option the default, while keeping alternatives clearly available. Defaults are powerful, and when chosen carefully, they can reduce environmental impact without removing user agency.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 투명하고 윤리적인 웹 디자인은 사용자의 통제권을 존중하면서도, 환경적 영향을 줄이는 옵션을 기본값으로 설정하여 자원 과소비를 막아야 한다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Patterns such as infinite scroll, autoplaying videos, or requiring an account just to make a purchase / all <mark>interfere with</mark> the user's control / over their own experience.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 무한 스크롤, 자동 재생 비디오, 또는 단지 구매를 위해 계정을 요구하는 것과 같은 패턴들은 / 모두 사용자의 통제권을 방해한다 / 그들 자신의 경험에 대한.</p>
+            <p><b>[구문 포인트]</b> such as 뒤에 동명사구 세 개(infinite scroll, autoplaying videos, requiring~)가 병렬로 연결되어 Patterns를 수식합니다. 문장의 본동사는 interfere with입니다.</p>
+            <p><b>[핵심 어휘]</b> infinite scroll(무한 스크롤), autoplaying(자동 재생하는), require(요구하다), interfere with(~을 방해하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. From a sustainability perspective, / many of these patterns <mark>encourage</mark> overconsumption / of data and attention.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 지속 가능성의 관점에서 볼 때, / 이러한 패턴들 중 다수는 과소비를 조장한다 / 데이터와 주의력의.</p>
+            <p><b>[구문 포인트]</b> 전치사 From을 통해 관점/시각을 제시하며, 주절에서 과소비(overconsumption)를 야기한다는 핵심 문제점을 던집니다.</p>
+            <p><b>[핵심 어휘]</b> sustainability(지속 가능성), perspective(관점), encourage(조장하다, 부추기다), overconsumption(과소비)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. Infinite scroll <mark>keeps loading</mark> new content / <mark>whether</mark> the user wants it or not, / <mark>increasing</mark> data usage and device processing.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 무한 스크롤은 새로운 콘텐츠를 계속해서 로드한다 / 사용자가 그것을 원하든 원하지 않든, / 데이터 사용과 기기 처리를 증가시키면서.</p>
+            <p><b>[구문 포인트]</b> keep -ing는 '계속해서 ~하다'라는 뜻입니다. whether ~ or not은 부사절로 '~이든 아니든'의 뜻이며, increasing은 동시동작/결과를 나타내는 분사구문입니다.</p>
+            <p><b>[핵심 어휘]</b> load(로드하다, 불러오다), usage(사용량), processing(처리)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. Autoplay <mark>forces</mark> media <mark>to load and play</mark> / even for people <mark>who</mark> may never watch it.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 자동 재생은 미디어가 로드되고 재생되도록 강제한다 / 그것을 결코 보지 않을지도 모르는 사람들에게조차도.</p>
+            <p><b>[구문 포인트]</b> force + 목적어 + to부정사 구조로 '목적어가 ~하도록 강제하다'라는 뜻을 지닙니다. who는 people을 수식하는 주격 관계대명사입니다.</p>
+            <p><b>[핵심 어휘]</b> force(강제하다), media(미디어)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. These choices consume more energy / on both the user's device and the servers <mark>delivering</mark> the content.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이러한 선택들은 더 많은 에너지를 소비한다 / 사용자의 기기와 콘텐츠를 전달하는 서버 모두에서.</p>
+            <p><b>[구문 포인트]</b> delivering은 the servers를 후치 수식하는 현재분사입니다.</p>
+            <p><b>[핵심 어휘]</b> consume(소비하다), deliver(전달하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. <mark>Take the decision</mark> by a popular music streaming platform / to replace static album artwork with short video loops <mark>by default</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 한 인기 있는 음악 스트리밍 플랫폼에 의한 결정을 예로 들어보자 / 정적인 앨범 아트를 짧은 비디오 루프로 기본값으로 대체하기로 한.</p>
+            <p><b>[구문 포인트]</b> Take는 '예를 들어보자'라는 뜻의 동사 원형으로 쓰인 명령문입니다. replace A with B는 'A를 B로 대체하다'라는 숙어입니다.</p>
+            <p><b>[핵심 어휘]</b> static(정적인), replace(대체하다), loop(루프, 반복 재생), by default(기본값으로)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. This change significantly increases data usage and battery consumption, / <mark>while</mark> the option to disable it is buried deep in the settings.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이 변화는 데이터 사용량과 배터리 소비를 상당히 증가시킨다, / 반면에 그것을 비활성화하는 옵션은 설정 깊숙이 묻혀 있다.</p>
+            <p><b>[구문 포인트]</b> while은 대조(~인 반면에)를 나타내는 접속사로 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> significantly(상당히), disable(비활성화하다), bury(묻다, 숨기다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. <mark>As a result</mark>, / most users consume more resources / <mark>unless</mark> they actively search for a way to opt out.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 결과적으로, / 대부분의 사용자들은 더 많은 자원을 소비한다 / 그들이 빠져나올 방법을 적극적으로 찾지 않는 한.</p>
+            <p><b>[구문 포인트]</b> unless는 '만약 ~하지 않으면(if not)'의 의미를 가진 부사절 접속사입니다.</p>
+            <p><b>[핵심 어휘]</b> as a result(결과적으로), actively(적극적으로), opt out(빠져나오다, 거부하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">9. It is important to acknowledge / <mark>that</mark> web design always <mark>nudges</mark> behavior in some way.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 인정하는 것이 중요하다 / 웹 디자인이 항상 어떤 방식으로든 행동을 유도한다는 것을.</p>
+            <p><b>[구문 포인트]</b> It은 가주어, to acknowledge 이하가 진주어입니다. that은 명사절 접속사입니다.</p>
+            <p><b>[핵심 어휘]</b> acknowledge(인정하다), nudge((부드럽게) 유도하다, 찌르다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">10. Showing consequences and highlighting options / are all forms of influence.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 결과를 보여주는 것과 선택지를 강조하는 것은 / 모두 영향력의 형태이다.</p>
+            <p><b>[구문 포인트]</b> 동명사구 주어 2개가 and로 연결되어 복수 취급을 받아 동사 are가 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> consequence(결과), highlight(강조하다), influence(영향, 영향력)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">11. The ethical line is <mark>not</mark> <mark>whether</mark> nudging exists, / <mark>but</mark> <mark>whether</mark> it is transparent, reversible, and aligned with the user's interests.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 윤리적 기준선은 행동 유도가 존재하는지의 여부가 아니라, / 그것이 투명하고, 되돌릴 수 있으며, 사용자의 이익과 일치하는지의 여부이다.</p>
+            <p><b>[구문 포인트]</b> 'not A but B' 구문을 사용하여 대조를 이루며, A와 B 자리에 모두 whether 명사절이 병렬로 연결되었습니다.</p>
+            <p><b>[핵심 어휘]</b> ethical(윤리적인), transparent(투명한), reversible(되돌릴 수 있는), aligned with(~와 일치하는)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">12. In many cases, / the most responsible approach is to make the lower-impact option the default, / <mark>while keeping</mark> alternatives clearly available.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 많은 경우에, / 가장 책임감 있는 접근법은 영향이 적은 선택지를 기본값으로 만드는 것이다, / 대안들을 명확하게 이용 가능하게 유지하면서.</p>
+            <p><b>[구문 포인트]</b> to make는 보어로 쓰인 명사적 용법의 to부정사이며, make A B (A를 B로 만들다) 구조입니다. while keeping은 분사구문입니다.</p>
+            <p><b>[핵심 어휘]</b> responsible(책임감 있는), lower-impact(영향이 더 적은), default(기본값), alternative(대안)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">13. Defaults are powerful, / and <mark>when chosen</mark> carefully, / they can reduce environmental impact / without removing user agency.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 기본값은 강력하다, / 그리고 신중하게 선택될 때, / 그것들은 환경적 영향을 줄일 수 있다 / 사용자의 주체성을 제거하지 않고도.</p>
+            <p><b>[구문 포인트]</b> when chosen은 when (they are) chosen에서 주어와 be동사가 생략된 수동형 분사구문입니다.</p>
+            <p><b>[핵심 어휘]</b> agency(주체성, 주도권)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Problem - Example - Solution)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[01 문제 제기] 사용자 통제권 침해와 과소비 조장</span>
+        <h4>무한 스크롤과 자동 재생의 문제</h4>
+        <p>무한 스크롤, 자동 재생 같은 패턴은 사용자 통제권을 방해하고 데이터와 에너지의 과소비를 유도하여 환경에 악영향을 미칩니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[02 구체적 사례] 숨겨진 선택지와 자원 낭비</span>
+        <h4>음악 플랫폼의 디폴트 변경</h4>
+        <p>한 음악 플랫폼이 기본값을 정지 이미지에서 동영상 루프로 바꾸면서 배터리 소모를 늘렸고, 이를 끄는 옵션은 설정 깊숙이 숨겼습니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[03 해결책 제언] 윤리적 행동 유도와 환경 보호</span>
+        <h4>윤리적 디폴트 설정의 필요성</h4>
+        <p>윤리적 웹 디자인은 투명해야 하며, 사용자 주체성을 해치지 않으면서도 환경 영향이 적은 옵션을 기본값(default)으로 설정해야 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. Infinite scroll keeps loading new content whether the user wants it or not, [ increasing / increased ] data usage and device processing.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: increasing. 콤마 뒤에 목적어(data usage and device processing)를 취하며 무한 스크롤이 능동적으로 데이터 사용량을 증가시키는 동시동작/결과를 나타내므로 현재분사 increasing이 적절합니다.">increasing</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: increased. 과거분사 increased를 쓰면 수동의 의미가 되어 목적어를 바로 취할 수 없으므로 어법상 틀립니다.">increased</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. The ethical line is not whether nudging exists, but [ whether / that ] it is transparent, reversible, and aligned with the user's interests.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: whether. 'not A but B' 구문에서 A 자리에 whether 명사절(whether nudging exists)이 왔으므로, 병렬 구조를 이루는 B 자리에도 동일하게 whether 명사절 접속사가 와야 합니다.">whether</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: that. that 접속사를 쓰면 앞의 whether 절과 병렬 구조가 성립하지 않아 어법상 어색해집니다.">that</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · 4 QUESTIONS</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Patterns such as infinite scroll, autoplaying videos, or requiring an account just to make a purchase all interfere with the user's control over their own experience. From a sustainability perspective, many of these patterns encourage overconsumption of data and attention. Autoplay forces media to load and play even for people who may never watch it. These choices consume more energy on both the user's device and the servers delivering the content. It is important to acknowledge that web design always nudges behavior in some way. Showing consequences and highlighting options are all forms of influence. The ethical line is not whether nudging exists, but whether it is transparent, reversible, and aligned with the user's interests. In many cases, the most responsible approach is to make the ________________________ the default, while keeping alternatives clearly available. Defaults are powerful, and when chosen carefully, they can reduce environmental impact without removing user agency.
+      </div>
+      <div class="exam-choices">
+        ① lower-impact option<br>
+        ② most engaging content<br>
+        ③ highly personalized feature<br>
+        ④ fastest loading media<br>
+        ⑤ most profitable service
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① lower-impact option</b></p>
+          <p>해설: 데이터와 에너지의 과소비를 막기 위한 윤리적 웹 디자인의 책임 있는 접근법은, 환경적 영향이 더 적은 선택지(lower-impact option)를 기본값으로 설정하는 것이라는 게 글의 핵심입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Take the decision by a popular music streaming platform to replace static album artwork with short video loops by default.<br><br>
+        Patterns such as infinite scroll, autoplaying videos, or requiring an account just to make a purchase all interfere with the user's control over their own experience. From a sustainability perspective, many of these patterns encourage overconsumption of data and attention. ( ① ) Infinite scroll keeps loading new content whether the user wants it or not, increasing data usage and device processing. ( ② ) Autoplay forces media to load and play even for people who may never watch it. ( ③ ) These choices consume more energy on both the user's device and the servers delivering the content. ( ④ ) This change significantly increases data usage and battery consumption, while the option to disable it is buried deep in the settings. ( ⑤ ) As a result, most users consume more resources unless they actively search for a way to opt out.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④</b></p>
+          <p>해설: 무한 스크롤과 자동 재생이 에너지를 소비한다는 설명 직후에, 음악 스트리밍 플랫폼이 비디오 루프를 기본값으로 설정한 결정을 구체적인 예시(Take the decision~)로 제시하는 것이 자연스럽습니다. 또한 주어진 문장의 'this decision'이 바로 뒤 문장의 'This change'로 연결되므로 ④번 위치가 정답입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글에서 전체 흐름과 관계 없는 문장은?</h4>
+      <div class="exam-passage">
+        Patterns such as infinite scroll, autoplaying videos, or requiring an account just to make a purchase all interfere with the user's control over their own experience. From a sustainability perspective, many of these patterns encourage overconsumption of data and attention. ① Infinite scroll keeps loading new content whether the user wants it or not, increasing data usage and device processing. ② Autoplay forces media to load and play even for people who may never watch it. ③ These choices consume more energy on both the user's device and the servers delivering the content. ④ Music streaming platforms often pay royalties to artists based on the number of times their songs are played by users. ⑤ It is important to acknowledge that web design always nudges behavior in some way, and the ethical line is whether it is transparent and aligned with the user's interests.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④</b></p>
+          <p>해설: 글의 핵심 주제는 특정 웹 디자인 패턴(무한 스크롤, 자동 재생 등)이 사용자의 통제권을 침해하고 데이터와 에너지를 낭비하게 만든다는 환경적·윤리적 측면입니다. 하지만 ④번 문장은 스트리밍 플랫폼이 아티스트에게 재생 횟수에 따라 로열티를 지급한다는 완전히 무관한 경제적 사실을 말하고 있으므로 흐름에서 벗어납니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 문장에서 우리말 부분을 올바르게 영작하세요.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. 아래의 제시된 단어들을 모두 한 번씩만 사용할 것.<br>
+        2. 의미와 어법에 맞게 부사절 접속사 unless 구문을 완성할 것.<br>
+        3. 아래 영어 문장 속 <u>밑줄 친 부분</u>에 해당하는 14단어만 작성할 것.<br><br>
+        <b>[문장]</b><br>
+        As a result, <u>그들이 빠져나올 방법을 적극적으로 찾지 않는 한 대부분의 사용자는 더 많은 자원을 소비한다.</u><br><br>
+        <b>[제시어]</b><br>
+        ( resources / unless / consume / actively / way / opt / users / search / a / out / they / for / most / more )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: most users consume more resources unless they actively search for a way to opt out.</b></p>
+          <p>해설: 주절 '대부분의 사용자는 더 많은 자원을 소비한다'를 'most users consume more resources'로 배열합니다. 그 뒤에 '~하지 않는 한'이라는 조건 부사절 접속사 unless를 붙이고, '그들이 빠져나올 방법을 적극적으로 찾다'를 'they actively search for a way to opt out'으로 연결하여 영작을 완성합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

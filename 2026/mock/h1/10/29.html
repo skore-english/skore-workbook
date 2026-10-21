@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 10월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content p { margin-bottom: 6px; }
+.details-content p:last-child { margin-bottom: 0; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.answer-content p { margin-bottom: 6px; }
+.answer-content p:last-child { margin-bottom: 0; }
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 29번 · 어법</div>
+    <h1 class="title">BIOLOGICAL IMMORTALITY VS. HUMAN AGING<br><span>The Gap Between Regenerative Animals and Humans</span></h1>
+    <p class="header-lead">히드라와 불멸의 해파리가 보여주는 생물학적 불멸성이 인간의 노화 연구에 적용되기 어려운 이유와 한계를 분석합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 생물학적 불멸성(Biological Immortality)과 종간 적용 가능성</li>
+        <li><b>[배경 맥락]:</b> 히드라와 같은 일부 생물은 노화의 징후를 보이지 않아 노화 연구자들의 관심을 끌지만, 이들의 생물학적 메커니즘(재생 능력 등)은 인간과 너무 달라 연구 결과를 인간에게 바로 적용하기 어렵습니다.</li>
+        <li><b>[논리 요약]:</b> 생물학적 불멸성을 지닌 생물들을 통해 노화 과정을 극복할 단서를 찾으려 하지만, 이들은 인간과 너무 다른 특성을 지녀 그 연구 결과가 인간 노화에 얼마나 유의미하게 적용될 수 있을지는 불분명합니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Since hydra and the immortal jellyfish don't exhibit obvious signs of aging, they are often called biologically immortal. This doesn't mean they don't die. Nor does it even mean that they cannot die of biological causes. But, unlike most every animal, their likelihood of dying does not increase with age. Species such as hydra and the immortal jellyfish excite gerontologists because they may provide clues about how to defeat the aging process. But their property of being able to regenerate entire body parts, or even a whole organism, makes them more similar to trees than to us. Although we may learn some fascinating things about their lack of apparent aging, it is not at all clear how relevant those findings will be to human aging. Sometimes biology is universal, especially if it relates to fundamental mechanisms. But in other cases, even discoveries in rats or mice, which are mammals and biologically much closer to us, are difficult to translate into humans. It may be a very long time before any findings gained from hydra or jellyfish are useful to us.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 히드라나 해파리 같은 생물이 생물학적 불멸성을 지녔다고 해도, 생물학적 기제가 인간과 확연히 달라 노화 연구 결과를 인간에게 바로 적용하기는 매우 어렵다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Since hydra and the immortal jellyfish don't exhibit obvious signs of aging, / they are often called biologically immortal.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 히드라와 불멸의 해파리는 분명한 노화의 징후를 보이지 않기 때문에, / 그것들은 종종 생물학적으로 불멸한다고 불린다.</p>
+            <p><b>[구문 해설]</b> Since는 이유를 나타내는 접속사(~때문에)로 쓰였고, 수동태 are called 뒤에 목적격 보어인 biologically immortal이 명사/형용사구로 이어졌습니다.</p>
+            <p><b>[핵심 어휘]</b> exhibit (보이다, 전시하다), obvious (분명한), sign (징후), aging (노화), biologically (생물학적으로), immortal (불멸의)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. This doesn't mean / they don't die.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이것이 의미하지는 않는다 / 그것들이 죽지 않는다는 것을.</p>
+            <p><b>[구문 해설]</b> mean 뒤에 명사절 접속사 that이 생략되어 있습니다.</p>
+            <p><b>[핵심 어휘]</b> N/A</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. <mark>Nor does it even mean</mark> / <mark>that</mark> they cannot die of biological causes.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 또한 그것은 심지어 의미하지도 않는다 / 그것들이 생물학적 원인으로 죽을 수 없다는 것을.</p>
+            <p><b>[구문 해설]</b> 부정어 Nor가 문장 앞으로 나오면서 조동사 does, 주어 it, 동사원형 mean의 어순으로 도치가 일어난 구조입니다.</p>
+            <p><b>[핵심 어휘]</b> cause (원인), die of (~로 죽다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. But, unlike most every animal, / their likelihood of dying does not increase with age.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나, 거의 모든 동물과 달리, / 그것들이 죽을 가능성은 나이에 따라 증가하지 않는다.</p>
+            <p><b>[구문 해설]</b> unlike는 전치사로 '~와는 달리'의 의미를 지닙니다. likelihood of -ing는 '~할 가능성'을 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> unlike (~와 달리), likelihood (가능성), increase (증가하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. Species such as hydra and the immortal jellyfish <mark>excite</mark> gerontologists / because they may provide clues / about how to defeat the aging process.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 히드라와 불멸의 해파리 같은 종들은 노화 학자들을 흥분시킨다 / 왜냐하면 그것들이 단서를 제공할지도 모르기 때문이다 / 노화 과정을 어떻게 물리칠지에 대한.</p>
+            <p><b>[구문 해설]</b> 주어가 Species (단복수 동형 명사로 여기서는 복수 취급)이므로 복수 동사 excite가 왔습니다. 의문사 + to부정사(how to defeat)는 명사구 역할을 합니다.</p>
+            <p><b>[핵심 어휘]</b> species (종), excite (흥분시키다), gerontologist (노화 학자, 노인학자), clue (단서), defeat (물리치다, 이기다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. But their property of <mark>being able to regenerate</mark> entire body parts, / or even a whole organism, / <mark>makes</mark> them more similar to trees / than to us.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나 전체 신체 부위를 재생할 수 있다는 그들의 특성은, / 혹은 심지어 전체 유기체조차도, / 그것들을 나무에 더 비슷하게 만든다 / 우리보다.</p>
+            <p><b>[구문 해설]</b> 문장의 진짜 주어는 단수 명사인 property이며 전치사구(of ~ organism)가 수식하고 있으므로 단수 동사 makes가 쓰였습니다. make + 목적어 + 형용사 보어 구조가 사용되었습니다.</p>
+            <p><b>[핵심 어휘]</b> property (특성, 성질), regenerate (재생하다), entire (전체의), organism (유기체, 생물), similar to (~와 비슷한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. <mark>Although</mark> we may learn some fascinating things / about their lack of apparent aging, / it is not at all clear / <mark>how relevant those findings will be</mark> to human aging.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 비록 우리가 몇 가지 흥미로운 것들을 배울지도 모르지만 / 그것들의 외견상 노화의 부족에 관해, / 전혀 분명하지 않다 / 그 발견들이 인간의 노화에 얼마나 관련이 있을지는.</p>
+            <p><b>[구문 해설]</b> it은 가주어, how절 이하가 진주어입니다. how relevant(의문사+형용사) + 주어(those findings) + 동사(will be)의 간접의문문 어순에 주의해야 합니다.</p>
+            <p><b>[핵심 어휘]</b> fascinating (흥미로운, 매력적인), apparent (외견상의, 분명한), at all (전혀 ~아닌), relevant (관련 있는), finding (발견, 연구 결과)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. Sometimes biology is universal, / especially if it relates to fundamental mechanisms.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 때때로 생물학은 보편적이다, / 특히 그것이 근본적인 메커니즘과 관련이 있다면.</p>
+            <p><b>[구문 해설]</b> relate to는 '~와 관련이 있다'는 의미의 표현입니다.</p>
+            <p><b>[핵심 어휘]</b> universal (보편적인), relate to (~와 관련되다), fundamental (근본적인), mechanism (기제, 메커니즘)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">9. But in other cases, / even discoveries in rats or mice, / <mark>which</mark> are mammals and biologically much closer to us, / <mark>are</mark> difficult to translate into humans.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나 다른 경우에는, / 심지어 쥐나 생쥐에서의 발견조차도, / 그들은 포유류이고 우리에게 생물학적으로 훨씬 더 가까운데, / 인간에게 적용하기 어렵다.</p>
+            <p><b>[구문 해설]</b> 주어인 discoveries 뒤에 관계대명사 계속적 용법(, which ~ us,)이 삽입되었으며, 복수 주어이므로 복수 동사 are가 사용되었습니다. translate A into B는 여기에서 'A를 B에 적용(번역)하다'라는 뜻입니다.</p>
+            <p><b>[핵심 어휘]</b> discovery (발견), mammal (포유류), translate into (~로 적용/번역하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">10. It may be a very long time / before any findings gained from hydra or jellyfish <mark>are</mark> useful to us.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 매우 오랜 시간이 걸릴지도 모른다 / 히드라나 해파리로부터 얻어진 어떤 발견들이 우리에게 유용해지기까지는.</p>
+            <p><b>[구문 해설]</b> gained from ~은 findings를 후치 수식하는 과거분사구입니다. 시간/조건의 부사절(before~)에서는 미래의 일이라도 현재 시제(are)를 사용합니다.</p>
+            <p><b>[핵심 어휘]</b> gain (얻다), useful (유용한)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Phenomenon - Limitation - Conclusion)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[01 생물학적 특성] 생물학적 불멸성</span>
+        <h4>히드라와 해파리의 노화 부재</h4>
+        <p>히드라와 불멸의 해파리는 나이가 들어도 사망 가능성이 커지지 않아 생물학적으로 불멸한다고 일컬어지며 노화 연구자들의 관심을 끕니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[02 근본적 차이] 재생 능력과 종의 차이</span>
+        <h4>인간과의 생물학적 괴리</h4>
+        <p>이들 생물은 신체 부위 전체를 재생하는 식물(나무)에 더 가까운 특성을 가져, 노화 부족에 대한 발견이 인간에게 얼마나 관련이 있을지는 불분명합니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[03 한계 및 결론] 적용의 어려움</span>
+        <h4>연구 결과 적용의 한계</h4>
+        <p>생물학이 때론 보편적이지만, 포유류인 쥐의 발견조차 인간에게 적용하기 어려운 것처럼, 이들의 연구 결과가 인간에게 유용해지기까지는 오랜 시간이 걸릴 것입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. This doesn't mean they don't die. [ Nor does it even mean / Nor it even means ] that they cannot die of biological causes.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: Nor does it even mean. 부정어인 Nor가 문장 맨 앞에 위치하여 뒤따르는 주어와 동사가 의문문 어순으로 도치되어야 합니다. 일반동사 mean을 대신하여 조동사 does가 주어 it 앞으로 도치된 구조가 올바릅니다.">Nor does it even mean</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: Nor it even means. 부정어가 문두에 왔음에도 주어와 동사가 도치되지 않고 평서문 어순을 유지했기 때문에 어법상 틀린 문장입니다.">Nor it even means</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. But their property of being able to regenerate entire body parts, or even a whole organism, [ makes / make ] them more similar to trees than to us.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: makes. 이 문장의 진짜 주어는 단수 명사인 property입니다. 뒤에 붙은 전치사구(of ~ organism)는 수식어구에 불과하므로, 주어의 단수/복수에 영향을 주지 않습니다. 따라서 단수 동사 makes가 적절합니다.">makes</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: make. 동사 바로 앞의 복수 명사구(body parts)나 organism 등에 시선을 빼앗겨 복수 동사 make를 고르면 수일치 함정에 빠지게 됩니다.">make</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 요지로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Since hydra and the immortal jellyfish don't exhibit obvious signs of aging, they are often called biologically immortal. This doesn't mean they don't die. Nor does it even mean that they cannot die of biological causes. But, unlike most every animal, their likelihood of dying does not increase with age. Species such as hydra and the immortal jellyfish excite gerontologists because they may provide clues about how to defeat the aging process. But their property of being able to regenerate entire body parts, or even a whole organism, makes them more similar to trees than to us. Although we may learn some fascinating things about their lack of apparent aging, it is not at all clear how relevant those findings will be to human aging. Sometimes biology is universal, especially if it relates to fundamental mechanisms. But in other cases, even discoveries in rats or mice, which are mammals and biologically much closer to us, are difficult to translate into humans. It may be a very long time before any findings gained from hydra or jellyfish are useful to us.
+      </div>
+      <div class="exam-choices">
+        ① 인간의 수명 연장을 위해서는 새로운 동물 임상 시험이 필수적이다.<br>
+        ② 해파리와 히드라의 노화 방지 메커니즘은 유전공학의 핵심 열쇠이다.<br>
+        ③ 인간과 거리가 먼 불멸의 생물 연구 결과를 인간 노화에 적용하기는 매우 어렵다.<br>
+        ④ 동물의 재생 능력은 진화의 과정에서 생존 가능성을 크게 높여주었다.<br>
+        ⑤ 인간과 포유류의 유사성을 바탕으로 노화의 근본 원인을 규명해야 한다.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ 인간과 거리가 먼 불멸의 생물 연구 결과를 인간 노화에 적용하기는 매우 어렵다.</b></p>
+          <p>해설: 지문은 히드라나 불멸의 해파리가 노화 연구자들을 흥분시키기는 하지만, 그들의 재생 능력 등은 인간과 너무 다르고(나무에 더 가까움), 포유류인 쥐의 연구 결과조차 인간에게 적용하기 어려운 마당에 이들의 결과를 인간의 노화 극복에 바로 적용하기는 무척 어려울 것이라고 강조하고 있습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        Since hydra and the immortal jellyfish don't exhibit obvious signs of aging, they are often called biologically immortal. This doesn't mean they don't die. Nor does it even mean that they cannot die of biological causes.
+        <br><br>
+        (A) Although we may learn some fascinating things about their lack of apparent aging, it is not at all clear how relevant those findings will be to human aging. Sometimes biology is universal, especially if it relates to fundamental mechanisms.<br>
+        (B) But in other cases, even discoveries in rats or mice, which are mammals and biologically much closer to us, are difficult to translate into humans. It may be a very long time before any findings gained from hydra or jellyfish are useful to us.<br>
+        (C) But, unlike most every animal, their likelihood of dying does not increase with age. Species such as hydra and the immortal jellyfish excite gerontologists because they may provide clues about how to defeat the aging process. But their property of being able to regenerate entire body parts, or even a whole organism, makes them more similar to trees than to us.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (C) - (B)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④ (C) - (A) - (B)</b></p>
+          <p>해설: 주어진 문장에서 그들이 아예 죽지 않는 것은 아니라고 말한 후, (C)에서 그럼에도 나이에 따라 사망 가능성이 커지지 않는 특성 때문에 학자들을 흥분시키지만 재생 능력이 식물과 비슷해 인간과 다르다는 역접이 등장합니다. 그로 인해 (A)에서 그 발견이 인간에게 얼마나 관련될지 불분명하다는 내용이 이어지며 생물학의 보편성을 언급합니다. 하지만 (B)에서 보편적이지 않은 경우(쥐의 사례)를 들며 최종적으로 이 연구들이 인간에게 유용해지려면 오래 걸릴 것이라는 결론이 맺어집니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Species such as hydra and the immortal jellyfish excite gerontologists because they may provide clues about how to ① <u>defeat</u> the aging process. But their property of being able to regenerate entire body parts, or even a whole organism, makes them more ② <u>similar</u> to trees than to us. Although we may learn some fascinating things about their lack of apparent aging, it is not at all clear how ③ <u>irrelevant</u> those findings will be to human aging. Sometimes biology is universal, especially if it relates to fundamental mechanisms. But in other cases, even discoveries in rats or mice, which are mammals and biologically much ④ <u>closer</u> to us, are difficult to ⑤ <u>translate</u> into humans.
+      </div>
+      <div class="exam-choices">
+        ① defeat<br>
+        ② similar<br>
+        ③ irrelevant<br>
+        ④ closer<br>
+        ⑤ translate
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ irrelevant</b></p>
+          <p>해설: 원문에서는 '그 연구 결과들이 인간의 노화에 얼마나 관련이 있을지(relevant)가 전혀 불분명하다'는 내용이 되어야 문맥에 맞습니다. irrelevant(무관한)를 쓰면 '얼마나 무관할지가 불분명하다'는 뜻이 되어 글의 흐름이 반대가 되므로 relevant로 고쳐야 합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 조건에 맞게 우리말 뜻을 올바른 영어 문장으로 영작하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. 아래의 제시된 단어들을 모두 한 번씩만 사용할 것.<br>
+        2. 의미와 어법에 맞게 <b>1개의 단어 형태를 변형</b>하여 가주어/진주어 구문을 완성할 것. (간접의문문 어순 주의)<br>
+        3. 총 15단어로 작성할 것.<br><br>
+        <b>[우리말]</b><br>
+        그 발견들이 인간의 노화에 얼마나 관련이 있을지는 전혀 분명하지 않다.<br><br>
+        <b>[제시어]</b><br>
+        ( clear / all / how / human / those / at / find / not / relevant / be / is / aging / will / it / to )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: it is not at all clear how relevant those findings will be to human aging.</b></p>
+          <p>해설: '전혀 분명하지 않다'는 가주어 it을 활용해 'it is not at all clear'로 작성합니다. 그 뒤 진주어 자리에 간접의문문을 써야 하는데, '얼마나 관련이 있을지'를 묻고 있으므로 의문사 'how' 뒤에 형용사 'relevant'를 붙여 'how relevant'로 시작합니다. 이어 주어 자리에 오는 제시어 find를 명사인 <b>findings</b>로 어형 변화시킨 뒤, 동사구 'will be', 전치사구 'to human aging'을 연결하여 간접의문문 어순(의문사+형용사+주어+동사)을 완성합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 10월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content p { margin-bottom: 6px; }
+.details-content p:last-child { margin-bottom: 0; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.answer-content p { margin-bottom: 6px; }
+.answer-content p:last-child { margin-bottom: 0; }
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 32번 · 빈칸 추론</div>
+    <h1 class="title">THE NECESSITY OF OUTWARD SIGNALS<br><span>Why Listening Must Be Demonstrated to Be Felt</span></h1>
+    <p class="header-lead">누군가에게 '내 말을 들어주었다'는 느낌을 주려면 단순한 경청과 이해를 넘어, 외부적인 신호를 통해 들었음을 증명해야 한다는 점을 분석합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 경청의 3요소와 외적 반응의 중요성</li>
+        <li><b>[배경 맥락]:</b> 고객 서비스 상황이나 일상적인 대화에서 사람들은 자신의 의견이 존중받고 수용되기를 원합니다. 그러나 단순히 마음속으로만 듣고 이해하는 것은 상대방에게 전달되지 않습니다.</li>
+        <li><b>[논리 요약]:</b> 누군가 자신의 말을 들었다고 느끼게 하려면 주의 집중과 이해라는 내적 과정뿐만 아니라, 들었다는 사실을 보여주는 외적 신호(반응)가 필수적입니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      People, whether customers or otherwise, want to feel heard. When someone calls customer service, asks to speak to a manager, or comes into your office with something on their mind, they want to feel like someone is listening to their concerns and going to address them. But for someone to feel heard, three things have to happen. First, they have to feel like the other person paid attention to what they said. Second, they have to feel like the other person understood what they said. And third, the other person has to demonstrate that they listened. This last part is key. Imagine talking to someone who provided no response. They might have attended to everything we said. They might even have understood it completely. But without some sort of outward signal that indicates they listened, it's impossible to know whether or not they actually did.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 타인이 내 말을 경청했다고 느끼게 하려면 단순한 이해를 넘어 들었음을 보여주는 '외부적 신호(outward signal)'가 반드시 필요하다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. People, whether customers or otherwise, want to <mark>feel heard</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 사람들은, 고객이든 아니든 간에, 자신의 말이 경청된다고 느끼고 싶어 한다.</p>
+            <p><b>[구문 해설]</b> feel heard는 감각동사 feel 뒤에 과거분사 heard가 보어로 쓰여 수동의 의미('내 말이 들려지는 상태')를 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> whether A or otherwise (A이든 아니든 간에), feel heard (자신의 말이 경청된다고 느끼다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. When someone calls customer service, / asks to speak to a manager, / or comes into your office with something on their mind, / they want to feel / <mark>like</mark> someone is listening to their concerns / and going to <mark>address</mark> them.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 누군가가 고객 서비스에 전화를 걸거나, / 매니저와 통화하기를 요청하거나, / 혹은 마음에 무언가를 품고 당신의 사무실로 들어올 때, / 그들은 느끼고 싶어 한다 / 누군가가 그들의 우려를 경청하고 있고 / 그것들을 해결할 것이라고.</p>
+            <p><b>[구문 해설]</b> when 부사절 안에서 세 개의 동사(calls, asks, comes)가 or로 병렬 연결되어 있습니다. feel like 뒤에는 명사절이 이어져 '~인 것처럼 느끼다'라는 뜻을 이룹니다.</p>
+            <p><b>[핵심 어휘]</b> customer service (고객 서비스), concern (우려, 걱정), address (다루다, 해결하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. But <mark>for someone</mark> to feel heard, / three things have to happen.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나 누군가가 자신의 말이 경청된다고 느끼기 위해서는, / 세 가지 일이 일어나야 한다.</p>
+            <p><b>[구문 해설]</b> for someone은 뒤에 이어지는 to부정사(to feel heard)의 의미상 주어입니다.</p>
+            <p><b>[핵심 어휘]</b> happen (일어나다, 발생하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. First, / they have to feel / like the other person <mark>paid attention to</mark> <mark>what</mark> they said.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 첫째, / 그들은 느껴야 한다 / 상대방이 그들이 말한 것에 주의를 기울였다고.</p>
+            <p><b>[구문 해설]</b> what they said는 선행사를 포함한 관계대명사절로 전치사 to의 목적어 역할을 합니다.</p>
+            <p><b>[핵심 어휘]</b> pay attention to (~에 주의를 기울이다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. Second, / they have to feel / like the other person understood <mark>what</mark> they said.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 둘째, / 그들은 느껴야 한다 / 상대방이 그들이 말한 것을 이해했다고.</p>
+            <p><b>[구문 해설]</b> 앞 문장과 동일하게 what절이 understood의 목적어로 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> understand (이해하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. And third, / the other person has to <mark>demonstrate</mark> / <mark>that</mark> they listened.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그리고 셋째, / 상대방은 증명해야 한다 / 그들이 경청했다는 것을.</p>
+            <p><b>[구문 해설]</b> that은 목적어 명사절을 이끄는 접속사입니다.</p>
+            <p><b>[핵심 어휘]</b> demonstrate (증명하다, 보여주다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. This last part is key.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이 마지막 부분이 핵심이다.</p>
+            <p><b>[구문 해설]</b> 짧은 문장이며, 셋째 조건(demonstrate)이 가장 중요함을 강조합니다.</p>
+            <p><b>[핵심 어휘]</b> key (핵심인, 매우 중요한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. Imagine talking to someone / <mark>who</mark> provided no response.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 누군가와 이야기하는 것을 상상해 보라 / 아무런 반응을 제공하지 않는.</p>
+            <p><b>[구문 해설]</b> who는 선행사 someone을 수식하는 주격 관계대명사입니다.</p>
+            <p><b>[핵심 어휘]</b> response (반응)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">9. They <mark>might have</mark> attended to everything we said.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들은 우리가 말한 모든 것에 주의를 기울였을지도 모른다.</p>
+            <p><b>[구문 해설]</b> might have p.p.는 과거의 일에 대한 약한 추측(~했을지도 모른다)을 나타냅니다.</p>
+            <p><b>[핵심 어휘]</b> might have p.p. (~했을지도 모른다), attend to (~에 주의를 기울이다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">10. They might even have understood it completely.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그들은 심지어 그것을 완벽하게 이해했을지도 모른다.</p>
+            <p><b>[구문 해설]</b> 앞 문장과 동일한 might have p.p. 구조가 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> completely (완벽하게)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">11. But without some sort of <mark>outward signal</mark> / <mark>that</mark> indicates they listened, / it's impossible to know / <mark>whether or not</mark> they actually <mark>did</mark>.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나 어떤 종류의 외부적인 신호 없이는 / 그들이 경청했다는 것을 나타내는, / 아는 것은 불가능하다 / 그들이 실제로 그랬는지 아닌지를.</p>
+            <p><b>[구문 해설]</b> that은 outward signal을 수식하는 주격 관계대명사입니다. it은 가주어, to know 이하는 진주어입니다. whether or not은 명사절(~인지 아닌지)을 이끌며, did는 앞선 동사 listened를 받는 대동사입니다.</p>
+            <p><b>[핵심 어휘]</b> outward (외부적인, 겉으로 드러나는), signal (신호), indicate (나타내다), whether or not (~인지 아닌지), actually (실제로)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Desire - Condition - Necessity)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[01 도입] 경청받고 싶은 욕구</span>
+        <h4>인간의 기본적인 바람</h4>
+        <p>사람들은 고객이든 아니든 자신의 문제나 의견이 타인에 의해 주의 깊게 받아들여지고 경청된다고 느끼기를 원합니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[02 전개] 경청의 3가지 조건</span>
+        <h4>내적 이해와 외적 증명의 결합</h4>
+        <p>상대방이 주의를 기울이고 이해하는 내적 과정뿐만 아니라, 들었다는 사실을 겉으로 '증명(demonstrate)'하는 것이 경청의 핵심 조건입니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[03 결론] 외부적 신호의 필수성</span>
+        <h4>보여주지 않으면 알 수 없다</h4>
+        <p>상대방이 실제로 듣고 완벽하게 이해했더라도, 이를 보여주는 외부적인 신호(outward signal)가 없다면 경청 여부를 결코 알 수 없습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. But for someone [ to feel / feeling ] heard, three things have to happen.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: to feel. 의미상 주어인 'for someone' 뒤에 이어져 부사적 용법의 목적(~하기 위해서)을 나타내려면 to부정사 구문인 to feel이 와야 구조적으로 올바릅니다.">to feel</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: feeling. for someone 뒤에 동명사나 현재분사가 오면 '~하기 위해서'라는 부사적 목적의 의미를 형성할 수 없습니다.">feeling</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. But without some sort of outward signal that indicates they listened, it's impossible to know whether or not they actually [ did / were ].</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: did. 이 자리에는 문맥상 앞에 나온 일반동사 'listened(들었다)'를 대신 받는 대동사가 필요합니다. 과거 시제 일반동사를 받으므로 did가 정답입니다.">did</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: were. 앞에 받아줄 be동사가 존재하지 않으므로 were를 쓰면 어법에 어긋납니다.">were</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 주제로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        People, whether customers or otherwise, want to feel heard. When someone calls customer service, asks to speak to a manager, or comes into your office with something on their mind, they want to feel like someone is listening to their concerns and going to address them. But for someone to feel heard, three things have to happen. First, they have to feel like the other person paid attention to what they said. Second, they have to feel like the other person understood what they said. And third, the other person has to demonstrate that they listened. This last part is key. Imagine talking to someone who provided no response. They might have attended to everything we said. They might even have understood it completely. But without some sort of outward signal that indicates they listened, it's impossible to know whether or not they actually did.
+      </div>
+      <div class="exam-choices">
+        ① effective strategies to deal with complaining customers<br>
+        ② the process of internalizing other people's concerns<br>
+        ③ the vital role of outward signals in demonstrating active listening<br>
+        ④ reasons why silence can be a good response in arguments<br>
+        ⑤ the difference between simple understanding and true empathy
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ the vital role of outward signals in demonstrating active listening</b></p>
+          <p>해설: 이 글은 경청을 완성하기 위해서는 마음속으로 주의를 기울이고 이해하는 것뿐만 아니라, 겉으로 들었음을 증명하는 '외부적 신호(outward signals)'가 필수적이라는 점을 강조하고 있습니다. 따라서 적극적 경청을 보여주는 데 있어 외부적 신호의 필수적인 역할(vital role)을 다룬 ③번이 가장 적절한 주제입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+      <div class="exam-passage">
+        People, whether customers or otherwise, want to feel heard. When someone calls customer service, asks to speak to a manager, or comes into your office with something on their mind, they want to feel like someone is listening to their concerns and going to address them. But for someone to feel heard, three things have to happen.
+        <br><br>
+        (A) First, they have to feel like the other person paid attention to what they said. Second, they have to feel like the other person understood what they said. And third, the other person has to demonstrate that they listened. This last part is key.<br>
+        (B) Imagine talking to someone who provided no response. They might have attended to everything we said. They might even have understood it completely.<br>
+        (C) But without some sort of outward signal that indicates they listened, it's impossible to know whether or not they actually did.
+      </div>
+      <div class="exam-choices">
+        ① (A) - (B) - (C)<br>
+        ② (B) - (A) - (C)<br>
+        ③ (B) - (C) - (A)<br>
+        ④ (C) - (A) - (B)<br>
+        ⑤ (C) - (B) - (A)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① (A) - (B) - (C)</b></p>
+          <p>해설: 제시문에서 경청을 느끼기 위한 세 가지 조건(three things)을 언급했습니다. 이를 순서대로 설명하고 마지막 조건이 핵심(key)이라고 강조하는 (A)가 가장 먼저 와야 합니다. 그런 다음, 반응이 없는 사람(no response)을 상상해보라는 예시를 통해 앞선 주장을 뒷받침하는 (B)가 이어집니다. 마지막으로, 비록 속으로 듣고 이해했더라도 외부적 신호가 없으면 알 수 없다는 (C)로 결론을 내리는 흐름이 자연스럽습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> This last part is key.<br><br>
+        People, whether customers or otherwise, want to feel heard. When someone calls customer service, asks to speak to a manager, or comes into your office with something on their mind, they want to feel like someone is listening to their concerns and going to address them. But for someone to feel heard, three things have to happen. ( ① ) First, they have to feel like the other person paid attention to what they said. ( ② ) Second, they have to feel like the other person understood what they said. ( ③ ) And third, the other person has to demonstrate that they listened. ( ④ ) Imagine talking to someone who provided no response. ( ⑤ ) They might have attended to everything we said. They might even have understood it completely. But without some sort of outward signal that indicates they listened, it's impossible to know whether or not they actually did.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ④</b></p>
+          <p>해설: 주어진 문장의 "This last part(이 마지막 부분)"은 경청의 세 번째 조건인 '상대방이 들었다는 것을 증명해야 한다(demonstrate that they listened)'를 지칭합니다. 따라서 세 번째 조건이 언급된 직후이자, 그 증명이 왜 중요한지를 설명하는 반응 없는 사람의 예시(Imagine talking to someone~)가 시작되기 전인 ④번 위치가 가장 적절합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 조건에 맞게 우리말 뜻을 올바른 영어 문장으로 영작하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. 아래의 제시된 단어들을 모두 한 번씩만 사용할 것.<br>
+        2. 의미와 어법에 맞게 <b>관계대명사절</b>을 활용하여 수식 구조를 완성할 것.<br>
+        3. 총 11단어로 작성할 것.<br><br>
+        <b>[우리말]</b><br>
+        그러나 그들이 경청했다는 것을 나타내는 어떤 종류의 외부적인 신호 없이는,<br><br>
+        <b>[제시어]</b><br>
+        ( indicates / listened / without / of / some / that / signal / sort / they / outward / but )
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: But without some sort of outward signal that indicates they listened</b></p>
+          <p>해설: '그러나 ~ 없이는'을 나타내기 위해 'But without'으로 시작합니다. '어떤 종류의 외부적인 신호'는 'some sort of outward signal'로 배열합니다. 이 신호를 수식하는 관계대명사절을 뒤에 붙여, '~을 나타내는(that indicates)'과 '그들이 경청했다는 것을(they listened, 접속사 that 생략됨)'을 순서대로 배열하면 원문과 동일한 영작이 완성됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

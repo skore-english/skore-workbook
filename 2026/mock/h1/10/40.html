@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 10월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content p { margin-bottom: 6px; }
+.details-content p:last-child { margin-bottom: 0; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.answer-content p { margin-bottom: 6px; }
+.answer-content p:last-child { margin-bottom: 0; }
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 40번 · 요약문 완성</div>
+    <h1 class="title">BROADCASTING DANGER<br><span>How Goldenrods Alter Communication Based on Threat Levels</span></h1>
+    <p class="header-lead">위협적인 환경에서 생존을 위해 친족을 넘어선 모든 이웃에게 광범위한 경고 신호를 보내는 미역취의 적응 전략을 분석합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">4 QUESTIONS</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 미역취(goldenrod)의 화학적 경고 신호와 환경적 적응</li>
+        <li><b>[배경 맥락]:</b> 식물들도 포식자의 위협에 대처하기 위해 화학 물질을 통해 소통합니다. 흥미롭게도 미역취는 자신이 처한 환경의 위험도에 따라 소통의 범위와 방식을 달리합니다.</li>
+        <li><b>[논리 요약]:</b> 평화로운 환경의 미역취는 가까운 친족에게만 경고를 보내지만, 적대적인 환경에서는 생존과 번식을 위해 친족 여부와 상관없이 모든 미역취에게 광범위하게 경고 신호를 방송하여 상호 이익을 도모합니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Researchers recently found that goldenrods that live in peaceful areas without much threat from predators will issue chemical alarm calls that are incredibly specific - comprehensible only to their close kin-on the rare occasion they are attacked. But goldenrods in more hostile territory signal to their neighbors using chemical phrases easily understood by all the goldenrod in the area, not just their biological kin. Instead of using coded whisper networks, these goldenrod broadcast the threat over loudspeaker, so to speak. It is the first time research has confirmed that these chemical communications are beneficial not only to the plant receiving them but also to the sender. When times are truly tough, you do not want to be left standing in a field alone. There will be no one to mate with, no one to help bring in pollinators.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 미역취는 위협적인 환경에서 생존과 번식을 위해 친족을 넘어선 모든 이웃에게 광범위한 경고 신호를 보내며, 이는 송신자와 수신자 모두에게 이익이 된다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Researchers recently found / <mark>that</mark> goldenrods <mark>that</mark> live in peaceful areas / without much threat from predators / will issue chemical alarm calls / <mark>that</mark> are incredibly specific / - comprehensible only to their close kin- / on the rare occasion they are attacked.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 연구자들은 최근 발견했다 / 평화로운 지역에 사는 미역취들이 / 포식자로부터의 큰 위협 없이 / 화학적 경고 신호를 보낼 것이라는 점을 / 엄청나게 구체적인 / - 즉 그들의 가까운 친족에게만 이해될 수 있는 - / 그들이 공격받는 드문 경우에.</p>
+            <p><b>[구문 포인트]</b> 문장에 쓰인 세 개의 that은 각각 목적어절 접속사, goldenrods를 수식하는 주격 관계대명사, chemical alarm calls를 수식하는 주격 관계대명사 역할을 합니다.</p>
+            <p><b>[핵심 어휘]</b> goldenrod(미역취), predator(포식자), issue(발송하다, 내다), comprehensible(이해할 수 있는), kin(친족)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. But goldenrods in more hostile territory / signal to their neighbors / <mark>using</mark> chemical phrases / easily <mark>understood</mark> by all the goldenrod in the area, / not just their biological kin.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 하지만 더 적대적인 영토에 있는 미역취들은 / 그들의 이웃에게 신호를 보낸다 / 화학적 구문을 사용하여 / 그 지역의 모든 미역취들에 의해 쉽게 이해되는, / 단지 그들의 생물학적 친족뿐만 아니라.</p>
+            <p><b>[구문 포인트]</b> using은 능동의 분사구문이며, understood는 chemical phrases를 뒤에서 꾸며주는 과거분사입니다.</p>
+            <p><b>[핵심 어휘]</b> hostile(적대적인), territory(영토, 지역), phrase(구문, 표현), biological(생물학적인)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. <mark>Instead of</mark> using coded whisper networks, / these goldenrod broadcast the threat / over loudspeaker, / <mark>so to speak</mark>.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 암호화된 귓속말 네트워크를 사용하는 대신에, / 이 미역취들은 위협을 방송한다 / 확성기를 통해, / 말하자면.</p>
+            <p><b>[구문 포인트]</b> Instead of(전치사구) 뒤에 동명사 using이 왔으며, so to speak는 '말하자면'이라는 관용구입니다.</p>
+            <p><b>[핵심 어휘]</b> broadcast(방송하다, 널리 알리다), loudspeaker(확성기), so to speak(말하자면)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. It is the first time / research has confirmed / <mark>that</mark> these chemical communications are beneficial / <mark>not only</mark> to the plant receiving them / <mark>but also</mark> to the sender.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 처음이다 / 연구가 확인한 것은 / 이러한 화학적 소통이 유익하다는 것을 / 그것을 받는 식물뿐만 아니라 / 보내는 식물에게도.</p>
+            <p><b>[구문 포인트]</b> that은 confirmed의 목적어절을 이끄는 접속사입니다. not only A but also B 구문이 전치사구(to the plant, to the sender)를 병렬 연결합니다.</p>
+            <p><b>[핵심 어휘]</b> confirm(확인하다), beneficial(유익한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. When times are truly tough, / you do not want to be <mark>left standing</mark> / in a field alone.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 시기가 정말로 힘들 때, / 당신은 남겨진 채 서 있고 싶지 않을 것이다 / 들판에 홀로.</p>
+            <p><b>[구문 포인트]</b> be left standing은 '서 있는 상태로 남겨지다'라는 의미의 수동태 구조에 현재분사 보어가 결합된 형태입니다.</p>
+            <p><b>[핵심 어휘]</b> tough(힘든, 가혹한)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. There will be no one <mark>to mate with</mark>, / no one to help <mark>bring in</mark> pollinators.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 짝짓기할 누군가가 없을 것이다, / 수분 매개자를 데려오는 것을 도울 누군가도 (없을 것이다).</p>
+            <p><b>[구문 포인트]</b> to mate with와 to help는 앞의 명사 no one을 수식하는 형용사적 용법의 to부정사입니다. help 뒤에 동사원형 bring in이 목적어로 쓰였습니다.</p>
+            <p><b>[핵심 어휘]</b> mate with(~와 짝짓기하다), bring in(~을 끌어들이다), pollinator(수분 매개자)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Contrast & Adaptation)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[01 대조적 상황] 환경에 따른 미역취의 소통</span>
+        <h4>평화로운 환경 vs. 적대적인 환경</h4>
+        <p>평화로운 환경에서는 가까운 친족에게만 구체적인 신호를 보내지만, 적대적인 환경에서는 확성기를 켜듯 주변의 모든 미역취에게 광범위한 경고 신호를 보냅니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[02 연구 결과] 상호 이익의 확인</span>
+        <h4>수신자와 송신자 모두에게 유익한 신호</h4>
+        <p>이러한 화학적 경고 방송이 신호를 받는 식물뿐만 아니라 신호를 보내는 식물 자신에게도 유익하다는 사실이 연구를 통해 처음으로 확인되었습니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[03 원인 분석] 상생의 필요성</span>
+        <h4>고립의 위험과 생존 전략</h4>
+        <p>가혹한 환경에서 홀로 살아남으면 짝짓기를 하거나 수분 매개자를 유인할 수 없기 때문에, 이웃과 함께 생존하는 것이 필수적입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. Researchers recently found that goldenrods that live in peaceful areas without much threat from predators will issue chemical alarm calls that [ is / are ] incredibly specific.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: are. 관계대명사 that의 선행사는 바로 앞에 있는 복수 명사 'chemical alarm calls'이므로, 동사도 이에 수일치하여 복수형인 are가 와야 합니다.">are</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: is. 선행사가 복수명사이므로 단수 동사 is는 어법상 틀립니다.">is</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. But goldenrods in more hostile territory signal to their neighbors using chemical phrases easily [ understanding / understood ] by all the goldenrod in the area.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: understood. 수식을 받는 명사인 'chemical phrases(화학적 구문)'는 이웃 식물들에 의해 '이해되는' 수동적 대상이므로 과거분사 understood가 적절합니다.">understood</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: understanding. 능동의 의미를 지닌 현재분사를 쓰면 화학적 구문이 무언가를 이해한다는 뜻이 되어 논리적으로 성립하지 않습니다.">understanding</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · 4 QUESTIONS</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Researchers recently found that goldenrods that live in peaceful areas without much threat from predators will issue chemical alarm calls that are incredibly specific - comprehensible only to their close kin-on the rare occasion they are attacked. But goldenrods in more hostile territory signal to their neighbors using chemical phrases easily understood by all the goldenrod in the area, not just their biological kin. Instead of using coded whisper networks, these goldenrod broadcast the threat over loudspeaker, so to speak. It is the first time research has confirmed that these chemical communications are beneficial not only to the plant receiving them but also to the sender. When times are truly tough, you do not want to be left standing in a field alone. There will be no one to mate with, no one to help bring in pollinators.
+      </div>
+      <div class="exam-choices">
+        ① Why Goldenrods Broadcast Alarms to All Neighbors in Hostile Environments<br>
+        ② The Illusion of Safety: How Predators Evolve to Catch Goldenrods<br>
+        ③ Chemical Whisper Networks: The Hidden Communication of Plants<br>
+        ④ Why Close Kin Competition Leads to the Extinction of Goldenrods<br>
+        ⑤ The Importance of Specificity in Plant Reproduction
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① Why Goldenrods Broadcast Alarms to All Neighbors in Hostile Environments</b></p>
+          <p>해설: 이 글은 미역취가 왜 적대적인 환경에서는 친족을 넘어서 주변의 모든 이웃에게 광범위하게 경고를 방송하는지(혼자 남겨지면 번식이 불가능해지므로 서로를 보호하기 위함)를 설명하고 있습니다. 따라서 이를 가장 잘 포괄하는 ①번이 제목으로 알맞습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Instead of using coded whisper networks, these goldenrod broadcast the threat over loudspeaker, so to speak.<br><br>
+        Researchers recently found that goldenrods that live in peaceful areas without much threat from predators will issue chemical alarm calls that are incredibly specific - comprehensible only to their close kin-on the rare occasion they are attacked. ( ① ) But goldenrods in more hostile territory signal to their neighbors using chemical phrases easily understood by all the goldenrod in the area, not just their biological kin. ( ② ) It is the first time research has confirmed that these chemical communications are beneficial not only to the plant receiving them but also to the sender. ( ③ ) When times are truly tough, you do not want to be left standing in a field alone. ( ④ ) There will be no one to mate with, no one to help bring in pollinators. ( ⑤ )
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ②</b></p>
+          <p>해설: '암호화된 귓속말 네트워크(coded whisper networks)'는 평화로운 환경에서 친척에게만 보내는 구체적인 신호를 비유하며, '확성기를 통해 방송한다(broadcast over loudspeaker)'는 것은 적대적인 환경에서 모든 이웃에게 보내는 보편적인 신호를 비유합니다. 따라서 적대적 환경에서의 광범위한 신호 발송 방식을 묘사한 문장 직후인 ②번 자리에 들어가는 것이 가장 자연스럽습니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글에서 전체 흐름과 관계 없는 문장은?</h4>
+      <div class="exam-passage">
+        Researchers recently found that goldenrods that live in peaceful areas without much threat from predators will issue chemical alarm calls that are incredibly specific - comprehensible only to their close kin-on the rare occasion they are attacked. But goldenrods in more hostile territory signal to their neighbors using chemical phrases easily understood by all the goldenrod in the area, not just their biological kin. ① Instead of using coded whisper networks, these goldenrod broadcast the threat over loudspeaker, so to speak. ② It is the first time research has confirmed that these chemical communications are beneficial not only to the plant receiving them but also to the sender. ③ Due to the high levels of toxic chemicals released, goldenrods often accidentally damage their own root systems. ④ When times are truly tough, you do not want to be left standing in a field alone. ⑤ There will be no one to mate with, no one to help bring in pollinators.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③</b></p>
+          <p>해설: 글의 핵심 논지는 미역취가 적대적인 환경에서 주변 모든 개체에게 경고를 방송하는 것이 송신자와 수신자 모두의 생존(및 번식)에 유익하다는 점입니다. 하지만 ③번 문장은 '방출된 독성 화학물질로 인해 미역취가 자신의 뿌리를 손상시킨다'는 전혀 무관한 부정적 측면을 묘사하고 있으므로 전체 흐름과 어긋납니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 문장에서 우리말 부분을 올바르게 영작하세요.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. 아래의 제시된 단어들을 모두 한 번씩만 사용할 것.<br>
+        2. 의미와 어법에 맞게 <b>1개의 단어 형태를 변형(현재분사 등)</b>하여 'not only A but also B' 구문을 완성할 것.<br>
+        3. 아래 영어 문장 속 <u>밑줄 친 부분</u>에 해당하는 17단어만 작성할 것.<br><br>
+        <b>[문장]</b><br>
+        It is the first time research has confirmed that <u>이러한 화학적 소통이 그것들을 받는 식물뿐만 아니라 보내는 식물에게도 유익하다는 것을</u>.<br><br>
+        <b>[제시어]</b><br>
+        ( beneficial / communications / the / but / are / plant / also / these / them / to / to / chemical / sender / not / only / receive / the )
+        <br><br>
+        <small>*참고: the와 to는 각각 2번씩 제시되었습니다.</small>
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: these chemical communications are beneficial not only to the plant receiving them but also to the sender.</b></p>
+          <p>해설: 명사절 접속사 that 뒤에 주어와 동사 'these chemical communications are beneficial'을 먼저 적습니다. 그다음 상관접속사 'not only A but also B(A뿐만 아니라 B도)' 구조를 사용하여 전치사구 A와 B를 병렬로 연결합니다. A 자리에 'to the plant'를 쓰고 그 뒤에 명사를 수식하는 현재분사 <b>receiving</b>(제시어 receive 변형)과 목적어 'them'을 붙입니다. B 자리에는 'to the sender'를 배치하여 문맥에 맞는 완벽한 17단어의 영작을 완성합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

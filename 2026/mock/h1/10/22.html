@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 10월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content p { margin-bottom: 6px; }
+.details-content p:last-child { margin-bottom: 0; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.answer-content p { margin-bottom: 6px; }
+.answer-content p:last-child { margin-bottom: 0; }
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 22번 · 요지 추론</div>
+    <h1 class="title">THE SOCIAL CONSTRUCTION OF TIME<br><span>How Cultural Norms Shape Our Rhythm of Life</span></h1>
+    <p class="header-lead">우리가 당연하게 여기는 일상의 시간 패턴과 단위는 자연의 섭리가 아니라, 오랜 시간 내면화된 사회적 창조물임을 분석합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 시간 인식의 사회적 구성 (Social Construction of Time)</li>
+        <li><b>[배경 맥락]:</b> 많은 사람들이 시간의 흐름을 마치 물리적이고 자연적인 법칙처럼 여기지만, 사실 '일주일'이나 '근무 시간', '은퇴 연령' 같은 개념들은 모두 인간이 사회 속에서 만들어낸 것입니다.</li>
+        <li><b>[논리 요약]:</b> 시간은 자연적인 흐름이나 개인적 심리 현상이 아니라, 전통과 문화적 규범에 의해 형성된 '사회적 발명품(social invention)'이며 우리는 이를 내면화하여 정상적인 것으로 받아들입니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Sociologists argue that our perception and usage of time are not just basic properties of nature, like a clock ticking away in the background, nor are they simply psychological phenomena of individual experience. Instead, how we perceive and understand time is to a large degree shaped by tradition and cultural norms. Eviatar Zerubavel's work, The Seven Day Circle: The History and Meaning of the Week, demonstrates how the week, a fundamental unit of time, is a social invention that varies across cultures, influencing how people structure their activities and rhythms of life. Why do we consider a nine-to-five job routine? Why don't many of us work on the weekends? Why do we usually pay our bills at the end of the month? Why is the retirement age sixty-five? These numbers and patterns aren't really dictated by nature or any essential human characteristic, but are rather social creations that we internalize and come to accept as "normal."
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 우리가 일상적으로 인식하고 사용하는 시간의 패턴들은 자연의 섭리가 아니라, 전통과 문화적 규범에 의해 형성된 사회적 창조물이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Sociologists argue that our perception and usage of time / are not just basic properties of nature, / like a clock ticking away in the background, / <mark>nor are they</mark> simply psychological phenomena of individual experience.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 사회학자들은 우리의 시간에 대한 인식과 사용이 / 단지 자연의 기본적인 속성이 아니며, / 배경에서 똑딱거리는 시계처럼, / 또한 그것들은 단순히 개인적 경험의 심리적 현상도 아니라고 주장한다.</p>
+            <p><b>[구문 해설]</b> 부정어 `nor`가 문장 앞에 오면서 주어(they=our perception and usage of time)와 동사(are)가 도치된 구문입니다. 앞의 `are not`과 병렬 구조를 이룹니다.</p>
+            <p><b>[핵심 어휘]</b> sociologist(사회학자), perception(인식), usage(사용), property(속성), tick away(똑딱거리다), phenomenon(현상, 복수형 phenomena)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. Instead, / <mark>how we perceive and understand time</mark> / is to a large degree shaped / by tradition and cultural norms.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 대신에, / 우리가 시간을 인식하고 이해하는 방식은 / 큰 정도로 형성된다 / 전통과 문화적 규범에 의해.</p>
+            <p><b>[구문 해설]</b> 의문사절 `how we perceive and understand time`이 문장의 주어로 쓰였으며, 명사절 주어이므로 단수 동사 `is`를 취했습니다.</p>
+            <p><b>[핵심 어휘]</b> instead(대신에), to a large degree(큰 정도로, 상당히), shape(형성하다), tradition(전통), norm(규범)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. Eviatar Zerubavel's work, / The Seven Day Circle: The History and Meaning of the Week, / demonstrates <mark>how</mark> the week, / a fundamental unit of time, / is a social invention / <mark>that</mark> varies across cultures, / <mark>influencing</mark> how people structure their activities and rhythms of life.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> Eviatar Zerubavel의 저서는, / '7일의 주기: 일주일의 역사와 의미'라는, / 일주일이 어떻게, / 시간의 근본적인 단위인, / 사회적 발명품인지를 보여준다 / 문화마다 다른, / 사람들이 그들의 활동과 삶의 리듬을 구조화하는 방식에 영향을 미치면서.</p>
+            <p><b>[구문 해설]</b> `demonstrates`의 목적어로 `how` 명사절이 쓰였으며, `that`은 선행사 a social invention을 수식하는 주격 관계대명사입니다. `influencing`은 능동의 동시동작을 나타내는 현재분사구문입니다.</p>
+            <p><b>[핵심 어휘]</b> demonstrate(보여주다, 증명하다), fundamental(근본적인), invention(발명(품)), vary(다르다, 다양하다), influence(영향을 미치다), structure(구조화하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. Why do we consider a nine-to-five job routine?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 왜 우리는 9시부터 5시까지의 일자리를 루틴으로 여기는가?</p>
+            <p><b>[구문 해설]</b> 시간에 대한 사회적 약속을 보여주는 첫 번째 구체적 사례 질문입니다.</p>
+            <p><b>[핵심 어휘]</b> nine-to-five (9시 출근 5시 퇴근의), routine(일상, 루틴)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. Why don't many of us work on the weekends?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 왜 우리 중 많은 사람들은 주말에 일하지 않는가?</p>
+            <p><b>[구문 해설]</b> 두 번째 사례 질문입니다.</p>
+            <p><b>[핵심 어휘]</b> N/A</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. Why do we usually pay our bills at the end of the month?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 왜 우리는 보통 월말에 청구서를 지불하는가?</p>
+            <p><b>[구문 해설]</b> 세 번째 사례 질문입니다.</p>
+            <p><b>[핵심 어휘]</b> bill(청구서)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. Why is the retirement age sixty-five?</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 왜 은퇴 연령은 65세인가?</p>
+            <p><b>[구문 해설]</b> 네 번째 사례 질문입니다.</p>
+            <p><b>[핵심 어휘]</b> retirement age(은퇴 연령)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">8. These numbers and patterns <mark>aren't</mark> really dictated / by nature or any essential human characteristic, / <mark>but are</mark> rather social creations / <mark>that</mark> we internalize and come to accept as "normal."</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이러한 숫자들과 패턴들은 실제로 결정되지 않는다 / 자연이나 어떤 필수적인 인간의 특성에 의해, / 오히려 사회적 창조물이다 / 우리가 내면화하고 "정상"으로 받아들이게 되는.</p>
+            <p><b>[구문 해설]</b> `not A but B` (A가 아니라 B다) 구문이 수동태 동사(aren't dictated)와 명사 보어(are social creations)를 연결합니다. `that`은 목적격 관계대명사로 선행사 social creations를 수식합니다.</p>
+            <p><b>[핵심 어휘]</b> dictate(지시하다, 결정하다), essential(필수적인, 본질적인), characteristic(특성), creation(창조물), internalize(내면화하다), accept(받아들이다)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Myth vs Fact & Exemplification)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[01] 통념과 반론 (도입)</span>
+        <h4>시간의 본질에 대한 오해</h4>
+        <p>사람들은 시간을 시계처럼 흘러가는 자연의 속성이나 개인의 심리적 현상으로 여기지만, 사회학자들은 이를 부정합니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[02] 핵심 주장 (전개)</span>
+        <h4>사회적 산물로서의 시간</h4>
+        <p>시간의 인식과 단위(예: 일주일)는 절대적인 것이 아니라 전통과 문화적 규범에 의해 형성된 '사회적 발명품(social invention)'입니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[03] 일상적 사례와 결론 (결론)</span>
+        <h4>내면화된 사회적 창조물</h4>
+        <p>9-to-5 근무, 주말 휴식, 은퇴 연령 등 우리가 당연하게 여기는 숫자와 패턴들은 자연법칙이 아니라 내면화된 사회적 창조물입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. ...our perception and usage of time are not just basic properties of nature, nor [ are / do ] they simply psychological phenomena of individual experience.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: are. 부정어 nor가 문두에 와서 주어(they)와 동사가 도치되었습니다. 앞 문장의 동사(are not)와 병렬 구조를 이루며, 뒤의 명사 보어(psychological phenomena)를 연결하므로 be동사 are가 적절합니다.">are</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: do. 뒤에 일반동사가 없으며, 앞 문장의 be동사(are not)에 호응하는 도치구문이므로 조동사 do는 쓸 수 없습니다.">do</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. Instead, how we perceive and understand time [ is / are ] to a large degree shaped by tradition and cultural norms.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: is. 문장의 주어는 의문사절인 'how we perceive and understand time'입니다. 명사절 주어는 단수 취급하므로 단수 동사 is가 올바릅니다.">is</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: are. 바로 앞의 time이 단수이기도 하지만, 근본적으로 의문사절 전체가 주어 역할을 하기 때문에 복수 동사 are는 수일치에 어긋납니다.">are</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Sociologists argue that our perception and usage of time are not just basic properties of nature, like a clock ticking away in the background, nor are they simply psychological phenomena of individual experience. Instead, how we perceive and understand time is to a large degree shaped by tradition and cultural norms. Eviatar Zerubavel's work, The Seven Day Circle: The History and Meaning of the Week, demonstrates how the week, a fundamental unit of time, is a social invention that varies across cultures, influencing how people structure their activities and rhythms of life. Why do we consider a nine-to-five job routine? Why don't many of us work on the weekends? Why do we usually pay our bills at the end of the month? Why is the retirement age sixty-five? These numbers and patterns aren't really dictated by nature or any essential human characteristic, but are rather social creations that we internalize and come to accept as "normal."
+      </div>
+      <div class="exam-choices">
+        ① Time as a Biological Clock: How Nature Regulates Us<br>
+        ② The Social Construction of Time: Beyond Natural Laws<br>
+        ③ Psychological Barriers in Understanding the Flow of Time<br>
+        ④ Why Cultural Diversity Hinders Global Economic Integration<br>
+        ⑤ The Hidden Dangers of Internalizing Modern Work Routines
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ② The Social Construction of Time: Beyond Natural Laws</b></p>
+          <p>해설: 이 글은 우리가 당연하게 여기는 시간의 단위와 일상 패턴들이 자연의 법칙이 아니라 전통과 문화적 규범에 의해 만들어진 '사회적 창조물'임을 역설하고 있습니다. 따라서 '시간의 사회적 구성: 자연법칙을 넘어서'라는 의미의 ②번이 제목으로 가장 적절합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> Why do we consider a nine-to-five job routine?<br><br>
+        Sociologists argue that our perception and usage of time are not just basic properties of nature, like a clock ticking away in the background, nor are they simply psychological phenomena of individual experience. Instead, how we perceive and understand time is to a large degree shaped by tradition and cultural norms. Eviatar Zerubavel's work, The Seven Day Circle, demonstrates how the week, a fundamental unit of time, is a social invention that varies across cultures, influencing how people structure their activities and rhythms of life. ( ① ) ( ② ) Why don't many of us work on the weekends? ( ③ ) Why do we usually pay our bills at the end of the month? ( ④ ) Why is the retirement age sixty-five? ( ⑤ ) These numbers and patterns aren't really dictated by nature or any essential human characteristic, but are rather social creations that we internalize and come to accept as "normal."
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ①</b></p>
+          <p>해설: 주어진 문장은 시간의 사회적 발명(일주일의 사례)을 설명한 뒤, 구체적인 일상적 의문 사항들을 나열하는 질문 시리즈의 첫 번째 문장입니다. 따라서 문화적 영향 설명 직후이자 주말 휴식, 월말 청구서 지불 등 다른 사례 질문들이 시작되기 전인 ①번 자리에 들어가야 완벽하게 연결됩니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Sociologists argue that our perception and usage of time are not just basic properties of nature, nor are they simply psychological phenomena of individual experience. Instead, how we perceive and understand time is to a large degree shaped by tradition and cultural norms. Eviatar Zerubavel's work demonstrates how the week, a fundamental unit of time, is a social invention that ① <u>varies</u> across cultures, influencing how people structure their activities and rhythms of life. Why do we consider a nine-to-five job routine? Why don't many of us work on the weekends? These numbers and patterns aren't really ② <u>dictated</u> by nature or any essential human characteristic, but are rather social creations that we ③ <u>externalize</u> and come to accept as "normal." Furthermore, these cultural norms ④ <u>stabilize</u> our modern society, ⑤ <u>ignoring</u> the fluid nature of human history.
+      </div>
+      <div class="exam-choices">
+        ① varies<br>
+        ② dictated<br>
+        ③ externalize<br>
+        ④ stabilize<br>
+        ⑤ ignoring
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ externalize</b></p>
+          <p>해설: 원문에서 사회적 창조물들은 우리 안에 자리 잡아 '내면화(internalize)'되고 정상적인 것으로 받아들여진다고 했습니다. 외부로 표출한다는 의미의 externalize를 쓰면 의미가 정반대가 되므로 internalize로 고쳐야 합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 조건에 맞게 우리말 뜻을 올바른 영어 문장으로 영작하시오.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. 아래의 제시된 단어들을 모두 한 번씩만 사용할 것.<br>
+        2. 의미와 어법에 맞게 <b>1개의 단어 형태를 변형(수동태 등)</b>하여 문장을 완성할 것.<br>
+        3. 총 15단어로 작성할 것.<br><br>
+        <b>[우리말]</b><br>
+        이러한 숫자들과 패턴들은 자연이나 인간의 특성에 의해 실제로 결정되지 않는다.<br><br>
+        <b>[제시어]</b><br>
+        ( dictate / patterns / and / really / numbers / by / human / nature / or / essential / these / characteristic, / aren't )
+        <br><br>
+        <small>*참고: aren't는 축약된 단어입니다.</small>
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: these numbers and patterns aren't really dictated by nature or any essential human characteristic,</b> (제시어 기준 변형 영작)</p>
+          <p>해설: 주어인 '이러한 숫자들과 패턴들'을 'these numbers and patterns'로 시작합니다. 이어지는 수동태 표현을 위해 be동사 축약형 'aren't', 부사 'really'를 적고, 제시어 dictate를 과거분사 형태인 <b>dictated</b>로 어형을 변형합니다. 마지막으로 전치사구인 'by nature or any essential human characteristic'을 연결하여 총 15단어의 문장을 완성합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 10월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content p { margin-bottom: 6px; }
+.details-content p:last-child { margin-bottom: 0; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.answer-content p { margin-bottom: 6px; }
+.answer-content p:last-child { margin-bottom: 0; }
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE Academy</b> High School Logic Series</span>
+      <span>고1 2026년 10월</span>
+    </div>
+    <div class="meta-badge">학력평가 37번 · 순서 배열</div>
+    <h1 class="title">THE SEAM IN REMOTE COLLABORATION<br><span>How Distance Divides Task and Communication Spaces</span></h1>
+    <p class="header-lead">대면 협업과 달리 원격 협업에서는 과업 공간과 소통 공간이 분리되어 인위적인 단절이 발생함을 분석합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 대면 협업(Face-to-face)과 원격 협업(Remote Collaboration)의 공간 분리</li>
+        <li><b>[배경 맥락]:</b> 같은 장소에서 일할 때는 서로의 표정이나 몸짓(소통 공간)을 보면서 동시에 작업(과업 공간)을 할 수 있어 매끄럽지만, 화상 회의 같은 원격 상황에서는 모니터가 나뉘어 두 공간이 단절됩니다.</li>
+        <li><b>[논리 요약]:</b> 대면 협업에서는 과업 공간과 소통 공간이 매끄럽게 통합되어 있으나, 원격 협업에서는 두 공간이 분리되어 인위적인 단절(seam)이 생기며 이는 소통 모델을 통해 예측되어야 합니다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      When people are collaborating face to face they can easily see each other and the range of different communication cues being used, so the task space is a subset of the communication space. Ishii, a professor at the MIT Media Lab, describes this as seamless communication because there is no functional separation between the task and communication space. However, when people are working remotely, the task space is often separated from the communication space. For example, when video conferencing, people may have the face of their collaborator on one screen, while looking at a shared document on another. In this case, it is impossible to see many of the remote collaborator's communication cues at the same time as looking at the task space. So, there is an artificial seam between the communication space and task space. This is the type of impact of remote communication technology that needs to be predicted through communication models.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 대면 환경과 달리 원격 협업 환경에서는 과업 공간과 소통 공간이 분리되는 인위적인 단절이 발생하며, 이는 소통 모델을 통해 예측되어야 할 중요한 영향이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. When people are collaborating face to face / they can easily see each other / and the range of different communication cues <mark>being used</mark>, / so the task space is a subset / of the communication space.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 사람들이 대면하여 협업하고 있을 때 / 그들은 서로를 쉽게 볼 수 있다 / 그리고 사용되고 있는 다양한 소통 신호의 범위를 (볼 수 있다), / 그래서 과업 공간은 부분집합이다 / 소통 공간의.</p>
+            <p><b>[구문 포인트]</b> being used는 앞의 명사구(communication cues)를 후치 수식하는 현재분사 수동형입니다. '사용되고 있는'이라는 진행 수동의 의미를 지닙니다.</p>
+            <p><b>[핵심 어휘]</b> collaborate(협업하다), face to face(대면하여), cue(신호, 단서), subset(부분집합)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. Ishii, a professor at the MIT Media Lab, / <mark>describes</mark> this <mark>as</mark> seamless communication / because there is no functional separation / between the task and communication space.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> MIT 미디어 랩의 교수인 Ishii는, / 이것을 매끄러운 소통이라고 묘사한다 / 왜냐하면 기능적인 분리가 없기 때문이다 / 과업 공간과 소통 공간 사이에.</p>
+            <p><b>[구문 포인트]</b> describe A as B 구조로 'A를 B라고 묘사하다'라는 뜻을 갖습니다.</p>
+            <p><b>[핵심 어휘]</b> describe A as B(A를 B로 묘사하다), seamless(매끄러운, 끊어짐 없는), functional(기능적인), separation(분리)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. However, / when people are working remotely, / the task space is often separated / from the communication space.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그러나, / 사람들이 원격으로 일하고 있을 때, / 과업 공간은 종종 분리된다 / 소통 공간으로부터.</p>
+            <p><b>[구문 포인트]</b> be separated from은 '~로부터 분리되다'라는 뜻의 수동태 구문입니다.</p>
+            <p><b>[핵심 어휘]</b> remotely(원격으로), separate(분리하다)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. For example, / when video conferencing, / people may have the face of their collaborator / on one screen, / <mark>while looking</mark> at a shared document / on another.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 예를 들어, / 화상 회의를 할 때, / 사람들은 그들의 협업자의 얼굴을 둘지도 모른다 / 한 화면에, / 공유된 문서를 보는 동안 / 다른 화면에서.</p>
+            <p><b>[구문 포인트]</b> while looking은 while (they are) looking에서 주어와 be동사가 생략된 분사구문입니다. one screen과 another (screen)이 대조를 이룹니다.</p>
+            <p><b>[핵심 어휘]</b> video conferencing(화상 회의), collaborator(협업자), shared document(공유 문서)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. In this case, / it is impossible to see / many of the remote collaborator's communication cues / <mark>at the same time as</mark> looking at the task space.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이 경우에, / 보는 것은 불가능하다 / 원격 협업자의 소통 신호 중 많은 것을 / 과업 공간을 보는 것과 동시에.</p>
+            <p><b>[구문 포인트]</b> it은 가주어, to see 이하는 진주어입니다. at the same time as는 '~와 동시에'라는 의미를 나타내는 접속사구 역할을 합니다.</p>
+            <p><b>[핵심 어휘]</b> impossible(불가능한), at the same time as(~와 동시에)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. So, / there is an artificial seam / between the communication space and task space.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 그래서, / 인위적인 이음매(단절)가 존재한다 / 소통 공간과 과업 공간 사이에.</p>
+            <p><b>[구문 포인트]</b> 짧은 문장 속에 대면 소통(seamless)과 대조되는 원격 소통의 인위적 단절(artificial seam)을 명확히 제시합니다.</p>
+            <p><b>[핵심 어휘]</b> artificial(인위적인), seam(이음매, 단절, 경계선)</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">7. This is the type of impact / of remote communication technology / <mark>that</mark> needs to be predicted / through communication models.</div>
+        <details>
+          <summary>직독직해 · 구문 분석 · 핵심 어휘</summary>
+          <div class="details-content">
+            <p><b>[직독직해]</b> 이것이 영향의 유형이다 / 원격 소통 기술의 / 예측되어야 할 필요가 있는 / 소통 모델들을 통해.</p>
+            <p><b>[구문 포인트]</b> that은 the type of impact를 선행사로 수식하는 주격 관계대명사이며, needs to be predicted 수동태 부정사를 취합니다.</p>
+            <p><b>[핵심 어휘]</b> impact(영향), predict(예측하다)</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도 (Contrast & Effect)</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[01 전제] 대면 협업의 특성</span>
+        <h4>공간의 매끄러운 통합 (Seamless)</h4>
+        <p>사람들이 대면으로 일할 때는 과업 공간과 소통 공간(얼굴, 제스처 등)이 분리되지 않고 하나로 통합되어 매끄러운 소통이 이루어집니다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[02 대조] 원격 협업의 한계</span>
+        <h4>두 공간의 인위적 단절 (Seam)</h4>
+        <p>화상 회의 같은 원격 상황에서는 문서를 보는 화면과 상대의 얼굴을 보는 화면이 분리되어 두 공간 사이에 인위적인 단절이 발생합니다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[03 결론] 기술 영향의 예측 필요성</span>
+        <h4>소통 모델을 통한 예측</h4>
+        <p>원격 통신 기술이 소통 공간과 과업 공간을 분리시키는 이러한 영향은 향후 소통 모델을 통해 반드시 예측되고 다루어져야 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. For example, when video conferencing, people may have the face of their collaborator on one screen, while [ looking / looked ] at a shared document on another.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: looking. 접속사 while 뒤에 주어(people)가 생략된 분사구문입니다. 사람들이 직접 문서를 '보는' 능동의 주체이므로 현재분사 looking이 적절합니다.">looking</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: looked. 사람들이 문서를 보게 '되는' 수동의 의미가 아니므로 과거분사 looked는 어법상 틀립니다.">looked</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+    <div class="drill-card">
+      <div class="drill-q">2. This is the type of impact of remote communication technology [ that / what ] needs to be predicted through communication models.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답: that. 앞에 'the type of impact~'라는 선행사 명사구가 존재하며, 뒤에 주어가 빠진 불완전한 문장(needs to be~)이 이어지므로 선행사를 수식하는 주격 관계대명사 that이 올바릅니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답: what. 관계대명사 what은 선행사를 자체적으로 포함하고 있으므로, 앞에 꾸며줄 명사가 존재할 때는 사용할 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 요지로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        When people are collaborating face to face they can easily see each other and the range of different communication cues being used, so the task space is a subset of the communication space. Ishii, a professor at the MIT Media Lab, describes this as seamless communication because there is no functional separation between the task and communication space. However, when people are working remotely, the task space is often separated from the communication space. For example, when video conferencing, people may have the face of their collaborator on one screen, while looking at a shared document on another. In this case, it is impossible to see many of the remote collaborator's communication cues at the same time as looking at the task space. So, there is an artificial seam between the communication space and task space. This is the type of impact of remote communication technology that needs to be predicted through communication models.
+      </div>
+      <div class="exam-choices">
+        ① 대면 소통의 중요성을 강조하기 위해 원격 화상 회의를 지양해야 한다.<br>
+        ② 소통 공간과 과업 공간이 통합된 기술을 개발하는 것이 시급하다.<br>
+        ③ 원격 협업 환경에서는 과업 공간과 소통 공간이 분리되는 단절 현상이 발생한다.<br>
+        ④ 효과적인 협업을 위해서는 상대방의 비언어적 소통 신호를 잘 파악해야 한다.<br>
+        ⑤ 기술의 발전에 따라 인위적 단절이 사라지고 완벽한 소통 모델이 완성되었다.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③ 원격 협업 환경에서는 과업 공간과 소통 공간이 분리되는 단절 현상이 발생한다.</b></p>
+          <p>해설: 대면 협업(통합된 공간)과 달리 원격 협업(화상 회의 등)에서는 서로 화면을 보면서 문서를 동시에 보기 어려워 소통 공간과 과업 공간 사이에 인위적인 단절(artificial seam)이 생긴다는 것이 글의 핵심 주장입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        When people are collaborating face to face they can easily see each other and the range of different communication cues being used, so the task space is a subset of the communication space. Ishii, a professor at the MIT Media Lab, describes this as seamless communication because there is no functional separation between the task and communication space. However, when people are working remotely, the task space is often separated from the communication space. For example, when video conferencing, people may have the face of their collaborator on one screen, while looking at a shared document on another. In this case, it is impossible to see many of the remote collaborator's communication cues at the same time as looking at the task space. So, there is ________________________ between the communication space and task space. This is the type of impact of remote communication technology that needs to be predicted through communication models.
+      </div>
+      <div class="exam-choices">
+        ① an artificial seam<br>
+        ② a flawless integration<br>
+        ③ an unpredictable improvement<br>
+        ④ a mutual understanding<br>
+        ⑤ an unnecessary duplication
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ① an artificial seam</b></p>
+          <p>해설: 대면 상황의 매끄러운(seamless) 소통과 대조적으로, 원격 상황에서는 과업을 보는 것과 상대의 신호를 동시에 보기 불가능하므로 두 공간 사이에 '인위적인 이음매/단절(an artificial seam)'이 발생한다는 논리입니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> For example, when video conferencing, people may have the face of their collaborator on one screen, while looking at a shared document on another.<br><br>
+        When people are collaborating face to face they can easily see each other and the range of different communication cues being used, so the task space is a subset of the communication space. ( ① ) Ishii, a professor at the MIT Media Lab, describes this as seamless communication because there is no functional separation between the task and communication space. ( ② ) However, when people are working remotely, the task space is often separated from the communication space. ( ③ ) In this case, it is impossible to see many of the remote collaborator's communication cues at the same time as looking at the task space. ( ④ ) So, there is an artificial seam between the communication space and task space. ( ⑤ ) This is the type of impact of remote communication technology that needs to be predicted through communication models.
+      </div>
+      <div class="exam-choices">
+        ①<br>
+        ②<br>
+        ③<br>
+        ④<br>
+        ⑤
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: ③</b></p>
+          <p>해설: 역접(However)으로 원격 협업 상황에서 두 공간이 분리된다고 주장을 펼친 후(②번 뒤), 그 분리 현상을 설명하기 위해 '화상 회의(video conferencing)'라는 구체적인 사례를 드는 문장입니다. 그리고 주어진 문장의 사례(화면이 두 개로 나뉨)를 지칭하며 "이 경우에(In this case)"라고 부연 설명하는 문장이 뒤따라야 하므로 ③번 자리가 가장 적절합니다.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 문장에서 우리말 부분을 올바르게 영작하세요.</h4>
+      <div class="exam-passage">
+        <b>[조건]</b><br>
+        1. 아래의 제시된 단어들을 모두 한 번씩만 사용할 것.<br>
+        2. 의미와 어법에 맞게 <b>1개의 단어 형태를 변형(수동태 등)</b>하여 구문을 완성할 것.<br>
+        3. 아래 영어 문장 속 <u>밑줄 친 부분</u>에 해당하는 10단어만 작성할 것.<br><br>
+        <b>[문장]</b><br>
+        However, when people are working remotely, <u>과업 공간은 종종 소통 공간으로부터 분리된다</u>.<br><br>
+        <b>[제시어]</b><br>
+        ( task / from / is / communication / often / separate / the / space / the / space )
+        <br><br>
+        <small>*참고: the와 space는 각각 2번씩 제시되었습니다.</small>
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <p><b>정답: the task space is often separated from the communication space</b></p>
+          <p>해설: 주어인 '과업 공간(the task space)' 뒤에 동사를 씁니다. 과업 공간이 '분리되는' 수동적 입장이므로 빈도부사 often을 be동사 뒤에 위치시켜 'is often'을 쓰고, 동사 separate를 과거분사 <b>separated</b>로 변형하여 수동태를 완성합니다. 이후 '~로부터(from)' 전치사 뒤에 '소통 공간(the communication space)'을 배열합니다.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

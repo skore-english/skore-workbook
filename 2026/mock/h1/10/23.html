@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고1 2026년 10월 학평 모바일 워크북</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+ <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+ <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+ <link rel="manifest" href="/skore-workbook/site.webmanifest">
+ <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+ --navy: #0B1220;
+ --paper: #F8FAFC;
+ --white: #FFFFFF;
+ --blue: #1D4ED8;
+ --cyan: #0E8F9E;
+ --amber: #B8791A;
+ --text-main: #0F172A;
+ --text-muted: #64748B;
+ --border: #E2E8F0;
+ --mono: "IBM Plex Mono", -apple-system, monospace;
+ --serif: "Noto Serif KR", serif;
+ --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+ --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+ background: var(--paper);
+ color: var(--text-main);
+ font-family: var(--sans);
+ line-height: 1.75;
+ -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+ background: var(--navy);
+ color: var(--white);
+ padding: 36px 0 28px;
+ border-bottom: 3px solid var(--blue);
+}
+.masthead {
+ display: flex;
+ justify-content: space-between;
+ font-family: var(--mono);
+ font-size: 11px;
+ letter-spacing: 0.12em;
+ color: #8FA0B8;
+ text-transform: uppercase;
+ border-bottom: 1px solid rgba(255,255,255,0.12);
+ padding-bottom: 8px;
+ margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+ display: inline-block;
+ font-family: var(--mono);
+ font-size: 12px;
+ font-weight: 600;
+ color: var(--cyan);
+ background: rgba(14, 143, 158, 0.15);
+ padding: 4px 10px;
+ border-radius: 4px;
+ margin-bottom: 12px;
+}
+h1.title {
+ font-family: var(--serif);
+ font-size: clamp(20px, 4vw, 30px);
+ font-weight: 900;
+ line-height: 1.35;
+ margin-bottom: 8px;
+}
+h1.title span { color: var(--amber); }
+.header-lead { font-size: 13.5px; color: #CBD5E1; line-height: 1.65; }
+
+.tracker-wrap {
+ background: var(--white);
+ border-bottom: 1px solid var(--border);
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+ gap: 6px;
+ padding: 8px 0;
+}
+.track-step {
+ text-align: center;
+ padding: 6px 2px;
+ border-radius: 4px;
+ border: 1px solid var(--border);
+ background: var(--paper);
+ text-decoration: none;
+ color: var(--text-main);
+ display: block;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+ font-family: var(--mono);
+ font-size: 9px;
+ font-weight: 600;
+ color: var(--cyan);
+ display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+ font-family: var(--mono);
+ font-size: 10.5px;
+ font-weight: 600;
+ color: var(--blue);
+ letter-spacing: 0.12em;
+ display: block;
+ margin-bottom: 4px;
+}
+h2.sec-title {
+ font-family: var(--serif);
+ font-size: 20px;
+ font-weight: 900;
+ margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ border-left: 4px solid var(--blue);
+ border-radius: 6px;
+ padding: 16px 18px;
+ margin-bottom: 18px;
+}
+.bg-header {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 700;
+ color: var(--blue);
+ margin-bottom: 8px;
+}
+.bg-list {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+}
+.bg-list li {
+ font-size: 12.5px;
+ color: #1E3A8A;
+ line-height: 1.6;
+ position: relative;
+ padding-left: 14px;
+}
+.bg-list li::before {
+ content: "•";
+ position: absolute;
+ left: 2px;
+ color: var(--blue);
+ font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-left: 4px solid var(--blue);
+ padding: 20px;
+ font-size: 15px;
+ line-height: 1.85;
+ color: #1E293B;
+ border-radius: 4px;
+}
+.key-takeaway {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 12px 16px;
+ margin-top: 14px;
+ border-radius: 4px;
+ font-size: 13px;
+ color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ border-radius: 6px;
+ padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ border-radius: 4px;
+ margin-top: 8px;
+}
+summary {
+ font-family: var(--mono);
+ font-size: 11.5px;
+ font-weight: 600;
+ color: var(--blue);
+ padding: 8px 12px;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+.details-content {
+ padding: 10px 12px;
+ font-size: 13px;
+ color: #334155;
+ border-top: 1px dashed var(--border);
+ line-height: 1.65;
+}
+.details-content p { margin-bottom: 6px; }
+.details-content p:last-child { margin-bottom: 0; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 12px;
+}
+.flow-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+ font-family: var(--mono);
+ font-size: 10px;
+ font-weight: 600;
+ color: var(--text-muted);
+ display: block;
+ margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ font-family: var(--mono);
+ font-size: 12px;
+ padding: 8px 14px;
+ cursor: pointer;
+ border-radius: 4px;
+ min-height: 40px;
+ display: flex;
+ align-items: center;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+ outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+ display: none;
+ font-size: 12.5px;
+ padding: 8px 12px;
+ border-radius: 4px;
+ margin-top: 6px;
+ line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+ background: var(--white);
+ border: 1px solid var(--border);
+ padding: 16px;
+ border-radius: 6px;
+ margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+.exam-passage {
+ background: #F8FAFC;
+ border: 1px solid var(--border);
+ padding: 12px;
+ font-size: 13px;
+ line-height: 1.7;
+ color: #334155;
+ margin-bottom: 10px;
+ border-radius: 4px;
+}
+.exam-choices { font-size: 12.5px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+ background: #EFF6FF;
+ border: 1px solid #BFDBFE;
+ padding: 10px 12px;
+ font-size: 12px;
+ color: #1E3A8A;
+ border-radius: 4px;
+ line-height: 1.6;
+}
+.answer-content p { margin-bottom: 6px; }
+.answer-content p:last-child { margin-bottom: 0; }
+
+/* Navigation & Footer */
+.btn-back-hub {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+ width: 100%;
+ min-height: 48px;
+ background: #182238;
+ color: #60a5fa;
+ border: 1px solid #233252;
+ border-radius: 10px;
+ font-size: 14px;
+ font-weight: 700;
+ text-decoration: none;
+ transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+ background: var(--navy);
+ color: #64748B;
+ padding: 24px 0;
+ text-align: center;
+ font-family: var(--mono);
+ font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+ <div class="masthead">
+ <span><b>SKORE Academy</b> High School Logic Series</span>
+ <span>고1 2026년 10월</span>
+ </div>
+ <div class="meta-badge">학력평가 23번 · 주제 추론</div>
+ <h1 class="title">THE NECESSITY OF WHISTLEBLOWER PROTECTION<br><span>Safeguarding Individuals and the Public Good</span></h1>
+ <p class="header-lead">기업의 불법 행위를 막고 공공의 이익을 지키기 위해 내부 고발자(whistleblower)를 보호해야 할 필요성과 그 긍정적 효과에 대해 분석합니다.</p>
+ </div>
+</header>
+
+<div class="tracker-wrap">
+ <div class="wrap">
+ <div class="tracker">
+ <a href="#step1" class="track-step">
+ <span class="s-num">STEP 01</span>
+ <span class="s-name">원문정독</span>
+ </a>
+ <a href="#step2" class="track-step">
+ <span class="s-num">STEP 02</span>
+ <span class="s-name">디코딩</span>
+ </a>
+ <a href="#step3" class="track-step">
+ <span class="s-num">STEP 03</span>
+ <span class="s-name">논리구조</span>
+ </a>
+ <a href="#step4" class="track-step">
+ <span class="s-num">STEP 04</span>
+ <span class="s-name">어법드릴</span>
+ </a>
+ <a href="#step5" class="track-step">
+ <span class="s-num">STEP 05</span>
+ <span class="s-name">실전변형</span>
+ </a>
+ </div>
+ </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+ <div class="wrap">
+ <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+ <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+ 
+<div class="bg-knowledge-box">
+ <div class="bg-header">
+ <span>💡</span>
+ <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+ </div>
+ <ul class="bg-list">
+ <li><b>[핵심 개념]:</b> 내부 고발자 보호 (Whistleblower Protection)</li>
+ <li><b>[배경 맥락]:</b> 최근 기업 내 불법 행위가 증가하는 가운데, 보복에 대한 두려움 없이 이를 고발할 수 있는 제도가 없다면 기업뿐만 아니라 사회 전반에 큰 피해를 줄 수 있습니다.</li>
+ <li><b>[논리 요약]:</b> 내부 고발자 보호는 단순히 고발자 개인의 권리를 지키는 것을 넘어, 공공의 이익을 수호하고 사회적 피해를 예방하는 두 가지 핵심 기능을 수행합니다.</li>
+ </ul>
+ </div>
+
+ <div class="full-passage-box">
+ In recent years, the number of illegal actions in particular at the corporate level has grown, or at least the number of cases that came to light, increased. Such misconduct has often only been exposed because brave informants have risked a great deal in order to put an end to it. Hence, it is no surprise that whistleblower protection has come into focus. If violations of law and order go undetected and unpunished for years because employees of a company fear to report illegal activities for fear of reprisals or consequences, it can have several negative effects. It can harm the company itself, but also third-parties, the economy in general, the general public, and even the rule of law could be affected. Protecting those who would assist in reducing unlawful or even criminal behaviour has two main functions: Protecting the individual's actions as well as protecting the public good. A well-balanced whistleblower protection may have positive effects on both of these.
+ </div>
+
+ <div class="key-takeaway">
+ <b>[핵심 요지]</b> 기업의 불법 행위를 근절하고 공공의 이익을 보호하기 위해 내부 고발자(whistleblower) 보호 제도는 필수적이다.
+ </div>
+ </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+ <div class="wrap">
+ <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+ <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+ <div class="chunk-box">
+ 
+<div class="chunk-item">
+ <div class="chunk-en">1. In recent years, / the number of illegal actions <mark>in particular</mark> at the corporate level has grown, / or at least the number of cases <mark>that</mark> came to light, / increased.</div>
+ <details>
+ <summary>▼ 직독직해 및 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 최근 몇 년간, / 특히 기업 수준에서 불법적인 행동들의 수가 증가했다, / 혹은 적어도 세상에 알려진 사건들의 수가, / 증가했다.</p>
+ <p><b>[구문 해설]</b> 'that came to light'는 선행사 the number of cases를 수식하는 주격 관계대명사절입니다.</p>
+ <p><b>[핵심 어휘]</b> in particular (특히), corporate level (기업 수준), come to light (알려지다, 밝혀지다)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">2. Such misconduct has often <mark>only</mark> been exposed / <mark>because</mark> brave informants have risked a great deal / in order to put an end to it.</div>
+ <details>
+ <summary>▼ 직독직해 및 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그러한 위법 행위는 종종 오직 폭로되어 왔다 / 용감한 정보 제공자들이 많은 것을 걸었기 때문에 / 그것을 끝내기 위해.</p>
+ <p><b>[구문 해설]</b> has been exposed로 현재완료 수동태가 쓰였으며, in order to는 목적을 나타내는 부사적 용법(~하기 위해)입니다.</p>
+ <p><b>[핵심 어휘]</b> misconduct (위법 행위, 비행), expose (폭로하다), informant (정보 제공자, 내부 고발자), risk (위험을 무릅쓰다), put an end to (~을 끝내다)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">3. <mark>Hence</mark>, it is no surprise <mark>that</mark> whistleblower protection has come into focus.</div>
+ <details>
+ <summary>▼ 직독직해 및 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그러므로, / 내부 고발자 보호가 초점이 된 것은 놀라운 일이 아니다.</p>
+ <p><b>[구문 해설]</b> it은 가주어, that절이 진주어 역할을 합니다.</p>
+ <p><b>[핵심 어휘]</b> hence (그러므로), no surprise (놀라운 일이 아닌), whistleblower (내부 고발자), come into focus (초점이 되다, 주목받다)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">4. If violations of law and order go undetected and unpunished for years / because employees of a company fear to report illegal activities / for fear of reprisals or consequences, / it can have several negative effects.</div>
+ <details>
+ <summary>▼ 직독직해 및 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 만약 법과 질서의 위반이 수년 동안 적발되지 않고 처벌받지 않은 채로 넘어간다면 / 한 회사의 직원들이 불법적인 활동들을 보고하기를 두려워하기 때문에 / 보복이나 결과에 대한 두려움으로, / 그것은 여러 부정적인 영향을 미칠 수 있다.</p>
+ <p><b>[구문 해설]</b> 'go + 형용사/과거분사'는 '~한 상태로 계속되다'의 의미를 가집니다. fear는 to부정사(to report)를 목적어로 취합니다.</p>
+ <p><b>[핵심 어휘]</b> violation (위반), undetected (발견되지 않은), unpunished (처벌받지 않은), reprisal (보복), consequence (결과, 파장)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">5. It can harm the company itself, / but also third-parties, the economy in general, the general public, / and even the rule of law could be affected.</div>
+ <details>
+ <summary>▼ 직독직해 및 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 그것은 회사 자체에 해를 끼칠 수 있다, / 뿐만 아니라 제3자, 경제 전반, 일반 대중, / 그리고 심지어 법의 지배조차도 영향을 받을 수 있다.</p>
+ <p><b>[구문 해설]</b> not only A but also B 구문의 변형으로, it can harm A, but also B 형태로 쓰였습니다.</p>
+ <p><b>[핵심 어휘]</b> harm (해를 끼치다), third-party (제3자), economy in general (경제 전반), general public (일반 대중), rule of law (법의 지배)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">6. <mark>Protecting</mark> those who would assist in reducing unlawful or even criminal behaviour / has two main functions: / Protecting the individual's actions <mark>as well as</mark> protecting the public good.</div>
+ <details>
+ <summary>▼ 직독직해 및 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 불법적이거나 심지어 범죄적인 행동을 줄이는 데 도움을 줄 사람들을 보호하는 것은 / 두 가지 주요 기능을 가진다: / 개인의 행동을 보호하는 것뿐만 아니라 공공의 이익을 보호하는 것.</p>
+ <p><b>[구문 해설]</b> Protecting이 동명사 주어로 쓰여 단수 동사 has를 취했습니다. 'A as well as B'는 'B뿐만 아니라 A도'라는 뜻입니다.</p>
+ <p><b>[핵심 어휘]</b> protect (보호하다), assist in (~을 돕다), unlawful (불법의), criminal (범죄의), function (기능), public good (공익, 공공의 이익)</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="chunk-item">
+ <div class="chunk-en">7. A well-balanced whistleblower protection / may have positive effects on both of these.</div>
+ <details>
+ <summary>▼ 직독직해 및 어휘</summary>
+ <div class="details-content">
+ <p><b>[직독직해]</b> 잘 균형 잡힌 내부 고발자 보호는 / 이 둘 모두에 긍정적인 영향을 미칠 수 있다.</p>
+ <p><b>[구문 해설]</b> 'have effects on'은 '~에 영향을 미치다'라는 표현입니다.</p>
+ <p><b>[핵심 어휘]</b> well-balanced (잘 균형 잡힌), positive effect (긍정적인 영향)</p>
+ </div>
+ </details>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+ <div class="wrap">
+ <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+ <h2 class="sec-title">지문 맞춤형 논리 구조도 (Problem - Risk - Solution)</h2>
+ <div class="flow-container">
+ <div class="flow-card s1">
+ <span class="badge">[01] 문제 현상</span>
+ <h4>기업의 위법 행위와 내부 고발</h4>
+ <p>기업의 불법 행위가 증가하는 가운데, 이는 자신의 위험을 무릅쓴 용감한 내부 고발자들에 의해 주로 밝혀지고 있습니다.</p>
+ </div>
+ <div class="flow-card s2">
+ <span class="badge">[02] 위험성</span>
+ <h4>내부 고발의 부재 시 따르는 피해</h4>
+ <p>보복에 대한 두려움으로 위법 행위가 묵인될 경우, 회사뿐만 아니라 경제 전반과 공공의 이익, 법치주의까지 훼손될 수 있습니다.</p>
+ </div>
+ <div class="flow-card s3">
+ <span class="badge">[03] 해결책 제언</span>
+ <h4>내부 고발자 보호의 기능과 효과</h4>
+ <p>내부 고발자 보호는 고발자 개인의 행동을 보호할 뿐만 아니라 공공의 이익을 지키는 두 가지 핵심 기능을 수행하며 긍정적 효과를 창출합니다.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+ <div class="wrap">
+ <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+ <h2 class="sec-title">어법 함정 자가 진단 드릴 (Interactive Drill)</h2>
+ 
+<div class="drill-card">
+ <div class="drill-q">1. Protecting those who would assist in reducing unlawful or even criminal behaviour [ has / have ] two main functions.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="correct" data-exp="정답: has. 동명사구인 Protecting ~ behaviour 전체가 문장의 주어이므로 단수 동사 has가 올바릅니다.">has</button>
+ <button class="drill-btn" data-ans="wrong" data-exp="오답: have. 바로 앞의 명사 behaviour나 복수형 those에 속아 복수 동사를 쓰면 안 됩니다. 문장의 핵심 주어는 동명사 Protecting입니다.">have</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+
+ <div class="drill-card">
+ <div class="drill-q">2. Such misconduct has often only [ exposed / been exposed ] because brave informants have risked a great deal.</div>
+ <div class="drill-options">
+ <button class="drill-btn" data-ans="correct" data-exp="정답: been exposed. 문장의 주어인 '위법 행위(misconduct)'는 스스로 폭로하는 것이 아니라 사람들에 의해 폭로'되는' 대상이므로 수동태인 been exposed가 적절합니다.">been exposed</button>
+ <button class="drill-btn" data-ans="wrong" data-exp="오답: exposed. 현재완료 능동태(has exposed)가 되면 위법 행위가 무언가를 폭로했다는 잘못된 의미가 됩니다.">exposed</button>
+ </div>
+ <div class="drill-feedback"></div>
+ </div>
+
+ </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+ <div class="wrap">
+ <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+ <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+ 
+ <div class="exam-item">
+ <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+ <div class="exam-passage">
+ In recent years, the number of illegal actions in particular at the corporate level has grown, or at least the number of cases that came to light, increased. Such misconduct has often only been exposed because brave informants have risked a great deal in order to put an end to it. Hence, it is no surprise that whistleblower protection has come into focus. If violations of law and order go undetected and unpunished for years because employees of a company fear to report illegal activities for fear of reprisals or consequences, it can have several negative effects. It can harm the company itself, but also third-parties, the economy in general, the general public, and even the rule of law could be affected. Protecting those who would assist in reducing unlawful or even criminal behaviour has two main functions: Protecting the individual's actions as well as protecting the public good. A well-balanced whistleblower protection may have positive effects on both of these.
+ </div>
+ <div class="exam-choices">
+ ① Why Corporate Crimes Remain Hidden from the Public Eye<br>
+ ② The Hidden Dangers of Reporting Illegal Workplace Activities<br>
+ ③ Whistleblower Protection: Safeguarding Individuals and the Public Good<br>
+ ④ How to Balance Corporate Profits and Social Responsibilities<br>
+ ⑤ The Legal Limits of Punishing Corporate Misconduct
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <p><b>정답: ③ Whistleblower Protection: Safeguarding Individuals and the Public Good</b></p>
+ <p>해설: 이 글은 기업의 불법 행위를 막기 위해 내부 고발자(whistleblower)를 보호해야 하는 이유와 함께, 그것이 고발자 개인뿐만 아니라 공공의 이익을 지키는 두 가지 핵심 기능을 수행한다는 점을 강조하고 있습니다. 따라서 ③번이 글의 제목으로 가장 적절합니다.</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+ <div class="exam-passage">
+ <b>[주어진 문장]</b> Hence, it is no surprise that whistleblower protection has come into focus.<br><br>
+ In recent years, the number of illegal actions in particular at the corporate level has grown, or at least the number of cases that came to light, increased. ( ① ) Such misconduct has often only been exposed because brave informants have risked a great deal in order to put an end to it. ( ② ) ( ③ ) If violations of law and order go undetected and unpunished for years because employees of a company fear to report illegal activities for fear of reprisals or consequences, it can have several negative effects. ( ④ ) It can harm the company itself, but also third-parties, the economy in general, the general public, and even the rule of law could be affected. ( ⑤ ) Protecting those who would assist in reducing unlawful or even criminal behaviour has two main functions: Protecting the individual's actions as well as protecting the public good.
+ </div>
+ <div class="exam-choices">
+ ①<br>
+ ②<br>
+ ③<br>
+ ④<br>
+ ⑤
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <p><b>정답: ③</b></p>
+ <p>해설: 주어진 문장은 '그러므로 내부 고발자 보호가 주목받는 것은 놀라운 일이 아니다'라는 인과 관계의 결론을 담고 있습니다. 바로 앞 문장(②)에서 위법 행위가 오직 위험을 무릅쓴 내부 고발자들에 의해 폭로되어 왔다고 설명하므로, 그 결과로 보호 제도가 주목받는다는 내용이 이어지는 ③번 자리가 가장 적절합니다.</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>3. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+ <div class="exam-passage">
+ In recent years, the number of illegal actions in particular at the corporate level has grown, or at least the number of cases that came to light, increased. Such misconduct has often only been exposed because brave informants have ① <u>risked</u> a great deal in order to put an end to it. Hence, it is no surprise that whistleblower protection has come into focus. If violations of law and order go undetected and unpunished for years because employees of a company fear to report illegal activities for fear of reprisals or consequences, it can have ② <u>several</u> negative effects. It can harm the company itself, but also third-parties, the economy in general, the general public, and even the rule of law could be ③ <u>unaffected</u>. Protecting those who would assist in reducing unlawful or even criminal behaviour has two main functions: Protecting the individual's actions as well as protecting the public good. A well-balanced whistleblower protection may have ④ <u>positive</u> effects on both of these, ⑤ <u>weakening</u> the security of society.
+ </div>
+ <div class="exam-choices">
+ ① risked<br>
+ ② several<br>
+ ③ unaffected<br>
+ ④ positive<br>
+ ⑤ weakening
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <p><b>정답: ③ unaffected</b></p>
+ <p>해설: 원문에서는 불법 행위가 적발되지 않고 방치되면 회사뿐만 아니라 제3자, 경제 전반, 일반 대중, 그리고 심지어 법의 지배조차도 '영향을 받을 수 있다(could be affected)'고 경고하고 있습니다. 따라서 unaffected(영향을 받지 않는)는 문맥상 완전히 틀린 어휘이므로 affected로 고쳐야 합니다.</p>
+ </div>
+ </details>
+ </div>
+
+ <div class="exam-item">
+ <h4>4. 다음 조건에 맞게 우리말 뜻을 올바른 영어 문장으로 영작하시오.</h4>
+ <div class="exam-passage">
+ <b>[조건]</b><br>
+ 1. 아래의 제시된 단어들을 모두 한 번씩만 사용할 것.<br>
+ 2. 의미와 어법에 맞게 <b>가주어·진주어 구문</b>을 활용하여 문장을 완성할 것.<br>
+ 3. 총 11단어로 작성할 것.<br><br>
+ <b>[우리말]</b><br>
+ 그러므로, 내부 고발자 보호가 초점이 된 것은 놀라운 일이 아니다.<br><br>
+ <b>[제시어]</b><br>
+ ( surprise / has / whistleblower / focus / no / that / it / come / into / protection / is )
+ </div>
+ <details>
+ <summary>정답 및 해설 확인</summary>
+ <div class="answer-content">
+ <p><b>정답: it is no surprise that whistleblower protection has come into focus.</b> (Hence 제외 제시어 기준 11단어)</p>
+ <p>해설: 가주어 it을 사용하여 '놀라운 일이 아니다'를 'it is no surprise'로 영작하고, 진주어를 이끄는 접속사 'that' 뒤에 '내부 고발자 보호(whistleblower protection)' 주어와 '초점이 되다(has come into focus)' 동사구를 연결하여 완성합니다.</p>
+ </div>
+ </details>
+ </div>
+
+ </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+ <a href="index.html" class="btn-back-hub">
+ <span>📋</span>
+ <span>전체 지문 목록으로 돌아가기</span>
+ </a>
+</nav>
+
+<footer>
+ <div class="wrap">
+ Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+ </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+ document.querySelectorAll('.drill-options').forEach(function(group) {
+ group.addEventListener('click', function(e) {
+ var btn = e.target.closest('.drill-btn');
+ if (!btn) return;
+ 
+var isCorrect = btn.getAttribute('data-ans') === 'correct';
+ var exp = btn.getAttribute('data-exp');
+ var fb = group.parentElement.querySelector('.drill-feedback');
+ 
+fb.style.display = 'block';
+ if (isCorrect) {
+ fb.style.background = '#ECFDF5';
+ fb.style.color = '#065F46';
+ fb.style.border = '1px solid #A7F3D0';
+ } else {
+ fb.style.background = '#FEF2F2';
+ fb.style.color = '#991B1B';
+ fb.style.border = '1px solid #FECACA';
+ }
+ fb.innerHTML = '<b>' + exp + '</b>';
+ });
+ });
+});
+</script>
+</body>
+</html>
