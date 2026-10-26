@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | 2026 사직고 1학년 2-2 올림포스 4강 4번</title>
+<!-- 파비콘 및 웹앱 아이콘 설정 -->
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36px 0 28px;
+  border-bottom: 3px solid var(--blue);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  background: rgba(14, 143, 158, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+.tracker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 8px 0;
+}
+.track-step {
+  text-align: center;
+  padding: 6px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--text-main);
+  display: block;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.track-step .s-num {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+h2.sec-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* STEP 1: Background Knowledge Box */
+.bg-knowledge-box {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+}
+.bg-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.bg-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bg-list li {
+  font-size: 12.5px;
+  color: #1E3A8A;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 14px;
+}
+.bg-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+/* STEP 1: Full Passage */
+.full-passage-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue);
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #1E293B;
+  border-radius: 4px;
+}
+.key-takeaway {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 12px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1E3A8A;
+}
+
+/* STEP 2: Decoding */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+}
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+
+details {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+summary {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 8px 12px;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.details-content {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #334155;
+  border-top: 1px dashed var(--border);
+  line-height: 1.65;
+}
+.details-content b { color: var(--navy); }
+
+/* STEP 3: Logic Structure */
+.flow-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.flow-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+}
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4: Grammar Drill */
+.drill-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+  outline: none;
+}
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.drill-feedback {
+  display: none;
+  font-size: 12.5px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* STEP 5: Exam Simulation */
+.exam-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #1E3A8A;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.summary-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #92400E;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Navigation & Footer */
+.btn-back-hub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #182238;
+  color: #60a5fa;
+  border: 1px solid #233252;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease;
+}
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+.btn-back-hub:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+footer {
+  background: var(--navy);
+  color: #64748B;
+  padding: 24px 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span>2026 사직고 1학년 2-2</span>
+    </div>
+    <div class="meta-badge">올림포스 9대변별 4강 4번 · 어휘 적합성</div>
+    <h1 class="title">EVOLUTIONARY EQUALITY<br><span>All Species Are Equally Evolved</span></h1>
+    <p class="header-lead">생명의 진화는 더 복잡한 생물체로 나아가는 과정이 아니며, 단순한 세균부터 인간까지 모든 생물은 생태적 지위를 채우기 위해 40억 년간 동등하게 진화한 결과물입니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step">
+        <span class="s-num">STEP 01</span>
+        <span class="s-name">원문정독</span>
+      </a>
+      <a href="#step2" class="track-step">
+        <span class="s-num">STEP 02</span>
+        <span class="s-name">디코딩</span>
+      </a>
+      <a href="#step3" class="track-step">
+        <span class="s-num">STEP 03</span>
+        <span class="s-name">논리구조</span>
+      </a>
+      <a href="#step4" class="track-step">
+        <span class="s-num">STEP 04</span>
+        <span class="s-name">어법드릴</span>
+      </a>
+      <a href="#step5" class="track-step">
+        <span class="s-num">STEP 05</span>
+        <span class="s-name">실전변형</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 1: Full Passage -->
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · ESSENTIAL BACKGROUND & FULL PASSAGE</span>
+    <h2 class="sec-title">배경지식 & 전체 지문 정독</h2>
+    
+    <div class="bg-knowledge-box">
+      <div class="bg-header">
+        <span>💡</span>
+        <span>ESSENTIAL BACKGROUND KNOWLEDGE · 지문 핵심 배경지식</span>
+      </div>
+      <ul class="bg-list">
+        <li><b>[핵심 개념]:</b> 생물 진화의 동등성 (Evolutionary Equality). 가장 단순한 세균이나 가장 거대한 포유류나 모두 40억 년 진화의 결과물로 진화적 가치가 동일함.</li>
+        <li><b>[배경 맥락]:</b> 인간은 흔히 진화를 '단순함에서 복잡함으로' 나아가는 발전 과정으로 오해하지만, 실제 진화는 비어있는 생태적 지위(ecological niche)를 각자의 방식으로 채우는 방향으로 진행됨.</li>
+        <li><b>[논리 요약]:</b> 지구상의 모든 생명체는 진화의 동등한 산물이며, 크기나 복잡성과 관계없이 각자의 생태적 지위에 맞게 고유하게 진화한 것이다.</li>
+      </ul>
+    </div>
+
+    <div class="full-passage-box">
+      Life on Earth is not defined solely by the largest creatures that we see inhabiting the lands and the oceans of the planet, even though those are the ones with which we are most familiar. Rather, it appears that the most abundant life on Earth may also be the simplest life ─ bacteria. In this sense, we cannot view the evolution of life on Earth as being a continuing evolution toward morecomplex organisms. All the life that exists today is the equal product of 4 b.y. of evolution, whether it be the simplest bacteria, the smallest plants, humans, or the largest organisms on the planet. That is, evolution has allowed organisms to evolve to fill essentially all of the available ecological niches. The largest species ─ those that we see on the surface of the planet ─ are in some sense no more evolved than the simplest bacteria.
+    </div>
+
+    <div class="key-takeaway">
+      <b>[핵심 요지]</b> 생명의 진화는 더 복잡한 생물체로 향하는 지속적인 과정이 아니며, 크기나 단순함에 상관없이 오늘날 존재하는 모든 생물은 빈 생태적 지위를 채우기 위해 진화한 동등한 산물이다.
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Decoding -->
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · CHUNKING & VOCABULARY</span>
+    <h2 class="sec-title">문장별 직독직해 및 핵심 어휘 디코딩</h2>
+    <div class="chunk-box">
+      
+      <div class="chunk-item">
+        <div class="chunk-en">1. Life on Earth is not defined solely / by the largest creatures <mark>that</mark> we see inhabiting the lands and the oceans of the planet, / even though those are the ones <mark>with which</mark> we are most familiar.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 지구상의 생명체는 오로지 규정되지 않는다 / 우리가 지구의 육지와 바다에 서식하는 것을 보는 가장 큰 생물체들에 의해서, / 비록 그것들이 우리가 가장 친숙하게 여기는 것들일지라도.<br>
+            [구문 해설] `that`은 목적격 관계대명사이며 선행사 `creatures`를 수식합니다. `see(지각동사) + 목적어(생략된 that) + 목적격보어(inhabiting)` 형태의 5형식 구문이 쓰였습니다. `with which`는 [전치사 + 관계대명사]로 뒤에 완전한 절(`we are most familiar`)이 이어집니다.<br>
+            [핵심 어휘] define: 규정하다 / solely: 오로지, 단독으로 / inhabit: 서식하다 / familiar: 친숙한
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">2. Rather, it appears that the most abundant life on Earth / may also be the simplest life ─ bacteria.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 오히려, 지구상에서 가장 풍부한 생명체는 ~인 것 같다 / 또한 가장 단순한 생명체인 세균일지도 모른다.<br>
+            [핵심 어휘] rather: 오히려 / abundant: 풍부한 / bacteria: 세균(박테리아)
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">3. In this sense, / we cannot view the evolution of life on Earth / <mark>as</mark> being a continuing evolution toward more complex organisms.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 이러한 의미에서, / 우리는 지구상의 생명체 진화를 간주할 수 없다 / 더 복잡한 유기체를 향한 지속적인 진화로.<br>
+            [구문 해설] `view A as B` 구문이 사용되어 'A를 B로 간주하다, 보다'로 해석됩니다.<br>
+            [핵심 어휘] evolution: 진화 / continuing: 지속적인 / complex: 복잡한 / organism: 유기체
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">4. All the life that exists today / is the equal product of 4 b.y. of evolution, / <mark>whether it be</mark> the simplest bacteria, the smallest plants, humans, or the largest organisms on the planet.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 오늘날 존재하는 모든 생명체는 / 40억 년 진화의 동등한 산물이다, / 그것이 가장 단순한 세균이든, 가장 작은 식물이든, 인간이든, 혹은 지구상에서 가장 큰 유기체이든 간에.<br>
+            [구문 해설] `that`은 주격 관계대명사입니다. `whether it be A, B, C, or D`는 '~이든 간에'라는 의미의 양보 부사절을 이끌고 있습니다. (`4 b.y.`는 4 billion years 즉, 40억 년을 의미합니다.)<br>
+            [핵심 어휘] equal: 동등한 / product: 산물
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">5. That is, / evolution has allowed organisms <mark>to evolve</mark> / to fill essentially all of the available ecological niches.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 즉, / 진화는 유기체들이 진화하도록 허용했다 / 본질적으로 모든 이용 가능한 생태적 지위를 채우기 위해.<br>
+            [구문 해설] `allow + 목적어(organisms) + 목적격보어(to evolve)`의 5형식 구문입니다.<br>
+            [핵심 어휘] that is: 즉 / essentially: 본질적으로 / available: 이용 가능한 / ecological niche: 생태적 지위
+          </div>
+        </details>
+      </div>
+
+      <div class="chunk-item">
+        <div class="chunk-en">6. The largest species ─ <mark>those</mark> that we see on the surface of the planet ─ / are in some sense / <mark>no more</mark> evolved <mark>than</mark> the simplest bacteria.</div>
+        <details>
+          <summary>▼ 직독직해 및 어휘</summary>
+          <div class="details-content">
+            [직독직해] 가장 큰 종들은 ─ 우리가 지구의 표면에서 보는 것들 ─ / 어떤 의미에서는 / 가장 단순한 세균보다 더 진화한 것이 결코 아니다.<br>
+            [구문 해설] `those`는 앞의 복수 명사 `The largest species`를 동격으로 받는 대명사입니다. `no more A than B`는 'B가 아닌 것처럼 A도 아니다(A가 B보다 더 ~한 것은 아니다)'라는 의미로 양쪽이 동등함을 강력하게 강조하는 구문입니다.<br>
+            [핵심 어휘] species: 종 / surface: 표면
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: Logic Structure -->
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGICAL ARCHITECTURE</span>
+    <h2 class="sec-title">지문 맞춤형 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">[도입] 통념의 반전</span>
+        <h4>거대한 생물이 진화의 전부가 아님</h4>
+        <p>우리는 크고 눈에 띄는 생물들에 친숙하지만, 지구상에서 가장 풍부한 생명체는 역설적으로 가장 단순한 세균일 수 있음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">[전개] 진화는 동등하다</span>
+        <h4>복잡성을 향한 것이 아닌 평등한 진화</h4>
+        <p>진화는 더 복잡한 유기체를 향한 일방향적 과정이 아님. 오늘날 존재하는 모든 생명체는 크기와 관계없이 40억 년 진화의 동일한 산물임.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">[결론] 생태적 지위의 충족</span>
+        <h4>각자의 지위를 채운 결과</h4>
+        <p>진화는 유기체들이 이용 가능한 모든 생태적 지위를 채우도록 했으며, 거대한 생물이라고 해서 단순한 세균보다 더 진화한 존재는 결코 아님.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 4: Grammar Drill -->
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR CLINIC</span>
+    <h2 class="sec-title">핵심 구조 어법 드릴 (Interactive Drill)</h2>
+    
+    <div class="drill-card">
+      <div class="drill-q">1. Life on Earth is not defined solely by the largest creatures that we see [ inhabiting / to inhabit ] the lands and the oceans of the planet.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 지각동사 see의 목적격 보어 자리입니다. 목적격 보어로는 현재분사(-ing)나 동사원형이 올 수 있으므로 inhabiting이 적절합니다.">inhabiting</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 지각동사 see는 목적격 보어로 to부정사를 취하지 않습니다.">to inhabit</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    
+    <div class="drill-card">
+      <div class="drill-q">2. ...even though those are the ones [ which / with which ] we are most familiar.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 뒤에 완전한 절(we are most familiar)이 오고 있으므로 관계대명사만 단독으로 쓰일 수 없습니다. 'be familiar with'의 구조를 고려해야 합니다.">which</button>
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 'we are most familiar with the ones'의 구조에서 전치사 with가 관계대명사 앞으로 이동한 형태입니다. 뒤에 완전한 문장 구조가 이어집니다.">with which</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Exam Simulation -->
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">고등부 수능/내신 실전 변형 문제</h2>
+    
+    <div class="exam-item">
+      <h4>1. 다음 글의 요지로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Life on Earth is not defined solely by the largest creatures that we see inhabiting the lands and the oceans of the planet, even though those are the ones with which we are most familiar. Rather, it appears that the most abundant life on Earth may also be the simplest life ─ bacteria. In this sense, we cannot view the evolution of life on Earth as being a continuing evolution toward more complex organisms. All the life that exists today is the equal product of 4 b.y. of evolution, whether it be the simplest bacteria, the smallest plants, humans, or the largest organisms on the planet. That is, evolution has allowed organisms to evolve to fill essentially all of the available ecological niches. The largest species ─ those that we see on the surface of the planet ─ are in some sense no more evolved than the simplest bacteria.
+      </div>
+      <div class="exam-choices">
+        ① 지구상의 모든 생물 종은 각자의 생태적 지위에 맞게 진화한 동등한 산물이다.<br>
+        ② 진화는 생물학적 복잡성을 향해 끊임없이 나아가는 필연적 과정이다.<br>
+        ③ 특정 종의 개체수와 성공은 주로 생물체의 물리적 크기에 의해 결정된다.<br>
+        ④ 세균과 같은 미생물만이 진화의 초기 단계에서 살아남은 유일한 생명체이다.<br>
+        ⑤ 진화는 새로운 환경에 적응할 때 더 크고 복잡한 유기체만을 선택적으로 선호한다.
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          해설: 진화는 더 복잡한 유기체로 나아가는 과정이 아니라, 단순한 세균이나 거대한 포유류나 모두 각자의 생태적 지위(ecological niches)를 채우기 위해 40억 년간 진화한 동등한 산물이라는 것이 이 글의 핵심 요지입니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="exam-passage">
+        <b>[주어진 문장]</b> In this sense, we cannot view the evolution of life on Earth as being a continuing evolution toward more complex organisms.
+        <br><br>
+        Life on Earth is not defined solely by the largest creatures that we see inhabiting the lands and the oceans of the planet, even though those are the ones with which we are most familiar. ( ① ) Rather, it appears that the most abundant life on Earth may also be the simplest life ─ bacteria. ( ② ) All the life that exists today is the equal product of 4 b.y. of evolution, whether it be the simplest bacteria, the smallest plants, humans, or the largest organisms on the planet. ( ③ ) That is, evolution has allowed organisms to evolve to fill essentially all of the available ecological niches. ( ④ ) The largest species ─ those that we see on the surface of the planet ─ are in some sense no more evolved than the simplest bacteria. ( ⑤ )
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ②</b><br>
+          해설: 주어진 문장은 "이러한 의미에서, 우리는 진화를 더 복잡한 유기체를 향한 지속적인 진화로 볼 수 없다"라고 말합니다. 이는 바로 앞 문장에서 가장 단순한 세균이 지구상에서 가장 풍부한 생명체라는 사실을 근거("In this sense")로 삼아 통념을 반박하는 내용이므로 ②번 자리가 가장 적절합니다. 이어지는 문장에서 "오늘날 존재하는 모든 생명체는 동등한 진화의 산물"이라고 구체적으로 뒷받침하고 있습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Life on Earth is not defined solely by the largest creatures that we see inhabiting the lands and the oceans of the planet, even though those are the ones with which we are most familiar. Rather, it appears that the most abundant life on Earth may also be the simplest life ─ bacteria. In this sense, we cannot view the evolution of life on Earth as being a continuing evolution toward more complex organisms. All the life that exists today is the equal product of 4 b.y. of evolution, whether it be the simplest bacteria, the smallest plants, humans, or the largest organisms on the planet. That is, evolution has allowed organisms to evolve to fill essentially all of the available ecological niches. The largest species ─ those that we see on the surface of the planet ─ are in some sense no more evolved than the simplest bacteria.
+      </div>
+      <div class="summary-box">
+        Contrary to the common belief that evolution always proceeds toward greater (A) ________, all living species, regardless of their size, are (B) ________ products of evolution that have adapted to their own ecological niches.
+      </div>
+      <div class="exam-choices">
+        ① (A) complexity — (B) equivalent<br>
+        ② (A) simplicity — (B) independent<br>
+        ③ (A) diversity — (B) partial<br>
+        ④ (A) intelligence — (B) equivalent<br>
+        ⑤ (A) complexity — (B) competitive
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: ①</b><br>
+          해설: 진화가 더 복잡한(complexity) 것을 향해 나아간다는 통념과 달리, 크기에 상관없이 모든 종들은 각자의 생태적 지위에 적응해 온 진화의 동등한(equivalent = equal) 산물이라는 내용입니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. [서술형] 다음 주어진 문장의 밑줄 친 우리말과 일치하도록, 주어진 단어들을 배열하여 전체 영어 문장을 완성하시오.</h4>
+      <div class="exam-passage">
+        All the life that exists today is the equal product of 4 b.y. of evolution, whether it be the simplest bacteria, the smallest plants, humans, or the largest organisms on the planet. That is, <u>진화는 유기체들이 본질적으로 모든 이용 가능한 생태적 지위를 채우기 위해 진화하도록 허용했다</u>. The largest species ─ those that we see on the surface of the planet ─ are in some sense no more evolved than the simplest bacteria.<br><br>
+        [조건]<br>
+        1. 'allow + 목적어 + to부정사' 구문을 활용할 것.<br>
+        2. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+        3. 필요시 단어를 추가하거나 어형을 변화시킬 것.<br>
+        4. 주어진 단어: organisms / fill / available / niches / evolve / essentially / ecological
+      </div>
+      <details>
+        <summary>▼ 정답 및 해설</summary>
+        <div class="answer-content">
+          <b>정답: evolution has allowed organisms to evolve to fill essentially all of the available ecological niches.</b><br>
+          해설: 'allow + 목적어 + to부정사' 구문을 활용하여 organisms가 to evolve 하도록 허용했다(has allowed)는 형태를 취합니다. '~를 채우기 위해'는 to fill로 연결하며, '본질적으로 모든 이용 가능한 생태적 지위'는 essentially all of the available ecological niches로 영작합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<!-- 하단 허브 복귀 네비게이션 -->
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub">
+    <span>📋</span>
+    <span>전체 지문 목록으로 돌아가기</span>
+  </a>
+</nav>
+
+<footer>
+  <div class="wrap">
+    Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5';
+        fb.style.color = '#065F46';
+        fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2';
+        fb.style.color = '#991B1B';
+        fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

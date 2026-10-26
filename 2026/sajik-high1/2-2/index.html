@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2026 사직고 1학년 2학기 기말고사 워크북 허브 | SKORE ACADEMY</title>
+<!-- 브라우저 기본 파비콘 및 탭 아이콘 -->
+<link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+
+<!-- Apple iOS 사파리 북마크 및 홈 화면 바로가기 -->
+<link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+
+<!-- Android 웹앱 매니페스트 및 테마 컬러 -->
+<link rel="manifest" href="/skore-workbook/site.webmanifest">
+<meta name="theme-color" content="#cb1d06">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  /* SKORE ACADEMY Core Brand Color System */
+  --navy: #0B1220;
+  --paper: #F8FAFC;
+  --white: #FFFFFF;
+  --brand-red: #cb1d06; /* SKORE Signature Red */
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E2E8F0;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+
+  /* Card Base Theme */
+  --card-bg: #fffbfb;
+  --card-border: #fecaca;
+  --badge-bg: rgba(203, 29, 6, 0.08);
+  --badge-border: rgba(203, 29, 6, 0.25);
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  
+  /* Difficulty Colors */
+  --diff-high: #DC2626;   /* Red for High */
+  --diff-mid: #B8791A;    /* Amber for Mid */
+  --diff-low: #059669;    /* Emerald for Low */
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 90px; /* Sticky nav 높이만큼 여백 확보 */
+}
+body {
+  background: var(--paper);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+/* Hero Header */
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 40px 0 32px;
+  border-bottom: 3px solid var(--brand-red);
+}
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8FA0B8;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.masthead b { color: #fff; }
+.meta-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: #ea2e15;
+  background: rgba(203, 29, 6, 0.18);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+h1.title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 4.5vw, 32px);
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+h1.title span { color: #ea2e15; }
+.header-lead {
+  font-size: 14px;
+  color: #CBD5E1;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 24px 0 0;
+}
+.stat-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+.stat-val {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  display: block;
+}
+.stat-lbl {
+  font-size: 10.5px;
+  color: #8FA0B8;
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background: rgba(248, 250, 252, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+.nav-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--navy);
+  font-weight: 700;
+  font-family: var(--mono);
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+.nav-btn:hover, .nav-btn:active {
+  background: var(--brand-red);
+  color: var(--white);
+  border-color: var(--brand-red);
+  transform: translateY(-1px);
+}
+
+/* Main Section */
+main { padding: 36px 0 60px; }
+
+/* Overview Research Box */
+.overview-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.ov-header { margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+.ov-badge {
+  display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700;
+  color: var(--white); background: var(--navy); padding: 4px 8px; border-radius: 4px; margin-bottom: 10px;
+}
+.ov-header h2 { font-family: var(--serif); font-size: 20px; font-weight: 900; color: var(--navy); margin-bottom: 6px; }
+.ov-header p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px; }
+
+.ov-disclaimer {
+  background: #FEF2F2;
+  border-left: 4px solid var(--brand-red);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  color: #991B1B;
+  line-height: 1.5;
+}
+.ov-disclaimer b { color: #7F1D1D; }
+
+.ov-content { display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px; }
+@media (min-width: 768px) { .ov-content { grid-template-columns: 1fr 1.5fr; gap: 32px; } }
+
+.ov-criteria h3 { font-size: 14px; font-weight: 700; color: var(--brand-red); margin-bottom: 12px; font-family: var(--mono); }
+.ov-criteria ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.ov-criteria li { font-size: 12.5px; color: var(--text-main); position: relative; padding-left: 14px; line-height: 1.5; }
+.ov-criteria li::before { content: "•"; position: absolute; left: 0; color: var(--brand-red); font-weight: bold; }
+.ov-criteria li b { color: var(--navy); }
+
+.ov-levels { display: flex; flex-direction: column; gap: 12px; }
+.level-card { border: 1px solid var(--border); border-radius: 6px; padding: 14px; background: var(--paper); }
+.level-card.high { border-left: 4px solid var(--diff-high); }
+.level-card.mid { border-left: 4px solid var(--diff-mid); }
+.level-card.low { border-left: 4px solid var(--diff-low); }
+
+.level-card h4 { font-size: 13.5px; font-weight: 700; margin-bottom: 4px; color: var(--navy); }
+.level-card.high h4 { color: var(--diff-high); }
+.level-card.mid h4 { color: var(--diff-mid); }
+.level-card.low h4 { color: var(--diff-low); }
+
+.level-card p { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag-list span { font-family: var(--mono); font-size: 11px; font-weight: 600; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); background: var(--white); color: var(--text-main); }
+
+/* Section Group */
+.section-group { margin-bottom: 56px; }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--navy);
+}
+.sec-tag {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+}
+.sec-count {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Grid & Base Card */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Difficulty-specific styling */
+.card.diff-high::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--diff-high); }
+.card.diff-high:hover { border-color: var(--diff-high); box-shadow: 0 8px 16px rgba(220, 38, 38, 0.15); transform: translateY(-2px); }
+.card.diff-high .diff-badge { color: var(--diff-high); background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.2); }
+
+.card.diff-mid::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--diff-mid); }
+.card.diff-mid:hover { border-color: var(--diff-mid); box-shadow: 0 8px 16px rgba(184, 121, 26, 0.15); transform: translateY(-2px); }
+.card.diff-mid .diff-badge { color: var(--diff-mid); background: rgba(184, 121, 26, 0.1); border: 1px solid rgba(184, 121, 26, 0.2); }
+
+.card.diff-low::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--diff-low); }
+.card.diff-low:hover { border-color: var(--diff-low); box-shadow: 0 8px 16px rgba(5, 150, 105, 0.15); transform: translateY(-2px); }
+.card.diff-low .diff-badge { color: var(--diff-low); background: rgba(5, 150, 105, 0.1); border: 1px solid rgba(5, 150, 105, 0.2); }
+
+/* Card Inner Elements */
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.card-meta-left { display: flex; gap: 6px; align-items: center; }
+.card-num { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--text-main); background: #F1F5F9; border: 1px solid var(--border); padding: 3px 8px; border-radius: 4px; }
+.diff-badge { font-family: var(--mono); font-size: 10px; font-weight: 700; padding: 3px 6px; border-radius: 4px; text-transform: uppercase; }
+.card-tag { font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--text-muted); background: rgba(255, 255, 255, 0.85); border: 1px solid var(--border); padding: 2px 6px; border-radius: 4px; }
+
+.card-title { font-family: var(--serif); font-size: 16px; font-weight: 900; line-height: 1.45; color: var(--navy); margin-bottom: 6px; word-break: keep-all; }
+.card-desc { font-family: var(--mono); font-size: 12px; color: var(--text-muted); line-height: 1.45; margin-bottom: 16px; flex-grow: 1; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px dashed rgba(0, 0, 0, 0.08); font-size: 11.5px; color: var(--text-muted); }
+.card-steps { font-family: var(--mono); color: var(--text-muted); font-weight: 600; }
+.card-action { font-weight: 700; color: var(--text-main); }
+
+footer { background: var(--navy); color: #64748B; padding: 28px 0; text-align: center; font-family: var(--mono); font-size: 11px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> High Logic Series</span>
+      <span>2026 Academic Season</span>
+    </div>
+    <div class="meta-badge">2026 사직고 1학년 2학기 기말고사 대비</div>
+    <h1 class="title">올림포스 9대변별유형<br><span>5단계 인터랙티브 워크북</span></h1>
+    <p class="header-lead">
+      사직고 1학년 2학기 기말고사 범위(4, 5, 8, 9강 총 37문항)에 대한 5단계 논리 분해 학습 시스템(원문 정독 ➔ 디코딩 ➔ 논리 구조도 ➔ 어법 드릴 ➔ 4대 실전 변형 문제) 통합 허브입니다.
+    </p>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-val">올림포스 4·5·8·9강</span>
+        <span class="stat-lbl">기말고사 시험 범위</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">37 PASSAGES</span>
+        <span class="stat-lbl">핵심 지문 완비</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-val">5 STEPS</span>
+        <span class="stat-lbl">단계별 학습 체계</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Sticky Navigation Bar -->
+<div class="sticky-nav">
+  <div class="wrap nav-wrap">
+    <a href="#ch4" class="nav-btn">SECTION 01. 올림포스 4강</a>
+    <a href="#ch5" class="nav-btn">SECTION 02. 올림포스 5강</a>
+    <a href="#ch8" class="nav-btn">SECTION 03. 올림포스 8강</a>
+    <a href="#ch9" class="nav-btn">SECTION 04. 올림포스 9강</a>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <!-- OVERVIEW SECTION -->
+    <div class="overview-box">
+      <div class="ov-header">
+        <span class="ov-badge">SKORE ACADEMY 수능연구팀</span>
+        <h2>기말고사 대비 올림포스 지문 난이도 종합 분석</h2>
+        <p>학습자의 현재 독해력과 논리 수준에 맞추어 최적의 학습 경로를 선택하십시오.</p>
+        
+        <div class="ov-disclaimer">
+          <b>※ 학습 가이드라인:</b> 본 분석표의 난이도(High/Mid/Low)는 <b>'영어 원문 지문(Passage) 자체'의 구문 분석 및 논리적 추론 난이도</b>를 기준으로 산정되었습니다. 특정 문제 유형과 무관하게 원문의 구조나 어휘가 까다롭다면 지문 학습 난이도는 높게 분류됩니다.
+        </div>
+      </div>
+      
+      <div class="ov-content">
+        <div class="ov-criteria">
+          <h3>분석 기준 (4-Core Metrics)</h3>
+          <ul>
+            <li><b>개념의 추상성</b> (철학, 사회학 등 고도화된 배경지식 요구 여부)</li>
+            <li><b>구조적 복잡성</b> (도치, 다중 관계사, 생략 등 수능형 고난도 구문 빈도)</li>
+            <li><b>추론의 깊이</b> (비유적 표현 및 행간의 은유적 의미 파악 요구도)</li>
+            <li><b>어휘 수준</b> (학술적·전문적 필수 어휘의 빈도와 난이도)</li>
+          </ul>
+        </div>
+        <div class="ov-levels">
+          <div class="level-card high">
+            <h4>🔴 난이도 상 (High) - 총 12문항</h4>
+            <p>최상위권 변별력 지문. 심층 추론 및 킬러 문항 집중 대비 요망.</p>
+            <div class="tag-list">
+              <span>4강 6번</span><span>4강 8번</span><span>5강 기출2</span><span>5강 7번</span><span>5강 10번</span><span>8강 기출1</span><span>8강 6번</span><span>8강 8번</span><span>9강 1번</span><span>9강 2번</span><span>9강 3번</span><span>9강 5번</span>
+            </div>
+          </div>
+          <div class="level-card mid">
+            <h4>🟡 난이도 중 (Mid) - 총 13문항</h4>
+            <p>중상위권 도약 지문. 긴 호흡의 문장 구조 분석과 논리 전개 파악 훈련.</p>
+            <div class="tag-list">
+              <span>4강 4번</span><span>4강 5번</span><span>5강 기출1</span><span>5강 5번</span><span>5강 6번</span><span>5강 8번</span><span>8강 기출2</span><span>8강 3번</span><span>8강 4번</span><span>8강 5번</span><span>9강 기출1</span><span>9강 기출2</span><span>9강 4번</span>
+            </div>
+          </div>
+          <div class="level-card low">
+            <h4>🟢 난이도 하 (Low) - 총 12문항</h4>
+            <p>기본기 점검 및 워밍업 지문. 친숙한 소재와 직관적인 서사 구조.</p>
+            <div class="tag-list">
+              <span>4강 7번</span><span>5강 1번</span><span>5강 2번</span><span>5강 3번</span><span>5강 4번</span><span>5강 9번</span><span>8강 1번</span><span>8강 2번</span><span>8강 7번</span><span>9강 6번</span><span>9강 7번</span><span>9강 8번</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         SECTION 01. 올림포스 4강 
+         ========================================== -->
+    <section id="ch4" class="section-group">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 01 · 올림포스 4강 (어휘 적합성 판단)</span>
+        <span class="sec-count">5개 문항</span>
+      </div>
+      <div class="grid">
+        
+        <a href="4-4.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">4강 4번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">어휘 적합성</span>
+            </div>
+            <h2 class="card-title">생물 진화의 동등성</h2>
+            <p class="card-desc">EVOLUTIONARY EQUALITY</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="4-5.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">4강 5번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">어휘 적합성</span>
+            </div>
+            <h2 class="card-title">부정적이고 극단적인 정보의 가중치</h2>
+            <p class="card-desc">THE WEIGHT OF INFORMATION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="4-6.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">4강 6번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">어휘 적합성</span>
+            </div>
+            <h2 class="card-title">노동의 분화와 도덕성의 확장</h2>
+            <p class="card-desc">THE EVOLUTION OF MORALITY</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="4-7.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">4강 7번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">어휘 적합성</span>
+            </div>
+            <h2 class="card-title">인스턴트 패션의 탄생</h2>
+            <p class="card-desc">THE BIRTH OF INSTANT FASHION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="4-8.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">4강 8번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">어휘 적합성</span>
+            </div>
+            <h2 class="card-title">생태계 관리와 인간의 개입</h2>
+            <p class="card-desc">THE IMPERATIVE OF ECOLOGICAL INTERVENTION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 02. 올림포스 5강 
+         ========================================== -->
+    <section id="ch5" class="section-group">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 02 · 올림포스 5강 (빈칸 추론)</span>
+        <span class="sec-count">12개 문항</span>
+      </div>
+      <div class="grid">
+        
+        <a href="5-ex1.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 기출 1번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">변화하는 경제관과 소비의 본질</h2>
+            <p class="card-desc">EVOLUTION OF CONSUMPTION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-ex2.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 기출 2번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">스토아 철학과 통제의 한계</h2>
+            <p class="card-desc">STOIC PHILOSOPHY AND INTERNAL CONTROL</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-1.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 1번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">부의 상대성과 주관적 해석</h2>
+            <p class="card-desc">THE RELATIVITY OF MONEY</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-2.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 2번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">상황 맥락적 학습의 우위</h2>
+            <p class="card-desc">AUTHENTIC LEARNING VS. ROTE MEMORIZATION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-3.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 3번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">시간 지각과 체온의 상관관계</h2>
+            <p class="card-desc">TEMPERATURE AND TIME PERCEPTION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-4.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 4번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">맞춤형 인정의 리더십</h2>
+            <p class="card-desc">PERSONALIZED RECOGNITION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-5.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 5번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">인간 장수의 진화적 이점</h2>
+            <p class="card-desc">THE GRANDPARENTS EFFECT</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-6.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 6번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">표본 크기와 정확성</h2>
+            <p class="card-desc">THE IMPORTANCE OF SAMPLE SIZE</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-7.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 7번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">선형적 해결책의 역설</h2>
+            <p class="card-desc">THE LIMITATIONS OF LINEAR SOLUTIONS</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-8.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 8번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">리더십과 위대한 유산</h2>
+            <p class="card-desc">THE PARADOX OF POWER</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-9.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 9번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">구체적 경험과 사전 지식 구축</h2>
+            <p class="card-desc">CONCRETE LEARNING EXPERIENCES</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="5-10.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">5강 10번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">빈칸 추론</span>
+            </div>
+            <h2 class="card-title">인식론적 겸손</h2>
+            <p class="card-desc">EPISTEMIC HUMILITY</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 03. 올림포스 8강 
+         ========================================== -->
+    <section id="ch8" class="section-group">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 03 · 올림포스 8강 (문장 삽입)</span>
+        <span class="sec-count">10개 문항</span>
+      </div>
+      <div class="grid">
+        
+        <a href="8-ex1.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 기출 1번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">사회적 관행의 제도화와 과학계의 사회화</h2>
+            <p class="card-desc">INSTITUTIONALIZATION OF SOCIAL PRACTICES</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-ex2.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 기출 2번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">보험 산업의 변화: 고정관념에서 실시간 데이터로</h2>
+            <p class="card-desc">DATA-DRIVEN SHIFT IN INSURANCE</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-1.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 1번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">성격은 통제 가능하며 의도적인 노력으로 변화한다</h2>
+            <p class="card-desc">SHAPING ONE'S OWN CHARACTER</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-2.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 2번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">패션 산업의 자율적 환경 지속 가능성 전략</h2>
+            <p class="card-desc">SUSTAINABLE STRATEGIES IN FASHION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-3.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 3번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">뇌와 면역 체계의 연결: 사이토카인의 역할</h2>
+            <p class="card-desc">BRAIN-IMMUNE CONNECTION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-4.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 4번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">성공적인 영화의 비밀: 쾌락을 넘어선 의미</h2>
+            <p class="card-desc">THE SECRET OF SUCCESSFUL FILMS</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-5.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 5번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">농업 관개의 딜레마: 식량 생산과 토양 염류화</h2>
+            <p class="card-desc">THE SALINITY DILEMMA IN AGRICULTURE</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-6.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 6번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">인구 밀도가 사회적 엄격성에 미치는 곡선형 영향</h2>
+            <p class="card-desc">POPULATION DENSITY AND TIGHTNESS</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-7.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 7번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">공유 경제의 경제적 가치: 비용 절감과 상호 이익</h2>
+            <p class="card-desc">ECONOMIC VALUES OF THE SHARING ECONOMY</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="8-8.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">8강 8번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">문장 삽입</span>
+            </div>
+            <h2 class="card-title">소셜 미디어 뉴스 소비의 원동력</h2>
+            <p class="card-desc">DRIVERS OF SOCIAL MEDIA NEWS CONSUMPTION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 04. 올림포스 9강 
+         ========================================== -->
+    <section id="ch9" class="section-group">
+      <div class="section-header">
+        <span class="sec-tag">SECTION 04 · 올림포스 9강 (요약문 완성)</span>
+        <span class="sec-count">10개 문항</span>
+      </div>
+      <div class="grid">
+        
+        <a href="9-ex1.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 기출 1번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">지속적인 뇌 가소성: 완성이 아닌 끊임없는 변화</h2>
+            <p class="card-desc">ONGOING NEUROPLASTICITY</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-ex2.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 기출 2번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">고독의 힘: 자아 성찰과 창의성의 원천</h2>
+            <p class="card-desc">THE POWER OF SOLITUDE</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-1.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 1번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">가치관, 기대치, 그리고 자아존중감</h2>
+            <p class="card-desc">VALUES, EXPECTATIONS, AND SELF-ESTEEM</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-2.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 2번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">감정의 데이터화: 정량화가 심리적 질에 미치는 위협</h2>
+            <p class="card-desc">THE DATAFICATION OF EMOTION</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-3.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 3번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">진정한 연민과 공평성: 질병의 원인 제거하기</h2>
+            <p class="card-desc">TRUE COMPASSION AND IMPARTIALITY</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-4.html" class="card diff-mid">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 4번</span>
+                <span class="diff-badge">Mid</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">기억의 구성적 특성과 자아 정체성</h2>
+            <p class="card-desc">THE CONSTRUCTIVE NATURE OF MEMORIES</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-5.html" class="card diff-high">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 5번</span>
+                <span class="diff-badge">High</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">유전자 결정론의 위험성: 고정관념의 강화</h2>
+            <p class="card-desc">THE DANGER OF GENETIC DETERMINISM</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-6.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 6번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">상식을 넘어: 증거 기반 심리학의 가치</h2>
+            <p class="card-desc">BEYOND COMMON SENSE: THE VALUE OF PSYCHOLOGY</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-7.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 7번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">현금 대 직불카드: 지출의 심리적 마찰</h2>
+            <p class="card-desc">CASH VS. DEBIT CARDS</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+        <a href="9-8.html" class="card diff-low">
+          <div>
+            <div class="card-header">
+              <div class="card-meta-left">
+                <span class="card-num">9강 8번</span>
+                <span class="diff-badge">Low</span>
+              </div>
+              <span class="card-tag">요약문 완성</span>
+            </div>
+            <h2 class="card-title">리더십과 관리의 본질적 차이</h2>
+            <p class="card-desc">LEADERSHIP VS. MANAGEMENT</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-steps">5-STEP COMPLETE</span>
+            <span class="card-action">학습 시작 ➔</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    SKORE ACADEMY Academic Intelligence · 5-Step Mobile-Optimized Learning System
+  </div>
+</footer>
+
+</body>
+</html>
