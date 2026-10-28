@@ -19,16 +19,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
 <style>
 :root {
   /* SKORE ACADEMY Core Brand Color System */
   --navy: #0B1220;
-  --paper: #F8FAFC;
+  --paper: #F5EFE3; /* warm beige */
   --white: #FFFFFF;
   --brand-red: #cb1d06; /* SKORE Signature Red */
   --text-main: #0F172A;
   --text-muted: #64748B;
-  --border: #E2E8F0;
+  --border: #E6DCCB;
   --mono: "IBM Plex Mono", -apple-system, monospace;
   --serif: "Noto Serif KR", serif;
   --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -234,6 +237,50 @@ main { padding: 36px 0 60px; }
 .card-action { font-weight: 700; color: var(--text-main); }
 
 footer { background: var(--navy); color: #64748B; padding: 28px 0; text-align: center; font-family: var(--mono); font-size: 11px; }
+
+/* ===== Theme toggle ===== */
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle {
+  font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap;
+}
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+/* ===== Dark mode ===== */
+:root[data-theme="dark"] {
+  --paper: #12100D;
+  --white: #1C1915;
+  --text-main: #ECE6DA;
+  --text-muted: #A39A8A;
+  --border: #322D25;
+  color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] .stat-val { color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .ov-badge { color: #fff; background: #2A2620; }
+:root[data-theme="dark"] .ov-header h2,
+:root[data-theme="dark"] .ov-criteria li b,
+:root[data-theme="dark"] .level-card h4,
+:root[data-theme="dark"] .card-title { color: #F5EFE3; }
+:root[data-theme="dark"] .grid-title { color: #F5EFE3; border-bottom-color: #F5EFE3; }
+:root[data-theme="dark"] .ov-criteria h3 { color: #F0503A; }
+:root[data-theme="dark"] .ov-disclaimer { background: rgba(203,29,6,0.12); color: #F3B3A8; }
+:root[data-theme="dark"] .ov-disclaimer b { color: #FFD5CD; }
+:root[data-theme="dark"] .level-card { background: #171410; }
+:root[data-theme="dark"] .level-card.high h4 { color: #F87171; }
+:root[data-theme="dark"] .level-card.mid h4 { color: #60A5FA; } /* Dark mode optimized blue */
+:root[data-theme="dark"] .level-card.low h4 { color: #34D399; }
+:root[data-theme="dark"] .card-num { background: #26221C; }
+:root[data-theme="dark"] .card-tag { background: rgba(255,255,255,0.04); }
+:root[data-theme="dark"] .card-footer { border-top-color: rgba(255,255,255,0.1); }
+:root[data-theme="dark"] .card.diff-high .diff-badge { color: #F87171; }
+:root[data-theme="dark"] .card.diff-mid .diff-badge { color: #60A5FA; }
+:root[data-theme="dark"] .card.diff-low .diff-badge { color: #34D399; }
+:root[data-theme="dark"] .card:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.4); }
+:root[data-theme="dark"] .overview-box { box-shadow: none; }
 </style>
 </head>
 <body>
@@ -242,7 +289,7 @@ footer { background: var(--navy); color: #64748B; padding: 28px 0; text-align: c
   <div class="wrap">
     <div class="masthead">
       <span><b>SKORE ACADEMY</b> High Logic Series</span>
-      <span>2026 Academic Season</span>
+      <span class="masthead-right"><span>2026 Academic Season</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
     </div>
     <div class="meta-badge">고1 전국연합학력평가 영어영역 심층 아카이브</div>
     <h1 class="title">2026년 10월 고1 학력평가 지문<br><span>5단계 Interactive Workbook</span></h1>
@@ -303,14 +350,14 @@ footer { background: var(--navy); color: #64748B; padding: 28px 0; text-align: c
             <h4>🔵 난이도 중 (Mid)</h4>
             <p>중상위권 도약 지문. 긴 호흡의 문장 구조 분석과 논리 전개 파악 훈련.</p>
             <div class="tag-list">
-              <span>22번</span><span>29번</span><span>31번</span><span>37번</span><span>39번</span><span>40번</span><span>41~42번</span>
+              <span>22번</span><span>29번</span><span>31번</span><span>36번</span><span>37번</span><span>39번</span><span>40번</span><span>41~42번</span>
             </div>
           </div>
           <div class="level-card low">
             <h4>🟢 난이도 하 (Low)</h4>
             <p>기본기 점검 및 워밍업 지문. 친숙한 소재와 직관적인 서사 구조.</p>
             <div class="tag-list">
-              <span>21번</span><span>23번</span><span>24번</span><span>32번</span><span>36번</span><span>38번</span>
+              <span>21번</span><span>23번</span><span>24번</span><span>32번</span><span>38번</span>
             </div>
           </div>
         </div>
@@ -530,18 +577,18 @@ footer { background: var(--navy); color: #64748B; padding: 28px 0; text-align: c
         </div>
       </a>
 
-      <!-- 36번 (Low) -->
-      <a href="36.html" class="card diff-low">
+      <!-- 36번 (Mid) -->
+      <a href="36.html" class="card diff-mid">
         <div>
           <div class="card-header">
             <div class="card-meta-left">
               <span class="card-num">36번</span>
-              <span class="diff-badge">Low</span>
+              <span class="diff-badge">Mid</span>
             </div>
             <span class="card-tag">순서 배열</span>
           </div>
-          <h2 class="card-title">물리적 진동이 아닌 뇌에서 생성되는 심리적 현상으로서의 소리</h2>
-          <p class="card-desc">Sound as a Psychological Phenomenon (Why a Falling Tree Makes No Sound Without a Listener)</p>
+          <h2 class="card-title">대면과 달리 원격 협업에서 발생하는 소통 공간과 과업 공간의 단절</h2>
+          <p class="card-desc">The Seam in Remote Collaboration (How Distance Divides Task and Communication Spaces)</p>
         </div>
         <div class="card-footer">
           <span class="card-steps">5-STEP COMPLETE</span>
@@ -559,8 +606,8 @@ footer { background: var(--navy); color: #64748B; padding: 28px 0; text-align: c
             </div>
             <span class="card-tag">순서 배열</span>
           </div>
-          <h2 class="card-title">대면과 달리 원격 협업에서 발생하는 소통 공간과 과업 공간의 단절</h2>
-          <p class="card-desc">The Seam in Remote Collaboration (How Distance Divides Task and Communication Spaces)</p>
+          <h2 class="card-title">환경의 위협 정도에 따라 달라지는 미역취의 화학적 경고 방송 전략</h2>
+          <p class="card-desc">Broadcasting Danger (How Goldenrods Alter Communication Based on Threat Levels)</p>
         </div>
         <div class="card-footer">
           <span class="card-steps">5-STEP COMPLETE</span>
@@ -616,8 +663,8 @@ footer { background: var(--navy); color: #64748B; padding: 28px 0; text-align: c
             </div>
             <span class="card-tag">요약문 완성</span>
           </div>
-          <h2 class="card-title">환경의 위협 정도에 따라 달라지는 미역취의 화학적 경고 방송 전략</h2>
-          <p class="card-desc">Broadcasting Danger (How Goldenrods Alter Communication Based on Threat Levels)</p>
+          <h2 class="card-title">물리적 진동이 아닌 뇌에서 생성되는 심리적 현상으로서의 소리</h2>
+          <p class="card-desc">Sound as a Psychological Phenomenon (Why a Falling Tree Makes No Sound Without a Listener)</p>
         </div>
         <div class="card-footer">
           <span class="card-steps">5-STEP COMPLETE</span>
@@ -654,5 +701,10 @@ footer { background: var(--navy); color: #64748B; padding: 28px 0; text-align: c
   </div>
 </footer>
 
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+</script>
 </body>
 </html>
