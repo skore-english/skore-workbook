@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | BIRD BREEDING STRATEGIES 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 30번 · 어휘 적절성</div>
+    <h1 class="title">BIRD BREEDING STRATEGIES<br><span>조류의 다양한 번식 전략과 생리적 변화</span></h1>
+    <p class="header-lead">조류는 환경적 요인(일조량, 강우 등)에 맞춰 번식기를 엄격하게 조절하며, 비번식기에는 비행을 위해 생식계를 축소하기도 합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>일조량(Day length)과 번식: 온대 및 극지방 새들은 번식기를 결정할 때 주로 낮의 길이 변화를 신호로 삼아 새끼를 기르기 가장 좋은 시기를 맞춥니다.</li>
+      <li>생식계 축소(Shrinkage of reproductive system): 조류는 비행 효율을 높이고 체중을 줄이기 위해 번식기가 아닐 때는 생식 기관의 크기를 물리적으로 크게 줄입니다.</li>
+      <li>유목형 사막 조류(Nomadic desert species): 환경이 척박한 사막에 사는 새들은 비가 내리는 즉시 단기간에 번식을 시작하는 기회주의적 번식 전략을 사용합니다.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    Near the equator, many species of bird breed all year round. But in temperate and polar regions, the breeding seasons of birds are often sharply defined. They are triggered mainly by changes in day length. If all goes well, the outcome is that birds raise their young when the food supply is at its peak. Most birds are not simply reluctant to breed at other times but they are also physically incapable of doing so. This is because their reproductive system shrinks, which helps flying birds save weight. The main exception to this rule are nomadic desert species. These can initiate their breeding cycle within days of rain. It’s for making the most of the sudden breeding opportunity. Also, different species divide the breeding season up in different ways. Most seabirds raise a single brood. In warm regions, however, songbirds may raise several families in a few months. In an exceptionally good year, a pair of House Sparrows, a kind of songbird, can raise successive broods through a marathon reproductive effort.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 새들은 환경(낮 길이, 강우 등)에 맞춰 번식기를 뚜렷하게 조절하며 생리적 변화(생식계 축소)와 종 특유의 전략을 통해 환경에 완벽히 적응한다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. Near the equator, many species of bird breed all year round.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 적도 근처에서, 많은 종의 새들은 일 년 내내 번식한다.<br>
+          <b>[핵심 어휘]</b> equator: 적도 / breed: 번식하다 / all year round: 일 년 내내
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. But in temperate and polar regions, / the breeding seasons of birds / are often sharply defined.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러나 온대와 극지방에서, / 새들의 번식기는 / 종종 뚜렷하게 한정(정의)된다.<br>
+          <b>[구문 해설]</b> 주어인 'the breeding seasons'가 수동태 'are sharply defined'를 통해 명확히 정해진다는 것을 보여줍니다.<br>
+          <b>[핵심 어휘]</b> temperate: 온대의 / polar: 극지방의 / sharply: 뚜렷하게, 급격히 / define: 한정하다, 정의하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. They are triggered / mainly by changes in day length.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그것들은 유발된다 / 주로 낮 길이의 변화에 의해.<br>
+          <b>[핵심 어휘]</b> trigger: 유발하다 / day length: 낮 길이 (일조 시간)
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. If all goes well, / the outcome is that birds raise their young / when the food supply is at its peak.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 만약 모든 것이 잘 진행된다면, / 결과는 새들이 그들의 새끼를 기른다는 것이다 / 먹이 공급이 최고조에 달할 때.<br>
+          <b>[구문 해설]</b> 명사절 접속사 'that'이 이끄는 절이 주격 보어 역할을 하여 결과를 설명하고 있습니다.<br>
+          <b>[핵심 어휘]</b> outcome: 결과 / raise: 기르다 / supply: 공급 / peak: 최고조, 정점
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. Most birds are not simply reluctant / to breed at other times / but they are also physically incapable of doing so.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 대부분의 새들은 단순히 꺼리는 것이 아니다 / 다른 시기에 번식하는 것을 / 그들은 또한 신체적으로 그렇게 할 수도 없다.<br>
+          <b>[구문 해설]</b> 'not simply(only) A but also B' 구문이 사용되었습니다. 'doing so'는 앞선 'breed at other times(다른 시기에 번식하는 것)'를 지칭합니다.<br>
+          <b>[핵심 어휘]</b> reluctant: 꺼리는, 주저하는 / physically: 신체적으로, 물리적으로 / incapable of: ~할 수 없는
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. <mark>This is because their reproductive system shrinks</mark>, / which helps flying birds save weight.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이것은 그들의 생식계가 수축하기 때문이다, / 그리고 그것은 날아다니는 새들이 체중을 줄이는 데 도움을 준다.<br>
+          <b>[구문 해설]</b> 계속적 용법의 관계대명사 'which'의 선행사는 앞 문장의 내용(생식계가 수축하는 것)이므로 단수 동사 'helps'가 옵니다. 'help(5형식) + 목적어(flying birds) + 목적격 보어(save)'의 구조입니다.<br>
+          <b>[핵심 어휘]</b> reproductive system: 생식계 / shrink: 수축하다, 줄어들다 / save weight: 체중을 줄이다(절약하다)
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. The main exception to this rule / are nomadic desert species.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이 규칙의 주요 예외는 / 유목 생활을 하는 사막 종들이다.<br>
+          <b>[구문 해설]</b> 주어는 단수인 'The main exception'이지만 보어인 'nomadic desert species'에 수일치를 맞춰 복수 동사 'are'가 쓰였습니다 (또는 exception을 집합적으로 보았거나 도치로 해석하는 예외적 구문입니다).<br>
+          <b>[핵심 어휘]</b> exception: 예외 / nomadic: 유목의, 방랑하는
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">8. These can initiate their breeding cycle / within days of rain.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이것들은 그들의 번식 주기를 시작할 수 있다 / 비가 온 지 며칠 이내에.<br>
+          <b>[핵심 어휘]</b> initiate: 시작하다 / cycle: 주기
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">9. It’s for making the most of the sudden breeding opportunity.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그것은 갑작스러운 번식 기회를 최대한 활용하기 위한 것이다.<br>
+          <b>[구문 해설]</b> 전치사 'for' 뒤에 동명사 'making'이 왔으며, 'make the most of'는 관용 표현입니다.<br>
+          <b>[핵심 어휘]</b> make the most of: ~을 최대한 활용하다 / opportunity: 기회
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">10. Also, different species divide the breeding season up / in different ways.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 또한, 다양한 종들은 번식기를 나눈다 / 다양한 방식으로.<br>
+          <b>[핵심 어휘]</b> divide up: 나누다, 분할하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">11. Most seabirds raise a single brood.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 대부분의 바닷새들은 한 번의 새끼(한 배)만 기른다.<br>
+          <b>[핵심 어휘]</b> seabird: 바닷새 / brood: (같은 때에 깐) 새끼들, 한 배 새끼
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">12. In warm regions, however, / songbirds may raise several families / in a few months.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러나 따뜻한 지역에서, / 명금류(노래하는 새)는 여러 가족(배)을 기를지도 모른다 / 몇 달 안에.<br>
+          <b>[핵심 어휘]</b> songbird: 명금(노래하는 새)
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">13. In an exceptionally good year, / a pair of House Sparrows, a kind of songbird, / can raise successive broods / through a marathon reproductive effort.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 예외적으로 좋은 해에는, / 명금류의 일종인 한 쌍의 집참새가 / 연속적인 새끼들을 기를 수 있다 / 마라톤 같은 번식 노력을 통해.<br>
+          <b>[구문 해설]</b> 주어인 'a pair of House Sparrows'와 뒤의 'a kind of songbird'는 동격 관계입니다.<br>
+          <b>[핵심 어휘]</b> exceptionally: 예외적으로, 유난히 / successive: 연속적인 / reproductive: 번식의
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>새들의 번식기 결정 요인</h4>
+      <p>적도에서는 일 년 내내 번식이 가능하지만, 온대와 극지방의 새들은 낮의 길이 변화를 신호로 삼아 먹이가 가장 풍부한 시기로 번식기를 엄격히 제한함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>생리적 한계와 예외적 번식 전략</h4>
+      <p>새들은 비번식기에 신체 무게를 줄이기 위해 생식계를 물리적으로 축소함. 반면 사막의 유목성 새들은 강우라는 기회에 맞춰 순식간에 번식을 개시하는 예외를 보임.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>종과 환경에 따른 번식기의 다양한 분할</h4>
+      <p>바닷새는 한 배의 새끼만 기르지만, 따뜻한 지역의 명금류나 집참새는 짧은 기간 안에 여러 번의 연속적인 새끼를 기르는 등 종마다 번식기를 다르게 활용함.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>This is because their reproductive system shrinks, which [ help / helps ] flying birds save weight.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="선행사가 문장 전체 내용이므로 복수 동사인 help는 사용할 수 없습니다.">help</button>
+      <button class="drill-btn" data-ans="correct" data-exp="계속적 용법의 관계대명사 which의 선행사는 '생식계가 수축하는 것'이라는 앞 문장의 내용이므로 단수 취급하여 helps가 정답입니다.">helps</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>These can initiate their breeding cycle within days of rain. It’s for [ making / make ] the most of the sudden breeding opportunity.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="correct" data-exp="전치사 for의 목적어 자리이므로 동사원형이 아닌 동명사 making이 와야 합니다.">making</button>
+      <button class="drill-btn" data-ans="incorrect" data-exp="전치사 뒤에는 동사원형을 쓸 수 없으며, 명사나 동명사 형태가 와야 합니다.">make</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Near the equator, many species of bird breed all year round. But in temperate and polar regions, the breeding seasons of birds are often sharply defined. They are triggered mainly by changes in day length. If all goes well, the outcome is that birds raise their young when the food supply is at its peak. Most birds are not simply reluctant to breed at other times but they are also physically incapable of doing so. This is because their reproductive system shrinks, which helps flying birds save weight. The main exception to this rule are nomadic desert species. These can initiate their breeding cycle within days of rain. It’s for making the most of the sudden breeding opportunity. Also, different species divide the breeding season up in different ways. Most seabirds raise a single brood. In warm regions, however, songbirds may raise several families in a few months. In an exceptionally good year, a pair of House Sparrows, a kind of songbird, can raise successive broods through a marathon reproductive effort.
+    </div>
+    <div class="exam-choices">
+      ① How Global Warming Affects Bird Habitats<br>
+      ② The Reason Why Birds Prefer Warm Regions<br>
+      ③ Various Breeding Strategies of Birds Adapted to Environments<br>
+      ④ Physical Changes of Birds During the Winter Season<br>
+      ⑤ The Importance of Saving Weight for Flying Birds
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 이 글은 적도, 온대/극지방, 사막 등 서식 환경에 맞춰 번식 시기를 다르게 조절하고, 생식계를 축소하거나 다수의 새끼를 기르는 등 조류가 환경에 적응하여 사용하는 다양한 번식 전략을 설명하고 있으므로 ③이 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 다음 문장이 들어가기에 가장 적절한 곳은?</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; text-align: center; font-weight: bold; margin-bottom: 16px;">
+      The main exception to this rule are nomadic desert species.
+    </div>
+    <div class="exam-passage">
+      Near the equator, many species of bird breed all year round. But in temperate and polar regions, the breeding seasons of birds are often sharply defined. ( ① ) They are triggered mainly by changes in day length. If all goes well, the outcome is that birds raise their young when the food supply is at its peak. ( ② ) Most birds are not simply reluctant to breed at other times but they are also physically incapable of doing so. ( ③ ) This is because their reproductive system shrinks, which helps flying birds save weight. ( ④ ) These can initiate their breeding cycle within days of rain. It’s for making the most of the sudden breeding opportunity. ( ⑤ ) Also, different species divide the breeding season up in different ways.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ④</b><br>
+        <b>해설:</b> 주어진 문장의 'this rule(이 규칙)'은 비번식기에 새들의 생식계가 축소되어 물리적으로 번식할 수 없는 것을 가리킵니다. ④번 뒤에 나오는 "These(이들은) 비가 온 지 며칠 만에 번식을 시작할 수 있다"는 내용이 바로 사막 유목 종(nomadic desert species)에 대한 구체적인 부연 설명이므로, ④번 자리가 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Near the equator, many species of bird breed all year round. But in temperate and polar regions, the breeding seasons of birds are often sharply defined. They are triggered mainly by changes in day length. If all goes well, the outcome is that birds raise their young when the food supply is at its peak. Most birds are not simply reluctant to breed at other times but they are also ____________________. This is because their reproductive system shrinks, which helps flying birds save weight. The main exception to this rule are nomadic desert species. These can initiate their breeding cycle within days of rain. It’s for making the most of the sudden breeding opportunity. Also, different species divide the breeding season up in different ways. 
+    </div>
+    <div class="exam-choices">
+      ① naturally eager to hunt for food<br>
+      ② physically incapable of doing so<br>
+      ③ socially forced to leave their nests<br>
+      ④ genetically programmed to migrate<br>
+      ⑤ completely unaware of the changes
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 빈칸 다음 문장인 "This is because their reproductive system shrinks(이것은 그들의 생식계가 수축하기 때문이다)"에서 유추할 수 있습니다. 비번식기에 번식을 단순히 꺼리는 것(reluctant)만이 아니라, 생식 기관이 줄어들어 물리적으로 번식할 '능력이 없다(physically incapable of doing so)'는 사실이 연결되어야 논리적입니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      If all goes well, the outcome is that birds raise their young when the food supply is at its peak. Most birds are not simply reluctant to breed at other times but they are also physically incapable of doing so. <u>이것은 그들의 생식계가 수축하기 때문이다, 그리고 그것은 날아다니는 새들이 체중을 줄이는 데 도움을 준다.</u> The main exception to this rule are nomadic desert species. 
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 관계대명사의 계속적 용법을 사용하여 두 문장을 연결할 것.<br>
+      [주어진 단어: weight / birds / save / this / shrinks, / flying / because / reproductive system / helps / their / is / which]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> This is because their reproductive system shrinks, which helps flying birds save weight.<br>
+        <b>해설:</b> '이것은 ~하기 때문이다'는 'This is because'로 시작합니다. 그 뒤에 '그들의 생식계가 수축한다(their reproductive system shrinks)'를 적습니다. 콤마(,) 뒤에 '그리고 그것은'을 의미하는 관계대명사 'which'를 써서 부연설명합니다. 5형식 구조에 맞게 동사 'helps' + 목적어 'flying birds' + 목적격 보어 'save weight'를 순서대로 배열합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

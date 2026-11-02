@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | THE BALANCE OF PAIN AND PLEASURE 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 23번 · 주제</div>
+    <h1 class="title">THE BALANCE OF PAIN AND PLEASURE<br><span>고통과 쾌락의 균형</span></h1>
+    <p class="header-lead">고통과 쾌락은 뇌의 같은 영역에서 처리되는 동전의 양면과 같으며, 고통을 수용할 때 비로소 우리 몸의 항상성과 균형을 유지할 수 있습니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>신경과학(Neuroscience)에서의 쾌락과 고통: 쾌락과 고통은 뇌의 동일한 영역에서 처리되며, 독립적인 감정이 아니라 척도의 양극단처럼 상호작용함.</li>
+      <li>항상성(Homeostasis): 생물체가 생존을 위해 체내 환경(생리적, 감정적 상태)을 안정적이고 균형 잡힌 상태로 유지하려는 기제.</li>
+      <li>도파민과 쾌락-고통 저울: 현대 정신의학에서는 고통을 회피하고 쾌락만 추구할 경우 오히려 내성이 생겨 더 큰 고통(비참함)을 겪게 된다고 설명함.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    Based on discoveries in neuroscience, pain and pleasure are formed and processed in the same area of the brain. Our bodies constantly strive for homeostasis, which is defined as the balance of bodily functions. Without the body’s effective compensatory mechanisms, which may cushion potential highs and lows, we would not be capable of surviving. Pleasure and pain are like two sides of the same coin; they seem to work together and are heavily reliant on one another and keep balance. If you imagine pleasure and pain as the two opposite points on a scale, you can easily understand that as one of the two points rises, the other must correspondingly fall. We’ve all heard the expression, “No pain, no gain.” Well, according to psychiatrist Dr. Anna Lembke, there may be some truth to these words. She says that our attempts to escape being miserable are in fact making us even more miserable. This is because pain is actually an essential component of our ability to maintain a neutral state, and allowing it will in turn reset our internal scale back to balance.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 고통과 쾌락은 상호 의존적인 관계로, 고통을 피하려고만 하지 말고 필수적인 요소로 받아들일 때 생리적, 감정적 균형(항상성)을 올바르게 유지할 수 있다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. Based on discoveries in neuroscience, / pain and pleasure are formed and processed / in the same area of the brain.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 신경과학의 발견들에 근거하여, / 고통과 쾌락은 형성되고 처리된다 / 뇌의 같은 영역에서.<br>
+          <b>[구문 해설]</b> 'Based on'은 '~에 근거하여'라는 의미의 분사구문 관용 표현입니다. 주어인 'pain and pleasure'가 형성되고 처리되는 대상이므로 수동태 'are formed and processed'가 쓰였습니다.<br>
+          <b>[핵심 어휘]</b> neuroscience: 신경과학 / process: 처리하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. Our bodies constantly strive for homeostasis, / which is defined as the balance of bodily functions.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 우리 몸은 끊임없이 항상성을 위해 노력한다, / 그것은 신체 기능의 균형으로 정의된다.<br>
+          <b>[구문 해설]</b> 계속적 용법의 관계대명사 'which'가 선행사 'homeostasis'를 부연 설명하고 있습니다. 'be defined as'는 '~로 정의되다'라는 뜻입니다.<br>
+          <b>[핵심 어휘]</b> strive for: ~을 위해 노력하다 / homeostasis: 항상성 / define: 정의하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. <mark>Without the body’s effective compensatory mechanisms</mark>, / which may cushion potential highs and lows, / we would not be capable of surviving.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 신체의 효과적인 보상 기제들이 없다면, / 잠재적인 최고조와 최저조를 완화할지도 모르는, / 우리는 생존할 수 없을 것이다.<br>
+          <b>[구문 해설]</b> 'Without'이 이끄는 전치사구가 가정법 과거의 조건절 역할을 합니다. 주절에 'would + 동사원형'이 와서 '만약 ~가 없다면, ~할 텐데(없을 텐데)'의 의미를 나타냅니다.<br>
+          <b>[핵심 어휘]</b> compensatory: 보상의 / mechanism: 기제 / cushion: 완화하다, 충격을 흡수하다 / highs and lows: 최고조와 최저조
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. Pleasure and pain are like two sides of the same coin; / they seem to work together / and are heavily reliant on one another / and keep balance.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 쾌락과 고통은 같은 동전의 양면과 같다; / 그것들은 함께 작용하는 것처럼 보인다 / 그리고 서로에게 크게 의존한다 / 그리고 균형을 유지한다.<br>
+          <b>[구문 해설]</b> 접속사 'and'로 인해 동사구 'seem to work~', 'are heavily reliant~', 'keep balance'가 병렬 구조를 이루고 있습니다.<br>
+          <b>[핵심 어휘]</b> reliant on: ~에 의존하는 / one another: 서로
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. If you imagine pleasure and pain as the two opposite points on a scale, / you can easily understand / that as one of the two points rises, / the other must correspondingly fall.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 만약 당신이 쾌락과 고통을 저울의 두 정반대 지점이라고 상상한다면, / 당신은 쉽게 이해할 수 있다 / 두 지점 중 하나가 올라감에 따라, / 나머지 하나는 그에 상응하여 반드시 내려가야 한다는 것을.<br>
+          <b>[구문 해설]</b> 'imagine A as B(A를 B로 상상하다)' 구조입니다. 종속접속사 'that' 절 안에서 'as'는 '~함에 따라'라는 비례를 나타내는 접속사로 쓰였습니다. 두 개 중 하나를 'one', 나머지 하나를 'the other'로 지칭합니다.<br>
+          <b>[핵심 어휘]</b> opposite: 정반대의 / scale: 저울, 척도 / correspondingly: 상응하여, 이에 맞춰
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. We’ve all heard the expression, “No pain, no gain.”</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 우리는 모두 "고통 없이는 얻는 것도 없다"라는 표현을 들어본 적이 있다.<br>
+          <b>[핵심 어휘]</b> expression: 표현
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. Well, according to psychiatrist Dr. Anna Lembke, / there may be some truth to these words.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 음, 정신과 의사인 Anna Lembke 박사에 따르면, / 이 말에는 어느 정도 진실이 있을지도 모른다.<br>
+          <b>[핵심 어휘]</b> psychiatrist: 정신과 의사 / truth: 진실
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">8. She says that our attempts to escape being miserable / are in fact making us even more miserable.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그녀는 비참해지는 것에서 벗어나려는 우리의 시도가 / 사실상 우리를 훨씬 더 비참하게 만들고 있다고 말한다.<br>
+          <b>[구문 해설]</b> 명사 'attempts' 뒤의 'to escape'가 형용사적 용법으로 쓰였으며, escape는 동명사(being)를 목적어로 취합니다. 'make(5형식) + 목적어(us) + 목적격 보어(even more miserable)' 구조로 비교급 강조 부사 'even'이 사용되었습니다.<br>
+          <b>[핵심 어휘]</b> attempt: 시도 / escape: 벗어나다, 피하다 / miserable: 비참한
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">9. This is because pain is actually an essential component / of our ability to maintain a neutral state, / and allowing it will in turn reset our internal scale / back to balance.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이것은 고통이 실제로는 필수적인 요소이기 때문이다 / 중립적인 상태를 유지하는 우리의 능력의, / 그리고 그것을 허용하는 것이 결과적으로 우리의 내부 저울을 재설정할 것이기 (때문이다) / 다시 균형 상태로.<br>
+          <b>[구문 해설]</b> 'This is because ~' 뒤에 완벽한 두 개의 절이 'and'로 연결되어 있습니다. 두 번째 절에서 동명사구 'allowing it'이 주어 역할을 합니다.<br>
+          <b>[핵심 어휘]</b> essential: 필수적인 / component: 요소 / neutral: 중립적인 / allow: 허용하다 / in turn: 결과적으로 / reset: 재설정하다
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>고통과 쾌락의 신경과학적 동질성</h4>
+      <p>신경과학의 발견에 따르면 고통과 쾌락은 뇌의 같은 영역에서 처리되며, 우리 몸은 생존을 위해 신체 기능의 균형인 '항상성(Homeostasis)'을 끊임없이 추구함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>동전의 양면이자 시소와 같은 관계</h4>
+      <p>쾌락과 고통은 저울의 양 끝과 같아서, 하나가 올라가면 상호 의존적인 원리에 의해 다른 하나는 반드시 내려가 균형을 맞춰야 하는 길항 관계에 있음.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>고통의 수용과 균형 회복</h4>
+      <p>고통에서 무조건 벗어나려는 시도는 우리를 더 비참하게 만들 뿐이며, 고통 자체를 필수 요소로 허용하고 받아들일 때 비로소 우리 내부의 저울이 균형을 되찾을 수 있음.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>Without the body’s effective compensatory mechanisms, which may cushion potential highs and lows, we [ are / would not be ] capable of surviving.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="현재 사실에 대한 반대를 나타내는 가정법 구문이므로 직설법 현재 시제인 are는 적절하지 않습니다.">are</button>
+      <button class="drill-btn" data-ans="correct" data-exp="Without이 이끄는 구가 조건절을 대신하는 가정법 과거 문장입니다. 주절에는 조동사의 과거형 + 동사원형 형태인 'would not be'가 와야 합니다.">would not be</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>She says that our attempts to escape being miserable [ is / are ] in fact making us even more miserable.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="문장의 핵심 주어는 단수인 escape나 miserable이 아니라 복수명사인 attempts입니다.">is</button>
+      <button class="drill-btn" data-ans="correct" data-exp="that절 안의 주어는 'our attempts(우리의 시도들)'라는 복수명사입니다. 'to escape being miserable'은 주어를 수식하는 수식어구이므로, 동사는 복수형 are가 되어야 합니다.">are</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글에서 전체 흐름과 관계 없는 문장은?</h4>
+    <div class="exam-passage">
+      Based on discoveries in neuroscience, pain and pleasure are formed and processed in the same area of the brain. Our bodies constantly strive for homeostasis, which is defined as the balance of bodily functions. ① Without the body’s effective compensatory mechanisms, which may cushion potential highs and lows, we would not be capable of surviving. ② Pleasure and pain are like two sides of the same coin; they seem to work together and are heavily reliant on one another and keep balance. ③ Consequently, modern medicine has heavily focused on developing synthetic painkillers to block the sensory transmission of pain completely. ④ If you imagine pleasure and pain as the two opposite points on a scale, you can easily understand that as one of the two points rises, the other must correspondingly fall. ⑤ We’ve all heard the expression, “No pain, no gain,” and our attempts to escape being miserable are in fact making us even more miserable.
+    </div>
+    <div class="exam-choices">
+      ①<br>
+      ②<br>
+      ③<br>
+      ④<br>
+      ⑤
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 이 글은 고통과 쾌락이 뇌의 동일한 영역에서 처리되며, 항상성을 유지하기 위해 서로 의존적인 균형 관계에 있다는 내용을 다루고 있습니다. ③번 문장은 '현대 의학이 고통의 감각 전달을 완벽히 차단하기 위해 합성 진통제 개발에 집중해왔다'는 내용으로, 글의 주제인 고통과 쾌락의 생리적, 감정적 균형(항상성)과는 무관합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 밑줄 친 부분이 의미하는 바로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Based on discoveries in neuroscience, pain and pleasure are formed and processed in the same area of the brain. Our bodies constantly strive for homeostasis, which is defined as the balance of bodily functions. Without the body’s effective compensatory mechanisms, which may cushion potential highs and lows, we would not be capable of surviving. Pleasure and pain are like two sides of the same coin; they seem to work together and are heavily reliant on one another and keep balance. If you imagine pleasure and pain as the two opposite points on a scale, you can easily understand that as one of the two points rises, the other must correspondingly fall. We’ve all heard the expression, “No pain, no gain.” Well, according to psychiatrist Dr. Anna Lembke, there may be some truth to these words. She says that our attempts to escape being miserable are in fact making us even more miserable. This is because pain is actually an essential component of our ability to maintain a neutral state, and <u>allowing it will in turn reset our internal scale back to balance</u>.
+    </div>
+    <div class="exam-choices">
+      ① Experiencing continuous pain strengthens our physical endurance.<br>
+      ② Seeking pleasure constantly is the only way to avoid depression.<br>
+      ③ Accepting pain as a natural process restores our emotional stability.<br>
+      ④ Removing the concept of homeostasis helps to maximize our happiness.<br>
+      ⑤ Controlling our brain areas artificially can eliminate negative feelings.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 밑줄 친 "그것(고통)을 허용하는 것이 결과적으로 우리의 내부 저울을 다시 균형 상태로 재설정할 것이다"라는 말은, 고통을 무조건 피하려고 하기보다 필수적인 과정으로 자연스럽게 수용할 때 우리의 감정적, 생리적 균형(항상성)이 회복된다는 의미입니다. 따라서 ③ '고통을 자연스러운 과정으로 받아들이는 것이 우리의 감정적 안정을 회복시킨다'가 정답입니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 글의 내용과 일치하지 않는 것은?</h4>
+    <div class="exam-passage">
+      Based on discoveries in neuroscience, pain and pleasure are formed and processed in the same area of the brain. Our bodies constantly strive for homeostasis, which is defined as the balance of bodily functions. Without the body’s effective compensatory mechanisms, which may cushion potential highs and lows, we would not be capable of surviving. Pleasure and pain are like two sides of the same coin; they seem to work together and are heavily reliant on one another and keep balance. If you imagine pleasure and pain as the two opposite points on a scale, you can easily understand that as one of the two points rises, the other must correspondingly fall. We’ve all heard the expression, “No pain, no gain.” Well, according to psychiatrist Dr. Anna Lembke, there may be some truth to these words. She says that our attempts to escape being miserable are in fact making us even more miserable. This is because pain is actually an essential component of our ability to maintain a neutral state, and allowing it will in turn reset our internal scale back to balance.
+    </div>
+    <div class="exam-choices">
+      ① 신경과학에 따르면 쾌락과 고통은 뇌의 동일한 부위에서 처리된다.<br>
+      ② 신체의 보상 기제는 감정적 최고조와 최저조의 충격을 완화해준다.<br>
+      ③ 저울의 한쪽 끝인 쾌락이 올라가면 반대쪽 끝인 고통은 반비례하여 감소한다.<br>
+      ④ 비참함을 무조건 피하려고 하는 행동은 결과적으로 사람을 더 비참하게 만들 수 있다.<br>
+      ⑤ 고통을 수용하는 것은 우리 몸이 중립적인 상태를 유지하는 데 필수적이다.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 본문에서 "one of the two points rises, the other must correspondingly fall(두 지점 중 하나가 올라가면 다른 하나는 그에 상응하여 반드시 내려가야 한다)"이라고 했습니다. 이는 저울의 양팔과 같은 원리로, 쾌락을 추구해 한쪽이 기울어지면(수치가 올라가면) 저울의 균형을 맞추기 위해 고통 쪽으로 기울어진다(반대쪽이 아래로 내려간다)는 의미입니다. 즉 쾌락을 얻으면 고통이 아예 감소해 사라진다는 뜻이 아니라, 상호 길항작용으로 작용한다는 것이므로 쾌락이 오를 때 고통이 감소하여 편안해진다는 의미의 ③번 설명은 글의 의도(쾌락과 고통의 상호 의존성 및 균형)를 잘못 해석한 것입니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      If you imagine pleasure and pain as the two opposite points on a scale, you can easily understand that as one of the two points rises, the other must correspondingly fall. We’ve all heard the expression, “No pain, no gain.” Well, according to psychiatrist Dr. Anna Lembke, there may be some truth to these words. She says that <u>우리가 비참해지는 것에서 벗어나려는 시도는 사실상 우리를 훨씬 더 비참하게 만들고 있다.</u> This is because pain is actually an essential component of our ability to maintain a neutral state, and allowing it will in turn reset our internal scale back to balance.
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 어형 변화 없이 그대로 배열할 것.<br>
+      [주어진 단어: our attempts / even more miserable / to escape / making / being miserable / are / us / in fact]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> our attempts to escape being miserable are in fact making us even more miserable<br>
+        <b>해설:</b> '우리의 시도는'을 나타내는 주어 'our attempts' 뒤에 형용사적 용법의 'to escape being miserable(비참해지는 것에서 벗어나려는)'이 수식합니다. 동사는 복수형인 'are'를 쓰고, 부사구 'in fact(사실상)'를 넣은 뒤 진행형 'making'을 씁니다. 5형식 구조로 'us(우리를)'가 목적어, 비교급 강조(even)가 포함된 'even more miserable(훨씬 더 비참하게)'가 목적격 보어로 위치합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

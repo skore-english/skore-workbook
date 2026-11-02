@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | SCIENTIFIC IMAGINATION 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 37번 · 순서 배열 (원문 유형 변형)</div>
+    <h1 class="title">SCIENTIFIC IMAGINATION<br><span>과학적 설명과 창의적 상상력</span></h1>
+    <p class="header-lead">과학적 이론은 단순한 사실의 집합이 아니라, 창의적 상상력이 결합되어 현상을 체계적으로 재구성하고 해석하는 '틀(framework)'입니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>과학적 모델(Scientific Models): 현실을 완벽하게 모사하는 것이 아니라, 관찰된 현상을 설명하고 예측하기 위해 창의적으로 구성된 단순화된 체계.</li>
+      <li>데이터와 해석: 데이터 자체는 스스로 말하지 않으며, 과학자가 어떠한 이론적 틀과 상상력을 가지고 접근하느냐에 따라 해석이 달라짐.</li>
+      <li>과학에서의 창의성: 과학은 기계적인 사실 수집이 아니라, 경험을 체계화하고 새로운 스토리라인을 부여하는 고도의 창의적 작업임.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    Where scientific research is concerned, explanatory tales are expected to adhere closely to experimental data and to illuminate the regular and predictable features of experience. However, this paradigm sometimes conceals the fact that theories are deeply loaded with creative elements that shape the construction of research projects and the interpretations of evidence. Scientific explanations do not just relate a chronology of facts. They construct frameworks for systematically chosen data in order to provide a consistent and meaningful explanation of what is observed. Such constructions lead us to imagine specific kinds of subject matter in particular sorts of relations, and the storylines they inspire will prove more effective for analyzing some features of experience over others. When we neglect the creative contributions of such scientific imagination and treat models and interpretive explanations as straightforward facts—even worse, as facts including all of reality—we can blind ourselves to the limitations of a given model and fail to note its potential for misunderstanding a situation to which it ill applies.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 과학적 설명은 단순한 사실 나열이 아니라 창의적 상상력이 개입된 구성물이며, 이를 맹목적인 사실로만 받아들이면 모델의 한계를 보지 못하게 된다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. Where scientific research is concerned, / explanatory tales are expected to adhere closely to experimental data / and to illuminate the regular and predictable features of experience.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 과학 연구에 관한 한, / 설명적 이야기(이론)는 실험 데이터에 밀접하게 고수할 것으로 기대된다 / 그리고 경험의 규칙적이고 예측 가능한 특징들을 조명할 것으로.<br>
+          <b>[구문 해설]</b> 'Where ~ is concerned'는 '~에 관한 한'이라는 관용적 표현입니다. 'are expected' 뒤에 두 개의 to부정사(to adhere, to illuminate)가 병렬로 연결되었습니다.<br>
+          <b>[핵심 어휘]</b> be concerned: 관여하다, 관한 한 / explanatory: 설명적인 / tale: 이야기 / adhere to: ~에 고수하다, 들러붙다 / illuminate: 조명하다, 밝히다 / regular: 규칙적인 / predictable: 예측 가능한
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. <mark>However, this paradigm sometimes conceals the fact / that theories are deeply loaded with creative elements</mark> / that shape the construction of research projects / and the interpretations of evidence.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 하지만, 이 패러다임은 때때로 사실을 숨긴다 / 이론들이 창의적인 요소들을 깊이 포함하고 있다는 / 연구 프로젝트의 구성과 증거의 해석을 형성하는.<br>
+          <b>[구문 해설]</b> 첫 번째 'that'은 'the fact'와 동격을 이루는 명사절 접속사이고, 두 번째 'that'은 'creative elements'를 수식하는 주격 관계대명사입니다.<br>
+          <b>[핵심 어휘]</b> paradigm: 패러다임, 체계 / conceal: 숨기다, 감추다 / be loaded with: ~로 가득 차 있다(포함하다) / construction: 구성 / interpretation: 해석
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. Scientific explanations do not just relate / a chronology of facts.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 과학적 설명들은 단지 이야기하는 것이 아니다 / 사실들의 연대기를.<br>
+          <b>[핵심 어휘]</b> relate: 이야기하다, 관련시키다 / chronology: 연대기, 연표
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. They construct frameworks for systematically chosen data / in order to provide a consistent and meaningful explanation / of what is observed.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그것들은 체계적으로 선택된 데이터를 위한 틀을 구성한다 / 일관되고 의미 있는 설명을 제공하기 위해 / 관찰된 것에 대한.<br>
+          <b>[구문 해설]</b> 'what is observed'는 전치사 of의 목적어로 쓰인 관계대명사절입니다.<br>
+          <b>[핵심 어휘]</b> construct: 구성하다 / framework: 틀, 뼈대 / systematically: 체계적으로 / consistent: 일관된
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. Such constructions lead us to imagine / specific kinds of subject matter in particular sorts of relations, / and the storylines they inspire / will prove more effective for analyzing some features of experience / over others.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러한 구성들은 우리가 상상하도록 이끈다 / 특정한 종류의 관계 속에서 특정 종류의 주제를, / 그리고 그것들이 영감을 주는 스토리라인들은 / 경험의 일부 특징들을 분석하는 데 더 효과적임이 입증될 것이다 / 다른 것들보다.<br>
+          <b>[구문 해설]</b> 'lead + 목적어(us) + to부정사(to imagine)' 형태가 쓰였습니다. 'the storylines'와 'they inspire' 사이에는 목적격 관계대명사가 생략되어 있습니다.<br>
+          <b>[핵심 어휘]</b> subject matter: 주제, 소재 / storyline: 스토리라인, 줄거리 / inspire: 영감을 주다 / prove: 입증되다 / effective: 효과적인
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. When we neglect the creative contributions of such scientific imagination / and treat models and interpretive explanations as straightforward facts / —even worse, as facts including all of reality— / we can blind ourselves to the limitations of a given model / and fail to note its potential for misunderstanding a situation / to which it ill applies.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 우리가 그러한 과학적 상상력의 창의적인 기여를 무시하고 / 모델과 해석적 설명들을 단순한 사실로 취급할 때 / —더 나쁘게는, 모든 현실을 포함하는 사실로— / 우리는 주어진 모델의 한계에 스스로 눈이 멀게 될 수 있고 / 그것(모델)이 잘못 적용되는 상황을 오해할 잠재력을 인지하지 못할 수 있다.<br>
+          <b>[구문 해설]</b> 'treat A as B(A를 B로 취급하다)' 구문이 사용되었습니다. 'blind ourselves to'는 '~을 보지 못하게 하다'라는 뜻입니다. 'to which it ill applies'는 a situation을 수식하며, 'ill'은 부사로 '나쁘게, 잘못'의 의미로 쓰였습니다.<br>
+          <b>[핵심 어휘]</b> neglect: 무시하다, 방치하다 / contribution: 기여 / interpretive: 해석적인 / straightforward: 단순한, 솔직한 / blind: 눈멀게 하다 / limitation: 한계 / misunderstanding: 오해 / ill: 나쁘게, 불충분하게
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>과학에 대한 전통적 기대와 숨겨진 사실</h4>
+      <p>과학 연구는 실험 데이터를 엄격히 따를 것으로 기대되지만, 사실 과학 이론 내부에는 데이터를 해석하고 구성하는 강력한 '창의적 요소'가 숨어 있음.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>과학적 설명의 본질: 창의적 틀의 구성</h4>
+      <p>과학적 설명은 단순한 팩트의 나열이 아니라, 일관된 해석을 제공하기 위해 체계적으로 데이터를 틀에 맞추고 특정한 관계를 상상하게 만드는 창의적 작업임.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>상상력 간과의 위험성: 한계에 대한 맹목</h4>
+      <p>과학 모델에 개입된 이러한 상상력을 무시하고 모델을 '완벽한 사실'로만 받아들이면, 우리는 그 모델의 한계와 오류 가능성을 인지하지 못하는 오류에 빠지게 됨.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>Where scientific research is [ concerned / concerning ], explanatory tales are expected to adhere closely to experimental data.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="correct" data-exp="'Where ~ is concerned'는 '~에 관한 한'이라는 뜻으로 쓰이는 관용구이므로 과거분사형인 concerned가 올바릅니다.">concerned</button>
+      <button class="drill-btn" data-ans="incorrect" data-exp="관용적 표현이므로 현재분사인 concerning은 어색합니다.">concerning</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>They construct frameworks for systematically chosen data in order to provide a consistent and meaningful explanation of [ what / that ] is observed.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="correct" data-exp="전치사 of의 목적어 역할을 하며 뒤에 주어가 빠진 불완전한 문장(is observed)을 이끌어야 하므로, 선행사를 포함하는 관계대명사 what이 필요합니다.">what</button>
+      <button class="drill-btn" data-ans="incorrect" data-exp="that이 관계대명사로 쓰이려면 앞에 선행사가 있어야 하므로 부적절합니다.">that</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Where scientific research is concerned, explanatory tales are expected to adhere closely to experimental data and to illuminate the regular and predictable features of experience. However, this paradigm sometimes conceals the fact that theories are deeply loaded with ________________________ that shape the construction of research projects and the interpretations of evidence. Scientific explanations do not just relate a chronology of facts. They construct frameworks for systematically chosen data in order to provide a consistent and meaningful explanation of what is observed. Such constructions lead us to imagine specific kinds of subject matter in particular sorts of relations, and the storylines they inspire will prove more effective for analyzing some features of experience over others. When we neglect the creative contributions of such scientific imagination and treat models and interpretive explanations as straightforward facts—even worse, as facts including all of reality—we can blind ourselves to the limitations of a given model and fail to note its potential for misunderstanding a situation to which it ill applies.
+    </div>
+    <div class="exam-choices">
+      ① creative elements<br>
+      ② mathematical formulas<br>
+      ③ historical records<br>
+      ④ emotional biases<br>
+      ⑤ absolute truths
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ①</b><br>
+        <b>해설:</b> 글의 전체 논지는 과학적 이론과 모델이 단순히 객관적인 데이터나 사실의 집합이 아니라 연구 프로젝트와 해석의 틀을 형성하는 '창의적인 요소들(creative elements)'과 '과학적 상상력'을 깊이 포함하고 있다는 것입니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳은?</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; text-align: center; font-weight: bold; margin-bottom: 16px;">
+      They construct frameworks for systematically chosen data in order to provide a consistent and meaningful explanation of what is observed.
+    </div>
+    <div class="exam-passage">
+      Where scientific research is concerned, explanatory tales are expected to adhere closely to experimental data and to illuminate the regular and predictable features of experience. ( ① ) However, this paradigm sometimes conceals the fact that theories are deeply loaded with creative elements that shape the construction of research projects and the interpretations of evidence. ( ② ) Scientific explanations do not just relate a chronology of facts. ( ③ ) Such constructions lead us to imagine specific kinds of subject matter in particular sorts of relations, and the storylines they inspire will prove more effective for analyzing some features of experience over others. ( ④ ) When we neglect the creative contributions of such scientific imagination and treat models and interpretive explanations as straightforward facts—even worse, as facts including all of reality—we can blind ourselves to the limitations of a given model. ( ⑤ ) And we fail to note its potential for misunderstanding a situation to which it ill applies.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 주어진 문장의 'They'는 바로 앞 문장(②번 자리 뒤)의 'Scientific explanations'를 가리킵니다. 과학적 설명은 단지 사실들의 연대기를 나열하는 것(do not just relate a chronology of facts)이 아니라, 데이터를 위한 '틀을 구성한다(construct frameworks)'는 역접적 뉘앙스로 이어집니다. 또한 뒤이어 나오는 'Such constructions(그러한 구성들)'가 주어진 문장의 행위를 직접적으로 받아주므로 ③번이 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+    <div class="exam-passage">
+      Where scientific research is concerned, explanatory tales are expected to ①<u>adhere</u> closely to experimental data and to illuminate the regular and predictable features of experience. However, this paradigm sometimes ②<u>conceals</u> the fact that theories are deeply loaded with creative elements that shape the construction of research projects and the interpretations of evidence. Scientific explanations do not just relate a chronology of facts. They construct frameworks for systematically chosen data in order to provide a ③<u>consistent</u> and meaningful explanation of what is observed. Such constructions lead us to imagine specific kinds of subject matter in particular sorts of relations, and the storylines they inspire will prove more effective for analyzing some features of experience over others. When we ④<u>neglect</u> the creative contributions of such scientific imagination and treat models and interpretive explanations as straightforward facts—even worse, as facts including all of reality—we can ⑤<u>reveal</u> ourselves to the limitations of a given model and fail to note its potential for misunderstanding a situation to which it ill applies.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ⑤ reveal -> blind</b><br>
+        <b>해설:</b> 과학적 모델에 들어간 상상력과 창의성을 무시하고 그것을 단순한 사실로만 취급할 때 발생하는 '부정적인 결과'를 설명하는 부분입니다. 따라서 우리는 모델의 한계를 '드러내는(reveal)' 것이 아니라, 그 한계에 대해 '스스로 눈이 멀게(blind)' 되는 오류를 범하게 된다는 흐름이 맞습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      Such constructions lead us to imagine specific kinds of subject matter in particular sorts of relations, and the storylines they inspire will prove more effective for analyzing some features of experience over others. <u>우리가 그러한 과학적 상상력의 창의적인 기여를 무시할 때, 우리는 주어진 모델의 한계에 스스로 눈이 멀게 될 수 있다.</u> We might treat models and interpretive explanations as straightforward facts, failing to note their potential for misunderstanding a situation to which they ill apply.
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 어형 변화 없이 그대로 배열할 것.<br>
+      [주어진 단어: blind / to / contributions / neglect / the / ourselves / limitations / of / a given model / the creative / we / can / when / of such scientific imagination / we]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> When we neglect the creative contributions of such scientific imagination, we can blind ourselves to the limitations of a given model<br>
+        <b>해설:</b> 'When we neglect(우리가 무시할 때)'로 시작하여 목적어인 'the creative contributions of such scientific imagination(그러한 과학적 상상력의 창의적인 기여를)'를 씁니다. 주절은 'we can blind ourselves(~에 스스로 눈멀게 될 수 있다)'를 만들고 전치사 'to' 뒤에 'the limitations of a given model(주어진 모델의 한계에)'을 연결합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

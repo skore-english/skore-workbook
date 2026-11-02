@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | RESOURCE AWARENESS FOR CREATIVITY 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 31번 · 빈칸</div>
+    <h1 class="title">RESOURCE AWARENESS FOR CREATIVITY<br><span>창의성을 위한 자원 파악의 중요성</span></h1>
+    <p class="header-lead">학생들의 성공적인 과제 수행과 창의성 발현을 위해서는 활동에 필요한 자원을 사전에 파악하고 대비하는 과정이 매우 중요합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>자원 파악(Resource Identification): 과제나 프로젝트를 수행하기 전, 물리적 장비, 예산, 인력 등 필요한 모든 자원을 확인하는 과정.</li>
+      <li>창의성과 제약(Creativity and Constraints): 제약이나 부족함을 미리 아는 것이 오히려 창의적인 대안을 모색하게 하여 창의성을 촉진할 수 있음.</li>
+      <li>사전 준비(Prior Preparation): 실험 등 실질적 제약이 따르는 학습 활동에서 실패를 방지하고 활동을 단순화시켜주는 핵심 요소.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    One factor that may hinder creativity is unawareness of the resources required in each activity in students’ learning. Often students are unable to identify the resources they need to perform the task required of them. Different resources may be compulsory for specific learning tasks, and recognizing them may simplify the activity’s performance. For example, it may be that students desire to conduct some experiments in their projects. There must be a prior investigation of whether the students will have access to the laboratory, equipment, and chemicals required for the experiment. It means preparation is vital for the students to succeed, and it may be about human and financial resources such as laboratory technicians, money to purchase chemicals, and equipment for their learning where applicable. Even if some of the resources required for a task may not be available, identifying them in advance may help students’ creativity. It may even lead to changing the topic, finding alternative resources, and other means.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 학생들의 창의성과 성공적인 학습 활동을 위해서는 과제에 필요한 인적, 물적 자원을 사전에 정확히 파악하고 준비하는 과정이 필수적이다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. One factor that may hinder creativity / is unawareness of the resources / required in each activity in students’ learning.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 창의성을 방해할 수 있는 한 가지 요인은 / 자원에 대한 인식 부족이다 / 학생들의 학습의 각 활동에서 요구되는.<br>
+          <b>[구문 해설]</b> 'required in each activity'는 앞의 명사 'the resources'를 후치 수식하는 과거분사구입니다.<br>
+          <b>[핵심 어휘]</b> hinder: 방해하다 / unawareness: 인식 부족, 알지 못함 / require: 요구하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. Often students are unable to identify the resources / they need to perform the task / required of them.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 종종 학생들은 자원을 파악할 수 없다 / 그들이 과제를 수행하기 위해 필요로 하는 / 그들에게 요구된.<br>
+          <b>[구문 해설]</b> 'the resources' 뒤에 목적격 관계대명사가 생략되어 있으며, 'required of them'은 앞의 명사 'the task'를 수식합니다.<br>
+          <b>[핵심 어휘]</b> identify: 파악하다, 식별하다 / perform: 수행하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. Different resources may be compulsory for specific learning tasks, / and recognizing them may simplify the activity’s performance.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 특정한 학습 과제를 위해서는 다양한 자원이 필수적일 수 있다, / 그리고 그것들을 인식하는 것은 활동의 수행을 단순화할 수 있다.<br>
+          <b>[핵심 어휘]</b> compulsory: 필수적인 / recognize: 인식하다 / simplify: 단순화하다 / performance: 수행
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. For example, it may be that students desire to conduct some experiments / in their projects.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 예를 들어, 학생들이 몇몇 실험을 수행하기를 바랄 수 있다 / 그들의 프로젝트에서.<br>
+          <b>[핵심 어휘]</b> conduct: 수행하다, 실시하다 / experiment: 실험
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. There must be a prior investigation / of whether the students will have access to the laboratory, equipment, and chemicals / required for the experiment.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 사전 조사가 있어야 한다 / 학생들이 실험실, 장비, 화학물질에 접근할 수 있을지에 대한 / 실험을 위해 요구되는.<br>
+          <b>[구문 해설]</b> 전치사 'of'의 목적으로 명사절 접속사 'whether(~인지 아닌지)'가 쓰였습니다.<br>
+          <b>[핵심 어휘]</b> prior: 사전의 / investigation: 조사 / access to: ~에 대한 접근성 / equipment: 장비 / chemical: 화학물질
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. It means / preparation is vital for the students to succeed, / and it may be about human and financial resources / such as laboratory technicians, money to purchase chemicals, and equipment for their learning / where applicable.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이것은 의미한다 / 준비가 학생들이 성공하는 데 필수적이라는 것을, / 그리고 그것은 인적, 재정적 자원에 관한 것일 수 있다 / 실험실 기술자, 화학물질을 구매할 돈, 그리고 그들의 학습을 위한 장비와 같은 / 해당되는 경우에.<br>
+          <b>[구문 해설]</b> 'to succeed'의 의미상 주어로 'for the students'가 쓰였습니다.<br>
+          <b>[핵심 어휘]</b> preparation: 준비 / vital: 필수적인, 중요한 / financial: 재정적인 / technician: 기술자 / where applicable: 해당되는 경우에
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. <mark>Even if some of the resources required for a task may not be available</mark>, / identifying them in advance may help students’ creativity.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 설령 과제를 위해 요구되는 자원들 중 일부를 이용할 수 없을지라도, / 그것들을 사전에 파악하는 것은 학생들의 창의성에 도움을 줄 수 있다.<br>
+          <b>[구문 해설]</b> 양보의 부사절 'Even if'가 쓰였고, 주절의 주어는 동명사구 'identifying them in advance'입니다.<br>
+          <b>[핵심 어휘]</b> available: 이용 가능한 / in advance: 사전에, 미리
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">8. It may even lead to changing the topic, / finding alternative resources, / and other means.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그것은 심지어 주제 변경으로 이어질 수도 있다, / 대안적인 자원 찾기, / 그리고 다른 방법들(로).<br>
+          <b>[구문 해설]</b> 전치사 'to' 뒤에 동명사 'changing'과 'finding'이 병렬 구조를 이룹니다.<br>
+          <b>[핵심 어휘]</b> lead to: ~로 이어지다 / alternative: 대안의 / means: 방법, 수단
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>창의성을 저해하는 요인</h4>
+      <p>학습 활동 시 필요한 자원에 대한 학생들의 인식 부족이 과제 수행을 어렵게 만들고 결과적으로 그들의 창의성을 저해하는 주요 요인이 됨.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>사전 자원 조사의 필수성</h4>
+      <p>프로젝트(실험 등)를 수행하기 위해서는 사전에 실험실, 장비, 인력(실험실 기술자), 예산 등 인적/물적 자원에 대한 접근성 조사가 반드시 선행되어야 함.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>사전 파악의 긍정적 효과</h4>
+      <p>설령 자원이 부족하더라도 이를 미리 파악하는 것 자체가 주제 변경이나 대안 탐색과 같은 유연성을 제공하여 창의성을 돕는 핵심 요소로 작용함.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>One factor that may hinder creativity is unawareness of the resources [ required / requiring ] in each activity in students’ learning.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="correct" data-exp="자원(resources)은 활동에서 '요구되는' 수동의 대상이므로 과거분사 required가 명사를 후치 수식해야 합니다.">required</button>
+      <button class="drill-btn" data-ans="incorrect" data-exp="자원이 스스로 무언가를 요구하는 능동의 관계가 아니므로 현재분사 requiring은 적절하지 않습니다.">requiring</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>Even if some of the resources required for a task may not be available, [ identify / identifying ] them in advance may help students’ creativity.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="주절의 주어 자리에 동사원형을 쓰면 명령문 구조가 되어 뒤의 본동사 may help와 문법적으로 맞지 않습니다.">identify</button>
+      <button class="drill-btn" data-ans="correct" data-exp="주절의 본동사 may help 앞에는 명사구 주어가 필요합니다. 따라서 동명사구인 identifying이 문장의 주어 역할을 하는 것이 문법상 올바릅니다.">identifying</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 주제로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      One factor that may hinder creativity is unawareness of the resources required in each activity in students’ learning. Often students are unable to identify the resources they need to perform the task required of them. Different resources may be compulsory for specific learning tasks, and recognizing them may simplify the activity’s performance. For example, it may be that students desire to conduct some experiments in their projects. There must be a prior investigation of whether the students will have access to the laboratory, equipment, and chemicals required for the experiment. It means preparation is vital for the students to succeed, and it may be about human and financial resources such as laboratory technicians, money to purchase chemicals, and equipment for their learning where applicable. Even if some of the resources required for a task may not be available, identifying them in advance may help students’ creativity. It may even lead to changing the topic, finding alternative resources, and other means.
+    </div>
+    <div class="exam-choices">
+      ① various ways to secure financial support for student projects<br>
+      ② negative effects of excessive resources on students' learning<br>
+      ③ the importance of identifying necessary resources for tasks in advance<br>
+      ④ reasons why laboratory experiments hinder creative thinking<br>
+      ⑤ the difficulty of changing a project topic without teacher's help
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 이 글은 학생들이 성공적으로 과제를 수행하고 창의성을 발휘하기 위해서는 사전에 필요한 자원(인적, 물리적 등)을 파악하는 것이 매우 중요하다는 점을 강조하고 있습니다. 따라서 ③ '과제에 필요한 자원을 사전에 파악하는 것의 중요성'이 글의 주제로 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+    <div class="exam-passage">
+      One factor that may ①<u>hinder</u> creativity is unawareness of the resources required in each activity in students’ learning. Often students are unable to identify the resources they need to perform the task required of them. Different resources may be compulsory for specific learning tasks, and recognizing them may ②<u>simplify</u> the activity’s performance. For example, it may be that students desire to conduct some experiments in their projects. There must be a prior investigation of whether the students will have access to the laboratory, equipment, and chemicals required for the experiment. It means preparation is ③<u>vital</u> for the students to succeed, and it may be about human and financial resources such as laboratory technicians, money to purchase chemicals, and equipment for their learning where applicable. Even if some of the resources required for a task may not be ④<u>available</u>, identifying them in advance may ⑤<u>harm</u> students’ creativity. It may even lead to changing the topic, finding alternative resources, and other means.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ⑤ harm -> help</b><br>
+        <b>해설:</b> 글의 결론부에서 자원이 부족하더라도 이를 사전에 파악하는 것은 대안을 찾거나 주제를 변경하게 만들어 오히려 창의성에 '도움(help)'이 될 수 있다고 설명하고 있습니다. 따라서 창의성을 해친다는 의미의 'harm'은 문맥상 어색합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 문장이 들어가기에 가장 적절한 곳은?</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; text-align: center; font-weight: bold; margin-bottom: 16px;">
+      For example, it may be that students desire to conduct some experiments in their projects.
+    </div>
+    <div class="exam-passage">
+      One factor that may hinder creativity is unawareness of the resources required in each activity in students’ learning. Often students are unable to identify the resources they need to perform the task required of them. ( ① ) Different resources may be compulsory for specific learning tasks, and recognizing them may simplify the activity’s performance. ( ② ) There must be a prior investigation of whether the students will have access to the laboratory, equipment, and chemicals required for the experiment. ( ③ ) It means preparation is vital for the students to succeed, and it may be about human and financial resources such as laboratory technicians, money to purchase chemicals, and equipment for their learning where applicable. ( ④ ) Even if some of the resources required for a task may not be available, identifying them in advance may help students’ creativity. ( ⑤ ) It may even lead to changing the topic, finding alternative resources, and other means.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 주어진 문장은 "예를 들어, 학생들이 프로젝트에서 실험을 하길 원할 수 있다"는 구체적 상황(예시)을 도입합니다. 이 예시는 자원을 인식하는 것이 수행을 단순화한다는 앞선 설명 뒤에 와야 하며, 실험을 하려면 실험실이나 장비에 대한 사전 조사(prior investigation)가 필요하다는 다음 문장(There must be a prior investigation ~ the experiment)과 완벽하게 논리적으로 연결되므로 ②번 자리에 들어가야 합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      It means preparation is vital for the students to succeed, and it may be about human and financial resources such as laboratory technicians, money to purchase chemicals, and equipment for their learning where applicable. Even if <u>어떤 과제를 위해 요구되는 자원들 중 일부를 이용할 수 없을지라도, 그것들을 사전에 파악하는 것은 학생들의 창의성에 도움을 줄 수 있다.</u> It may even lead to changing the topic, finding alternative resources, and other means.
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 어형 변화 없이 그대로 배열할 것.<br>
+      [주어진 단어: identifying / may not be / some of / students' creativity / in advance / required / available, / them / the resources / for a task / may help]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> some of the resources required for a task may not be available, identifying them in advance may help students' creativity<br>
+        <b>해설:</b> Even if 절의 주어인 '자원들 중 일부(some of the resources)' 뒤에 이를 수식하는 과거분사구 '요구되는(required for a task)'가 위치하고, 동사구 '이용할 수 없을지도 모른다(may not be available,)'를 씁니다. 이어지는 주절에는 동명사구 주어인 '그것들을 사전에 파악하는 것(identifying them in advance)'을 쓰고, 동사구 '도움을 줄 수 있다(may help students' creativity)'를 배치하여 문장을 완성합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

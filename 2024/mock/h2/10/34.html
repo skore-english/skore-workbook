@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | WEBER'S LAW 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 34번 · 빈칸 추론</div>
+    <h1 class="title">WEBER’S LAW<br><span>베버의 법칙: 자극 강도와 차이 인식</span></h1>
+    <p class="header-lead">우리가 자극의 차이를 인식하는 능력은 절대적인 수치가 아니라, 원래 자극의 강도에 비례하여 상대적으로 결정됩니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>베버의 법칙(Weber's law): 처음 주어지는 자극이 약할 때는 자극의 변화가 적어도 그 변화를 쉽게 감지할 수 있지만, 처음 주어지는 자극이 강할 때는 자극의 변화가 커야만 변화를 감지할 수 있다는 심리학적 법칙.</li>
+      <li>최소 식별 차이(Just-noticeable difference, JND): 두 자극 사이의 차이를 구별할 수 있는 최소한의 자극 변화량.</li>
+      <li>상대적 지각(Relative Perception): 인간의 감각은 절대적인 수치가 아니라 기존 상태(배경)와의 상대적인 비율에 의해 자극을 인식함.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    Weber’s law concerns the perception of difference between two stimuli. It suggests that we might not be able to detect a 1-mm difference when we are looking at lines 466 mm and 467 mm in length, but we may be able to detect a 1-mm difference when we are comparing a line 2 mm long with one 3 mm long. Another example of this principle is that we can detect 1 candle when it is lit in an otherwise dark room. But when 1 candle is lit in a room in which 100 candles are already burning, we may not notice the light from this candle. Therefore, the Just-noticeable difference (JND) varies as a function of the strength of the signals. For example, the JND is greater for very loud noises than it is for much more quiet sounds. When a sound is very weak, we can tell that another sound is louder, even if it is barely louder. When a sound is very loud, to tell that another sound is even louder, it has to be much louder. Thus, Weber’s law means that it is harder to distinguish between two samples when those samples are larger or stronger levels of the stimuli.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 베버의 법칙에 따르면, 두 자극 간의 차이를 인식하는 능력(최소 식별 차이)은 원래 자극의 강도가 클수록 더 큰 차이가 있어야만 가능하다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. Weber’s law concerns / the perception of difference between two stimuli.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 베버의 법칙은 다룬다 / 두 자극 사이의 차이에 대한 인식을.<br>
+          <b>[핵심 어휘]</b> concern: ~에 관한 것이다, 다루다 / perception: 인식, 지각 / stimulus: 자극 (복수형: stimuli)
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. It suggests / that we might not be able to detect a 1-mm difference / when we are looking at lines 466 mm and 467 mm in length, / but we may be able to detect a 1-mm difference / when we are comparing a line 2 mm long / with one 3 mm long.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그것은 시사한다 / 우리가 1mm의 차이를 감지할 수 없을지도 모른다는 것을 / 길이가 466mm와 467mm인 선들을 보고 있을 때, / 하지만 우리는 1mm의 차이를 감지할 수 있을지도 모른다 / 길이가 2mm인 선을 비교할 때 / 길이가 3mm인 것과.<br>
+          <b>[구문 해설]</b> 'compare A with B' 구문이 사용되었으며, 대명사 'one'은 앞의 'a line'을 대신합니다.<br>
+          <b>[핵심 어휘]</b> suggest: 시사하다 / detect: 감지하다 / compare: 비교하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. Another example of this principle is / that we can detect 1 candle / when it is lit in an otherwise dark room.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이 원리의 또 다른 예는 ~이다 / 우리가 1개의 촛불을 감지할 수 있다는 것 / 그것이 그렇지 않으면(그 촛불이 없다면) 어두운 방에서 켜졌을 때.<br>
+          <b>[구문 해설]</b> 부사 'otherwise'는 '만약 그렇지 않다면(촛불이 켜지지 않았다면)'이라는 가정의 의미를 내포하고 있습니다.<br>
+          <b>[핵심 어휘]</b> principle: 원리, 원칙 / candle: 양초 / otherwise: 그렇지 않으면, 그 외에는
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. <mark>But when 1 candle is lit / in a room in which 100 candles are already burning</mark>, / we may not notice the light from this candle.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러나 1개의 촛불이 켜질 때 / 100개의 촛불이 이미 타오르고 있는 방 안에서, / 우리는 이 촛불에서 나오는 빛을 알아차리지 못할 수도 있다.<br>
+          <b>[구문 해설]</b> 'in which'는 전치사+관계대명사로 선행사 'a room'을 수식하며, 뒤에는 완전한 절(100 candles are already burning)이 이어집니다. 'where'로 바꿔 쓸 수 있습니다.<br>
+          <b>[핵심 어휘]</b> notice: 알아차리다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. Therefore, the Just-noticeable difference (JND) varies / as a function of the strength of the signals.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 따라서, 최소 식별 차이(JND)는 다양하다(달라진다) / 신호 강도의 함수로서(비례하여).<br>
+          <b>[구문 해설]</b> 'as a function of'는 수학적 표현에서 차용된 것으로, '~에 따라 달라지는, ~에 비례하여'라는 의미입니다.<br>
+          <b>[핵심 어휘]</b> Just-noticeable difference: 최소 식별 차이 / vary: 다양하다, 달라지다 / as a function of: ~의 함수로서, ~에 따라 / strength: 강도
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. For example, the JND is greater / for very loud noises / than it is for much more quiet sounds.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 예를 들어, 최소 식별 차이는 더 크다 / 매우 큰 소음의 경우 / 훨씬 더 조용한 소리의 경우(최소 식별 차이)보다.<br>
+          <b>[구문 해설]</b> 비교급(greater) 구문입니다. 'much'는 비교급 'more quiet'를 강조하는 부사입니다.<br>
+          <b>[핵심 어휘]</b> loud: (소리가) 큰 / noise: 소음
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. When a sound is very weak, / we can tell that another sound is louder, / even if it is barely louder.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 소리가 매우 약할 때, / 우리는 다른 소리가 더 크다는 것을 알 수 있다, / 비록 그것이 간신히(아주 조금) 더 클지라도.<br>
+          <b>[핵심 어휘]</b> weak: 약한 / tell: 알다, 구별하다 / barely: 간신히, 거의 ~아니게
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">8. When a sound is very loud, / to tell that another sound is even louder, / it has to be much louder.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 소리가 매우 클 때, / 다른 소리가 훨씬 더 크다는 것을 알기 위해서는, / 그것은(다른 소리는) 훨씬 더 커야만 한다.<br>
+          <b>[구문 해설]</b> 'to tell ~'은 목적을 나타내는 부사적 용법의 to부정사입니다. 'even'과 'much'는 모두 비교급(louder)을 강조합니다.<br>
+          <b>[핵심 어휘]</b> tell: 구별하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">9. Thus, Weber’s law means / that it is harder to distinguish between two samples / when those samples are larger or stronger levels of the stimuli.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 따라서, 베버의 법칙은 의미한다 / 두 표본 사이를 구별하는 것이 더 어렵다는 것을 / 그 표본들이 자극의 더 크거나 더 강한 수준일 때.<br>
+          <b>[구문 해설]</b> 'it'은 가주어, 'to distinguish ~' 이하가 진주어입니다.<br>
+          <b>[핵심 어휘]</b> distinguish: 구별하다 / sample: 표본
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>베버의 법칙과 선 길이 예시</h4>
+      <p>베버의 법칙은 두 자극의 차이 인식을 다루며, 긴 선(466mm)의 1mm 차이는 몰라도 짧은 선(2mm)의 1mm 차이는 구별할 수 있다는 개념을 제시함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>촛불과 소리를 통한 원리 확장</h4>
+      <p>어두운 방의 촛불 1개와 100개가 켜진 방의 촛불 1개를 비교하며, 최소 식별 차이(JND)는 원래 자극(신호)의 강도에 비례하여 커진다는 것을 설명함.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>자극 강도와 구별의 어려움</h4>
+      <p>원래의 소리가 클수록 더 큰 차이가 나야 구별할 수 있듯이, 표본(자극)의 수준이 더 크고 강할수록 두 표본의 차이를 구별하는 것이 더 어렵다고 결론지음.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>But when 1 candle is lit in a room [ which / in which ] 100 candles are already burning, we may not notice the light from this candle.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="관계대명사 which 뒤에는 불완전한 문장이 와야 하지만, 뒤에 완전한 문장이 이어지고 있으므로 틀립니다.">which</button>
+      <button class="drill-btn" data-ans="correct" data-exp="'전치사 + 관계대명사(in which)' 뒤에는 완전한 절이 이어집니다. '100개의 양초가 이미 타고 있다'는 완전한 문장이므로 in which가 정답입니다.">in which</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>Thus, Weber’s law means that it is harder [ distinguish / to distinguish ] between two samples when those samples are larger or stronger levels of the stimuli.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="가주어 it에 대한 진주어 자리에 동사원형이 단독으로 올 수 없습니다.">distinguish</button>
+      <button class="drill-btn" data-ans="correct" data-exp="가주어 it이 지칭하는 진짜 주어 역할을 하기 위해서는 to부정사 형태인 to distinguish가 되어야 합니다.">to distinguish</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Weber’s law concerns the perception of difference between two stimuli. It suggests that we might not be able to detect a 1-mm difference when we are looking at lines 466 mm and 467 mm in length, but we may be able to detect a 1-mm difference when we are comparing a line 2 mm long with one 3 mm long. Another example of this principle is that we can detect 1 candle when it is lit in an otherwise dark room. But when 1 candle is lit in a room in which 100 candles are already burning, we may not notice the light from this candle. Therefore, the Just-noticeable difference (JND) varies as a function of the strength of the signals. For example, the JND is greater for very loud noises than it is for much more quiet sounds. When a sound is very weak, we can tell that another sound is louder, even if it is barely louder. When a sound is very loud, to tell that another sound is even louder, it has to be much louder. Thus, Weber’s law means that it is harder to distinguish between two samples when those samples are larger or stronger levels of the stimuli.
+    </div>
+    <div class="exam-choices">
+      ① How to Improve Your Sensory Perception Accuracy<br>
+      ② The Principle of Weber's Law: How Stimulus Intensity Affects Perception<br>
+      ③ The Hidden Dangers of Exposure to Extreme Noises<br>
+      ④ Why Human Vision is More Sensitive Than Hearing<br>
+      ⑤ The Method of Calculating Absolute Distances and Weights
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 이 글은 원래 자극의 강도가 클수록 차이를 구별하기 어렵다는 베버의 법칙과 최소 식별 차이(JND)의 상대성을 설명하고 있습니다. 따라서 ② '베버의 법칙의 원리: 자극의 강도가 지각에 미치는 영향'이 제목으로 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+    <div class="exam-passage">
+      Weber’s law concerns the perception of difference between two stimuli. It suggests that we might not be able to detect a 1-mm difference when we are looking at lines 466 mm and 467 mm in length, but we may be able to detect a 1-mm difference when we are comparing a line 2 mm long with one 3 mm long. Another example of this principle is that we can detect 1 candle when it is lit in an otherwise dark room. But when 1 candle is lit in a room in which 100 candles are already burning, we may not ①<u>notice</u> the light from this candle. Therefore, the Just-noticeable difference (JND) ②<u>varies</u> as a function of the strength of the signals. For example, the JND is ③<u>greater</u> for very loud noises than it is for much more quiet sounds. When a sound is very weak, we can tell that another sound is louder, even if it is barely louder. When a sound is very loud, to tell that another sound is even louder, it has to be much louder. Thus, Weber’s law means that it is ④<u>easier</u> to distinguish between two samples when those samples are ⑤<u>stronger</u> levels of the stimuli.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ④ easier -> harder</b><br>
+        <b>해설:</b> 글의 전체 논지(베버의 법칙)는 자극이 강할수록(예: 100개의 촛불, 매우 큰 소리) 그 작은 차이를 인식하기 어렵다는 것입니다. 따라서 표본(자극)의 수준이 더 강할 때 두 표본 사이를 구별하는 것은 '더 쉽다(easier)'가 아니라 '더 어렵다(harder)'가 되어야 합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 문장이 들어가기에 가장 적절한 곳은?</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; text-align: center; font-weight: bold; margin-bottom: 16px;">
+      But when 1 candle is lit in a room in which 100 candles are already burning, we may not notice the light from this candle.
+    </div>
+    <div class="exam-passage">
+      Weber’s law concerns the perception of difference between two stimuli. It suggests that we might not be able to detect a 1-mm difference when we are looking at lines 466 mm and 467 mm in length, but we may be able to detect a 1-mm difference when we are comparing a line 2 mm long with one 3 mm long. ( ① ) Another example of this principle is that we can detect 1 candle when it is lit in an otherwise dark room. ( ② ) Therefore, the Just-noticeable difference (JND) varies as a function of the strength of the signals. ( ③ ) For example, the JND is greater for very loud noises than it is for much more quiet sounds. ( ④ ) When a sound is very weak, we can tell that another sound is louder, even if it is barely louder. ( ⑤ ) When a sound is very loud, to tell that another sound is even louder, it has to be much louder.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 주어진 문장은 "그러나 100개의 촛불이 타고 있는 방에서 1개의 촛불이 켜지면 그 빛을 알아차리지 못할 수 있다"는 내용으로, 어두운 방에서 1개의 촛불을 인지할 수 있다는 예시와 대조를 이룹니다. 따라서 어두운 방의 촛불 예시 뒤이자, 이런 현상을 '따라서(Therefore)'로 요약하는 문장 앞인 ②번 자리에 들어가야 가장 자연스럽습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      For example, the JND is greater for very loud noises than it is for much more quiet sounds. When a sound is very weak, we can tell that another sound is louder, even if it is barely louder. When a sound is very loud, to tell that another sound is even louder, it has to be much louder. <u>따라서 베버의 법칙은 그 표본들이 자극의 더 크거나 더 강한 수준일 때 두 표본 사이를 구별하는 것이 더 어렵다는 것을 의미한다.</u>
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 어형 변화 없이 그대로 배열할 것.<br>
+      [주어진 단어: those samples / harder / when / levels of the stimuli / means that / are / it is / Thus, Weber's law / larger or stronger / between two samples / to distinguish]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> Thus, Weber’s law means that it is harder to distinguish between two samples when those samples are larger or stronger levels of the stimuli.<br>
+        <b>해설:</b> 'Thus, Weber's law'로 시작하여 'means that'을 연결합니다. 명사절 내부는 가주어 it을 사용하여 'it is harder(더 어렵다)'를 쓰고 진주어인 'to distinguish between two samples(두 표본 사이를 구별하는 것이)'를 배치합니다. 그 뒤에 접속사 'when'을 이끌고 부사절의 주어 'those samples'와 동사 'are', 그리고 보어 'larger or stronger levels of the stimuli'를 연결해 문장을 완성합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

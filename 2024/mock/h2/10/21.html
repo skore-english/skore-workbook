@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | TRUE GENEROSITY 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 21번 · 함축의미 추론</div>
+    <h1 class="title">TRUE GENEROSITY<br><span>진정한 관대함의 조건</span></h1>
+    <p class="header-lead">관대함과 같은 덕목은 일시적인 충동이나 알약으로 얻어지는 것이 아니라, 개인의 도덕적 정체성과 역사를 통해 형성된 안정적인 성향입니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>도덕 철학: 개인의 성품과 미덕(virtues)이 어떻게 형성되고 정의되는지를 탐구하는 철학의 한 분야.</li>
+      <li>미덕의 지속성: 진정한 미덕은 일회성 행동이 아니라 지속적인 습관과 도덕적 정체성의 일부로 간주됨.</li>
+      <li>Zagzebski(린다 자그젭스키): 덕 윤리학(virtue ethics) 분야에서 활동하는 미국의 저명한 철학자.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    Imagine that your usually stingy friend delights in buying you a Christmas present after taking a generosity booster. How would you feel? Undoubtedly, there is something praiseworthy about the action. You’d be pleased to receive the gift. You’d say ‘thank you’, and mean it. But his change of heart is not entirely satisfying. According to Zagzebski, an American philosopher, he is not really generous. When we praise someone’s character, we use words for various virtues: ‘generous’, ‘kind’, ‘courageous’, etc. A person who gives one gift isn’t generous. Instead, generosity is a stable part of a person’s ‘moral identity’, an emotional habit that is part of who you are. Thus virtues, as opposed to nontypical impulse, are the result of your personal history. They are part of who you are, as they are part of how your character was formed. Instant virtue is therefore impossible. Popping a pill cannot make you a better person.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 진정한 관대함과 같은 미덕은 일시적인 충동이나 알약으로 얻어지는 것이 아니라, 개인의 도덕적 정체성과 개인사를 통해 형성된 안정적인 특성이다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. Imagine that your usually stingy friend / delights in buying you a Christmas present / after taking a generosity booster.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 평소 인색한 당신의 친구가 상상해 보라 / 당신에게 크리스마스 선물을 사주는 것을 기뻐한다고 / 관대함 촉진제를 먹은 후에.<br>
+          <b>[구문 해설]</b> 'delight in ~ing'는 '~하는 것을 기뻐하다'라는 의미입니다. 'buying you a Christmas present'는 4형식 구조로 '당신에게 크리스마스 선물을 사주다'로 해석됩니다.<br>
+          <b>[핵심 어휘]</b> stingy: 인색한 / delight in: ~을 즐기다, 기뻐하다 / booster: 촉진제
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. How would you feel?</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 당신은 어떻게 느끼겠는가?<br>
+          <b>[핵심 어휘]</b> feel: 느끼다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. Undoubtedly, there is something praiseworthy about the action.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 의심할 여지 없이, 그 행동에는 칭찬할 만한 무언가가 있다.<br>
+          <b>[구문 해설]</b> '-thing'으로 끝나는 대명사(something)는 형용사(praiseworthy)가 뒤에서 수식합니다.<br>
+          <b>[핵심 어휘]</b> undoubtedly: 의심할 여지 없이 / praiseworthy: 칭찬할 만한
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. You’d be pleased to receive the gift.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 당신은 선물을 받아서 기쁠 것이다.<br>
+          <b>[핵심 어휘]</b> pleased: 기쁜 / receive: 받다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. You’d say ‘thank you’, and mean it.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 당신은 '고마워'라고 말할 것이고, 진심으로 그렇게 말할 것이다.<br>
+          <b>[핵심 어휘]</b> mean it: 진심이다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. But his change of heart is not entirely satisfying.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러나 그의 마음의 변화가 완전히 만족스러운 것은 아니다.<br>
+          <b>[구문 해설]</b> 'not entirely'는 부분 부정으로 '완전히 ~한 것은 아니다'라는 의미를 나타냅니다.<br>
+          <b>[핵심 어휘]</b> change of heart: 마음의 변화 / entirely: 완전히 / satisfying: 만족스러운
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. According to Zagzebski, an American philosopher, he is not really generous.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 미국 철학자인 Zagzebski에 따르면, 그는 실제로 관대한 것이 아니다.<br>
+          <b>[구문 해설]</b> 'Zagzebski'와 'an American philosopher'는 동격 관계입니다.<br>
+          <b>[핵심 어휘]</b> philosopher: 철학자 / generous: 관대한
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">8. When we praise someone’s character, / we use words for various virtues: / ‘generous’, ‘kind’, ‘courageous’, etc.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 우리가 누군가의 성품을 칭찬할 때, / 우리는 다양한 미덕을 나타내는 단어들을 사용한다: / '관대한', '친절한', '용기 있는' 등.<br>
+          <b>[핵심 어휘]</b> praise: 칭찬하다 / character: 성품 / virtue: 미덕 / courageous: 용기 있는
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">9. A person who gives one gift isn’t generous.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 선물을 하나 주는 사람은 관대한 것이 아니다.<br>
+          <b>[구문 해설]</b> 주격 관계대명사 'who'가 이끄는 절이 주어인 'A person'을 수식하고 있습니다.<br>
+          <b>[핵심 어휘]</b> gift: 선물
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">10. Instead, generosity is a stable part of a person’s ‘moral identity’, / an emotional habit that is part of who you are.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 대신에, 관대함은 개인의 '도덕적 정체성'의 안정적인 부분이다, / 즉 당신의 일부인 감정적 습관이다.<br>
+          <b>[구문 해설]</b> 'a stable part of a person’s ‘moral identity’'와 'an emotional habit'이 동격 관계를 이루며, 주격 관계대명사 'that'이 'an emotional habit'을 수식합니다. 'who you are'는 '당신의 현재 모습(정체성)'을 의미합니다.<br>
+          <b>[핵심 어휘]</b> stable: 안정적인 / moral identity: 도덕적 정체성 / emotional habit: 감정적 습관
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">11. Thus virtues, as opposed to nontypical impulse, / are the result of your personal history.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 따라서 미덕은 이례적인 충동과는 반대로, / 당신의 개인사의 결과이다.<br>
+          <b>[구문 해설]</b> 'as opposed to ~'는 '~와는 대조적으로, 반대로'라는 의미입니다. 주어는 'virtues'이므로 복수 동사 'are'가 쓰였습니다.<br>
+          <b>[핵심 어휘]</b> thus: 따라서 / as opposed to: ~와는 반대로 / nontypical: 이례적인 / impulse: 충동 / result: 결과
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">12. They are part of who you are, / as they are part of how your character was formed.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그것들은 당신의 일부이다, / 그것들이 당신의 성품이 어떻게 형성되었는지의 일부인 것처럼.<br>
+          <b>[구문 해설]</b> 접속사 'as'는 '~이듯이, ~인 것처럼'의 의미로 사용되었습니다. 'how your character was formed'는 전치사 'of'의 목적어로 쓰인 간접의문문입니다.<br>
+          <b>[핵심 어휘]</b> form: 형성하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">13. Instant virtue is therefore impossible.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러므로 즉각적인 미덕은 불가능하다.<br>
+          <b>[핵심 어휘]</b> instant: 즉각적인 / therefore: 그러므로 / impossible: 불가능한
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">14. <mark>Popping a pill</mark> cannot make you a better person.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 약을 먹는 것이 당신을 더 나은 사람으로 만들 수는 없다.<br>
+          <b>[구문 해설]</b> 동명사구 'Popping a pill'이 주어 역할을 하고 있습니다. 'make'는 5형식 동사로 쓰여 'make + 목적어(you) + 목적격 보어(a better person)' 형태를 취합니다.<br>
+          <b>[핵심 어휘]</b> pop a pill: 약을 삼키다(먹다)
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>관대함 촉진제의 가상 상황</h4>
+      <p>평소 인색한 친구가 약(관대함 촉진제)을 먹고 선물을 준 상황을 가정하며, 그 행동 자체는 칭찬할 만하지만 왠지 완전히 만족스럽지는 않다는 점을 제시함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>진정한 관대함의 정의</h4>
+      <p>철학자 Zagzebski의 말을 빌려, 단 한 번의 선물 제공이 진정한 관대함은 아니라고 주장함. 관대함은 '도덕적 정체성'의 일부이자 안정적인 감정적 습관임.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>미덕의 형성 과정과 한계</h4>
+      <p>미덕은 일시적 충동이 아닌 오랜 개인사의 결과이며 정체성의 일부이므로, 알약을 먹는 것과 같이 즉각적으로 성취할 수 있는 것이 아님을 결론지음.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>Thus virtues, as opposed to nontypical impulse, [ is / are ] the result of your personal history.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="주어가 복수명사인 virtues이므로 단수동사 is는 올바르지 않습니다.">is</button>
+      <button class="drill-btn" data-ans="correct" data-exp="문장의 주어는 복수명사인 'virtues'이므로, 이에 수일치하는 복수동사 'are'가 정답입니다. 삽입어구 'as opposed to nontypical impulse'에 속지 않아야 합니다.">are</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>They are part of who you are, as they are part of how your character [ formed / was formed ].</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="character(성품)는 스스로 형성하는 것이 아니라 형성되는 대상이므로 능동태인 formed는 어색합니다.">formed</button>
+      <button class="drill-btn" data-ans="correct" data-exp="주어인 'your character(당신의 성품)'는 형성되는 대상이므로 수동태인 'was formed'를 써야 합니다. 전치사 of 뒤에 이어지는 간접의문문 구조입니다.">was formed</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Imagine that your usually stingy friend delights in buying you a Christmas present after taking a generosity booster. How would you feel? Undoubtedly, there is something praiseworthy about the action. You’d be pleased to receive the gift. You’d say ‘thank you’, and mean it. But his change of heart is not entirely satisfying. According to Zagzebski, an American philosopher, he is not really generous. When we praise someone’s character, we use words for various virtues: ‘generous’, ‘kind’, ‘courageous’, etc. A person who gives one gift isn’t generous. Instead, generosity is a stable part of a person’s ‘moral identity’, an emotional habit that is part of who you are. Thus virtues, as opposed to nontypical impulse, are the result of your personal history. They are part of who you are, as they are part of how your character was formed. Instant virtue is therefore impossible. Popping a pill cannot make you a better person.
+    </div>
+    <div class="exam-choices">
+      ① How to Change a Stingy Friend's Mind<br>
+      ② The Danger of Depending on Medical Boosters<br>
+      ③ True Virtues: Built Over Time, Not Acquired Instantly<br>
+      ④ Generosity: The Most Important Virtue for Philosophers<br>
+      ⑤ Why People Feel Satisfied with Unexpected Gifts
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 이 글은 진정한 미덕(관대함 등)이 일시적인 약물 복용이나 충동으로 생기는 것이 아니라 개인의 역사를 통해 점진적으로 형성되는 안정적인 특성임을 설명하고 있습니다. 따라서 '진정한 미덕: 즉시 얻어지는 것이 아니라 시간에 걸쳐 형성된다'는 의미의 ③번이 제목으로 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 밑줄 친 ①~⑤ 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+    <div class="exam-passage">
+      Imagine that your usually stingy friend delights in buying you a Christmas present after taking a generosity booster. How would you feel? Undoubtedly, there is something ①<u>praiseworthy</u> about the action. You’d be pleased to receive the gift. You’d say ‘thank you’, and mean it. But his change of heart is not entirely ②<u>satisfying</u>. According to Zagzebski, an American philosopher, he is not really generous. When we praise someone’s character, we use words for various virtues: ‘generous’, ‘kind’, ‘courageous’, etc. A person who gives one gift isn’t generous. Instead, generosity is a ③<u>stable</u> part of a person’s ‘moral identity’, an emotional habit that is part of who you are. Thus virtues, as opposed to nontypical impulse, are the result of your personal ④<u>history</u>. They are part of who you are, as they are part of how your character was formed. Instant virtue is therefore ⑤<u>achievable</u>. Popping a pill cannot make you a better person.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ⑤ achievable -> impossible</b><br>
+        <b>해설:</b> 글의 결론부에서 미덕은 개인의 역사를 통해 형성되며 알약으로 나은 사람이 될 수 없다고 설명하고 있습니다. 따라서 즉각적인 미덕(Instant virtue)은 '성취 가능한(achievable)' 것이 아니라 '불가능한(impossible)' 것이 되어야 문맥상 자연스럽습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 문장이 들어가기에 가장 적절한 곳은?</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; text-align: center; font-weight: bold; margin-bottom: 16px;">
+      Instead, generosity is a stable part of a person’s ‘moral identity’, an emotional habit that is part of who you are.
+    </div>
+    <div class="exam-passage">
+      Imagine that your usually stingy friend delights in buying you a Christmas present after taking a generosity booster. How would you feel? Undoubtedly, there is something praiseworthy about the action. ( ① ) You’d be pleased to receive the gift. You’d say ‘thank you’, and mean it. ( ② ) But his change of heart is not entirely satisfying. According to Zagzebski, an American philosopher, he is not really generous. ( ③ ) When we praise someone’s character, we use words for various virtues: ‘generous’, ‘kind’, ‘courageous’, etc. ( ④ ) A person who gives one gift isn’t generous. ( ⑤ ) Thus virtues, as opposed to nontypical impulse, are the result of your personal history. They are part of who you are, as they are part of how your character was formed. Instant virtue is therefore impossible.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ⑤</b><br>
+        <b>해설:</b> 제시된 문장은 "대신에(Instead), 관대함은 개인의 '도덕적 정체성'의 안정적인 부분이다"라는 내용을 담고 있습니다. 이 문장은 단 한 번 선물을 주는 사람이 관대한 것이 아니라는 부정적 진술 뒤에 와야 논리적으로 연결됩니다. 따라서 "A person who gives one gift isn’t generous." 뒤인 ⑤번 자리에 들어가는 것이 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      Imagine that your usually stingy friend delights in buying you a Christmas present after taking a generosity booster. ... According to Zagzebski, an American philosopher, he is not really generous. ... <u>따라서 미덕은 이례적인 충동과는 반대로, 당신의 개인사의 결과이다.</u> They are part of who you are, as they are part of how your character was formed. Instant virtue is therefore impossible.
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 어형 변화 없이 그대로 배열할 것.<br>
+      [주어진 단어: opposed / the result / are / history / to / virtues, / your / nontypical impulse, / personal / as / of / thus]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> Thus virtues, as opposed to nontypical impulse, are the result of your personal history.<br>
+        <b>해설:</b> '따라서(Thus) 미덕은(virtues,)'이 주어로 오고, '이례적인 충동과는 반대로(as opposed to nontypical impulse,)'라는 삽입 어구가 중간에 위치합니다. 이어서 동사 'are'가 오고 보어로 '당신의 개인사의 결과(the result of your personal history)'가 이어집니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

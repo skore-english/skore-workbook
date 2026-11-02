@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | HOBBES'S STATE OF NATURE 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 39번 · 문장 삽입 (원문 유형 배제)</div>
+    <h1 class="title">HOBBES'S STATE OF NATURE<br><span>홉스의 자연 상태와 국가의 출현</span></h1>
+    <p class="header-lead">토머스 홉스에 따르면, 통제 없는 자연 상태의 인간은 상호 두려움 속에 존재하며, 이 두려움이 결국 도덕과 사회를 유지하는 주권 권력(국가)을 탄생시킵니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>토머스 홉스(Thomas Hobbes): 영국의 철학자로, 인간의 이기적 본성과 자연 상태의 위험성을 바탕으로 절대적 국가 권력(리바이어던)의 필요성을 역설함.</li>
+      <li>자연 상태(State of nature): 국가나 법률과 같은 통제력이 존재하지 않는 원초적 상태. 홉스는 이를 '만인에 대한 만인의 투쟁(전쟁)' 상태로 보았음.</li>
+      <li>상호 두려움(Mutual fear): 인간은 본성적으로 이기적이며, 자연 상태에서는 언제 타인에게 생명을 잃을지 모른다는 두려움 때문에 서로 모여 사회(국가)를 형성하게 됨.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    According to Hobbes, man is not a being who can act morally in spite of his instinct to protect his existence in the state of nature. Hence, the only place where morality and moral liberty will begin to find an application begins in a place where a sovereign power, namely the state, emerges. Hobbes thus describes the state of nature as a circumstance in which man’s life is “solitary, poor, nasty, brutish and short”. It means when people live without a general power to control them all, they are indeed in a state of war. In other words, Hobbes, who accepted that human beings are not social and political beings in the state of nature, believes that without the power human beings in the state of nature are “antisocial and rational based on their selfishness”. Moreover, since society is not a natural phenomenon and there is no natural force bringing people together, what will bring them together as a society is not mutual affection according to Hobbes. It is, rather, mutual fear of men’s present and future that assembles them, since the cause of fear is a common drive among people in the state of nature.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 홉스에 따르면 통제력이 없는 자연 상태에서 인간은 이기심으로 인한 전쟁 상태에 놓이며, 결국 상호 애정이 아닌 생존에 대한 두려움 때문에 국가(주권 권력)를 형성하게 된다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. According to Hobbes, man is not a being who can act morally / in spite of his instinct to protect his existence / in the state of nature.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 홉스에 따르면, 인간은 도덕적으로 행동할 수 있는 존재가 아니다 / 자신의 존재를 보호하려는 그의 본능에도 불구하고 / 자연 상태에서.<br>
+          <b>[구문 해설]</b> 'who'는 선행사 'a being'을 수식하는 주격 관계대명사입니다. 'in spite of'는 '~에도 불구하고'라는 전치사구입니다.<br>
+          <b>[핵심 어휘]</b> morally: 도덕적으로 / in spite of: ~에도 불구하고 / instinct: 본능 / existence: 존재, 생존 / state of nature: 자연 상태
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. Hence, the only place where morality and moral liberty will begin to find an application / begins in a place where a sovereign power, namely the state, emerges.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러므로, 도덕성과 도덕적 자유가 적용을 찾기 시작할 유일한 곳은 / 주권 권력, 즉 국가가 출현하는 곳에서 시작된다.<br>
+          <b>[구문 해설]</b> 두 개의 'where'는 각각 'the only place'와 'a place'를 수식하는 관계부사입니다.<br>
+          <b>[핵심 어휘]</b> hence: 그러므로 / morality: 도덕성 / liberty: 자유 / application: 적용 / sovereign power: 주권 권력 / namely: 즉, 다시 말해 / emerge: 출현하다, 나타나다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. Hobbes thus describes the state of nature as a circumstance / in which man’s life is “solitary, poor, nasty, brutish and short”.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그래서 홉스는 자연 상태를 상황으로 묘사한다 / 인간의 삶이 "고독하고, 가난하고, 끔찍하고, 짐승 같고, 짧은" (상황으로).<br>
+          <b>[구문 해설]</b> 'describe A as B' 구문이 쓰였습니다. 'in which'는 'a circumstance'를 수식합니다.<br>
+          <b>[핵심 어휘]</b> circumstance: 상황 / solitary: 고독한 / nasty: 끔찍한, 형편없는 / brutish: 짐승 같은, 야만적인
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. It means / when people live without a general power to control them all, / they are indeed in a state of war.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그것은 의미한다 / 사람들이 그들 모두를 통제할 일반적인 권력 없이 살 때, / 그들은 참으로 전쟁 상태에 있다는 것을.<br>
+          <b>[구문 해설]</b> 'It means' 뒤에 접속사 that이 생략되었습니다. 'to control'은 앞의 'a general power'를 수식하는 형용사적 용법입니다.<br>
+          <b>[핵심 어휘]</b> general: 일반적인, 전반적인 / indeed: 참으로, 실제로
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. In other words, Hobbes, who accepted that human beings are not social and political beings in the state of nature, / believes that without the power / human beings in the state of nature are “antisocial and rational based on their selfishness”.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 즉, 자연 상태에서 인간이 사회적이고 정치적인 존재가 아님을 받아들인 홉스는, / 그 권력이 없다면 믿는다 / 자연 상태에서 인간은 "그들의 이기심에 바탕을 둔 반사회적이고 이성적인" 존재라고.<br>
+          <b>[구문 해설]</b> 주어 'Hobbes'와 동사 'believes' 사이에 관계대명사 계속적 용법절(, who accepted ~ ,)이 삽입되었습니다.<br>
+          <b>[핵심 어휘]</b> accept: 받아들이다 / antisocial: 반사회적인 / rational: 이성적인 / selfishness: 이기심
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. Moreover, since society is not a natural phenomenon / and there is no natural force bringing people together, / what will bring them together as a society / is not mutual affection according to Hobbes.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 게다가, 사회는 자연적인 현상이 아니고 / 사람들을 함께 모으는 자연적인 힘은 없기 때문에, / 그들을 사회로서 함께 모으는 것은 / 홉스에 따르면 상호간의 애정이 아니다.<br>
+          <b>[구문 해설]</b> 'what will bring~'이 이끄는 명사절이 주어로 쓰였습니다. 'bringing people together'는 앞의 force를 수식하는 현재분사구입니다.<br>
+          <b>[핵심 어휘]</b> phenomenon: 현상 / mutual: 상호간의 / affection: 애정
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. <mark>It is, rather, mutual fear of men’s present and future that assembles them</mark>, / since the cause of fear is a common drive / among people in the state of nature.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 오히려, 그들을 모으는 것은 인간의 현재와 미래에 대한 상호간의 두려움이다, / 두려움의 원인이 공통된 충동(동인)이기 때문에 / 자연 상태에 있는 사람들 사이에서.<br>
+          <b>[구문 해설]</b> 'It is ~ that' 강조 구문을 사용하여 주어인 'mutual fear of men's present and future'를 강조하고 있습니다.<br>
+          <b>[핵심 어휘]</b> rather: 오히려 / assemble: 모으다, 조립하다 / common drive: 공통된 충동(동인)
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>자연 상태에서의 인간 본성</h4>
+      <p>홉스에 따르면 인간은 자연 상태에서 도덕적 행동이 불가능하며, 도덕과 자유는 오직 '주권 권력(국가)'이 출현할 때만 적용되기 시작함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>비참한 자연 상태와 권력의 부재</h4>
+      <p>통제할 권력이 없는 자연 상태는 끔찍하고 짐승 같은 '전쟁 상태'이며, 인간은 본래 사회적 존재가 아니라 이기심에 기초한 반사회적이고 이성적인 존재임.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>사회를 결속시키는 동인: 두려움</h4>
+      <p>자연적으로 사람들을 묶어주는 힘(상호 애정)은 없으며, 사람들을 사회로 결속시키는 것은 오히려 현재와 미래 생존에 대한 '상호간의 두려움'임.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>Hence, the only place where morality and moral liberty will begin to find an application begins in a place [ where / which ] a sovereign power, namely the state, emerges.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="correct" data-exp="뒤에 이어지는 문장(a sovereign power emerges)이 완전한 형태(자동사 emerge)를 갖추고 있으므로 장소를 나타내는 관계부사 where가 적절합니다.">where</button>
+      <button class="drill-btn" data-ans="incorrect" data-exp="관계대명사 which 뒤에는 주어나 목적어가 빠진 불완전한 문장이 와야 합니다.">which</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>It is, rather, mutual fear of men’s present and future [ what / that ] assembles them.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="'It is ~ what'이라는 강조구문은 존재하지 않습니다.">what</button>
+      <button class="drill-btn" data-ans="correct" data-exp="'It is ~ that' 강조구문입니다. 주어인 'mutual fear'를 강조하기 위해 It is와 that 사이에 위치시켰습니다.">that</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      According to Hobbes, man is not a being who can act morally in spite of his instinct to protect his existence in the state of nature. Hence, the only place where morality and moral liberty will begin to find an application begins in a place where a sovereign power, namely the state, emerges. Hobbes thus describes the state of nature as a circumstance in which man’s life is “solitary, poor, nasty, brutish and short”. It means when people live without a general power to control them all, they are indeed in a state of war. In other words, Hobbes, who accepted that human beings are not social and political beings in the state of nature, believes that without the power human beings in the state of nature are “antisocial and rational based on their selfishness”. Moreover, since society is not a natural phenomenon and there is no natural force bringing people together, what will bring them together as a society is not mutual affection according to Hobbes. It is, rather, ________________________ that assembles them, since the cause of fear is a common drive among people in the state of nature.
+    </div>
+    <div class="exam-choices">
+      ① strict legal punishment<br>
+      ② mutual fear of men's present and future<br>
+      ③ the natural instinct to cooperate<br>
+      ④ the rational desire for economic wealth<br>
+      ⑤ the unconditional love for one another
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 홉스에 따르면, 사람들을 하나의 사회로 모이게 하는 것은 상호 애정이나 협동의 본능이 아니라, 자연 상태에서의 만인의 투쟁과 죽음에 대한 두려움, 즉 '인간의 현재와 미래에 대한 상호간의 두려움(mutual fear of men's present and future)'입니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; padding: 10px; margin-bottom: 12px; font-weight: bold; background-color: #F8FAFC; color: #1E293B;">
+      According to Hobbes, man is not a being who can act morally in spite of his instinct to protect his existence in the state of nature. Hence, the only place where morality and moral liberty will begin to find an application begins in a place where a sovereign power, namely the state, emerges.
+    </div>
+    <div class="exam-passage" style="background-color: transparent; border: none; padding: 0;">
+      (A) In other words, Hobbes, who accepted that human beings are not social and political beings in the state of nature, believes that without the power human beings in the state of nature are “antisocial and rational based on their selfishness”.<br><br>
+      (B) Moreover, since society is not a natural phenomenon and there is no natural force bringing people together, what will bring them together as a society is not mutual affection according to Hobbes. It is, rather, mutual fear of men’s present and future that assembles them.<br><br>
+      (C) Hobbes thus describes the state of nature as a circumstance in which man’s life is “solitary, poor, nasty, brutish and short”. It means when people live without a general power to control them all, they are indeed in a state of war.
+    </div>
+    <div class="exam-choices">
+      ① (A) - (C) - (B)<br>
+      ② (B) - (A) - (C)<br>
+      ③ (B) - (C) - (A)<br>
+      ④ (C) - (A) - (B)<br>
+      ⑤ (C) - (B) - (A)
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ④</b><br>
+        <b>해설:</b> 주어진 글에서 국가(주권 권력)가 출현하기 전인 자연 상태에서는 도덕성이 없다고 전제합니다. 따라서 권력이 없는 자연 상태를 묘사하는 (C)가 가장 먼저 옵니다(고독하고 끔찍한 전쟁 상태). 그 후 (A)에서 이 상황의 인간을 '이기심에 바탕을 둔 반사회적 존재'라고 요약(In other words)합니다. 마지막으로 (B)에서 그렇다면 이 반사회적 존재들을 묶어 사회로 만든 것이 무엇인지(게다가 애정이 아니라 상호 두려움이다) 설명하며 결론을 내립니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 글의 밑줄 친 "<u>in a state of war</u>"가 문맥상 의미하는 바로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      According to Hobbes, man is not a being who can act morally in spite of his instinct to protect his existence in the state of nature. Hence, the only place where morality and moral liberty will begin to find an application begins in a place where a sovereign power, namely the state, emerges. Hobbes thus describes the state of nature as a circumstance in which man’s life is “solitary, poor, nasty, brutish and short”. It means when people live without a general power to control them all, they are indeed <u>in a state of war</u>. In other words, Hobbes, who accepted that human beings are not social and political beings in the state of nature, believes that without the power human beings in the state of nature are “antisocial and rational based on their selfishness”. Moreover, since society is not a natural phenomenon and there is no natural force bringing people together, what will bring them together as a society is not mutual affection according to Hobbes. 
+    </div>
+    <div class="exam-choices">
+      ① a condition where nations fight using military weapons<br>
+      ② a situation dominated by mutual fear and selfish survival without a controlling authority<br>
+      ③ a peaceful environment maintained by a strong sovereign power<br>
+      ④ a natural phenomenon where people help each other survive<br>
+      ⑤ a society built entirely on the mutual affection of citizens
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 홉스의 자연 상태에서 말하는 '전쟁 상태'는 실제 국가 간의 무력 충돌(①)이 아니라, 통제하는 권력이 부재한 상황에서 개인들이 이기적 생존 본능에 따라 서로를 두려워하고 대립하는 만인의 투쟁 상태(②)를 의미합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      In other words, Hobbes, who accepted that human beings are not social and political beings in the state of nature, believes that without the power human beings in the state of nature are “antisocial and rational based on their selfishness”. Moreover, since society is not a natural phenomenon and there is no natural force bringing people together, what will bring them together as a society is not mutual affection according to Hobbes. <u>오히려, 그들을 모으는 것은 인간의 현재와 미래에 대한 상호간의 두려움이다</u>, since the cause of fear is a common drive among people in the state of nature.
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 'It is ~ that' 강조구문을 사용할 것.<br>
+      [주어진 단어: assembles / of men's present and future / rather, / mutual fear / that / them / It / is]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> It is, rather, mutual fear of men's present and future that assembles them<br>
+        <b>해설:</b> 강조구문 'It is ~ that'을 사용하여 'mutual fear of men's present and future'를 강조합니다. 중간에 부사 'rather(오히려)'를 삽입하고, that 뒤에 나머지 요소인 동사 'assembles'와 목적어 'them'을 연결하여 문장을 완성합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

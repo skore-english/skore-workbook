@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | READING AS A SPECTRUM 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 33번 · 빈칸 추론</div>
+    <h1 class="title">READING AS A SPECTRUM<br><span>독서의 경계: 스펙트럼으로서의 독서</span></h1>
+    <p class="header-lead">독서는 단일하고 명확한 개념이 아니라, '가족 유사성'을 통해 느슨하게 연결된 다양한 행동들의 넓은 스펙트럼입니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>가족 유사성(Family resemblances): 비트겐슈타인이 제안한 개념으로, 어떤 개념을 구성하는 대상들이 하나의 공통된 본질을 갖는 것이 아니라, 가족 구성원들처럼 서로 부분적으로 겹치는 특징들을 통해 느슨하게 연결되어 있다는 철학적 개념.</li>
+      <li>스펙트럼(Spectrum): 두 극단 사이에 명확한 경계 없이 연속적으로 존재하는 범위.</li>
+      <li>독서의 재정의: 전통적으로 '책을 읽는 행위'로 엄격히 제한하던 독서를, 책과 관련된 광범위한 활동들을 포함하는 유연하고 포괄적인 개념으로 확장함.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    Some people argue that there is a single, logically consistent concept known as reading that can be neatly set apart from everything else people do with books. Is reading really that simple? The most productive way to think about reading is as a loosely related set of behaviors that belong together owing to family resemblances, as Ludwig Wittgenstein used the phrase, without having in common a single defining trait. Consequently, efforts to distinguish reading from nonreading are destined to fail because there is no agreement on what qualifies as reading in the first place. The more one tries to figure out where the border lies between reading and not-reading, the more edge cases will be found to stretch the term’s flexible boundaries. Thus, it is worth attempting to collect together these exceptional forms of reading into a single forum, one highlighting the challenges faced by anyone wishing to establish the boundaries where reading begins and ends. The attempt moves toward an understanding of reading as a spectrum that is expansive enough to accommodate the distinct reading activities.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 독서는 명확하게 정의되거나 구분될 수 있는 단일한 행동이 아니라, 다양한 예외적 형태들을 수용할 수 있는 폭넓은 스펙트럼으로 이해되어야 한다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. Some people argue / that there is a single, logically consistent concept known as reading / that can be neatly set apart / from everything else people do with books.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 어떤 사람들은 주장한다 / 독서라고 알려진 단일하고 논리적으로 일관된 개념이 있다고 / 깔끔하게 분리될 수 있는 / 사람들이 책으로 하는 다른 모든 것들로부터.<br>
+          <b>[구문 해설]</b> 두 번째 'that'은 주격 관계대명사로 선행사 'a single, logically consistent concept known as reading'을 수식합니다.<br>
+          <b>[핵심 어휘]</b> logically: 논리적으로 / consistent: 일관된 / neatly: 깔끔하게 / set apart from: ~로부터 분리하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. Is reading really that simple?</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 독서가 정말 그렇게 단순한가?<br>
+          <b>[핵심 어휘]</b> simple: 단순한
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. <mark>The most productive way to think about reading / is as a loosely related set of behaviors</mark> / that belong together owing to family resemblances, / as Ludwig Wittgenstein used the phrase, / without having in common a single defining trait.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 독서에 대해 생각하는 가장 생산적인 방법은 / 느슨하게 관련된 일련의 행동들로 (생각하는 것)이다 / 가족 유사성 때문에 함께 속해 있는, / 루트비히 비트겐슈타인이 그 구절을 사용했던 것처럼, / 단일한 결정적 특성을 공통으로 갖지 않은 채.<br>
+          <b>[구문 해설]</b> 'as a loosely related set of behaviors'에서 as는 전치사 역할을 하며 보어 구를 이끕니다. 'that belong together~'는 a loosely related set of behaviors를 수식합니다. 'without having in common ~'은 '~을 공통으로 갖지 않고'라는 뜻입니다.<br>
+          <b>[핵심 어휘]</b> productive: 생산적인 / loosely: 느슨하게 / owing to: ~때문에 / family resemblance: 가족 유사성 / defining trait: 결정적 특성, 정의하는 특성
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. Consequently, efforts to distinguish reading from nonreading / are destined to fail / because there is no agreement / on what qualifies as reading in the first place.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 결과적으로, 독서와 독서가 아닌 것을 구별하려는 노력들은 / 실패할 운명이다 / 합의가 없기 때문에 / 애초에 무엇이 독서로서 자격이 있는지에 대한.<br>
+          <b>[구문 해설]</b> 'efforts to distinguish~'가 주어이며, 복수 동사 'are'로 수일치되었습니다. 'be destined to'는 '~할 운명이다'라는 뜻입니다.<br>
+          <b>[핵심 어휘]</b> distinguish A from B: A와 B를 구별하다 / destined to: ~할 운명인 / agreement: 합의 / qualify as: ~로서 자격이 있다 / in the first place: 애초에
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. The more one tries to figure out / where the border lies between reading and not-reading, / the more edge cases will be found / to stretch the term’s flexible boundaries.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 사람이 알아내려고 노력하면 할수록 / 독서와 독서가 아닌 것 사이에 경계가 어디에 있는지, / 더 많은 예외적(경계선의) 사례들이 발견될 것이다 / 그 용어의 유연한 경계를 넓히는.<br>
+          <b>[구문 해설]</b> 'The + 비교급 ~, the + 비교급 ~' 구문으로 '~하면 할수록, 더 ~하다'의 의미입니다. 'where the border lies ~'는 간접의문문 명사절로 figure out의 목적어입니다.<br>
+          <b>[핵심 어휘]</b> figure out: 알아내다 / border: 경계 / edge case: 예외적 사례(극단적 사례) / stretch: 늘이다, 넓히다 / flexible boundary: 유연한 경계
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. Thus, it is worth attempting to collect together / these exceptional forms of reading / into a single forum, / one highlighting the challenges / faced by anyone wishing to establish the boundaries / where reading begins and ends.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 따라서, 함께 모아볼 가치가 있다 / 이러한 예외적인 형태의 독서들을 / 단일한 논의의 장으로, / 즉 어려움들을 강조하는 곳(장)으로 / 경계를 설정하기를 바라는 누구나 직면하는 / 독서가 시작되고 끝나는.<br>
+          <b>[구문 해설]</b> 'it is worth -ing'는 '~할 가치가 있다'는 구문입니다. 'one'은 'a single forum'과 동격 명사입니다. 'faced by~'는 the challenges를 수식하는 과거분사구입니다.<br>
+          <b>[핵심 어휘]</b> attempt: 시도하다 / collect: 모으다 / exceptional: 예외적인 / forum: (논의의) 장, 포럼 / highlight: 강조하다 / challenge: 어려움, 도전 / establish: 설정하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. The attempt moves / toward an understanding of reading as a spectrum / that is expansive enough to accommodate / the distinct reading activities.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그 시도는 나아간다 / 스펙트럼으로서의 독서에 대한 이해를 향해 / 수용하기에 충분히 포괄적인(넓은) / 그 뚜렷이 다른 독서 활동들을.<br>
+          <b>[구문 해설]</b> 'expansive enough to accommodate~'에서 '형용사 + enough to V'는 '~할 정도로 충분히 ~한'이라는 의미입니다.<br>
+          <b>[핵심 어휘]</b> move toward: ~을 향해 나아가다 / spectrum: 스펙트럼 / expansive: 포괄적인, 팽창력 있는 / accommodate: 수용하다 / distinct: 뚜렷이 다른, 별개의
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>단일한 개념으로서의 독서에 대한 의문</h4>
+      <p>독서를 책과 관련된 다른 행동과 명확히 구분되는 단일하고 일관된 개념으로 보는 시각에 의문을 제기함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>가족 유사성과 경계의 모호성</h4>
+      <p>비트겐슈타인의 '가족 유사성'을 빌려 독서를 공통된 특성이 없는 유연한 행동들의 집합으로 규정하며, 독서와 비독서를 구별하려는 노력이 실패할 수밖에 없는 이유를 설명함.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>스펙트럼으로서의 독서 수용</h4>
+      <p>명확한 경계 긋기를 고집하기보다는, 다양한 예외적 독서 활동들을 모두 포용할 수 있는 넓은 '스펙트럼'으로 독서를 이해해야 한다고 주장함.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>The more one tries to figure out where the border lies between reading and not-reading, the more edge cases will be [ finding / found ] to stretch the term’s flexible boundaries.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="사례들(cases)이 스스로 무언가를 발견하는 능동적 행위자가 아니므로 현재분사 finding은 어색합니다.">finding</button>
+      <button class="drill-btn" data-ans="correct" data-exp="주어인 '더 많은 예외적 사례들(the more edge cases)'은 '발견되는' 수동의 대상이므로 과거분사 found가 쓰인 수동태 구조가 맞습니다.">found</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>The attempt moves toward an understanding of reading as a spectrum that is [ expansive enough / enough expansive ] to accommodate the distinct reading activities.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="correct" data-exp="부사 enough가 형용사(expansive)를 수식할 때는 형용사 뒤에 위치하여 '형용사/부사 + enough to V' 형태를 취해야 합니다.">expansive enough</button>
+      <button class="drill-btn" data-ans="incorrect" data-exp="enough가 명사를 수식할 때는 앞에 오지만, 형용사를 수식할 때는 반드시 뒤에 와야 합니다.">enough expansive</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Some people argue that there is a single, logically consistent concept known as reading that can be neatly set apart from everything else people do with books. Is reading really that simple? The most productive way to think about reading is as a loosely related set of behaviors that belong together owing to family resemblances, as Ludwig Wittgenstein used the phrase, without having in common a single defining trait. Consequently, efforts to distinguish reading from nonreading are destined to fail because there is no agreement on what qualifies as reading in the first place. The more one tries to figure out where the border lies between reading and not-reading, the more edge cases will be found to stretch the term’s flexible boundaries. Thus, it is worth attempting to collect together these exceptional forms of reading into a single forum, one highlighting the challenges faced by anyone wishing to establish the boundaries where reading begins and ends. The attempt moves toward an understanding of reading as a spectrum that is expansive enough to accommodate the distinct reading activities.
+    </div>
+    <div class="exam-choices">
+      ① Why Books Still Matter in the Digital Age<br>
+      ② Reading: A Flexible Spectrum of Behaviors<br>
+      ③ The Strict Border Between Reading and Non-reading<br>
+      ④ How to Improve Your Reading Comprehension<br>
+      ⑤ Ludwig Wittgenstein's Approach to Literature
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 이 글은 독서를 명확히 구별되는 단일한 행동이 아니라 다양한 예외적 형태들을 모두 수용하는 포괄적이고 유연한 스펙트럼으로 이해해야 한다는 내용을 담고 있습니다. 따라서 ② '독서: 유연한 행동들의 스펙트럼'이 제목으로 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+    <div class="exam-passage">
+      Some people argue that there is a single, logically consistent concept known as reading that can be neatly set apart from everything else people do with books. Is reading really that simple? The most productive way to think about reading is as a loosely related set of behaviors that belong together owing to family resemblances, without having in common a single defining trait. Consequently, efforts to distinguish reading from nonreading are destined to ①<u>fail</u> because there is no ②<u>agreement</u> on what qualifies as reading in the first place. The more one tries to figure out where the border lies between reading and not-reading, the more edge cases will be found to ③<u>stretch</u> the term’s flexible boundaries. Thus, it is worth attempting to ④<u>exclude</u> these exceptional forms of reading into a single forum, one highlighting the challenges faced by anyone wishing to establish the boundaries where reading begins and ends. The attempt moves toward an understanding of reading as a spectrum that is expansive enough to ⑤<u>accommodate</u> the distinct reading activities.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ④ exclude -> collect together</b><br>
+        <b>해설:</b> 글의 흐름상 경계를 명확히 긋기 어려운 예외적인 형태의 독서들을 단일한 논의의 장으로 '배제(exclude)'하는 것이 아니라 '함께 모아볼(collect together)' 가치가 있다고 주장해야 문맥상 논리적으로 일치합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 문장이 들어가기에 가장 적절한 곳은?</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; text-align: center; font-weight: bold; margin-bottom: 16px;">
+      Consequently, efforts to distinguish reading from nonreading are destined to fail because there is no agreement on what qualifies as reading in the first place.
+    </div>
+    <div class="exam-passage">
+      Some people argue that there is a single, logically consistent concept known as reading that can be neatly set apart from everything else people do with books. Is reading really that simple? ( ① ) The most productive way to think about reading is as a loosely related set of behaviors that belong together owing to family resemblances, as Ludwig Wittgenstein used the phrase, without having in common a single defining trait. ( ② ) The more one tries to figure out where the border lies between reading and not-reading, the more edge cases will be found to stretch the term’s flexible boundaries. ( ③ ) Thus, it is worth attempting to collect together these exceptional forms of reading into a single forum, one highlighting the challenges faced by anyone wishing to establish the boundaries where reading begins and ends. ( ④ ) The attempt moves toward an understanding of reading as a spectrum that is expansive enough to accommodate the distinct reading activities. ( ⑤ )
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 제시된 문장은 "결과적으로, 독서와 비독서를 구별하려는 노력은 애초에 합의가 없기 때문에 실패할 운명이다"라는 내용을 담고 있습니다. 이는 독서가 '단일한 특성 없이 느슨하게 관련된 집합'이라는 설명(가족 유사성) 뒤에 논리적인 결과(Consequently)로 이어져야 하며, 그 결과로 경계를 찾으려 할수록 예외 사례만 더 발견된다는 문장 앞인 ②번 자리에 들어가는 것이 가장 자연스럽습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      Consequently, efforts to distinguish reading from nonreading are destined to fail because there is no agreement on what qualifies as reading in the first place. <u>사람이 알아내려고 노력하면 할수록 독서와 독서가 아닌 것 사이에 경계가 어디에 있는지, 더 많은 예외적 사례들이 발견될 것이다</u> to stretch the term’s flexible boundaries. Thus, it is worth attempting to collect together these exceptional forms of reading into a single forum.
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 'the + 비교급, the + 비교급' 구문을 활용할 것.<br>
+      [주어진 단어: the border / the more / one / edge cases / lies / to figure out / tries / where / will be found / The more / between reading and not-reading,]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> The more one tries to figure out where the border lies between reading and not-reading, the more edge cases will be found<br>
+        <b>해설:</b> 'The + 비교급'으로 시작하여 'The more one tries to figure out(사람이 알아내려고 노력하면 할수록)'을 만듭니다. 'figure out'의 목적어로 간접의문문 명사절인 'where the border lies between reading and not-reading(경계가 독서와 독서가 아닌 것 사이에 어디에 있는지)'를 배치합니다. 콤마 뒤에 다시 'the + 비교급'인 'the more edge cases'를 주어로 세우고 동사구 'will be found'를 연결하여 완성합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

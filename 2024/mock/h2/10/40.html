@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | COGNITIVE INFLUENCE ON PERCEPTION 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 40번</div>
+    <h1 class="title">COGNITIVE INFLUENCE ON PERCEPTION<br><span>인지가 지각에 미치는 영향: 색상 인식 실험</span></h1>
+    <p class="header-lead">우리가 대상을 인식할 때, 그 대상과 연관된 인지적 배경지식이 우리의 실제 시각적 지각에 영향을 미친다는 것을 보여주는 실험입니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>인지적 요인(Cognitive factors): 우리가 이전에 학습했거나 알고 있는 지식, 기억, 연상 작용 등을 의미함.</li>
+      <li>지각의 현상학(Phenomenology of perception): 우리가 외부 세계를 시각, 청각 등의 감각으로 어떻게 경험하고 인식하는지에 대한 현상.</li>
+      <li>색상 연상(Color association): '사과는 빨갛다'처럼 특정 대상과 특정 색상을 무의식적으로 연결 지어 생각하는 심리적 작용.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    There is research that supports the idea that cognitive factors influence the phenomenology of the perceived world. Delk and Fillenbaum asked participants to match the color of figures with the color of their background. Some of the figures depicted objects associated with a particular color. These included typically red objects such as an apple, lips, and a symbolic heart. Other objects were presented that are not usually associated with red, such as a mushroom or a bell. However, all the figures were made out of the same red-orange cardboard. Participants then had to match the figure to a background varying from dark to light red. They had to make the background color match the color of the figures. The researchers found that red-associated objects required more red in the background to be judged a match than did the objects that are not associated with the color red. This implies that the cognitive association of objects to color influences how we perceive that color.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 특정 색상과 연관된 인지적 지식(예: 사과는 빨갛다)은 대상의 실제 색상이 같더라도 우리가 그 대상을 시각적으로 지각하는 방식에 직접적인 영향을 미친다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. There is research that supports the idea / that cognitive factors influence the phenomenology of the perceived world.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 아이디어를 뒷받침하는 연구가 있다 / 인지적 요인들이 지각된 세계의 현상학에 영향을 미친다는.<br>
+          <b>[구문 해설]</b> 첫 번째 'that'은 주격 관계대명사이며, 두 번째 'that'은 'the idea'의 내용을 풀어 설명하는 동격의 접속사입니다.<br>
+          <b>[핵심 어휘]</b> cognitive: 인지의 / factor: 요인 / influence: 영향을 미치다 / phenomenology: 현상학 / perceived: 지각된
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. Delk and Fillenbaum asked participants / to match the color of figures / with the color of their background.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> Delk와 Fillenbaum은 참가자들에게 요청했다 / 도형들의 색상을 맞추라고 / 그것들의 배경 색상과.<br>
+          <b>[구문 해설]</b> 'ask + 목적어 + to부정사' 구문으로 '~에게 ~해 달라고 요청하다'의 의미입니다. 'match A with B'는 'A를 B와 맞추다'입니다.<br>
+          <b>[핵심 어휘]</b> participant: 참가자 / match: 맞추다, 일치시키다 / figure: 도형, 모양
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. Some of the figures depicted objects / associated with a particular color.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 도형들 중 일부는 사물들을 묘사했다 / 특정 색상과 연관된.<br>
+          <b>[구문 해설]</b> 'associated with~'는 과거분사구로 앞의 명사 'objects'를 수식합니다.<br>
+          <b>[핵심 어휘]</b> depict: 묘사하다 / associated with: ~와 연관된 / particular: 특정한
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. These included typically red objects / such as an apple, lips, and a symbolic heart.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이것들은 전형적으로 붉은 사물들을 포함했다 / 사과, 입술, 그리고 상징적인 심장(하트)과 같은.<br>
+          <b>[핵심 어휘]</b> typically: 전형적으로 / symbolic: 상징적인
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. Other objects were presented / that are not usually associated with red, / such as a mushroom or a bell.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 다른 사물들이 제시되었다 / 대개 붉은색과 연관되지 않는, / 버섯이나 종과 같은.<br>
+          <b>[구문 해설]</b> 주격 관계대명사 'that'절이 주어인 'Other objects'를 수식하기 위해 동사(were presented) 뒤로 분리되어 도치된 형태입니다.<br>
+          <b>[핵심 어휘]</b> present: 제시하다 / mushroom: 버섯
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. <mark>However, all the figures were made out / of the same red-orange cardboard</mark>.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 하지만, 모든 도형들은 만들어졌다 / 동일한 붉은 오렌지색 판지로.<br>
+          <b>[구문 해설]</b> 'be made out of'는 '~로 만들어지다'라는 뜻의 수동태 표현입니다.<br>
+          <b>[핵심 어휘]</b> make out of: ~으로 만들다 / cardboard: 판지, 마분지
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. Participants then had to match the figure / to a background varying from dark to light red.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그런 다음 참가자들은 그 도형을 맞춰야 했다 / 어두운 붉은색에서 밝은 붉은색까지 다양하게 변하는 배경에.<br>
+          <b>[구문 해설]</b> 'varying from A to B'는 현재분사구로 'a background'를 수식합니다.<br>
+          <b>[핵심 어휘]</b> vary from A to B: A에서 B까지 다양하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">8. They had to make the background color / match the color of the figures.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그들은 배경 색상을 만들게 해야 했다 / 도형들의 색상과 일치하도록.<br>
+          <b>[구문 해설]</b> 사역동사 'make' 뒤에 목적어(the background color)와 목적격 보어(동사원형 match)가 쓰였습니다.<br>
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">9. The researchers found / that red-associated objects required more red in the background / to be judged a match / than did the objects / that are not associated with the color red.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 연구자들은 발견했다 / 붉은색과 연관된 사물들이 배경에 더 많은 붉은색을 요구한다는 것을 / 일치하는 것으로 판단되기 위해 / 사물들이 그랬던(요구했던) 것보다 / 붉은색과 연관되지 않은.<br>
+          <b>[구문 해설]</b> 'than did the objects'에서 'did'는 앞선 일반동사 'required'를 대신하는 대동사입니다. 'to be judged'는 목적을 나타내는 부사적 용법의 수동태입니다.<br>
+          <b>[핵심 어휘]</b> require: 요구하다 / judge: 판단하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">10. This implies / that the cognitive association of objects to color / influences how we perceive that color.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이것은 암시한다 / 사물을 색상에 연관시키는 인지적 연상이 / 우리가 그 색상을 지각하는 방식에 영향을 미친다는 것을.<br>
+          <b>[구문 해설]</b> 'how we perceive that color'는 간접의문문 명사절로 influences의 목적어 역할을 합니다.<br>
+          <b>[핵심 어휘]</b> imply: 암시하다 / association: 연상, 연관성 / perceive: 지각하다, 인식하다
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>인지가 지각에 미치는 영향</h4>
+      <p>단순한 시각적 정보뿐만 아니라, 우리의 인지적 요인(배경지식)이 사물을 지각하는 방식(현상학)에 영향을 미친다는 아이디어를 소개함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>Delk와 Fillenbaum의 실험</h4>
+      <p>붉은색과 연관된 사물(사과, 입술)과 연관 없는 사물(버섯, 종)을 모두 '동일한 붉은 오렌지색 판지'로 만들어 참가자들에게 배경색과 일치시키도록 요구함.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>실험 결과와 시사점</h4>
+      <p>참가자들은 동일한 색의 종이로 만들었음에도 '사과'처럼 붉은색과 연관된 사물을 배경과 맞출 때 더 붉은 배경을 선택함. 즉, 색상에 대한 인지적 연상이 실제 색상 지각에 영향을 미침을 입증함.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>There is research that supports the idea [ which / that ] cognitive factors influence the phenomenology of the perceived world.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="뒤에 완전한 문장이 오고 있으므로 관계대명사 which는 올 수 없습니다.">which</button>
+      <button class="drill-btn" data-ans="correct" data-exp="the idea의 구체적 내용을 설명하며 뒤에 완전한 문장 구조를 이끄는 동격의 접속사 that이 정답입니다.">that</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>The researchers found that red-associated objects required more red in the background to be judged a match than [ were / did ] the objects that are not associated with the color red.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="앞선 문장의 동사가 be동사가 아니므로 were를 쓸 수 없습니다.">were</button>
+      <button class="drill-btn" data-ans="correct" data-exp="앞선 문장의 일반동사 'required'를 대신하는 대동사가 필요하므로 과거형인 did가 올바릅니다.">did</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      There is research that supports the idea that cognitive factors influence the phenomenology of the perceived world. Delk and Fillenbaum asked participants to match the color of figures with the color of their background. Some of the figures depicted objects associated with a particular color. These included typically red objects such as an apple, lips, and a symbolic heart. Other objects were presented that are not usually associated with red, such as a mushroom or a bell. However, all the figures were made out of the same red-orange cardboard. Participants then had to match the figure to a background varying from dark to light red. They had to make the background color match the color of the figures. The researchers found that red-associated objects required more red in the background to be judged a match than did the objects that are not associated with the color red. This implies that the cognitive association of objects to color influences how we perceive that color.
+    </div>
+    <div class="exam-choices">
+      ① The Biological Structure of Human Eyes in Color Detection<br>
+      ② How Our Prior Knowledge and Associations Alter Visual Perception<br>
+      ③ Why Red Is Universally Recognized as a Warning Signal<br>
+      ④ The Difficulty of Matching Colors in Dim Lighting Conditions<br>
+      ⑤ The Process of Creating Illusions Using Red-Orange Cardboard
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 이 글은 특정 사물에 대해 우리가 가지고 있는 인지적 연상(사과는 빨갛다 등)이 실제 시각적인 색상 인식에 영향을 미친다는 것을 설명하는 실험입니다. 따라서 ② '우리의 사전 지식과 연상이 어떻게 시각적 지각을 바꾸는가'가 제목으로 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+    <div class="exam-passage">
+      There is research that supports the idea that cognitive factors ①<u>influence</u> the phenomenology of the perceived world. Delk and Fillenbaum asked participants to match the color of figures with the color of their background. Some of the figures depicted objects ②<u>associated</u> with a particular color. These included typically red objects such as an apple, lips, and a symbolic heart. Other objects were presented that are not usually associated with red, such as a mushroom or a bell. However, all the figures were made out of the ③<u>different</u> red-orange cardboard. Participants then had to match the figure to a background varying from dark to light red. They had to make the background color match the color of the figures. The researchers found that red-associated objects ④<u>required</u> more red in the background to be judged a match than did the objects that are not associated with the color red. This ⑤<u>implies</u> that the cognitive association of objects to color influences how we perceive that color.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③ different -> same</b><br>
+        <b>해설:</b> 실험의 핵심 전제는 사물(사과, 버섯 등)의 모양은 다르더라도, 오려낸 종이의 실제 색상은 완벽히 '동일한(same)' 붉은 오렌지색 판지였다는 점입니다. 그래야 참가자들이 인지적 요인에 의해 '다르게' 색을 인식했다는 결론을 도출할 수 있습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳은?</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; text-align: center; font-weight: bold; margin-bottom: 16px;">
+      However, all the figures were made out of the same red-orange cardboard.
+    </div>
+    <div class="exam-passage">
+      There is research that supports the idea that cognitive factors influence the phenomenology of the perceived world. ( ① ) Delk and Fillenbaum asked participants to match the color of figures with the color of their background. ( ② ) Some of the figures depicted objects associated with a particular color. These included typically red objects such as an apple, lips, and a symbolic heart. ( ③ ) Other objects were presented that are not usually associated with red, such as a mushroom or a bell. ( ④ ) Participants then had to match the figure to a background varying from dark to light red. ( ⑤ ) They had to make the background color match the color of the figures. The researchers found that red-associated objects required more red in the background to be judged a match than did the objects that are not associated with the color red.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ④</b><br>
+        <b>해설:</b> 붉은색과 연관된 사물들(사과 등)과 연관되지 않은 사물들(버섯 등)이 제시되었다는 나열이 끝난 후, "그러나 이 모든 도형들은 '동일한' 색상의 종이로 만들어졌다"라는 실험의 핵심적인 통제 조건을 밝히는 문장이 오는 것이 가장 논리적입니다. 따라서 ④번 자리가 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      Participants then had to match the figure to a background varying from dark to light red. They had to make the background color match the color of the figures. The researchers found that red-associated objects required more red in the background to be judged a match than did the objects that are not associated with the color red. This implies that <u>사물을 색상에 연관시키는 인지적 연상이 우리가 그 색상을 지각하는 방식에 영향을 미친다는 것을.</u>
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 간접의문문 명

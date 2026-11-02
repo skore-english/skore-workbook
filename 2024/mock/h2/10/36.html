@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | THE BRAIN'S EFFICIENCY 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 36번 · 순서 배열</div>
+    <h1 class="title">THE BRAIN'S EFFICIENCY<br><span>뇌의 에너지 절약과 일반화 전략</span></h1>
+    <p class="header-lead">뇌는 막대한 정보를 모두 세밀하게 저장하기보다, 불필요한 에너지 소모를 줄이기 위해 패턴을 통한 단순화와 일반화라는 지름길을 택합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>뇌의 가소성과 에너지 효율: 뇌는 이론적으로 엄청난 용량을 가지지만 에너지를 매우 많이 소모하는 기관이므로 효율성을 최우선으로 고려하여 작동함.</li>
+      <li>인지적 지름길(Cognitive shortcut): 복잡한 정보 처리를 단순화하여 빠르고 에너지 소모가 적은 방식으로 판단과 인식을 내리는 뇌의 전략.</li>
+      <li>패턴 인식(Pattern recognition): 대상의 모든 세부 사항을 일일이 기억하지 않고, 뼈대가 되는 일반적인 패턴을 저장하여 다양한 상황(조명, 각도 등)에서도 대상을 동일하게 식별하는 기제.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    Theoretically, our brain would have the capacity to store all experiences throughout life, reaching the quality of a DVD. However, this theoretical capacity is offset by the energy demand associated with the process of storing and retrieving information in memory. As a result, the brain develops efficient strategies, becoming dependent on shortcuts. When we observe a face, the visual image captured by the eyes is highly variable, depending on the point of view, lighting conditions and other contextual factors. Nevertheless, we are able to recognize the face as the same, maintaining the underlying identity. The brain, rather than focusing on the details of visualization, creates and stores general patterns that allow for consistent recognition across diverse circumstances. This ability to match what we see with general visual memory patterns serves as an effective mechanism for optimizing brain performance and saving energy. The brain, being naturally against unnecessary effort, constantly seeks to simplify and generalize information to facilitate the cognitive process.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 뇌는 불필요한 에너지 소모를 막고 인지 과정을 최적화하기 위해 세부 사항을 모두 저장하기보다 정보(이미지)를 단순화하고 일반적인 패턴으로 저장하는 지름길을 택한다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. Theoretically, our brain would have the capacity to store all experiences throughout life, / reaching the quality of a DVD.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이론적으로, 우리의 뇌는 평생에 걸친 모든 경험을 저장할 수 있는 능력을 가지고 있을 것이다, / DVD의 화질(수준)에 도달하면서.<br>
+          <b>[구문 해설]</b> 'reaching~'은 분사구문으로 동시동작이나 연속적 상황을 나타냅니다.<br>
+          <b>[핵심 어휘]</b> theoretically: 이론적으로 / capacity: 능력, 용량 / store: 저장하다 / throughout: ~내내, ~에 걸쳐 / reach: 도달하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. However, this theoretical capacity is offset / by the energy demand associated with the process / of storing and retrieving information in memory.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러나 이 이론적 능력은 상쇄된다 / 그 과정과 관련된 에너지 요구에 의해 / 기억 속에 정보를 저장하고 검색하는.<br>
+          <b>[구문 해설]</b> 'associated with the process'는 과거분사구로 앞의 명사 'the energy demand'를 후치 수식합니다.<br>
+          <b>[핵심 어휘]</b> offset: 상쇄하다 / demand: 요구, 수요 / associate with: ~와 관련되다 / retrieve: 검색하다, 되찾다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. As a result, the brain develops efficient strategies, / becoming dependent on shortcuts.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그 결과, 뇌는 효율적인 전략을 개발한다, / 지름길에 의존하게 되면서.<br>
+          <b>[구문 해설]</b> 콤마(,) 뒤에 이어지는 'becoming'은 앞선 주절의 결과나 동시동작을 나타내는 분사구문입니다.<br>
+          <b>[핵심 어휘]</b> efficient: 효율적인 / dependent on: ~에 의존하는 / shortcut: 지름길
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. When we observe a face, / the visual image captured by the eyes is highly variable, / depending on the point of view, lighting conditions and other contextual factors.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 우리가 얼굴을 관찰할 때, / 눈에 의해 포착된 시각적 이미지는 매우 가변적이다, / 보는 관점, 조명 조건 및 기타 상황적 요인에 따라.<br>
+          <b>[구문 해설]</b> 'captured by the eyes'는 앞의 'the visual image'를 수식하는 과거분사구입니다. 'depending on'은 '~에 따라'라는 관용적 분사구문입니다.<br>
+          <b>[핵심 어휘]</b> observe: 관찰하다 / capture: 포착하다 / variable: 가변적인, 변하기 쉬운 / lighting: 조명 / contextual: 상황적인, 문맥상의
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. Nevertheless, we are able to recognize the face as the same, / maintaining the underlying identity.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그럼에도 불구하고, 우리는 그 얼굴을 똑같은 것으로 인식할 수 있다, / 기저에 있는(근본적인) 정체성을 유지하면서.<br>
+          <b>[핵심 어휘]</b> nevertheless: 그럼에도 불구하고 / recognize: 인식하다 / maintain: 유지하다 / underlying: 기저에 있는, 근본적인 / identity: 정체성
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. The brain, rather than focusing on the details of visualization, / creates and stores general patterns / that allow for consistent recognition across diverse circumstances.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 뇌는, 시각화의 세부 사항에 초점을 맞추기보다는, / 일반적인 패턴을 만들고 저장한다 / 다양한 상황 전반에서 일관된 인식을 허용하는.<br>
+          <b>[구문 해설]</b> 'rather than -ing'는 '~하기보다는 차라리'라는 뜻입니다. 'that'은 주격 관계대명사로 선행사 'general patterns'를 수식하여 동사 'allow'가 복수형으로 쓰였습니다.<br>
+          <b>[핵심 어휘]</b> detail: 세부 사항 / visualization: 시각화 / consistent: 일관된 / recognition: 인식 / diverse: 다양한 / circumstance: 상황
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. This ability to match what we see with general visual memory patterns / serves as an effective mechanism / for optimizing brain performance and saving energy.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 우리가 보는 것을 일반적인 시각 기억 패턴과 일치시키는 이 능력은 / 효과적인 기제로 작용한다 / 뇌 성능을 최적화하고 에너지를 절약하기 위한.<br>
+          <b>[구문 해설]</b> 'to match ~'는 앞의 명사 'ability'를 수식하는 형용사적 용법입니다. 'match A with B'는 'A를 B와 일치시키다'입니다. 전치사 for 뒤에 동명사 optimizing과 saving이 병렬을 이룹니다.<br>
+          <b>[핵심 어휘]</b> match A with B: A를 B와 맞추다(일치시키다) / serve as: ~로서 작용하다 / mechanism: 기제 / optimize: 최적화하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">8. <mark>The brain, being naturally against unnecessary effort, / constantly seeks to simplify and generalize information</mark> / to facilitate the cognitive process.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 불필요한 노력에 본능적으로 반대하는 뇌는, / 끊임없이 정보를 단순화하고 일반화하려고 추구한다 / 인지 과정을 용이하게 하기 위해.<br>
+          <b>[구문 해설]</b> 주어 'The brain'과 동사 'seeks' 사이에 삽입된 'being naturally against unnecessary effort'는 뇌의 속성을 설명하는 분사구문입니다. 'to facilitate'는 목적을 나타내는 to부정사입니다.<br>
+          <b>[핵심 어휘]</b> naturally: 자연스럽게, 본능적으로 / constantly: 끊임없이 / seek: 추구하다 / simplify: 단순화하다 / generalize: 일반화하다 / facilitate: 용이하게 하다 / cognitive: 인지의
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>기억 용량과 에너지의 상충 관계</h4>
+      <p>뇌는 모든 경험을 저장할 만한 이론적 용량이 있지만, 정보 저장과 검색에 엄청난 에너지가 요구되기 때문에 이 능력이 상쇄됨을 설명함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>뇌의 지름길: 패턴 인식</h4>
+      <p>에너지 소비를 줄이기 위해 뇌는 '지름길'을 선택함. 가변적인 시각 정보의 세부 사항에 집착하지 않고, 다양한 상황에서도 얼굴을 인식하게 해주는 '일반적인 패턴'을 만들어 저장함.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>에너지 최적화와 정보 일반화</h4>
+      <p>보이는 것을 기억 속 패턴과 맞추는 능력은 에너지를 절약하는 효과적인 기제임. 뇌는 불필요한 노력을 피하고 인지 과정을 쉽게 하기 위해 항상 정보의 단순화와 일반화를 추구함.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>However, this theoretical capacity is offset by the energy demand [ associated / associating ] with the process of storing and retrieving information in memory.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="correct" data-exp="에너지 요구(demand)는 뒤에 나오는 저장 과정 등과 '관련된(수동)' 것이므로 과거분사 associated가 명사를 후치 수식해야 합니다.">associated</button>
+      <button class="drill-btn" data-ans="incorrect" data-exp="에너지 요구가 스스로 무엇을 연관시키는 능동적 주체가 아니므로 현재분사는 부적절합니다.">associating</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>The brain, [ is / being ] naturally against unnecessary effort, constantly seeks to simplify and generalize information.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="주어 The brain 뒤에 바로 본동사 seeks가 존재하므로, 콤마 사이에 또 다른 정동사 is가 올 수 없습니다.">is</button>
+      <button class="drill-btn" data-ans="correct" data-exp="문장의 본동사는 seeks입니다. 콤마와 콤마 사이에는 주어를 부연 설명하는 분사구문이 와야 하므로 being이 올바릅니다.">being</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 요지로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Theoretically, our brain would have the capacity to store all experiences throughout life, reaching the quality of a DVD. However, this theoretical capacity is offset by the energy demand associated with the process of storing and retrieving information in memory. As a result, the brain develops efficient strategies, becoming dependent on shortcuts. When we observe a face, the visual image captured by the eyes is highly variable, depending on the point of view, lighting conditions and other contextual factors. Nevertheless, we are able to recognize the face as the same, maintaining the underlying identity. The brain, rather than focusing on the details of visualization, creates and stores general patterns that allow for consistent recognition across diverse circumstances. This ability to match what we see with general visual memory patterns serves as an effective mechanism for optimizing brain performance and saving energy. The brain, being naturally against unnecessary effort, constantly seeks to simplify and generalize information to facilitate the cognitive process.
+    </div>
+    <div class="exam-choices">
+      ① 뇌는 모든 시각적 세부 사항을 저장하여 인지 능력을 끊임없이 향상시킨다.<br>
+      ② 뇌는 정보의 단순화와 패턴화를 통해 에너지 소모를 줄이고 인지 과정을 최적화한다.<br>
+      ③ 뇌의 저장 용량에는 한계가 없으므로 과거의 모든 경험을 선명하게 복원할 수 있다.<br>
+      ④ 시각적 이미지는 상황에 따라 변하므로 뇌는 매번 새로운 인식 체계를 형성한다.<br>
+      ⑤ 인간의 얼굴 인식 능력은 일반적인 기억보다 상황적 요인에 전적으로 의존한다.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ②</b><br>
+        <b>해설:</b> 뇌는 세부 사항을 모두 저장할 경우 발생하는 막대한 에너지 소모를 막기 위해, 정보를 단순화하고 일반적인 패턴으로 저장하는 효율적인 전략을 취한다는 것이 이 글의 핵심 요지입니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 다음 글의 내용과 일치하지 않는 것은?</h4>
+    <div class="exam-passage">
+      Theoretically, our brain would have the capacity to store all experiences throughout life, reaching the quality of a DVD. However, this theoretical capacity is offset by the energy demand associated with the process of storing and retrieving information in memory. As a result, the brain develops efficient strategies, becoming dependent on shortcuts. When we observe a face, the visual image captured by the eyes is highly variable, depending on the point of view, lighting conditions and other contextual factors. Nevertheless, we are able to recognize the face as the same, maintaining the underlying identity. The brain, rather than focusing on the details of visualization, creates and stores general patterns that allow for consistent recognition across diverse circumstances. This ability to match what we see with general visual memory patterns serves as an effective mechanism for optimizing brain performance and saving energy. The brain, being naturally against unnecessary effort, constantly seeks to simplify and generalize information to facilitate the cognitive process.
+    </div>
+    <div class="exam-choices">
+      ① 이론적으로 우리의 뇌는 평생에 걸친 모든 경험을 저장할 수 있는 능력이 있다.<br>
+      ② 정보 저장과 검색 과정에서 발생하는 에너지 요구가 뇌의 이론적 능력을 상쇄한다.<br>
+      ③ 눈에 의해 포착된 시각적 이미지는 보는 관점이나 조명 조건에 상관없이 항상 일정하다.<br>
+      ④ 뇌는 시각화의 세부 사항에 집중하기보다 다양한 상황에서 일관된 인식을 허용하는 패턴을 저장한다.<br>
+      ⑤ 뇌는 불필요한 노력을 피하기 위해 끊임없이 정보를 단순화하고 일반화하려 한다.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 본문에서 "the visual image captured by the eyes is highly variable(눈에 의해 포착된 시각적 이미지는 매우 가변적이다)"라고 명시하였으므로, 항상 일정하다는 ③번의 설명은 본문의 내용과 일치하지 않습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      Theoretically, our brain would have the capacity to store all experiences throughout life, reaching the quality of a DVD. However, this theoretical capacity is offset by the energy demand associated with the process of storing and retrieving information in memory. As a result, the brain develops efficient strategies, becoming dependent on shortcuts. When we observe a face, the visual image captured by the eyes is highly variable, depending on the point of view, lighting conditions and other contextual factors. Nevertheless, we are able to recognize the face as the same, maintaining the underlying identity. The brain, rather than focusing on the details of visualization, creates and stores general patterns that allow for consistent recognition across diverse circumstances. This ability to match what we see with general visual memory patterns serves as an effective mechanism for optimizing brain performance and saving energy. The brain, being naturally against unnecessary effort, constantly seeks to simplify and generalize information to facilitate the cognitive process.
+    </div>
+    <div class="summary-box">
+      To avoid excessive &nbsp;&nbsp;&nbsp;(A)&nbsp;&nbsp;&nbsp; consumption from detailed memory storage, the brain develops a strategy of relying on generalized &nbsp;&nbsp;&nbsp;(B)&nbsp;&nbsp;&nbsp; for efficient recognition.
+    </div>
+    <div class="exam-choices">
+      ① (A) energy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) patterns<br>
+      ② (A) energy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) details<br>
+      ③ (A) time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) identities<br>
+      ④ (A) space &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) images<br>
+      ⑤ (A) space &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) patterns
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ①</b><br>
+        <b>해설:</b> 뇌는 세부적인 기억 저장으로 인한 과도한 에너지(energy) 소모를 피하기 위해, 효율적인 인식을 위한 일반화된 패턴(patterns)에 의존하는 전략을 개발합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      Nevertheless, we are able to recognize the face as the same, maintaining the underlying identity. The brain, rather than focusing on the details of visualization, <u>다양한 상황 전반에서 일관된 인식을 허용하는 일반적인 패턴을 만들고 저장한다.</u> This ability to match what we see with general visual memory patterns serves as an effective mechanism for optimizing brain performance and saving energy.
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 어형 변화 없이 그대로 배열할 것.<br>
+      [주어진 단어: across / recognition / allow for / creates and stores / diverse circumstances / general patterns / that / consistent]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> creates and stores general patterns that allow for consistent recognition across diverse circumstances<br>
+        <b>해설:</b> 주어 'The brain'에 이어지는 동사구 'creates and stores(만들고 저장한다)'를 쓰고 목적어 'general patterns(일반적인 패턴을)'를 배치합니다. 그 뒤에 주격 관계대명사 'that'을 사용하여 'allow for consistent recognition(일관된 인식을 허용하는)'을 연결하고, 마지막에 전치사구 'across diverse circumstances(다양한 상황 전반에서)'를 붙여 문장을 완성합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

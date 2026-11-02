@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | TRANSLATION AS A CROWD EFFORT 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 32번 · 빈칸 추론</div>
+    <h1 class="title">TRANSLATION AS A CROWD EFFORT<br><span>모든 번역은 군중 번역이다</span></h1>
+    <p class="header-lead">번역은 펜을 든 단 한 사람의 고립된 작업처럼 보일지라도, 수많은 기존 문헌과 타인과의 상호작용 속에서 완성되는 집단적인 과정입니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>번역의 본질(Nature of Translation): 번역은 고립된 작업이 아니라 독자, 기존 문헌, 타인과의 대화 등 사회적 맥락 속에서 이루어지는 집단적(crowd) 과정임.</li>
+      <li>알렉산더 포프(Alexander Pope): 영국의 시인으로, 호머의 '일리아드'를 번역할 때 기존의 주석과 다른 언어 번역본들을 폭넓게 참고함.</li>
+      <li>상호텍스트성(Intertextuality): 모든 텍스트(또는 번역)는 독립적으로 존재하는 것이 아니라 다른 수많은 텍스트들과의 관계망 속에서 의미를 형성함.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    All translators feel some pressure from the community of readers for whom they are doing their work. And all translators arrive at their interpretations in dialogue with other people. The English poet Alexander Pope had pretty good Greek, but when he set about translating Homer’s Iliad in the early 18th century he was not on his own. He had Greek commentaries to refer to, and translations that had already been done in English, Latin, and French―and of course he had dictionaries. Translators always draw on more than one source text. Even when the scene of translation consists of just one person with a pen, paper, and the book that is being translated, or even when it is just one person translating orally for another, that person’s linguistic knowledge arises from lots of other texts and other conversations. And then his or her idea of the translation’s purpose will be influenced by the expectations of the person or people it is for. In both these senses every translation is a crowd translation.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 번역은 혼자 하는 고립된 작업처럼 보일지라도, 실제로는 다른 텍스트, 사람들의 기대, 사회적 상호작용에 기반한 군중 번역(crowd translation)이다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. All translators feel some pressure from the community of readers / for whom they are doing their work.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 모든 번역가는 독자 공동체로부터 어느 정도 압박을 느낀다 / 그들을 위해 자신들이 작업을 하고 있는.<br>
+          <b>[구문 해설]</b> 'for whom'은 전치사+관계대명사 구조로 앞의 선행사 'the community of readers(또는 readers)'를 수식합니다.<br>
+          <b>[핵심 어휘]</b> pressure: 압박, 부담 / community: 공동체
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. And all translators arrive at their interpretations / in dialogue with other people.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그리고 모든 번역가는 그들의 해석에 도달한다 / 다른 사람들과의 대화 속에서.<br>
+          <b>[핵심 어휘]</b> arrive at: ~에 도달하다 / interpretation: 해석 / dialogue: 대화
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. The English poet Alexander Pope had pretty good Greek, / but when he set about translating Homer’s Iliad in the early 18th century / he was not on his own.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 영국 시인 Alexander Pope는 꽤 훌륭한 그리스어 실력을 가지고 있었다, / 하지만 그가 18세기 초에 호머의 일리아드를 번역하기 시작했을 때 / 그는 혼자가 아니었다.<br>
+          <b>[구문 해설]</b> 'set about ~ing'는 '~을 시작하다, 착수하다'라는 뜻입니다.<br>
+          <b>[핵심 어휘]</b> poet: 시인 / set about: ~을 시작하다 / on one's own: 혼자서, 독자적으로
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. He had Greek commentaries to refer to, / and translations that had already been done in English, Latin, and French / ―and of course he had dictionaries.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그는 참조할 그리스어 주석들을 가지고 있었다, / 그리고 영어, 라틴어, 프랑스어로 이미 완료된 번역본들도 / ―그리고 물론 그는 사전들도 가지고 있었다.<br>
+          <b>[구문 해설]</b> 'to refer to'는 형용사적 용법으로 commentaries를 수식합니다. 'that had already been done'은 주격 관계대명사절로, 번역(translations)이 과거 이전(대과거)에 이미 수동적으로 완료되었음을 나타내는 과거완료 수동태입니다.<br>
+          <b>[핵심 어휘]</b> commentary: 주석, 해설 / refer to: ~을 참조하다 / dictionary: 사전
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. Translators always draw on more than one source text.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 번역가들은 항상 하나 이상의 원본 텍스트에 의존한다(끌어다 쓴다).<br>
+          <b>[핵심 어휘]</b> draw on: ~에 의존하다, ~을 활용하다 / source text: 원본 텍스트
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. Even when the scene of translation consists of just one person / with a pen, paper, and the book that is being translated, / or even when it is just one person translating orally for another, / <mark>that person’s linguistic knowledge arises / from lots of other texts and other conversations</mark>.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 번역의 현장이 단 한 사람으로 구성될 때조차도 / 펜, 종이, 그리고 번역되고 있는 책을 가진, / 또는 심지어 단 한 사람이 다른 사람을 위해 구두로 번역할 때조차도, / 그 사람의 언어적 지식은 발생한다 / 수많은 다른 텍스트와 다른 대화들로부터.<br>
+          <b>[구문 해설]</b> 'that is being translated'는 현재 진행 수동태로 앞의 the book을 수식합니다. 'translating orally'는 앞의 one person을 수식하는 현재분사입니다.<br>
+          <b>[핵심 어휘]</b> consist of: ~로 구성되다 / orally: 구두로 / linguistic: 언어적인 / arise from: ~에서 발생하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. And then his or her idea of the translation’s purpose / will be influenced by the expectations of the person or people / it is for.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그리고 번역의 목적에 대한 그 혹은 그녀의 생각은 / 그 사람 또는 사람들의 기대에 의해 영향을 받을 것이다 / 그것(번역)이 향하는(위하는).<br>
+          <b>[구문 해설]</b> 'it is for' 앞에는 목적격 관계대명사가 생략되어 있으며, 선행사는 'the person or people'입니다. it은 the translation을 가리킵니다.<br>
+          <b>[핵심 어휘]</b> influence: 영향을 미치다 / expectation: 기대 / purpose: 목적
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">8. In both these senses / every translation is a crowd translation.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이 두 가지 의미 모두에서 / 모든 번역은 군중 번역이다.<br>
+          <b>[핵심 어휘]</b> sense: 의미, 감각 / crowd: 군중
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>번역가의 사회적 상호작용</h4>
+      <p>모든 번역가는 독자 공동체의 압박(기대)을 느끼며, 언제나 다른 사람들과의 대화 및 상호작용 속에서 자신의 해석에 도달한다는 원리를 제시함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>알렉산더 포프의 예시와 지식의 원천</h4>
+      <p>시인 알렉산더 포프가 일리아드를 번역할 때 혼자가 아니라 기존 주석과 번역본에 의지했듯이, 혼자 번역하는 순간조차도 그 언어 지식은 과거의 무수한 텍스트와 대화에서 비롯됨.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>모든 번역은 '군중 번역'이다</h4>
+      <p>지식의 기원(과거의 텍스트와 대화)과 목적(독자의 기대)이라는 두 가지 의미 모두에서, 번역은 결코 고립된 작업이 아니라 근본적으로 군중 번역(crowd translation)임을 결론지음.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>All translators feel some pressure from the community of readers for [ which / whom ] they are doing their work.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="선행사가 'readers(사람)'이므로 사물에 쓰이는 which는 부적절합니다.">which</button>
+      <button class="drill-btn" data-ans="correct" data-exp="전치사 for의 목적어 역할을 하며 사람 선행사(the community of readers)를 받는 목적격 관계대명사 whom이 정답입니다.">whom</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>He had Greek commentaries to refer to, and translations that had already [ done / been done ] in English, Latin, and French.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="번역본(translations)이 스스로 번역을 '완료한' 것이 아니므로 능동형은 틀립니다.">done</button>
+      <button class="drill-btn" data-ans="correct" data-exp="선행사인 translations(번역본들)는 행위의 대상이므로, 과거 이전(대과거)에 이미 번역이 '완료된' 상태를 나타내는 과거완료 수동태(had been done)를 써야 합니다.">been done</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 주어진 글 다음에 이어질 글의 순서로 가장 적절한 것을 고르시오.</h4>
+    <div class="exam-passage" style="border: 2px solid #CBD5E1; padding: 10px; margin-bottom: 12px; font-weight: bold; background-color: #F8FAFC; color: #1E293B;">
+      All translators feel some pressure from the community of readers for whom they are doing their work. And all translators arrive at their interpretations in dialogue with other people.
+    </div>
+    <div class="exam-passage" style="background-color: transparent; border: none; padding: 0;">
+      (A) Translators always draw on more than one source text. Even when the scene of translation consists of just one person with a pen, paper, and the book that is being translated, or even when it is just one person translating orally for another, that person’s linguistic knowledge arises from lots of other texts and other conversations.<br><br>
+      (B) And then his or her idea of the translation’s purpose will be influenced by the expectations of the person or people it is for. In both these senses every translation is a crowd translation.<br><br>
+      (C) The English poet Alexander Pope had pretty good Greek, but when he set about translating Homer’s Iliad in the early 18th century he was not on his own. He had Greek commentaries to refer to, and translations that had already been done in English, Latin, and French―and of course he had dictionaries.
+    </div>
+    <div class="exam-choices">
+      ① (A) - (C) - (B)<br>
+      ② (B) - (A) - (C)<br>
+      ③ (B) - (C) - (A)<br>
+      ④ (C) - (A) - (B)<br>
+      ⑤ (C) - (B) - (A)
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ④</b><br>
+        <b>해설:</b> 주어진 글에서 번역가가 다른 사람들과의 대화 속에서 해석에 도달한다는 원리를 제시한 후, (C)에서 알렉산더 포프의 구체적인 예시(혼자가 아니었고 주석과 다른 번역본들을 참고함)를 들어 설명합니다. 이어 (A)에서 이 예시를 일반화하여 번역가들은 하나 이상의 텍스트를 활용하며, 고립된 환경에서도 언어 지식은 타인과의 텍스트/대화에서 나온다고 확장합니다. 마지막으로 (B)에서 번역의 목적 역시 독자의 기대에 영향받는다는 점을 추가하며 '두 가지 의미 모두에서(In both these senses)' 번역은 군중 번역임을 결론짓는 흐름이 가장 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+    <div class="exam-passage">
+      All translators feel some ①<u>pressure</u> from the community of readers for whom they are doing their work. And all translators arrive at their interpretations in ②<u>dialogue</u> with other people. The English poet Alexander Pope had pretty good Greek, but when he set about translating Homer’s Iliad in the early 18th century he was not ③<u>on his own</u>. He had Greek commentaries to refer to, and translations that had already been done in English, Latin, and French―and of course he had dictionaries. Translators always ④<u>separate from</u> more than one source text. Even when the scene of translation consists of just one person with a pen, paper, and the book that is being translated, or even when it is just one person translating orally for another, that person’s linguistic knowledge arises from lots of other texts and other conversations. And then his or her idea of the translation’s purpose will be ⑤<u>influenced</u> by the expectations of the person or people it is for. In both these senses every translation is a crowd translation.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ④ separate from -> draw on</b><br>
+        <b>해설:</b> 문맥상 번역가들은 고립되어 있지 않으며 이미 존재하는 주석, 사전, 다른 번역본 등을 끌어다 쓴다는 흐름입니다. 따라서 하나 이상의 원본 텍스트로부터 '분리된다(separate from)'가 아니라, '의존한다, 끌어다 쓴다(draw on)'가 되어야 맞습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      All translators feel some pressure from the community of readers for whom they are doing their work. And all translators arrive at their interpretations in dialogue with other people. The English poet Alexander Pope had pretty good Greek, but when he set about translating Homer’s Iliad in the early 18th century he was not on his own. He had Greek commentaries to refer to, and translations that had already been done in English, Latin, and French―and of course he had dictionaries. Translators always draw on more than one source text. Even when the scene of translation consists of just one person with a pen, paper, and the book that is being translated, or even when it is just one person translating orally for another, that person’s linguistic knowledge arises from lots of other texts and other conversations. And then his or her idea of the translation’s purpose will be influenced by the expectations of the person or people it is for. In both these senses every translation is a crowd translation.
+    </div>
+    <div class="summary-box">
+      Although translation might seem like an &nbsp;&nbsp;&nbsp;(A)&nbsp;&nbsp;&nbsp; task at a glance, it is fundamentally a &nbsp;&nbsp;&nbsp;(B)&nbsp;&nbsp;&nbsp; process shaped by previous texts and audience expectations.
+    </div>
+    <div class="exam-choices">
+      ① (A) isolated &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) collaborative<br>
+      ② (A) isolated &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) competitive<br>
+      ③ (A) original &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) solitary<br>
+      ④ (A) straightforward &nbsp;&nbsp; (B) collaborative<br>
+      ⑤ (A) straightforward &nbsp;&nbsp; (B) competitive
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ①</b><br>
+        <b>해설:</b> 번역은 겉보기에 한 사람이 펜을 들고 하는 '고립된(isolated)' 작업처럼 보일 수 있지만, 근본적으로는 이전의 텍스트들과 독자의 기대에 의해 형성되는 '협력적인(collaborative)' 과정, 즉 집단적 과정이라는 것이 글의 요지입니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      Translators always draw on more than one source text. Even when the scene of translation consists of just one person with a pen, paper, and the book that is being translated, or even when it is just one person translating orally for another, that person’s linguistic knowledge arises from lots of other texts and other conversations. And then his or her idea of the translation’s purpose will be influenced by the expectations of the person or people it is for. <u>이 두 가지 의미 모두에서 모든 번역은 군중 번역이다.</u>
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 어형 변화 없이 그대로 배열할 것.<br>
+      [주어진 단어: translation / a crowd translation / every / senses / these / is / in both]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> In both these senses every translation is a crowd translation.<br>
+        <b>해설:</b> '이 두 가지 의미 모두에서'를 표현하기 위해 전치사 'In' 뒤에 'both these senses'를 씁니다. 그 다음 주절의 주어인 'every translation'을 쓰고 단수 동사 'is', 마지막으로 주격 보어 'a crowd translation'을 배치하여 완성합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

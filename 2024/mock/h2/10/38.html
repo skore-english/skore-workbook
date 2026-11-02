@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | LITERATURE AND SOCIAL ACTION 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>고2 2024년 10월</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">학력평가 38번 · 문장 삽입 (원문 유형 변형)</div>
+    <h1 class="title">LITERATURE AND SOCIAL ACTION<br><span>문학과 사회적 실천의 이중성</span></h1>
+    <p class="header-lead">문학은 독자를 고립시켜 현실에 안주하게 만들기도 하지만, 때로는 불의에 대한 저항을 일깨워 사회적 변화를 촉진하는 강력한 무기가 되기도 합니다.</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+<div class="wrap">
+  <span class="sec-tag">STEP 01 · BACKGROUND & READING</span>
+  <h2 class="sec-title">배경지식 및 원문 정독</h2>
+  <div class="bg-knowledge-box">
+    <div class="bg-header">💡 필수 배경지식</div>
+    <ul class="bg-list">
+      <li>플라톤의 시인 추방론(Plato's banishment of poets): 철학자 플라톤은 시인(문학가)들이 사람들의 감정을 자극하여 이성을 흐리게 하고 이상 국가의 질서를 어지럽힌다고 보아 추방을 주장함.</li>
+      <li>톰 아저씨의 오두막(Uncle Tom's Cabin): 19세기 해리엇 비처 스토가 쓴 소설로, 노예제의 참상을 폭로하여 미국 내전(남북전쟁)을 촉발할 만큼 거대한 사회적 반향과 저항을 일으킨 대표적 문학 작품.</li>
+      <li>문학의 이중적 기능: 독서를 통해 현실에서 도피하거나 수동적으로 순응하게 만드는 '현실 안주적' 기능과, 부조리를 고발하여 변화를 열망하게 만드는 '사회 변혁적' 기능을 동시에 가짐.</li>
+    </ul>
+  </div>
+  <div class="full-passage-box">
+    We encounter contrary claims about the relation of literature to action. Theorists have maintained that literature encourages solitary reading and reflection as the way to engage with the world and thus counters the social and political activities that might produce social change. At best it encourages detachment or appreciation of complexity, and at worst passivity and acceptance of what is. But on the other hand, literature has historically been seen as dangerous: it promotes the questioning of authority and social arrangements. Plato banned poets from his ideal republic because they could only do harm, and novels have long been credited with making people dissatisfied with their lives and eager for something new. By promoting identification across divisions of class, gender, and race, books may promote a fellowship that discourages struggle; but they may also produce a keen sense of injustice that makes progressive struggles possible. Historically, works of literature are credited with producing change: Uncle Tom’s Cabin, a best-seller in its day, helped create a revulsion against slavery that made possible the American Civil War.
+  </div>
+  <div class="key-takeaway">
+    <b>핵심 요지:</b> 문학은 때로는 사람들을 현실에 안주하게 만들지만, 역사적으로 권위에 도전하고 사회적 부조리에 저항하여 실제적인 변화(예: 노예제 반대)를 이끌어내는 이중적인 힘을 지니고 있다.
+  </div>
+</div>
+</section>
+
+<section id="step2">
+<div class="wrap">
+  <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+  <h2 class="sec-title">문장별 정밀 디코딩</h2>
+  <div class="chunk-box">
+    
+    <div class="chunk-item">
+      <div class="chunk-en">1. We encounter contrary claims / about the relation of literature to action.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 우리는 상반된 주장들에 직면한다 / 행동(실천)에 대한 문학의 관계에 관한.<br>
+          <b>[핵심 어휘]</b> encounter: 직면하다, 만나다 / contrary: 상반된 / claim: 주장 / literature: 문학 / action: 행동, 실천
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">2. Theorists have maintained / that literature encourages solitary reading and reflection / as the way to engage with the world / and thus counters the social and political activities / that might produce social change.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 이론가들은 주장해 왔다 / 문학이 고독한 독서와 성찰을 장려한다고 / 세계와 참여하는(관계를 맺는) 방법으로서 / 그리하여 사회적이고 정치적인 활동들에 반대한다고(저항한다고) / 사회적 변화를 만들어낼지도 모르는.<br>
+          <b>[구문 해설]</b> 'encourages'와 'counters'가 and로 연결되어 literature를 주어로 하는 병렬 구조를 이룹니다. 'that might produce~'는 activities를 수식하는 주격 관계대명사절입니다.<br>
+          <b>[핵심 어휘]</b> maintain: 주장하다 / solitary: 고독한 / reflection: 성찰 / engage with: ~와 관여하다(참여하다) / counter: 반대하다, 대응하다
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">3. At best it encourages detachment or appreciation of complexity, / and at worst passivity and acceptance of what is.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 기껏해야 그것은 분리(초연함)나 복잡성에 대한 감상을 장려한다, / 그리고 최악의 경우 수동성과 존재하는 것(현실)에 대한 수용을 (장려한다).<br>
+          <b>[구문 해설]</b> at worst 뒤에는 'it encourages'가 생략되어 있습니다. 'what is'는 '존재하는 것', 즉 '현실'을 의미합니다.<br>
+          <b>[핵심 어휘]</b> at best: 기껏해야 / detachment: 분리, 초연함 / appreciation: 감상, 이해 / complexity: 복잡성 / passivity: 수동성 / acceptance: 수용
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">4. But on the other hand, literature has historically been seen as dangerous: / it promotes the questioning of authority and social arrangements.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 그러나 다른 한편으로, 문학은 역사적으로 위험한 것으로 여겨져 왔다: / 그것은 권위와 사회적 합의(배열)에 대한 의문 제기를 촉진한다.<br>
+          <b>[구문 해설]</b> 'has been seen as'는 현재완료 수동태로 '~로 여겨져 왔다'라는 의미입니다.<br>
+          <b>[핵심 어휘]</b> authority: 권위 / social arrangement: 사회적 합의, 사회 제도
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">5. Plato banned poets from his ideal republic / because they could only do harm, / and novels have long been credited / with making people dissatisfied with their lives / and eager for something new.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 플라톤은 시인들을 그의 이상 공화국에서 추방했다 / 그들이 오직 해만 끼칠 수 있기 때문에, / 그리고 소설은 오랫동안 공로를 인정받아 왔다(여겨져 왔다) / 사람들을 그들의 삶에 불만족하게 만들고 / 새로운 것을 간절히 원하게 만든 것으로.<br>
+          <b>[구문 해설]</b> 'be credited with ~ing'는 '~한 공로가 있다(주로 긍정적이거나 인정받는 일에 쓰임)'의 의미입니다. 'making + people(목적어) + dissatisfied / eager(목적격 보어 병렬)' 구조입니다.<br>
+          <b>[핵심 어휘]</b> ban: 추방하다, 금지하다 / republic: 공화국 / credit: 공로를 인정하다 / dissatisfied: 불만족스러운 / eager for: ~을 간절히 원하는
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">6. By promoting identification / across divisions of class, gender, and race, / books may promote a fellowship that discourages struggle; / but they may also produce a keen sense of injustice / that makes progressive struggles possible.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 동일시(공감)를 촉진함으로써 / 계급, 성별, 인종의 구분을 넘어, / 책들은 투쟁을 낙담시키는 유대감을 촉진할지도 모른다; / 하지만 그것들은 또한 예리한 불의(부당함)의 감각을 만들어낼지도 모른다 / 진보적인 투쟁을 가능하게 만드는.<br>
+          <b>[구문 해설]</b> 두 번째 'that'은 'a keen sense of injustice'를 선행사로 하는 주격 관계대명사이며, 'makes + progressive struggles(목적어) + possible(목적격 보어)' 5형식 구조를 이끕니다.<br>
+          <b>[핵심 어휘]</b> identification: 동일시, 공감 / division: 구분, 분열 / fellowship: 유대감 / discourage: 낙담시키다, 단념시키다 / struggle: 투쟁 / keen: 예리한, 강렬한 / injustice: 불의, 부당함 / progressive: 진보적인
+        </div>
+      </details>
+    </div>
+
+    <div class="chunk-item">
+      <div class="chunk-en">7. <mark>Historically, works of literature are credited with producing change:</mark> / Uncle Tom’s Cabin, a best-seller in its day, / helped create a revulsion against slavery / that made possible the American Civil War.</div>
+      <details>
+        <summary>분석 보기</summary>
+        <div class="details-content">
+          <b>[직독직해]</b> 역사적으로, 문학 작품들은 변화를 만들어낸 공로가 있다: / 그 당시에 베스트셀러였던 '톰 아저씨의 오두막'은 / 노예제에 대한 혐오감을 형성하는 데 도움을 주었다 / 미국 내전(남북전쟁)을 가능하게 만들었던.<br>
+          <b>[구문 해설]</b> 'that made possible the American Civil War'에서 목적어인 'the American Civil War'가 길어서 목적격 보어인 'possible' 뒤로 도치된 'make + 목적격 보어 + 목적어' 구조입니다. 'that'은 주격 관계대명사로 'a revulsion against slavery'를 수식합니다.<br>
+          <b>[핵심 어휘]</b> work: 작품 / revulsion: 혐오감 / slavery: 노예제 / the American Civil War: 미국 내전(남북전쟁)
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="step3">
+<div class="wrap">
+  <span class="sec-tag">STEP 03 · LOGICAL FLOW</span>
+  <h2 class="sec-title">지문 논리 구조</h2>
+  <div class="flow-container">
+    <div class="flow-card s1">
+      <span class="badge">도입 (Introduction)</span>
+      <h4>문학과 실천에 대한 상반된 시각</h4>
+      <p>문학이 인간의 사회적 행동 및 실천과 맺는 관계에 대하여 학자들 사이에 서로 모순되는 두 가지 주장이 존재함을 소개함.</p>
+    </div>
+    <div class="flow-card s2">
+      <span class="badge">전개 (Development)</span>
+      <h4>수동성 조장 vs 저항 의식 고취</h4>
+      <p>한편으로는 문학이 고립된 독서를 유도하여 현실 안주와 수동성을 조장한다는 비판이 있으나, 다른 한편으로는 플라톤의 우려처럼 기존 권위에 의문을 품게 하고 삶에 대한 불만을 자극하여 저항(변화)을 꿈꾸게 한다는 주장이 대립함.</p>
+    </div>
+    <div class="flow-card s3">
+      <span class="badge">결론 (Conclusion)</span>
+      <h4>사회적 변화를 이끈 문학의 역사적 힘</h4>
+      <p>책은 투쟁을 억제하는 유대감을 만들기도 하지만, 부당함에 대한 강한 인식을 주어 진보적 투쟁을 가능케 함. 실제로 '톰 아저씨의 오두막'과 같이 역사적 변화(남북전쟁)를 이끌어낸 문학의 힘을 사례로 제시함.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="step4">
+<div class="wrap">
+  <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+  <h2 class="sec-title">핵심 어법 드릴</h2>
+  
+  <div class="drill-card">
+    <div class="drill-q">1. 다음 문장에서 어법상 올바른 것을 고르시오. <br>Uncle Tom’s Cabin, a best-seller in its day, helped create a revulsion against slavery that [ made / making ] possible the American Civil War.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="correct" data-exp="관계대명사 that 뒤에는 동사가 필요합니다. 선행사인 revulsion이 목적어(the American Civil War)를 가능하게 '만들었다'는 의미의 동사 made가 정답입니다.">made</button>
+      <button class="drill-btn" data-ans="incorrect" data-exp="that 뒤에 바로 분사형태인 making이 올 수 없습니다. 관계사절의 본동사가 필요합니다.">making</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+  <div class="drill-card">
+    <div class="drill-q">2. 다음 문장에서 어법상 올바른 것을 고르시오. <br>Plato banned poets from his ideal republic because they could only do harm, and novels have long been [ credited / crediting ] with making people dissatisfied with their lives.</div>
+    <div class="drill-options">
+      <button class="drill-btn" data-ans="incorrect" data-exp="소설이 스스로 공로를 인정하는 주체가 아니므로 현재분사 능동형은 틀립니다.">crediting</button>
+      <button class="drill-btn" data-ans="correct" data-exp="'~한 공로가 있다고 여겨지다'라는 의미의 수동태 구문 'be credited with'가 쓰여야 하므로 과거분사 credited가 맞습니다.">credited</button>
+    </div>
+    <div class="drill-feedback"></div>
+  </div>
+
+</div>
+</section>
+
+<section id="step5">
+<div class="wrap">
+  <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+  <h2 class="sec-title">실전 변형 문제</h2>
+
+  <div class="exam-item">
+    <h4>1. 다음 글의 주제로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      We encounter contrary claims about the relation of literature to action. Theorists have maintained that literature encourages solitary reading and reflection as the way to engage with the world and thus counters the social and political activities that might produce social change. At best it encourages detachment or appreciation of complexity, and at worst passivity and acceptance of what is. But on the other hand, literature has historically been seen as dangerous: it promotes the questioning of authority and social arrangements. Plato banned poets from his ideal republic because they could only do harm, and novels have long been credited with making people dissatisfied with their lives and eager for something new. By promoting identification across divisions of class, gender, and race, books may promote a fellowship that discourages struggle; but they may also produce a keen sense of injustice that makes progressive struggles possible. Historically, works of literature are credited with producing change: Uncle Tom’s Cabin, a best-seller in its day, helped create a revulsion against slavery that made possible the American Civil War.
+    </div>
+    <div class="exam-choices">
+      ① the historical background of the American Civil War<br>
+      ② negative impacts of solitary reading on mental health<br>
+      ③ the dual role of literature in hindering or promoting social action<br>
+      ④ the reasons why Plato banned poets from his ideal republic<br>
+      ⑤ effective ways to write novels that inspire social changes
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ③</b><br>
+        <b>해설:</b> 이 글은 문학이 수동성과 현실 안주를 장려하여 사회적 실천을 억제한다는 시각과, 권위에 의문을 품게 하고 부조리에 대한 저항을 고취시켜 사회적 변화를 이끌어낸다는 상반된(이중적인) 역할을 동시에 가지고 있음을 설명하고 있습니다. 따라서 '사회적 실천을 방해하거나 촉진하는 문학의 이중적 역할'이 주제로 적절합니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+    <div class="exam-passage">
+      We encounter contrary claims about the relation of literature to action. Theorists have maintained that literature encourages solitary reading and reflection as the way to engage with the world and thus ①<u>counters</u> the social and political activities that might produce social change. At best it encourages detachment or appreciation of complexity, and at worst passivity and ②<u>acceptance</u> of what is. But on the other hand, literature has historically been seen as ③<u>dangerous</u>: it promotes the questioning of authority and social arrangements. Plato banned poets from his ideal republic because they could only do harm, and novels have long been credited with making people ④<u>satisfied</u> with their lives and eager for something new. By promoting identification across divisions of class, gender, and race, books may promote a fellowship that discourages struggle; but they may also produce a keen sense of injustice that makes progressive struggles ⑤<u>possible</u>.
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ④ satisfied -> dissatisfied</b><br>
+        <b>해설:</b> 문학이 권위에 의문을 제기하게 만들고 변화를 갈망하게 만든다는 흐름(위험한 것으로 여겨짐) 속에서, 소설은 사람들을 자신들의 삶에 '만족하게(satisfied)' 만드는 것이 아니라 '불만족하게(dissatisfied)' 만들고 새로운 것을 열망하게 만든다고 해야 논리적으로 맞습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+    <div class="exam-passage">
+      We encounter contrary claims about the relation of literature to action. Theorists have maintained that literature encourages solitary reading and reflection as the way to engage with the world and thus counters the social and political activities that might produce social change. At best it encourages detachment or appreciation of complexity, and at worst passivity and acceptance of what is. But on the other hand, literature has historically been seen as dangerous: it promotes the questioning of authority and social arrangements. Plato banned poets from his ideal republic because they could only do harm, and novels have long been credited with making people dissatisfied with their lives and eager for something new. By promoting identification across divisions of class, gender, and race, books may promote a fellowship that discourages struggle; but they may also produce a keen sense of injustice that makes progressive struggles possible. Historically, works of literature are credited with producing change: Uncle Tom’s Cabin, a best-seller in its day, helped create a revulsion against slavery that made possible the American Civil War.
+    </div>
+    <div class="summary-box">
+      Literature is viewed paradoxically: it can induce &nbsp;&nbsp;&nbsp;(A)&nbsp;&nbsp;&nbsp; by encouraging solitary reflection and acceptance of the status quo, but it can also inspire social &nbsp;&nbsp;&nbsp;(B)&nbsp;&nbsp;&nbsp; by highlighting injustices and challenging authority.
+    </div>
+    <div class="exam-choices">
+      ① (A) passivity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) reform<br>
+      ② (A) passivity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) stability<br>
+      ③ (A) hostility &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) reform<br>
+      ④ (A) creativity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) stability<br>
+      ⑤ (A) creativity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (B) division
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답: ①</b><br>
+        <b>해설:</b> 문학은 역설적으로 고독한 성찰과 현실에 대한 수용을 장려하여 '수동성(passivity)'을 유발할 수 있지만, 부당함을 조명하고 권위에 도전함으로써 사회적 '개혁/변화(reform)'에 영감을 줄 수도 있습니다.
+      </div>
+    </details>
+  </div>
+
+  <div class="exam-item">
+    <h4>4. 다음 글의 밑줄 친 우리말과 같은 뜻이 되도록, 주어진 조건에 맞게 영어로 영작하시오.</h4>
+    <div class="exam-passage">
+      At best it encourages detachment or appreciation of complexity, and at worst passivity and acceptance of what is. But on the other hand, literature has historically been seen as dangerous: it promotes the questioning of authority and social arrangements. Plato banned poets from his ideal republic because they could only do harm, and <u>소설은 오랫동안 사람들을 자신들의 삶에 불만족하게 만들고 새로운 것을 간절히 원하게 만드는 것으로 공로를 인정받아 왔다(여겨져 왔다).</u> By promoting identification across divisions of class, gender, and race, books may promote a fellowship that discourages struggle; but they may also produce a keen sense of injustice that makes progressive struggles possible.
+    </div>
+    <div class="summary-box">
+      [조건]<br>
+      1. 주어진 단어를 모두 한 번씩만 사용할 것.<br>
+      2. 어형 변화 없이 그대로 배열할 것.<br>
+      [주어진 단어: dissatisfied / long / people / and / eager / credited / novels / for something new / have / making / been / with / with their lives]
+    </div>
+    <details>
+      <summary>정답 및 해설 보기</summary>
+      <div class="answer-content">
+        <b>정답:</b> novels have long been credited with making people dissatisfied with their lives and eager for something new<br>
+        <b>해설:</b> 주어 'novels(소설은)' 뒤에 현재완료 수동태인 'have long been credited(오랫동안 공로를 인정받아 왔다)'를 씁니다. 그 이유나 원인을 나타내는 전치사 'with' 뒤에 동명사 'making'을 쓰고, 목적어 'people' 뒤에 목적격 보어로 형용사 'dissatisfied with their lives(자신들의 삶에 불만족하는)'와 'eager for something new(새로운 것을 간절히 원하는)'를 'and'로 병렬 연결하여 문장을 완성합니다.
+      </div>
+    </details>
+  </div>
+
+</div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
