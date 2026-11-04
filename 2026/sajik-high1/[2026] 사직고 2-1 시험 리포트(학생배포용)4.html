@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사직고 1학년 중간고사 영어 분석 리포트 | SKORE ACADEMY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@500;700;900&display=swap" rel="stylesheet">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root{
+  /* 첫 번째 버전의 편안한 컬러 시스템 유지 */
+  --navy:#0B2B4A; --navy2:#14496F; --blue:#1D7AC4; --cyan:#4BA9DE; --sky:#E7F1F8;
+  --ink:#0E1620; --soft:#4F6273; --faint:#8295A4;
+  --paper:#F5F7F9; --card:#FFFFFF; --line:#DCE3EA; --deep:#EDF1F5;
+  --green:#1B6E53; --green-bg:#E5F0EB; --amber:#9A6A12; --amber-bg:#F8F0DD;
+  --red:#A83A2C; --red-bg:#F9EBE8; --grey:#9AA8B4;
+  /* SKORE ACADEMY 시그니처 레드 추가 */
+  --brand-red:#cb1d06; 
+}
+@media (prefers-color-scheme: dark){
+ :root:not([data-theme="light"]){
+  --navy:#8CBCE0; --navy2:#6FA6CE; --blue:#5AA3D8; --cyan:#3E85B5; --sky:#122636;
+  --ink:#E5ECF2; --soft:#97A9B8; --faint:#71838F;
+  --paper:#0A1015; --card:#131B22; --line:#212E38; --deep:#101820;
+  --green:#72B598; --green-bg:#14241D; --amber:#D3A44F; --amber-bg:#2A2316;
+  --red:#DE8779; --red-bg:#291A17; --grey:#5C6B77;
+  --brand-red:#E53E29;
+ }
+}
+:root[data-theme="dark"]{
+  --navy:#8CBCE0; --navy2:#6FA6CE; --blue:#5AA3D8; --cyan:#3E85B5; --sky:#122636;
+  --ink:#E5ECF2; --soft:#97A9B8; --faint:#71838F;
+  --paper:#0A1015; --card:#131B22; --line:#212E38; --deep:#101820;
+  --green:#72B598; --green-bg:#14241D; --amber:#D3A44F; --amber-bg:#2A2316;
+  --red:#DE8779; --red-bg:#291A17; --grey:#5C6B77;
+  --brand-red:#E53E29;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+ font-family:"IBM Plex Sans KR",-apple-system,"Apple SD Gothic Neo",sans-serif;
+ font-weight:300; font-size:15.5px; line-height:1.7; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Noto Serif KR",serif; font-weight:700; letter-spacing:-.015em}
+p{margin:0 0 13px; max-width:64ch}
+b,strong{font-weight:600}
+
+#prog{position:fixed; top:0; left:0; height:3px; width:0; background:var(--brand-red); z-index:99; transition:width .1s linear}
+
+/* 표지 (새로운 UI 레이아웃 + 이전 컬러 시스템 결합) */
+.cover{background:var(--navy); color:#fff; padding:40px 0 46px; position:relative; overflow:hidden; border-bottom: 4px solid var(--brand-red);}
+:root:not([data-theme="light"]) .cover{background:var(--sky); color:var(--ink);}
+.cover::before{content:""; position:absolute; right:-60px; top:-60px; width:280px; height:280px;
+ border-radius:50%; background:rgba(255,255,255,.05); animation:drift 14s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,24px)}}
+.cover .in{max-width:900px; margin:0 auto; padding:0 26px; position:relative}
+
+/* 인덱스 파일에서 가져온 Masthead UI */
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; letter-spacing: 0.1em; color: rgba(255,255,255,0.7); text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 10px; margin-bottom: 24px; }
+:root:not([data-theme="light"]) .masthead { color: var(--faint); border-bottom-color: var(--line); }
+.masthead b { color: #fff; }
+:root:not([data-theme="light"]) .masthead b { color: var(--ink); }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: "IBM Plex Mono", monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #fff; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 999px; padding: 4px 10px; cursor: pointer; transition: background 0.2s; }
+:root:not([data-theme="light"]) .theme-toggle { color: var(--ink); background: var(--card); border-color: var(--line); }
+.theme-toggle:hover { background: rgba(255,255,255,0.25); }
+:root:not([data-theme="light"]) .theme-toggle:hover { background: var(--deep); }
+
+.meta-badge { display: inline-block; font-family: "IBM Plex Sans KR", sans-serif; font-size: 12px; font-weight: 700; color: #fff; background: var(--brand-red); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+.cover h1{font-size:31px; margin:10px 0 10px; line-height:1.28; color:inherit}
+.cover .sub{font-size:14px; opacity:.82; margin:0; max-width:56ch}
+.cover .rule{height:3px; width:0; background:var(--brand-red); margin:20px 0 0; animation:grow 1.2s ease-out .4s forwards}
+@keyframes grow{to{width:88px}}
+
+.wrap{max-width:900px; margin:0 auto; padding:0 26px 100px}
+
+/* 요약 (이전의 편안한 디자인 유지) */
+.exec{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--brand-red);
+ border-radius:4px; padding:26px 30px; margin:-20px 0 46px; box-shadow:0 10px 34px rgba(10,40,70,.09)}
+.exec .lbl{font-size:10.5px; letter-spacing:.2em; color:var(--brand-red); font-weight:700}
+.exec h2{font-size:20px; margin:8px 0 16px}
+.exec ol{margin:0; padding-left:20px}
+.exec li{padding:7px 0; font-size:15.5px; line-height:1.65}
+.exec li b{color:var(--navy2)}
+
+section{margin-bottom:58px; opacity:0; transform:translateY(20px);
+ transition:opacity .55s ease, transform .55s ease}
+section.in{opacity:1; transform:none}
+.snum{display:inline-block; font-size:10.5px; letter-spacing:.18em; font-weight:700; color:#fff;
+ background:var(--navy2); padding:3px 9px; border-radius:3px; margin-bottom:10px}
+:root:not([data-theme="light"]) .snum{color:var(--paper)}
+h2{font-size:23px; margin:0 0 8px}
+.sdesc{color:var(--soft); font-size:14.5px; margin:0 0 20px; max-width:60ch}
+
+.exh{background:var(--card); border:1px solid var(--line); border-radius:5px; padding:24px 26px; margin-bottom:16px}
+.exh .eh{font-size:10.5px; letter-spacing:.16em; color:var(--faint); font-weight:700; margin-bottom:3px}
+.exh h3{font-size:16.5px; margin:0 0 16px}
+.sowhat{background:var(--sky); border-radius:4px; padding:14px 18px; margin-top:16px; font-size:14.5px; line-height:1.65}
+.sowhat b{color:var(--navy2)}
+.sowhat .k{font-size:10.5px; letter-spacing:.14em; color:var(--blue); font-weight:700; display:block; margin-bottom:3px}
+
+/* 전환 도표 (어휘 변형 시각화) */
+.shift{display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:10px;}
+.shift .col{flex:1 1 200px; min-width:180px}
+.shift .ttl{font-size:11px; letter-spacing:.12em; color:var(--faint); font-weight:700; margin-bottom:10px}
+.chip{display:block; padding:9px 13px; border-radius:4px; font-size:14px; margin-bottom:7px;
+ opacity:0; transform:translateX(-10px); transition:all .45s ease}
+section.in .chip{opacity:1; transform:none}
+.chip.old{background:var(--deep); color:var(--faint); text-decoration:line-through}
+.chip.new{background:var(--red-bg); color:var(--red); font-weight:600}
+.arrow{flex:0 0 40px; text-align:center; font-size:26px; color:var(--blue);
+ opacity:0; transition:opacity .5s ease .5s}
+section.in .arrow{opacity:1; animation:nudge 1.8s ease-in-out 1s infinite}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+
+/* 2열 정리 */
+.twocol{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+@media(max-width:620px){.twocol{grid-template-columns:1fr}}
+.pane{border-radius:5px; padding:18px 20px; border: 1px solid var(--line);}
+.pane.academy{background:var(--sky); border-color:var(--blue);}
+.pane.actual{background:var(--amber-bg); border-color:var(--amber);}
+.pane .ph{font-size:12px; letter-spacing:.12em; font-weight:700; margin-bottom:12px; display:inline-block; padding:3px 8px; border-radius:3px;}
+.pane.academy .ph{background:var(--blue); color:#fff;} 
+.pane.actual .ph{background:var(--amber); color:#fff;}
+.pane ul{margin:0; padding-left:17px}
+.pane li{font-size:14px; padding:4px 0; line-height:1.55}
+.pane .highlight { font-weight: bold; color: var(--red); background: var(--red-bg); padding: 0 4px; border-radius: 2px; }
+
+/* 트리거 */
+.trig{list-style:none; margin:0; padding:0}
+.trig li{display:flex; gap:13px; padding:13px 0; border-bottom:1px solid var(--line); font-size:14.5px}
+.trig li:last-child{border-bottom:none}
+.trig .ic{flex:0 0 26px; height:26px; border-radius:50%; background:var(--amber-bg); color:var(--amber);
+ display:grid; place-items:center; font-size:13px; font-weight:700; margin-top:2px}
+
+.callout{background:var(--red-bg); border-left:3px solid var(--red); border-radius:0 5px 5px 0;
+ padding:20px 24px; margin-bottom:18px}
+.callout .k{font-size:10.5px; letter-spacing:.16em; color:var(--red); font-weight:700; display:block; margin-bottom:5px}
+.callout p{margin:0; font-size:15px}
+
+/* 로드맵 */
+.road{position:relative; padding-left:8px}
+.road .wk{display:flex; gap:14px; margin-bottom:18px; opacity:0; transform:translateY(10px);
+ transition:all .5s ease}
+section.in .road .wk{opacity:1; transform:none}
+.road .wl{flex:0 0 74px; font-size:11.5px; font-weight:700; color:var(--blue); letter-spacing:.06em; padding-top:2px}
+.road .wb{flex:1; border-left:2px solid var(--line); padding-left:16px; position:relative}
+.road .wb::before{content:""; position:absolute; left:-6px; top:7px; width:10px; height:10px;
+ border-radius:50%; background:var(--blue)}
+.road h4{margin:0 0 4px; font-size:15px; font-weight:600; font-family:inherit}
+.road p{margin:0; font-size:13.5px; color:var(--soft)}
+
+footer{border-top:1px solid var(--line); padding-top:24px; margin-top:52px; color:var(--soft); font-size:13px; text-align:center;}
+footer p{max-width:800px; margin:0 auto 10px;}
+
+@media (prefers-reduced-motion: reduce){
+ *{animation:none !important; transition:none !important}
+ section,.chip,.road .wk{opacity:1; transform:none}
+ .arrow{opacity:1} .cover .rule{width:88px}
+}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<div class="cover">
+  <div class="in">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> EXAM STRATEGY TEAM</span>
+      <span class="masthead-right">
+        <span>2026 Academic Season</span>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button>
+      </span>
+    </div>
+    <div class="meta-badge">사직고등학교 1학년 2학기 중간고사</div>
+    <h1>중간고사 완벽 적중 및<br>기말고사 대비 전략 리포트</h1>
+    <p class="sub">학원 자체 교재(YBM 박 1, 3과 및 올림포스 5단계 워크북)와 실제 시험지의 완벽 비교 분석. 등급을 가른 결정적 요인과 다음 시험을 위한 맞춤형 3단계 솔루션을 제공합니다.</p>
+    <div class="rule"></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<div class="exec" style="margin-top: 40px;">
+  <span class="lbl">EXECUTIVE SUMMARY</span>
+  <h2>분석 결과 세 가지 요약</h2>
+  <ol>
+    <li><b>객관식 포맷 및 지문 분할 100% 적중:</b> 학원에서 훈련한 순서 배열, 삽입, 요약문 문제의 지문 끊어 읽기 포인트가 실제 시험과 정확히 일치했습니다. 내용 숙지는 완벽히 이루어졌습니다.</li>
+    <li><b>등급을 가른 것은 '어휘 패러프레이징'입니다:</b> 지문을 외웠어도 선지에 등장한 낯선 동의어(Synonym)와 영어 속담을 해석하지 못하면 틀리도록 설계되었습니다.</li>
+    <li><b>주관식 난이도의 핵심은 '조건부 영작'입니다:</b> 본문 문장을 그대로 쓰는 것을 방지하기 위해 연속된 5단어 초과 사용을 금지했습니다. 스스로 문장을 재조립하는 훈련이 절실합니다.</li>
+  </ol>
+</div>
+
+<section>
+  <span class="snum">01 · PERFECT MATCH</span>
+  <h2>학원 자료 vs 실제 시험 완벽 적중 사례</h2>
+  <p class="sdesc">학원 예상문제와 실제 사직고 시험지를 비교합니다. 지문의 분할 지점과 정답 선지까지 사실상 동일하게 출제되었습니다.</p>
+
+  <div class="exh">
+    <div class="eh">EXHIBIT 1</div>
+    <h3>대의 파악 (주제 찾기) 적중 비교</h3>
+    <div class="twocol">
+      <div class="pane academy">
+        <div class="ph">학원 예상문제 (YBM 3과 예상 2회 4번)</div>
+        <ul>
+          <li><b>지문:</b> No life is free from problems... Resilience means springing back...</li>
+          <li><b>질문:</b> 윗글의 주제로 알맞은 것은?</li>
+          <li><b>정답 선지:</b> <span class="highlight">definition and role</span> of resilience</li>
+        </ul>
+      </div>
+      <div class="pane actual">
+        <div class="ph">실제 시험지 (객관식 17번)</div>
+        <ul>
+          <li><b>지문:</b> 동일 지문 출제</li>
+          <li><b>질문:</b> 다음 글의 주제로 가장 적절한 것은?</li>
+          <li><b>정답 선지:</b> the <span class="highlight">meaning and importance</span> of resilience</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sowhat">
+      <span class="k">SO WHAT</span>
+      주제를 묻는 방식과 정답 선지의 구조(A and B of resilience)가 <b>정확히 일치</b>했습니다. 학원 교재를 충실히 푼 학생은 지문을 다 읽지 않고도 10초 만에 정답을 고를 수 있었습니다.
+    </div>
+  </div>
+
+  <div class="exh">
+    <div class="eh">EXHIBIT 2</div>
+    <h3>순서 배열 지문 분할 포인트 적중</h3>
+    <div class="twocol">
+      <div class="pane academy">
+        <div class="ph">학원 올림포스 순서배열 5번</div>
+        <ul>
+          <li>(A) <b>This means that placing sustainability...</b></li>
+          <li>(B) <b>Sustainable events will have a positive...</b></li>
+          <li>(C) <b>Furthermore, professional event planners...</b></li>
+        </ul>
+      </div>
+      <div class="pane actual">
+        <div class="ph">실제 시험지 (객관식 12번)</div>
+        <ul>
+          <li>(A) <b>This means that placing sustainability...</b></li>
+          <li>(B) <b>Responsible events are sensitive...</b> (원문 C 후반부)</li>
+          <li>(C) <b>Sustainable events will have a positive... Furthermore...</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sowhat">
+      <span class="k">SO WHAT</span>
+      글의 논리적 전환점 역할을 하는 <b>This means that</b>과 <b>Sustainable events</b> 파트를 분할 기준으로 삼은 것이 완벽하게 적중했습니다. 학원의 논리 구조도 훈련이 매우 유효했음을 증명합니다.
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="snum">02 · PARAPHRASING</span>
+  <h2>학생들을 당황하게 한 '어휘 변형' 분석</h2>
+  <p class="sdesc">이번 시험의 가장 큰 특징입니다. 학교 선생님들은 학생들이 본문을 외우고 있다는 것을 전제로, 핵심 단어를 유의어/반의어로 대거 교체했습니다.</p>
+
+  <div class="exh">
+    <div class="eh">EXHIBIT 3</div>
+    <h3>문맥상 어휘 추론 문제 (실제 시험 19번, 16번 등)</h3>
+    <div class="shift">
+      <div class="col">
+        <div class="ttl">교과서/올림포스 원문 어휘</div>
+        <span class="chip old">limited (제한된)</span>
+        <span class="chip old">easily (쉽게)</span>
+        <span class="chip old">struggle (고군분투하다)</span>
+        <span class="chip old">lowering (낮추는)</span>
+        <span class="chip old">cultivate (기르다, 함양하다)</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="col">
+        <div class="ttl">실제 시험지 출제 어휘</div>
+        <span class="chip new">restricted (제한된) - 유의어</span>
+        <span class="chip new">readily (손쉽게) - 유의어</span>
+        <span class="chip new">strive (애쓰다) - 유의어</span>
+        <span class="chip new">heightening (높이는) - 반의어 (오답 유도)</span>
+        <span class="chip new">suppress (억누르다) - 반의어 (정답)</span>
+      </div>
+    </div>
+    <div class="sowhat">
+      <span class="k">핵심 분석</span>
+      본문을 눈으로만 외운 학생들은 시험지에서 낯선 단어(restricted, readily, strive)를 보는 순간 <b>자신이 외운 단어가 아니라는 이유로 오답으로 착각</b>하게 됩니다. 정답을 찾으려면 낯선 단어가 '동의어'인지 '반의어'인지 구별할 수 있는 탄탄한 기본 어휘력이 필수적입니다.
+    </div>
+  </div>
+
+  <div class="exh">
+    <div class="eh">EXHIBIT 4</div>
+    <h3>흐름과 관계없는 문장 (문장 무단 삽입)</h3>
+    <p style="font-size:14.5px">원문에 없던 문장을 교묘하게 만들어 지문 중간에 끼워 넣었습니다.</p>
+    <ul class="trig">
+      <li><span class="ic">!</span><div><b>객관식 5번 (음악 기술):</b> <i>"This high-speed, wide-ranging internet connection has transformed not only the music industry, but also the way people in society communicate on a daily basis."</i> (소통 방식의 변화라는 관계없는 내용 삽입)</div></li>
+      <li><span class="ic">!</span><div><b>객관식 16번 (자동성):</b> <i>"Supermarket employees automatically register items to efficiently keep track of them."</i> (비유로 쓰인 supermarket 단어를 가져와 진짜 마트 직원 이야기 삽입)</div></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="snum">03 · KILLER QUESTIONS</span>
+  <h2>오답률을 높인 킬러 문항과 주관식의 함정</h2>
+  <p class="sdesc">내용은 다 아는데 왜 틀렸을까요? 정답은 '선지'와 '조건'에 있었습니다.</p>
+
+  <div class="callout">
+    <span class="k">함정 1. 객관식 23번 (영어 속담 추론)</span>
+    <p>신용카드사의 양면 시장 경제(한쪽을 무료로 풀어 다른 쪽에서 수익 창출)를 다룬 지문입니다. 내용은 완벽히 알았지만, 정답 선지인 <b>"You have to give a little to get a lot (많이 얻으려면 조금 내어주어야 한다)"</b>라는 영어 관용구를 해석하지 못해 틀린 학생이 많습니다. 독해력 문제가 아니라 <b>선지 어휘력 문제</b>입니다.</p>
+  </div>
+
+  <div class="callout">
+    <span class="k">함정 2. 서·논술형 3번 (압박형 영작 조건)</span>
+    <p>서술형 문제에 <b>"지문에서 연속된 표현을 5단어 초과하여 동일하게 쓰지 않을 것"</b>이라는 극강의 조건이 붙었습니다. "본문 통암기"를 원천 차단하겠다는 출제자의 강력한 의지입니다. 본인만의 어휘와 다른 문법 구조(Paraphrasing)로 문장을 재구성해 내지 못하면 아무리 지문을 달달 외워도 0점 처리됩니다.</p>
+  </div>
+</section>
+
+<section>
+  <span class="snum">04 · ROADMAP</span>
+  <h2>기말고사 완벽 대비를 위한 학생 맞춤형 3단계 전략</h2>
+  <p class="sdesc">이번 시험을 통해 단순 암기는 통하지 않는다는 것이 증명되었습니다. 다음 기말고사를 위해 반드시 실천해야 할 3단계 학습 팁을 제시합니다.</p>
+
+  <div class="exh">
+    <div class="eh">EXHIBIT 5</div>
+    <h3>성적 향상을 위한 단계별 학습 가이드</h3>
+    <div class="road">
+      <div class="wk" style="transition-delay:.05s"><div class="wl">STEP 1</div><div class="wb">
+        <h4>어휘력 확장: 동의어/반의어 및 선지 해석 훈련</h4>
+        <p>본문을 외우는 것만으로는 부족합니다. 핵심 키워드의 유의어와 반의어를 반드시 함께 암기하세요. 특히 수능/모의고사 빈출 속담과 관용 표현을 꾸준히 익혀 영어 선지를 빠르고 정확하게 해석하는 능력을 길러야 합니다.</p></div></div>
+      <div class="wk" style="transition-delay:.15s"><div class="wl">STEP 2</div><div class="wb">
+        <h4>논리 구조 체화: 지문의 뼈대 파악하기</h4>
+        <p>순서 배열과 문장 삽입 문제는 '감'으로 푸는 것이 아닙니다. 글의 흐름(도입-전개-결론)과 논리적 전환점(However, This 등)을 파악하고, 워크북의 논리 구조도 훈련을 통해 문장 간의 유기적 연결을 스스로 시각화해보세요.</p></div></div>
+      <div class="wk" style="transition-delay:.3s"><div class="wl">STEP 3</div><div class="wb">
+        <h4>에세이형 주관식 대비: 조건부 패러프레이징 영작</h4>
+        <p>연속 5단어 이상 금지와 같은 압박 조건에 대비하려면 '통암기'를 버려야 합니다. 하나의 핵심 문장을 능동/수동, 명사구 전환 등 다양한 문법 구조로 바꿔 써보는(Paraphrasing) 연습을 반복하여 실전 영작에 대비하세요.</p></div></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <p>본 분석 리포트는 사직고등학교 1학년 실제 시험지와 학원 자체 대비 자료의 교차 검증을 통해 작성되었습니다.</p>
+  <p style="margin-bottom:20px"><b style="color:var(--brand-red)">위기는 곧 기회입니다.</b> 이번 시험을 통해 사직고 영어 시험의 본질이 '단순 암기'가 아닌 '기본 독해력과 어휘 응용력'에 있음이 명확해졌습니다. 남은 기간, 올바른 방향으로 훈련한다면 반드시 기말고사에서 압도적인 성적 향상을 이뤄낼 수 있습니다.</p>
+  <div style="font-family:var(--mono); font-size:11.5px; opacity:0.6; letter-spacing:0.05em;">SKORE ACADEMY Academic Intelligence · Data-Driven Exam Analysis System</div>
+</footer>
+
+<script>
+(function(){
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var prog = document.getElementById("prog");
+  addEventListener("scroll", function(){
+    var h = document.documentElement, m = h.scrollHeight - h.clientHeight;
+    prog.style.width = (m>0 ? h.scrollTop/m*100 : 0) + "%";
+  }, {passive:true});
+
+  // 다크모드 토글 스크립트 연동
+  var b=document.getElementById('themeToggle');
+  if(b){
+    var r=document.documentElement;
+    function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+    sync();
+    b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});
+  }
+
+  var secs = document.querySelectorAll("section");
+  if(!("IntersectionObserver" in window) || reduce){
+    secs.forEach(function(s){ s.classList.add("in"); });
+    return;
+  }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      e.target.classList.add("in");
+      io.unobserve(e.target);
+    });
+  }, {threshold:.14, rootMargin:"0px 0px -50px 0px"});
+  secs.forEach(function(s){ io.observe(s); });
+})();
+</script>
+</body>
+</html>
