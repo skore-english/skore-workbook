@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | CANALIZATION IN LIFE 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>2026 학산여고 1학년 2-2</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">고1 학평 오답률 TOP6 24년 10월 39번 · 문장삽입</div>
+    <h1 class="title">CANALIZATION IN LIFE<br><span>생명체의 운하화: 복잡성 속의 안정성</span></h1>
+    <p class="header-lead">무수히 많은 상호작용 속에서도 제한된 결과로 수렴하며 안정성을 유지하는 생명 현상과 질병의 원리</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · BACKGROUND & SUMMARY</span>
+    <h2 class="sec-title">원문 정독 및 핵심 요약</h2>
+    <div class="bg-knowledge-box">
+      <div class="bg-header"><span>💡</span> BACKGROUND KNOWLEDGE</div>
+      <ul class="bg-list">
+        <li><b>생명체 시스템의 고차원성</b> : 단일 세포 내에서도 분자 간에 일어날 수 있는 상호작용은 수학적으로 엄청난 경우의 수를 가집니다.</li>
+        <li><b>운하화(Canalization)</b> : 이렇게 엄청난 경우의 수에도 불구하고, 생명체가 안정적으로 존재하기 위해 결과가 몇 가지 정해진 방향(계곡)으로 수렴하는 현상을 말합니다. 인간 배아가 기형 없이 특정한 조직과 체형으로만 발달하는 것이 그 예입니다.</li>
+        <li><b>건강과 질병에의 적용</b> : 질병을 일으키는 원인은 수없이 많아도, 우리 몸에 나타나는 증상(기침, 열 등)은 결국 몇 가지 제한된 형태로 좁혀져 발현된다는 논리입니다.</li>
+      </ul>
+    </div>
+    <div class="full-passage-box">
+      Life is what physicists might call a ‘high-dimensional system,’ which is their fancy way of saying that there’s a lot going on. In just a single cell, the number of possible interactions between different molecules is enormous. Such a system can only hope to be stable if only a smaller number of collective ways of being may emerge. For example, it is only a limited number of tissues and body shapes that may result from the development of a human embryo. In 1942, the biologist Conrad Waddington called this drastic narrowing of outcomes canalization. The organism may switch between a small number of well-defined possible states, but can’t exist in random states in between them, rather as a ball in a rough landscape must roll to the bottom of one valley or another. We’ll see that this is true also of health and disease: there are many causes of illness, but their manifestations at the physiological and symptomatic levels are often strikingly similar.
+    </div>
+    <div class="key-takeaway">
+      <b>🔑 핵심 요지:</b> 생명체는 고도로 복잡한 상호작용을 하지만, 안정성을 유지하기 위해 결과가 소수의 상태로 좁혀지는 '운하화(canalization)' 과정을 겪으며, 이는 질병의 증상 발현에서도 마찬가지로 나타난다.
+    </div>
+  </div>
+</section>
+
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+    <h2 class="sec-title">문장별 직독직해 및 구문 분석</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">① Life is what physicists might call a ‘high-dimensional system,’ / <mark>which</mark> is their fancy way of saying / that there’s a lot going on.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 생명은 물리학자들이 '고차원적 시스템'이라고 부를지도 모르는 것이다 / 그리고 그것은 그들의 멋진 표현 방식이다 / 많은 일들이 일어나고 있다는 것을 말하는.<br><br>
+            <b>[구문 해설]</b> 'what'은 선행사를 포함하는 관계대명사(~하는 것)입니다. 콤마(,) 뒤의 'which'는 앞 문장의 내용 일부(고차원적 시스템이라는 용어)를 선행사로 받는 계속적 용법의 관계대명사입니다.<br><br>
+            <b>[핵심 어휘]</b> physicist 물리학자 / high-dimensional 고차원의 / fancy 멋진, 화려한
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">② In just a single cell, / the number of possible interactions between different molecules / is enormous.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 단 하나의 세포 안에서조차, / 다른 분자들 사이의 가능한 상호작용의 수는 / 엄청나다.<br><br>
+            <b>[구문 해설]</b> 주어는 interactions가 아니라 단수 명사구인 'the number'이므로 단수 동사 is가 쓰였습니다.<br><br>
+            <b>[핵심 어휘]</b> interaction 상호작용 / molecule 분자 / enormous 엄청난
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">③ Such a system can only hope to be stable / if only a smaller number of collective ways of being / may emerge.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러한 시스템은 단지 안정적이기를 바랄 수 있을 뿐이다 / 오직 더 적은 수의 집합적인 존재 방식만이 / 나타날 수 있을 때만.<br><br>
+            <b>[구문 해설]</b> 조건절 if가 쓰였으며, 복잡한 시스템이 안정되려면 수많은 경우의 수 중 결과(존재 방식)가 소수로 줄어들어야만 한다는 논리를 담고 있습니다.<br><br>
+            <b>[핵심 어휘]</b> stable 안정적인 / collective 집합적인, 공동의 / emerge 나타나다
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">④ For example, / <mark>it is</mark> only a limited number of tissues and body shapes / <mark>that</mark> may result from the development of a human embryo.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 예를 들어, / 오직 제한된 수의 조직과 체형뿐이다 / 인간 배아의 발달로부터 초래될 수 있는 것은.<br><br>
+            <b>[구문 해설]</b> 「It is ~ that ...」 강조구문이 사용되어 주어인 'only a limited number of tissues and body shapes'를 강조하고 있습니다.<br><br>
+            <b>[핵심 어휘]</b> limited 제한된 / tissue 조직 / body shape 체형 / result from ~에서 초래되다 / development 발달 / embryo 배아
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑤ In 1942, / the biologist Conrad Waddington called this drastic narrowing of outcomes / canalization.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 1942년에, / 생물학자 Conrad Waddington은 결과의 이러한 극적인 좁혀짐을 불렀다 / 운하화(canalization)라고.<br><br>
+            <b>[구문 해설]</b> 5형식 문장으로 'call + 목적어(this drastic narrowing of outcomes) + 목적격 보어(canalization)' 구조가 쓰였습니다.<br><br>
+            <b>[핵심 어휘]</b> drastic 극적인 / narrowing 좁혀짐 / outcome 결과 / canalization 운하화
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑥ The organism may switch / between a small number of well-defined possible states, / but can’t exist in random states in between them, / rather as a ball in a rough landscape / must roll to the bottom of one valley or another.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 유기체는 전환할 수 있다 / 소수의 명확히 정의된 가능한 상태들 사이를, / 하지만 그것들 사이의 무작위적인 상태로 존재할 수는 없다, / 다소 거친 지형의 공이 / 이 계곡이나 저 계곡의 바닥으로 굴러가야만 하는 것처럼.<br><br>
+            <b>[구문 해설]</b> 'as'는 '~하는 것처럼'이라는 의미의 접속사로 쓰여 비유적 상황을 이끕니다.<br><br>
+            <b>[핵심 어휘]</b> organism 유기체 / switch 전환하다 / well-defined 명확히 정의된 / random 무작위적인 / landscape 지형 / valley 계곡
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑦ We’ll see / that this is true also of health and disease: / there are many causes of illness, / but their manifestations at the physiological and symptomatic levels / are often strikingly similar.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 보게 될 것이다 / 이것이 건강과 질병에도 적용된다는 것을: / 질병의 원인은 많다, / 하지만 생리적이고 증상적인 수준에서의 그것들의 발현은 / 종종 놀랍도록 비슷하다.<br><br>
+            <b>[구문 해설]</b> 'be true of'는 '~에도 사실이다(적용되다)'라는 뜻입니다. 접속사 that은 see의 목적어인 명사절을 이끕니다.<br><br>
+            <b>[핵심 어휘]</b> manifestation 발현, 나타남 / physiological 생리적인 / symptomatic 증상의 / strikingly 놀랍도록 / similar 비슷한
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGIC FLOW</span>
+    <h2 class="sec-title">지문 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">도입 (Introduction)</span>
+        <h4>복잡한 생명 시스템</h4>
+        <p>생명체는 세포 내 수많은 분자들이 무수히 많은 상호작용을 일으키는 고도로 복잡한(고차원적) 시스템임.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">전개 (Development)</span>
+        <h4>운하화(Canalization) 현상</h4>
+        <p>엄청난 경우의 수에도 불구하고 생명체가 안정적이려면 결과는 소수로 좁혀져야 함. 인간 배아가 제한된 조직과 체형으로만 발달하는 현상을 학자들은 '운하화'라 명명함. 이는 거친 지형의 공이 특정한 계곡 바닥으로만 굴러가는 것과 같음.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">결론 (Conclusion)</span>
+        <h4>질병 발현의 유사성</h4>
+        <p>운하화의 원리는 질병에도 적용됨. 병을 일으키는 원인은 다양하지만, 우리 몸에 나타나는 생리적/증상적 형태(결과)는 놀랍도록 소수로 좁혀져 비슷하게 나타남.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+    <h2 class="sec-title">수능형 어법 훈련</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. Life is what physicists might call a ‘high-dimensional system,’ [ <b>which</b> / <b>that</b> ] is their fancy way of saying that there’s a lot going on.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 콤마(,) 뒤에 이어지는 계속적 용법의 관계대명사 자리입니다. 계속적 용법에는 that을 쓸 수 없으므로 which가 올바릅니다.">which</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 콤마(,) 뒤에는 관계대명사 that을 사용할 수 없는 계속적 용법입니다. 따라서 which를 써야 합니다.">that</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    <div class="drill-card">
+      <div class="drill-q">2. For example, it is only a limited number of tissues and body shapes [ <b>what</b> / <b>that</b> ] may result from the development of a human embryo.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 주어 부분을 강조하는 「It is ~ that」 강조구문이 쓰였습니다. 강조되는 명사구(only a limited ~)를 이어주는 that이 필요합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 이 문장은 It과 함께 주어를 강조하는 강조구문입니다. what은 강조구문을 이끌 수 없으며, that을 사용해야 합니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">내신 대비 실전 변형 문제</h2>
+
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Life is what physicists might call a ‘high-dimensional system,’ which is their fancy way of saying that there’s a lot going on. In just a single cell, the number of possible interactions between different molecules is enormous. Such a system can only hope to be stable if only a smaller number of collective ways of being may emerge. For example, it is only a limited number of tissues and body shapes that may result from the development of a human embryo. In 1942, the biologist Conrad Waddington called this drastic narrowing of outcomes canalization. The organism may switch between a small number of well-defined possible states, but can’t exist in random states in between them, rather as a ball in a rough landscape must roll to the bottom of one valley or another. We’ll see that this is true also of health and disease: there are many causes of illness, but their manifestations at the physiological and symptomatic levels are often strikingly similar.
+      </div>
+      <div class="exam-choices">
+        ① How Molecules Interact in Human Cells<br>
+        ② Canalization: The Secret to Biological Stability<br>
+        ③ Various Causes of Modern Physiological Diseases<br>
+        ④ Why Physicists Try to Understand Biology<br>
+        ⑤ The Infinite Possibilities of Human Embryos
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ②</b><br>
+          [해설] 이 글은 무수히 많은 복잡성을 가진 생명체가 어떻게 안정성을 유지하는지, 그 비결이 수많은 가능성을 소수의 정해진 상태로 좁히는 '운하화(canalization)'에 있음을 설명하고 있습니다. 따라서 '운하화: 생물학적 안정성의 비밀'이 가장 적절한 제목입니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Life is what physicists might call a ‘high-dimensional system,’ which is their fancy way of saying that there’s a lot going on. In just a single cell, the number of possible interactions between different molecules is enormous. Such a system can only hope to be ①<u>stable</u> if only a ②<u>smaller</u> number of collective ways of being may emerge. For example, it is only a ③<u>limited</u> number of tissues and body shapes that may result from the development of a human embryo. In 1942, the biologist Conrad Waddington called this drastic ④<u>broadening</u> of outcomes canalization. The organism may switch between a small number of well-defined possible states, but can’t exist in random states in between them, rather as a ball in a rough landscape must roll to the bottom of one valley or another. We’ll see that this is true also of health and disease: there are many causes of illness, but their manifestations at the physiological and symptomatic levels are often strikingly ⑤<u>similar</u>.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ④</b><br>
+          [해설] 운하화(canalization)란 무수히 많은 가능성(결과)들이 인간 배아의 사례처럼 극히 제한된 소수의 숫자로 '좁혀지는' 현상을 의미합니다. 따라서 넓어짐을 의미하는 ④의 broadening은 narrowing(좁혀짐)으로 바뀌어야 문맥상 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글의 내용을 한 문장으로 요약하고자 한다. 빈칸 (A), (B)에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Life is what physicists might call a ‘high-dimensional system,’ which is their fancy way of saying that there’s a lot going on. In just a single cell, the number of possible interactions between different molecules is enormous. Such a system can only hope to be stable if only a smaller number of collective ways of being may emerge. For example, it is only a limited number of tissues and body shapes that may result from the development of a human embryo. In 1942, the biologist Conrad Waddington called this drastic narrowing of outcomes canalization. The organism may switch between a small number of well-defined possible states, but can’t exist in random states in between them, rather as a ball in a rough landscape must roll to the bottom of one valley or another. We’ll see that this is true also of health and disease: there are many causes of illness, but their manifestations at the physiological and symptomatic levels are often strikingly similar.
+      </div>
+      <div class="summary-box">
+        Despite the complex interactions within a living organism, it maintains stability through a process called canalization, which ( A ) the potential outcomes to a few defined states, a principle that is also ( B ) in health and disease.
+      </div>
+      <div class="exam-choices">
+        ① (A) restricts — (B) observed<br>
+        ② (A) restricts — (B) ignored<br>
+        ③ (A) expands — (B) applied<br>
+        ④ (A) expands — (B) observed<br>
+        ⑤ (A) transforms — (B) ignored
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ①</b><br>
+          [해설] 생명체는 복잡성 속에서도 운하화 과정을 통해 잠재적 결과들을 소수의 상태로 '제한/축소(restricts/narrows)'함으로써 안정성을 유지하며, 이 원리는 건강과 질병의 증상 발현에서도 '관찰/발견(observed/found)'됩니다. 따라서 (A)에는 restricts(제한하다), (B)에는 observed(관찰된)가 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고 밑줄 친 우리말과 같은 의미가 되도록, 주어진 조건에 맞게 영작하시오.</h4>
+      <div class="exam-passage">
+        Life is what physicists might call a ‘high-dimensional system,’ which is their fancy way of saying that there’s a lot going on. In just a single cell, the number of possible interactions between different molecules is enormous. Such a system can only hope to be stable if only a smaller number of collective ways of being may emerge. For example, <u>인간 배아의 발달로부터 초래될 수 있는 것은 오직 제한된 수의 조직과 체형뿐이다</u>. In 1942, the biologist Conrad Waddington called this drastic narrowing of outcomes canalization. The organism may switch between a small number of well-defined possible states, but can’t exist in random states in between them, rather as a ball in a rough landscape must roll to the bottom of one valley or another. We’ll see that this is true also of health and disease: there are many causes of illness, but their manifestations at the physiological and symptomatic levels are often strikingly similar.
+      </div>
+      <div class="summary-box">
+        [조건]<br>
+        1. result, limit, tissue를 반드시 포함할 것.<br>
+        2. 「It is ~ that」 강조구문을 활용할 것.<br>
+        3. 필요시 단어 추가 및 어형 변화 가능.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답]</b> it is only a limited number of tissues and body shapes that may result from the development of a human embryo.<br><br>
+          [해설] 강조구문인 'it is ~ that' 사이에 강조하고자 하는 대상인 '오직 제한된 수의 조직과 체형(only a limited number of tissues and body shapes)'을 위치시킵니다. that 뒤에는 '~로부터 초래되다'라는 뜻의 동사구 'may result from'을 쓰고 그 뒤에 '인간 배아의 발달(the development of a human embryo)'을 이어 영작합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

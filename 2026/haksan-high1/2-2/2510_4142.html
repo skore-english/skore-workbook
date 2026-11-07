@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | AI AND THE LIMITS OF CREATIVITY 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>2026 학산여고 1학년 2-2</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">고1 학평 오답률 TOP6 25년 10월 41, 42번 · 장문</div>
+    <h1 class="title">AI AND THE LIMITS OF CREATIVITY<br><span>AI의 편리함이 창의성에 미치는 치명적 한계</span></h1>
+    <p class="header-lead">과거 데이터를 모방하는 AI에 대한 과도한 의존이 창조적 인재의 핵심인 '고군분투와 시행착오의 과정'을 어떻게 박탈하는가</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · BACKGROUND & SUMMARY</span>
+    <h2 class="sec-title">원문 정독 및 핵심 요약</h2>
+    <div class="bg-knowledge-box">
+      <div class="bg-header"><span>💡</span> BACKGROUND KNOWLEDGE</div>
+      <ul class="bg-list">
+        <li><b>창의성(Creativity)의 본질</b> : 진정한 창의성은 확산적 사고와 실험 정신뿐만 아니라 수많은 실패와 고군분투를 거치는 지저분하고 반복적인 과정을 필요로 합니다.</li>
+        <li><b>AI 데이터의 모방성</b> : AI 알고리즘은 본질적으로 '과거에 이미 존재하는 데이터'를 학습하여 패턴을 찾아냅니다. 따라서 빠르고 그럴듯한 결과를 내지만, 진정한 의미의 독창성을 결여한 파생적 결과물(derivative works)을 만듭니다.</li>
+        <li><b>시행착오 과정의 증발</b> : AI가 제공하는 '즉각적인 해결책'은 인간이 실패를 딛고 기술을 연마하며 고유한 관점을 개발하는 필수적인 학습 과정을 생략하게 만들어, 결국 진정한 창조적 재능의 발달을 저해합니다.</li>
+      </ul>
+    </div>
+    <div class="full-passage-box">
+      Creativity is the ability to generate novel and valuable ideas. It involves divergent thinking, imagination, and a willingness to experiment and take risks. While AI can be a powerful tool for creative efforts, it also carries the risk of limiting originality and innovation. AI algorithms are trained on existing datasets, often identifying patterns and trends in past creations. While this can be useful for generating new content in similar styles or formats, it can also lead to derivative works that lack genuine originality. If artists and designers rely too heavily on AI for inspiration and content generation, they may find themselves trapped in a cycle of imitation, unable to break free from the constraints of the AI’s training data. Moreover, the ease with which AI can generate content can discourage the kind of struggle and experimentation that often leads to breakthroughs. The creative process is often messy and repetitive, involving numerous failures and setbacks. It is through these challenges that we refine our skills, develop our unique perspectives, and push the boundaries of what is possible. If AI provides instant solutions, it can skip this essential process of learning through trial and error, ultimately inhibiting the development of true creative talent.
+    </div>
+    <div class="key-takeaway">
+      <b>🔑 핵심 요지:</b> AI는 훌륭한 도구이지만 과거 데이터에 의존하여 모방을 낳고, '실패와 시행착오'라는 창의성 발달의 필수 과정을 건너뛰게 하여 진정한 독창성과 창의적 인재 양성을 저해할 수 있다.
+    </div>
+  </div>
+</section>
+
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+    <h2 class="sec-title">문장별 직독직해 및 구문 분석</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">① Creativity is the ability / to generate novel and valuable ideas.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 창의성은 능력이다 / 새롭고 가치 있는 아이디어를 만들어내는.<br><br>
+            <b>[핵심 어휘]</b> creativity 창의성 / generate 만들어내다, 생성하다 / novel 새로운, 참신한
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">② It involves divergent thinking, imagination, / and a willingness to experiment and take risks.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그것은 확산적 사고, 상상력을 포함한다, / 그리고 기꺼이 실험하고 위험을 감수하려는 의지를 (포함한다).<br><br>
+            <b>[핵심 어휘]</b> involve 포함하다 / divergent 확산적인, 발산적인 / willingness 기꺼이 하는 마음, 의지 / experiment 실험하다
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">③ While AI can be a powerful tool for creative efforts, / it also carries the risk / of limiting originality and innovation.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> AI가 창의적인 노력을 위한 강력한 도구가 될 수 있는 반면에, / 그것은 또한 위험을 수반한다 / 독창성과 혁신을 제한할.<br><br>
+            <b>[핵심 어휘]</b> effort 노력 / carry 수반하다 / limit 제한하다 / originality 독창성 / innovation 혁신
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">④ AI algorithms are trained on existing datasets, / often identifying patterns and trends / in past creations.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> AI 알고리즘은 기존의 데이터 세트로 훈련된다, / 종종 패턴과 추세를 식별하면서 / 과거의 창작물들 속에서.<br><br>
+            <b>[구문 해설]</b> identifying은 동시동작을 나타내는 능동 분사구문으로 '~하면서'로 해석됩니다.<br><br>
+            <b>[핵심 어휘]</b> algorithm 알고리즘 / existing 기존의 / identify 식별하다, 확인하다 / creation 창작물
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑤ While this can be useful / for generating new content in similar styles or formats, / it can also lead to derivative works / <mark>that</mark> lack genuine originality.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것이 유용할 수 있지만 / 비슷한 스타일이나 형식의 새로운 콘텐츠를 생성하는 데에, / 그것은 또한 파생적인(모방한) 결과물로 이어질 수 있다 / 진정한 독창성이 결여된.<br><br>
+            <b>[구문 해설]</b> that은 derivative works를 수식하는 주격 관계대명사입니다. lack은 여기서 타동사로 쓰여 '~이 결여되다'라는 뜻입니다.<br><br>
+            <b>[핵심 어휘]</b> lead to ~로 이어지다 / derivative 파생적인, 새롭지 않은 / lack 결여되다 / genuine 진정한
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑥ If artists and designers rely too heavily on AI / for inspiration and content generation, / they may <mark>find</mark> themselves <mark>trapped</mark> in a cycle of imitation, / unable to break free from the constraints of the AI’s training data.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 예술가들과 디자이너들이 AI에 너무 과도하게 의존한다면 / 영감과 콘텐츠 생성을 위해, / 그들은 스스로가 모방의 순환에 갇힌 것을 발견할지도 모른다, / AI의 훈련 데이터의 제약으로부터 벗어나지 못한 채.<br><br>
+            <b>[구문 해설]</b> 「find + 목적어(themselves) + 목적격보어(trapped)」 구문으로, 주어(they)가 갇히는(수동) 대상이므로 과거분사 trapped가 쓰였습니다. 콤마 뒤의 unable은 being이 생략된 분사구문(형용사 보어)입니다.<br><br>
+            <b>[핵심 어휘]</b> rely on ~에 의존하다 / inspiration 영감 / trapped 갇힌 / cycle 순환, 굴레 / imitation 모방 / break free from ~에서 벗어나다 / constraint 제약
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑦ Moreover, the ease / <mark>with which</mark> AI can generate content / can discourage the kind of struggle and experimentation / <mark>that</mark> often leads to breakthroughs.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 게다가, 그 쉬움은 / AI가 콘텐츠를 생성할 수 있는 / 그러한 부류의 고군분투와 실험을 낙담시킬 수 있다 / 종종 획기적 발전으로 이어지는.<br><br>
+            <b>[구문 해설]</b> 'with which'는 전치사+관계대명사로 the ease를 수식하며 뒷문장이 완전합니다(generate content with ease). that은 주격 관계대명사로 선행사 the kind of struggle and experimentation을 수식합니다.<br><br>
+            <b>[핵심 어휘]</b> moreover 게다가 / ease 쉬움, 용이성 / discourage 낙담시키다, 단념하게 하다 / struggle 고군분투 / breakthrough 획기적 발전, 돌파구
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑧ The creative process is often messy and repetitive, / <mark>involving</mark> numerous failures and setbacks.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 창의적 과정은 종종 지저분하고 반복적이다, / 수많은 실패와 좌절을 포함하면서.<br><br>
+            <b>[구문 해설]</b> involving은 능동 분사구문으로 뒤에 목적어(numerous failures and setbacks)를 취하고 있습니다.<br><br>
+            <b>[핵심 어휘]</b> messy 지저분한, 혼란스러운 / repetitive 반복적인 / numerous 수많은 / failure 실패 / setback 좌절, 차질
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑨ <mark>It is</mark> through these challenges / <mark>that</mark> we refine our skills, develop our unique perspectives, / and push the boundaries of what is possible.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 바로 이러한 도전(어려움)들을 통해서이다 / 우리가 우리의 기술을 다듬고, 고유한 관점을 발전시키며, / 가능한 것의 경계를 넓히는 것은.<br><br>
+            <b>[구문 해설]</b> 「It is ~ that」 강조구문이 쓰여 부사구인 'through these challenges'를 강조하고 있습니다.<br><br>
+            <b>[핵심 어휘]</b> challenge 도전, 난제 / refine 다듬다, 정제하다 / perspective 관점 / push the boundary 경계를 넓히다
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑩ If AI provides instant solutions, / it can skip this essential process / of learning through trial and error, / ultimately <mark>inhibiting</mark> the development of true creative talent.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 AI가 즉각적인 해결책을 제공한다면, / 그것은 이 필수적인 과정을 건너뛰게 할 수 있다 / 시행착오를 통한 학습의, / 궁극적으로 진정한 창조적 재능의 발달을 저해하면서.<br><br>
+            <b>[구문 해설]</b> inhibiting은 결과를 나타내는 분사구문(~하면서, 그 결과 ~하다)으로 쓰였습니다.<br><br>
+            <b>[핵심 어휘]</b> instant 즉각적인 / skip 건너뛰다 / essential 필수적인 / trial and error 시행착오 / ultimately 궁극적으로 / inhibit 저해하다, 억제하다
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGIC FLOW</span>
+    <h2 class="sec-title">지문 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">도입 (Introduction)</span>
+        <h4>창의성과 AI의 양면성</h4>
+        <p>창의성은 새롭고 가치 있는 아이디어를 내기 위한 확산적 사고와 실험 정신을 요함. AI는 훌륭한 도구이지만 동시에 독창성을 제한할 위험을 안고 있음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">전개 (Development)</span>
+        <h4>과거 데이터 모방의 굴레</h4>
+        <p>AI는 과거 데이터를 학습하므로, 여기에 너무 의존하면 진정한 독창성이 결여된 파생적 결과물(derivative works)만 양산하는 모방의 순환에 갇히게 됨.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">결론 (Conclusion)</span>
+        <h4>시행착오 과정의 박탈</h4>
+        <p>돌파구를 여는 진정한 창의성은 실패와 고군분투라는 지저분한 과정을 거쳐야 연마됨. AI가 주는 '즉각적 해결책'은 이 필수적인 시행착오 과정을 건너뛰게 하여 창의적 인재 양성을 저해함.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+    <h2 class="sec-title">수능형 어법 훈련</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. If artists and designers rely too heavily on AI for inspiration and content generation, they may find themselves [ <b>trapped</b> / <b>trapping</b> ] in a cycle of imitation...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! find + 목적어 + 목적격보어 구조에서, 목적어인 themselves(예술가들)가 모방의 굴레에 '갇히게 된' 수동의 관계이므로 과거분사 trapped가 적절합니다.">trapped</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 목적어인 themselves(예술가들)가 능동적으로 무엇인가를 가두는 것이 아니라 모방의 순환에 '갇혀진' 것이므로 능동형 현재분사인 trapping은 쓸 수 없습니다.">trapping</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    <div class="drill-card">
+      <div class="drill-q">2. The creative process is often messy and repetitive, [ <b>involving</b> / <b>involved</b> ] numerous failures and setbacks.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 창의적 과정(주절의 주어)이 수많은 실패와 좌절을 '포함하는' 능동적 주체이며 뒤에 목적어도 있으므로 현재분사 involving이 맞습니다.">involving</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 뒤에 numerous failures and setbacks라는 목적어가 존재하고 주어가 이러한 것들을 능동적으로 포함하고 있으므로 수동형인 involved는 문법상 어색합니다.">involved</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">내신 대비 실전 변형 문제</h2>
+
+    <div class="exam-item">
+      <h4>1. 다음 빈칸에 들어갈 말로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        AI algorithms are trained on existing datasets, often identifying patterns and trends in past creations. While this can be useful for generating new content in similar styles or formats, it can also lead to derivative works that lack genuine originality. If artists and designers rely too heavily on AI for inspiration and content generation, they may find themselves ________________________________________, unable to break free from the constraints of the AI’s training data. Moreover, the ease with which AI can generate content can discourage the kind of struggle and experimentation that often leads to breakthroughs.
+      </div>
+      <div class="exam-choices">
+        ① trapped in a cycle of imitation<br>
+        ② involved in a collaborative human-AI process<br>
+        ③ leading the new trend of digital art<br>
+        ④ free from the burden of repetitive tasks<br>
+        ⑤ struggling to find existing datasets
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ①</b><br>
+          [해설] 빈칸 바로 뒤에 "AI 훈련 데이터의 제약으로부터 벗어나지 못한 채(unable to break free from the constraints of the AI’s training data)"라는 결정적인 단서가 제시되어 있습니다. 과거 데이터를 기반으로 하는 AI에 과도하게 의존하면 기존 데이터의 한계에 갇히게 되므로, 빈칸에는 '모방의 순환에 갇힌(trapped in a cycle of imitation)'이 들어가는 것이 논리적으로 가장 완벽합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="summary-box">
+        Moreover, the ease with which AI can generate content can discourage the kind of struggle and experimentation that often leads to breakthroughs.
+      </div>
+      <div class="exam-passage">
+        AI algorithms are trained on existing datasets, often identifying patterns and trends in past creations. ( ① ) While this can be useful for generating new content in similar styles or formats, it can also lead to derivative works that lack genuine originality. ( ② ) If artists and designers rely too heavily on AI for inspiration and content generation, they may find themselves trapped in a cycle of imitation, unable to break free from the constraints of the AI’s training data. ( ③ ) The creative process is often messy and repetitive, involving numerous failures and setbacks. ( ④ ) It is through these challenges that we refine our skills, develop our unique perspectives, and push the boundaries of what is possible. ( ⑤ ) If AI provides instant solutions, it can skip this essential process of learning through trial and error, ultimately inhibiting the development of true creative talent.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ③</b><br>
+          [해설] 주어진 문장은 "게다가(Moreover), AI가 콘텐츠를 만들어내는 '쉬움(ease)'은 획기적 발전으로 이어지는 '고군분투와 실험'을 단념시킬 수 있다"는 내용입니다. 이 문장은 AI 의존의 첫 번째 부작용인 '모방의 굴레(cycle of imitation)' 설명(② 뒤) 다음에 오면서 또 다른 부작용(노력의 단념)을 추가로 제시하는 ③번 자리가 가장 자연스럽습니다. 이어지는 내용(창의적 과정은 지저분하고 반복적이다)은 이 문장의 '고군분투'를 구체적으로 부연 설명합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글에서 전체 흐름과 관계 없는 문장은?</h4>
+      <div class="exam-passage">
+        If artists and designers rely too heavily on AI for inspiration and content generation, they may find themselves trapped in a cycle of imitation, unable to break free from the constraints of the AI’s training data. ① Moreover, the ease with which AI can generate content can discourage the kind of struggle and experimentation that often leads to breakthroughs. ② The creative process is often messy and repetitive, involving numerous failures and setbacks. ③ For example, AI systems can process massive amounts of financial data faster than human accountants, minimizing errors in business reports. ④ It is through these challenges that we refine our skills, develop our unique perspectives, and push the boundaries of what is possible. ⑤ If AI provides instant solutions, it can skip this essential process of learning through trial and error, ultimately inhibiting the development of true creative talent.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ③</b><br>
+          [해설] 이 글은 AI가 예술가와 디자이너들의 '창의성(독창성과 창작 과정)'에 미치는 부정적인 영향(모방의 굴레, 시행착오 박탈)을 다루고 있습니다. AI가 재무 데이터를 인간 회계사보다 빨리 처리하여 오류를 줄인다는 ③번 문장은 단순 업무 처리에 관한 내용으로 전체 글의 문맥과 전혀 맞지 않습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고 밑줄 친 우리말과 같은 의미가 되도록, 주어진 조건에 맞게 영작하시오.</h4>
+      <div class="exam-passage">
+        The creative process is often messy and repetitive, involving numerous failures and setbacks. <u>우리가 우리의 기술을 다듬고 우리의 고유한 관점을 발전시키는 것은 바로 이러한 도전(어려움)들을 통해서이다.</u> If AI provides instant solutions, it can skip this essential process of learning through trial and error, ultimately inhibiting the development of true creative talent.
+      </div>
+      <div class="summary-box">
+        [조건]<br>
+        1. refine, perspective, challenge, through를 모두 한 번씩 사용할 것.<br>
+        2. 「It is ~ that」 강조구문을 활용하여 'through these challenges'를 강조할 것.<br>
+        3. 필요시 단어 추가 및 어형 변화 가능 (총 15단어로 작성).
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답]</b> It is through these challenges that we refine our skills and develop our unique perspectives.<br><br>
+          [해설] 부사구인 '이러한 도전들을 통해서(through these challenges)'를 강조하기 위해 It is와 that 사이에 넣습니다. that 이하에는 평서문 어순대로 'we refine our skills and develop our unique perspectives'를 이어서 씁니다. 원문의 뒤쪽 병렬 구조 일부(push the boundaries ~)를 제외하고 우리말에 맞게 축약 영작한 형태입니다. (단어 수: It, is, through, these, challenges, that, we, refine, our, skills, and, develop, our, unique, perspectives = 15단어)
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | REFRAMING DEPRESSION 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>2026 학산여고 1학년 2-2</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">고1 학평 오답률 TOP6 24년 10월 37번 · 순서배열</div>
+    <h1 class="title">REFRAMING DEPRESSION<br><span>우울증의 진짜 원인: 의식의 왜곡</span></h1>
+    <p class="header-lead">우울증을 뇌 화학물질 불균형의 결과가 아닌, 자아와 삶의 의미를 상실한 의식의 문제로 바라보는 새로운 관점</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · BACKGROUND & SUMMARY</span>
+    <h2 class="sec-title">원문 정독 및 핵심 요약</h2>
+    <div class="bg-knowledge-box">
+      <div class="bg-header"><span>💡</span> BACKGROUND KNOWLEDGE</div>
+      <ul class="bg-list">
+        <li><b>전통 의학의 관점</b> : 우울증을 뇌의 신경전달물질(세로토닌 등) 불균형으로 봅니다.</li>
+        <li><b>인과관계의 역전</b> : 이 글은 뇌 물질의 감소가 우울증을 일으키는 '원인'이 아니라, 반대로 우울증이라는 상태가 뇌 물질의 감소라는 '결과'를 낳는다고 주장합니다.</li>
+        <li><b>의식(Consciousness)의 문제</b> : 뇌는 의식을 담는 기관일 뿐이며, 우울증의 근본 원인은 자아와 삶의 의미를 상실한 '의식의 왜곡'으로 재정의되어야 합니다.</li>
+      </ul>
+    </div>
+    <div class="full-passage-box">
+      Conventional medicine has long believed that depression is caused by an imbalance of neurotransmitters in the brain. However, there is a major problem with this explanation. This is because the imbalance of substances in the brain is a consequence of depression, not its cause. In other words, depression causes a decrease in brain substances such as serotonin and noradrenaline, not a decrease in brain substances causes depression. In this revised cause-and-effect, the key is to reframe depression as a problem of consciousness. Our consciousness is a more fundamental entity that goes beyond the functioning of the brain. The brain is no more than an organ of consciousness. If it is not consciousness itself, then the root cause of depression is also a distortion of our state of consciousness: a consciousness that has lost its sense of self and the meaning of life. Such a disease of consciousness may manifest itself in the form of depression.
+    </div>
+    <div class="key-takeaway">
+      <b>🔑 핵심 요지:</b> 우울증은 뇌 신경전달물질 불균형이 그 원인이 아니라, 자아와 삶의 의미를 상실한 '의식의 왜곡'에서 비롯된 결과이다.
+    </div>
+  </div>
+</section>
+
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+    <h2 class="sec-title">문장별 직독직해 및 구문 분석</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">① Conventional medicine has long believed / <mark>that</mark> depression is caused / by an imbalance of neurotransmitters / in the brain.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 전통 의학은 오랫동안 믿어왔다 / 우울증이 유발된다고 / 신경전달물질의 불균형에 의해 / 뇌 안의.<br><br>
+            <b>[구문 해설]</b> 'has long believed'는 현재완료 시제로 과거부터 지금까지 이어져 온 믿음을 나타냅니다. 'that'은 believed의 목적어 역할을 하는 명사절을 이끄는 접속사입니다.<br><br>
+            <b>[핵심 어휘]</b> conventional 전통적인 / medicine 의학 / imbalance 불균형 / neurotransmitter 신경전달물질
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">② However, there is a major problem / with this explanation.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나, 중대한 문제가 있다 / 이 설명에는.<br><br>
+            <b>[핵심 어휘]</b> explanation 설명
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">③ This is because the imbalance of substances in the brain / is a consequence of depression, / not its cause.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이것은 뇌 안의 물질 불균형이 우울증의 결과이기 때문이다, / 그것의 원인이 아니라.<br><br>
+            <b>[구문 해설]</b> 'This is because ~'는 앞 내용에 대한 이유를 설명할 때 쓰입니다. 'A, not B' 구문으로 'B가 아니라 A'임을 강조하고 있습니다.<br><br>
+            <b>[핵심 어휘]</b> substance 물질 / consequence 결과
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">④ In other words, depression causes a decrease in brain substances / such as serotonin and noradrenaline, / not a decrease in brain substances causes depression.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 다시 말해, 우울증이 뇌 물질의 감소를 유발한다 / 세로토닌과 노르아드레날린 같은, / 뇌 물질의 감소가 우울증을 유발하는 것이 아니라.<br><br>
+            <b>[구문 해설]</b> 'such as'는 예시를 나타냅니다. 의미상 'not (that) a decrease in brain substances causes depression'이 병렬로 연결되어 인과관계의 방향이 다름을 강조합니다.<br><br>
+            <b>[핵심 어휘]</b> in other words 다시 말해 / decrease 감소
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑤ In this revised cause-and-effect, / the key is to reframe depression / as a problem of consciousness.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 이 수정된 인과관계에서, / 핵심은 우울증을 재구성하는 것이다 / 의식의 문제로.<br><br>
+            <b>[구문 해설]</b> 'to reframe'은 주격 보어 역할을 하는 명사적 용법의 to부정사입니다. 'reframe A as B' (A를 B로 재구성하다) 구문이 쓰였습니다.<br><br>
+            <b>[핵심 어휘]</b> revised 수정된 / cause-and-effect 인과관계 / reframe 재구성하다 / consciousness 의식
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑥ Our consciousness is a more fundamental entity / <mark>that</mark> goes beyond the functioning of the brain.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리의 의식은 더 근본적인 실체이다 / 뇌의 기능을 넘어서는.<br><br>
+            <b>[구문 해설]</b> 'that'은 주격 관계대명사로 앞의 선행사 a more fundamental entity를 수식합니다.<br><br>
+            <b>[핵심 어휘]</b> fundamental 근본적인 / entity 실체 / functioning 기능
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑦ The brain is no more than an organ of consciousness.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 뇌는 의식의 기관에 불과하다.<br><br>
+            <b>[핵심 어휘]</b> no more than ~에 불과한 (only) / organ 기관
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑧ If it is not consciousness itself, / then the root cause of depression / is also a distortion of our state of consciousness: / a consciousness that has lost its sense of self / and the meaning of life.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 만약 그것(뇌)이 의식 그 자체가 아니라면, / 그렇다면 우울증의 근본 원인은 / 또한 우리의 의식 상태의 왜곡이다: / 즉 자아 감각과 삶의 의미를 상실한 의식인.<br><br>
+            <b>[구문 해설]</b> 'that'은 선행사 a consciousness를 수식하는 주격 관계대명사이며, has lost(현재완료) 시제가 쓰였습니다. 콜론(:)은 앞 내용을 구체적으로 부연 설명합니다.<br><br>
+            <b>[핵심 어휘]</b> root cause 근본 원인 / distortion 왜곡 / state 상태 / sense of self 자아 감각
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑨ Such a disease of consciousness / may manifest itself / in the form of depression.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러한 의식의 질병은 / 그 자체를 드러낼지도 모른다 / 우울증의 형태로.<br><br>
+            <b>[구문 해설]</b> 'manifest oneself'는 '(모습, 상태가) 나타나다, 분명하게 드러나다'라는 뜻의 관용적 표현입니다.<br><br>
+            <b>[핵심 어휘]</b> disease 질병 / manifest 드러내다 / form 형태
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGIC FLOW</span>
+    <h2 class="sec-title">지문 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">도입 (Introduction)</span>
+        <h4>전통적 의학의 오해</h4>
+        <p>전통 의학은 우울증을 뇌의 신경전달물질 불균형 때문에 발생한다고 믿어왔지만, 이 설명에는 커다란 논리적 결함이 있음.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">전개 (Development)</span>
+        <h4>인과관계의 역전</h4>
+        <p>물질의 불균형이 우울증의 '원인'이 아니라, 반대로 우울증이 물질의 감소를 유발하는 '결과'임. 우울증은 뇌 물질이 아닌 '의식'의 문제로 재구성되어야 함.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">결론 (Conclusion)</span>
+        <h4>의식의 문제로서의 우울증</h4>
+        <p>뇌는 단지 의식을 담는 기관일 뿐이며, 우울증의 근본 원인은 자아 감각과 삶의 의미를 상실한 '의식의 왜곡'이라는 질병이 발현된 형태임.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+    <h2 class="sec-title">수능형 어법 훈련</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. Conventional medicine has long believed [ <b>that</b> / <b>what</b> ] depression is caused by an imbalance of neurotransmitters in the brain.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! believed의 목적어 역할을 하는 명사절을 이끌며, 뒤에 수동태로 완전한 문장이 이어지므로 접속사 that이 적절합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 뒤에 '주어(depression) + 동사(is caused)' 형태의 완전한 문장이 오기 때문에 관계대명사나 의문대명사 what은 올 수 없습니다. 접속사 that을 써야 합니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    <div class="drill-card">
+      <div class="drill-q">2. Our consciousness is a more fundamental entity [ <b>that</b> / <b>what</b> ] goes beyond the functioning of the brain.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 앞에 선행사(entity)가 존재하고 이어지는 절에서 주어 역할을 수행해야 하므로 주격 관계대명사 that이 올바릅니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 what은 선행사를 포함하므로 앞에 수식을 받는 명사(entity)가 있을 때는 쓸 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">내신 대비 실전 변형 문제</h2>
+
+    <div class="exam-item">
+      <h4>1. 다음 글의 요지로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Conventional medicine has long believed that depression is caused by an imbalance of neurotransmitters in the brain. However, there is a major problem with this explanation. This is because the imbalance of substances in the brain is a consequence of depression, not its cause. In other words, depression causes a decrease in brain substances such as serotonin and noradrenaline, not a decrease in brain substances causes depression. In this revised cause-and-effect, the key is to reframe depression as a problem of consciousness. Our consciousness is a more fundamental entity that goes beyond the functioning of the brain. The brain is no more than an organ of consciousness. If it is not consciousness itself, then the root cause of depression is also a distortion of our state of consciousness: a consciousness that has lost its sense of self and the meaning of life. Such a disease of consciousness may manifest itself in the form of depression.
+      </div>
+      <div class="exam-choices">
+        ① 우울증 치료를 위해서는 뇌 신경전달물질의 불균형을 바로잡는 것이 우선이다.<br>
+        ② 뇌의 기능이 저하되면 의식의 왜곡이 발생하여 우울증으로 이어질 수 있다.<br>
+        ③ 우울증은 뇌 물질의 불균형이 아닌, 자아와 삶의 의미를 상실한 의식의 문제로 보아야 한다.<br>
+        ④ 현대 의학은 우울증의 원인을 규명하는 데 있어 의식의 역할을 과대평가하고 있다.<br>
+        ⑤ 건강한 의식을 유지하기 위해서는 세로토닌과 같은 뇌 물질의 꾸준한 관리가 필수적이다.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ③</b><br>
+          [해설] 이 글은 우울증이 뇌 화학물질의 불균형이라는 뇌의 물리적 문제에서 비롯된 것이 아니라, 물질 감소는 우울증의 결과일 뿐이며 근본 원인은 자아와 의미를 잃은 '의식의 왜곡(질병)'에 있다고 역설하고 있습니다. 따라서 가장 적절한 요지는 ③번입니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="summary-box">
+        In other words, depression causes a decrease in brain substances such as serotonin and noradrenaline, not a decrease in brain substances causes depression.
+      </div>
+      <div class="exam-passage">
+        Conventional medicine has long believed that depression is caused by an imbalance of neurotransmitters in the brain. ( ① ) However, there is a major problem with this explanation. ( ② ) This is because the imbalance of substances in the brain is a consequence of depression, not its cause. ( ③ ) In this revised cause-and-effect, the key is to reframe depression as a problem of consciousness. ( ④ ) Our consciousness is a more fundamental entity that goes beyond the functioning of the brain. ( ⑤ ) The brain is no more than an organ of consciousness. If it is not consciousness itself, then the root cause of depression is also a distortion of our state of consciousness.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ③</b><br>
+          [해설] 주어진 문장은 "다시 말해(In other words), 우울증이 뇌 물질의 감소를 유발하는 것이지, 그 반대가 아니다"라는 내용입니다. 이는 바로 앞 문장(뇌 물질 불균형은 원인이 아니라 결과이다)을 구체적으로 재진술하는 것이며, 그 뒤에 이어지는 "이 수정된 인과관계에서(In this revised cause-and-effect)"라는 표현과 자연스럽게 연결되므로 ③번 위치가 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 다음 글에서 전체 흐름과 관계 없는 문장은?</h4>
+      <div class="exam-passage">
+        Conventional medicine has long believed that depression is caused by an imbalance of neurotransmitters in the brain. However, there is a major problem with this explanation. ① This is because the imbalance of substances in the brain is a consequence of depression, not its cause. ② In other words, depression causes a decrease in brain substances such as serotonin and noradrenaline, not a decrease in brain substances causes depression. ③ In this revised cause-and-effect, the key is to reframe depression as a problem of consciousness. Our consciousness is a more fundamental entity that goes beyond the functioning of the brain. The brain is no more than an organ of consciousness. ④ Accordingly, the most effective treatment for depression is currently known to be the continuous administration of serotonin. ⑤ If it is not consciousness itself, then the root cause of depression is also a distortion of our state of consciousness: a consciousness that has lost its sense of self and the meaning of life. Such a disease of consciousness may manifest itself in the form of depression.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ④</b><br>
+          [해설] 이 글은 우울증을 뇌 물질의 문제가 아닌 '의식의 문제'로 재구성해야 한다는 내용을 일관되게 주장하고 있습니다. 따라서 세로토닌의 지속적인 투여가 가장 효과적인 치료법이라는 ④번 문장은, 약물이나 화학물질에 의존하는 전통 의학의 관점이므로 전체 흐름과 맞지 않습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고 밑줄 친 우리말과 같은 의미가 되도록, 주어진 조건에 맞게 영작하시오.</h4>
+      <div class="exam-passage">
+        Conventional medicine has long believed that depression is caused by an imbalance of neurotransmitters in the brain. However, there is a major problem with this explanation. This is because <u>뇌 안의 물질 불균형은 우울증의 결과이지, 그것의 원인이 아니기 때문이다</u>. In other words, depression causes a decrease in brain substances such as serotonin and noradrenaline, not a decrease in brain substances causes depression. In this revised cause-and-effect, the key is to reframe depression as a problem of consciousness. Our consciousness is a more fundamental entity that goes beyond the functioning of the brain. The brain is no more than an organ of consciousness. If it is not consciousness itself, then the root cause of depression is also a distortion of our state of consciousness: a consciousness that has lost its sense of self and the meaning of life.
+      </div>
+      <div class="summary-box">
+        [조건]<br>
+        1. consequence, cause, imbalance, substance를 반드시 포함할 것.<br>
+        2. 'A, not B' 구문을 활용할 것.<br>
+        3. 필요시 단어 추가 및 어형 변화 가능.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답]</b> the imbalance of substances in the brain is a consequence of depression, not its cause.<br><br>
+          [해설] '뇌 안의 물질 불균형'은 주어인 the imbalance of substances in the brain으로 씁니다. 동사는 is를 쓰고, 주격 보어 자리에 '우울증의 결과이지, 그것의 원인이 아닌'을 'A, not B' 구문을 활용하여 a consequence of depression, not its cause로 배열합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

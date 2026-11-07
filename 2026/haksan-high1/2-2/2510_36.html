@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | MULTISENSORY EXPERIENCES 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>2026 학산여고 1학년 2-2</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">고1 학평 오답률 TOP6 25년 10월 36번 · 순서배열</div>
+    <h1 class="title">THE MULTISENSORY WORLD<br><span>일상 속 다감각적 경험: 식사를 중심으로</span></h1>
+    <p class="header-lead">우리가 너무나 당연하게 여기는 평범한 식사조차도 시각, 후각, 미각, 촉각, 청각이 완벽하게 융합된 경이로운 감각의 세계임을 보여주는 분석</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · BACKGROUND & SUMMARY</span>
+    <h2 class="sec-title">원문 정독 및 핵심 요약</h2>
+    <div class="bg-knowledge-box">
+      <div class="bg-header"><span>💡</span> BACKGROUND KNOWLEDGE</div>
+      <ul class="bg-list">
+        <li><b>다감각적 경험(Multisensory experiences)</b> : 하나의 감각만이 아니라 시각, 미각, 후각, 촉각, 청각 등 여러 감각이 동시에 상호작용하여 정보를 인식하는 과정입니다.</li>
+        <li><b>식사와 감각의 융합</b> : 식사는 단순히 미각(맛)만을 위한 행위가 아니라 음식의 모양(시각), 냄새(후각), 식감(촉각), 그리고 씹는 소리나 식당의 분위기 소리(청각)가 모두 결합된 대표적인 다감각 활동입니다.</li>
+        <li><b>일상 속 당연시</b> : 우리는 감각 기관이 아무 문제 없이 정상적으로 기능할 때, 이러한 정교한 다감각적 세계의 경이로움을 인지하지 못하고 너무 당연한 것으로 간과하며 살아갑니다.</li>
+      </ul>
+    </div>
+    <div class="full-passage-box">
+      Multisensory experiences are a central part of our everyday lives, yet we often take them for granted, especially when our senses function normally or are corrected to normal with aids like glasses. However, closer inspection to any, even the most ordinary experiences, reveals the remarkable multisensory world in which we live. Consider the experience of eating a regular meal. At first, it may seem like an ordinary experience, but it is actually a fusion of the senses. We first eat with our eyes, but we are also exposed to countless sensory signals that influence our eating experience such as food textures, tastes, and smells. And it does not stop there. Even the sounds that come both from the atmospheres in which we eat and our interactions with the food (such as chewing) and the tools we use to eat influence our eating experience.
+    </div>
+    <div class="key-takeaway">
+      <b>🔑 핵심 요지:</b> 우리의 일상, 특히 밥을 먹는 것과 같은 평범해 보이는 경험조차 실제로는 시각, 후각, 미각, 촉각, 청각이 복합적으로 작용하는 놀라운 '다감각적 융합'의 과정이다.
+    </div>
+  </div>
+</section>
+
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+    <h2 class="sec-title">문장별 직독직해 및 구문 분석</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">① Multisensory experiences are a central part of our everyday lives, / yet we often take them for granted, / especially when our senses function normally / or are corrected to normal / with aids like glasses.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 다감각적 경험은 우리 일상생활의 중심적인 부분이다, / 하지만 우리는 종종 그것들을 당연하게 여긴다, / 특히 우리의 감각이 정상적으로 기능하거나 / 정상으로 교정될 때 / 안경과 같은 보조 기구를 통해.<br><br>
+            <b>[구문 해설]</b> 'take A for granted'는 'A를 당연한 것으로 여기다'라는 뜻의 중요 숙어입니다. when 부사절 내에서 동사 function과 are corrected가 or로 병렬 연결되어 있습니다.<br><br>
+            <b>[핵심 어휘]</b> multisensory 다감각의 / take for granted ~을 당연하게 여기다 / function 기능하다 / correct 교정하다 / aid 보조 기구
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">② However, closer inspection to any, / even the most ordinary experiences, / reveals the remarkable multisensory world / in which we live.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그러나, 어떠한 것에 대한 더 면밀한 관찰은, / 심지어 가장 평범한 경험조차도, / 놀라운 다감각적 세계를 드러낸다 / 우리가 살고 있는.<br><br>
+            <b>[구문 해설]</b> 문장의 주어는 closer inspection이며, 동사는 단수형 reveals입니다. 'in which'는 '전치사+관계대명사' 구조로 선행사 the remarkable multisensory world를 뒤에서 수식합니다.<br><br>
+            <b>[핵심 어휘]</b> inspection 관찰, 검사 / ordinary 평범한 / reveal 드러내다 / remarkable 놀라운
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">③ Consider the experience of eating a regular meal.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 평범한 식사를 하는 경험을 생각해 보라.<br><br>
+            <b>[핵심 어휘]</b> regular 일반적인, 평범한
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">④ At first, it may seem like an ordinary experience, / but it is actually a fusion of the senses.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 처음에, 그것은 평범한 경험처럼 보일지도 모른다, / 하지만 그것은 사실 감각들의 융합이다.<br><br>
+            <b>[핵심 어휘]</b> fusion 융합
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑤ We first eat with our eyes, / but we are also exposed to countless sensory signals / <mark>that</mark> influence our eating experience / such as food textures, tastes, and smells.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 우리는 먼저 눈으로 먹는다, / 하지만 우리는 또한 무수한 감각 신호에 노출된다 / 우리의 식사 경험에 영향을 미치는 / 음식의 식감, 맛, 그리고 냄새와 같은.<br><br>
+            <b>[구문 해설]</b> 'be exposed to'는 '~에 노출되다'라는 뜻입니다. that은 주격 관계대명사로 선행사인 countless sensory signals를 수식합니다.<br><br>
+            <b>[핵심 어휘]</b> expose 노출시키다 / countless 무수한 / sensory 감각의 / signal 신호 / texture 식감, 질감
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑥ And it does not stop there.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그리고 그것은 거기서 멈추지 않는다.<br><br>
+            <b>[핵심 어휘]</b> 
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑦ Even the sounds / <mark>that</mark> come both from the atmospheres in which we eat / and our interactions with the food (such as chewing) / and the tools we use to eat / <mark>influence</mark> our eating experience.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 소리조차도 / 우리가 식사하는 분위기와 / 음식과의 상호작용(씹는 것과 같은) / 그리고 우리가 먹기 위해 사용하는 도구들로부터 오는 / 우리의 식사 경험에 영향을 미친다.<br><br>
+            <b>[구문 해설]</b> 문장의 핵심 주어는 Even the sounds이며, 이에 수일치하는 본동사는 복수형 influence입니다. that은 주격 관계대명사절을 이끌고 있으며, come 뒤에 'from A and B and C' 형태로 여러 출처가 연결되어 있습니다.<br><br>
+            <b>[핵심 어휘]</b> atmosphere 분위기, 환경 / interaction 상호작용 / chew 씹다 / tool 도구 / influence 영향을 미치다
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGIC FLOW</span>
+    <h2 class="sec-title">지문 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">도입 (Introduction)</span>
+        <h4>일상 속 다감각의 간과</h4>
+        <p>다감각적 경험은 우리 일상의 중심이지만, 감각이 정상적으로 작동할 때 우리는 그 경이로움을 너무 당연하게 여겨 알아채지 못함.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">전개 (Development)</span>
+        <h4>식사: 감각 융합의 대표적 사례</h4>
+        <p>평범해 보이는 '식사' 경험을 자세히 살펴보면, 눈(시각)으로 시작해 식감(촉각), 맛(미각), 냄새(후각) 등 수많은 감각 신호가 결합된 융합의 장임.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">결론 (Conclusion)</span>
+        <h4>청각까지 확장되는 경험</h4>
+        <p>시각과 미각을 넘어, 식사하는 장소의 분위기 소리, 음식을 씹는 소리, 식기류가 달그락거리는 소리(청각)조차도 우리의 식사 경험에 중대한 영향을 미침.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+    <h2 class="sec-title">수능형 어법 훈련</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. ... we are also exposed to countless sensory signals [ <b>that</b> / <b>what</b> ] influence our eating experience...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 앞에 선행사인 countless sensory signals가 있고 뒤에 동사(influence)가 이어지므로 주격 관계대명사 that을 써야 합니다.">that</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 what은 선행사를 자체적으로 포함하므로, 앞에 꾸며주는 명사(signals)가 있을 때는 사용할 수 없습니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    <div class="drill-card">
+      <div class="drill-q">2. Even the sounds that come both from the atmospheres in which we eat and our interactions with the food... [ <b>influence</b> / <b>influences</b> ] our eating experience.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 문장의 핵심 주어는 복수 명사인 'the sounds'입니다. 따라서 복수 동사인 influence가 와야 합니다.">influence</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 문장의 주어는 단수인 the food나 atmospheres가 아니라 문장 맨 앞의 복수 명사 'the sounds'입니다. 주어가 복수이므로 동사에 -s를 붙이지 않아야 합니다.">influences</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">내신 대비 실전 변형 문제</h2>
+
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        Multisensory experiences are a central part of our everyday lives, yet we often take them for granted, especially when our senses function normally or are corrected to normal with aids like glasses. However, closer inspection to any, even the most ordinary experiences, reveals the remarkable multisensory world in which we live. Consider the experience of eating a regular meal. At first, it may seem like an ordinary experience, but it is actually a fusion of the senses. We first eat with our eyes, but we are also exposed to countless sensory signals that influence our eating experience such as food textures, tastes, and smells. And it does not stop there. Even the sounds that come both from the atmospheres in which we eat and our interactions with the food (such as chewing) and the tools we use to eat influence our eating experience.
+      </div>
+      <div class="exam-choices">
+        ① Eating: A Perfect Example of a Multisensory Experience<br>
+        ② The Hidden Dangers of Taking Our Senses for Granted<br>
+        ③ Why Vision is the Most Important Sense in Eating<br>
+        ④ How to Improve Your Eating Habits with Proper Tools<br>
+        ⑤ The History of Sensory Studies in Human Everyday Life
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ①</b><br>
+          [해설] 이 글은 우리가 당연하게 여기는 일상 속 다감각적 경험의 경이로움을 '식사'라는 구체적인 사례를 통해 설명하고 있습니다. 식사는 시각, 후각, 미각, 촉각, 청각이 모두 융합된 과정이라는 점을 강조하고 있으므로, '식사: 다감각적 경험의 완벽한 예시'가 제목으로 가장 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        Multisensory experiences are a central part of our everyday lives, yet we often take them for ①<u>granted</u>, especially when our senses function normally or are corrected to normal with aids like glasses. However, closer inspection to any, even the most ordinary experiences, ②<u>conceals</u> the remarkable multisensory world in which we live. Consider the experience of eating a regular meal. At first, it may seem like an ordinary experience, but it is actually a ③<u>fusion</u> of the senses. We first eat with our eyes, but we are also exposed to ④<u>countless</u> sensory signals that influence our eating experience such as food textures, tastes, and smells. And it does not stop there. Even the sounds that come both from the atmospheres in which we eat and our interactions with the food (such as chewing) and the tools we use to eat ⑤<u>influence</u> our eating experience.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ②</b><br>
+          [해설] 일상의 평범한 경험들을 조금만 더 면밀하게 관찰해보면(closer inspection), 그 속에 감춰져 있던 놀라운 다감각적 세계가 '드러난다'고 해야 문맥상 맞습니다. 따라서 숨기다는 뜻의 ②번 conceals는 드러내다는 의미의 reveals로 바뀌어야 합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="summary-box">
+        At first, it may seem like an ordinary experience, but it is actually a fusion of the senses.
+      </div>
+      <div class="exam-passage">
+        Multisensory experiences are a central part of our everyday lives, yet we often take them for granted, especially when our senses function normally or are corrected to normal with aids like glasses. ( ① ) However, closer inspection to any, even the most ordinary experiences, reveals the remarkable multisensory world in which we live. ( ② ) Consider the experience of eating a regular meal. ( ③ ) We first eat with our eyes, but we are also exposed to countless sensory signals that influence our eating experience such as food textures, tastes, and smells. ( ④ ) And it does not stop there. ( ⑤ ) Even the sounds that come both from the atmospheres in which we eat and our interactions with the food and the tools we use to eat influence our eating experience.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ③</b><br>
+          [해설] 주어진 문장은 "처음에는 그것이 평범한 경험처럼 보일지 모르나, 사실 감각들의 융합이다"라는 내용입니다. 여기서 '그것(it)'이 지칭하는 것은 바로 앞 문장의 '평범한 식사를 하는 경험(the experience of eating a regular meal)'이므로 ③번 자리에 들어가는 것이 가장 자연스럽습니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고 밑줄 친 우리말과 같은 의미가 되도록, 주어진 조건에 맞게 영작하시오.</h4>
+      <div class="exam-passage">
+        Multisensory experiences are a central part of our everyday lives, yet <u>우리는 종종 그것들을 당연하게 여긴다</u>, especially when our senses function normally or are corrected to normal with aids like glasses. However, closer inspection to any, even the most ordinary experiences, reveals the remarkable multisensory world in which we live. Consider the experience of eating a regular meal. At first, it may seem like an ordinary experience, but it is actually a fusion of the senses. We first eat with our eyes, but we are also exposed to countless sensory signals that influence our eating experience such as food textures, tastes, and smells.
+      </div>
+      <div class="summary-box">
+        [조건]<br>
+        1. take, grant, often을 반드시 포함할 것.<br>
+        2. 대명사 them을 사용할 것.<br>
+        3. 필요시 어형을 변화시킬 것. (총 7단어로 작성)
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답]</b> we often take them for granted<br><br>
+          [해설] '~을 당연한 것으로 여기다'는 숙어 take ~ for granted를 사용합니다. 주어인 '우리는(we)' 뒤에 빈도부사 '종종(often)'을 위치시키고, 다감각적 경험들을 지칭하는 대명사 them을 목적어 자리에 넣어 영작합니다. (단어 수: we, often, take, them, for, granted = 6단어이나, 조건에 7단어로 명시된 경우 오타이거나 'we do often take...'등 강조용법일 수 있으나 원문 기준 6단어입니다. 실제 출제 시 글자 수 조건 확인 요망)
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>

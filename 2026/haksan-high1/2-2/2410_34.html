@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>스코어학원 | THE END OF CLIMATE FICTION 분석</title>
+  <link rel="icon" type="image/x-icon" href="/skore-workbook/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/skore-workbook/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/skore-workbook/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/skore-workbook/apple-touch-icon.png">
+  <link rel="manifest" href="/skore-workbook/site.webmanifest">
+  <meta name="theme-color" content="#cb1d06">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>
+(function(){try{var t=localStorage.getItem('skore-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
+<style>
+:root {
+  --navy: #0B1220;
+  --paper: #F5EFE3; /* warm beige */
+  --white: #FFFFFF;
+  --brand-red: #cb1d06;
+  --blue: #1D4ED8;
+  --cyan: #0E8F9E;
+  --amber: #B8791A;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border: #E6DCCB;
+  --mono: "IBM Plex Mono", -apple-system, monospace;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard Variable", -apple-system, BlinkMacSystemFont, sans-serif;
+  --wrap: 960px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { background: var(--paper); color: var(--text-main); font-family: var(--sans); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+header { background: var(--navy); color: var(--white); padding: 36px 0 28px; border-bottom: 3px solid var(--brand-red); }
+.masthead { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: #8FA0B8; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 8px; margin-bottom: 14px; }
+.masthead b { color: #fff; }
+.masthead-right { display: flex; align-items: center; gap: 12px; }
+.theme-toggle { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #E2E8F0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 4px 10px; cursor: pointer; line-height: 1.4; white-space: nowrap; }
+.theme-toggle:hover { background: rgba(255,255,255,0.16); }
+
+.meta-badge { display: inline-block; font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cyan); background: rgba(14, 143, 158, 0.15); padding: 4px 10px; border-radius: 4px; margin-bottom: 12px; }
+h1.title { font-family: var(--serif); font-size: clamp(20px, 4vw, 28px); font-weight: 900; line-height: 1.35; margin-bottom: 8px; text-transform: uppercase; }
+h1.title span { color: var(--amber); text-transform: none; font-size: clamp(16px, 3vw, 22px); display: block; margin-top: 4px; font-weight: 600; font-family: var(--sans); }
+.header-lead { font-size: 14px; color: #CBD5E1; line-height: 1.65; margin-top: 12px;}
+
+.tracker-wrap { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+.tracker { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 8px 0; }
+.track-step { text-align: center; padding: 6px 2px; border-radius: 4px; border: 1px solid var(--border); background: var(--paper); text-decoration: none; color: var(--text-main); display: block; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.track-step:active { transform: scale(0.98); background: #E2E8F0; }
+.track-step .s-num { font-family: var(--mono); font-size: 9px; font-weight: 600; color: var(--cyan); display: block; }
+.track-step .s-name { font-size: 11px; font-weight: 700; }
+
+section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+.sec-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--blue); letter-spacing: 0.12em; display: block; margin-bottom: 4px; }
+h2.sec-title { font-family: var(--serif); font-size: 20px; font-weight: 900; margin-bottom: 16px; }
+
+/* STEP 1 */
+.bg-knowledge-box { background: #EFF6FF; border: 1px solid #BFDBFE; border-left: 4px solid var(--blue); border-radius: 6px; padding: 16px 18px; margin-bottom: 18px; }
+.bg-header { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11.5px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.bg-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.bg-list li { font-size: 12.5px; color: #1E3A8A; line-height: 1.6; position: relative; padding-left: 14px; }
+.bg-list li::before { content: "•"; position: absolute; left: 2px; color: var(--blue); font-weight: bold; }
+.full-passage-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--blue); padding: 20px; font-size: 15px; line-height: 1.85; color: #1E293B; border-radius: 4px; }
+.key-takeaway { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 12px 16px; margin-top: 14px; border-radius: 4px; font-size: 13px; color: #1E3A8A; }
+
+/* STEP 2 */
+.chunk-box { display: flex; flex-direction: column; gap: 12px; }
+.chunk-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 16px; }
+.chunk-en { font-size: 14.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; line-height: 1.7; }
+.chunk-en mark { background: #FEF3C7; color: #92400E; padding: 2px 4px; border-radius: 2px; font-weight: 600; }
+details { background: #F8FAFC; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; }
+summary { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--blue); padding: 8px 12px; cursor: pointer; outline: none; user-select: none; }
+.details-content { padding: 10px 12px; font-size: 13px; color: #334155; border-top: 1px dashed var(--border); line-height: 1.65; }
+.details-content b { color: var(--navy); }
+
+/* STEP 3 */
+.flow-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.flow-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; }
+.flow-card.s1 { border-top: 3px solid var(--cyan); }
+.flow-card.s2 { border-top: 3px solid var(--amber); }
+.flow-card.s3 { border-top: 3px solid var(--blue); }
+.flow-card .badge { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px; }
+.flow-card h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.flow-card p { font-size: 12.5px; color: #475569; line-height: 1.6; }
+
+/* STEP 4 */
+.drill-card { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 12px; }
+.drill-q { font-size: 13.5px; font-weight: 600; color: #1E293B; margin-bottom: 10px; }
+.drill-options { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.drill-btn { background: #F8FAFC; border: 1px solid var(--border); font-family: var(--mono); font-size: 12px; padding: 8px 14px; cursor: pointer; border-radius: 4px; min-height: 40px; display: flex; align-items: center; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; outline: none; }
+.drill-btn:active { transform: scale(0.98); background: #E2E8F0; }
+.drill-feedback { display: none; font-size: 12.5px; padding: 8px 12px; border-radius: 4px; margin-top: 6px; line-height: 1.5; }
+
+/* STEP 5 */
+.exam-item { background: var(--white); border: 1px solid var(--border); padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+.exam-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--navy); line-height: 1.5;}
+.exam-passage { background: #F8FAFC; border: 1px solid var(--border); padding: 12px; font-size: 13px; line-height: 1.7; color: #334155; margin-bottom: 10px; border-radius: 4px; }
+.exam-choices { font-size: 13px; color: #334155; line-height: 1.75; margin-bottom: 10px; }
+.answer-content { background: #EFF6FF; border: 1px solid #BFDBFE; padding: 10px 12px; font-size: 12px; color: #1E3A8A; border-radius: 4px; line-height: 1.6; }
+.summary-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 4px; font-size: 13px; line-height: 1.6; color: #92400E; margin-bottom: 12px; font-weight: 500; }
+
+.btn-back-hub { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; background: #182238; color: #60a5fa; border: 1px solid #233252; border-radius: 10px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms ease; }
+.btn-back-hub:active { transform: scale(0.98); background: #1f2d4a; }
+footer { background: var(--navy); color: #64748B; padding: 24px 0; text-align: center; font-family: var(--mono); font-size: 10.5px; }
+
+/* Dark Mode Overrides */
+:root[data-theme="dark"] {
+  --paper: #12100D; --white: #1C1915; --text-main: #ECE6DA; --text-muted: #A39A8A; --border: #322D25; color-scheme: dark;
+}
+:root[data-theme="dark"] body { background: var(--paper); }
+:root[data-theme="dark"] header { background: #0A0908; color: #fff; }
+:root[data-theme="dark"] footer { background: #0A0908; color: #7A7266; }
+:root[data-theme="dark"] .tracker-wrap { background: var(--white); border-bottom-color: var(--border); }
+:root[data-theme="dark"] .track-step { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .bg-knowledge-box { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); }
+:root[data-theme="dark"] .bg-knowledge-box .bg-header,
+:root[data-theme="dark"] .bg-knowledge-box .bg-list li { color: #A5F3FC; }
+:root[data-theme="dark"] .full-passage-box { background: var(--white); border-color: var(--border); color: #ECE6DA; }
+:root[data-theme="dark"] .key-takeaway { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .chunk-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .chunk-en { color: #ECE6DA; }
+:root[data-theme="dark"] .chunk-en mark { background: rgba(184, 121, 26, 0.3); color: #FDE68A; }
+:root[data-theme="dark"] details { background: var(--paper); border-color: var(--border); }
+:root[data-theme="dark"] .details-content { color: #A39A8A; }
+:root[data-theme="dark"] .details-content b { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .flow-card h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .flow-card p { color: #A39A8A; }
+:root[data-theme="dark"] .drill-card { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .drill-q { color: #ECE6DA; }
+:root[data-theme="dark"] .drill-btn { background: var(--paper); border-color: var(--border); color: var(--text-main); }
+:root[data-theme="dark"] .exam-item { background: var(--white); border-color: var(--border); }
+:root[data-theme="dark"] .exam-item h4 { color: #F5EFE3; }
+:root[data-theme="dark"] .exam-passage { background: var(--paper); border-color: var(--border); color: #A39A8A; }
+:root[data-theme="dark"] .exam-choices { color: #A39A8A; }
+:root[data-theme="dark"] .answer-content { background: rgba(14,143,158,0.1); border-color: rgba(14,143,158,0.2); color: #A5F3FC; }
+:root[data-theme="dark"] .summary-box { background: rgba(184, 121, 26, 0.1); border-color: rgba(184, 121, 26, 0.2); color: #FDE68A; }
+:root[data-theme="dark"] .btn-back-hub { background: #1C1915; border-color: #322D25; color: #A5F3FC; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="masthead">
+      <span><b>SKORE ACADEMY</b> HIGH SCHOOL LOGIC SERIES</span>
+      <span class="masthead-right"><span>2026 학산여고 1학년 2-2</span><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크 모드 전환">☾ DARK</button></span>
+    </div>
+    <div class="meta-badge">고1 학평 오답률 TOP6 24년 10월 34번 · 빈칸</div>
+    <h1 class="title">THE END OF CLIMATE FICTION<br><span>기후 위기의 현실화가 기후 소설에 미치는 영향</span></h1>
+    <p class="header-lead">일상의 현실로 다가온 기후 재난과 허구적 도피처로서의 장르 소멸</p>
+  </div>
+</header>
+
+<div class="tracker-wrap">
+  <div class="wrap">
+    <div class="tracker">
+      <a href="#step1" class="track-step"><span class="s-num">STEP 01</span><span class="s-name">원문정독</span></a>
+      <a href="#step2" class="track-step"><span class="s-num">STEP 02</span><span class="s-name">디코딩</span></a>
+      <a href="#step3" class="track-step"><span class="s-num">STEP 03</span><span class="s-name">논리구조</span></a>
+      <a href="#step4" class="track-step"><span class="s-num">STEP 04</span><span class="s-name">어법드릴</span></a>
+      <a href="#step5" class="track-step"><span class="s-num">STEP 05</span><span class="s-name">실전변형</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="step1">
+  <div class="wrap">
+    <span class="sec-tag">STEP 01 · BACKGROUND & SUMMARY</span>
+    <h2 class="sec-title">원문 정독 및 핵심 요약</h2>
+    <div class="bg-knowledge-box">
+      <div class="bg-header"><span>💡</span> BACKGROUND KNOWLEDGE</div>
+      <ul class="bg-list">
+        <li><b>기후 소설(Climate Fiction)</b> : 기후 변화와 그로 인한 재난을 다루는 문학이나 영화 장르입니다.</li>
+        <li><b>현실과 허구의 경계</b> : 기후 재난이 심각해져 창밖으로 흔히 볼 수 있는 일상이 되면, 사람들은 더 이상 이를 스크린 속 '허구'로 소비하지 않게 됩니다.</li>
+        <li><b>도피적 즐거움(Escapist pleasure)</b> : 현실의 고통에서 벗어나기 위해 허구의 세계에 몰입하는 오락적 기능을 의미하며, 기후 변화가 현실이 되면서 이 기능은 힘을 잃습니다.</li>
+      </ul>
+    </div>
+    <div class="full-passage-box">
+      On-screen, climate disaster is everywhere you look, but the scope of the world’s climate transformation may just as quickly eliminate the climate-fiction genre—indeed eliminate any effort to tell the story of warming, which could grow too large and too obvious even for Hollywood. You can tell stories ‘about’ climate change while it still seems a marginal feature of human life. But when the temperature rises by three or four more degrees, hardly anyone will be able to feel isolated from its impacts. And so as climate change expands across the horizon, it may cease to be a story. Why watch or read climate fiction about the world you can see plainly out your own window? At the moment, stories illustrating global warming can still offer an escapist pleasure, even if that pleasure often comes in the form of horror. But when we can no longer pretend that climate suffering is distant—in time or in place—we will stop pretending about it and start pretending within it.
+    </div>
+    <div class="key-takeaway">
+      <b>🔑 핵심 요지:</b> 기후 변화가 점차 우리 삶의 너무나 당연한 현실이 되면서, 기후 소설이라는 장르는 현실 도피성 오락거리로서의 기능을 잃고 사라지게 될 것이다.
+    </div>
+  </div>
+</section>
+
+<section id="step2">
+  <div class="wrap">
+    <span class="sec-tag">STEP 02 · SENTENCE DECODING</span>
+    <h2 class="sec-title">문장별 직독직해 및 구문 분석</h2>
+    <div class="chunk-box">
+      <div class="chunk-item">
+        <div class="chunk-en">① On-screen, climate disaster is everywhere you look, / but the scope of the world’s climate transformation / may just as quickly eliminate the climate-fiction genre / —indeed eliminate any effort to tell the story of warming, / <mark>which</mark> could grow too large and too obvious even for Hollywood.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 스크린에서, 기후 재난은 당신이 보는 어디에나 있다 / 하지만 세계의 기후 변화의 범위는 / 그만큼 빠르게 기후 소설 장르를 없앨지도 모른다 / —실제로 온난화에 대한 이야기를 하려는 어떤 노력도 없애면서, / 그것은 할리우드에게조차 너무 커지고 너무 뻔해질 수 있다.<br><br>
+            <b>[구문 해설]</b> 'which'는 계속적 용법의 주격 관계대명사로, 선행사 'the story of warming'을 부연 설명합니다.<br><br>
+            <b>[핵심 어휘]</b> scope 범위 / transformation 변화 / eliminate 없애다, 제거하다 / obvious 뻔한, 명백한
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">② You can tell stories ‘about’ climate change / while it still seems a marginal feature of human life.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 당신은 기후 변화'에 대한' 이야기를 할 수 있다 / 그것이 여전히 인간 삶의 미미한 특징으로 보이는 동안에는.<br><br>
+            <b>[핵심 어휘]</b> marginal 미미한, 주변적인 / feature 특징
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">③ But when the temperature rises by three or four more degrees, / <mark>hardly</mark> anyone will be able to feel isolated from its impacts.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 하지만 온도가 3도나 4도 더 올라갈 때, / 그 영향으로부터 분리되었다고 느낄 수 있는 사람은 거의 없을 것이다.<br><br>
+            <b>[구문 해설]</b> 부정 부사 hardly가 쓰여 문장 전체를 부정하는 의미('거의 ~않다')를 만듭니다. feel 뒤에 과거분사 isolated가 주격 보어로 쓰여 '고립된, 분리된 상태를 느끼다'라는 수동의 의미를 나타냅니다.<br><br>
+            <b>[핵심 어휘]</b> hardly 거의 ~않다 / isolated 분리된, 고립된 / impact 영향
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">④ And so as climate change expands across the horizon, / it may cease to be a story.</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 그래서 기후 변화가 지평선 너머로 확장함에 따라, / 그것은 더 이상 이야기가 아닐지도 모른다.<br><br>
+            <b>[핵심 어휘]</b> expand 확장하다 / horizon 지평선 / cease to ~하는 것을 멈추다, 더 이상 ~않다
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑤ Why watch or read climate fiction / about the world you can see plainly out your own window?</div>
+        <details>
+          <summary>해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 왜 기후 소설을 보거나 읽겠는가 / 당신의 창문 밖으로 분명히 볼 수 있는 세계에 대한?<br><br>
+            <b>[핵심 어휘]</b> plainly 분명히, 명백하게
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑥ At the moment, stories <mark>illustrating</mark> global warming / can still offer an escapist pleasure, / even if that pleasure often comes in the form of horror.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 지금 당장은, 지구 온난화를 보여주는 이야기들이 / 여전히 현실 도피적인 즐거움을 제공할 수 있다 / 비록 그 즐거움이 종종 공포의 형태로 올지라도.<br><br>
+            <b>[구문 해설]</b> 현재분사 illustrating이 앞의 명사 stories를 능동적으로 수식합니다.<br><br>
+            <b>[핵심 어휘]</b> illustrate 보여주다, 설명하다 / escapist 현실 도피적인 / form 형태
+          </div>
+        </details>
+      </div>
+      <div class="chunk-item">
+        <div class="chunk-en">⑦ But when we can no longer pretend / that climate suffering is distant—in time or in place—/ we will stop <mark>pretending</mark> about it / and start pretending within it.</div>
+        <details>
+          <summary>구문 해설 및 해석 펼치기</summary>
+          <div class="details-content">
+            <b>[직독직해]</b> 하지만 우리가 더 이상 ~라고 인체할 수 없을 때 / 기후 고통이 시간적으로나 장소적으로 멀리 떨어져 있다고 / 우리는 그것에 대해 인체하는 것을 멈출 것이다 / 그리고 그것 안에서 인체하기 시작할 것이다.<br><br>
+            <b>[구문 해설]</b> that은 pretend의 목적어 역할을 하는 명사절을 이끕니다. 'stop + 동명사(-ing)'는 '~하는 것을 멈추다'라는 뜻입니다.<br><br>
+            <b>[핵심 어휘]</b> no longer 더 이상 ~않다 / pretend ~인 체하다 / suffering 고통 / distant 멀리 떨어진
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step3">
+  <div class="wrap">
+    <span class="sec-tag">STEP 03 · LOGIC FLOW</span>
+    <h2 class="sec-title">지문 논리 구조도</h2>
+    <div class="flow-container">
+      <div class="flow-card s1">
+        <span class="badge">도입 (Introduction)</span>
+        <h4>기후 소설 장르의 소멸 위기</h4>
+        <p>기후 변화의 규모가 너무 커지고 명백해짐에 따라, 이를 허구적 이야기로 다루려는 기후 소설 장르 자체가 없어질지도 모른다.</p>
+      </div>
+      <div class="flow-card s2">
+        <span class="badge">전개 (Development)</span>
+        <h4>재난이 '허구'로 성립하는 조건</h4>
+        <p>기후 재난은 그것이 내 삶과 거리가 먼 '미미한 특징'일 때만 오락적인 도피처나 허구적 이야기가 될 수 있다.</p>
+      </div>
+      <div class="flow-card s3">
+        <span class="badge">결론 (Conclusion)</span>
+        <h4>현실이 된 기후 위기</h4>
+        <p>기후 위기가 창밖으로 빤히 보이는 현실이 되면, 우리는 더 이상 허구인 척하지 못하고 실제 재난 속에서 살아가게 될 것이다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="step4">
+  <div class="wrap">
+    <span class="sec-tag">STEP 04 · GRAMMAR DRILL</span>
+    <h2 class="sec-title">수능형 어법 훈련</h2>
+    <div class="drill-card">
+      <div class="drill-q">1. ... eliminate any effort to tell the story of warming, [ <b>which</b> / <b>what</b> ] could grow too large and too obvious even for Hollywood.</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 콤마(,) 뒤에서 계속적 용법으로 쓰일 수 있으며, 선행사 'the story of warming'을 수식하는 관계대명사 which가 적절합니다. what은 선행사를 포함하므로 부적절합니다.">which</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 관계대명사 what은 선행사를 포함하기 때문에 명사(the story of warming) 뒤에 수식어로 올 수 없습니다. 계속적 용법의 관계대명사 which를 써야 합니다.">what</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+    <div class="drill-card">
+      <div class="drill-q">2. At the moment, stories [ <b>illustrating</b> / <b>illustrated</b> ] global warming can still offer an escapist pleasure...</div>
+      <div class="drill-options">
+        <button class="drill-btn" data-ans="correct" data-exp="정답입니다! 명사 stories를 뒤에서 수식하는 분사입니다. 이야기들이 지구 온난화를 '보여주는(설명하는)' 능동의 관계이며 뒤에 목적어(global warming)가 있으므로 현재분사 illustrating이 맞습니다.">illustrating</button>
+        <button class="drill-btn" data-ans="wrong" data-exp="오답입니다. 수식받는 명사 stories와 분사의 관계가 '지구 온난화를 보여주는'이라는 능동이며, 뒤에 목적어(global warming)가 뒤따르고 있으므로 현재분사 illustrating을 써야 합니다.">illustrated</button>
+      </div>
+      <div class="drill-feedback"></div>
+    </div>
+  </div>
+</section>
+
+<section id="step5">
+  <div class="wrap">
+    <span class="sec-tag">STEP 05 · EXAM SIMULATION (4 QUESTIONS)</span>
+    <h2 class="sec-title">내신 대비 실전 변형 문제</h2>
+
+    <div class="exam-item">
+      <h4>1. 다음 글의 제목으로 가장 적절한 것은?</h4>
+      <div class="exam-passage">
+        On-screen, climate disaster is everywhere you look, but the scope of the world’s climate transformation may just as quickly eliminate the climate-fiction genre—indeed eliminate any effort to tell the story of warming, which could grow too large and too obvious even for Hollywood. You can tell stories ‘about’ climate change while it still seems a marginal feature of human life. But when the temperature rises by three or four more degrees, hardly anyone will be able to feel isolated from its impacts. And so as climate change expands across the horizon, it may cease to be a story. Why watch or read climate fiction about the world you can see plainly out your own window? At the moment, stories illustrating global warming can still offer an escapist pleasure, even if that pleasure often comes in the form of horror. But when we can no longer pretend that climate suffering is distant—in time or in place—we will stop pretending about it and start pretending within it.
+      </div>
+      <div class="exam-choices">
+        ① Why Climate Fiction is Losing its Appeal<br>
+        ② The Role of Hollywood in Climate Action<br>
+        ③ How to Stop Global Temperature Rise<br>
+        ④ Escapist Pleasure in Modern Horror Movies<br>
+        ⑤ Climate Fiction: A New Educational Tool
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ①</b><br>
+          [해설] 이 글은 기후 변화가 삶의 주변적 특징에서 벗어나 창밖으로 빤히 보이는 일상이 되면서, 오락거리나 허구로 기능하던 기후 소설 장르가 설 자리를 잃고 소멸할 것이라는 내용을 다룹니다. 따라서 '왜 기후 소설이 그 매력을 잃고 있는가'가 가장 적절한 제목입니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>2. 다음 글의 밑줄 친 부분 중, 문맥상 낱말의 쓰임이 적절하지 않은 것은?</h4>
+      <div class="exam-passage">
+        On-screen, climate disaster is everywhere you look, but the scope of the world’s climate transformation may just as quickly ①<u>eliminate</u> the climate-fiction genre—indeed eliminate any effort to tell the story of warming, which could grow too large and too obvious even for Hollywood. You can tell stories ‘about’ climate change while it still seems a ②<u>marginal</u> feature of human life. But when the temperature rises by three or four more degrees, hardly anyone will be able to feel ③<u>isolated</u> from its impacts. And so as climate change expands across the horizon, it may cease to be a story. Why watch or read climate fiction about the world you can see plainly out your own window? At the moment, stories illustrating global warming can still offer an ④<u>escapist</u> pleasure, even if that pleasure often comes in the form of horror. But when we can no longer pretend that climate suffering is ⑤<u>imminent</u> —in time or in place—we will stop pretending about it and start pretending within it.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ⑤</b><br>
+          [해설] 글의 흐름상, 과거에는 재난이 '멀리 떨어져 있다'고 생각해서 허구로 즐겼으나, 온난화가 진행되며 현실로 다가오면 더 이상 그렇게 생각할 수 없게 된다는 논리입니다. 따라서 ⑤의 imminent(임박한)는 distant(멀리 떨어진)로 바뀌어야 문맥상 적절합니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>3. 글의 흐름으로 보아, 주어진 문장이 들어가기에 가장 적절한 곳을 고르시오.</h4>
+      <div class="summary-box">
+        And so as climate change expands across the horizon, it may cease to be a story.
+      </div>
+      <div class="exam-passage">
+        On-screen, climate disaster is everywhere you look, but the scope of the world’s climate transformation may just as quickly eliminate the climate-fiction genre. ( ① ) You can tell stories ‘about’ climate change while it still seems a marginal feature of human life. ( ② ) But when the temperature rises by three or four more degrees, hardly anyone will be able to feel isolated from its impacts. ( ③ ) Why watch or read climate fiction about the world you can see plainly out your own window? ( ④ ) At the moment, stories illustrating global warming can still offer an escapist pleasure, even if that pleasure often comes in the form of horror. ( ⑤ ) But when we can no longer pretend that climate suffering is distant—in time or in place—we will stop pretending about it and start pretending within it.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답] ③</b><br>
+          [해설] 주어진 문장은 기후 변화가 확장됨에 따라 그것이 더 이상 '이야기(story)'가 아니게 될지도 모른다고 결론을 내립니다. 이는 바로 앞 문장인 온도가 올라가 그 영향에서 벗어날 수 없다는 내용(② 뒤)의 결과(And so)이며, 그 뒤에 이어지는 "왜 창밖으로 뻔히 보이는 세상에 대한 소설을 읽겠는가?"라는 질문(③ 뒤)을 이끄는 자연스러운 연결 고리입니다.
+        </div>
+      </details>
+    </div>
+
+    <div class="exam-item">
+      <h4>4. 다음 글을 읽고 밑줄 친 우리말과 같은 의미가 되도록, 주어진 조건에 맞게 영작하시오.</h4>
+      <div class="exam-passage">
+        At the moment, stories illustrating global warming can still offer an escapist pleasure, even if that pleasure often comes in the form of horror. But <u>우리가 더 이상 기후 고통이 시간적으로나 장소적으로 멀리 떨어져 있다고 인체할 수 없을 때</u>, we will stop pretending about it and start pretending within it.
+      </div>
+      <div class="summary-box">
+        [조건]<br>
+        1. no longer, pretend, distant를 반드시 포함할 것.<br>
+        2. 접속사 that을 사용할 것.<br>
+        3. 필요시 단어 추가 및 어형 변화 가능.
+      </div>
+      <details>
+        <summary>정답 및 해설 확인</summary>
+        <div class="answer-content">
+          <b>[정답]</b> when we can no longer pretend that climate suffering is distant<br><br>
+          [해설] '우리가 ~할 때'는 접속사 when으로 시작합니다. '더 이상 ~않다'는 조동사 뒤에 no longer를 쓰며, '인체하다'는 pretend를 씁니다. pretend의 목적어절을 이끄는 접속사 that 뒤에 '기후 고통(climate suffering)이 멀리 떨어져 있다(is distant)'를 어순에 맞게 배열합니다.
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<nav class="bottom-nav-wrap" style="max-width:640px; margin:40px auto 20px; padding:0 16px;">
+  <a href="index.html" class="btn-back-hub"><span>📋</span><span>전체 지문 목록으로 돌아가기</span></a>
+</nav>
+
+<footer><div class="wrap">Score Academy Academic Intelligence · 5-Step Mobile-Optimized Learning System</div></footer>
+
+<script>
+(function(){var b=document.getElementById('themeToggle');if(!b)return;var r=document.documentElement;
+function sync(){var d=r.getAttribute('data-theme')==='dark';b.textContent=d?'☀ LIGHT':'☾ DARK';b.setAttribute('aria-label',d?'라이트 모드 전환':'다크 모드 전환');}
+sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('skore-theme',n);}catch(e){}sync();});})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.drill-options').forEach(function(group) {
+    group.addEventListener('click', function(e) {
+      var btn = e.target.closest('.drill-btn');
+      if (!btn) return;
+      var isCorrect = btn.getAttribute('data-ans') === 'correct';
+      var exp = btn.getAttribute('data-exp');
+      var fb = group.parentElement.querySelector('.drill-feedback');
+      fb.style.display = 'block';
+      if (isCorrect) {
+        fb.style.background = '#ECFDF5'; fb.style.color = '#065F46'; fb.style.border = '1px solid #A7F3D0';
+      } else {
+        fb.style.background = '#FEF2F2'; fb.style.color = '#991B1B'; fb.style.border = '1px solid #FECACA';
+      }
+      fb.innerHTML = '<b>' + exp + '</b>';
+    });
+  });
+});
+</script>
+</body>
+</html>
